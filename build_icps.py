@@ -148,7 +148,7 @@ def build_icp(config):
     # Avatar
     if 'featured_avatar' in config:
         html = safe_replace(html,
-            '/images/karen-avatar.jpg',
+            'images/karen-avatar.jpg',
             config['featured_avatar'],
             'featured_avatar', count=0)
 
