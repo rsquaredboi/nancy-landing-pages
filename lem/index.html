@@ -17,6 +17,13 @@ s.parentNode.insertBefore(t,s)}(window, document,'script',
 'https://connect.facebook.net/en_US/fbevents.js');
 fbq('init', '832767357702650');
 fbq('track', 'PageView');
+fbq('track', 'ViewContent', {
+  content_name: 'The Lem - Clitoral Massager',
+  content_ids: ['lem-clitoral-massager'],
+  content_type: 'product',
+  value: 89.00,
+  currency: 'USD'
+});
 </script>
 <noscript><img height="1" width="1" style="display:none"
 src="https://www.facebook.com/tr?id=832767357702650&ev=PageView&noscript=1"
@@ -1441,7 +1448,7 @@ src="https://www.facebook.com/tr?id=832767357702650&ev=PageView&noscript=1"
 
     <!-- ═══ HERO PRODUCT IMAGE ═══ -->
     <div style="text-align: center; margin: 28px 0 12px;">
-      <img src="images/product/lem-with-lemons.png" alt="The Lem™ by Hello Nancy - looks just like a real lemon" loading="eager" style="max-width: 520px; width: 100%; border-radius: var(--radius-lg); box-shadow: var(--shadow-lg);">
+      <img src="images/product/lem-with-lemons.webp" alt="The Lem™ by Hello Nancy - looks just like a real lemon" loading="eager" style="max-width: 520px; width: 100%; border-radius: var(--radius-lg); box-shadow: var(--shadow-lg);">
     </div>
 
     <!-- ═══ TIKTOK VIRAL PROOF ═══ -->
@@ -1529,7 +1536,7 @@ src="https://www.facebook.com/tr?id=832767357702650&ev=PageView&noscript=1"
 
       <!-- PRODUCT LIFESTYLE PHOTO -->
       <div class="product-visual">
-        <img src="images/product/lem-cocktail.png" alt="The Lem by Hello Nancy - cute, discreet, fits anywhere" loading="lazy">
+        <img src="images/product/lem-cocktail.webp" alt="The Lem by Hello Nancy - cute, discreet, fits anywhere" loading="lazy">
         <div class="product-visual__caption">"Is that a stress ball?" &mdash; Every roommate, ever</div>
       </div>
     </section>
@@ -1698,7 +1705,7 @@ src="https://www.facebook.com/tr?id=832767357702650&ev=PageView&noscript=1"
       </p>
 
       <div class="product-visual">
-        <img src="images/product/lem-lemon-slices.png" alt="The Lem surrounded by lemon slices - IPX7 waterproof" loading="lazy">
+        <img src="images/product/lem-lemon-slices.webp" alt="The Lem surrounded by lemon slices - IPX7 waterproof" loading="lazy">
         <div class="product-visual__caption">IPX7 waterproof &mdash; fully submersible, easy to clean</div>
       </div>
 
@@ -2021,7 +2028,7 @@ src="https://www.facebook.com/tr?id=832767357702650&ev=PageView&noscript=1"
 <div class="sticky-bar" id="stickyBar">
   <div class="sticky-bar__inner">
     <div class="sticky-bar__info">
-      <div class="sticky-bar__lemon"><img src="images/product/lem-in-hand.png" alt="Lem"></div>
+      <div class="sticky-bar__lemon"><img src="images/product/lem-in-hand.webp" alt="Lem"></div>
       <div class="sticky-bar__text">
         <div class="sticky-bar__name">The Lem&trade; <span style="font-weight: 400; font-size: 11px; color: var(--text-light);">(11,137 reviews)</span></div>
         <div class="sticky-bar__price-row">
@@ -2196,6 +2203,22 @@ src="https://www.facebook.com/tr?id=832767357702650&ev=PageView&noscript=1"
   });
   document.addEventListener('keydown', function(e) {
     if (e.key === 'Escape') closeVideoModal();
+  });
+
+  // ─── META PIXEL: INITIATE CHECKOUT ON CTA CLICKS ───
+  document.querySelectorAll('a.cta-btn[href*="hellonancy.com"]').forEach(function(btn) {
+    btn.addEventListener('click', function() {
+      if (typeof fbq === 'function') {
+        fbq('track', 'InitiateCheckout', {
+          content_name: 'The Lem - Clitoral Massager',
+          content_ids: ['lem-clitoral-massager'],
+          content_type: 'product',
+          value: 89.00,
+          currency: 'USD',
+          num_items: 1
+        });
+      }
+    });
   });
 
 })();
