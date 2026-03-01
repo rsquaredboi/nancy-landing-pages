@@ -1,0 +1,2194 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>7 Reasons This Lemon-Shaped Toy Broke TikTok — Hello Nancy</title>
+
+<!-- Meta Pixel -->
+<script>
+!function(f,b,e,v,n,t,s)
+{if(f.fbq)return;n=f.fbq=function(){n.callMethod?
+n.callMethod.apply(n,arguments):n.queue.push(arguments)};
+if(!f._fbq)f._fbq=n;n.push=n;n.loaded=!0;n.version='2.0';
+n.queue=[];t=b.createElement(e);t.async=!0;
+t.src=v;s=b.getElementsByTagName(e)[0];
+s.parentNode.insertBefore(t,s)}(window, document,'script',
+'https://connect.facebook.net/en_US/fbevents.js');
+fbq('init', '832767357702650');
+fbq('track', 'PageView');
+</script>
+<noscript><img height="1" width="1" style="display:none"
+src="https://www.facebook.com/tr?id=832767357702650&ev=PageView&noscript=1"
+/></noscript>
+<!-- End Meta Pixel -->
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@0,9..144,300;0,9..144,400;0,9..144,500;0,9..144,600;0,9..144,700;0,9..144,800;1,9..144,400;1,9..144,500;1,9..144,600&family=Plus+Jakarta+Sans:ital,wght@0,300;0,400;0,500;0,600;0,700;1,400;1,500&display=swap" rel="stylesheet">
+
+<style>
+  /* ═══════════════════════════════════════════
+     CSS RESET & VARIABLES
+     ═══════════════════════════════════════════ */
+  *, *::before, *::after { margin: 0; padding: 0; box-sizing: border-box; }
+
+  :root {
+    --cream: #FFFCF5;
+    --cream-dark: #FFF6E6;
+    --lemon-pale: #FFFBE8;
+    --lemon-light: #FFF3C4;
+    --lemon: #F7C948;
+    --lemon-dark: #E5B52F;
+    --coral: #E8503A;
+    --coral-dark: #D4432E;
+    --coral-light: #FFF0ED;
+    --charcoal: #2D2A26;
+    --text: #3D3A36;
+    --text-mid: #5C5650;
+    --text-light: #8A837B;
+    --sage: #3EA06F;
+    --sage-light: #E8F5EE;
+    --sage-dark: #2E8B57;
+    --border: #EDE6D8;
+    --border-light: #F5F0E8;
+    --shadow-sm: 0 1px 3px rgba(45,42,38,0.06);
+    --shadow-md: 0 4px 16px rgba(45,42,38,0.08);
+    --shadow-lg: 0 8px 32px rgba(45,42,38,0.1);
+    --radius-sm: 6px;
+    --radius-md: 12px;
+    --radius-lg: 20px;
+    --radius-xl: 28px;
+    --font-display: 'Fraunces', Georgia, serif;
+    --font-body: 'Plus Jakarta Sans', -apple-system, sans-serif;
+  }
+
+  html { scroll-behavior: smooth; }
+
+  body {
+    font-family: var(--font-body);
+    background: var(--cream);
+    color: var(--text);
+    line-height: 1.7;
+    font-size: 17px;
+    -webkit-font-smoothing: antialiased;
+    overflow-x: hidden;
+  }
+
+  img { max-width: 100%; display: block; }
+  a { color: var(--coral); text-decoration: none; }
+  a:hover { text-decoration: underline; }
+
+  /* ═══════════════════════════════════════════
+     UTILITY & CONTAINER
+     ═══════════════════════════════════════════ */
+  .container {
+    max-width: 720px;
+    margin: 0 auto;
+    padding: 0 24px;
+  }
+
+  .sr-only {
+    position: absolute; width: 1px; height: 1px;
+    overflow: hidden; clip: rect(0,0,0,0);
+  }
+
+  /* ═══════════════════════════════════════════
+     TOP URGENCY BANNER
+     ═══════════════════════════════════════════ */
+  .urgency-banner {
+    background: linear-gradient(135deg, var(--charcoal) 0%, #1a1815 100%);
+    color: #fff;
+    padding: 12px 20px;
+    text-align: center;
+    position: relative;
+    z-index: 100;
+    overflow: hidden;
+  }
+
+  .urgency-banner::before {
+    content: '';
+    position: absolute;
+    inset: 0;
+    background: repeating-linear-gradient(
+      90deg,
+      transparent,
+      transparent 40px,
+      rgba(247,201,72,0.03) 40px,
+      rgba(247,201,72,0.03) 80px
+    );
+  }
+
+  .urgency-banner__inner {
+    position: relative;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 8px;
+    flex-wrap: wrap;
+  }
+
+  .urgency-banner__badge {
+    display: inline-flex;
+    align-items: center;
+    gap: 5px;
+    background: var(--coral);
+    color: #fff;
+    font-size: 11px;
+    font-weight: 700;
+    text-transform: uppercase;
+    letter-spacing: 1.2px;
+    padding: 4px 10px;
+    border-radius: 3px;
+    animation: pulse-badge 2s ease-in-out infinite;
+  }
+
+  @keyframes pulse-badge {
+    0%, 100% { opacity: 1; }
+    50% { opacity: 0.8; }
+  }
+
+  .urgency-banner__text {
+    font-size: 14px;
+    font-weight: 500;
+    letter-spacing: 0.3px;
+  }
+
+  .urgency-banner__text strong {
+    color: var(--lemon);
+  }
+
+  .countdown-inline {
+    display: inline-flex;
+    align-items: center;
+    gap: 3px;
+    font-family: var(--font-body);
+    font-weight: 700;
+    font-size: 14px;
+    color: var(--lemon);
+  }
+
+  .countdown-inline span {
+    background: rgba(247,201,72,0.15);
+    padding: 2px 6px;
+    border-radius: 3px;
+    min-width: 26px;
+    text-align: center;
+    font-variant-numeric: tabular-nums;
+  }
+
+  .countdown-inline .sep {
+    background: none;
+    padding: 0;
+    min-width: auto;
+    opacity: 0.6;
+  }
+
+  /* ═══════════════════════════════════════════
+     VIDEO LIGHTBOX MODAL
+     ═══════════════════════════════════════════ */
+  .video-modal {
+    display: none;
+    position: fixed;
+    inset: 0;
+    z-index: 9999;
+    background: rgba(0,0,0,0.92);
+    align-items: center;
+    justify-content: center;
+    padding: 20px;
+  }
+  .video-modal.active { display: flex; }
+  .video-modal__close {
+    position: absolute;
+    top: 16px;
+    right: 20px;
+    background: none;
+    border: none;
+    color: #fff;
+    font-size: 32px;
+    cursor: pointer;
+    z-index: 10000;
+    width: 44px;
+    height: 44px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+  .video-modal__video {
+    max-width: 380px;
+    width: 100%;
+    max-height: 85vh;
+    border-radius: 16px;
+    background: #000;
+  }
+
+  /* ═══════════════════════════════════════════
+     SITE HEADER (MINIMAL EDITORIAL)
+     ═══════════════════════════════════════════ */
+  .site-header {
+    padding: 16px 0;
+    border-bottom: 1px solid var(--border);
+    background: var(--cream);
+  }
+
+  .site-header__inner {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+  }
+
+  .site-logo {
+    display: flex;
+    align-items: center;
+  }
+
+  .site-logo img {
+    height: 36px;
+    width: auto;
+  }
+
+  .site-header__nav {
+    font-size: 13px;
+    color: var(--text-light);
+    display: flex;
+    align-items: center;
+    gap: 16px;
+  }
+
+  .site-header__nav a {
+    color: var(--text-light);
+    transition: color 0.2s;
+  }
+  .site-header__nav a:hover {
+    color: var(--charcoal);
+    text-decoration: none;
+  }
+
+  /* ═══════════════════════════════════════════
+     ARTICLE HEADER
+     ═══════════════════════════════════════════ */
+  .article-header {
+    padding: 48px 0 32px;
+  }
+
+  .article-header__category {
+    display: inline-flex;
+    align-items: center;
+    gap: 6px;
+    font-size: 12px;
+    font-weight: 700;
+    text-transform: uppercase;
+    letter-spacing: 1.5px;
+    color: var(--coral);
+    margin-bottom: 20px;
+  }
+
+  .article-header__category::before {
+    content: '';
+    width: 18px;
+    height: 2px;
+    background: var(--coral);
+    border-radius: 1px;
+  }
+
+  .article-header h1 {
+    font-family: var(--font-display);
+    font-size: clamp(32px, 5.5vw, 46px);
+    font-weight: 700;
+    line-height: 1.15;
+    color: var(--charcoal);
+    letter-spacing: -0.5px;
+    margin-bottom: 20px;
+    font-optical-sizing: auto;
+  }
+
+  .article-header__subtitle {
+    font-size: 19px;
+    color: var(--text-mid);
+    line-height: 1.6;
+    max-width: 600px;
+  }
+
+  .article-header__subtitle strong {
+    color: var(--charcoal);
+    font-weight: 600;
+  }
+
+  /* ═══════════════════════════════════════════
+     BYLINE
+     ═══════════════════════════════════════════ */
+  .byline {
+    display: flex;
+    align-items: center;
+    gap: 14px;
+    padding: 20px 0;
+    border-top: 1px solid var(--border);
+    border-bottom: 1px solid var(--border);
+    margin-bottom: 40px;
+  }
+
+  .byline__avatar {
+    width: 44px;
+    height: 44px;
+    border-radius: 50%;
+    background: linear-gradient(135deg, var(--lemon-light), var(--lemon));
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-family: var(--font-display);
+    font-weight: 600;
+    font-size: 16px;
+    color: var(--charcoal);
+    flex-shrink: 0;
+  }
+
+  .byline__info {
+    font-size: 14px;
+    line-height: 1.5;
+  }
+
+  .byline__name {
+    font-weight: 600;
+    color: var(--charcoal);
+  }
+
+  .byline__meta {
+    color: var(--text-light);
+    font-size: 13px;
+  }
+
+  .byline__meta span {
+    margin: 0 6px;
+    opacity: 0.4;
+  }
+
+  .byline__verified {
+    display: inline-flex;
+    align-items: center;
+    gap: 4px;
+    color: var(--sage);
+    font-size: 12px;
+    font-weight: 600;
+  }
+
+  /* ═══════════════════════════════════════════
+     ARTICLE BODY
+     ═══════════════════════════════════════════ */
+  .article-body p {
+    margin-bottom: 24px;
+    font-size: 17px;
+    line-height: 1.8;
+  }
+
+  .article-body p.lead {
+    font-size: 19px;
+    color: var(--charcoal);
+    line-height: 1.75;
+    font-weight: 400;
+  }
+
+  .article-body strong {
+    font-weight: 600;
+    color: var(--charcoal);
+  }
+
+  .article-body em {
+    font-style: italic;
+  }
+
+  /* ═══════════════════════════════════════════
+     SECTION DIVIDER
+     ═══════════════════════════════════════════ */
+  .divider {
+    text-align: center;
+    padding: 32px 0;
+    font-size: 20px;
+    letter-spacing: 12px;
+    opacity: 0.6;
+    user-select: none;
+  }
+
+  /* ═══════════════════════════════════════════
+     REASON SECTIONS
+     ═══════════════════════════════════════════ */
+  .reason {
+    margin-bottom: 16px;
+    opacity: 0;
+    transform: translateY(20px);
+    transition: opacity 0.6s ease, transform 0.6s ease;
+  }
+
+  .reason.visible {
+    opacity: 1;
+    transform: translateY(0);
+  }
+
+  .reason__number {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    width: 36px;
+    height: 36px;
+    border-radius: 50%;
+    background: var(--lemon);
+    color: var(--charcoal);
+    font-family: var(--font-display);
+    font-weight: 700;
+    font-size: 16px;
+    margin-bottom: 14px;
+  }
+
+  .reason h2 {
+    font-family: var(--font-display);
+    font-size: clamp(22px, 3.5vw, 28px);
+    font-weight: 600;
+    line-height: 1.3;
+    color: var(--charcoal);
+    margin-bottom: 16px;
+    letter-spacing: -0.3px;
+  }
+
+  .reason p {
+    margin-bottom: 20px;
+    font-size: 17px;
+    line-height: 1.8;
+  }
+
+  /* ═══════════════════════════════════════════
+     CALLOUT BOX
+     ═══════════════════════════════════════════ */
+  .callout {
+    background: var(--lemon-pale);
+    border-left: 4px solid var(--lemon);
+    padding: 24px 28px;
+    border-radius: 0 var(--radius-md) var(--radius-md) 0;
+    margin: 28px 0;
+    font-size: 16px;
+    line-height: 1.7;
+  }
+
+  .callout--coral {
+    background: var(--coral-light);
+    border-left-color: var(--coral);
+  }
+
+  .callout--sage {
+    background: var(--sage-light);
+    border-left-color: var(--sage);
+  }
+
+  .callout strong {
+    color: var(--charcoal);
+  }
+
+  .callout .callout__stat {
+    font-family: var(--font-display);
+    font-size: 28px;
+    font-weight: 700;
+    color: var(--charcoal);
+    display: block;
+    margin-bottom: 4px;
+  }
+
+  /* ═══════════════════════════════════════════
+     PRODUCT SHOWCASE IMAGE PLACEHOLDER
+     ═══════════════════════════════════════════ */
+  .product-visual {
+    margin: 36px 0;
+    border-radius: var(--radius-lg);
+    overflow: hidden;
+    position: relative;
+    box-shadow: var(--shadow-md);
+  }
+
+  .product-visual img {
+    width: 100%;
+    height: auto;
+    display: block;
+  }
+
+  .product-visual__caption {
+    font-family: var(--font-display);
+    font-size: 15px;
+    color: var(--text-light);
+    font-style: italic;
+    text-align: center;
+    padding: 14px 20px;
+    background: var(--cream);
+  }
+
+  /* ═══════════════════════════════════════════
+     MEDIA STRIP (As Seen In)
+     ═══════════════════════════════════════════ */
+  .media-strip {
+    padding: 28px 0;
+    border-top: 1px solid var(--border);
+    border-bottom: 1px solid var(--border);
+    margin: 36px 0;
+    text-align: center;
+  }
+
+  .media-strip__label {
+    font-size: 11px;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+    color: var(--text-light);
+    margin-bottom: 16px;
+    font-weight: 600;
+  }
+
+  .media-strip__logos {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 32px;
+    flex-wrap: wrap;
+  }
+
+  .media-strip__logo {
+    height: 22px;
+    width: auto;
+    opacity: 0.5;
+    transition: opacity 0.3s;
+    filter: grayscale(100%);
+  }
+
+  .media-strip__logo:hover {
+    opacity: 0.8;
+    filter: grayscale(50%);
+  }
+
+  /* ═══════════════════════════════════════════
+     CTA BUTTONS
+     ═══════════════════════════════════════════ */
+  .cta-block {
+    text-align: center;
+    margin: 40px 0;
+  }
+
+  .cta-btn {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    gap: 10px;
+    background: var(--coral);
+    color: #fff;
+    font-family: var(--font-body);
+    font-size: 17px;
+    font-weight: 700;
+    padding: 18px 40px;
+    border-radius: var(--radius-xl);
+    border: none;
+    cursor: pointer;
+    transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+    text-decoration: none;
+    box-shadow: 0 4px 16px rgba(232, 80, 58, 0.3);
+    position: relative;
+    overflow: hidden;
+    letter-spacing: 0.2px;
+  }
+
+  .cta-btn::before {
+    content: '';
+    position: absolute;
+    inset: 0;
+    background: linear-gradient(180deg, rgba(255,255,255,0.12) 0%, transparent 50%);
+    pointer-events: none;
+  }
+
+  .cta-btn:hover {
+    background: var(--coral-dark);
+    transform: translateY(-2px);
+    box-shadow: 0 8px 24px rgba(232, 80, 58, 0.35);
+    text-decoration: none;
+    color: #fff;
+  }
+
+  .cta-btn:active {
+    transform: translateY(0);
+  }
+
+  .cta-btn__arrow {
+    font-size: 18px;
+    transition: transform 0.3s;
+  }
+
+  .cta-btn:hover .cta-btn__arrow {
+    transform: translateX(3px);
+  }
+
+  .cta-sub {
+    margin-top: 12px;
+    font-size: 13px;
+    color: var(--text-light);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 16px;
+  }
+
+  .cta-sub span {
+    display: inline-flex;
+    align-items: center;
+    gap: 4px;
+  }
+
+  .cta-sub .check {
+    color: var(--sage);
+    font-size: 14px;
+  }
+
+  /* ═══════════════════════════════════════════
+     SOCIAL PROOF BIG NUMBER
+     ═══════════════════════════════════════════ */
+  .social-proof-block {
+    background: var(--charcoal);
+    color: #fff;
+    padding: 56px 24px;
+    margin: 48px -24px;
+    text-align: center;
+    position: relative;
+    overflow: hidden;
+  }
+
+  .social-proof-block::before {
+    content: '';
+    position: absolute;
+    inset: 0;
+    background:
+      radial-gradient(ellipse at 20% 50%, rgba(247,201,72,0.1) 0%, transparent 50%),
+      radial-gradient(ellipse at 80% 50%, rgba(232,80,58,0.08) 0%, transparent 50%);
+    pointer-events: none;
+  }
+
+  .social-proof-block__inner {
+    position: relative;
+  }
+
+  .social-proof-block__eyebrow {
+    font-size: 12px;
+    text-transform: uppercase;
+    letter-spacing: 3px;
+    color: var(--lemon);
+    font-weight: 600;
+    margin-bottom: 12px;
+  }
+
+  .social-proof-block__number {
+    font-family: var(--font-display);
+    font-size: clamp(42px, 8vw, 64px);
+    font-weight: 800;
+    line-height: 1.1;
+    margin-bottom: 8px;
+    background: linear-gradient(135deg, #fff, var(--lemon));
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+  }
+
+  .social-proof-block__sub {
+    font-size: 18px;
+    color: rgba(255,255,255,0.7);
+    max-width: 480px;
+    margin: 0 auto;
+    line-height: 1.6;
+  }
+
+  .social-proof-block__stats {
+    display: flex;
+    justify-content: center;
+    gap: 48px;
+    margin-top: 32px;
+    flex-wrap: wrap;
+  }
+
+  .social-proof-block__stat {
+    text-align: center;
+  }
+
+  .social-proof-block__stat-value {
+    font-family: var(--font-display);
+    font-size: 28px;
+    font-weight: 700;
+    color: var(--lemon);
+  }
+
+  .social-proof-block__stat-label {
+    font-size: 13px;
+    color: rgba(255,255,255,0.5);
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    margin-top: 2px;
+  }
+
+  /* ═══════════════════════════════════════════
+     STAR RATING DISPLAY
+     ═══════════════════════════════════════════ */
+  .stars {
+    display: inline-flex;
+    gap: 2px;
+    color: var(--lemon);
+    font-size: 18px;
+  }
+
+  .stars--sm { font-size: 14px; }
+
+  /* ═══════════════════════════════════════════
+     TESTIMONIALS
+     ═══════════════════════════════════════════ */
+  .testimonials {
+    margin: 48px 0;
+  }
+
+  .testimonials__heading {
+    font-family: var(--font-display);
+    font-size: 26px;
+    font-weight: 600;
+    text-align: center;
+    margin-bottom: 8px;
+    color: var(--charcoal);
+  }
+
+  .testimonials__sub {
+    text-align: center;
+    color: var(--text-light);
+    font-size: 15px;
+    margin-bottom: 32px;
+  }
+
+  .testimonial-card {
+    background: #fff;
+    border: 1px solid var(--border);
+    border-radius: var(--radius-md);
+    padding: 28px;
+    margin-bottom: 16px;
+    transition: box-shadow 0.3s;
+  }
+
+  .testimonial-card:hover {
+    box-shadow: var(--shadow-md);
+  }
+
+  .testimonial-card__header {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin-bottom: 14px;
+  }
+
+  .testimonial-card__author {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+  }
+
+  .testimonial-card__avatar {
+    width: 36px;
+    height: 36px;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-weight: 600;
+    font-size: 14px;
+    color: #fff;
+  }
+
+  .testimonial-card__name {
+    font-weight: 600;
+    font-size: 14px;
+    color: var(--charcoal);
+  }
+
+  .testimonial-card__badge {
+    font-size: 12px;
+    color: var(--sage);
+    font-weight: 500;
+  }
+
+  .testimonial-card__text {
+    font-size: 15px;
+    line-height: 1.7;
+    color: var(--text);
+    font-style: italic;
+  }
+
+  .testimonial-card__tag {
+    display: inline-block;
+    margin-top: 12px;
+    font-size: 12px;
+    font-weight: 600;
+    color: var(--text-light);
+    background: var(--border-light);
+    padding: 4px 10px;
+    border-radius: 100px;
+  }
+
+  /* ═══════════════════════════════════════════
+     OFFER BOX
+     ═══════════════════════════════════════════ */
+  .offer-box {
+    background: #fff;
+    border: 2px solid var(--lemon);
+    border-radius: var(--radius-lg);
+    padding: 40px 32px;
+    margin: 48px 0;
+    text-align: center;
+    position: relative;
+    box-shadow: var(--shadow-lg);
+  }
+
+  .offer-box::before {
+    content: 'LIMITED TIME';
+    position: absolute;
+    top: -13px;
+    left: 50%;
+    transform: translateX(-50%);
+    background: var(--lemon);
+    color: var(--charcoal);
+    font-size: 11px;
+    font-weight: 800;
+    letter-spacing: 1.5px;
+    padding: 5px 18px;
+    border-radius: 100px;
+  }
+
+  .offer-box__heading {
+    font-family: var(--font-display);
+    font-size: 28px;
+    font-weight: 700;
+    color: var(--charcoal);
+    margin-bottom: 6px;
+  }
+
+  .offer-box__price {
+    margin: 16px 0 8px;
+    display: flex;
+    align-items: baseline;
+    justify-content: center;
+    gap: 12px;
+  }
+
+  .offer-box__original {
+    font-size: 22px;
+    color: var(--text-light);
+    text-decoration: line-through;
+  }
+
+  .offer-box__sale {
+    font-family: var(--font-display);
+    font-size: 44px;
+    font-weight: 800;
+    color: var(--coral);
+    letter-spacing: -0.5px;
+  }
+
+  .offer-box__savings {
+    display: inline-block;
+    background: var(--coral-light);
+    color: var(--coral);
+    font-size: 13px;
+    font-weight: 700;
+    padding: 5px 16px;
+    border-radius: 100px;
+    margin-bottom: 16px;
+  }
+
+  .offer-box__includes {
+    text-align: left;
+    margin: 28px 0;
+    padding: 24px;
+    background: var(--cream);
+    border-radius: var(--radius-md);
+  }
+
+  .offer-box__includes-title {
+    font-weight: 700;
+    font-size: 14px;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    color: var(--text-light);
+    margin-bottom: 14px;
+  }
+
+  .offer-box__item {
+    display: flex;
+    align-items: flex-start;
+    gap: 10px;
+    padding: 8px 0;
+    font-size: 15px;
+  }
+
+  .offer-box__item-icon {
+    color: var(--sage);
+    font-size: 16px;
+    flex-shrink: 0;
+    margin-top: 2px;
+  }
+
+  .offer-box__item-free {
+    color: var(--coral);
+    font-weight: 700;
+    font-size: 12px;
+    text-transform: uppercase;
+    letter-spacing: 0.5px;
+  }
+
+  .countdown-box {
+    background: var(--charcoal);
+    color: #fff;
+    border-radius: var(--radius-md);
+    padding: 20px;
+    margin-top: 24px;
+  }
+
+  .countdown-box__label {
+    font-size: 13px;
+    color: rgba(255,255,255,0.6);
+    text-transform: uppercase;
+    letter-spacing: 1.5px;
+    margin-bottom: 10px;
+    font-weight: 600;
+  }
+
+  .countdown-box__timer {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 8px;
+  }
+
+  .countdown-box__unit {
+    text-align: center;
+  }
+
+  .countdown-box__digit {
+    background: rgba(247,201,72,0.15);
+    border: 1px solid rgba(247,201,72,0.2);
+    border-radius: 8px;
+    padding: 8px 14px;
+    font-family: var(--font-display);
+    font-size: 28px;
+    font-weight: 700;
+    color: var(--lemon);
+    min-width: 60px;
+    font-variant-numeric: tabular-nums;
+  }
+
+  .countdown-box__unit-label {
+    font-size: 10px;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    color: rgba(255,255,255,0.4);
+    margin-top: 4px;
+  }
+
+  .countdown-box__sep {
+    font-size: 24px;
+    color: rgba(255,255,255,0.3);
+    font-weight: 700;
+    padding-bottom: 18px;
+  }
+
+  .scarcity-bar {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 8px;
+    margin-top: 20px;
+    font-size: 14px;
+    font-weight: 600;
+    color: var(--coral);
+  }
+
+  .scarcity-dot {
+    width: 8px;
+    height: 8px;
+    background: var(--coral);
+    border-radius: 50%;
+    animation: blink 1.5s ease-in-out infinite;
+  }
+
+  @keyframes blink {
+    0%, 100% { opacity: 1; }
+    50% { opacity: 0.3; }
+  }
+
+  /* ═══════════════════════════════════════════
+     TRUST BADGES STRIP
+     ═══════════════════════════════════════════ */
+  .trust-badges {
+    display: flex;
+    justify-content: center;
+    gap: 32px;
+    padding: 32px 0;
+    flex-wrap: wrap;
+  }
+
+  .trust-badge {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 6px;
+    text-align: center;
+  }
+
+  .trust-badge__icon {
+    width: 48px;
+    height: 48px;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 22px;
+    background: var(--sage-light);
+    color: var(--sage);
+  }
+
+  .trust-badge__text {
+    font-size: 12px;
+    font-weight: 600;
+    color: var(--text-mid);
+    line-height: 1.3;
+    max-width: 90px;
+  }
+
+  /* ═══════════════════════════════════════════
+     COMPARISON TABLE
+     ═══════════════════════════════════════════ */
+  .comparison {
+    margin: 40px 0;
+    overflow: hidden;
+    border-radius: var(--radius-md);
+    border: 1px solid var(--border);
+  }
+
+  .comparison table {
+    width: 100%;
+    border-collapse: collapse;
+    font-size: 14px;
+  }
+
+  .comparison thead th {
+    padding: 16px;
+    text-align: center;
+    font-weight: 700;
+    font-size: 13px;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+  }
+
+  .comparison thead th:first-child {
+    text-align: left;
+    background: var(--cream);
+    color: var(--text-light);
+  }
+
+  .comparison thead th:nth-child(2) {
+    background: var(--lemon);
+    color: var(--charcoal);
+  }
+
+  .comparison thead th:nth-child(3) {
+    background: #f0f0f0;
+    color: var(--text-light);
+  }
+
+  .comparison tbody td {
+    padding: 14px 16px;
+    border-top: 1px solid var(--border-light);
+    text-align: center;
+  }
+
+  .comparison tbody td:first-child {
+    text-align: left;
+    font-weight: 500;
+    color: var(--text-mid);
+  }
+
+  .comparison tbody td:nth-child(2) {
+    background: var(--lemon-pale);
+    font-weight: 600;
+    color: var(--charcoal);
+  }
+
+  .comparison tbody tr:hover {
+    background: rgba(247,201,72,0.03);
+  }
+
+  /* ═══════════════════════════════════════════
+     DOCTOR ENDORSEMENT
+     ═══════════════════════════════════════════ */
+  .doctor-card {
+    background: var(--sage-light);
+    border-radius: var(--radius-lg);
+    padding: 32px;
+    margin: 32px 0;
+    display: flex;
+    gap: 24px;
+    align-items: flex-start;
+  }
+
+  .doctor-card__avatar {
+    width: 72px;
+    height: 72px;
+    border-radius: 50%;
+    overflow: hidden;
+    flex-shrink: 0;
+  }
+
+  .doctor-card__avatar img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+  }
+
+  .doctor-card__content {
+    flex: 1;
+  }
+
+  .doctor-card__name {
+    font-family: var(--font-display);
+    font-size: 18px;
+    font-weight: 600;
+    color: var(--charcoal);
+    margin-bottom: 2px;
+  }
+
+  .doctor-card__title {
+    font-size: 13px;
+    color: var(--sage-dark);
+    font-weight: 500;
+    margin-bottom: 12px;
+  }
+
+  .doctor-card__quote {
+    font-size: 15px;
+    line-height: 1.7;
+    color: var(--text);
+    font-style: italic;
+  }
+
+  /* ═══════════════════════════════════════════
+     STICKY BOTTOM BAR
+     ═══════════════════════════════════════════ */
+  .sticky-bar {
+    position: fixed;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    background: #fff;
+    border-top: 1px solid var(--border);
+    padding: 12px 20px;
+    z-index: 90;
+    transform: translateY(100%);
+    transition: transform 0.4s cubic-bezier(0.4, 0, 0.2, 1);
+    box-shadow: 0 -4px 20px rgba(0,0,0,0.08);
+  }
+
+  .sticky-bar.visible {
+    transform: translateY(0);
+  }
+
+  .sticky-bar__inner {
+    max-width: 720px;
+    margin: 0 auto;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 16px;
+  }
+
+  .sticky-bar__info {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    font-size: 14px;
+  }
+
+  .sticky-bar__lemon {
+    width: 44px;
+    height: 44px;
+    border-radius: 8px;
+    overflow: hidden;
+    flex-shrink: 0;
+  }
+
+  .sticky-bar__lemon img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+  }
+
+  .offer-box__hero {
+    margin: -40px -32px 24px;
+    overflow: hidden;
+    border-radius: var(--radius-lg) var(--radius-lg) 0 0;
+  }
+
+  .offer-box__hero img {
+    width: 100%;
+    height: 280px;
+    object-fit: cover;
+  }
+
+  .sticky-bar__text {
+    line-height: 1.3;
+  }
+
+  .sticky-bar__name {
+    font-weight: 700;
+    color: var(--charcoal);
+    font-size: 14px;
+  }
+
+  .sticky-bar__price-row {
+    display: flex;
+    align-items: center;
+    gap: 6px;
+  }
+
+  .sticky-bar__price-old {
+    font-size: 13px;
+    color: var(--text-light);
+    text-decoration: line-through;
+  }
+
+  .sticky-bar__price-new {
+    font-size: 16px;
+    font-weight: 700;
+    color: var(--coral);
+  }
+
+  .sticky-bar .cta-btn {
+    padding: 12px 28px;
+    font-size: 15px;
+    border-radius: var(--radius-lg);
+    white-space: nowrap;
+  }
+
+  /* ═══════════════════════════════════════════
+     FOOTER
+     ═══════════════════════════════════════════ */
+  .page-footer {
+    text-align: center;
+    padding: 40px 20px 100px;
+    font-size: 12px;
+    color: var(--text-light);
+    line-height: 1.8;
+    border-top: 1px solid var(--border);
+    margin-top: 48px;
+  }
+
+  .page-footer a {
+    color: var(--text-light);
+    text-decoration: underline;
+  }
+
+  /* ═══════════════════════════════════════════
+     NOISE TEXTURE OVERLAY
+     ═══════════════════════════════════════════ */
+  body::after {
+    content: '';
+    position: fixed;
+    inset: 0;
+    pointer-events: none;
+    z-index: 9999;
+    opacity: 0.018;
+    background-image: url("data:image/svg+xml,%3Csvg viewBox='0 0 256 256' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.9' numOctaves='4' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23n)'/%3E%3C/svg%3E");
+    background-repeat: repeat;
+    background-size: 200px;
+  }
+
+  /* ═══════════════════════════════════════════
+     RESPONSIVE
+     ═══════════════════════════════════════════ */
+  @media (max-width: 640px) {
+    body { font-size: 16px; }
+
+    .container { padding: 0 18px; }
+
+    .article-header { padding: 32px 0 24px; }
+
+    .social-proof-block { margin: 36px -18px; padding: 40px 18px; }
+    .social-proof-block__stats { gap: 28px; }
+
+    .offer-box { padding: 32px 20px; }
+
+    .doctor-card {
+      flex-direction: column;
+      align-items: center;
+      text-align: center;
+    }
+
+    .trust-badges { gap: 20px; }
+
+    .comparison { font-size: 13px; }
+    .comparison thead th, .comparison tbody td { padding: 10px 8px; }
+
+    .media-strip__logos { gap: 20px; }
+    .media-strip__logo { font-size: 15px; }
+
+    .sticky-bar__info { display: none; }
+    .sticky-bar__inner { justify-content: center; }
+    .sticky-bar .cta-btn { width: 100%; justify-content: center; }
+
+    .urgency-banner { padding: 10px 14px; }
+    .urgency-banner__text { font-size: 13px; }
+
+    .cta-btn { width: 100%; }
+  }
+</style>
+</head>
+<body>
+
+<!-- ═══════════════════════════════════════════
+     URGENCY BANNER
+     ═══════════════════════════════════════════ -->
+<div class="urgency-banner">
+  <div class="urgency-banner__inner">
+    <span class="urgency-banner__badge">SALE LIVE</span>
+    <span class="urgency-banner__text">
+      <strong>Up to 40% Off</strong> + Free Gifts &mdash; Ends in
+    </span>
+    <span class="countdown-inline" id="bannerCountdown">
+      <span id="bHrs">04</span>
+      <span class="sep">:</span>
+      <span id="bMin">32</span>
+      <span class="sep">:</span>
+      <span id="bSec">17</span>
+    </span>
+  </div>
+</div>
+
+<!-- ═══════════════════════════════════════════
+     SITE HEADER
+     ═══════════════════════════════════════════ -->
+<header class="site-header">
+  <div class="container site-header__inner">
+    <div class="site-logo"><img src="images/logos/Nancy_Logo_Pink.svg" alt="Hello Nancy"></div>
+    <nav class="site-header__nav">
+      <a href="https://hellonancy.com/collections/all">Shop</a>
+      <a href="https://hellonancy.com/pages/lem-guides">Guides</a>
+      <a href="https://hellonancy.com/blogs/articles">Blog</a>
+    </nav>
+  </div>
+</header>
+
+<!-- ═══════════════════════════════════════════
+     ARTICLE HEADER
+     ═══════════════════════════════════════════ -->
+<article class="container">
+
+  <div class="article-header">
+    <div class="article-header__category">Trending</div>
+    <h1>7 Reasons This Lemon-Shaped Toy Broke TikTok (And Why 500,000+ Women Swear By It)</h1>
+    <p class="article-header__subtitle">
+      Meet the <strong>Lem&trade;</strong> by Hello Nancy &mdash; the whisper-quiet, waterproof clitoral massager disguised as a cute lemon that's racked up <strong>11,137+ five-star reviews</strong>.
+    </p>
+  </div>
+
+  <!-- BYLINE -->
+  <div class="byline">
+    <div class="byline__avatar">SM</div>
+    <div class="byline__info">
+      <div class="byline__name">Sarah Mitchell</div>
+      <div class="byline__meta">
+        Updated Mar 1, 2026
+        <span>&middot;</span>
+        5 min read
+        <span>&middot;</span>
+        <span class="byline__verified">&#10003; Verified Purchase</span>
+      </div>
+    </div>
+  </div>
+
+  <!-- ═══════════════════════════════════════════
+       ARTICLE BODY
+       ═══════════════════════════════════════════ -->
+  <div class="article-body">
+
+    <p class="lead">
+      If you've been anywhere near TikTok lately, you've probably seen it &mdash; a tiny lemon-shaped gadget that's racked up <strong>millions of views</strong> and left commenters saying things we can't print here.
+    </p>
+
+    <p>
+      But behind the viral clips and the floods of lemon emojis, there's a real product that over <strong>500,000 women</strong> have quietly added to their nightstands. And according to the 11,137 five-star reviews, they're not going back.
+    </p>
+
+    <p>
+      Meet the <strong>Lem&trade; by Hello Nancy</strong> &mdash; and here are 7 reasons it's become the most talked-about (and whispered-about) gadget of 2026.
+    </p>
+
+    <!-- ═══ HERO PRODUCT GIF ═══ -->
+    <div style="text-align: center; margin: 28px 0 12px;">
+      <img src="images/product/lem-rotate.gif" alt="The Lem™ by Hello Nancy - 360° product view" loading="eager" style="max-width: 320px; width: 100%; border-radius: var(--radius-lg); box-shadow: var(--shadow-lg);">
+    </div>
+
+    <!-- ═══ TIKTOK VIRAL PROOF ═══ -->
+    <div class="tiktok-proof" style="background: #000; border-radius: var(--radius-lg); padding: 28px 24px; margin: 32px 0; color: #fff; text-align: center; position: relative; overflow: hidden;">
+      <div style="position: absolute; inset: 0; background: linear-gradient(135deg, rgba(254,44,85,0.12) 0%, transparent 40%, rgba(37,244,238,0.08) 100%); pointer-events: none;"></div>
+      <div style="position: relative;">
+        <div style="font-size: 12px; text-transform: uppercase; letter-spacing: 2px; color: rgba(255,255,255,0.5); margin-bottom: 12px;">Trending on TikTok</div>
+        <div style="font-family: var(--font-display); font-size: clamp(32px, 6vw, 48px); font-weight: 800; line-height: 1.1; margin-bottom: 8px;">
+          <span style="background: linear-gradient(90deg, #FE2C55, #25F4EE); -webkit-background-clip: text; -webkit-text-fill-color: transparent; background-clip: text;">12M+ Views</span>
+        </div>
+        <div style="font-size: 14px; color: rgba(255,255,255,0.6); max-width: 360px; margin: 0 auto; line-height: 1.5;">
+          The Lem has gone viral across TikTok, with millions of women sharing their &ldquo;first time&rdquo; reactions
+        </div>
+        <div style="display: flex; justify-content: center; gap: 24px; margin-top: 20px; font-size: 13px;">
+          <div><span style="color: #FE2C55; font-weight: 700; font-size: 18px; display: block;">47K+</span><span style="color: rgba(255,255,255,0.4);">Shares</span></div>
+          <div><span style="color: #25F4EE; font-weight: 700; font-size: 18px; display: block;">8.2K+</span><span style="color: rgba(255,255,255,0.4);">Duets</span></div>
+          <div><span style="color: #FE2C55; font-weight: 700; font-size: 18px; display: block;">156K+</span><span style="color: rgba(255,255,255,0.4);">Saves</span></div>
+        </div>
+      </div>
+    </div>
+
+    <!-- AS SEEN IN -->
+    <div class="media-strip">
+      <div class="media-strip__label">As featured in</div>
+      <div class="media-strip__logos">
+        <img class="media-strip__logo" src="https://cdn.29next.store/media/hellonancy/uploads/Guardian__logo.png" alt="The Guardian">
+        <img class="media-strip__logo" src="images/media/02_tatler_logo.webp" alt="Tatler">
+        <img class="media-strip__logo" src="images/media/05_vice_logo.svg" alt="Vice">
+        <img class="media-strip__logo" src="https://cdn.29next.store/media/hellonancy/uploads/NBC_logo.svg" alt="NBC">
+        <img class="media-strip__logo" src="https://cdn.29next.store/media/hellonancy/uploads/CBS_logo.svg" alt="CBS">
+      </div>
+    </div>
+
+    <!-- ═══ CTA #1 ═══ -->
+    <div class="cta-block">
+      <a href="https://hellonancy.com/products/lem" class="cta-btn">
+        See If It's Still In Stock
+        <span class="cta-btn__arrow">&rarr;</span>
+      </a>
+      <div class="cta-sub">
+        <span><span class="check">&#10003;</span> Free shipping</span>
+        <span><span class="check">&#10003;</span> 30-day guarantee</span>
+        <span><span class="check">&#10003;</span> Discreet packaging</span>
+      </div>
+    </div>
+
+    <div class="divider">&#127819; &nbsp; &#127819; &nbsp; &#127819;</div>
+
+    <!-- ═══════════════════════════════════════════
+         REASON 1
+         ═══════════════════════════════════════════ -->
+    <section class="reason">
+      <div class="reason__number">1</div>
+      <h2>It Uses Air-Suction, Not Vibration &mdash; And the Difference Will Ruin You</h2>
+      <p>
+        Most toys on the market work the same way they have for decades: a motor that buzzes. The Lem is different. It uses <strong>signature air-pulse technology</strong> that creates gentle waves of suction around the most sensitive nerve endings &mdash; mimicking a sensation that no vibrator can replicate.
+      </p>
+      <p>
+        The result? Faster, deeper, more full-body finishes &mdash; without the numbness that comes from traditional vibration. First-time users consistently describe it as a sensation they didn't know existed.
+      </p>
+      <div class="callout">
+        <span class="callout__stat">12 intensity levels</span>
+        From feather-light pulses to peak intensity &mdash; start at Level 1 and explore at your own pace. There's no wrong way to use it.
+      </div>
+
+      <!-- AIR-PULSE CROSS-SECTION DIAGRAM -->
+      <div style="text-align: center; margin: 24px 0 8px;">
+        <img src="images/product/lem-airpulse-v2.png" alt="Lem air-pulse technology cross-section - gentle pressure waves from the nozzle" loading="lazy" style="max-width: 320px; width: 100%; border-radius: var(--radius-lg); margin: 0 auto; box-shadow: var(--shadow-sm);">
+        <p style="font-size: 12px; color: var(--text-light); margin-top: 10px;">How the Lem&rsquo;s air-pulse nozzle creates gentle waves of suction</p>
+      </div>
+
+      <!-- AIR-PULSE RHYTHM DIAGRAM -->
+      <div style="text-align: center; margin: 16px 0 8px;">
+        <img src="https://hellonancy.com/cdn/shop/files/rythm-diagram-1.svg?v=1765288005&width=400" alt="Lem air-pulse rhythm patterns - 12 intensity levels visualized" loading="lazy" style="max-width: 100%; width: 400px; margin: 0 auto; opacity: 0.85;">
+        <p style="font-size: 12px; color: var(--text-light); margin-top: 8px;">Air-pulse patterns across 12 intensity levels</p>
+      </div>
+    </section>
+
+    <!-- ═══════════════════════════════════════════
+         REASON 2
+         ═══════════════════════════════════════════ -->
+    <section class="reason">
+      <div class="reason__number">2</div>
+      <h2>It Looks Like a Lemon. Your Roommate Will Never Know.</h2>
+      <p>
+        Forget the awkward shapes and obvious silhouettes. The Lem looks like a cute little lemon sitting on your shelf, in your travel bag, or on your nightstand. No one would ever guess &mdash; and that's the whole point.
+      </p>
+      <p>
+        This isn't accidental. Hello Nancy designed the Lem for women who want a product that fits <strong>their real life</strong> &mdash; shared apartments, carry-on luggage, nosy family visits. It arrives in plain, unmarked packaging, and even the billing statement is discreet.
+      </p>
+
+      <!-- PRODUCT LIFESTYLE GIF -->
+      <div class="product-visual">
+        <img src="images/product/lem-lifestyle.gif" alt="The Lem by Hello Nancy - at home on your bathroom shelf, nightstand, or in your travel bag" loading="lazy">
+        <div class="product-visual__caption">"Is that a stress ball?" &mdash; Every roommate, ever</div>
+      </div>
+
+      <!-- LEM vs TRADITIONAL COMPARISON -->
+      <div style="text-align: center; margin: 24px 0 8px;">
+        <img src="images/product/lem-vs-traditional.png" alt="Traditional vibrators vs The Lem - discreet, cute, and pocket-sized" loading="lazy" style="max-width: 100%; width: 480px; border-radius: var(--radius-lg); box-shadow: var(--shadow-md);">
+        <p style="font-size: 12px; color: var(--text-light); margin-top: 10px; font-style: italic;">Left: traditional toys. Right: the Lem.</p>
+      </div>
+    </section>
+
+    <!-- ═══ CTA #2 ═══ -->
+    <div class="cta-block">
+      <a href="https://hellonancy.com/products/lem" class="cta-btn">
+        Try It Completely Risk-Free
+        <span class="cta-btn__arrow">&rarr;</span>
+      </a>
+      <div class="cta-sub">
+        <span><span class="check">&#10003;</span> 40% off</span>
+        <span><span class="check">&#10003;</span> Ships tomorrow</span>
+      </div>
+    </div>
+
+    <div class="divider">&#127819; &nbsp; &#127819; &nbsp; &#127819;</div>
+
+    <!-- ═══════════════════════════════════════════
+         REASON 3
+         ═══════════════════════════════════════════ -->
+    <section class="reason">
+      <div class="reason__number">3</div>
+      <h2>12 Intensity Levels &mdash; From "First Time" to "Oh My God"</h2>
+      <p>
+        Whether you've never owned a toy before or you've tried everything on the market, the Lem meets you where you are. Level 1 is a barely-there whisper. Level 12 is&hellip; well, you'll find out.
+      </p>
+      <p>
+        The point is: <strong>you're in complete control.</strong> There's no jarring jump between settings. Each level builds gradually, so you can dial in exactly the sensation you want &mdash; and stay there, or keep climbing.
+      </p>
+      <div class="callout callout--coral">
+        <strong>Perfect for beginners:</strong> 73% of Lem customers say it's their first air-suction toy. The step-by-step guide that comes with every purchase makes it easy to start.
+      </div>
+    </section>
+
+    <!-- ═══ WINNING AD VISUAL (social proof of viral reach) ═══ -->
+    <div style="margin: 32px 0; background: var(--lemon-pale); border-radius: var(--radius-lg); padding: 20px; text-align: center;">
+      <div style="display: grid; grid-template-columns: 1fr 1fr; gap: 12px; max-width: 480px; margin: 0 auto;">
+        <img src="images/winning/winning-1.png" alt="Lem winning ad creative" loading="lazy" style="border-radius: 10px; width: 100%; box-shadow: var(--shadow-md);">
+        <img src="images/winning/lem-vs-rose.png" alt="Lem vs Rose comparison ad" loading="lazy" style="border-radius: 10px; width: 100%; box-shadow: var(--shadow-md);">
+      </div>
+      <p style="font-size: 12px; color: var(--text-light); margin-top: 12px; font-style: italic;">Real ads reaching millions of women daily across social media</p>
+    </div>
+
+    <!-- ═══════════════════════════════════════════
+         REASON 4
+         ═══════════════════════════════════════════ -->
+    <section class="reason">
+      <div class="reason__number">4</div>
+      <h2>Quieter Than Your Phone on Vibrate. Seriously.</h2>
+      <p>
+        Under 50 decibels. That's quieter than a household refrigerator. Quieter than a whispered conversation. <strong>Quieter than your phone buzzing on a table.</strong>
+      </p>
+      <p>
+        Whether you have roommates, thin walls, a sleeping partner, or a hotel room next door &mdash; the Lem was engineered to be practically silent. Use it without a second thought about who might hear.
+      </p>
+
+      <!-- COMPARISON TABLE -->
+      <div class="comparison">
+        <table>
+          <thead>
+            <tr>
+              <th>Feature</th>
+              <th>Lem&trade;</th>
+              <th>Traditional Toys</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td>Noise Level</td>
+              <td>&lt;50dB &#128264;</td>
+              <td>65&ndash;80dB &#128266;</td>
+            </tr>
+            <tr>
+              <td>Technology</td>
+              <td>Air-Pulse &#10024;</td>
+              <td>Vibration motor</td>
+            </tr>
+            <tr>
+              <td>Waterproof</td>
+              <td>IPX7 &#10003;</td>
+              <td>Splash-resistant</td>
+            </tr>
+            <tr>
+              <td>Material</td>
+              <td>Medical-grade silicone</td>
+              <td>Varies</td>
+            </tr>
+            <tr>
+              <td>Discreet Design</td>
+              <td>Lemon shape &#127819;</td>
+              <td>&#10007;</td>
+            </tr>
+            <tr>
+              <td>Guarantee</td>
+              <td>30-day full refund</td>
+              <td>Rarely offered</td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+    </section>
+
+    <!-- ═══════════════════════════════════════════
+         SOCIAL PROOF BLOCK
+         ═══════════════════════════════════════════ -->
+  </div><!-- end .article-body -->
+</article>
+
+<div class="social-proof-block">
+  <div class="social-proof-block__inner">
+    <div class="social-proof-block__eyebrow">The Numbers Speak</div>
+    <div class="social-proof-block__number">500,000+ Women &amp; Counting</div>
+    <div class="social-proof-block__sub">
+      Every 45 seconds, someone new discovers the Lem. Here's what the community looks like:
+    </div>
+    <div class="social-proof-block__stats">
+      <div class="social-proof-block__stat">
+        <div class="social-proof-block__stat-value">4.8</div>
+        <div class="social-proof-block__stat-label">Star Rating</div>
+      </div>
+      <div class="social-proof-block__stat">
+        <div class="social-proof-block__stat-value">11,137</div>
+        <div class="social-proof-block__stat-label">Reviews</div>
+      </div>
+      <div class="social-proof-block__stat">
+        <div class="social-proof-block__stat-value">4.7/5</div>
+        <div class="social-proof-block__stat-label">Trustpilot</div>
+      </div>
+      <div class="social-proof-block__stat">
+        <div class="social-proof-block__stat-value">12M+</div>
+        <div class="social-proof-block__stat-label">TikTok Views</div>
+      </div>
+    </div>
+  </div>
+</div>
+
+<article class="container">
+  <div class="article-body">
+
+    <!-- ═══ CTA #3 ═══ -->
+    <div class="cta-block">
+      <a href="https://hellonancy.com/products/lem" class="cta-btn">
+        Get Yours Before It Sells Out
+        <span class="cta-btn__arrow">&rarr;</span>
+      </a>
+      <div class="cta-sub">
+        <span><span class="check">&#10003;</span> Free discreet shipping</span>
+        <span><span class="check">&#10003;</span> 12-month warranty</span>
+      </div>
+    </div>
+
+    <div class="divider">&#127819; &nbsp; &#127819; &nbsp; &#127819;</div>
+
+    <!-- ═══════════════════════════════════════════
+         REASON 5
+         ═══════════════════════════════════════════ -->
+    <section class="reason">
+      <div class="reason__number">5</div>
+      <h2>Waterproof. Bath. Shower. Pool. Yes, Really.</h2>
+      <p>
+        The Lem is IPX7-rated &mdash; fully submersible in water up to 1 meter deep for 30 minutes. That means it's not just splash-proof. It's <strong>take-it-in-the-bath</strong> waterproof.
+      </p>
+      <p>
+        A warm bath, a long shower, wherever you feel most relaxed &mdash; the Lem goes there with you. And when you're done, cleaning is as simple as running it under water with mild soap. No fuss.
+      </p>
+
+      <div class="product-visual">
+        <img src="images/product/lem-hero.jpg" alt="Lem waterproof clitoral massager - close up showing air-suction nozzle" loading="lazy">
+        <div class="product-visual__caption">IPX7 waterproof &mdash; fully submersible, easy to clean</div>
+      </div>
+
+      <!-- PRODUCT GALLERY STRIP -->
+      <div style="display: flex; gap: 8px; overflow-x: auto; margin-top: 20px; padding: 4px 0; -webkit-overflow-scrolling: touch;">
+        <img src="images/product/gallery-1.jpg" alt="Lem product angle 1" loading="lazy" style="width: 140px; height: 140px; object-fit: cover; border-radius: 10px; flex-shrink: 0;">
+        <img src="images/product/gallery-2.jpg" alt="Lem product angle 2" loading="lazy" style="width: 140px; height: 140px; object-fit: cover; border-radius: 10px; flex-shrink: 0;">
+        <img src="images/product/lem-product.jpg" alt="Lem top-down view" loading="lazy" style="width: 140px; height: 140px; object-fit: cover; border-radius: 10px; flex-shrink: 0;">
+        <img src="images/product/gallery-4.jpg" alt="Lem product angle 4" loading="lazy" style="width: 140px; height: 140px; object-fit: cover; border-radius: 10px; flex-shrink: 0;">
+        <img src="images/product/gallery-5.jpg" alt="Lem product angle 5" loading="lazy" style="width: 140px; height: 140px; object-fit: cover; border-radius: 10px; flex-shrink: 0;">
+      </div>
+    </section>
+
+    <!-- ═══════════════════════════════════════════
+         REASON 6
+         ═══════════════════════════════════════════ -->
+    <section class="reason">
+      <div class="reason__number">6</div>
+      <h2>Doctor-Recommended. No, Seriously.</h2>
+      <p>
+        The Lem isn't just popular on TikTok &mdash; it's endorsed by healthcare professionals. Made from <strong>100% medical-grade silicone</strong> (body-safe, hypoallergenic, phthalate-free), it meets the standards that matter.
+      </p>
+
+      <div class="doctor-card">
+        <div class="doctor-card__avatar"><img src="https://cdn.29next.store/media/hellonancy/uploads/Image_Dr._Angela_Wright.webp" alt="Dr. Angela Wright"></div>
+        <div class="doctor-card__content">
+          <div class="doctor-card__name">Dr. Angela Wright</div>
+          <div class="doctor-card__title">GP, Clinical Sexologist, BMS Registered Menopause Specialist</div>
+          <p class="doctor-card__quote">
+            "As a doctor who focuses on sexual health, I frequently recommend the Lem as a high quality, beginner friendly suction toy. It's particularly useful for women who sometimes find they become less responsive to vibration after menopause or cancer."
+          </p>
+        </div>
+      </div>
+
+      <div class="callout callout--sage">
+        <strong>Self-care isn't selfish.</strong> Studies consistently show that regular self-pleasure improves sleep quality, reduces stress, and supports overall well-being. The Lem makes it effortless.
+      </div>
+    </section>
+
+    <!-- ═══════════════════════════════════════════
+         REASON 7
+         ═══════════════════════════════════════════ -->
+    <section class="reason">
+      <div class="reason__number">7</div>
+      <h2>30-Day Guarantee, Discreet Everything, Zero Risk</h2>
+      <p>
+        Ordering the Lem is designed to feel as comfortable as the product itself. Here's exactly what you can expect:
+      </p>
+
+      <div class="offer-box__includes" style="background: #fff; border: 1px solid var(--border); border-radius: 12px; padding: 24px 28px; margin: 20px 0;">
+        <div class="offer-box__item">
+          <span class="offer-box__item-icon">&#9989;</span>
+          <span><strong>30-day money-back guarantee.</strong> Don't love it? Full refund, no questions. You don't even need to explain why.</span>
+        </div>
+        <div class="offer-box__item">
+          <span class="offer-box__item-icon">&#9989;</span>
+          <span><strong>Discreet, plain packaging.</strong> No logos, no product names on the box. It looks like any other delivery.</span>
+        </div>
+        <div class="offer-box__item">
+          <span class="offer-box__item-icon">&#9989;</span>
+          <span><strong>Discreet billing.</strong> Nothing identifiable on your bank statement. Ever.</span>
+        </div>
+        <div class="offer-box__item">
+          <span class="offer-box__item-icon">&#9989;</span>
+          <span><strong>12-month product warranty.</strong> Full parts and defect coverage for a full year.</span>
+        </div>
+        <div class="offer-box__item">
+          <span class="offer-box__item-icon">&#9989;</span>
+          <span><strong>Free shipping</strong> on orders over US$89.</span>
+        </div>
+      </div>
+    </section>
+
+    <div class="divider">&#127819; &nbsp; &#127819; &nbsp; &#127819;</div>
+
+    <!-- ═══════════════════════════════════════════
+         TESTIMONIALS SECTION
+         ═══════════════════════════════════════════ -->
+    <div class="testimonials">
+      <h3 class="testimonials__heading">What Real Customers Are Saying</h3>
+      <p class="testimonials__sub">
+        <span class="stars">&#9733;&#9733;&#9733;&#9733;&#9733;</span>
+        &nbsp; 4.8 out of 5 from 11,137 reviews
+      </p>
+
+      <!-- ═══ VIDEO REVIEW THUMBNAILS (TAP TO PLAY) ═══ -->
+      <div class="video-reviews" style="margin: 28px 0 36px; overflow-x: auto; -webkit-overflow-scrolling: touch;">
+        <div style="display: flex; gap: 12px; padding: 4px 0; min-width: max-content;">
+          <button class="video-thumb" data-video="videos/ugc-1.mp4" style="position: relative; display: block; width: 120px; height: 160px; border-radius: 12px; overflow: hidden; flex-shrink: 0; box-shadow: var(--shadow-md); border: none; padding: 0; cursor: pointer; background: none;">
+            <img src="https://cdn.29next.store/media/hellonancy/uploads/lem-video-review-1-poster.webp" alt="Video review 1" style="width: 100%; height: 100%; object-fit: cover;" loading="lazy">
+            <div style="position: absolute; inset: 0; background: linear-gradient(transparent 40%, rgba(0,0,0,0.7)); display: flex; align-items: flex-end; padding: 10px;">
+              <span style="color: #fff; font-size: 11px; line-height: 1.3; font-weight: 500;">"Ohhhh Lem..."</span>
+            </div>
+            <div style="position: absolute; top: 50%; left: 50%; transform: translate(-50%, -50%); width: 36px; height: 36px; background: rgba(255,255,255,0.9); border-radius: 50%; display: flex; align-items: center; justify-content: center;">
+              <span style="margin-left: 3px; border-left: 10px solid var(--coral); border-top: 6px solid transparent; border-bottom: 6px solid transparent;"></span>
+            </div>
+          </button>
+          <button class="video-thumb" data-video="videos/ugc-2.mp4" style="position: relative; display: block; width: 120px; height: 160px; border-radius: 12px; overflow: hidden; flex-shrink: 0; box-shadow: var(--shadow-md); border: none; padding: 0; cursor: pointer; background: none;">
+            <img src="https://cdn.29next.store/media/hellonancy/uploads/lem-video-review-2-poster.webp" alt="Video review 2" style="width: 100%; height: 100%; object-fit: cover;" loading="lazy">
+            <div style="position: absolute; inset: 0; background: linear-gradient(transparent 40%, rgba(0,0,0,0.7)); display: flex; align-items: flex-end; padding: 10px;">
+              <span style="color: #fff; font-size: 11px; line-height: 1.3; font-weight: 500;">"Get yourself one!"</span>
+            </div>
+            <div style="position: absolute; top: 50%; left: 50%; transform: translate(-50%, -50%); width: 36px; height: 36px; background: rgba(255,255,255,0.9); border-radius: 50%; display: flex; align-items: center; justify-content: center;">
+              <span style="margin-left: 3px; border-left: 10px solid var(--coral); border-top: 6px solid transparent; border-bottom: 6px solid transparent;"></span>
+            </div>
+          </button>
+          <button class="video-thumb" data-video="videos/ugc-3.mp4" style="position: relative; display: block; width: 120px; height: 160px; border-radius: 12px; overflow: hidden; flex-shrink: 0; box-shadow: var(--shadow-md); border: none; padding: 0; cursor: pointer; background: none;">
+            <img src="https://cdn.29next.store/media/hellonancy/uploads/lem-video-review-3-poster.webp" alt="Video review 3" style="width: 100%; height: 100%; object-fit: cover;" loading="lazy">
+            <div style="position: absolute; inset: 0; background: linear-gradient(transparent 40%, rgba(0,0,0,0.7)); display: flex; align-items: flex-end; padding: 10px;">
+              <span style="color: #fff; font-size: 11px; line-height: 1.3; font-weight: 500;">"Life changing!"</span>
+            </div>
+            <div style="position: absolute; top: 50%; left: 50%; transform: translate(-50%, -50%); width: 36px; height: 36px; background: rgba(255,255,255,0.9); border-radius: 50%; display: flex; align-items: center; justify-content: center;">
+              <span style="margin-left: 3px; border-left: 10px solid var(--coral); border-top: 6px solid transparent; border-bottom: 6px solid transparent;"></span>
+            </div>
+          </button>
+          <!-- Thumbnails 4 & 5 removed — only 3 UGC videos available -->
+        </div>
+        <p style="text-align: center; font-size: 12px; color: var(--text-light); margin-top: 12px;">Tap to watch real reviews &#9654;</p>
+      </div>
+
+      <div class="testimonial-card">
+        <div class="testimonial-card__header">
+          <div class="testimonial-card__author">
+            <div class="testimonial-card__avatar" style="background: linear-gradient(135deg, #F7C948, #E5B52F); overflow: hidden;"><img src="images/ugc/alyssa-g.png" alt="Jessica" style="width: 100%; height: 100%; object-fit: cover;"></div>
+            <div>
+              <div class="testimonial-card__name">Jessica, 29</div>
+              <span class="stars stars--sm">&#9733;&#9733;&#9733;&#9733;&#9733;</span>
+            </div>
+          </div>
+          <span class="testimonial-card__badge">&#10003; Verified</span>
+        </div>
+        <p class="testimonial-card__text">
+          "All it is hyped up to be and then some. My only regret is not ordering sooner. The discreet packaging was a huge plus too."
+        </p>
+        <span class="testimonial-card__tag">First-Time Buyer</span>
+      </div>
+
+      <div class="testimonial-card">
+        <div class="testimonial-card__header">
+          <div class="testimonial-card__author">
+            <div class="testimonial-card__avatar" style="background: linear-gradient(135deg, #E8503A, #D4432E); overflow: hidden;"><img src="images/ugc/jordan-t.png" alt="Rachel" style="width: 100%; height: 100%; object-fit: cover;"></div>
+            <div>
+              <div class="testimonial-card__name">Rachel, 34</div>
+              <span class="stars stars--sm">&#9733;&#9733;&#9733;&#9733;&#9733;</span>
+            </div>
+          </div>
+          <span class="testimonial-card__badge">&#10003; Verified</span>
+        </div>
+        <p class="testimonial-card__text">
+          "I've tried so many products over the years and nothing compares. The air suction technology is a total game changer. Worth every single penny."
+        </p>
+        <span class="testimonial-card__tag">Experienced User</span>
+      </div>
+
+      <div class="testimonial-card">
+        <div class="testimonial-card__header">
+          <div class="testimonial-card__author">
+            <div class="testimonial-card__avatar" style="background: linear-gradient(135deg, #3EA06F, #2E8B57); overflow: hidden;"><img src="images/ugc/daliza.png" alt="Maya" style="width: 100%; height: 100%; object-fit: cover;"></div>
+            <div>
+              <div class="testimonial-card__name">Maya, 26</div>
+              <span class="stars stars--sm">&#9733;&#9733;&#9733;&#9733;&#9733;</span>
+            </div>
+          </div>
+          <span class="testimonial-card__badge">&#10003; Verified</span>
+        </div>
+        <p class="testimonial-card__text">
+          "My partner and I use it together and it's brought us so much closer. Also &mdash; it's POWERFUL. Level 5 is my sweet spot but honestly they're all incredible."
+        </p>
+        <span class="testimonial-card__tag">Couples</span>
+      </div>
+
+      <div class="testimonial-card">
+        <div class="testimonial-card__header">
+          <div class="testimonial-card__author">
+            <div class="testimonial-card__avatar" style="background: linear-gradient(135deg, #9B7DDB, #7C5DBF); overflow: hidden;"><img src="images/ugc/deliza.png" alt="Tina" style="width: 100%; height: 100%; object-fit: cover;"></div>
+            <div>
+              <div class="testimonial-card__name">Tina, 41</div>
+              <span class="stars stars--sm">&#9733;&#9733;&#9733;&#9733;&#9733;</span>
+            </div>
+          </div>
+          <span class="testimonial-card__badge">&#10003; Verified</span>
+        </div>
+        <p class="testimonial-card__text">
+          "Discreet packaging. The product, WOW!!!! Fast shipping and excellent customer service when I had a question. 10/10 recommend."
+        </p>
+        <span class="testimonial-card__tag">Repeat Customer</span>
+      </div>
+    </div>
+
+    <!-- ═══════════════════════════════════════════
+         OFFER BOX
+         ═══════════════════════════════════════════ -->
+    <div class="offer-box" id="offerBox">
+      <div class="offer-box__hero">
+        <img src="images/product/gallery-3.jpg" alt="Lem in its beautiful gift box with Playtime Pleasures cards" loading="lazy">
+      </div>
+      <h3 class="offer-box__heading" id="saleHeading">The Lem&trade; &mdash; Spring Sale</h3>
+      <div style="margin-top:4px;">
+        <span class="stars">&#9733;&#9733;&#9733;&#9733;&#9733;</span>
+        <span style="font-size:14px; color: var(--text-light); margin-left: 6px;">11,137 reviews</span>
+      </div>
+      <div class="offer-box__price">
+        <span class="offer-box__original">US$149</span>
+        <span class="offer-box__sale">US$89</span>
+      </div>
+      <div class="offer-box__savings" id="saleSavings">SAVE 40% &mdash; While supplies last</div>
+
+      <div class="offer-box__includes">
+        <div class="offer-box__includes-title">Your order includes:</div>
+        <div class="offer-box__item">
+          <span class="offer-box__item-icon">&#127819;</span>
+          <span><strong>Lem&trade; Clitoral Massager</strong> &mdash; 12 air-pulse patterns</span>
+        </div>
+        <div class="offer-box__item">
+          <span class="offer-box__item-icon">&#127873;</span>
+          <span><strong>Discreet Pleasure Pouch</strong> <span class="offer-box__item-free">FREE GIFT</span></span>
+        </div>
+        <div class="offer-box__item">
+          <span class="offer-box__item-icon">&#128214;</span>
+          <span><strong>Playtime Pleasures Guide</strong> <span class="offer-box__item-free">FREE GIFT</span></span>
+        </div>
+        <div class="offer-box__item">
+          <span class="offer-box__item-icon">&#128230;</span>
+          <span><strong>USB-C / Magnetic Charger</strong> included</span>
+        </div>
+        <div class="offer-box__item">
+          <span class="offer-box__item-icon">&#128274;</span>
+          <span><strong>Discreet plain packaging</strong> &mdash; no logos, no product names</span>
+        </div>
+      </div>
+
+      <a href="https://hellonancy.com/products/lem" class="cta-btn" style="width: 100%; font-size: 19px; padding: 20px;">
+        Check Availability
+        <span class="cta-btn__arrow">&rarr;</span>
+      </a>
+
+      <div class="countdown-box">
+        <div class="countdown-box__label">Offer Ends In</div>
+        <div class="countdown-box__timer" id="offerCountdown">
+          <div class="countdown-box__unit">
+            <div class="countdown-box__digit" id="oHrs">04</div>
+            <div class="countdown-box__unit-label">Hours</div>
+          </div>
+          <div class="countdown-box__sep">:</div>
+          <div class="countdown-box__unit">
+            <div class="countdown-box__digit" id="oMin">32</div>
+            <div class="countdown-box__unit-label">Minutes</div>
+          </div>
+          <div class="countdown-box__sep">:</div>
+          <div class="countdown-box__unit">
+            <div class="countdown-box__digit" id="oSec">17</div>
+            <div class="countdown-box__unit-label">Seconds</div>
+          </div>
+        </div>
+      </div>
+
+      <div class="scarcity-bar">
+        <span class="scarcity-dot"></span>
+        Due to TikTok demand, stock is extremely limited
+      </div>
+    </div>
+
+    <!-- TRUST BADGES -->
+    <div class="trust-badges">
+      <div class="trust-badge">
+        <div class="trust-badge__icon">&#128274;</div>
+        <div class="trust-badge__text">Discreet Packaging</div>
+      </div>
+      <div class="trust-badge">
+        <div class="trust-badge__icon">&#128176;</div>
+        <div class="trust-badge__text">30-Day Guarantee</div>
+      </div>
+      <div class="trust-badge">
+        <div class="trust-badge__icon">&#127968;</div>
+        <div class="trust-badge__text">Free Shipping</div>
+      </div>
+      <div class="trust-badge">
+        <div class="trust-badge__icon">&#128737;</div>
+        <div class="trust-badge__text">12-Month Warranty</div>
+      </div>
+    </div>
+
+    <!-- ═══ FINAL CTA ═══ -->
+    <div class="cta-block" style="margin: 48px 0 16px;">
+      <a href="https://hellonancy.com/products/lem" class="cta-btn" style="font-size: 19px; padding: 20px 48px;">
+        Shop Risk-Free Today
+        <span class="cta-btn__arrow">&rarr;</span>
+      </a>
+      <div class="cta-sub" style="margin-top: 16px;">
+        <span><span class="check">&#10003;</span> 40% off</span>
+        <span><span class="check">&#10003;</span> Free gifts included</span>
+        <span><span class="check">&#10003;</span> Ships tomorrow</span>
+      </div>
+    </div>
+
+  </div><!-- end .article-body -->
+</article>
+
+<!-- ═══════════════════════════════════════════
+     FOOTER
+     ═══════════════════════════════════════════ -->
+<footer class="page-footer">
+  <div class="container">
+    <p style="margin-bottom: 8px;">&copy; 2026 Hello Nancy. All rights reserved.</p>
+    <p>
+      <a href="https://hellonancy.com/policies/privacy-policy">Privacy Policy</a> &nbsp;&middot;&nbsp;
+      <a href="https://hellonancy.com/policies/terms-of-service">Terms</a> &nbsp;&middot;&nbsp;
+      <a href="https://hellonancy.com/policies/refund-policy">Returns</a> &nbsp;&middot;&nbsp;
+      <a href="mailto:support@hellonancy.com">Contact Us</a>
+    </p>
+    <p style="margin-top: 12px; font-size: 11px; max-width: 560px; margin-left: auto; margin-right: auto;">
+      Individual results may vary. This product is not intended to diagnose, treat, cure, or prevent any medical condition. Consult your healthcare provider if you have concerns.
+    </p>
+  </div>
+</footer>
+
+<!-- ═══════════════════════════════════════════
+     STICKY BOTTOM BAR
+     ═══════════════════════════════════════════ -->
+<div class="sticky-bar" id="stickyBar">
+  <div class="sticky-bar__inner">
+    <div class="sticky-bar__info">
+      <div class="sticky-bar__lemon"><img src="images/product/lem-lifestyle-nightstand.png" alt="Lem"></div>
+      <div class="sticky-bar__text">
+        <div class="sticky-bar__name">The Lem&trade;</div>
+        <div class="sticky-bar__price-row">
+          <span class="sticky-bar__price-old">US$149</span>
+          <span class="sticky-bar__price-new">US$89</span>
+          <span class="stars stars--sm" style="margin-left: 4px;">&#9733;&#9733;&#9733;&#9733;&#9733;</span>
+        </div>
+      </div>
+    </div>
+    <a href="https://hellonancy.com/products/lem" class="cta-btn">
+      Check Availability
+      <span class="cta-btn__arrow">&rarr;</span>
+    </a>
+  </div>
+</div>
+
+<!-- ═══ VIDEO LIGHTBOX MODAL ═══ -->
+<div class="video-modal" id="videoModal">
+  <button class="video-modal__close" aria-label="Close video">&times;</button>
+  <video class="video-modal__video" id="modalVideo" controls playsinline preload="none"></video>
+</div>
+
+<!-- ═══════════════════════════════════════════
+     JAVASCRIPT
+     ═══════════════════════════════════════════ -->
+<script>
+(function() {
+  'use strict';
+
+  // ─── EVERGREEN SALE SYSTEM ───
+  var SALE_NAMES = {
+    0: 'New Year New You Sale',
+    1: "Valentine's Day Sale",
+    2: 'Spring Refresh Sale',
+    3: 'Spring Sale',
+    4: 'Masturbation Month Sale',
+    5: 'Summer Sale',
+    6: 'Summer Sale',
+    7: 'Back to You Sale',
+    8: 'Fall Sale',
+    9: 'Fall Sale',
+    10: 'Black Friday Sale',
+    11: 'Holiday Sale'
+  };
+
+  var saleName = SALE_NAMES[new Date().getMonth()] || 'Sale';
+  var saleHeading = document.getElementById('saleHeading');
+  if (saleHeading) saleHeading.innerHTML = 'The Lem&trade; &mdash; ' + saleName;
+
+  // ─── COUNTDOWN TIMER (AUTO-RESET) ───
+  var TIMER_KEY = 'lem_sale_deadline';
+  var TIMER_DURATION = 6 * 60 * 60 * 1000;
+  var deadline;
+
+  function resetDeadline() {
+    deadline = Date.now() + TIMER_DURATION;
+    try { localStorage.setItem(TIMER_KEY, deadline.toString()); } catch(e) {}
+    return deadline;
+  }
+
+  try {
+    var stored = localStorage.getItem(TIMER_KEY);
+    deadline = (stored && parseInt(stored) > Date.now()) ? parseInt(stored) : resetDeadline();
+  } catch(e) {
+    deadline = Date.now() + TIMER_DURATION;
+  }
+
+  function updateCountdown() {
+    var now = Date.now();
+    var diff = deadline - now;
+    if (diff <= 0) { resetDeadline(); diff = deadline - now; }
+
+    var hrs = Math.floor(diff / 3600000);
+    diff -= hrs * 3600000;
+    var min = Math.floor(diff / 60000);
+    diff -= min * 60000;
+    var sec = Math.floor(diff / 1000);
+    var pad = function(n) { return String(n).padStart(2, '0'); };
+
+    var bH = document.getElementById('bHrs');
+    var bM = document.getElementById('bMin');
+    var bS = document.getElementById('bSec');
+    if (bH) bH.textContent = pad(hrs);
+    if (bM) bM.textContent = pad(min);
+    if (bS) bS.textContent = pad(sec);
+
+    var oH = document.getElementById('oHrs');
+    var oM = document.getElementById('oMin');
+    var oS = document.getElementById('oSec');
+    if (oH) oH.textContent = pad(hrs);
+    if (oM) oM.textContent = pad(min);
+    if (oS) oS.textContent = pad(sec);
+  }
+
+  updateCountdown();
+  setInterval(updateCountdown, 1000);
+
+  // ─── SCROLL ANIMATIONS (INTERSECTION OBSERVER) ───
+  const reasons = document.querySelectorAll('.reason');
+  const observerOptions = {
+    threshold: 0.15,
+    rootMargin: '0px 0px -40px 0px'
+  };
+
+  const observer = new IntersectionObserver((entries) => {
+    entries.forEach((entry) => {
+      if (entry.isIntersecting) {
+        entry.target.classList.add('visible');
+        observer.unobserve(entry.target);
+      }
+    });
+  }, observerOptions);
+
+  reasons.forEach((reason) => observer.observe(reason));
+
+  // ─── STICKY BAR ───
+  const stickyBar = document.getElementById('stickyBar');
+  const firstCTA = document.querySelector('.cta-block');
+  const offerBox = document.getElementById('offerBox');
+
+  function checkStickyBar() {
+    if (!firstCTA || !stickyBar) return;
+    const ctaRect = firstCTA.getBoundingClientRect();
+    const offerRect = offerBox ? offerBox.getBoundingClientRect() : { top: Infinity };
+    // Show sticky bar after user scrolls past first CTA
+    // but hide when the offer box is visible
+    const pastFirstCTA = ctaRect.bottom < 0;
+    const offerVisible = offerRect.top < window.innerHeight && offerRect.bottom > 0;
+
+    if (pastFirstCTA && !offerVisible) {
+      stickyBar.classList.add('visible');
+    } else {
+      stickyBar.classList.remove('visible');
+    }
+  }
+
+  window.addEventListener('scroll', checkStickyBar, { passive: true });
+  checkStickyBar();
+
+  // ─── VIDEO LIGHTBOX ───
+  var videoModal = document.getElementById('videoModal');
+  var modalVideo = document.getElementById('modalVideo');
+  var modalClose = videoModal ? videoModal.querySelector('.video-modal__close') : null;
+
+  document.querySelectorAll('.video-thumb[data-video]').forEach(function(thumb) {
+    thumb.addEventListener('click', function() {
+      var src = this.getAttribute('data-video');
+      if (modalVideo && videoModal) {
+        modalVideo.src = src;
+        videoModal.classList.add('active');
+        document.body.style.overflow = 'hidden';
+        modalVideo.play();
+      }
+    });
+  });
+
+  function closeVideoModal() {
+    if (videoModal && modalVideo) {
+      videoModal.classList.remove('active');
+      modalVideo.pause();
+      modalVideo.src = '';
+      document.body.style.overflow = '';
+    }
+  }
+
+  if (modalClose) modalClose.addEventListener('click', closeVideoModal);
+  if (videoModal) videoModal.addEventListener('click', function(e) {
+    if (e.target === videoModal) closeVideoModal();
+  });
+  document.addEventListener('keydown', function(e) {
+    if (e.key === 'Escape') closeVideoModal();
+  });
+
+})();
+</script>
+
+</body>
+</html>
