@@ -1,0 +1,1066 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Discover Lem | Hello Nancy</title>
+  <!-- Meta Pixel -->
+  <script>
+  !function(f,b,e,v,n,t,s)
+  {if(f.fbq)return;n=f.fbq=function(){n.callMethod?
+  n.callMethod.apply(n,arguments):n.queue.push(arguments)};
+  if(!f._fbq)f._fbq=n;n.push=n;n.loaded=!0;n.version='2.0';
+  n.queue=[];t=b.createElement(e);t.async=!0;
+  t.src=v;s=b.getElementsByTagName(e)[0];
+  s.parentNode.insertBefore(t,s)}(window, document,'script',
+  'https://connect.facebook.net/en_US/fbevents.js');
+  fbq('init', '832767357702650');
+  fbq('track', 'PageView');
+  </script>
+  <noscript><img height="1" width="1" style="display:none"
+  src="https://www.facebook.com/tr?id=832767357702650&ev=PageView&noscript=1"/></noscript>
+  <!-- End Meta Pixel -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link href="https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@0,9..144,300..900;1,9..144,300..900&family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+  <style>
+    *, *::before, *::after { margin: 0; padding: 0; box-sizing: border-box; }
+    :root {
+      --pink: #ff30cc;
+      --pink-light: rgba(255, 48, 204, 0.08);
+      --neon: #ccfd28;
+      --cream: #fcf7ed;
+      --cream-dark: #f3ede7;
+      --black: #1a1a1a;
+      --charcoal: #333333;
+      --white: #ffffff;
+      --star: #ffb74a;
+      --green: #2DC653;
+      --green-dark: #25a847;
+      --gray: #797979;
+      --font-heading: 'Fraunces', Georgia, serif;
+      --font-body: 'Inter', -apple-system, sans-serif;
+      --max-width: 600px;
+      --border: 1px solid rgba(0,0,0,0.08);
+    }
+    html { scroll-behavior: smooth; }
+    body { font-family: var(--font-body); color: var(--black); background: var(--white); line-height: 1.6; -webkit-font-smoothing: antialiased; overflow-x: hidden; }
+    img { max-width: 100%; height: auto; display: block; }
+    a { text-decoration: none; color: inherit; }
+
+    /* ── STICKY DISCOUNT BAR ── */
+    .discount-bar {
+      position: fixed; top: 0; left: 0; right: 0; z-index: 1000;
+      background: var(--pink); color: var(--white);
+      text-align: center; padding: 8px 16px;
+      font-size: 13px; font-weight: 500; letter-spacing: 0.3px;
+      display: flex; align-items: center; justify-content: center; gap: 8px;
+    }
+    .discount-bar__timer {
+      font-weight: 700; font-variant-numeric: tabular-nums;
+      background: rgba(0,0,0,0.15); padding: 2px 8px; border-radius: 4px;
+      font-size: 12px; letter-spacing: 1px;
+    }
+    .discount-bar strong { font-weight: 700; }
+
+    /* ── HEADER ── */
+    .header {
+      margin-top: 36px;
+      background: var(--white);
+      border-bottom: var(--border);
+      padding: 14px 24px;
+      display: flex; align-items: center; justify-content: center;
+    }
+    .header__logo img { height: 28px; width: auto; }
+
+    /* ── PROGRESS BAR ── */
+    .progress-wrap {
+      background: var(--cream);
+      padding: 0;
+      position: sticky; top: 36px; z-index: 999;
+      border-bottom: var(--border);
+    }
+    .progress-bar {
+      height: 4px; background: var(--green);
+      transition: width 0.6s cubic-bezier(0.22, 1, 0.36, 1);
+      width: 0%;
+    }
+    .progress-steps {
+      max-width: var(--max-width); margin: 0 auto;
+      display: flex; align-items: center; justify-content: center;
+      padding: 10px 24px; gap: 6px;
+    }
+    .progress-dot {
+      width: 8px; height: 8px; border-radius: 50%;
+      background: rgba(0,0,0,0.1);
+      transition: all 0.3s ease;
+    }
+    .progress-dot.active { background: var(--green); transform: scale(1.3); }
+    .progress-dot.done { background: var(--green); }
+
+    /* ── FUNNEL SECTIONS ── */
+    .funnel-section {
+      max-width: var(--max-width); margin: 0 auto;
+      padding: 40px 20px;
+      display: none;
+      opacity: 0;
+      transform: translateY(20px);
+      transition: opacity 0.5s ease, transform 0.5s ease;
+    }
+    .funnel-section.visible {
+      display: block;
+      opacity: 1;
+      transform: translateY(0);
+    }
+    .funnel-section.animating {
+      display: block;
+    }
+
+    /* ── CONTINUE BUTTON (Monpacha pattern) ── */
+    .continue-btn {
+      display: block; width: 100%;
+      background: var(--green); color: var(--white);
+      padding: 16px 32px; border-radius: 12px;
+      font-size: 16px; font-weight: 700; letter-spacing: 0.3px;
+      text-align: center; cursor: pointer; border: none;
+      transition: background 0.2s, transform 0.1s, box-shadow 0.2s;
+      margin-top: 28px;
+      text-transform: uppercase;
+      box-shadow: 0 4px 14px rgba(45,198,83,0.3);
+    }
+    .continue-btn:hover { background: var(--green-dark); transform: translateY(-1px); box-shadow: 0 6px 20px rgba(45,198,83,0.35); }
+    .continue-btn:active { transform: translateY(0); }
+
+    .continue-sub {
+      text-align: center; font-size: 12px; color: var(--gray);
+      margin-top: 8px; display: flex; align-items: center; justify-content: center; gap: 4px;
+    }
+    .continue-sub svg { flex-shrink: 0; }
+
+    /* ── STEP 1: HERO ── */
+    .hero-badge {
+      display: inline-flex; align-items: center; gap: 6px;
+      background: var(--pink-light); color: var(--pink);
+      padding: 6px 14px; border-radius: 50px;
+      font-size: 12px; font-weight: 600; text-transform: uppercase;
+      letter-spacing: 0.5px; margin-bottom: 16px;
+    }
+    .hero-product {
+      width: 100%; max-width: 320px; margin: 0 auto 24px;
+      border-radius: 16px; overflow: hidden;
+      border: 1px solid rgba(0,0,0,0.06);
+      position: relative;
+    }
+    .hero-product img { width: 100%; aspect-ratio: 1; object-fit: cover; }
+    .hero-product__badge {
+      position: absolute; top: 12px; left: 12px;
+      background: var(--pink); color: var(--white);
+      padding: 4px 12px; border-radius: 50px;
+      font-size: 11px; font-weight: 700; text-transform: uppercase;
+    }
+    .hero-social {
+      display: flex; align-items: center; justify-content: center;
+      gap: 6px; margin-bottom: 12px;
+    }
+    .hero-social__stars { color: var(--star); font-size: 16px; letter-spacing: 2px; }
+    .hero-social__count {
+      font-size: 13px; color: var(--gray); font-weight: 500;
+    }
+    .hero-social__count strong { color: var(--black); font-weight: 700; }
+    .hero-title {
+      font-family: var(--font-heading);
+      font-size: clamp(24px, 5vw, 30px);
+      font-weight: 600; line-height: 1.25;
+      text-align: center; margin-bottom: 12px;
+    }
+    .hero-subtitle {
+      font-size: 14px; color: #555; line-height: 1.7;
+      text-align: center; margin-bottom: 4px;
+    }
+
+    /* ── STEP 2: AS SEEN ON + KEY BENEFIT ── */
+    .press-logos {
+      display: flex; align-items: center; justify-content: center;
+      gap: 20px; flex-wrap: wrap; margin-bottom: 32px;
+      padding: 16px 0;
+    }
+    .press-logos__label {
+      font-size: 11px; color: var(--gray); text-transform: uppercase;
+      letter-spacing: 1px; font-weight: 600; width: 100%; text-align: center;
+      margin-bottom: 4px;
+    }
+    .press-logos img {
+      height: 18px; width: auto; opacity: 0.45;
+      filter: grayscale(100%);
+    }
+
+    .benefit-card {
+      background: var(--cream); border-radius: 16px;
+      padding: 28px; margin-bottom: 20px;
+      border-left: 4px solid var(--green);
+    }
+    .benefit-card__icon {
+      font-size: 32px; margin-bottom: 12px;
+    }
+    .benefit-card__title {
+      font-family: var(--font-heading);
+      font-size: 20px; font-weight: 600;
+      margin-bottom: 8px; line-height: 1.3;
+    }
+    .benefit-card__text {
+      font-size: 14px; color: #555; line-height: 1.7;
+    }
+    .benefit-card__highlight {
+      display: inline; background: var(--neon);
+      padding: 1px 6px; font-weight: 600; color: var(--black);
+    }
+
+    .testimonial-inline {
+      background: var(--white); border: 1px solid rgba(0,0,0,0.08);
+      border-radius: 12px; padding: 20px; margin-top: 20px;
+    }
+    .testimonial-inline__stars {
+      color: var(--star); font-size: 14px; letter-spacing: 2px; margin-bottom: 8px;
+    }
+    .testimonial-inline__text {
+      font-size: 14px; font-style: italic; color: #444; line-height: 1.7;
+      margin-bottom: 10px;
+    }
+    .testimonial-inline__author {
+      display: flex; align-items: center; gap: 10px;
+    }
+    .testimonial-inline__avatar {
+      width: 36px; height: 36px; border-radius: 50%;
+      object-fit: cover; border: 2px solid var(--cream);
+    }
+    .testimonial-inline__name {
+      font-size: 13px; font-weight: 600;
+    }
+    .testimonial-inline__verified {
+      font-size: 11px; color: var(--green); display: flex; align-items: center; gap: 3px;
+    }
+
+    /* ── STEP 3: HOW IT WORKS ── */
+    .steps-grid {
+      display: flex; flex-direction: column; gap: 16px;
+      margin-bottom: 20px;
+    }
+    .step-card {
+      display: flex; gap: 16px; align-items: flex-start;
+      background: var(--cream); border-radius: 12px; padding: 20px;
+    }
+    .step-card__number {
+      width: 40px; height: 40px; border-radius: 50%;
+      background: var(--green); color: var(--white);
+      display: flex; align-items: center; justify-content: center;
+      font-family: var(--font-heading); font-size: 18px; font-weight: 700;
+      flex-shrink: 0;
+    }
+    .step-card__content { flex: 1; }
+    .step-card__title {
+      font-family: var(--font-heading);
+      font-size: 16px; font-weight: 600; margin-bottom: 4px;
+    }
+    .step-card__text {
+      font-size: 13px; color: #555; line-height: 1.6;
+    }
+    .step-card__time {
+      display: inline-flex; align-items: center; gap: 4px;
+      background: var(--neon); padding: 2px 10px; border-radius: 50px;
+      font-size: 11px; font-weight: 700; margin-top: 6px;
+    }
+
+    .product-inline-img {
+      border-radius: 12px; overflow: hidden; margin-top: 20px;
+      border: 1px solid rgba(0,0,0,0.06);
+    }
+    .product-inline-img img { width: 100%; object-fit: cover; }
+
+    /* ── STEP 4: COMPARISON ── */
+    .section-title {
+      font-family: var(--font-heading);
+      font-size: clamp(20px, 4.5vw, 26px);
+      font-weight: 600; text-align: center; margin-bottom: 24px;
+      line-height: 1.3;
+    }
+    .comparison-table {
+      width: 100%; border-collapse: collapse;
+      border: 1px solid rgba(0,0,0,0.08);
+      border-radius: 12px; overflow: hidden;
+      font-size: 13px;
+    }
+    .comparison-table thead { background: var(--cream); }
+    .comparison-table th {
+      padding: 12px 14px; text-align: left;
+      font-size: 12px; font-weight: 700; text-transform: uppercase;
+      letter-spacing: 0.5px;
+    }
+    .comparison-table th:first-child { width: 40%; }
+    .comparison-table th.lem-col { background: var(--neon); }
+    .comparison-table td {
+      padding: 11px 14px; font-size: 13px; color: #555;
+      border-top: 1px solid rgba(0,0,0,0.06);
+    }
+    .comparison-table td.lem-col { background: rgba(204,253,40,0.08); font-weight: 600; color: var(--black); }
+    .check { color: var(--green); font-weight: 700; }
+    .cross { color: #ddd; font-weight: 700; }
+
+    .comparison-verdict {
+      background: var(--neon); border-radius: 12px;
+      padding: 20px; text-align: center; margin-top: 20px;
+    }
+    .comparison-verdict__text {
+      font-family: var(--font-heading);
+      font-size: 16px; font-weight: 600;
+    }
+
+    /* ── STEP 5: BENEFITS ICONS ── */
+    .benefits-icons {
+      display: grid; grid-template-columns: repeat(2, 1fr);
+      gap: 12px; margin-bottom: 20px;
+    }
+    .benefit-icon-card {
+      background: var(--cream); border-radius: 12px;
+      padding: 20px; text-align: center;
+    }
+    .benefit-icon-card__emoji { font-size: 28px; margin-bottom: 8px; }
+    .benefit-icon-card__title {
+      font-family: var(--font-heading);
+      font-size: 14px; font-weight: 600; margin-bottom: 4px;
+    }
+    .benefit-icon-card__text {
+      font-size: 12px; color: var(--gray); line-height: 1.4;
+    }
+
+    /* ── STEP 6: SOCIAL PROOF ── */
+    .proof-header {
+      text-align: center; margin-bottom: 24px;
+    }
+    .proof-header__big {
+      font-family: var(--font-heading);
+      font-size: 48px; font-weight: 700; line-height: 1;
+    }
+    .proof-header__sub {
+      font-size: 13px; color: var(--gray); margin-top: 4px;
+    }
+    .proof-rating {
+      display: flex; align-items: center; justify-content: center;
+      gap: 8px; margin-top: 12px;
+    }
+    .proof-rating__num {
+      font-family: var(--font-heading);
+      font-size: 24px; font-weight: 700;
+    }
+    .proof-rating__stars { color: var(--star); font-size: 16px; letter-spacing: 2px; }
+
+    .review-scroll {
+      display: flex; gap: 12px; overflow-x: auto;
+      padding-bottom: 12px; margin-bottom: 20px;
+      -webkit-overflow-scrolling: touch;
+      scroll-snap-type: x mandatory;
+    }
+    .review-scroll::-webkit-scrollbar { height: 4px; }
+    .review-scroll::-webkit-scrollbar-track { background: var(--cream); border-radius: 2px; }
+    .review-scroll::-webkit-scrollbar-thumb { background: rgba(0,0,0,0.15); border-radius: 2px; }
+    .review-mini {
+      min-width: 260px; max-width: 260px;
+      border: 1px solid rgba(0,0,0,0.08); border-radius: 12px;
+      padding: 16px; scroll-snap-align: start;
+      flex-shrink: 0;
+    }
+    .review-mini__stars { color: var(--star); font-size: 12px; letter-spacing: 2px; margin-bottom: 8px; }
+    .review-mini__text { font-size: 13px; color: #444; line-height: 1.6; margin-bottom: 10px; }
+    .review-mini__author { font-size: 12px; font-weight: 600; }
+    .review-mini__verified { font-size: 10px; color: var(--green); }
+
+    .ugc-grid {
+      display: grid; grid-template-columns: repeat(3, 1fr);
+      gap: 8px; margin-bottom: 20px;
+    }
+    .ugc-grid img {
+      width: 100%; aspect-ratio: 1; object-fit: cover;
+      border-radius: 8px;
+    }
+
+    /* ── STEP 7: GUARANTEE + SCARCITY ── */
+    .guarantee-card {
+      background: var(--cream); border-radius: 16px;
+      padding: 28px; text-align: center; margin-bottom: 20px;
+      border: 2px solid rgba(45,198,83,0.2);
+    }
+    .guarantee-card__icon { font-size: 40px; margin-bottom: 12px; }
+    .guarantee-card__title {
+      font-family: var(--font-heading);
+      font-size: 20px; font-weight: 600; margin-bottom: 8px;
+    }
+    .guarantee-card__text {
+      font-size: 14px; color: #555; line-height: 1.7;
+    }
+
+    .trust-row {
+      display: grid; grid-template-columns: repeat(3, 1fr);
+      gap: 10px; margin-bottom: 24px;
+    }
+    .trust-item {
+      text-align: center; padding: 14px 8px;
+      background: var(--white); border-radius: 10px;
+      border: 1px solid rgba(0,0,0,0.06);
+    }
+    .trust-item__icon { font-size: 20px; margin-bottom: 6px; }
+    .trust-item__text { font-size: 11px; color: var(--charcoal); font-weight: 600; line-height: 1.3; }
+
+    .stock-bar {
+      background: var(--cream); border-radius: 10px;
+      padding: 14px 18px; margin-bottom: 20px;
+      display: flex; align-items: center; gap: 12px;
+    }
+    .stock-bar__dot {
+      width: 10px; height: 10px; border-radius: 50%;
+      background: #e74c3c; animation: stockPulse 1.5s ease-in-out infinite;
+    }
+    @keyframes stockPulse {
+      0%, 100% { opacity: 1; }
+      50% { opacity: 0.4; }
+    }
+    .stock-bar__text { font-size: 13px; font-weight: 600; color: var(--charcoal); }
+    .stock-bar__text strong { color: #e74c3c; }
+    .stock-track {
+      flex: 1; height: 6px; background: rgba(0,0,0,0.06);
+      border-radius: 3px; overflow: hidden;
+    }
+    .stock-fill {
+      height: 100%; width: 23%; background: #e74c3c; border-radius: 3px;
+    }
+
+    /* ── FINAL OFFER CARD ── */
+    .offer-card {
+      background: var(--white); border: 2px solid var(--green);
+      border-radius: 20px; padding: 32px 24px;
+      text-align: center; position: relative;
+      box-shadow: 0 8px 40px rgba(45,198,83,0.12);
+    }
+    .offer-card__badge {
+      position: absolute; top: -14px; left: 50%; transform: translateX(-50%);
+      background: var(--pink); color: var(--white);
+      padding: 6px 20px; border-radius: 50px;
+      font-size: 12px; font-weight: 700; text-transform: uppercase;
+      letter-spacing: 0.5px; white-space: nowrap;
+    }
+    .offer-card__image {
+      width: 200px; height: 200px; margin: 16px auto 20px;
+      border-radius: 16px; overflow: hidden;
+    }
+    .offer-card__image img { width: 100%; height: 100%; object-fit: cover; }
+    .offer-card__name {
+      font-family: var(--font-heading);
+      font-size: 22px; font-weight: 600; margin-bottom: 4px;
+    }
+    .offer-card__desc {
+      font-size: 13px; color: var(--gray); margin-bottom: 16px;
+    }
+    .offer-card__price { margin-bottom: 20px; }
+    .offer-card__price-original {
+      font-size: 16px; color: var(--gray);
+      text-decoration: line-through; margin-right: 6px;
+    }
+    .offer-card__price-sale {
+      font-family: var(--font-heading);
+      font-size: 36px; font-weight: 700;
+    }
+    .offer-card__price-save {
+      display: inline-block; background: var(--neon);
+      padding: 3px 10px; border-radius: 50px;
+      font-size: 12px; font-weight: 700; margin-left: 6px;
+      vertical-align: middle;
+    }
+    .offer-card__btn {
+      display: block; width: 100%;
+      background: var(--green); color: var(--white);
+      padding: 18px 32px; border-radius: 12px;
+      font-size: 17px; font-weight: 700; letter-spacing: 0.3px;
+      text-transform: uppercase; cursor: pointer; border: none;
+      transition: background 0.2s, transform 0.1s, box-shadow 0.2s;
+      box-shadow: 0 4px 14px rgba(45,198,83,0.3);
+      animation: btnPulse 2s ease-in-out infinite;
+    }
+    .offer-card__btn:hover { background: var(--green-dark); transform: translateY(-1px); }
+    @keyframes btnPulse {
+      0%, 100% { box-shadow: 0 4px 14px rgba(45,198,83,0.3); }
+      50% { box-shadow: 0 4px 24px rgba(45,198,83,0.5); }
+    }
+    .offer-card__trust {
+      display: flex; align-items: center; justify-content: center;
+      gap: 16px; margin-top: 16px; font-size: 11px; color: var(--gray);
+      flex-wrap: wrap;
+    }
+    .offer-card__trust span {
+      display: flex; align-items: center; gap: 3px;
+    }
+
+    /* ── PERSONA TAGS ── */
+    .persona-tags {
+      display: flex; flex-wrap: wrap; gap: 8px;
+      justify-content: center; margin-bottom: 20px;
+    }
+    .persona-tag {
+      background: var(--cream); border: 1px solid rgba(0,0,0,0.06);
+      padding: 6px 14px; border-radius: 50px;
+      font-size: 12px; font-weight: 500; color: var(--charcoal);
+    }
+
+    /* ── FOOTER ── */
+    .footer {
+      background: var(--charcoal); color: rgba(255,255,255,0.5);
+      text-align: center; padding: 24px 20px;
+      font-size: 11px; line-height: 1.8;
+      margin-top: 40px;
+    }
+    .footer a { color: rgba(255,255,255,0.7); text-decoration: underline; }
+
+    /* ── ANIMATIONS ── */
+    @keyframes fadeInUp {
+      from { opacity: 0; transform: translateY(20px); }
+      to { opacity: 1; transform: translateY(0); }
+    }
+    @keyframes slideDown {
+      from { opacity: 0; transform: translateY(-10px); }
+      to { opacity: 1; transform: translateY(0); }
+    }
+
+    /* ── RESPONSIVE ── */
+    @media (max-width: 480px) {
+      .discount-bar { font-size: 11px; padding: 7px 12px; gap: 5px; }
+      .discount-bar__timer { font-size: 11px; }
+      .hero-title { font-size: 22px; }
+      .funnel-section { padding: 32px 16px; }
+      .comparison-table th, .comparison-table td { padding: 9px 10px; font-size: 12px; }
+      .trust-row { grid-template-columns: 1fr; gap: 8px; }
+      .benefits-icons { grid-template-columns: 1fr; }
+      .offer-card { padding: 28px 18px; }
+    }
+
+    @media (prefers-reduced-motion: reduce) {
+      *, *::before, *::after {
+        animation-duration: 0.01ms !important;
+        transition-duration: 0.01ms !important;
+      }
+    }
+  </style>
+</head>
+<body>
+
+  <!-- STICKY DISCOUNT BAR -->
+  <div class="discount-bar">
+    <strong>Spring Refresh Sale</strong> — Save US$61 &nbsp;
+    <span class="discount-bar__timer" id="countdownTimer">00:00:00</span>
+  </div>
+
+  <!-- HEADER -->
+  <header class="header">
+    <a href="https://hellonancy.co" class="header__logo">
+      <img src="../lem-9-reasons/images/logo.png" alt="Hello Nancy">
+    </a>
+  </header>
+
+  <!-- PROGRESS BAR -->
+  <div class="progress-wrap">
+    <div class="progress-bar" id="progressBar"></div>
+    <div class="progress-steps" id="progressSteps">
+      <div class="progress-dot active" data-step="1"></div>
+      <div class="progress-dot" data-step="2"></div>
+      <div class="progress-dot" data-step="3"></div>
+      <div class="progress-dot" data-step="4"></div>
+      <div class="progress-dot" data-step="5"></div>
+      <div class="progress-dot" data-step="6"></div>
+      <div class="progress-dot" data-step="7"></div>
+    </div>
+  </div>
+
+  <!-- ═══════════════════════════════════════════ -->
+  <!-- STEP 1: HERO — Product + Social Proof -->
+  <!-- ═══════════════════════════════════════════ -->
+  <section class="funnel-section visible" data-step="1" id="step1">
+    <div class="hero-badge">
+      <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M13 2L3 14h9l-1 8 10-12h-9l1-8z"/></svg>
+      Trending Now
+    </div>
+
+    <div class="hero-product">
+      <img src="../lem-9-reasons/images/hero.webp" alt="Lem by Hello Nancy" loading="eager">
+      <span class="hero-product__badge">Save $61</span>
+    </div>
+
+    <div class="hero-social">
+      <span class="hero-social__stars">&#9733;&#9733;&#9733;&#9733;&#9733;</span>
+      <span class="hero-social__count"><strong>15,247</strong> verified reviews</span>
+    </div>
+
+    <h1 class="hero-title">Discover Why 15,000+ Women Switched to Lem</h1>
+    <p class="hero-subtitle">The whisper-quiet air-pulse massager that delivers the orgasm other products promise but can't deliver. Medical-grade silicone, 12 intensity levels, 100% waterproof.</p>
+
+    <button class="continue-btn" onclick="advanceStep(2)">Discover Lem &rarr;</button>
+    <p class="continue-sub">
+      <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="#797979" stroke-width="2"><rect x="3" y="11" width="18" height="11" rx="2" ry="2"/><path d="M7 11V7a5 5 0 0 1 10 0v4"/></svg>
+      Discreet packaging &amp; billing guaranteed
+    </p>
+  </section>
+
+  <!-- ═══════════════════════════════════════════ -->
+  <!-- STEP 2: CREDIBILITY — Press + Key Benefit -->
+  <!-- ═══════════════════════════════════════════ -->
+  <section class="funnel-section" data-step="2" id="step2">
+    <div class="press-logos">
+      <span class="press-logos__label">Featured In</span>
+      <img src="../lem-9-reasons/images/01_timeout_logo.png" alt="Time Out">
+      <img src="../lem-9-reasons/images/02_tatler_logo.webp" alt="Tatler">
+      <img src="../lem-9-reasons/images/03_sarasense_logo.webp" alt="Sara Sense">
+      <img src="../lem-9-reasons/images/04_zenify_logo.svg" alt="Zenify">
+      <img src="../lem-9-reasons/images/05_vice_logo.svg" alt="Vice">
+    </div>
+
+    <div class="benefit-card">
+      <div class="benefit-card__icon">🤫</div>
+      <h2 class="benefit-card__title">Whisper-Quiet. Deadly Effective.</h2>
+      <p class="benefit-card__text">Lem operates at just ~30 dB — quieter than a whisper. No buzzing through walls, no suspicious noise. Other products hit 50-60 dB. <span class="benefit-card__highlight">Your pleasure stays yours — quietly.</span></p>
+    </div>
+
+    <div class="testimonial-inline">
+      <div class="testimonial-inline__stars">&#9733;&#9733;&#9733;&#9733;&#9733;</div>
+      <p class="testimonial-inline__text">"I was so nervous about noise with roommates — Lem is literally silent. I can't believe how powerful something this quiet can be. Total game-changer."</p>
+      <div class="testimonial-inline__author">
+        <img src="../images/loox-review1.jpg" alt="Verified buyer" class="testimonial-inline__avatar">
+        <div>
+          <div class="testimonial-inline__name">Sarah K.</div>
+          <div class="testimonial-inline__verified">
+            <svg width="12" height="12" viewBox="0 0 24 24" fill="#2DC653"><path d="M12 2L3 7v5c0 5.55 3.84 10.74 9 12 5.16-1.26 9-6.45 9-12V7l-9-5zm-1.5 14.5l-4-4 1.41-1.41L10.5 13.67l6.09-6.09 1.41 1.41-7.5 7.51z"/></svg>
+            Verified Buyer
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <button class="continue-btn" onclick="advanceStep(3)">Continue &rarr;</button>
+  </section>
+
+  <!-- ═══════════════════════════════════════════ -->
+  <!-- STEP 3: HOW IT WORKS — 2-Step Usage -->
+  <!-- ═══════════════════════════════════════════ -->
+  <section class="funnel-section" data-step="3" id="step3">
+    <h2 class="section-title">Effortless Pleasure in 2 Simple Steps</h2>
+
+    <div class="steps-grid">
+      <div class="step-card">
+        <div class="step-card__number">1</div>
+        <div class="step-card__content">
+          <h3 class="step-card__title">Place &amp; Power On</h3>
+          <p class="step-card__text">Position Lem's soft silicone nozzle over the clitoris. One-button power on. The gentle suction seal forms naturally.</p>
+          <span class="step-card__time">⚡ Takes 5 seconds</span>
+        </div>
+      </div>
+      <div class="step-card">
+        <div class="step-card__number">2</div>
+        <div class="step-card__content">
+          <h3 class="step-card__title">Find Your Level</h3>
+          <p class="step-card__text">Tap through 12 intensity levels — from a feather-light tease to deep, pulsing waves. Most women find their sweet spot between levels 4-7.</p>
+          <span class="step-card__time">⚡ Average: under 3 minutes</span>
+        </div>
+      </div>
+    </div>
+
+    <div class="product-inline-img">
+      <img src="../lem-9-reasons/images/brand-shoot-1.jpg" alt="Lem in lifestyle setting" loading="lazy">
+    </div>
+
+    <div class="testimonial-inline" style="margin-top: 20px;">
+      <div class="testimonial-inline__stars">&#9733;&#9733;&#9733;&#9733;&#9733;</div>
+      <p class="testimonial-inline__text">"First time I used it, I was done in under two minutes. I've never experienced anything that intense, that fast. My husband was shocked."</p>
+      <div class="testimonial-inline__author">
+        <img src="../images/loox-review3.jpg" alt="Verified buyer" class="testimonial-inline__avatar">
+        <div>
+          <div class="testimonial-inline__name">Monica T.</div>
+          <div class="testimonial-inline__verified">
+            <svg width="12" height="12" viewBox="0 0 24 24" fill="#2DC653"><path d="M12 2L3 7v5c0 5.55 3.84 10.74 9 12 5.16-1.26 9-6.45 9-12V7l-9-5zm-1.5 14.5l-4-4 1.41-1.41L10.5 13.67l6.09-6.09 1.41 1.41-7.5 7.51z"/></svg>
+            Verified Buyer
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <button class="continue-btn" onclick="advanceStep(4)">Continue &rarr;</button>
+  </section>
+
+  <!-- ═══════════════════════════════════════════ -->
+  <!-- STEP 4: COMPARISON — Lem vs Competitors -->
+  <!-- ═══════════════════════════════════════════ -->
+  <section class="funnel-section" data-step="4" id="step4">
+    <h2 class="section-title">How Lem Compares to Others</h2>
+
+    <table class="comparison-table">
+      <thead>
+        <tr>
+          <th>Feature</th>
+          <th class="lem-col">Lem</th>
+          <th>The Rose</th>
+          <th>Satisfyer</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td>Noise Level</td>
+          <td class="lem-col"><span class="check">&#10003;</span> ~30 dB</td>
+          <td>~50 dB</td>
+          <td>~55 dB</td>
+        </tr>
+        <tr>
+          <td>Intensity Levels</td>
+          <td class="lem-col"><span class="check">&#10003;</span> 12</td>
+          <td>3</td>
+          <td>11</td>
+        </tr>
+        <tr>
+          <td>Medical-Grade Silicone</td>
+          <td class="lem-col"><span class="check">&#10003;</span></td>
+          <td><span class="cross">&#10007;</span></td>
+          <td><span class="check">&#10003;</span></td>
+        </tr>
+        <tr>
+          <td>Waterproof</td>
+          <td class="lem-col"><span class="check">&#10003;</span> IPX7</td>
+          <td>Splash only</td>
+          <td><span class="check">&#10003;</span></td>
+        </tr>
+        <tr>
+          <td>Battery Life</td>
+          <td class="lem-col"><span class="check">&#10003;</span> 90 min</td>
+          <td>45 min</td>
+          <td>60 min</td>
+        </tr>
+        <tr>
+          <td>Discreet Shipping</td>
+          <td class="lem-col"><span class="check">&#10003;</span></td>
+          <td>Varies</td>
+          <td><span class="check">&#10003;</span></td>
+        </tr>
+        <tr>
+          <td>Verified Reviews</td>
+          <td class="lem-col"><span class="check">&#10003;</span> 15,000+</td>
+          <td>Mixed</td>
+          <td>8,000+</td>
+        </tr>
+      </tbody>
+    </table>
+
+    <div class="comparison-verdict">
+      <p class="comparison-verdict__text">Lem wins in 6 out of 7 categories ✨</p>
+    </div>
+
+    <button class="continue-btn" onclick="advanceStep(5)">Continue &rarr;</button>
+  </section>
+
+  <!-- ═══════════════════════════════════════════ -->
+  <!-- STEP 5: EXTRA BENEFITS + PERSONAS -->
+  <!-- ═══════════════════════════════════════════ -->
+  <section class="funnel-section" data-step="5" id="step5">
+    <h2 class="section-title">Designed for Every Woman</h2>
+
+    <div class="benefits-icons">
+      <div class="benefit-icon-card">
+        <div class="benefit-icon-card__emoji">🤫</div>
+        <h3 class="benefit-icon-card__title">Whisper Quiet</h3>
+        <p class="benefit-icon-card__text">~30 dB. Quieter than a whisper. Roommate-proof.</p>
+      </div>
+      <div class="benefit-icon-card">
+        <div class="benefit-icon-card__emoji">💦</div>
+        <h3 class="benefit-icon-card__title">100% Waterproof</h3>
+        <p class="benefit-icon-card__text">IPX7 rated. Bath, shower, anywhere.</p>
+      </div>
+      <div class="benefit-icon-card">
+        <div class="benefit-icon-card__emoji">✈️</div>
+        <h3 class="benefit-icon-card__title">Travel-Friendly</h3>
+        <p class="benefit-icon-card__text">Fits in your palm. Magnetic charging. Travel lock.</p>
+      </div>
+      <div class="benefit-icon-card">
+        <div class="benefit-icon-card__emoji">🧴</div>
+        <h3 class="benefit-icon-card__title">Body-Safe</h3>
+        <p class="benefit-icon-card__text">Medical-grade silicone. No latex, no phthalates.</p>
+      </div>
+    </div>
+
+    <div class="persona-tags">
+      <span class="persona-tag">🎁 Perfect Gift for Her</span>
+      <span class="persona-tag">💜 Solo Play</span>
+      <span class="persona-tag">👫 Couples</span>
+      <span class="persona-tag">🌱 First-Timer Friendly</span>
+      <span class="persona-tag">✨ Experienced Users</span>
+      <span class="persona-tag">🧳 Travellers</span>
+    </div>
+
+    <div class="product-inline-img">
+      <img src="../lem-9-reasons/images/gallery-3.jpg" alt="Lem product detail" loading="lazy">
+    </div>
+
+    <button class="continue-btn" onclick="advanceStep(6)">Continue &rarr;</button>
+  </section>
+
+  <!-- ═══════════════════════════════════════════ -->
+  <!-- STEP 6: SOCIAL PROOF — Reviews + UGC -->
+  <!-- ═══════════════════════════════════════════ -->
+  <section class="funnel-section" data-step="6" id="step6">
+    <div class="proof-header">
+      <div class="proof-header__big">15,247</div>
+      <div class="proof-header__sub">Verified 5-Star Reviews</div>
+      <div class="proof-rating">
+        <span class="proof-rating__num">4.7</span>
+        <span class="proof-rating__stars">&#9733;&#9733;&#9733;&#9733;&#9733;</span>
+      </div>
+    </div>
+
+    <div class="ugc-grid">
+      <img src="../images/loox-review2.jpg" alt="Customer review photo" loading="lazy">
+      <img src="../images/loox-review5.jpg" alt="Customer review photo" loading="lazy">
+      <img src="../images/loox-review7.jpg" alt="Customer review photo" loading="lazy">
+      <img src="../images/loox-review4.jpg" alt="Customer review photo" loading="lazy">
+      <img src="../images/loox-review8.jpg" alt="Customer review photo" loading="lazy">
+      <img src="../images/loox-review9.jpg" alt="Customer review photo" loading="lazy">
+    </div>
+
+    <div class="review-scroll">
+      <div class="review-mini">
+        <div class="review-mini__stars">&#9733;&#9733;&#9733;&#9733;&#9733;</div>
+        <p class="review-mini__text">"I've spent hundreds on other products and nothing comes close. Lem got me there in under 2 minutes. I'm never going back."</p>
+        <div class="review-mini__author">Jessica R.</div>
+        <div class="review-mini__verified">&#10003; Verified Buyer</div>
+      </div>
+      <div class="review-mini">
+        <div class="review-mini__stars">&#9733;&#9733;&#9733;&#9733;&#9733;</div>
+        <p class="review-mini__text">"My partner bought this for me as a gift and WOW. We use it together now and it's brought a whole new dimension to our intimacy."</p>
+        <div class="review-mini__author">Alyssa G.</div>
+        <div class="review-mini__verified">&#10003; Verified Buyer</div>
+      </div>
+      <div class="review-mini">
+        <div class="review-mini__stars">&#9733;&#9733;&#9733;&#9733;&#9733;</div>
+        <p class="review-mini__text">"I was skeptical about the hype but this actually delivered. So quiet, so powerful, and the silicone feels premium. Worth every cent."</p>
+        <div class="review-mini__author">Priya M.</div>
+        <div class="review-mini__verified">&#10003; Verified Buyer</div>
+      </div>
+      <div class="review-mini">
+        <div class="review-mini__stars">&#9733;&#9733;&#9733;&#9733;&#9733;</div>
+        <p class="review-mini__text">"Threw out my Rose after one session with Lem. The noise difference alone is worth switching. Plus it's way more powerful."</p>
+        <div class="review-mini__author">Kim L.</div>
+        <div class="review-mini__verified">&#10003; Verified Buyer</div>
+      </div>
+      <div class="review-mini">
+        <div class="review-mini__stars">&#9733;&#9733;&#9733;&#9733;&#9733;</div>
+        <p class="review-mini__text">"I've never actually finished with a product before. Lem changed that. First try. I literally cried. Life-changing."</p>
+        <div class="review-mini__author">Danielle W.</div>
+        <div class="review-mini__verified">&#10003; Verified Buyer</div>
+      </div>
+    </div>
+
+    <button class="continue-btn" onclick="advanceStep(7)">See Your Special Offer &rarr;</button>
+    <p class="continue-sub">
+      <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="#797979" stroke-width="2"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/></svg>
+      30-day money-back guarantee
+    </p>
+  </section>
+
+  <!-- ═══════════════════════════════════════════ -->
+  <!-- STEP 7: FINAL OFFER — Guarantee + Scarcity + CTA -->
+  <!-- ═══════════════════════════════════════════ -->
+  <section class="funnel-section" data-step="7" id="step7">
+    <div class="guarantee-card">
+      <div class="guarantee-card__icon">🛡️</div>
+      <h2 class="guarantee-card__title">30-Day Pleasure Guarantee</h2>
+      <p class="guarantee-card__text">If Lem doesn't completely change the game for you, return it within 30 days for a full refund. No questions asked. We're that confident.</p>
+    </div>
+
+    <div class="trust-row">
+      <div class="trust-item">
+        <div class="trust-item__icon">📦</div>
+        <div class="trust-item__text">Free Discreet<br>Shipping</div>
+      </div>
+      <div class="trust-item">
+        <div class="trust-item__icon">🔒</div>
+        <div class="trust-item__text">Private<br>Billing</div>
+      </div>
+      <div class="trust-item">
+        <div class="trust-item__icon">↩️</div>
+        <div class="trust-item__text">Easy<br>Returns</div>
+      </div>
+    </div>
+
+    <div class="stock-bar">
+      <span class="stock-bar__dot"></span>
+      <span class="stock-bar__text"><strong>Only 37 left</strong> at this price</span>
+      <div class="stock-track"><div class="stock-fill"></div></div>
+    </div>
+
+    <!-- THE OFFER CARD -->
+    <div class="offer-card">
+      <span class="offer-card__badge">Limited Time Offer</span>
+      <div class="offer-card__image">
+        <img src="../images/pdp9.jpg" alt="Lem by Hello Nancy">
+      </div>
+      <h3 class="offer-card__name">Lem — Air Pulse Massager</h3>
+      <p class="offer-card__desc">by Hello Nancy · Free Shipping · 30-Day Guarantee</p>
+
+      <div class="offer-card__price">
+        <span class="offer-card__price-original">US$150</span>
+        <span class="offer-card__price-sale">US$89</span>
+        <span class="offer-card__price-save">Save $61</span>
+      </div>
+
+      <a href="https://hellonancy.co/products/lem" class="offer-card__btn" id="mainCTA">
+        Claim Your Lem — $89
+      </a>
+
+      <div class="offer-card__trust">
+        <span>
+          <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="#797979" stroke-width="2"><rect x="3" y="11" width="18" height="11" rx="2" ry="2"/><path d="M7 11V7a5 5 0 0 1 10 0v4"/></svg>
+          Secure Checkout
+        </span>
+        <span>
+          <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="#797979" stroke-width="2"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/></svg>
+          30-Day Guarantee
+        </span>
+        <span>🚚 Free Shipping</span>
+        <span>📦 Discreet Packaging</span>
+      </div>
+    </div>
+
+    <!-- SECONDARY REVIEW BELOW OFFER -->
+    <div class="testimonial-inline" style="margin-top: 24px;">
+      <div class="testimonial-inline__stars">&#9733;&#9733;&#9733;&#9733;&#9733;</div>
+      <p class="testimonial-inline__text">"I waited months before finally ordering. My only regret is not buying it sooner. If you're on the fence — just do it. You won't regret it."</p>
+      <div class="testimonial-inline__author">
+        <img src="../images/loox-review6.jpg" alt="Verified buyer" class="testimonial-inline__avatar">
+        <div>
+          <div class="testimonial-inline__name">Rachel B.</div>
+          <div class="testimonial-inline__verified">
+            <svg width="12" height="12" viewBox="0 0 24 24" fill="#2DC653"><path d="M12 2L3 7v5c0 5.55 3.84 10.74 9 12 5.16-1.26 9-6.45 9-12V7l-9-5zm-1.5 14.5l-4-4 1.41-1.41L10.5 13.67l6.09-6.09 1.41 1.41-7.5 7.51z"/></svg>
+            Verified Buyer
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- FOOTER -->
+  <footer class="footer">
+    &copy; 2026 Hello Nancy. All rights reserved.<br>
+    <a href="https://hellonancy.co/pages/privacy-policy">Privacy</a> · <a href="https://hellonancy.co/pages/terms-of-service">Terms</a> · <a href="https://hellonancy.co/pages/refund-policy">Refund Policy</a><br>
+    This site is not a part of the Facebook website or Facebook Inc.
+  </footer>
+
+  <!-- ═══════════════════════════════════════════ -->
+  <!-- JAVASCRIPT — Progressive Reveal + Countdown -->
+  <!-- ═══════════════════════════════════════════ -->
+  <script>
+    // --- Evergreen Countdown Timer ---
+    (function() {
+      const TIMER_KEY = 'nancy_presell_timer';
+      const DURATION = 15 * 60; // 15 minutes
+      let savedTime = localStorage.getItem(TIMER_KEY);
+      let endTime;
+
+      if (savedTime && parseInt(savedTime) > Date.now()) {
+        endTime = parseInt(savedTime);
+      } else {
+        endTime = Date.now() + DURATION * 1000;
+        localStorage.setItem(TIMER_KEY, endTime.toString());
+      }
+
+      function updateTimer() {
+        const remaining = Math.max(0, endTime - Date.now());
+        if (remaining <= 0) {
+          // Reset timer
+          endTime = Date.now() + DURATION * 1000;
+          localStorage.setItem(TIMER_KEY, endTime.toString());
+        }
+        const totalSec = Math.floor(remaining / 1000);
+        const h = Math.floor(totalSec / 3600);
+        const m = Math.floor((totalSec % 3600) / 60);
+        const s = totalSec % 60;
+        const pad = n => n.toString().padStart(2, '0');
+        document.getElementById('countdownTimer').textContent =
+          pad(h) + ':' + pad(m) + ':' + pad(s);
+      }
+
+      updateTimer();
+      setInterval(updateTimer, 1000);
+    })();
+
+    // --- Progressive Funnel Steps ---
+    let currentStep = 1;
+    const totalSteps = 7;
+
+    function advanceStep(nextStep) {
+      if (nextStep <= currentStep || nextStep > totalSteps) return;
+
+      const nextSection = document.getElementById('step' + nextStep);
+      if (!nextSection) return;
+
+      // Update progress dots
+      const dots = document.querySelectorAll('.progress-dot');
+      dots.forEach((dot, i) => {
+        if (i + 1 < nextStep) {
+          dot.classList.add('done');
+          dot.classList.remove('active');
+        } else if (i + 1 === nextStep) {
+          dot.classList.add('active');
+        } else {
+          dot.classList.remove('active', 'done');
+        }
+      });
+
+      // Update progress bar
+      const progress = ((nextStep - 1) / (totalSteps - 1)) * 100;
+      document.getElementById('progressBar').style.width = progress + '%';
+
+      // Reveal next section
+      nextSection.style.display = 'block';
+      // Force reflow
+      nextSection.offsetHeight;
+      nextSection.classList.add('visible');
+
+      // Smooth scroll to next section
+      setTimeout(() => {
+        nextSection.scrollIntoView({ behavior: 'smooth', block: 'start' });
+      }, 100);
+
+      currentStep = nextStep;
+
+      // Fire Meta Pixel events
+      if (typeof fbq === 'function') {
+        if (nextStep === 4) fbq('track', 'ViewContent', { content_name: 'Lem Presell - Comparison' });
+        if (nextStep === 7) fbq('track', 'InitiateCheckout', { content_name: 'Lem Presell - Offer Viewed' });
+      }
+    }
+
+    // Fire AddToCart on main CTA click
+    document.getElementById('mainCTA').addEventListener('click', function() {
+      if (typeof fbq === 'function') {
+        fbq('track', 'AddToCart', {
+          content_name: 'Lem',
+          content_type: 'product',
+          value: 89,
+          currency: 'USD'
+        });
+      }
+    });
+
+    // Detect seasonal sale name
+    (function() {
+      const month = new Date().getMonth();
+      const saleNames = {
+        0: 'New Year Sale', 1: 'Valentine\'s Sale', 2: 'Spring Refresh Sale',
+        3: 'Spring Sale', 4: 'May Day Sale', 5: 'Summer Glow Sale',
+        6: 'Summer Sale', 7: 'End of Summer Sale', 8: 'Autumn Sale',
+        9: 'Fall Sale', 10: 'Black Friday Sale', 11: 'Holiday Sale'
+      };
+      const bar = document.querySelector('.discount-bar strong');
+      if (bar) bar.textContent = saleNames[month] || 'Limited Time Sale';
+    })();
+  </script>
+
+</body>
+</html>
