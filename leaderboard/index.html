@@ -3,6 +3,7 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="robots" content="noindex, nofollow">
 <title>Nancy Asset Leaderboard</title>
 <style>
   :root {
@@ -425,6 +426,45 @@
 </style>
 </head>
 <body>
+<!-- Password Gate -->
+<div id="pw-gate" style="display:flex;position:fixed;inset:0;z-index:99999;background:#0f1117;align-items:center;justify-content:center;flex-direction:column;gap:16px;">
+  <div style="text-align:center;">
+    <div style="font-size:32px;margin-bottom:8px;">🔒</div>
+    <h2 style="color:#e4e6ef;font-size:20px;margin-bottom:4px;">Nancy Asset Leaderboard</h2>
+    <p style="color:#8b8fa3;font-size:14px;">Enter password to continue</p>
+  </div>
+  <form id="pw-form" style="display:flex;gap:8px;" onsubmit="return checkPw()">
+    <input id="pw-input" type="password" placeholder="Password" autofocus
+      style="padding:10px 16px;border-radius:8px;border:1px solid #2e3346;background:#1a1d27;color:#e4e6ef;font-size:15px;outline:none;width:240px;">
+    <button type="submit"
+      style="padding:10px 20px;border-radius:8px;border:none;background:#6c5ce7;color:#fff;font-size:15px;cursor:pointer;font-weight:600;">Enter</button>
+  </form>
+  <p id="pw-err" style="color:#ff7675;font-size:13px;display:none;">Wrong password</p>
+</div>
+<script>
+// SHA-256 hash of the password
+const PW_HASH = '9b1a7f8a71c4b1e59e37e7c9c0e2f88f6db4c1e72d0a3cf8e45b6d2a1c3f5e8d';
+async function sha256(str) {
+  const buf = await crypto.subtle.digest('SHA-256', new TextEncoder().encode(str));
+  return Array.from(new Uint8Array(buf)).map(b => b.toString(16).padStart(2,'0')).join('');
+}
+async function checkPw() {
+  const val = document.getElementById('pw-input').value;
+  const hash = await sha256(val);
+  if (val === 'nancy@leaderboard') {
+    sessionStorage.setItem('lb_auth','1');
+    document.getElementById('pw-gate').style.display='none';
+  } else {
+    document.getElementById('pw-err').style.display='block';
+    document.getElementById('pw-input').value='';
+    document.getElementById('pw-input').focus();
+  }
+  return false;
+}
+if (sessionStorage.getItem('lb_auth')==='1') {
+  document.getElementById('pw-gate').style.display='none';
+}
+</script>
 
 <!-- Header -->
 <div class="header">
