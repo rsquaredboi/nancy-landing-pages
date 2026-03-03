@@ -466,38 +466,6 @@ if (sessionStorage.getItem('lb_auth')==='1') {
 }
 </script>
 
-<!-- Password Gate -->
-<div id="pw-gate" style="position:fixed;inset:0;z-index:99999;background:#0f1117;display:flex;align-items:center;justify-content:center;">
-  <div style="text-align:center;max-width:340px;padding:24px;">
-    <div style="font-size:40px;margin-bottom:16px;">🔒</div>
-    <h2 style="color:#e4e6ef;font-size:20px;margin-bottom:8px;">Nancy Asset Leaderboard</h2>
-    <p style="color:#8b8fa3;font-size:14px;margin-bottom:20px;">Enter password to continue</p>
-    <input id="pw-input" type="password" placeholder="Password" autofocus
-      style="width:100%;padding:12px 16px;border-radius:8px;border:1px solid #2e3346;background:#1a1d27;color:#e4e6ef;font-size:15px;outline:none;margin-bottom:12px;"
-      onkeydown="if(event.key==='Enter')document.getElementById('pw-btn').click()">
-    <button id="pw-btn" onclick="checkPw()"
-      style="width:100%;padding:12px;border-radius:8px;border:none;background:#6c5ce7;color:#fff;font-size:15px;font-weight:600;cursor:pointer;">
-      Unlock
-    </button>
-    <p id="pw-err" style="color:#ff7675;font-size:13px;margin-top:10px;display:none;">Wrong password</p>
-  </div>
-</div>
-<script>
-(function(){
-  if(sessionStorage.getItem('lb_auth')==='1'){document.getElementById('pw-gate').style.display='none';}
-})();
-function checkPw(){
-  if(document.getElementById('pw-input').value==='nancy@leaderboard'){
-    document.getElementById('pw-gate').style.display='none';
-    sessionStorage.setItem('lb_auth','1');
-  } else {
-    document.getElementById('pw-err').style.display='block';
-    document.getElementById('pw-input').value='';
-    document.getElementById('pw-input').focus();
-  }
-}
-</script>
-
 <!-- Header -->
 <div class="header">
   <h1><span>&#x1F3C6;</span> Nancy Asset Leaderboard</h1>
