@@ -23,6 +23,7 @@ import os
 import re
 import glob
 import math
+import hashlib
 from datetime import datetime, timezone
 
 BASE = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
@@ -245,9 +246,18 @@ def format_output(ranked):
     """Format for leaderboard.json output."""
     assets = []
     for s in ranked:
+        # Generate thumb filename (must match the thumb generation logic)
+        ext = os.path.splitext(s["path"])[1] or ".jpg"
+        basename = os.path.basename(s["path"])
+        short_hash = hashlib.md5(s["path"].encode()).hexdigest()[:6]
+        thumb_name = f"{short_hash}_{basename}"
+        if ext.lower() in [".png", ".webp"]:
+            thumb_name = thumb_name.rsplit(".", 1)[0] + ".jpg"
+
         assets.append({
             "rank": s["rank"],
             "path": s["path"],
+            "thumb": f"thumbs/{thumb_name}",
             "product": s["product"],
             "type": s["type"],
             "source": s["source"],
