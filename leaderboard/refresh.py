@@ -212,7 +212,24 @@ def normalize_and_rank(scored):
             composite += WEIGHTS[dim] * norm
 
         s["breakdown"] = breakdown
-        s["composite_score"] = round(composite, 4)
+        s["composite_score"] = composite  # will round after multiplier
+
+        # Post-normalization multiplier for proven high-ROAS ads
+        # These are validated winners that should rank above untested assets
+        roas_val = s.get("metrics", {}).get("roas") or 0
+        if roas_val >= 2.0:
+            s["composite_score"] *= 2.5   # 2.5x for 2x+ ROAS (elite)
+            s["roas_multiplier"] = 2.5
+        elif roas_val >= 1.5:
+            s["composite_score"] *= 1.8   # 1.8x for 1.5x+ ROAS (strong)
+            s["roas_multiplier"] = 1.8
+        elif roas_val >= 1.0:
+            s["composite_score"] *= 1.3   # 1.3x for 1x+ ROAS (positive)
+            s["roas_multiplier"] = 1.3
+        else:
+            s["roas_multiplier"] = 1.0
+
+        s["composite_score"] = round(s["composite_score"], 4)
 
     # Sort by composite descending
     scored.sort(key=lambda x: x["composite_score"], reverse=True)

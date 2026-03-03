@@ -85,26 +85,28 @@
     z-index: 100;
     background: var(--surface);
     border-bottom: 1px solid var(--border);
-    padding: 12px 24px;
+    padding: 10px 24px;
     display: flex;
-    gap: 10px;
+    gap: 8px;
     align-items: center;
-    flex-wrap: wrap;
+    overflow-x: auto;
+    white-space: nowrap;
   }
   .filter-bar select, .filter-bar input {
     background: var(--surface2);
     color: var(--text);
     border: 1px solid var(--border);
     border-radius: 6px;
-    padding: 7px 12px;
-    font-size: 13px;
+    padding: 6px 10px;
+    font-size: 12px;
     outline: none;
+    flex-shrink: 0;
   }
   .filter-bar select:focus, .filter-bar input:focus {
     border-color: var(--accent);
   }
-  .filter-bar input { flex: 1; min-width: 160px; }
-  .filter-count { font-size: 12px; color: var(--text2); margin-left: auto; white-space: nowrap; }
+  .filter-bar input { flex: 1; min-width: 120px; }
+  .filter-count { font-size: 12px; color: var(--text2); margin-left: auto; white-space: nowrap; flex-shrink: 0; }
 
   /* Table */
   .table-wrap {
@@ -115,36 +117,54 @@
     width: 100%;
     border-collapse: collapse;
     font-size: 13px;
-    min-width: 1000px;
+    table-layout: fixed;
   }
   thead th {
     background: var(--surface2);
-    padding: 10px 12px;
+    padding: 8px 8px;
     text-align: left;
     font-weight: 600;
     font-size: 11px;
     text-transform: uppercase;
-    letter-spacing: 0.5px;
+    letter-spacing: 0.3px;
     color: var(--text2);
     position: sticky;
-    top: 52px;
+    top: var(--filter-bar-h, 42px);
     z-index: 50;
     cursor: pointer;
     user-select: none;
     white-space: nowrap;
+    border-bottom: 2px solid transparent;
+    transition: color 0.15s, border-color 0.15s;
   }
   thead th:hover { color: var(--text); }
-  thead th.sorted { color: var(--accent2); }
-  thead th .arrow { font-size: 10px; margin-left: 3px; }
+  thead th.sorted { color: var(--accent2); border-bottom-color: var(--accent2); }
+  thead th .arrow { font-size: 9px; margin-left: 2px; opacity: 0.6; }
   tbody tr {
     border-bottom: 1px solid var(--border);
     cursor: pointer;
     transition: background 0.15s;
   }
   tbody tr:hover { background: var(--surface2); }
-  td { padding: 8px 12px; vertical-align: middle; }
-  td.rank { font-weight: 700; color: var(--text2); width: 40px; text-align: center; }
+  td { padding: 7px 8px; vertical-align: middle; overflow: hidden; text-overflow: ellipsis; }
+  td.rank { font-weight: 700; color: var(--text2); text-align: center; }
   td.rank .medal { font-size: 16px; }
+
+  /* Column widths via table-layout: fixed */
+  col.c-rank   { width: 38px; }
+  col.c-thumb  { width: 50px; }
+  col.c-path   { width: 22%; }
+  col.c-score  { width: 140px; }
+  col.c-spark  { width: 90px; }
+  col.c-roas   { width: 64px; }
+  col.c-spend  { width: 80px; }
+  col.c-qual   { width: 52px; }
+  col.c-pages  { width: 52px; }
+  col.c-source { width: 90px; }
+
+  @media (max-width: 900px) {
+    col.c-spark { width: 0; } .hide-narrow { display: none; }
+  }
 
   /* Thumbnail */
   .thumb {
@@ -366,18 +386,23 @@
     Loading leaderboard data...
   </div>
   <table id="table" style="display:none">
+    <colgroup>
+      <col class="c-rank"><col class="c-thumb"><col class="c-path"><col class="c-score">
+      <col class="c-spark"><col class="c-roas"><col class="c-spend"><col class="c-qual">
+      <col class="c-pages"><col class="c-source">
+    </colgroup>
     <thead>
       <tr>
-        <th style="width:40px">#</th>
-        <th style="width:56px">Thumb</th>
-        <th>Asset Path</th>
-        <th style="width:180px">Score</th>
-        <th style="width:90px">Breakdown</th>
-        <th>ROAS</th>
-        <th>Spend (HKD)</th>
-        <th>Quality</th>
-        <th>Pages</th>
-        <th>Source</th>
+        <th data-sort="rank">#</th>
+        <th>Thumb</th>
+        <th data-sort="path">Asset</th>
+        <th data-sort="composite_score">Score</th>
+        <th class="hide-narrow">Breakdown</th>
+        <th data-sort="roas">ROAS</th>
+        <th data-sort="spend">Spend</th>
+        <th data-sort="quality">Qual</th>
+        <th data-sort="page_usage">Pages</th>
+        <th data-sort="source">Source</th>
       </tr>
     </thead>
     <tbody id="tbody"></tbody>
@@ -503,14 +528,8 @@ function applyFilters() {
     return true;
   });
 
-  // Sort
-  filteredAssets.sort((a, b) => {
-    if (sortBy === 'composite_score') return b.composite_score - a.composite_score;
-    if (sortBy === 'roas') return (b.metrics.roas || 0) - (a.metrics.roas || 0);
-    if (sortBy === 'spend') return (b.metrics.spend_hkd || 0) - (a.metrics.spend_hkd || 0);
-    return (b.breakdown[sortBy] || 0) - (a.breakdown[sortBy] || 0);
-  });
-
+  // Sort using shared sort state
+  applySort();
   renderTable();
   document.getElementById('filter-count').textContent = `${filteredAssets.length} of ${allAssets.length}`;
 }
@@ -528,12 +547,12 @@ function renderTable() {
     return `<tr data-idx="${i}">
       <td class="rank">${medal(a.rank)}</td>
       <td><img class="thumb" src="../${a.path}" loading="lazy" onerror="this.style.display='none'" alt=""></td>
-      <td style="max-width:260px; overflow:hidden; text-overflow:ellipsis; white-space:nowrap;" title="${a.path}">${a.path.split('/').pop()}</td>
+      <td style="white-space:nowrap;" title="${a.path}">${a.path.split('/').pop()}</td>
       <td>
         <div class="score-bar"><div class="score-bar-fill" style="width:${pct}%; background:${color}"></div></div>
         <span class="score-text" style="color:${color}">${sc.toFixed(3)}</span>
       </td>
-      <td>${sparkBar(a.breakdown)}</td>
+      <td class="hide-narrow">${sparkBar(a.breakdown)}</td>
       <td class="metric ${a.metrics.roas ? 'highlight' : 'dim'}">${a.metrics.roas ? a.metrics.roas.toFixed(2) + 'x' : '—'}</td>
       <td class="metric ${a.metrics.spend_hkd ? '' : 'dim'}">${a.metrics.spend_hkd ? fmtNum(a.metrics.spend_hkd) : '—'}</td>
       <td class="metric">${a.metrics.organic_score}/5</td>
@@ -646,6 +665,75 @@ document.getElementById('modal-overlay').addEventListener('click', (e) => {
 });
 document.addEventListener('keydown', (e) => { if (e.key === 'Escape') closeModal(); });
 
+// Column header sorting
+let currentSort = { key: 'composite_score', dir: 'desc' };
+
+function initHeaderSort() {
+  document.querySelectorAll('thead th[data-sort]').forEach(th => {
+    th.addEventListener('click', () => {
+      const key = th.dataset.sort;
+      if (currentSort.key === key) {
+        currentSort.dir = currentSort.dir === 'desc' ? 'asc' : 'desc';
+      } else {
+        currentSort.key = key;
+        currentSort.dir = 'desc';
+      }
+      // Sync the dropdown if the key matches an option
+      const sortSel = document.getElementById('sort-by');
+      const opt = sortSel.querySelector(`option[value="${key}"]`);
+      if (opt) sortSel.value = key;
+
+      applySort();
+      renderTable();
+      updateSortArrows();
+    });
+  });
+}
+
+function applySort() {
+  const k = currentSort.key;
+  const dir = currentSort.dir === 'desc' ? -1 : 1;
+
+  filteredAssets.sort((a, b) => {
+    let va, vb;
+    if (k === 'rank') { va = a.rank; vb = b.rank; }
+    else if (k === 'composite_score') { va = a.composite_score; vb = b.composite_score; }
+    else if (k === 'roas') { va = a.metrics.roas || 0; vb = b.metrics.roas || 0; }
+    else if (k === 'spend') { va = a.metrics.spend_hkd || 0; vb = b.metrics.spend_hkd || 0; }
+    else if (k === 'quality') { va = a.breakdown.quality || 0; vb = b.breakdown.quality || 0; }
+    else if (k === 'page_usage') { va = a.metrics.page_count || 0; vb = b.metrics.page_count || 0; }
+    else if (k === 'source') { va = a.source; vb = b.source; return dir * va.localeCompare(vb); }
+    else if (k === 'path') { va = a.path; vb = b.path; return dir * va.localeCompare(vb); }
+    else { va = a.breakdown[k] || 0; vb = b.breakdown[k] || 0; }
+    return dir * (va - vb);
+  });
+
+  document.getElementById('filter-count').textContent = `${filteredAssets.length} of ${allAssets.length}`;
+}
+
+function updateSortArrows() {
+  document.querySelectorAll('thead th[data-sort]').forEach(th => {
+    th.classList.remove('sorted');
+    const old = th.querySelector('.arrow');
+    if (old) old.remove();
+
+    if (th.dataset.sort === currentSort.key) {
+      th.classList.add('sorted');
+      const arrow = document.createElement('span');
+      arrow.className = 'arrow';
+      arrow.textContent = currentSort.dir === 'desc' ? ' ▼' : ' ▲';
+      th.appendChild(arrow);
+    }
+  });
+}
+
+function setFilterBarHeight() {
+  const bar = document.querySelector('.filter-bar');
+  if (bar) {
+    document.documentElement.style.setProperty('--filter-bar-h', bar.offsetHeight + 'px');
+  }
+}
+
 // Init
 async function init() {
   try {
@@ -673,10 +761,25 @@ async function init() {
   document.getElementById('table').style.display = '';
 
   // Bind filter events
-  ['filter-product', 'filter-type', 'filter-source', 'sort-by'].forEach(id => {
+  ['filter-product', 'filter-type', 'filter-source'].forEach(id => {
     document.getElementById(id).addEventListener('change', applyFilters);
   });
+  // Sort dropdown syncs with header sort state
+  document.getElementById('sort-by').addEventListener('change', (e) => {
+    currentSort.key = e.target.value;
+    currentSort.dir = 'desc';
+    applyFilters();
+    updateSortArrows();
+  });
   document.getElementById('search').addEventListener('input', debounce(applyFilters, 200));
+
+  // Wire up column header click sorting
+  initHeaderSort();
+  updateSortArrows();
+
+  // Set sticky header offset from filter bar height
+  setFilterBarHeight();
+  window.addEventListener('resize', debounce(setFilterBarHeight, 100));
 }
 
 function debounce(fn, ms) {
