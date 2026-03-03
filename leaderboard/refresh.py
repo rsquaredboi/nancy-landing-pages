@@ -182,6 +182,8 @@ def compute_raw_scores(assets, ad_lookup, page_usage):
             "issues": asset.get("issues", []),
             "mood": asset.get("mood", ""),
             "has_text_overlay": asset.get("has_text_overlay", False),
+            "is_video": asset.get("type") == "video-thumb" or (ad and ad.get("creative_type") == "video"),
+            "video_id": str(ad.get("video_id", "")) if ad and ad.get("video_id") else None,
         })
 
     return scored
@@ -273,6 +275,8 @@ def format_output(ranked):
             "issues": s.get("issues", []),
             "mood": s.get("mood", ""),
             "has_text_overlay": s.get("has_text_overlay", False),
+            "is_video": s.get("is_video", False),
+            "video_id": s.get("video_id"),
         })
 
     return {

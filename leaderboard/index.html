@@ -167,6 +167,12 @@
   }
 
   /* Thumbnail */
+  .thumb-wrap {
+    position: relative;
+    width: 44px;
+    height: 44px;
+    flex-shrink: 0;
+  }
   .thumb {
     width: 44px;
     height: 44px;
@@ -175,6 +181,79 @@
     background: var(--surface2);
     border: 1px solid var(--border);
   }
+  .video-badge {
+    position: absolute;
+    bottom: 1px;
+    right: 1px;
+    background: rgba(0,0,0,0.75);
+    color: #fff;
+    font-size: 8px;
+    font-weight: 700;
+    padding: 1px 3px;
+    border-radius: 3px;
+    line-height: 1;
+    letter-spacing: 0.3px;
+    pointer-events: none;
+  }
+  .play-icon {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 18px;
+    height: 18px;
+    background: rgba(0,0,0,0.6);
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    pointer-events: none;
+  }
+  .play-icon::after {
+    content: '';
+    display: block;
+    width: 0;
+    height: 0;
+    border-style: solid;
+    border-width: 4px 0 4px 7px;
+    border-color: transparent transparent transparent #fff;
+    margin-left: 2px;
+  }
+
+  /* Modal video */
+  .modal-video-wrap {
+    position: relative;
+    width: 100%;
+    padding-bottom: 56.25%;
+    margin-bottom: 20px;
+    border-radius: 10px;
+    overflow: hidden;
+    background: var(--bg);
+  }
+  .modal-video-wrap iframe {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    border: none;
+  }
+  .modal-video-link {
+    display: inline-flex;
+    align-items: center;
+    gap: 6px;
+    background: var(--surface2);
+    border: 1px solid var(--border);
+    border-radius: 8px;
+    padding: 8px 14px;
+    color: var(--accent2);
+    text-decoration: none;
+    font-size: 13px;
+    font-weight: 500;
+    margin-bottom: 16px;
+    transition: background 0.15s;
+  }
+  .modal-video-link:hover { background: var(--border); }
 
   /* Score bar */
   .score-bar {
@@ -544,9 +623,11 @@ function renderTable() {
     const pct = (sc * 100).toFixed(0);
     const color = scoreColor(sc);
 
+    const vidBadge = a.is_video ? '<div class="play-icon"></div><div class="video-badge">VID</div>' : '';
+
     return `<tr data-idx="${i}">
       <td class="rank">${medal(a.rank)}</td>
-      <td><img class="thumb" src="${a.thumb || ('../' + a.path)}" loading="lazy" onerror="this.src='data:image/svg+xml,<svg xmlns=%22http://www.w3.org/2000/svg%22 width=%2244%22 height=%2244%22><rect fill=%22%23242836%22 width=%2244%22 height=%2244%22 rx=%226%22/><text x=%2222%22 y=%2226%22 text-anchor=%22middle%22 fill=%22%238b8fa3%22 font-size=%2210%22>📷</text></svg>';this.onerror=null" alt=""></td>
+      <td><div class="thumb-wrap"><img class="thumb" src="${a.thumb || ('../' + a.path)}" loading="lazy" onerror="this.src='data:image/svg+xml,<svg xmlns=%22http://www.w3.org/2000/svg%22 width=%2244%22 height=%2244%22><rect fill=%22%23242836%22 width=%2244%22 height=%2244%22 rx=%226%22/><text x=%2222%22 y=%2226%22 text-anchor=%22middle%22 fill=%22%238b8fa3%22 font-size=%2210%22>📷</text></svg>';this.onerror=null" alt="">${vidBadge}</div></td>
       <td style="white-space:nowrap;" title="${a.path}">${a.path.split('/').pop()}</td>
       <td>
         <div class="score-bar"><div class="score-bar-fill" style="width:${pct}%; background:${color}"></div></div>
@@ -610,10 +691,34 @@ function openModal(a) {
     ? `<div class="item"><div class="item-label">Ad Entity</div><div class="item-value" style="font-size:12px; word-break:break-all;">${a.entity_name.split(' 20')[0]}</div></div>`
     : '';
 
+  // Video or static image
+  let mediaHTML = '';
+  if (a.is_video && a.video_id) {
+    const fbWatchUrl = `https://www.facebook.com/watch/?v=${a.video_id}`;
+    const fbAdsLibUrl = `https://www.facebook.com/ads/library/?id=${a.video_id}`;
+    mediaHTML = `
+      <div style="position:relative; cursor:pointer; margin-bottom:12px;" onclick="window.open('${fbWatchUrl}','_blank')">
+        <img class="modal-preview" src="${a.thumb || ('../' + a.path)}" onerror="if(this.src.includes('thumbs/')){this.src='../' + '${a.path}'}else{this.style.display='none'}" alt="">
+        <div style="position:absolute;top:50%;left:50%;transform:translate(-50%,-50%);width:56px;height:56px;background:rgba(0,0,0,0.65);border-radius:50%;display:flex;align-items:center;justify-content:center;">
+          <div style="width:0;height:0;border-style:solid;border-width:12px 0 12px 20px;border-color:transparent transparent transparent #fff;margin-left:4px"></div>
+        </div>
+      </div>
+      <div style="display:flex;gap:8px;flex-wrap:wrap;margin-bottom:16px;">
+        <a class="modal-video-link" href="${fbWatchUrl}" target="_blank" rel="noopener">▶ Watch on Facebook</a>
+        <a class="modal-video-link" href="${fbAdsLibUrl}" target="_blank" rel="noopener">📚 Ads Library</a>
+        <span style="font-size:11px;color:var(--text2);align-self:center;">Video ID: ${a.video_id}</span>
+      </div>`;
+  } else {
+    mediaHTML = `<img class="modal-preview" src="${a.thumb || ('../' + a.path)}" onerror="if(this.src.includes('thumbs/')){this.src='../' + '${a.path}'}else{this.style.display='none'}" alt="">`;
+  }
+
+  // Type badge
+  let typeBadge = a.is_video ? `<span class="tag" style="border-color:var(--red);color:var(--red)">▶ VIDEO</span> ` : '';
+
   modal.innerHTML = `
     <button class="modal-close" onclick="closeModal()">&#x2715; Close</button>
-    <h2>#${a.rank} — ${a.path.split('/').pop()}</h2>
-    <img class="modal-preview" src="${a.thumb || ('../' + a.path)}" onerror="if(this.src.includes('thumbs/')){this.src='../' + '${a.path}'}else{this.style.display='none'}" alt="">
+    <h2>${typeBadge}#${a.rank} — ${a.path.split('/').pop()}</h2>
+    ${mediaHTML}
 
     <div class="modal-grid">
       <div class="item"><div class="item-label">Composite Score</div><div class="item-value" style="color:${scoreColor(a.composite_score)}">${a.composite_score.toFixed(4)}</div></div>

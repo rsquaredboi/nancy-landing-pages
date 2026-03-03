@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-03-03T03:42:28.990527+00:00",
+  "generated_at": "2026-03-03T03:53:46.114936+00:00",
   "total_assets_scored": 500,
   "total_assets_in_registry": 610,
   "scoring_weights": {
@@ -57,7 +57,9 @@
       "entity_name": "Holiday Sale: Up to 60% Off 2025-12-26-c00d424c32a63786de072291cf1475b7",
       "issues": [],
       "mood": "aspirational",
-      "has_text_overlay": true
+      "has_text_overlay": true,
+      "is_video": true,
+      "video_id": "1443393200687627"
     },
     {
       "rank": 2,
@@ -100,7 +102,9 @@
       "entity_name": "NAN_JULW2_377A_Jul_30_lem_Hello-Regalio-1_Nancy_Winners_ASC_30July25_1753876229510 2025-07-30-e611fbb163f84f7828b44f6e4f3308cf",
       "issues": [],
       "mood": "aspirational",
-      "has_text_overlay": true
+      "has_text_overlay": true,
+      "is_video": false,
+      "video_id": null
     },
     {
       "rank": 3,
@@ -143,7 +147,9 @@
       "entity_name": "Lem_Video_ACH - DYLE - 85(1)+SS2_Jan-23_valentines 2026-01-23-b62a762e2c4df01773c20ab6a81e32f0",
       "issues": [],
       "mood": "aspirational",
-      "has_text_overlay": true
+      "has_text_overlay": true,
+      "is_video": true,
+      "video_id": "2040223696766212"
     },
     {
       "rank": 4,
@@ -186,7 +192,9 @@
       "entity_name": "Lem_Video_ACH - ROM 86(4) SS2_Dec-18_lem-holiday_Nancy-5_Website_Top 15 Countries_Holiday Ads_ACH P 2025-12-18-8e4619d28c8b70dc9c0433e5f3d5857a",
       "issues": [],
       "mood": "aspirational",
-      "has_text_overlay": true
+      "has_text_overlay": true,
+      "is_video": true,
+      "video_id": "2333357550442787"
     },
     {
       "rank": 5,
@@ -229,7 +237,9 @@
       "entity_name": "Black Friday: Up to 60% Off 2025-12-16-dc6d90bab613e8d292923cc22178ba89",
       "issues": [],
       "mood": "aspirational",
-      "has_text_overlay": true
+      "has_text_overlay": true,
+      "is_video": true,
+      "video_id": "1205557678131140"
     },
     {
       "rank": 6,
@@ -272,7 +282,9 @@
       "entity_name": "Lem_Video_Pov_topdown_view_202511021528_ewphb_upscaled_Dec_2_hellonancystress.manus.space_Hello-Nan 2025-12-02-cd85cb317485764ff972b1d825918170",
       "issues": [],
       "mood": "aspirational",
-      "has_text_overlay": true
+      "has_text_overlay": true,
+      "is_video": true,
+      "video_id": "1721196535532157"
     },
     {
       "rank": 7,
@@ -315,7 +327,9 @@
       "entity_name": "\ud83e\udd2d Discreet Packaging + Free Shipping 2025-11-21-50051ed09816ced57791ca3f7fd089c0",
       "issues": [],
       "mood": "aspirational",
-      "has_text_overlay": true
+      "has_text_overlay": true,
+      "is_video": false,
+      "video_id": null
     },
     {
       "rank": 8,
@@ -358,7 +372,9 @@
       "entity_name": "This New Year, Lem Ends the Guessing. \ud83c\udf4b 2026-01-15-5342f7f0e7efc7051908648ec3a9fef0",
       "issues": [],
       "mood": "aspirational",
-      "has_text_overlay": true
+      "has_text_overlay": true,
+      "is_video": false,
+      "video_id": null
     },
     {
       "rank": 9,
@@ -401,7 +417,9 @@
       "entity_name": "Elevate Your Me-Time to Next Level 2025-11-24-38165a03c8082f39da7c3b8c5c431d47",
       "issues": [],
       "mood": "aspirational",
-      "has_text_overlay": true
+      "has_text_overlay": true,
+      "is_video": true,
+      "video_id": "1337432070838950"
     },
     {
       "rank": 10,
@@ -444,7 +462,9 @@
       "entity_name": "Lem_Video_ACH - ROM - 86(2) SS3_Jan-23_valentines 2026-01-23-039af0a38702ecce6a0b88f02625060b",
       "issues": [],
       "mood": "aspirational",
-      "has_text_overlay": true
+      "has_text_overlay": true,
+      "is_video": true,
+      "video_id": "888899736883044"
     },
     {
       "rank": 11,
@@ -487,7 +507,9 @@
       "entity_name": "NAN_JULW2_127A_Jul_30_lem_Hello-Regalio-1_Nancy_Winners_ASC_30July25_1753876218717 2025-07-30-940f48323c93f0017a0760735372310d",
       "issues": [],
       "mood": "aspirational",
-      "has_text_overlay": true
+      "has_text_overlay": true,
+      "is_video": false,
+      "video_id": null
     },
     {
       "rank": 12,
@@ -530,7 +552,9 @@
       "entity_name": "Lem_Image_Copy of 1d 11 - Lem vs Rose_Dec_3_nancypowerful.manus.space 2025-12-03-4af2e22cba544a0c91484cdaf00a86e8",
       "issues": [],
       "mood": "aspirational",
-      "has_text_overlay": true
+      "has_text_overlay": true,
+      "is_video": false,
+      "video_id": null
     },
     {
       "rank": 13,
@@ -573,7 +597,9 @@
       "entity_name": "I Retired The \"Actress\" Last Night. 2026-02-19-5dfa4cd189ef7cf240c9c166fd075c8f",
       "issues": [],
       "mood": "aspirational",
-      "has_text_overlay": true
+      "has_text_overlay": true,
+      "is_video": false,
+      "video_id": null
     },
     {
       "rank": 14,
@@ -616,7 +642,9 @@
       "entity_name": "Lem_Image_NAN_NOVW2_115B_Nov-26_lem-black-friday-29_Hello-Regalio-2_Website_AU,CA,US,UK_Black Frida 2025-11-25-ec91b26d6fac5b51cf859f84a000df3b",
       "issues": [],
       "mood": "aspirational",
-      "has_text_overlay": true
+      "has_text_overlay": true,
+      "is_video": false,
+      "video_id": null
     },
     {
       "rank": 15,
@@ -659,7 +687,9 @@
       "entity_name": "Image_ad_060_v2_1_Dec-13_nancypowerful.manus.space_Lem-Regalio-1_Manus NancyPowerful_Top 15 Countri 2025-12-13-56f0e3c5f21484ff3fb5e0e68c0b18fd",
       "issues": [],
       "mood": "aspirational",
-      "has_text_overlay": true
+      "has_text_overlay": true,
+      "is_video": false,
+      "video_id": null
     },
     {
       "rank": 16,
@@ -702,7 +732,9 @@
       "entity_name": "This Valentine\u2019s, You Win. 2026-01-21-27281192f2197601f003504a78721e29",
       "issues": [],
       "mood": "aspirational",
-      "has_text_overlay": true
+      "has_text_overlay": true,
+      "is_video": false,
+      "video_id": null
     },
     {
       "rank": 17,
@@ -745,7 +777,9 @@
       "entity_name": "{{product.name}} 2026-01-21-f8cc099ac202cc4f085ae53c767f1754",
       "issues": [],
       "mood": "aspirational",
-      "has_text_overlay": true
+      "has_text_overlay": true,
+      "is_video": false,
+      "video_id": null
     },
     {
       "rank": 18,
@@ -788,7 +822,9 @@
       "entity_name": "Lem_Video_AdsCreativeHouse - ROM 86(4) SS3_Jan-09_lem-holiday 2026-01-08-9d69059b24e160e3386bae5fa3782e9c",
       "issues": [],
       "mood": "aspirational",
-      "has_text_overlay": true
+      "has_text_overlay": true,
+      "is_video": true,
+      "video_id": "34272913138974811"
     },
     {
       "rank": 19,
@@ -831,7 +867,9 @@
       "entity_name": "\ud83e\udd2d Discreet Packaging + Free Shipping 2025-08-06-2dd9b382805c6d987eb724b3f497e4a5",
       "issues": [],
       "mood": "aspirational",
-      "has_text_overlay": true
+      "has_text_overlay": true,
+      "is_video": true,
+      "video_id": "2150329015477247"
     },
     {
       "rank": 20,
@@ -874,7 +912,9 @@
       "entity_name": "Lem_Image_4Lem_NAN_JUNW4_145A_Jul_02_lem_Dec_3_nancypowerful.manus.space_Lem-Regalio-1_Manus NancyP 2025-12-02-c3a9eb3ca2a329b2791be3448231e60c",
       "issues": [],
       "mood": "aspirational",
-      "has_text_overlay": true
+      "has_text_overlay": true,
+      "is_video": false,
+      "video_id": null
     },
     {
       "rank": 21,
@@ -917,7 +957,9 @@
       "entity_name": "Black Friday: Up to 60% Off 2025-12-16-5adc8b1b7357b73dd183d4cb02b40bae",
       "issues": [],
       "mood": "aspirational",
-      "has_text_overlay": true
+      "has_text_overlay": true,
+      "is_video": true,
+      "video_id": "1185269543023506"
     },
     {
       "rank": 22,
@@ -960,7 +1002,9 @@
       "entity_name": "Image_ad_108_v1_1_Dec-13_nancypowerful.manus.space_Lem-Regalio-1_Manus NancyPowerful_Top 15 Countri 2025-12-13-380c6a51aaad607c8e0e5ef60b14fd03",
       "issues": [],
       "mood": "aspirational",
-      "has_text_overlay": true
+      "has_text_overlay": true,
+      "is_video": false,
+      "video_id": null
     },
     {
       "rank": 23,
@@ -1003,7 +1047,9 @@
       "entity_name": "Lem_Video_ACH - ROM - 86(2) SS1_Jan-23_valentines 2026-01-23-262e7d84121f45185f9963dc8b387ac4",
       "issues": [],
       "mood": "aspirational",
-      "has_text_overlay": true
+      "has_text_overlay": true,
+      "is_video": true,
+      "video_id": "1488869006288725"
     },
     {
       "rank": 24,
@@ -1046,7 +1092,9 @@
       "entity_name": "I Retired The \"Actress\" Last Night. 2026-02-03-b799254345621964322bd61f819e6c34",
       "issues": [],
       "mood": "aspirational",
-      "has_text_overlay": true
+      "has_text_overlay": true,
+      "is_video": false,
+      "video_id": null
     },
     {
       "rank": 25,
@@ -1089,7 +1137,9 @@
       "entity_name": "I Retired The \"Actress\" Last Night. 2026-01-02-c4685cc1597ad3dced96883e34bd4673",
       "issues": [],
       "mood": "aspirational",
-      "has_text_overlay": true
+      "has_text_overlay": true,
+      "is_video": false,
+      "video_id": null
     },
     {
       "rank": 26,
@@ -1132,7 +1182,9 @@
       "entity_name": "NAN_JANW4_15C_Feb-23_lem 2026-02-22-4dc9659d8c001ab23ff8d184718992e3",
       "issues": [],
       "mood": "aspirational",
-      "has_text_overlay": true
+      "has_text_overlay": true,
+      "is_video": false,
+      "video_id": null
     },
     {
       "rank": 27,
@@ -1175,7 +1227,9 @@
       "entity_name": "Lem_Image_NAN_JANW2_17A_Jan-07_lem-holiday 2026-01-07-c44e7e388e362b6417f4ecacfdeb866e",
       "issues": [],
       "mood": "aspirational",
-      "has_text_overlay": true
+      "has_text_overlay": true,
+      "is_video": false,
+      "video_id": null
     },
     {
       "rank": 28,
@@ -1218,7 +1272,9 @@
       "entity_name": "Lem_Image_NAN_JUNW4_166C_Jul_02_lem_Dec_3_nancypowerful.manus.space_Lem-Regalio-1_Manus NancyPowerf 2025-12-02-6783953a38a56b773e143a01a55d8196",
       "issues": [],
       "mood": "aspirational",
-      "has_text_overlay": true
+      "has_text_overlay": true,
+      "is_video": false,
+      "video_id": null
     },
     {
       "rank": 29,
@@ -1261,7 +1317,9 @@
       "entity_name": "This Valentine\u2019s, You Win. 2026-02-10-8d43691127731f5c0d57e73a61adf9ab",
       "issues": [],
       "mood": "aspirational",
-      "has_text_overlay": true
+      "has_text_overlay": true,
+      "is_video": false,
+      "video_id": null
     },
     {
       "rank": 30,
@@ -1304,7 +1362,9 @@
       "entity_name": "This Toy Broke the Internet 2025-12-27-c80934945f7a3d19e4823ed5d76efadb",
       "issues": [],
       "mood": "aspirational",
-      "has_text_overlay": true
+      "has_text_overlay": true,
+      "is_video": true,
+      "video_id": "1209117831078997"
     },
     {
       "rank": 31,
@@ -1347,7 +1407,9 @@
       "entity_name": "Elevate Your Me-Time to Next Level 2025-11-24-10070da36eb1cb14cc0380e547a6fca6",
       "issues": [],
       "mood": "aspirational",
-      "has_text_overlay": true
+      "has_text_overlay": true,
+      "is_video": true,
+      "video_id": "854594937030651"
     },
     {
       "rank": 32,
@@ -1390,7 +1452,9 @@
       "entity_name": "{{product.name}} 2026-01-08-ca92dd015647820545c2818da9e1a9b6",
       "issues": [],
       "mood": "aspirational",
-      "has_text_overlay": true
+      "has_text_overlay": true,
+      "is_video": false,
+      "video_id": null
     },
     {
       "rank": 33,
@@ -1441,7 +1505,9 @@
       "entity_name": "",
       "issues": [],
       "mood": "authentic",
-      "has_text_overlay": false
+      "has_text_overlay": false,
+      "is_video": null,
+      "video_id": null
     },
     {
       "rank": 34,
@@ -1492,7 +1558,9 @@
       "entity_name": "",
       "issues": [],
       "mood": "authentic",
-      "has_text_overlay": false
+      "has_text_overlay": false,
+      "is_video": null,
+      "video_id": null
     },
     {
       "rank": 35,
@@ -1543,7 +1611,9 @@
       "entity_name": "",
       "issues": [],
       "mood": "authentic",
-      "has_text_overlay": false
+      "has_text_overlay": false,
+      "is_video": null,
+      "video_id": null
     },
     {
       "rank": 36,
@@ -1594,7 +1664,9 @@
       "entity_name": "",
       "issues": [],
       "mood": "authentic",
-      "has_text_overlay": false
+      "has_text_overlay": false,
+      "is_video": null,
+      "video_id": null
     },
     {
       "rank": 37,
@@ -1645,7 +1717,9 @@
       "entity_name": "",
       "issues": [],
       "mood": "authentic",
-      "has_text_overlay": false
+      "has_text_overlay": false,
+      "is_video": null,
+      "video_id": null
     },
     {
       "rank": 38,
@@ -1696,7 +1770,9 @@
       "entity_name": "",
       "issues": [],
       "mood": "authentic",
-      "has_text_overlay": false
+      "has_text_overlay": false,
+      "is_video": null,
+      "video_id": null
     },
     {
       "rank": 39,
@@ -1739,7 +1815,9 @@
       "entity_name": "NAN_JUNW1_370A_Jul_30_lem_Hello-Regalio-1_Nancy_Winners_ASC_30July25_1753876222969 2025-07-30-05ce952844f66f846aee91d00135fd78",
       "issues": [],
       "mood": "aspirational",
-      "has_text_overlay": true
+      "has_text_overlay": true,
+      "is_video": false,
+      "video_id": null
     },
     {
       "rank": 40,
@@ -1782,7 +1860,9 @@
       "entity_name": "Lem_Video_ACH Nasty 20(4) SS1_Oct-01_7-best-suction-toys-for-women_Hello-Nancy-11_Zenify_Top 15 Cou 2025-09-30-e8bcfae9134bd98e73907d5d546560f0",
       "issues": [],
       "mood": "aspirational",
-      "has_text_overlay": true
+      "has_text_overlay": true,
+      "is_video": true,
+      "video_id": "1878702423059796"
     },
     {
       "rank": 41,
@@ -1825,7 +1905,9 @@
       "entity_name": "Do this to mimic vagina with pumpkn_Dec-21_7-best-suction-toys-for-women_Hello-Momo-1_Zenify_US, UK 2025-12-20-9dca4939cf169102c05afc1cd78d2e08",
       "issues": [],
       "mood": "aspirational",
-      "has_text_overlay": true
+      "has_text_overlay": true,
+      "is_video": false,
+      "video_id": null
     },
     {
       "rank": 42,
@@ -1875,7 +1957,9 @@
       "entity_name": "",
       "issues": [],
       "mood": "authentic",
-      "has_text_overlay": false
+      "has_text_overlay": false,
+      "is_video": null,
+      "video_id": null
     },
     {
       "rank": 43,
@@ -1925,7 +2009,9 @@
       "entity_name": "",
       "issues": [],
       "mood": "authentic",
-      "has_text_overlay": false
+      "has_text_overlay": false,
+      "is_video": null,
+      "video_id": null
     },
     {
       "rank": 44,
@@ -1975,7 +2061,9 @@
       "entity_name": "",
       "issues": [],
       "mood": "authentic",
-      "has_text_overlay": false
+      "has_text_overlay": false,
+      "is_video": null,
+      "video_id": null
     },
     {
       "rank": 45,
@@ -2018,7 +2106,9 @@
       "entity_name": "Image_ad_142_v1_1_Dec-14_nancypowerful.manus.space_Lem-Regalio-1_Manus NancyPowerful_Top 15 Countri 2025-12-13-5754938a179adaffd1f0310e073508a8",
       "issues": [],
       "mood": "aspirational",
-      "has_text_overlay": true
+      "has_text_overlay": true,
+      "is_video": false,
+      "video_id": null
     },
     {
       "rank": 46,
@@ -2061,7 +2151,9 @@
       "entity_name": "Lem_Image_Lem_Video_NANCY SORA 269-video-export-2025-10-24T17-01-15.109Z_Dec_3_nancypowerful.manus. 2025-12-03-15917f122681812e37b4ea5b5abfb8fa",
       "issues": [],
       "mood": "aspirational",
-      "has_text_overlay": true
+      "has_text_overlay": true,
+      "is_video": true,
+      "video_id": "824829713779717"
     },
     {
       "rank": 47,
@@ -2104,7 +2196,9 @@
       "entity_name": "These Absolutely Suck! 2025-11-05-5c71bff0e123ba9423b4c1e968959b86",
       "issues": [],
       "mood": "aspirational",
-      "has_text_overlay": true
+      "has_text_overlay": true,
+      "is_video": true,
+      "video_id": "1365776918405615"
     },
     {
       "rank": 48,
@@ -2156,7 +2250,9 @@
         "loox-review10.jpg may be AI-generated"
       ],
       "mood": "authentic",
-      "has_text_overlay": false
+      "has_text_overlay": false,
+      "is_video": null,
+      "video_id": null
     },
     {
       "rank": 49,
@@ -2199,7 +2295,9 @@
       "entity_name": "Rose_Image_NAN_SEPW3_68A 11_Oct-17_7-best-suction-toys-for-women_Hello-Momo-1_Zenify_US, UK, AU, CA 2025-10-17-bbbab1392951e360045efe795aed9df5",
       "issues": [],
       "mood": "aspirational",
-      "has_text_overlay": true
+      "has_text_overlay": true,
+      "is_video": false,
+      "video_id": null
     },
     {
       "rank": 50,
@@ -2242,7 +2340,9 @@
       "entity_name": "These Absolutely Suck! 2025-12-16-b9c264487c10c1adebc36142d95d96a2",
       "issues": [],
       "mood": "aspirational",
-      "has_text_overlay": true
+      "has_text_overlay": true,
+      "is_video": false,
+      "video_id": null
     },
     {
       "rank": 51,
@@ -2285,7 +2385,9 @@
       "entity_name": "{{product.name}} 2025-08-01-0b155544ea13cabf4b059e729084b0f5",
       "issues": [],
       "mood": "aspirational",
-      "has_text_overlay": true
+      "has_text_overlay": true,
+      "is_video": false,
+      "video_id": null
     },
     {
       "rank": 52,
@@ -2328,7 +2430,9 @@
       "entity_name": "Lem_Image_Lem_EN__NAN_OCTW1_129A_Dec_3_nancypowerful.manus.space_Lem-Regalio-1_Manus NancyPowerful_ 2025-12-03-4b450a698f1c44520727292c55c517b0",
       "issues": [],
       "mood": "aspirational",
-      "has_text_overlay": true
+      "has_text_overlay": true,
+      "is_video": false,
+      "video_id": null
     },
     {
       "rank": 53,
@@ -2371,7 +2475,9 @@
       "entity_name": "Men get answers. Women finally get options. 2025-12-26-cd8062dd9306d7316d74100087f1b34c",
       "issues": [],
       "mood": "aspirational",
-      "has_text_overlay": true
+      "has_text_overlay": true,
+      "is_video": false,
+      "video_id": null
     },
     {
       "rank": 54,
@@ -2414,7 +2520,9 @@
       "entity_name": "Men get pills. Women get Lem. 2026-02-20-18b94565e86d13047b3ee61060de4804",
       "issues": [],
       "mood": "aspirational",
-      "has_text_overlay": true
+      "has_text_overlay": true,
+      "is_video": true,
+      "video_id": "1233503441938000"
     },
     {
       "rank": 55,
@@ -2457,7 +2565,9 @@
       "entity_name": "This New Year, Lem Ends the Guessing. \ud83c\udf4b 2026-01-08-9b6278c439d6bed57fb21557e987c6da",
       "issues": [],
       "mood": "aspirational",
-      "has_text_overlay": true
+      "has_text_overlay": true,
+      "is_video": false,
+      "video_id": null
     },
     {
       "rank": 56,
@@ -2500,7 +2610,9 @@
       "entity_name": "I Retired The \"Actress\" Last Night. 2026-01-02-43a876e2af42aa2bd64906667eb7db59",
       "issues": [],
       "mood": "aspirational",
-      "has_text_overlay": true
+      "has_text_overlay": true,
+      "is_video": false,
+      "video_id": null
     },
     {
       "rank": 57,
@@ -2543,7 +2655,9 @@
       "entity_name": "Lem_NAN_DECW3_111A_Jan-16_quiz-25 2026-01-15-f78c339e6b3be71f933d0d5748c5339f",
       "issues": [],
       "mood": "aspirational",
-      "has_text_overlay": true
+      "has_text_overlay": true,
+      "is_video": false,
+      "video_id": null
     },
     {
       "rank": 58,
@@ -2586,7 +2700,9 @@
       "entity_name": "This Valentine\u2019s, You Win. 2026-02-10-157215cee59f1d80415c931b59a8763c",
       "issues": [],
       "mood": "aspirational",
-      "has_text_overlay": true
+      "has_text_overlay": true,
+      "is_video": false,
+      "video_id": null
     },
     {
       "rank": 59,
@@ -2629,7 +2745,9 @@
       "entity_name": "Lem_Image_1NAN_JUNW4_168A_Jul_02_lem_Dec_3_nancypowerful.manus.space_Lem-Regalio-1_Manus NancyPower 2025-12-02-0228bd1e5a4fd0eb8b3ac6243b098fd9",
       "issues": [],
       "mood": "aspirational",
-      "has_text_overlay": true
+      "has_text_overlay": true,
+      "is_video": false,
+      "video_id": null
     },
     {
       "rank": 60,
@@ -2678,7 +2796,9 @@
       "entity_name": "",
       "issues": [],
       "mood": "clinical",
-      "has_text_overlay": false
+      "has_text_overlay": false,
+      "is_video": null,
+      "video_id": null
     },
     {
       "rank": 61,
@@ -2727,7 +2847,9 @@
       "entity_name": "",
       "issues": [],
       "mood": "clinical",
-      "has_text_overlay": false
+      "has_text_overlay": false,
+      "is_video": null,
+      "video_id": null
     },
     {
       "rank": 62,
@@ -2776,7 +2898,9 @@
       "entity_name": "",
       "issues": [],
       "mood": "clinical",
-      "has_text_overlay": false
+      "has_text_overlay": false,
+      "is_video": null,
+      "video_id": null
     },
     {
       "rank": 63,
@@ -2825,7 +2949,9 @@
       "entity_name": "",
       "issues": [],
       "mood": "clinical",
-      "has_text_overlay": false
+      "has_text_overlay": false,
+      "is_video": null,
+      "video_id": null
     },
     {
       "rank": 64,
@@ -2874,7 +3000,9 @@
       "entity_name": "",
       "issues": [],
       "mood": "clinical",
-      "has_text_overlay": false
+      "has_text_overlay": false,
+      "is_video": null,
+      "video_id": null
     },
     {
       "rank": 65,
@@ -2923,7 +3051,9 @@
       "entity_name": "",
       "issues": [],
       "mood": "clinical",
-      "has_text_overlay": false
+      "has_text_overlay": false,
+      "is_video": null,
+      "video_id": null
     },
     {
       "rank": 66,
@@ -2972,7 +3102,9 @@
       "entity_name": "",
       "issues": [],
       "mood": "clinical",
-      "has_text_overlay": false
+      "has_text_overlay": false,
+      "is_video": null,
+      "video_id": null
     },
     {
       "rank": 67,
@@ -3021,7 +3153,9 @@
       "entity_name": "",
       "issues": [],
       "mood": "clinical",
-      "has_text_overlay": false
+      "has_text_overlay": false,
+      "is_video": null,
+      "video_id": null
     },
     {
       "rank": 68,
@@ -3064,7 +3198,9 @@
       "entity_name": "NAN_JUNW4_135B_var_003_2_English_Dec-28_quiz-25 2025-12-27-22f759f025e0b6786c5b4ef25b482a2b",
       "issues": [],
       "mood": "aspirational",
-      "has_text_overlay": true
+      "has_text_overlay": true,
+      "is_video": false,
+      "video_id": null
     },
     {
       "rank": 69,
@@ -3107,7 +3243,9 @@
       "entity_name": "",
       "issues": [],
       "mood": "authentic",
-      "has_text_overlay": false
+      "has_text_overlay": false,
+      "is_video": null,
+      "video_id": null
     },
     {
       "rank": 70,
@@ -3150,7 +3288,9 @@
       "entity_name": "",
       "issues": [],
       "mood": "authentic",
-      "has_text_overlay": false
+      "has_text_overlay": false,
+      "is_video": null,
+      "video_id": null
     },
     {
       "rank": 71,
@@ -3193,7 +3333,9 @@
       "entity_name": "",
       "issues": [],
       "mood": "authentic",
-      "has_text_overlay": false
+      "has_text_overlay": false,
+      "is_video": null,
+      "video_id": null
     },
     {
       "rank": 72,
@@ -3236,7 +3378,9 @@
       "entity_name": "",
       "issues": [],
       "mood": "authentic",
-      "has_text_overlay": false
+      "has_text_overlay": false,
+      "is_video": null,
+      "video_id": null
     },
     {
       "rank": 73,
@@ -3279,7 +3423,9 @@
       "entity_name": "",
       "issues": [],
       "mood": "authentic",
-      "has_text_overlay": false
+      "has_text_overlay": false,
+      "is_video": null,
+      "video_id": null
     },
     {
       "rank": 74,
@@ -3322,7 +3468,9 @@
       "entity_name": "",
       "issues": [],
       "mood": "authentic",
-      "has_text_overlay": false
+      "has_text_overlay": false,
+      "is_video": null,
+      "video_id": null
     },
     {
       "rank": 75,
@@ -3365,7 +3513,9 @@
       "entity_name": "",
       "issues": [],
       "mood": "authentic",
-      "has_text_overlay": false
+      "has_text_overlay": false,
+      "is_video": null,
+      "video_id": null
     },
     {
       "rank": 76,
@@ -3408,7 +3558,9 @@
       "entity_name": "",
       "issues": [],
       "mood": "authentic",
-      "has_text_overlay": false
+      "has_text_overlay": false,
+      "is_video": null,
+      "video_id": null
     },
     {
       "rank": 77,
@@ -3451,7 +3603,9 @@
       "entity_name": "",
       "issues": [],
       "mood": "authentic",
-      "has_text_overlay": false
+      "has_text_overlay": false,
+      "is_video": null,
+      "video_id": null
     },
     {
       "rank": 78,
@@ -3494,7 +3648,9 @@
       "entity_name": "",
       "issues": [],
       "mood": "authentic",
-      "has_text_overlay": false
+      "has_text_overlay": false,
+      "is_video": null,
+      "video_id": null
     },
     {
       "rank": 79,
@@ -3537,7 +3693,9 @@
       "entity_name": "",
       "issues": [],
       "mood": "authentic",
-      "has_text_overlay": false
+      "has_text_overlay": false,
+      "is_video": null,
+      "video_id": null
     },
     {
       "rank": 80,
@@ -3580,7 +3738,9 @@
       "entity_name": "",
       "issues": [],
       "mood": "authentic",
-      "has_text_overlay": false
+      "has_text_overlay": false,
+      "is_video": null,
+      "video_id": null
     },
     {
       "rank": 81,
@@ -3623,7 +3783,9 @@
       "entity_name": "",
       "issues": [],
       "mood": "authentic",
-      "has_text_overlay": false
+      "has_text_overlay": false,
+      "is_video": null,
+      "video_id": null
     },
     {
       "rank": 82,
@@ -3666,7 +3828,9 @@
       "entity_name": "",
       "issues": [],
       "mood": "authentic",
-      "has_text_overlay": false
+      "has_text_overlay": false,
+      "is_video": null,
+      "video_id": null
     },
     {
       "rank": 83,
@@ -3709,7 +3873,9 @@
       "entity_name": "",
       "issues": [],
       "mood": "authentic",
-      "has_text_overlay": false
+      "has_text_overlay": false,
+      "is_video": null,
+      "video_id": null
     },
     {
       "rank": 84,
@@ -3752,7 +3918,9 @@
       "entity_name": "",
       "issues": [],
       "mood": "authentic",
-      "has_text_overlay": false
+      "has_text_overlay": false,
+      "is_video": null,
+      "video_id": null
     },
     {
       "rank": 85,
@@ -3795,7 +3963,9 @@
       "entity_name": "",
       "issues": [],
       "mood": "authentic",
-      "has_text_overlay": false
+      "has_text_overlay": false,
+      "is_video": null,
+      "video_id": null
     },
     {
       "rank": 86,
@@ -3838,7 +4008,9 @@
       "entity_name": "",
       "issues": [],
       "mood": "authentic",
-      "has_text_overlay": false
+      "has_text_overlay": false,
+      "is_video": null,
+      "video_id": null
     },
     {
       "rank": 87,
@@ -3881,7 +4053,9 @@
       "entity_name": "",
       "issues": [],
       "mood": "authentic",
-      "has_text_overlay": false
+      "has_text_overlay": false,
+      "is_video": null,
+      "video_id": null
     },
     {
       "rank": 88,
@@ -3924,7 +4098,9 @@
       "entity_name": "",
       "issues": [],
       "mood": "authentic",
-      "has_text_overlay": false
+      "has_text_overlay": false,
+      "is_video": null,
+      "video_id": null
     },
     {
       "rank": 89,
@@ -3967,7 +4143,9 @@
       "entity_name": "",
       "issues": [],
       "mood": "authentic",
-      "has_text_overlay": false
+      "has_text_overlay": false,
+      "is_video": null,
+      "video_id": null
     },
     {
       "rank": 90,
@@ -4010,7 +4188,9 @@
       "entity_name": "",
       "issues": [],
       "mood": "authentic",
-      "has_text_overlay": false
+      "has_text_overlay": false,
+      "is_video": null,
+      "video_id": null
     },
     {
       "rank": 91,
@@ -4053,7 +4233,9 @@
       "entity_name": "",
       "issues": [],
       "mood": "authentic",
-      "has_text_overlay": false
+      "has_text_overlay": false,
+      "is_video": null,
+      "video_id": null
     },
     {
       "rank": 92,
@@ -4096,7 +4278,9 @@
       "entity_name": "",
       "issues": [],
       "mood": "authentic",
-      "has_text_overlay": false
+      "has_text_overlay": false,
+      "is_video": null,
+      "video_id": null
     },
     {
       "rank": 93,
@@ -4139,7 +4323,9 @@
       "entity_name": "",
       "issues": [],
       "mood": "authentic",
-      "has_text_overlay": false
+      "has_text_overlay": false,
+      "is_video": null,
+      "video_id": null
     },
     {
       "rank": 94,
@@ -4182,7 +4368,9 @@
       "entity_name": "",
       "issues": [],
       "mood": "authentic",
-      "has_text_overlay": false
+      "has_text_overlay": false,
+      "is_video": null,
+      "video_id": null
     },
     {
       "rank": 95,
@@ -4225,7 +4413,9 @@
       "entity_name": "",
       "issues": [],
       "mood": "authentic",
-      "has_text_overlay": false
+      "has_text_overlay": false,
+      "is_video": null,
+      "video_id": null
     },
     {
       "rank": 96,
@@ -4268,7 +4458,9 @@
       "entity_name": "",
       "issues": [],
       "mood": "authentic",
-      "has_text_overlay": false
+      "has_text_overlay": false,
+      "is_video": null,
+      "video_id": null
     },
     {
       "rank": 97,
@@ -4311,7 +4503,9 @@
       "entity_name": "",
       "issues": [],
       "mood": "authentic",
-      "has_text_overlay": false
+      "has_text_overlay": false,
+      "is_video": null,
+      "video_id": null
     },
     {
       "rank": 98,
@@ -4354,7 +4548,9 @@
       "entity_name": "",
       "issues": [],
       "mood": "authentic",
-      "has_text_overlay": false
+      "has_text_overlay": false,
+      "is_video": null,
+      "video_id": null
     },
     {
       "rank": 99,
@@ -4397,7 +4593,9 @@
       "entity_name": "",
       "issues": [],
       "mood": "authentic",
-      "has_text_overlay": false
+      "has_text_overlay": false,
+      "is_video": null,
+      "video_id": null
     },
     {
       "rank": 100,
@@ -4440,7 +4638,9 @@
       "entity_name": "",
       "issues": [],
       "mood": "authentic",
-      "has_text_overlay": false
+      "has_text_overlay": false,
+      "is_video": null,
+      "video_id": null
     },
     {
       "rank": 101,
@@ -4483,7 +4683,9 @@
       "entity_name": "",
       "issues": [],
       "mood": "authentic",
-      "has_text_overlay": false
+      "has_text_overlay": false,
+      "is_video": null,
+      "video_id": null
     },
     {
       "rank": 102,
@@ -4526,7 +4728,9 @@
       "entity_name": "",
       "issues": [],
       "mood": "authentic",
-      "has_text_overlay": false
+      "has_text_overlay": false,
+      "is_video": null,
+      "video_id": null
     },
     {
       "rank": 103,
@@ -4569,7 +4773,9 @@
       "entity_name": "",
       "issues": [],
       "mood": "authentic",
-      "has_text_overlay": false
+      "has_text_overlay": false,
+      "is_video": null,
+      "video_id": null
     },
     {
       "rank": 104,
@@ -4612,7 +4818,9 @@
       "entity_name": "",
       "issues": [],
       "mood": "authentic",
-      "has_text_overlay": false
+      "has_text_overlay": false,
+      "is_video": null,
+      "video_id": null
     },
     {
       "rank": 105,
@@ -4655,7 +4863,9 @@
       "entity_name": "",
       "issues": [],
       "mood": "authentic",
-      "has_text_overlay": false
+      "has_text_overlay": false,
+      "is_video": null,
+      "video_id": null
     },
     {
       "rank": 106,
@@ -4698,7 +4908,9 @@
       "entity_name": "",
       "issues": [],
       "mood": "authentic",
-      "has_text_overlay": false
+      "has_text_overlay": false,
+      "is_video": null,
+      "video_id": null
     },
     {
       "rank": 107,
@@ -4741,7 +4953,9 @@
       "entity_name": "",
       "issues": [],
       "mood": "authentic",
-      "has_text_overlay": false
+      "has_text_overlay": false,
+      "is_video": null,
+      "video_id": null
     },
     {
       "rank": 108,
@@ -4784,7 +4998,9 @@
       "entity_name": "",
       "issues": [],
       "mood": "authentic",
-      "has_text_overlay": false
+      "has_text_overlay": false,
+      "is_video": null,
+      "video_id": null
     },
     {
       "rank": 109,
@@ -4827,7 +5043,9 @@
       "entity_name": "",
       "issues": [],
       "mood": "authentic",
-      "has_text_overlay": false
+      "has_text_overlay": false,
+      "is_video": null,
+      "video_id": null
     },
     {
       "rank": 110,
@@ -4870,7 +5088,9 @@
       "entity_name": "",
       "issues": [],
       "mood": "authentic",
-      "has_text_overlay": false
+      "has_text_overlay": false,
+      "is_video": null,
+      "video_id": null
     },
     {
       "rank": 111,
@@ -4913,7 +5133,9 @@
       "entity_name": "",
       "issues": [],
       "mood": "authentic",
-      "has_text_overlay": false
+      "has_text_overlay": false,
+      "is_video": null,
+      "video_id": null
     },
     {
       "rank": 112,
@@ -4956,7 +5178,9 @@
       "entity_name": "",
       "issues": [],
       "mood": "authentic",
-      "has_text_overlay": false
+      "has_text_overlay": false,
+      "is_video": null,
+      "video_id": null
     },
     {
       "rank": 113,
@@ -4999,7 +5223,9 @@
       "entity_name": "",
       "issues": [],
       "mood": "authentic",
-      "has_text_overlay": false
+      "has_text_overlay": false,
+      "is_video": null,
+      "video_id": null
     },
     {
       "rank": 114,
@@ -5042,7 +5268,9 @@
       "entity_name": "",
       "issues": [],
       "mood": "authentic",
-      "has_text_overlay": false
+      "has_text_overlay": false,
+      "is_video": null,
+      "video_id": null
     },
     {
       "rank": 115,
@@ -5085,7 +5313,9 @@
       "entity_name": "",
       "issues": [],
       "mood": "authentic",
-      "has_text_overlay": false
+      "has_text_overlay": false,
+      "is_video": null,
+      "video_id": null
     },
     {
       "rank": 116,
@@ -5128,7 +5358,9 @@
       "entity_name": "",
       "issues": [],
       "mood": "authentic",
-      "has_text_overlay": false
+      "has_text_overlay": false,
+      "is_video": null,
+      "video_id": null
     },
     {
       "rank": 117,
@@ -5171,7 +5403,9 @@
       "entity_name": "",
       "issues": [],
       "mood": "authentic",
-      "has_text_overlay": false
+      "has_text_overlay": false,
+      "is_video": null,
+      "video_id": null
     },
     {
       "rank": 118,
@@ -5214,7 +5448,9 @@
       "entity_name": "",
       "issues": [],
       "mood": "authentic",
-      "has_text_overlay": false
+      "has_text_overlay": false,
+      "is_video": null,
+      "video_id": null
     },
     {
       "rank": 119,
@@ -5257,7 +5493,9 @@
       "entity_name": "",
       "issues": [],
       "mood": "authentic",
-      "has_text_overlay": false
+      "has_text_overlay": false,
+      "is_video": null,
+      "video_id": null
     },
     {
       "rank": 120,
@@ -5300,7 +5538,9 @@
       "entity_name": "",
       "issues": [],
       "mood": "authentic",
-      "has_text_overlay": false
+      "has_text_overlay": false,
+      "is_video": null,
+      "video_id": null
     },
     {
       "rank": 121,
@@ -5343,7 +5583,9 @@
       "entity_name": "",
       "issues": [],
       "mood": "authentic",
-      "has_text_overlay": false
+      "has_text_overlay": false,
+      "is_video": null,
+      "video_id": null
     },
     {
       "rank": 122,
@@ -5386,7 +5628,9 @@
       "entity_name": "",
       "issues": [],
       "mood": "authentic",
-      "has_text_overlay": false
+      "has_text_overlay": false,
+      "is_video": null,
+      "video_id": null
     },
     {
       "rank": 123,
@@ -5429,7 +5673,9 @@
       "entity_name": "",
       "issues": [],
       "mood": "authentic",
-      "has_text_overlay": false
+      "has_text_overlay": false,
+      "is_video": null,
+      "video_id": null
     },
     {
       "rank": 124,
@@ -5472,7 +5718,9 @@
       "entity_name": "",
       "issues": [],
       "mood": "authentic",
-      "has_text_overlay": false
+      "has_text_overlay": false,
+      "is_video": null,
+      "video_id": null
     },
     {
       "rank": 125,
@@ -5515,7 +5763,9 @@
       "entity_name": "",
       "issues": [],
       "mood": "authentic",
-      "has_text_overlay": false
+      "has_text_overlay": false,
+      "is_video": null,
+      "video_id": null
     },
     {
       "rank": 126,
@@ -5558,7 +5808,9 @@
       "entity_name": "",
       "issues": [],
       "mood": "authentic",
-      "has_text_overlay": false
+      "has_text_overlay": false,
+      "is_video": null,
+      "video_id": null
     },
     {
       "rank": 127,
@@ -5601,7 +5853,9 @@
       "entity_name": "",
       "issues": [],
       "mood": "authentic",
-      "has_text_overlay": false
+      "has_text_overlay": false,
+      "is_video": null,
+      "video_id": null
     },
     {
       "rank": 128,
@@ -5644,7 +5898,9 @@
       "entity_name": "",
       "issues": [],
       "mood": "authentic",
-      "has_text_overlay": false
+      "has_text_overlay": false,
+      "is_video": null,
+      "video_id": null
     },
     {
       "rank": 129,
@@ -5687,7 +5943,9 @@
       "entity_name": "",
       "issues": [],
       "mood": "authentic",
-      "has_text_overlay": false
+      "has_text_overlay": false,
+      "is_video": null,
+      "video_id": null
     },
     {
       "rank": 130,
@@ -5730,7 +5988,9 @@
       "entity_name": "",
       "issues": [],
       "mood": "authentic",
-      "has_text_overlay": false
+      "has_text_overlay": false,
+      "is_video": null,
+      "video_id": null
     },
     {
       "rank": 131,
@@ -5773,7 +6033,9 @@
       "entity_name": "",
       "issues": [],
       "mood": "authentic",
-      "has_text_overlay": false
+      "has_text_overlay": false,
+      "is_video": null,
+      "video_id": null
     },
     {
       "rank": 132,
@@ -5816,7 +6078,9 @@
       "entity_name": "",
       "issues": [],
       "mood": "authentic",
-      "has_text_overlay": false
+      "has_text_overlay": false,
+      "is_video": null,
+      "video_id": null
     },
     {
       "rank": 133,
@@ -5859,7 +6123,9 @@
       "entity_name": "",
       "issues": [],
       "mood": "authentic",
-      "has_text_overlay": false
+      "has_text_overlay": false,
+      "is_video": null,
+      "video_id": null
     },
     {
       "rank": 134,
@@ -5902,7 +6168,9 @@
       "entity_name": "",
       "issues": [],
       "mood": "authentic",
-      "has_text_overlay": false
+      "has_text_overlay": false,
+      "is_video": null,
+      "video_id": null
     },
     {
       "rank": 135,
@@ -5945,7 +6213,9 @@
       "entity_name": "",
       "issues": [],
       "mood": "authentic",
-      "has_text_overlay": false
+      "has_text_overlay": false,
+      "is_video": null,
+      "video_id": null
     },
     {
       "rank": 136,
@@ -5988,7 +6258,9 @@
       "entity_name": "",
       "issues": [],
       "mood": "authentic",
-      "has_text_overlay": false
+      "has_text_overlay": false,
+      "is_video": null,
+      "video_id": null
     },
     {
       "rank": 137,
@@ -6031,7 +6303,9 @@
       "entity_name": "",
       "issues": [],
       "mood": "authentic",
-      "has_text_overlay": false
+      "has_text_overlay": false,
+      "is_video": null,
+      "video_id": null
     },
     {
       "rank": 138,
@@ -6074,7 +6348,9 @@
       "entity_name": "",
       "issues": [],
       "mood": "authentic",
-      "has_text_overlay": false
+      "has_text_overlay": false,
+      "is_video": null,
+      "video_id": null
     },
     {
       "rank": 139,
@@ -6117,7 +6393,9 @@
       "entity_name": "",
       "issues": [],
       "mood": "authentic",
-      "has_text_overlay": false
+      "has_text_overlay": false,
+      "is_video": null,
+      "video_id": null
     },
     {
       "rank": 140,
@@ -6160,7 +6438,9 @@
       "entity_name": "",
       "issues": [],
       "mood": "authentic",
-      "has_text_overlay": false
+      "has_text_overlay": false,
+      "is_video": null,
+      "video_id": null
     },
     {
       "rank": 141,
@@ -6203,7 +6483,9 @@
       "entity_name": "",
       "issues": [],
       "mood": "authentic",
-      "has_text_overlay": false
+      "has_text_overlay": false,
+      "is_video": null,
+      "video_id": null
     },
     {
       "rank": 142,
@@ -6246,7 +6528,9 @@
       "entity_name": "",
       "issues": [],
       "mood": "authentic",
-      "has_text_overlay": false
+      "has_text_overlay": false,
+      "is_video": null,
+      "video_id": null
     },
     {
       "rank": 143,
@@ -6289,7 +6573,9 @@
       "entity_name": "",
       "issues": [],
       "mood": "authentic",
-      "has_text_overlay": false
+      "has_text_overlay": false,
+      "is_video": null,
+      "video_id": null
     },
     {
       "rank": 144,
@@ -6332,7 +6618,9 @@
       "entity_name": "",
       "issues": [],
       "mood": "authentic",
-      "has_text_overlay": false
+      "has_text_overlay": false,
+      "is_video": null,
+      "video_id": null
     },
     {
       "rank": 145,
@@ -6375,7 +6663,9 @@
       "entity_name": "",
       "issues": [],
       "mood": "authentic",
-      "has_text_overlay": false
+      "has_text_overlay": false,
+      "is_video": null,
+      "video_id": null
     },
     {
       "rank": 146,
@@ -6418,7 +6708,9 @@
       "entity_name": "",
       "issues": [],
       "mood": "authentic",
-      "has_text_overlay": false
+      "has_text_overlay": false,
+      "is_video": null,
+      "video_id": null
     },
     {
       "rank": 147,
@@ -6461,7 +6753,9 @@
       "entity_name": "",
       "issues": [],
       "mood": "authentic",
-      "has_text_overlay": false
+      "has_text_overlay": false,
+      "is_video": null,
+      "video_id": null
     },
     {
       "rank": 148,
@@ -6504,7 +6798,9 @@
       "entity_name": "",
       "issues": [],
       "mood": "authentic",
-      "has_text_overlay": false
+      "has_text_overlay": false,
+      "is_video": null,
+      "video_id": null
     },
     {
       "rank": 149,
@@ -6547,7 +6843,9 @@
       "entity_name": "",
       "issues": [],
       "mood": "authentic",
-      "has_text_overlay": false
+      "has_text_overlay": false,
+      "is_video": null,
+      "video_id": null
     },
     {
       "rank": 150,
@@ -6590,7 +6888,9 @@
       "entity_name": "",
       "issues": [],
       "mood": "authentic",
-      "has_text_overlay": false
+      "has_text_overlay": false,
+      "is_video": null,
+      "video_id": null
     },
     {
       "rank": 151,
@@ -6633,7 +6933,9 @@
       "entity_name": "",
       "issues": [],
       "mood": "authentic",
-      "has_text_overlay": false
+      "has_text_overlay": false,
+      "is_video": null,
+      "video_id": null
     },
     {
       "rank": 152,
@@ -6676,7 +6978,9 @@
       "entity_name": "",
       "issues": [],
       "mood": "authentic",
-      "has_text_overlay": false
+      "has_text_overlay": false,
+      "is_video": null,
+      "video_id": null
     },
     {
       "rank": 153,
@@ -6719,7 +7023,9 @@
       "entity_name": "",
       "issues": [],
       "mood": "authentic",
-      "has_text_overlay": false
+      "has_text_overlay": false,
+      "is_video": null,
+      "video_id": null
     },
     {
       "rank": 154,
@@ -6762,7 +7068,9 @@
       "entity_name": "",
       "issues": [],
       "mood": "authentic",
-      "has_text_overlay": false
+      "has_text_overlay": false,
+      "is_video": null,
+      "video_id": null
     },
     {
       "rank": 155,
@@ -6805,7 +7113,9 @@
       "entity_name": "",
       "issues": [],
       "mood": "authentic",
-      "has_text_overlay": false
+      "has_text_overlay": false,
+      "is_video": null,
+      "video_id": null
     },
     {
       "rank": 156,
@@ -6848,7 +7158,9 @@
       "entity_name": "",
       "issues": [],
       "mood": "authentic",
-      "has_text_overlay": false
+      "has_text_overlay": false,
+      "is_video": null,
+      "video_id": null
     },
     {
       "rank": 157,
@@ -6891,7 +7203,9 @@
       "entity_name": "",
       "issues": [],
       "mood": "authentic",
-      "has_text_overlay": false
+      "has_text_overlay": false,
+      "is_video": null,
+      "video_id": null
     },
     {
       "rank": 158,
@@ -6934,7 +7248,9 @@
       "entity_name": "",
       "issues": [],
       "mood": "authentic",
-      "has_text_overlay": false
+      "has_text_overlay": false,
+      "is_video": null,
+      "video_id": null
     },
     {
       "rank": 159,
@@ -6977,7 +7293,9 @@
       "entity_name": "",
       "issues": [],
       "mood": "authentic",
-      "has_text_overlay": false
+      "has_text_overlay": false,
+      "is_video": null,
+      "video_id": null
     },
     {
       "rank": 160,
@@ -7020,7 +7338,9 @@
       "entity_name": "",
       "issues": [],
       "mood": "authentic",
-      "has_text_overlay": false
+      "has_text_overlay": false,
+      "is_video": null,
+      "video_id": null
     },
     {
       "rank": 161,
@@ -7063,7 +7383,9 @@
       "entity_name": "",
       "issues": [],
       "mood": "authentic",
-      "has_text_overlay": false
+      "has_text_overlay": false,
+      "is_video": null,
+      "video_id": null
     },
     {
       "rank": 162,
@@ -7106,7 +7428,9 @@
       "entity_name": "",
       "issues": [],
       "mood": "authentic",
-      "has_text_overlay": false
+      "has_text_overlay": false,
+      "is_video": null,
+      "video_id": null
     },
     {
       "rank": 163,
@@ -7149,7 +7473,9 @@
       "entity_name": "",
       "issues": [],
       "mood": "authentic",
-      "has_text_overlay": false
+      "has_text_overlay": false,
+      "is_video": null,
+      "video_id": null
     },
     {
       "rank": 164,
@@ -7192,7 +7518,9 @@
       "entity_name": "",
       "issues": [],
       "mood": "authentic",
-      "has_text_overlay": false
+      "has_text_overlay": false,
+      "is_video": null,
+      "video_id": null
     },
     {
       "rank": 165,
@@ -7235,7 +7563,9 @@
       "entity_name": "",
       "issues": [],
       "mood": "authentic",
-      "has_text_overlay": false
+      "has_text_overlay": false,
+      "is_video": null,
+      "video_id": null
     },
     {
       "rank": 166,
@@ -7278,7 +7608,9 @@
       "entity_name": "",
       "issues": [],
       "mood": "authentic",
-      "has_text_overlay": false
+      "has_text_overlay": false,
+      "is_video": null,
+      "video_id": null
     },
     {
       "rank": 167,
@@ -7321,7 +7653,9 @@
       "entity_name": "",
       "issues": [],
       "mood": "authentic",
-      "has_text_overlay": false
+      "has_text_overlay": false,
+      "is_video": null,
+      "video_id": null
     },
     {
       "rank": 168,
@@ -7364,7 +7698,9 @@
       "entity_name": "",
       "issues": [],
       "mood": "authentic",
-      "has_text_overlay": false
+      "has_text_overlay": false,
+      "is_video": null,
+      "video_id": null
     },
     {
       "rank": 169,
@@ -7407,7 +7743,9 @@
       "entity_name": "",
       "issues": [],
       "mood": "authentic",
-      "has_text_overlay": false
+      "has_text_overlay": false,
+      "is_video": null,
+      "video_id": null
     },
     {
       "rank": 170,
@@ -7450,7 +7788,9 @@
       "entity_name": "",
       "issues": [],
       "mood": "authentic",
-      "has_text_overlay": false
+      "has_text_overlay": false,
+      "is_video": null,
+      "video_id": null
     },
     {
       "rank": 171,
@@ -7493,7 +7833,9 @@
       "entity_name": "",
       "issues": [],
       "mood": "authentic",
-      "has_text_overlay": false
+      "has_text_overlay": false,
+      "is_video": null,
+      "video_id": null
     },
     {
       "rank": 172,
@@ -7536,7 +7878,9 @@
       "entity_name": "",
       "issues": [],
       "mood": "authentic",
-      "has_text_overlay": false
+      "has_text_overlay": false,
+      "is_video": null,
+      "video_id": null
     },
     {
       "rank": 173,
@@ -7579,7 +7923,9 @@
       "entity_name": "",
       "issues": [],
       "mood": "authentic",
-      "has_text_overlay": false
+      "has_text_overlay": false,
+      "is_video": null,
+      "video_id": null
     },
     {
       "rank": 174,
@@ -7622,7 +7968,9 @@
       "entity_name": "",
       "issues": [],
       "mood": "authentic",
-      "has_text_overlay": false
+      "has_text_overlay": false,
+      "is_video": null,
+      "video_id": null
     },
     {
       "rank": 175,
@@ -7665,7 +8013,9 @@
       "entity_name": "",
       "issues": [],
       "mood": "authentic",
-      "has_text_overlay": false
+      "has_text_overlay": false,
+      "is_video": null,
+      "video_id": null
     },
     {
       "rank": 176,
@@ -7708,7 +8058,9 @@
       "entity_name": "",
       "issues": [],
       "mood": "authentic",
-      "has_text_overlay": false
+      "has_text_overlay": false,
+      "is_video": null,
+      "video_id": null
     },
     {
       "rank": 177,
@@ -7751,7 +8103,9 @@
       "entity_name": "",
       "issues": [],
       "mood": "authentic",
-      "has_text_overlay": false
+      "has_text_overlay": false,
+      "is_video": null,
+      "video_id": null
     },
     {
       "rank": 178,
@@ -7794,7 +8148,9 @@
       "entity_name": "",
       "issues": [],
       "mood": "authentic",
-      "has_text_overlay": false
+      "has_text_overlay": false,
+      "is_video": null,
+      "video_id": null
     },
     {
       "rank": 179,
@@ -7837,7 +8193,9 @@
       "entity_name": "",
       "issues": [],
       "mood": "authentic",
-      "has_text_overlay": false
+      "has_text_overlay": false,
+      "is_video": null,
+      "video_id": null
     },
     {
       "rank": 180,
@@ -7880,7 +8238,9 @@
       "entity_name": "",
       "issues": [],
       "mood": "authentic",
-      "has_text_overlay": false
+      "has_text_overlay": false,
+      "is_video": null,
+      "video_id": null
     },
     {
       "rank": 181,
@@ -7923,7 +8283,9 @@
       "entity_name": "",
       "issues": [],
       "mood": "authentic",
-      "has_text_overlay": false
+      "has_text_overlay": false,
+      "is_video": null,
+      "video_id": null
     },
     {
       "rank": 182,
@@ -7966,7 +8328,9 @@
       "entity_name": "",
       "issues": [],
       "mood": "authentic",
-      "has_text_overlay": false
+      "has_text_overlay": false,
+      "is_video": null,
+      "video_id": null
     },
     {
       "rank": 183,
@@ -8009,7 +8373,9 @@
       "entity_name": "",
       "issues": [],
       "mood": "authentic",
-      "has_text_overlay": false
+      "has_text_overlay": false,
+      "is_video": null,
+      "video_id": null
     },
     {
       "rank": 184,
@@ -8052,7 +8418,9 @@
       "entity_name": "",
       "issues": [],
       "mood": "authentic",
-      "has_text_overlay": false
+      "has_text_overlay": false,
+      "is_video": null,
+      "video_id": null
     },
     {
       "rank": 185,
@@ -8095,7 +8463,9 @@
       "entity_name": "",
       "issues": [],
       "mood": "authentic",
-      "has_text_overlay": false
+      "has_text_overlay": false,
+      "is_video": null,
+      "video_id": null
     },
     {
       "rank": 186,
@@ -8138,7 +8508,9 @@
       "entity_name": "",
       "issues": [],
       "mood": "authentic",
-      "has_text_overlay": false
+      "has_text_overlay": false,
+      "is_video": null,
+      "video_id": null
     },
     {
       "rank": 187,
@@ -8181,7 +8553,9 @@
       "entity_name": "",
       "issues": [],
       "mood": "authentic",
-      "has_text_overlay": false
+      "has_text_overlay": false,
+      "is_video": null,
+      "video_id": null
     },
     {
       "rank": 188,
@@ -8224,7 +8598,9 @@
       "entity_name": "",
       "issues": [],
       "mood": "authentic",
-      "has_text_overlay": false
+      "has_text_overlay": false,
+      "is_video": null,
+      "video_id": null
     },
     {
       "rank": 189,
@@ -8267,7 +8643,9 @@
       "entity_name": "",
       "issues": [],
       "mood": "authentic",
-      "has_text_overlay": false
+      "has_text_overlay": false,
+      "is_video": null,
+      "video_id": null
     },
     {
       "rank": 190,
@@ -8310,7 +8688,9 @@
       "entity_name": "",
       "issues": [],
       "mood": "authentic",
-      "has_text_overlay": false
+      "has_text_overlay": false,
+      "is_video": null,
+      "video_id": null
     },
     {
       "rank": 191,
@@ -8353,7 +8733,9 @@
       "entity_name": "",
       "issues": [],
       "mood": "authentic",
-      "has_text_overlay": false
+      "has_text_overlay": false,
+      "is_video": null,
+      "video_id": null
     },
     {
       "rank": 192,
@@ -8396,7 +8778,9 @@
       "entity_name": "",
       "issues": [],
       "mood": "authentic",
-      "has_text_overlay": false
+      "has_text_overlay": false,
+      "is_video": null,
+      "video_id": null
     },
     {
       "rank": 193,
@@ -8439,7 +8823,9 @@
       "entity_name": "",
       "issues": [],
       "mood": "authentic",
-      "has_text_overlay": false
+      "has_text_overlay": false,
+      "is_video": null,
+      "video_id": null
     },
     {
       "rank": 194,
@@ -8482,7 +8868,9 @@
       "entity_name": "",
       "issues": [],
       "mood": "authentic",
-      "has_text_overlay": false
+      "has_text_overlay": false,
+      "is_video": null,
+      "video_id": null
     },
     {
       "rank": 195,
@@ -8525,7 +8913,9 @@
       "entity_name": "",
       "issues": [],
       "mood": "authentic",
-      "has_text_overlay": false
+      "has_text_overlay": false,
+      "is_video": null,
+      "video_id": null
     },
     {
       "rank": 196,
@@ -8568,7 +8958,9 @@
       "entity_name": "",
       "issues": [],
       "mood": "authentic",
-      "has_text_overlay": false
+      "has_text_overlay": false,
+      "is_video": null,
+      "video_id": null
     },
     {
       "rank": 197,
@@ -8611,7 +9003,9 @@
       "entity_name": "",
       "issues": [],
       "mood": "authentic",
-      "has_text_overlay": false
+      "has_text_overlay": false,
+      "is_video": null,
+      "video_id": null
     },
     {
       "rank": 198,
@@ -8654,7 +9048,9 @@
       "entity_name": "",
       "issues": [],
       "mood": "authentic",
-      "has_text_overlay": false
+      "has_text_overlay": false,
+      "is_video": null,
+      "video_id": null
     },
     {
       "rank": 199,
@@ -8697,7 +9093,9 @@
       "entity_name": "",
       "issues": [],
       "mood": "authentic",
-      "has_text_overlay": false
+      "has_text_overlay": false,
+      "is_video": null,
+      "video_id": null
     },
     {
       "rank": 200,
@@ -8740,7 +9138,9 @@
       "entity_name": "",
       "issues": [],
       "mood": "authentic",
-      "has_text_overlay": false
+      "has_text_overlay": false,
+      "is_video": null,
+      "video_id": null
     },
     {
       "rank": 201,
@@ -8783,7 +9183,9 @@
       "entity_name": "",
       "issues": [],
       "mood": "authentic",
-      "has_text_overlay": false
+      "has_text_overlay": false,
+      "is_video": null,
+      "video_id": null
     },
     {
       "rank": 202,
@@ -8826,7 +9228,9 @@
       "entity_name": "",
       "issues": [],
       "mood": "authentic",
-      "has_text_overlay": false
+      "has_text_overlay": false,
+      "is_video": null,
+      "video_id": null
     },
     {
       "rank": 203,
@@ -8869,7 +9273,9 @@
       "entity_name": "",
       "issues": [],
       "mood": "authentic",
-      "has_text_overlay": false
+      "has_text_overlay": false,
+      "is_video": null,
+      "video_id": null
     },
     {
       "rank": 204,
@@ -8912,7 +9318,9 @@
       "entity_name": "",
       "issues": [],
       "mood": "authentic",
-      "has_text_overlay": false
+      "has_text_overlay": false,
+      "is_video": null,
+      "video_id": null
     },
     {
       "rank": 205,
@@ -8955,7 +9363,9 @@
       "entity_name": "",
       "issues": [],
       "mood": "authentic",
-      "has_text_overlay": false
+      "has_text_overlay": false,
+      "is_video": null,
+      "video_id": null
     },
     {
       "rank": 206,
@@ -8998,7 +9408,9 @@
       "entity_name": "",
       "issues": [],
       "mood": "authentic",
-      "has_text_overlay": false
+      "has_text_overlay": false,
+      "is_video": null,
+      "video_id": null
     },
     {
       "rank": 207,
@@ -9041,7 +9453,9 @@
       "entity_name": "",
       "issues": [],
       "mood": "authentic",
-      "has_text_overlay": false
+      "has_text_overlay": false,
+      "is_video": null,
+      "video_id": null
     },
     {
       "rank": 208,
@@ -9084,7 +9498,9 @@
       "entity_name": "",
       "issues": [],
       "mood": "authentic",
-      "has_text_overlay": false
+      "has_text_overlay": false,
+      "is_video": null,
+      "video_id": null
     },
     {
       "rank": 209,
@@ -9127,7 +9543,9 @@
       "entity_name": "",
       "issues": [],
       "mood": "authentic",
-      "has_text_overlay": false
+      "has_text_overlay": false,
+      "is_video": null,
+      "video_id": null
     },
     {
       "rank": 210,
@@ -9170,7 +9588,9 @@
       "entity_name": "",
       "issues": [],
       "mood": "authentic",
-      "has_text_overlay": false
+      "has_text_overlay": false,
+      "is_video": null,
+      "video_id": null
     },
     {
       "rank": 211,
@@ -9213,7 +9633,9 @@
       "entity_name": "",
       "issues": [],
       "mood": "authentic",
-      "has_text_overlay": false
+      "has_text_overlay": false,
+      "is_video": null,
+      "video_id": null
     },
     {
       "rank": 212,
@@ -9256,7 +9678,9 @@
       "entity_name": "",
       "issues": [],
       "mood": "authentic",
-      "has_text_overlay": false
+      "has_text_overlay": false,
+      "is_video": null,
+      "video_id": null
     },
     {
       "rank": 213,
@@ -9299,7 +9723,9 @@
       "entity_name": "",
       "issues": [],
       "mood": "authentic",
-      "has_text_overlay": false
+      "has_text_overlay": false,
+      "is_video": null,
+      "video_id": null
     },
     {
       "rank": 214,
@@ -9342,7 +9768,9 @@
       "entity_name": "",
       "issues": [],
       "mood": "authentic",
-      "has_text_overlay": false
+      "has_text_overlay": false,
+      "is_video": null,
+      "video_id": null
     },
     {
       "rank": 215,
@@ -9385,7 +9813,9 @@
       "entity_name": "",
       "issues": [],
       "mood": "authentic",
-      "has_text_overlay": false
+      "has_text_overlay": false,
+      "is_video": null,
+      "video_id": null
     },
     {
       "rank": 216,
@@ -9428,7 +9858,9 @@
       "entity_name": "",
       "issues": [],
       "mood": "authentic",
-      "has_text_overlay": false
+      "has_text_overlay": false,
+      "is_video": null,
+      "video_id": null
     },
     {
       "rank": 217,
@@ -9471,7 +9903,9 @@
       "entity_name": "",
       "issues": [],
       "mood": "authentic",
-      "has_text_overlay": false
+      "has_text_overlay": false,
+      "is_video": null,
+      "video_id": null
     },
     {
       "rank": 218,
@@ -9514,7 +9948,9 @@
       "entity_name": "",
       "issues": [],
       "mood": "authentic",
-      "has_text_overlay": false
+      "has_text_overlay": false,
+      "is_video": null,
+      "video_id": null
     },
     {
       "rank": 219,
@@ -9557,7 +9993,9 @@
       "entity_name": "",
       "issues": [],
       "mood": "authentic",
-      "has_text_overlay": false
+      "has_text_overlay": false,
+      "is_video": null,
+      "video_id": null
     },
     {
       "rank": 220,
@@ -9600,7 +10038,9 @@
       "entity_name": "",
       "issues": [],
       "mood": "authentic",
-      "has_text_overlay": false
+      "has_text_overlay": false,
+      "is_video": null,
+      "video_id": null
     },
     {
       "rank": 221,
@@ -9643,7 +10083,9 @@
       "entity_name": "",
       "issues": [],
       "mood": "authentic",
-      "has_text_overlay": false
+      "has_text_overlay": false,
+      "is_video": null,
+      "video_id": null
     },
     {
       "rank": 222,
@@ -9686,7 +10128,9 @@
       "entity_name": "",
       "issues": [],
       "mood": "authentic",
-      "has_text_overlay": false
+      "has_text_overlay": false,
+      "is_video": null,
+      "video_id": null
     },
     {
       "rank": 223,
@@ -9729,7 +10173,9 @@
       "entity_name": "",
       "issues": [],
       "mood": "authentic",
-      "has_text_overlay": false
+      "has_text_overlay": false,
+      "is_video": null,
+      "video_id": null
     },
     {
       "rank": 224,
@@ -9772,7 +10218,9 @@
       "entity_name": "",
       "issues": [],
       "mood": "authentic",
-      "has_text_overlay": false
+      "has_text_overlay": false,
+      "is_video": null,
+      "video_id": null
     },
     {
       "rank": 225,
@@ -9815,7 +10263,9 @@
       "entity_name": "",
       "issues": [],
       "mood": "authentic",
-      "has_text_overlay": false
+      "has_text_overlay": false,
+      "is_video": null,
+      "video_id": null
     },
     {
       "rank": 226,
@@ -9858,7 +10308,9 @@
       "entity_name": "",
       "issues": [],
       "mood": "authentic",
-      "has_text_overlay": false
+      "has_text_overlay": false,
+      "is_video": null,
+      "video_id": null
     },
     {
       "rank": 227,
@@ -9901,7 +10353,9 @@
       "entity_name": "",
       "issues": [],
       "mood": "authentic",
-      "has_text_overlay": false
+      "has_text_overlay": false,
+      "is_video": null,
+      "video_id": null
     },
     {
       "rank": 228,
@@ -9944,7 +10398,9 @@
       "entity_name": "",
       "issues": [],
       "mood": "authentic",
-      "has_text_overlay": false
+      "has_text_overlay": false,
+      "is_video": null,
+      "video_id": null
     },
     {
       "rank": 229,
@@ -9987,7 +10443,9 @@
       "entity_name": "",
       "issues": [],
       "mood": "authentic",
-      "has_text_overlay": false
+      "has_text_overlay": false,
+      "is_video": null,
+      "video_id": null
     },
     {
       "rank": 230,
@@ -10030,7 +10488,9 @@
       "entity_name": "",
       "issues": [],
       "mood": "authentic",
-      "has_text_overlay": false
+      "has_text_overlay": false,
+      "is_video": null,
+      "video_id": null
     },
     {
       "rank": 231,
@@ -10073,7 +10533,9 @@
       "entity_name": "",
       "issues": [],
       "mood": "authentic",
-      "has_text_overlay": false
+      "has_text_overlay": false,
+      "is_video": null,
+      "video_id": null
     },
     {
       "rank": 232,
@@ -10116,7 +10578,9 @@
       "entity_name": "",
       "issues": [],
       "mood": "authentic",
-      "has_text_overlay": false
+      "has_text_overlay": false,
+      "is_video": null,
+      "video_id": null
     },
     {
       "rank": 233,
@@ -10159,7 +10623,9 @@
       "entity_name": "",
       "issues": [],
       "mood": "authentic",
-      "has_text_overlay": false
+      "has_text_overlay": false,
+      "is_video": null,
+      "video_id": null
     },
     {
       "rank": 234,
@@ -10202,7 +10668,9 @@
       "entity_name": "",
       "issues": [],
       "mood": "authentic",
-      "has_text_overlay": false
+      "has_text_overlay": false,
+      "is_video": null,
+      "video_id": null
     },
     {
       "rank": 235,
@@ -10245,7 +10713,9 @@
       "entity_name": "",
       "issues": [],
       "mood": "authentic",
-      "has_text_overlay": false
+      "has_text_overlay": false,
+      "is_video": null,
+      "video_id": null
     },
     {
       "rank": 236,
@@ -10288,7 +10758,9 @@
       "entity_name": "",
       "issues": [],
       "mood": "authentic",
-      "has_text_overlay": false
+      "has_text_overlay": false,
+      "is_video": null,
+      "video_id": null
     },
     {
       "rank": 237,
@@ -10331,7 +10803,9 @@
       "entity_name": "",
       "issues": [],
       "mood": "authentic",
-      "has_text_overlay": false
+      "has_text_overlay": false,
+      "is_video": null,
+      "video_id": null
     },
     {
       "rank": 238,
@@ -10374,7 +10848,9 @@
       "entity_name": "",
       "issues": [],
       "mood": "authentic",
-      "has_text_overlay": false
+      "has_text_overlay": false,
+      "is_video": null,
+      "video_id": null
     },
     {
       "rank": 239,
@@ -10417,7 +10893,9 @@
       "entity_name": "",
       "issues": [],
       "mood": "authentic",
-      "has_text_overlay": false
+      "has_text_overlay": false,
+      "is_video": null,
+      "video_id": null
     },
     {
       "rank": 240,
@@ -10460,7 +10938,9 @@
       "entity_name": "",
       "issues": [],
       "mood": "authentic",
-      "has_text_overlay": false
+      "has_text_overlay": false,
+      "is_video": null,
+      "video_id": null
     },
     {
       "rank": 241,
@@ -10503,7 +10983,9 @@
       "entity_name": "",
       "issues": [],
       "mood": "authentic",
-      "has_text_overlay": false
+      "has_text_overlay": false,
+      "is_video": null,
+      "video_id": null
     },
     {
       "rank": 242,
@@ -10546,7 +11028,9 @@
       "entity_name": "",
       "issues": [],
       "mood": "authentic",
-      "has_text_overlay": false
+      "has_text_overlay": false,
+      "is_video": null,
+      "video_id": null
     },
     {
       "rank": 243,
@@ -10589,7 +11073,9 @@
       "entity_name": "",
       "issues": [],
       "mood": "authentic",
-      "has_text_overlay": false
+      "has_text_overlay": false,
+      "is_video": null,
+      "video_id": null
     },
     {
       "rank": 244,
@@ -10632,7 +11118,9 @@
       "entity_name": "",
       "issues": [],
       "mood": "authentic",
-      "has_text_overlay": false
+      "has_text_overlay": false,
+      "is_video": null,
+      "video_id": null
     },
     {
       "rank": 245,
@@ -10675,7 +11163,9 @@
       "entity_name": "",
       "issues": [],
       "mood": "authentic",
-      "has_text_overlay": false
+      "has_text_overlay": false,
+      "is_video": null,
+      "video_id": null
     },
     {
       "rank": 246,
@@ -10718,7 +11208,9 @@
       "entity_name": "",
       "issues": [],
       "mood": "authentic",
-      "has_text_overlay": false
+      "has_text_overlay": false,
+      "is_video": null,
+      "video_id": null
     },
     {
       "rank": 247,
@@ -10761,7 +11253,9 @@
       "entity_name": "",
       "issues": [],
       "mood": "authentic",
-      "has_text_overlay": false
+      "has_text_overlay": false,
+      "is_video": null,
+      "video_id": null
     },
     {
       "rank": 248,
@@ -10804,7 +11298,9 @@
       "entity_name": "",
       "issues": [],
       "mood": "authentic",
-      "has_text_overlay": false
+      "has_text_overlay": false,
+      "is_video": null,
+      "video_id": null
     },
     {
       "rank": 249,
@@ -10847,7 +11343,9 @@
       "entity_name": "",
       "issues": [],
       "mood": "authentic",
-      "has_text_overlay": false
+      "has_text_overlay": false,
+      "is_video": null,
+      "video_id": null
     },
     {
       "rank": 250,
@@ -10890,7 +11388,9 @@
       "entity_name": "",
       "issues": [],
       "mood": "authentic",
-      "has_text_overlay": false
+      "has_text_overlay": false,
+      "is_video": null,
+      "video_id": null
     },
     {
       "rank": 251,
@@ -10933,7 +11433,9 @@
       "entity_name": "",
       "issues": [],
       "mood": "authentic",
-      "has_text_overlay": false
+      "has_text_overlay": false,
+      "is_video": null,
+      "video_id": null
     },
     {
       "rank": 252,
@@ -10976,7 +11478,9 @@
       "entity_name": "",
       "issues": [],
       "mood": "authentic",
-      "has_text_overlay": false
+      "has_text_overlay": false,
+      "is_video": null,
+      "video_id": null
     },
     {
       "rank": 253,
@@ -11019,7 +11523,9 @@
       "entity_name": "",
       "issues": [],
       "mood": "authentic",
-      "has_text_overlay": false
+      "has_text_overlay": false,
+      "is_video": null,
+      "video_id": null
     },
     {
       "rank": 254,
@@ -11062,7 +11568,9 @@
       "entity_name": "",
       "issues": [],
       "mood": "authentic",
-      "has_text_overlay": false
+      "has_text_overlay": false,
+      "is_video": null,
+      "video_id": null
     },
     {
       "rank": 255,
@@ -11105,7 +11613,9 @@
       "entity_name": "",
       "issues": [],
       "mood": "authentic",
-      "has_text_overlay": false
+      "has_text_overlay": false,
+      "is_video": null,
+      "video_id": null
     },
     {
       "rank": 256,
@@ -11148,7 +11658,9 @@
       "entity_name": "",
       "issues": [],
       "mood": "authentic",
-      "has_text_overlay": false
+      "has_text_overlay": false,
+      "is_video": null,
+      "video_id": null
     },
     {
       "rank": 257,
@@ -11191,7 +11703,9 @@
       "entity_name": "",
       "issues": [],
       "mood": "authentic",
-      "has_text_overlay": false
+      "has_text_overlay": false,
+      "is_video": null,
+      "video_id": null
     },
     {
       "rank": 258,
@@ -11234,7 +11748,9 @@
       "entity_name": "",
       "issues": [],
       "mood": "authentic",
-      "has_text_overlay": false
+      "has_text_overlay": false,
+      "is_video": null,
+      "video_id": null
     },
     {
       "rank": 259,
@@ -11277,7 +11793,9 @@
       "entity_name": "",
       "issues": [],
       "mood": "authentic",
-      "has_text_overlay": false
+      "has_text_overlay": false,
+      "is_video": null,
+      "video_id": null
     },
     {
       "rank": 260,
@@ -11320,7 +11838,9 @@
       "entity_name": "",
       "issues": [],
       "mood": "authentic",
-      "has_text_overlay": false
+      "has_text_overlay": false,
+      "is_video": null,
+      "video_id": null
     },
     {
       "rank": 261,
@@ -11363,7 +11883,9 @@
       "entity_name": "",
       "issues": [],
       "mood": "authentic",
-      "has_text_overlay": false
+      "has_text_overlay": false,
+      "is_video": null,
+      "video_id": null
     },
     {
       "rank": 262,
@@ -11406,7 +11928,9 @@
       "entity_name": "",
       "issues": [],
       "mood": "authentic",
-      "has_text_overlay": false
+      "has_text_overlay": false,
+      "is_video": null,
+      "video_id": null
     },
     {
       "rank": 263,
@@ -11449,7 +11973,9 @@
       "entity_name": "",
       "issues": [],
       "mood": "authentic",
-      "has_text_overlay": false
+      "has_text_overlay": false,
+      "is_video": null,
+      "video_id": null
     },
     {
       "rank": 264,
@@ -11492,7 +12018,9 @@
       "entity_name": "",
       "issues": [],
       "mood": "authentic",
-      "has_text_overlay": false
+      "has_text_overlay": false,
+      "is_video": null,
+      "video_id": null
     },
     {
       "rank": 265,
@@ -11535,7 +12063,9 @@
       "entity_name": "",
       "issues": [],
       "mood": "authentic",
-      "has_text_overlay": false
+      "has_text_overlay": false,
+      "is_video": null,
+      "video_id": null
     },
     {
       "rank": 266,
@@ -11578,7 +12108,9 @@
       "entity_name": "",
       "issues": [],
       "mood": "authentic",
-      "has_text_overlay": false
+      "has_text_overlay": false,
+      "is_video": null,
+      "video_id": null
     },
     {
       "rank": 267,
@@ -11621,7 +12153,9 @@
       "entity_name": "",
       "issues": [],
       "mood": "authentic",
-      "has_text_overlay": false
+      "has_text_overlay": false,
+      "is_video": null,
+      "video_id": null
     },
     {
       "rank": 268,
@@ -11664,7 +12198,9 @@
       "entity_name": "",
       "issues": [],
       "mood": "authentic",
-      "has_text_overlay": false
+      "has_text_overlay": false,
+      "is_video": null,
+      "video_id": null
     },
     {
       "rank": 269,
@@ -11707,7 +12243,9 @@
       "entity_name": "",
       "issues": [],
       "mood": "authentic",
-      "has_text_overlay": false
+      "has_text_overlay": false,
+      "is_video": null,
+      "video_id": null
     },
     {
       "rank": 270,
@@ -11750,7 +12288,9 @@
       "entity_name": "",
       "issues": [],
       "mood": "authentic",
-      "has_text_overlay": false
+      "has_text_overlay": false,
+      "is_video": null,
+      "video_id": null
     },
     {
       "rank": 271,
@@ -11793,7 +12333,9 @@
       "entity_name": "",
       "issues": [],
       "mood": "authentic",
-      "has_text_overlay": false
+      "has_text_overlay": false,
+      "is_video": null,
+      "video_id": null
     },
     {
       "rank": 272,
@@ -11836,7 +12378,9 @@
       "entity_name": "",
       "issues": [],
       "mood": "authentic",
-      "has_text_overlay": false
+      "has_text_overlay": false,
+      "is_video": null,
+      "video_id": null
     },
     {
       "rank": 273,
@@ -11879,7 +12423,9 @@
       "entity_name": "",
       "issues": [],
       "mood": "authentic",
-      "has_text_overlay": false
+      "has_text_overlay": false,
+      "is_video": null,
+      "video_id": null
     },
     {
       "rank": 274,
@@ -11922,7 +12468,9 @@
       "entity_name": "",
       "issues": [],
       "mood": "authentic",
-      "has_text_overlay": false
+      "has_text_overlay": false,
+      "is_video": null,
+      "video_id": null
     },
     {
       "rank": 275,
@@ -11965,7 +12513,9 @@
       "entity_name": "",
       "issues": [],
       "mood": "authentic",
-      "has_text_overlay": false
+      "has_text_overlay": false,
+      "is_video": null,
+      "video_id": null
     },
     {
       "rank": 276,
@@ -12008,7 +12558,9 @@
       "entity_name": "",
       "issues": [],
       "mood": "authentic",
-      "has_text_overlay": false
+      "has_text_overlay": false,
+      "is_video": null,
+      "video_id": null
     },
     {
       "rank": 277,
@@ -12051,7 +12603,9 @@
       "entity_name": "",
       "issues": [],
       "mood": "authentic",
-      "has_text_overlay": false
+      "has_text_overlay": false,
+      "is_video": null,
+      "video_id": null
     },
     {
       "rank": 278,
@@ -12094,7 +12648,9 @@
       "entity_name": "",
       "issues": [],
       "mood": "authentic",
-      "has_text_overlay": false
+      "has_text_overlay": false,
+      "is_video": null,
+      "video_id": null
     },
     {
       "rank": 279,
@@ -12137,7 +12693,9 @@
       "entity_name": "",
       "issues": [],
       "mood": "authentic",
-      "has_text_overlay": false
+      "has_text_overlay": false,
+      "is_video": null,
+      "video_id": null
     },
     {
       "rank": 280,
@@ -12180,7 +12738,9 @@
       "entity_name": "",
       "issues": [],
       "mood": "authentic",
-      "has_text_overlay": false
+      "has_text_overlay": false,
+      "is_video": null,
+      "video_id": null
     },
     {
       "rank": 281,
@@ -12223,7 +12783,9 @@
       "entity_name": "",
       "issues": [],
       "mood": "authentic",
-      "has_text_overlay": false
+      "has_text_overlay": false,
+      "is_video": null,
+      "video_id": null
     },
     {
       "rank": 282,
@@ -12266,7 +12828,9 @@
       "entity_name": "",
       "issues": [],
       "mood": "authentic",
-      "has_text_overlay": false
+      "has_text_overlay": false,
+      "is_video": null,
+      "video_id": null
     },
     {
       "rank": 283,
@@ -12309,7 +12873,9 @@
       "entity_name": "",
       "issues": [],
       "mood": "authentic",
-      "has_text_overlay": false
+      "has_text_overlay": false,
+      "is_video": null,
+      "video_id": null
     },
     {
       "rank": 284,
@@ -12352,7 +12918,9 @@
       "entity_name": "",
       "issues": [],
       "mood": "authentic",
-      "has_text_overlay": false
+      "has_text_overlay": false,
+      "is_video": null,
+      "video_id": null
     },
     {
       "rank": 285,
@@ -12395,7 +12963,9 @@
       "entity_name": "",
       "issues": [],
       "mood": "authentic",
-      "has_text_overlay": false
+      "has_text_overlay": false,
+      "is_video": null,
+      "video_id": null
     },
     {
       "rank": 286,
@@ -12438,7 +13008,9 @@
       "entity_name": "",
       "issues": [],
       "mood": "authentic",
-      "has_text_overlay": false
+      "has_text_overlay": false,
+      "is_video": null,
+      "video_id": null
     },
     {
       "rank": 287,
@@ -12481,7 +13053,9 @@
       "entity_name": "",
       "issues": [],
       "mood": "authentic",
-      "has_text_overlay": false
+      "has_text_overlay": false,
+      "is_video": null,
+      "video_id": null
     },
     {
       "rank": 288,
@@ -12524,7 +13098,9 @@
       "entity_name": "",
       "issues": [],
       "mood": "authentic",
-      "has_text_overlay": false
+      "has_text_overlay": false,
+      "is_video": null,
+      "video_id": null
     },
     {
       "rank": 289,
@@ -12567,7 +13143,9 @@
       "entity_name": "",
       "issues": [],
       "mood": "authentic",
-      "has_text_overlay": false
+      "has_text_overlay": false,
+      "is_video": null,
+      "video_id": null
     },
     {
       "rank": 290,
@@ -12610,7 +13188,9 @@
       "entity_name": "",
       "issues": [],
       "mood": "authentic",
-      "has_text_overlay": false
+      "has_text_overlay": false,
+      "is_video": null,
+      "video_id": null
     },
     {
       "rank": 291,
@@ -12653,7 +13233,9 @@
       "entity_name": "",
       "issues": [],
       "mood": "authentic",
-      "has_text_overlay": false
+      "has_text_overlay": false,
+      "is_video": null,
+      "video_id": null
     },
     {
       "rank": 292,
@@ -12696,7 +13278,9 @@
       "entity_name": "",
       "issues": [],
       "mood": "authentic",
-      "has_text_overlay": false
+      "has_text_overlay": false,
+      "is_video": null,
+      "video_id": null
     },
     {
       "rank": 293,
@@ -12739,7 +13323,9 @@
       "entity_name": "",
       "issues": [],
       "mood": "authentic",
-      "has_text_overlay": false
+      "has_text_overlay": false,
+      "is_video": null,
+      "video_id": null
     },
     {
       "rank": 294,
@@ -12782,7 +13368,9 @@
       "entity_name": "",
       "issues": [],
       "mood": "authentic",
-      "has_text_overlay": false
+      "has_text_overlay": false,
+      "is_video": null,
+      "video_id": null
     },
     {
       "rank": 295,
@@ -12825,7 +13413,9 @@
       "entity_name": "",
       "issues": [],
       "mood": "authentic",
-      "has_text_overlay": false
+      "has_text_overlay": false,
+      "is_video": null,
+      "video_id": null
     },
     {
       "rank": 296,
@@ -12868,7 +13458,9 @@
       "entity_name": "",
       "issues": [],
       "mood": "authentic",
-      "has_text_overlay": false
+      "has_text_overlay": false,
+      "is_video": null,
+      "video_id": null
     },
     {
       "rank": 297,
@@ -12911,7 +13503,9 @@
       "entity_name": "",
       "issues": [],
       "mood": "authentic",
-      "has_text_overlay": false
+      "has_text_overlay": false,
+      "is_video": null,
+      "video_id": null
     },
     {
       "rank": 298,
@@ -12954,7 +13548,9 @@
       "entity_name": "",
       "issues": [],
       "mood": "authentic",
-      "has_text_overlay": false
+      "has_text_overlay": false,
+      "is_video": null,
+      "video_id": null
     },
     {
       "rank": 299,
@@ -12997,7 +13593,9 @@
       "entity_name": "",
       "issues": [],
       "mood": "authentic",
-      "has_text_overlay": false
+      "has_text_overlay": false,
+      "is_video": null,
+      "video_id": null
     },
     {
       "rank": 300,
@@ -13040,7 +13638,9 @@
       "entity_name": "",
       "issues": [],
       "mood": "authentic",
-      "has_text_overlay": false
+      "has_text_overlay": false,
+      "is_video": null,
+      "video_id": null
     },
     {
       "rank": 301,
@@ -13083,7 +13683,9 @@
       "entity_name": "",
       "issues": [],
       "mood": "authentic",
-      "has_text_overlay": false
+      "has_text_overlay": false,
+      "is_video": null,
+      "video_id": null
     },
     {
       "rank": 302,
@@ -13126,7 +13728,9 @@
       "entity_name": "",
       "issues": [],
       "mood": "authentic",
-      "has_text_overlay": false
+      "has_text_overlay": false,
+      "is_video": null,
+      "video_id": null
     },
     {
       "rank": 303,
@@ -13169,7 +13773,9 @@
       "entity_name": "",
       "issues": [],
       "mood": "authentic",
-      "has_text_overlay": false
+      "has_text_overlay": false,
+      "is_video": null,
+      "video_id": null
     },
     {
       "rank": 304,
@@ -13212,7 +13818,9 @@
       "entity_name": "",
       "issues": [],
       "mood": "authentic",
-      "has_text_overlay": false
+      "has_text_overlay": false,
+      "is_video": null,
+      "video_id": null
     },
     {
       "rank": 305,
@@ -13255,7 +13863,9 @@
       "entity_name": "",
       "issues": [],
       "mood": "authentic",
-      "has_text_overlay": false
+      "has_text_overlay": false,
+      "is_video": null,
+      "video_id": null
     },
     {
       "rank": 306,
@@ -13298,7 +13908,9 @@
       "entity_name": "",
       "issues": [],
       "mood": "authentic",
-      "has_text_overlay": false
+      "has_text_overlay": false,
+      "is_video": null,
+      "video_id": null
     },
     {
       "rank": 307,
@@ -13341,7 +13953,9 @@
       "entity_name": "",
       "issues": [],
       "mood": "authentic",
-      "has_text_overlay": false
+      "has_text_overlay": false,
+      "is_video": null,
+      "video_id": null
     },
     {
       "rank": 308,
@@ -13384,7 +13998,9 @@
       "entity_name": "",
       "issues": [],
       "mood": "authentic",
-      "has_text_overlay": false
+      "has_text_overlay": false,
+      "is_video": null,
+      "video_id": null
     },
     {
       "rank": 309,
@@ -13427,7 +14043,9 @@
       "entity_name": "",
       "issues": [],
       "mood": "authentic",
-      "has_text_overlay": false
+      "has_text_overlay": false,
+      "is_video": null,
+      "video_id": null
     },
     {
       "rank": 310,
@@ -13470,7 +14088,9 @@
       "entity_name": "",
       "issues": [],
       "mood": "authentic",
-      "has_text_overlay": false
+      "has_text_overlay": false,
+      "is_video": null,
+      "video_id": null
     },
     {
       "rank": 311,
@@ -13513,7 +14133,9 @@
       "entity_name": "",
       "issues": [],
       "mood": "authentic",
-      "has_text_overlay": false
+      "has_text_overlay": false,
+      "is_video": null,
+      "video_id": null
     },
     {
       "rank": 312,
@@ -13556,7 +14178,9 @@
       "entity_name": "",
       "issues": [],
       "mood": "authentic",
-      "has_text_overlay": false
+      "has_text_overlay": false,
+      "is_video": null,
+      "video_id": null
     },
     {
       "rank": 313,
@@ -13599,7 +14223,9 @@
       "entity_name": "",
       "issues": [],
       "mood": "authentic",
-      "has_text_overlay": false
+      "has_text_overlay": false,
+      "is_video": null,
+      "video_id": null
     },
     {
       "rank": 314,
@@ -13642,7 +14268,9 @@
       "entity_name": "",
       "issues": [],
       "mood": "authentic",
-      "has_text_overlay": false
+      "has_text_overlay": false,
+      "is_video": null,
+      "video_id": null
     },
     {
       "rank": 315,
@@ -13685,7 +14313,9 @@
       "entity_name": "",
       "issues": [],
       "mood": "authentic",
-      "has_text_overlay": false
+      "has_text_overlay": false,
+      "is_video": null,
+      "video_id": null
     },
     {
       "rank": 316,
@@ -13728,7 +14358,9 @@
       "entity_name": "",
       "issues": [],
       "mood": "authentic",
-      "has_text_overlay": false
+      "has_text_overlay": false,
+      "is_video": null,
+      "video_id": null
     },
     {
       "rank": 317,
@@ -13771,7 +14403,9 @@
       "entity_name": "",
       "issues": [],
       "mood": "authentic",
-      "has_text_overlay": false
+      "has_text_overlay": false,
+      "is_video": null,
+      "video_id": null
     },
     {
       "rank": 318,
@@ -13814,7 +14448,9 @@
       "entity_name": "",
       "issues": [],
       "mood": "authentic",
-      "has_text_overlay": false
+      "has_text_overlay": false,
+      "is_video": null,
+      "video_id": null
     },
     {
       "rank": 319,
@@ -13857,7 +14493,9 @@
       "entity_name": "",
       "issues": [],
       "mood": "authentic",
-      "has_text_overlay": false
+      "has_text_overlay": false,
+      "is_video": null,
+      "video_id": null
     },
     {
       "rank": 320,
@@ -13900,7 +14538,9 @@
       "entity_name": "",
       "issues": [],
       "mood": "authentic",
-      "has_text_overlay": false
+      "has_text_overlay": false,
+      "is_video": null,
+      "video_id": null
     },
     {
       "rank": 321,
@@ -13943,7 +14583,9 @@
       "entity_name": "",
       "issues": [],
       "mood": "authentic",
-      "has_text_overlay": false
+      "has_text_overlay": false,
+      "is_video": null,
+      "video_id": null
     },
     {
       "rank": 322,
@@ -13986,7 +14628,9 @@
       "entity_name": "",
       "issues": [],
       "mood": "authentic",
-      "has_text_overlay": false
+      "has_text_overlay": false,
+      "is_video": null,
+      "video_id": null
     },
     {
       "rank": 323,
@@ -14029,7 +14673,9 @@
       "entity_name": "",
       "issues": [],
       "mood": "authentic",
-      "has_text_overlay": false
+      "has_text_overlay": false,
+      "is_video": null,
+      "video_id": null
     },
     {
       "rank": 324,
@@ -14072,7 +14718,9 @@
       "entity_name": "",
       "issues": [],
       "mood": "authentic",
-      "has_text_overlay": false
+      "has_text_overlay": false,
+      "is_video": null,
+      "video_id": null
     },
     {
       "rank": 325,
@@ -14115,7 +14763,9 @@
       "entity_name": "",
       "issues": [],
       "mood": "authentic",
-      "has_text_overlay": false
+      "has_text_overlay": false,
+      "is_video": null,
+      "video_id": null
     },
     {
       "rank": 326,
@@ -14158,7 +14808,9 @@
       "entity_name": "",
       "issues": [],
       "mood": "authentic",
-      "has_text_overlay": false
+      "has_text_overlay": false,
+      "is_video": null,
+      "video_id": null
     },
     {
       "rank": 327,
@@ -14201,7 +14853,9 @@
       "entity_name": "",
       "issues": [],
       "mood": "authentic",
-      "has_text_overlay": false
+      "has_text_overlay": false,
+      "is_video": null,
+      "video_id": null
     },
     {
       "rank": 328,
@@ -14244,7 +14898,9 @@
       "entity_name": "",
       "issues": [],
       "mood": "authentic",
-      "has_text_overlay": false
+      "has_text_overlay": false,
+      "is_video": null,
+      "video_id": null
     },
     {
       "rank": 329,
@@ -14287,7 +14943,9 @@
       "entity_name": "",
       "issues": [],
       "mood": "authentic",
-      "has_text_overlay": false
+      "has_text_overlay": false,
+      "is_video": null,
+      "video_id": null
     },
     {
       "rank": 330,
@@ -14330,7 +14988,9 @@
       "entity_name": "",
       "issues": [],
       "mood": "authentic",
-      "has_text_overlay": false
+      "has_text_overlay": false,
+      "is_video": null,
+      "video_id": null
     },
     {
       "rank": 331,
@@ -14373,7 +15033,9 @@
       "entity_name": "",
       "issues": [],
       "mood": "authentic",
-      "has_text_overlay": false
+      "has_text_overlay": false,
+      "is_video": null,
+      "video_id": null
     },
     {
       "rank": 332,
@@ -14416,7 +15078,9 @@
       "entity_name": "",
       "issues": [],
       "mood": "authentic",
-      "has_text_overlay": false
+      "has_text_overlay": false,
+      "is_video": null,
+      "video_id": null
     },
     {
       "rank": 333,
@@ -14459,7 +15123,9 @@
       "entity_name": "",
       "issues": [],
       "mood": "authentic",
-      "has_text_overlay": false
+      "has_text_overlay": false,
+      "is_video": null,
+      "video_id": null
     },
     {
       "rank": 334,
@@ -14502,7 +15168,9 @@
       "entity_name": "",
       "issues": [],
       "mood": "authentic",
-      "has_text_overlay": false
+      "has_text_overlay": false,
+      "is_video": null,
+      "video_id": null
     },
     {
       "rank": 335,
@@ -14545,7 +15213,9 @@
       "entity_name": "",
       "issues": [],
       "mood": "authentic",
-      "has_text_overlay": false
+      "has_text_overlay": false,
+      "is_video": null,
+      "video_id": null
     },
     {
       "rank": 336,
@@ -14588,7 +15258,9 @@
       "entity_name": "",
       "issues": [],
       "mood": "authentic",
-      "has_text_overlay": false
+      "has_text_overlay": false,
+      "is_video": null,
+      "video_id": null
     },
     {
       "rank": 337,
@@ -14631,7 +15303,9 @@
       "entity_name": "",
       "issues": [],
       "mood": "authentic",
-      "has_text_overlay": false
+      "has_text_overlay": false,
+      "is_video": null,
+      "video_id": null
     },
     {
       "rank": 338,
@@ -14674,7 +15348,9 @@
       "entity_name": "",
       "issues": [],
       "mood": "authentic",
-      "has_text_overlay": false
+      "has_text_overlay": false,
+      "is_video": null,
+      "video_id": null
     },
     {
       "rank": 339,
@@ -14717,7 +15393,9 @@
       "entity_name": "",
       "issues": [],
       "mood": "authentic",
-      "has_text_overlay": false
+      "has_text_overlay": false,
+      "is_video": null,
+      "video_id": null
     },
     {
       "rank": 340,
@@ -14760,7 +15438,9 @@
       "entity_name": "",
       "issues": [],
       "mood": "authentic",
-      "has_text_overlay": false
+      "has_text_overlay": false,
+      "is_video": null,
+      "video_id": null
     },
     {
       "rank": 341,
@@ -14803,7 +15483,9 @@
       "entity_name": "",
       "issues": [],
       "mood": "authentic",
-      "has_text_overlay": false
+      "has_text_overlay": false,
+      "is_video": null,
+      "video_id": null
     },
     {
       "rank": 342,
@@ -14846,7 +15528,9 @@
       "entity_name": "",
       "issues": [],
       "mood": "authentic",
-      "has_text_overlay": false
+      "has_text_overlay": false,
+      "is_video": null,
+      "video_id": null
     },
     {
       "rank": 343,
@@ -14889,7 +15573,9 @@
       "entity_name": "",
       "issues": [],
       "mood": "authentic",
-      "has_text_overlay": false
+      "has_text_overlay": false,
+      "is_video": null,
+      "video_id": null
     },
     {
       "rank": 344,
@@ -14932,7 +15618,9 @@
       "entity_name": "",
       "issues": [],
       "mood": "authentic",
-      "has_text_overlay": false
+      "has_text_overlay": false,
+      "is_video": null,
+      "video_id": null
     },
     {
       "rank": 345,
@@ -14975,7 +15663,9 @@
       "entity_name": "",
       "issues": [],
       "mood": "authentic",
-      "has_text_overlay": false
+      "has_text_overlay": false,
+      "is_video": null,
+      "video_id": null
     },
     {
       "rank": 346,
@@ -15018,7 +15708,9 @@
       "entity_name": "",
       "issues": [],
       "mood": "authentic",
-      "has_text_overlay": false
+      "has_text_overlay": false,
+      "is_video": null,
+      "video_id": null
     },
     {
       "rank": 347,
@@ -15061,7 +15753,9 @@
       "entity_name": "",
       "issues": [],
       "mood": "authentic",
-      "has_text_overlay": false
+      "has_text_overlay": false,
+      "is_video": null,
+      "video_id": null
     },
     {
       "rank": 348,
@@ -15104,7 +15798,9 @@
       "entity_name": "",
       "issues": [],
       "mood": "authentic",
-      "has_text_overlay": false
+      "has_text_overlay": false,
+      "is_video": null,
+      "video_id": null
     },
     {
       "rank": 349,
@@ -15147,7 +15843,9 @@
       "entity_name": "",
       "issues": [],
       "mood": "authentic",
-      "has_text_overlay": false
+      "has_text_overlay": false,
+      "is_video": null,
+      "video_id": null
     },
     {
       "rank": 350,
@@ -15190,7 +15888,9 @@
       "entity_name": "",
       "issues": [],
       "mood": "authentic",
-      "has_text_overlay": false
+      "has_text_overlay": false,
+      "is_video": null,
+      "video_id": null
     },
     {
       "rank": 351,
@@ -15233,7 +15933,9 @@
       "entity_name": "",
       "issues": [],
       "mood": "authentic",
-      "has_text_overlay": false
+      "has_text_overlay": false,
+      "is_video": null,
+      "video_id": null
     },
     {
       "rank": 352,
@@ -15276,7 +15978,9 @@
       "entity_name": "",
       "issues": [],
       "mood": "authentic",
-      "has_text_overlay": false
+      "has_text_overlay": false,
+      "is_video": null,
+      "video_id": null
     },
     {
       "rank": 353,
@@ -15319,7 +16023,9 @@
       "entity_name": "",
       "issues": [],
       "mood": "authentic",
-      "has_text_overlay": false
+      "has_text_overlay": false,
+      "is_video": null,
+      "video_id": null
     },
     {
       "rank": 354,
@@ -15362,7 +16068,9 @@
       "entity_name": "",
       "issues": [],
       "mood": "authentic",
-      "has_text_overlay": false
+      "has_text_overlay": false,
+      "is_video": null,
+      "video_id": null
     },
     {
       "rank": 355,
@@ -15405,7 +16113,9 @@
       "entity_name": "",
       "issues": [],
       "mood": "authentic",
-      "has_text_overlay": false
+      "has_text_overlay": false,
+      "is_video": null,
+      "video_id": null
     },
     {
       "rank": 356,
@@ -15448,7 +16158,9 @@
       "entity_name": "",
       "issues": [],
       "mood": "authentic",
-      "has_text_overlay": false
+      "has_text_overlay": false,
+      "is_video": null,
+      "video_id": null
     },
     {
       "rank": 357,
@@ -15491,7 +16203,9 @@
       "entity_name": "",
       "issues": [],
       "mood": "authentic",
-      "has_text_overlay": false
+      "has_text_overlay": false,
+      "is_video": null,
+      "video_id": null
     },
     {
       "rank": 358,
@@ -15534,7 +16248,9 @@
       "entity_name": "",
       "issues": [],
       "mood": "authentic",
-      "has_text_overlay": false
+      "has_text_overlay": false,
+      "is_video": null,
+      "video_id": null
     },
     {
       "rank": 359,
@@ -15577,7 +16293,9 @@
       "entity_name": "",
       "issues": [],
       "mood": "authentic",
-      "has_text_overlay": false
+      "has_text_overlay": false,
+      "is_video": null,
+      "video_id": null
     },
     {
       "rank": 360,
@@ -15620,7 +16338,9 @@
       "entity_name": "",
       "issues": [],
       "mood": "authentic",
-      "has_text_overlay": false
+      "has_text_overlay": false,
+      "is_video": null,
+      "video_id": null
     },
     {
       "rank": 361,
@@ -15663,7 +16383,9 @@
       "entity_name": "",
       "issues": [],
       "mood": "authentic",
-      "has_text_overlay": false
+      "has_text_overlay": false,
+      "is_video": null,
+      "video_id": null
     },
     {
       "rank": 362,
@@ -15706,7 +16428,9 @@
       "entity_name": "",
       "issues": [],
       "mood": "authentic",
-      "has_text_overlay": false
+      "has_text_overlay": false,
+      "is_video": null,
+      "video_id": null
     },
     {
       "rank": 363,
@@ -15749,7 +16473,9 @@
       "entity_name": "",
       "issues": [],
       "mood": "authentic",
-      "has_text_overlay": false
+      "has_text_overlay": false,
+      "is_video": null,
+      "video_id": null
     },
     {
       "rank": 364,
@@ -15792,7 +16518,9 @@
       "entity_name": "",
       "issues": [],
       "mood": "authentic",
-      "has_text_overlay": false
+      "has_text_overlay": false,
+      "is_video": null,
+      "video_id": null
     },
     {
       "rank": 365,
@@ -15835,7 +16563,9 @@
       "entity_name": "",
       "issues": [],
       "mood": "authentic",
-      "has_text_overlay": false
+      "has_text_overlay": false,
+      "is_video": null,
+      "video_id": null
     },
     {
       "rank": 366,
@@ -15878,7 +16608,9 @@
       "entity_name": "",
       "issues": [],
       "mood": "authentic",
-      "has_text_overlay": false
+      "has_text_overlay": false,
+      "is_video": null,
+      "video_id": null
     },
     {
       "rank": 367,
@@ -15921,7 +16653,9 @@
       "entity_name": "",
       "issues": [],
       "mood": "authentic",
-      "has_text_overlay": false
+      "has_text_overlay": false,
+      "is_video": null,
+      "video_id": null
     },
     {
       "rank": 368,
@@ -15964,7 +16698,9 @@
       "entity_name": "",
       "issues": [],
       "mood": "authentic",
-      "has_text_overlay": false
+      "has_text_overlay": false,
+      "is_video": null,
+      "video_id": null
     },
     {
       "rank": 369,
@@ -16007,7 +16743,9 @@
       "entity_name": "",
       "issues": [],
       "mood": "authentic",
-      "has_text_overlay": false
+      "has_text_overlay": false,
+      "is_video": null,
+      "video_id": null
     },
     {
       "rank": 370,
@@ -16050,7 +16788,9 @@
       "entity_name": "",
       "issues": [],
       "mood": "authentic",
-      "has_text_overlay": false
+      "has_text_overlay": false,
+      "is_video": null,
+      "video_id": null
     },
     {
       "rank": 371,
@@ -16093,7 +16833,9 @@
       "entity_name": "",
       "issues": [],
       "mood": "authentic",
-      "has_text_overlay": false
+      "has_text_overlay": false,
+      "is_video": null,
+      "video_id": null
     },
     {
       "rank": 372,
@@ -16136,7 +16878,9 @@
       "entity_name": "",
       "issues": [],
       "mood": "authentic",
-      "has_text_overlay": false
+      "has_text_overlay": false,
+      "is_video": null,
+      "video_id": null
     },
     {
       "rank": 373,
@@ -16179,7 +16923,9 @@
       "entity_name": "",
       "issues": [],
       "mood": "authentic",
-      "has_text_overlay": false
+      "has_text_overlay": false,
+      "is_video": null,
+      "video_id": null
     },
     {
       "rank": 374,
@@ -16222,7 +16968,9 @@
       "entity_name": "",
       "issues": [],
       "mood": "authentic",
-      "has_text_overlay": false
+      "has_text_overlay": false,
+      "is_video": null,
+      "video_id": null
     },
     {
       "rank": 375,
@@ -16265,7 +17013,9 @@
       "entity_name": "",
       "issues": [],
       "mood": "authentic",
-      "has_text_overlay": false
+      "has_text_overlay": false,
+      "is_video": null,
+      "video_id": null
     },
     {
       "rank": 376,
@@ -16308,7 +17058,9 @@
       "entity_name": "",
       "issues": [],
       "mood": "authentic",
-      "has_text_overlay": false
+      "has_text_overlay": false,
+      "is_video": null,
+      "video_id": null
     },
     {
       "rank": 377,
@@ -16351,7 +17103,9 @@
       "entity_name": "",
       "issues": [],
       "mood": "authentic",
-      "has_text_overlay": false
+      "has_text_overlay": false,
+      "is_video": null,
+      "video_id": null
     },
     {
       "rank": 378,
@@ -16394,7 +17148,9 @@
       "entity_name": "",
       "issues": [],
       "mood": "authentic",
-      "has_text_overlay": false
+      "has_text_overlay": false,
+      "is_video": null,
+      "video_id": null
     },
     {
       "rank": 379,
@@ -16437,7 +17193,9 @@
       "entity_name": "",
       "issues": [],
       "mood": "authentic",
-      "has_text_overlay": false
+      "has_text_overlay": false,
+      "is_video": null,
+      "video_id": null
     },
     {
       "rank": 380,
@@ -16480,7 +17238,9 @@
       "entity_name": "",
       "issues": [],
       "mood": "authentic",
-      "has_text_overlay": false
+      "has_text_overlay": false,
+      "is_video": null,
+      "video_id": null
     },
     {
       "rank": 381,
@@ -16523,7 +17283,9 @@
       "entity_name": "",
       "issues": [],
       "mood": "authentic",
-      "has_text_overlay": false
+      "has_text_overlay": false,
+      "is_video": null,
+      "video_id": null
     },
     {
       "rank": 382,
@@ -16566,7 +17328,9 @@
       "entity_name": "",
       "issues": [],
       "mood": "authentic",
-      "has_text_overlay": false
+      "has_text_overlay": false,
+      "is_video": null,
+      "video_id": null
     },
     {
       "rank": 383,
@@ -16609,7 +17373,9 @@
       "entity_name": "",
       "issues": [],
       "mood": "authentic",
-      "has_text_overlay": false
+      "has_text_overlay": false,
+      "is_video": null,
+      "video_id": null
     },
     {
       "rank": 384,
@@ -16652,7 +17418,9 @@
       "entity_name": "",
       "issues": [],
       "mood": "authentic",
-      "has_text_overlay": false
+      "has_text_overlay": false,
+      "is_video": null,
+      "video_id": null
     },
     {
       "rank": 385,
@@ -16695,7 +17463,9 @@
       "entity_name": "",
       "issues": [],
       "mood": "authentic",
-      "has_text_overlay": false
+      "has_text_overlay": false,
+      "is_video": null,
+      "video_id": null
     },
     {
       "rank": 386,
@@ -16738,7 +17508,9 @@
       "entity_name": "",
       "issues": [],
       "mood": "authentic",
-      "has_text_overlay": false
+      "has_text_overlay": false,
+      "is_video": null,
+      "video_id": null
     },
     {
       "rank": 387,
@@ -16781,7 +17553,9 @@
       "entity_name": "",
       "issues": [],
       "mood": "authentic",
-      "has_text_overlay": false
+      "has_text_overlay": false,
+      "is_video": null,
+      "video_id": null
     },
     {
       "rank": 388,
@@ -16824,7 +17598,9 @@
       "entity_name": "",
       "issues": [],
       "mood": "authentic",
-      "has_text_overlay": false
+      "has_text_overlay": false,
+      "is_video": null,
+      "video_id": null
     },
     {
       "rank": 389,
@@ -16867,7 +17643,9 @@
       "entity_name": "",
       "issues": [],
       "mood": "authentic",
-      "has_text_overlay": false
+      "has_text_overlay": false,
+      "is_video": null,
+      "video_id": null
     },
     {
       "rank": 390,
@@ -16910,7 +17688,9 @@
       "entity_name": "",
       "issues": [],
       "mood": "authentic",
-      "has_text_overlay": false
+      "has_text_overlay": false,
+      "is_video": null,
+      "video_id": null
     },
     {
       "rank": 391,
@@ -16953,7 +17733,9 @@
       "entity_name": "",
       "issues": [],
       "mood": "authentic",
-      "has_text_overlay": false
+      "has_text_overlay": false,
+      "is_video": null,
+      "video_id": null
     },
     {
       "rank": 392,
@@ -16996,7 +17778,9 @@
       "entity_name": "",
       "issues": [],
       "mood": "authentic",
-      "has_text_overlay": false
+      "has_text_overlay": false,
+      "is_video": null,
+      "video_id": null
     },
     {
       "rank": 393,
@@ -17039,7 +17823,9 @@
       "entity_name": "",
       "issues": [],
       "mood": "authentic",
-      "has_text_overlay": false
+      "has_text_overlay": false,
+      "is_video": null,
+      "video_id": null
     },
     {
       "rank": 394,
@@ -17082,7 +17868,9 @@
       "entity_name": "",
       "issues": [],
       "mood": "authentic",
-      "has_text_overlay": false
+      "has_text_overlay": false,
+      "is_video": null,
+      "video_id": null
     },
     {
       "rank": 395,
@@ -17125,7 +17913,9 @@
       "entity_name": "",
       "issues": [],
       "mood": "authentic",
-      "has_text_overlay": false
+      "has_text_overlay": false,
+      "is_video": null,
+      "video_id": null
     },
     {
       "rank": 396,
@@ -17168,7 +17958,9 @@
       "entity_name": "",
       "issues": [],
       "mood": "authentic",
-      "has_text_overlay": false
+      "has_text_overlay": false,
+      "is_video": null,
+      "video_id": null
     },
     {
       "rank": 397,
@@ -17211,7 +18003,9 @@
       "entity_name": "",
       "issues": [],
       "mood": "authentic",
-      "has_text_overlay": false
+      "has_text_overlay": false,
+      "is_video": null,
+      "video_id": null
     },
     {
       "rank": 398,
@@ -17254,7 +18048,9 @@
       "entity_name": "",
       "issues": [],
       "mood": "authentic",
-      "has_text_overlay": false
+      "has_text_overlay": false,
+      "is_video": null,
+      "video_id": null
     },
     {
       "rank": 399,
@@ -17297,7 +18093,9 @@
       "entity_name": "",
       "issues": [],
       "mood": "authentic",
-      "has_text_overlay": false
+      "has_text_overlay": false,
+      "is_video": null,
+      "video_id": null
     },
     {
       "rank": 400,
@@ -17340,7 +18138,9 @@
       "entity_name": "",
       "issues": [],
       "mood": "authentic",
-      "has_text_overlay": false
+      "has_text_overlay": false,
+      "is_video": null,
+      "video_id": null
     },
     {
       "rank": 401,
@@ -17383,7 +18183,9 @@
       "entity_name": "",
       "issues": [],
       "mood": "authentic",
-      "has_text_overlay": false
+      "has_text_overlay": false,
+      "is_video": null,
+      "video_id": null
     },
     {
       "rank": 402,
@@ -17426,7 +18228,9 @@
       "entity_name": "",
       "issues": [],
       "mood": "authentic",
-      "has_text_overlay": false
+      "has_text_overlay": false,
+      "is_video": null,
+      "video_id": null
     },
     {
       "rank": 403,
@@ -17469,7 +18273,9 @@
       "entity_name": "",
       "issues": [],
       "mood": "authentic",
-      "has_text_overlay": false
+      "has_text_overlay": false,
+      "is_video": null,
+      "video_id": null
     },
     {
       "rank": 404,
@@ -17512,7 +18318,9 @@
       "entity_name": "",
       "issues": [],
       "mood": "authentic",
-      "has_text_overlay": false
+      "has_text_overlay": false,
+      "is_video": null,
+      "video_id": null
     },
     {
       "rank": 405,
@@ -17555,7 +18363,9 @@
       "entity_name": "",
       "issues": [],
       "mood": "authentic",
-      "has_text_overlay": false
+      "has_text_overlay": false,
+      "is_video": null,
+      "video_id": null
     },
     {
       "rank": 406,
@@ -17598,7 +18408,9 @@
       "entity_name": "",
       "issues": [],
       "mood": "authentic",
-      "has_text_overlay": false
+      "has_text_overlay": false,
+      "is_video": null,
+      "video_id": null
     },
     {
       "rank": 407,
@@ -17641,7 +18453,9 @@
       "entity_name": "",
       "issues": [],
       "mood": "authentic",
-      "has_text_overlay": false
+      "has_text_overlay": false,
+      "is_video": null,
+      "video_id": null
     },
     {
       "rank": 408,
@@ -17684,7 +18498,9 @@
       "entity_name": "",
       "issues": [],
       "mood": "authentic",
-      "has_text_overlay": false
+      "has_text_overlay": false,
+      "is_video": null,
+      "video_id": null
     },
     {
       "rank": 409,
@@ -17727,7 +18543,9 @@
       "entity_name": "",
       "issues": [],
       "mood": "authentic",
-      "has_text_overlay": false
+      "has_text_overlay": false,
+      "is_video": null,
+      "video_id": null
     },
     {
       "rank": 410,
@@ -17770,7 +18588,9 @@
       "entity_name": "",
       "issues": [],
       "mood": "authentic",
-      "has_text_overlay": false
+      "has_text_overlay": false,
+      "is_video": null,
+      "video_id": null
     },
     {
       "rank": 411,
@@ -17813,7 +18633,9 @@
       "entity_name": "",
       "issues": [],
       "mood": "authentic",
-      "has_text_overlay": false
+      "has_text_overlay": false,
+      "is_video": null,
+      "video_id": null
     },
     {
       "rank": 412,
@@ -17856,7 +18678,9 @@
       "entity_name": "",
       "issues": [],
       "mood": "authentic",
-      "has_text_overlay": false
+      "has_text_overlay": false,
+      "is_video": null,
+      "video_id": null
     },
     {
       "rank": 413,
@@ -17899,7 +18723,9 @@
       "entity_name": "",
       "issues": [],
       "mood": "authentic",
-      "has_text_overlay": false
+      "has_text_overlay": false,
+      "is_video": null,
+      "video_id": null
     },
     {
       "rank": 414,
@@ -17942,7 +18768,9 @@
       "entity_name": "",
       "issues": [],
       "mood": "authentic",
-      "has_text_overlay": false
+      "has_text_overlay": false,
+      "is_video": null,
+      "video_id": null
     },
     {
       "rank": 415,
@@ -17985,7 +18813,9 @@
       "entity_name": "",
       "issues": [],
       "mood": "authentic",
-      "has_text_overlay": false
+      "has_text_overlay": false,
+      "is_video": null,
+      "video_id": null
     },
     {
       "rank": 416,
@@ -18028,7 +18858,9 @@
       "entity_name": "",
       "issues": [],
       "mood": "authentic",
-      "has_text_overlay": false
+      "has_text_overlay": false,
+      "is_video": null,
+      "video_id": null
     },
     {
       "rank": 417,
@@ -18071,7 +18903,9 @@
       "entity_name": "",
       "issues": [],
       "mood": "authentic",
-      "has_text_overlay": false
+      "has_text_overlay": false,
+      "is_video": null,
+      "video_id": null
     },
     {
       "rank": 418,
@@ -18114,7 +18948,9 @@
       "entity_name": "",
       "issues": [],
       "mood": "authentic",
-      "has_text_overlay": false
+      "has_text_overlay": false,
+      "is_video": null,
+      "video_id": null
     },
     {
       "rank": 419,
@@ -18157,7 +18993,9 @@
       "entity_name": "",
       "issues": [],
       "mood": "authentic",
-      "has_text_overlay": false
+      "has_text_overlay": false,
+      "is_video": null,
+      "video_id": null
     },
     {
       "rank": 420,
@@ -18200,7 +19038,9 @@
       "entity_name": "",
       "issues": [],
       "mood": "authentic",
-      "has_text_overlay": false
+      "has_text_overlay": false,
+      "is_video": null,
+      "video_id": null
     },
     {
       "rank": 421,
@@ -18243,7 +19083,9 @@
       "entity_name": "",
       "issues": [],
       "mood": "authentic",
-      "has_text_overlay": false
+      "has_text_overlay": false,
+      "is_video": null,
+      "video_id": null
     },
     {
       "rank": 422,
@@ -18286,7 +19128,9 @@
       "entity_name": "",
       "issues": [],
       "mood": "authentic",
-      "has_text_overlay": false
+      "has_text_overlay": false,
+      "is_video": null,
+      "video_id": null
     },
     {
       "rank": 423,
@@ -18329,7 +19173,9 @@
       "entity_name": "",
       "issues": [],
       "mood": "authentic",
-      "has_text_overlay": false
+      "has_text_overlay": false,
+      "is_video": null,
+      "video_id": null
     },
     {
       "rank": 424,
@@ -18372,7 +19218,9 @@
       "entity_name": "",
       "issues": [],
       "mood": "authentic",
-      "has_text_overlay": false
+      "has_text_overlay": false,
+      "is_video": null,
+      "video_id": null
     },
     {
       "rank": 425,
@@ -18415,7 +19263,9 @@
       "entity_name": "",
       "issues": [],
       "mood": "authentic",
-      "has_text_overlay": false
+      "has_text_overlay": false,
+      "is_video": null,
+      "video_id": null
     },
     {
       "rank": 426,
@@ -18458,7 +19308,9 @@
       "entity_name": "",
       "issues": [],
       "mood": "authentic",
-      "has_text_overlay": false
+      "has_text_overlay": false,
+      "is_video": null,
+      "video_id": null
     },
     {
       "rank": 427,
@@ -18501,7 +19353,9 @@
       "entity_name": "",
       "issues": [],
       "mood": "authentic",
-      "has_text_overlay": false
+      "has_text_overlay": false,
+      "is_video": null,
+      "video_id": null
     },
     {
       "rank": 428,
@@ -18544,7 +19398,9 @@
       "entity_name": "",
       "issues": [],
       "mood": "authentic",
-      "has_text_overlay": false
+      "has_text_overlay": false,
+      "is_video": null,
+      "video_id": null
     },
     {
       "rank": 429,
@@ -18587,7 +19443,9 @@
       "entity_name": "",
       "issues": [],
       "mood": "authentic",
-      "has_text_overlay": false
+      "has_text_overlay": false,
+      "is_video": null,
+      "video_id": null
     },
     {
       "rank": 430,
@@ -18630,7 +19488,9 @@
       "entity_name": "",
       "issues": [],
       "mood": "authentic",
-      "has_text_overlay": false
+      "has_text_overlay": false,
+      "is_video": null,
+      "video_id": null
     },
     {
       "rank": 431,
@@ -18673,7 +19533,9 @@
       "entity_name": "",
       "issues": [],
       "mood": "authentic",
-      "has_text_overlay": false
+      "has_text_overlay": false,
+      "is_video": null,
+      "video_id": null
     },
     {
       "rank": 432,
@@ -18716,7 +19578,9 @@
       "entity_name": "",
       "issues": [],
       "mood": "authentic",
-      "has_text_overlay": false
+      "has_text_overlay": false,
+      "is_video": null,
+      "video_id": null
     },
     {
       "rank": 433,
@@ -18759,7 +19623,9 @@
       "entity_name": "",
       "issues": [],
       "mood": "authentic",
-      "has_text_overlay": false
+      "has_text_overlay": false,
+      "is_video": null,
+      "video_id": null
     },
     {
       "rank": 434,
@@ -18802,7 +19668,9 @@
       "entity_name": "",
       "issues": [],
       "mood": "authentic",
-      "has_text_overlay": false
+      "has_text_overlay": false,
+      "is_video": null,
+      "video_id": null
     },
     {
       "rank": 435,
@@ -18845,7 +19713,9 @@
       "entity_name": "",
       "issues": [],
       "mood": "authentic",
-      "has_text_overlay": false
+      "has_text_overlay": false,
+      "is_video": null,
+      "video_id": null
     },
     {
       "rank": 436,
@@ -18888,7 +19758,9 @@
       "entity_name": "",
       "issues": [],
       "mood": "authentic",
-      "has_text_overlay": false
+      "has_text_overlay": false,
+      "is_video": null,
+      "video_id": null
     },
     {
       "rank": 437,
@@ -18931,7 +19803,9 @@
       "entity_name": "",
       "issues": [],
       "mood": "authentic",
-      "has_text_overlay": false
+      "has_text_overlay": false,
+      "is_video": null,
+      "video_id": null
     },
     {
       "rank": 438,
@@ -18974,7 +19848,9 @@
       "entity_name": "",
       "issues": [],
       "mood": "authentic",
-      "has_text_overlay": false
+      "has_text_overlay": false,
+      "is_video": null,
+      "video_id": null
     },
     {
       "rank": 439,
@@ -19017,7 +19893,9 @@
       "entity_name": "",
       "issues": [],
       "mood": "authentic",
-      "has_text_overlay": false
+      "has_text_overlay": false,
+      "is_video": null,
+      "video_id": null
     },
     {
       "rank": 440,
@@ -19060,7 +19938,9 @@
       "entity_name": "",
       "issues": [],
       "mood": "authentic",
-      "has_text_overlay": false
+      "has_text_overlay": false,
+      "is_video": null,
+      "video_id": null
     },
     {
       "rank": 441,
@@ -19103,7 +19983,9 @@
       "entity_name": "",
       "issues": [],
       "mood": "authentic",
-      "has_text_overlay": false
+      "has_text_overlay": false,
+      "is_video": null,
+      "video_id": null
     },
     {
       "rank": 442,
@@ -19146,7 +20028,9 @@
       "entity_name": "",
       "issues": [],
       "mood": "authentic",
-      "has_text_overlay": false
+      "has_text_overlay": false,
+      "is_video": null,
+      "video_id": null
     },
     {
       "rank": 443,
@@ -19189,7 +20073,9 @@
       "entity_name": "",
       "issues": [],
       "mood": "authentic",
-      "has_text_overlay": false
+      "has_text_overlay": false,
+      "is_video": null,
+      "video_id": null
     },
     {
       "rank": 444,
@@ -19232,7 +20118,9 @@
       "entity_name": "",
       "issues": [],
       "mood": "authentic",
-      "has_text_overlay": false
+      "has_text_overlay": false,
+      "is_video": null,
+      "video_id": null
     },
     {
       "rank": 445,
@@ -19275,7 +20163,9 @@
       "entity_name": "",
       "issues": [],
       "mood": "authentic",
-      "has_text_overlay": false
+      "has_text_overlay": false,
+      "is_video": null,
+      "video_id": null
     },
     {
       "rank": 446,
@@ -19318,7 +20208,9 @@
       "entity_name": "",
       "issues": [],
       "mood": "authentic",
-      "has_text_overlay": false
+      "has_text_overlay": false,
+      "is_video": null,
+      "video_id": null
     },
     {
       "rank": 447,
@@ -19361,7 +20253,9 @@
       "entity_name": "",
       "issues": [],
       "mood": "authentic",
-      "has_text_overlay": false
+      "has_text_overlay": false,
+      "is_video": null,
+      "video_id": null
     },
     {
       "rank": 448,
@@ -19404,7 +20298,9 @@
       "entity_name": "",
       "issues": [],
       "mood": "authentic",
-      "has_text_overlay": false
+      "has_text_overlay": false,
+      "is_video": null,
+      "video_id": null
     },
     {
       "rank": 449,
@@ -19447,7 +20343,9 @@
       "entity_name": "",
       "issues": [],
       "mood": "authentic",
-      "has_text_overlay": false
+      "has_text_overlay": false,
+      "is_video": null,
+      "video_id": null
     },
     {
       "rank": 450,
@@ -19490,7 +20388,9 @@
       "entity_name": "",
       "issues": [],
       "mood": "authentic",
-      "has_text_overlay": false
+      "has_text_overlay": false,
+      "is_video": null,
+      "video_id": null
     },
     {
       "rank": 451,
@@ -19533,7 +20433,9 @@
       "entity_name": "",
       "issues": [],
       "mood": "authentic",
-      "has_text_overlay": false
+      "has_text_overlay": false,
+      "is_video": null,
+      "video_id": null
     },
     {
       "rank": 452,
@@ -19576,7 +20478,9 @@
       "entity_name": "",
       "issues": [],
       "mood": "authentic",
-      "has_text_overlay": false
+      "has_text_overlay": false,
+      "is_video": null,
+      "video_id": null
     },
     {
       "rank": 453,
@@ -19619,7 +20523,9 @@
       "entity_name": "",
       "issues": [],
       "mood": "authentic",
-      "has_text_overlay": false
+      "has_text_overlay": false,
+      "is_video": null,
+      "video_id": null
     },
     {
       "rank": 454,
@@ -19662,7 +20568,9 @@
       "entity_name": "",
       "issues": [],
       "mood": "authentic",
-      "has_text_overlay": false
+      "has_text_overlay": false,
+      "is_video": null,
+      "video_id": null
     },
     {
       "rank": 455,
@@ -19705,7 +20613,9 @@
       "entity_name": "",
       "issues": [],
       "mood": "authentic",
-      "has_text_overlay": false
+      "has_text_overlay": false,
+      "is_video": null,
+      "video_id": null
     },
     {
       "rank": 456,
@@ -19748,7 +20658,9 @@
       "entity_name": "",
       "issues": [],
       "mood": "authentic",
-      "has_text_overlay": false
+      "has_text_overlay": false,
+      "is_video": null,
+      "video_id": null
     },
     {
       "rank": 457,
@@ -19791,7 +20703,9 @@
       "entity_name": "",
       "issues": [],
       "mood": "authentic",
-      "has_text_overlay": false
+      "has_text_overlay": false,
+      "is_video": null,
+      "video_id": null
     },
     {
       "rank": 458,
@@ -19834,7 +20748,9 @@
       "entity_name": "",
       "issues": [],
       "mood": "authentic",
-      "has_text_overlay": false
+      "has_text_overlay": false,
+      "is_video": null,
+      "video_id": null
     },
     {
       "rank": 459,
@@ -19877,7 +20793,9 @@
       "entity_name": "",
       "issues": [],
       "mood": "authentic",
-      "has_text_overlay": false
+      "has_text_overlay": false,
+      "is_video": null,
+      "video_id": null
     },
     {
       "rank": 460,
@@ -19920,7 +20838,9 @@
       "entity_name": "",
       "issues": [],
       "mood": "authentic",
-      "has_text_overlay": false
+      "has_text_overlay": false,
+      "is_video": null,
+      "video_id": null
     },
     {
       "rank": 461,
@@ -19963,7 +20883,9 @@
       "entity_name": "",
       "issues": [],
       "mood": "authentic",
-      "has_text_overlay": false
+      "has_text_overlay": false,
+      "is_video": null,
+      "video_id": null
     },
     {
       "rank": 462,
@@ -20006,7 +20928,9 @@
       "entity_name": "",
       "issues": [],
       "mood": "authentic",
-      "has_text_overlay": false
+      "has_text_overlay": false,
+      "is_video": null,
+      "video_id": null
     },
     {
       "rank": 463,
@@ -20049,7 +20973,9 @@
       "entity_name": "",
       "issues": [],
       "mood": "authentic",
-      "has_text_overlay": false
+      "has_text_overlay": false,
+      "is_video": null,
+      "video_id": null
     },
     {
       "rank": 464,
@@ -20092,7 +21018,9 @@
       "entity_name": "",
       "issues": [],
       "mood": "authentic",
-      "has_text_overlay": false
+      "has_text_overlay": false,
+      "is_video": null,
+      "video_id": null
     },
     {
       "rank": 465,
@@ -20135,7 +21063,9 @@
       "entity_name": "",
       "issues": [],
       "mood": "authentic",
-      "has_text_overlay": false
+      "has_text_overlay": false,
+      "is_video": null,
+      "video_id": null
     },
     {
       "rank": 466,
@@ -20178,7 +21108,9 @@
       "entity_name": "",
       "issues": [],
       "mood": "authentic",
-      "has_text_overlay": false
+      "has_text_overlay": false,
+      "is_video": null,
+      "video_id": null
     },
     {
       "rank": 467,
@@ -20221,7 +21153,9 @@
       "entity_name": "",
       "issues": [],
       "mood": "authentic",
-      "has_text_overlay": false
+      "has_text_overlay": false,
+      "is_video": null,
+      "video_id": null
     },
     {
       "rank": 468,
@@ -20264,7 +21198,9 @@
       "entity_name": "",
       "issues": [],
       "mood": "authentic",
-      "has_text_overlay": false
+      "has_text_overlay": false,
+      "is_video": null,
+      "video_id": null
     },
     {
       "rank": 469,
@@ -20307,7 +21243,9 @@
       "entity_name": "",
       "issues": [],
       "mood": "authentic",
-      "has_text_overlay": false
+      "has_text_overlay": false,
+      "is_video": null,
+      "video_id": null
     },
     {
       "rank": 470,
@@ -20350,7 +21288,9 @@
       "entity_name": "",
       "issues": [],
       "mood": "authentic",
-      "has_text_overlay": false
+      "has_text_overlay": false,
+      "is_video": null,
+      "video_id": null
     },
     {
       "rank": 471,
@@ -20393,7 +21333,9 @@
       "entity_name": "",
       "issues": [],
       "mood": "authentic",
-      "has_text_overlay": false
+      "has_text_overlay": false,
+      "is_video": null,
+      "video_id": null
     },
     {
       "rank": 472,
@@ -20436,7 +21378,9 @@
       "entity_name": "",
       "issues": [],
       "mood": "authentic",
-      "has_text_overlay": false
+      "has_text_overlay": false,
+      "is_video": null,
+      "video_id": null
     },
     {
       "rank": 473,
@@ -20479,7 +21423,9 @@
       "entity_name": "",
       "issues": [],
       "mood": "authentic",
-      "has_text_overlay": false
+      "has_text_overlay": false,
+      "is_video": null,
+      "video_id": null
     },
     {
       "rank": 474,
@@ -20522,7 +21468,9 @@
       "entity_name": "",
       "issues": [],
       "mood": "authentic",
-      "has_text_overlay": false
+      "has_text_overlay": false,
+      "is_video": null,
+      "video_id": null
     },
     {
       "rank": 475,
@@ -20565,7 +21513,9 @@
       "entity_name": "",
       "issues": [],
       "mood": "authentic",
-      "has_text_overlay": false
+      "has_text_overlay": false,
+      "is_video": null,
+      "video_id": null
     },
     {
       "rank": 476,
@@ -20608,7 +21558,9 @@
       "entity_name": "",
       "issues": [],
       "mood": "authentic",
-      "has_text_overlay": false
+      "has_text_overlay": false,
+      "is_video": null,
+      "video_id": null
     },
     {
       "rank": 477,
@@ -20651,7 +21603,9 @@
       "entity_name": "",
       "issues": [],
       "mood": "authentic",
-      "has_text_overlay": false
+      "has_text_overlay": false,
+      "is_video": null,
+      "video_id": null
     },
     {
       "rank": 478,
@@ -20694,7 +21648,9 @@
       "entity_name": "",
       "issues": [],
       "mood": "authentic",
-      "has_text_overlay": false
+      "has_text_overlay": false,
+      "is_video": null,
+      "video_id": null
     },
     {
       "rank": 479,
@@ -20737,7 +21693,9 @@
       "entity_name": "",
       "issues": [],
       "mood": "authentic",
-      "has_text_overlay": false
+      "has_text_overlay": false,
+      "is_video": null,
+      "video_id": null
     },
     {
       "rank": 480,
@@ -20780,7 +21738,9 @@
       "entity_name": "",
       "issues": [],
       "mood": "authentic",
-      "has_text_overlay": false
+      "has_text_overlay": false,
+      "is_video": null,
+      "video_id": null
     },
     {
       "rank": 481,
@@ -20823,7 +21783,9 @@
       "entity_name": "",
       "issues": [],
       "mood": "authentic",
-      "has_text_overlay": false
+      "has_text_overlay": false,
+      "is_video": null,
+      "video_id": null
     },
     {
       "rank": 482,
@@ -20866,7 +21828,9 @@
       "entity_name": "",
       "issues": [],
       "mood": "authentic",
-      "has_text_overlay": false
+      "has_text_overlay": false,
+      "is_video": null,
+      "video_id": null
     },
     {
       "rank": 483,
@@ -20909,7 +21873,9 @@
       "entity_name": "",
       "issues": [],
       "mood": "authentic",
-      "has_text_overlay": false
+      "has_text_overlay": false,
+      "is_video": null,
+      "video_id": null
     },
     {
       "rank": 484,
@@ -20952,7 +21918,9 @@
       "entity_name": "",
       "issues": [],
       "mood": "authentic",
-      "has_text_overlay": false
+      "has_text_overlay": false,
+      "is_video": null,
+      "video_id": null
     },
     {
       "rank": 485,
@@ -20995,7 +21963,9 @@
       "entity_name": "",
       "issues": [],
       "mood": "authentic",
-      "has_text_overlay": false
+      "has_text_overlay": false,
+      "is_video": null,
+      "video_id": null
     },
     {
       "rank": 486,
@@ -21038,7 +22008,9 @@
       "entity_name": "",
       "issues": [],
       "mood": "authentic",
-      "has_text_overlay": false
+      "has_text_overlay": false,
+      "is_video": null,
+      "video_id": null
     },
     {
       "rank": 487,
@@ -21081,7 +22053,9 @@
       "entity_name": "",
       "issues": [],
       "mood": "authentic",
-      "has_text_overlay": false
+      "has_text_overlay": false,
+      "is_video": null,
+      "video_id": null
     },
     {
       "rank": 488,
@@ -21124,7 +22098,9 @@
       "entity_name": "",
       "issues": [],
       "mood": "authentic",
-      "has_text_overlay": false
+      "has_text_overlay": false,
+      "is_video": null,
+      "video_id": null
     },
     {
       "rank": 489,
@@ -21167,7 +22143,9 @@
       "entity_name": "",
       "issues": [],
       "mood": "authentic",
-      "has_text_overlay": false
+      "has_text_overlay": false,
+      "is_video": null,
+      "video_id": null
     },
     {
       "rank": 490,
@@ -21210,7 +22188,9 @@
       "entity_name": "",
       "issues": [],
       "mood": "authentic",
-      "has_text_overlay": false
+      "has_text_overlay": false,
+      "is_video": null,
+      "video_id": null
     },
     {
       "rank": 491,
@@ -21253,7 +22233,9 @@
       "entity_name": "",
       "issues": [],
       "mood": "authentic",
-      "has_text_overlay": false
+      "has_text_overlay": false,
+      "is_video": null,
+      "video_id": null
     },
     {
       "rank": 492,
@@ -21296,7 +22278,9 @@
       "entity_name": "",
       "issues": [],
       "mood": "authentic",
-      "has_text_overlay": false
+      "has_text_overlay": false,
+      "is_video": null,
+      "video_id": null
     },
     {
       "rank": 493,
@@ -21339,7 +22323,9 @@
       "entity_name": "",
       "issues": [],
       "mood": "authentic",
-      "has_text_overlay": false
+      "has_text_overlay": false,
+      "is_video": null,
+      "video_id": null
     },
     {
       "rank": 494,
@@ -21382,7 +22368,9 @@
       "entity_name": "",
       "issues": [],
       "mood": "authentic",
-      "has_text_overlay": false
+      "has_text_overlay": false,
+      "is_video": null,
+      "video_id": null
     },
     {
       "rank": 495,
@@ -21425,7 +22413,9 @@
       "entity_name": "",
       "issues": [],
       "mood": "authentic",
-      "has_text_overlay": false
+      "has_text_overlay": false,
+      "is_video": null,
+      "video_id": null
     },
     {
       "rank": 496,
@@ -21468,7 +22458,9 @@
       "entity_name": "",
       "issues": [],
       "mood": "authentic",
-      "has_text_overlay": false
+      "has_text_overlay": false,
+      "is_video": null,
+      "video_id": null
     },
     {
       "rank": 497,
@@ -21511,7 +22503,9 @@
       "entity_name": "",
       "issues": [],
       "mood": "authentic",
-      "has_text_overlay": false
+      "has_text_overlay": false,
+      "is_video": null,
+      "video_id": null
     },
     {
       "rank": 498,
@@ -21554,7 +22548,9 @@
       "entity_name": "",
       "issues": [],
       "mood": "authentic",
-      "has_text_overlay": false
+      "has_text_overlay": false,
+      "is_video": null,
+      "video_id": null
     },
     {
       "rank": 499,
@@ -21597,7 +22593,9 @@
       "entity_name": "",
       "issues": [],
       "mood": "authentic",
-      "has_text_overlay": false
+      "has_text_overlay": false,
+      "is_video": null,
+      "video_id": null
     },
     {
       "rank": 500,
@@ -21640,7 +22638,9 @@
       "entity_name": "",
       "issues": [],
       "mood": "authentic",
-      "has_text_overlay": false
+      "has_text_overlay": false,
+      "is_video": null,
+      "video_id": null
     }
   ]
 }
