@@ -381,6 +381,34 @@
       border-radius: 8px;
     }
 
+    /* ── TRUSTPILOT WIDGET ── */
+    .trustpilot-widget {
+      background: #fff; border: 1px solid #e5e5e5; border-radius: 12px;
+      padding: 20px 24px; margin-top: 24px; text-align: center;
+    }
+    .trustpilot-widget__header {
+      display: flex; align-items: center; justify-content: center;
+      gap: 8px; margin-bottom: 14px;
+    }
+    .trustpilot-widget__shield { flex-shrink: 0; }
+    .trustpilot-widget__wordmark {
+      font-family: 'Segoe UI', system-ui, sans-serif;
+      font-weight: 700; font-size: 18px; color: #1a1a1a;
+      letter-spacing: -0.3px;
+    }
+    .trustpilot-widget__stars {
+      display: flex; align-items: center; justify-content: center;
+      gap: 3px; margin-bottom: 12px;
+    }
+    .trustpilot-widget__rating {
+      font-size: 15px; color: #1a1a1a; margin-bottom: 4px;
+    }
+    .trustpilot-widget__rating strong { font-weight: 700; }
+    .trustpilot-widget__count {
+      font-size: 13px; color: #6b6b6b;
+    }
+    .trustpilot-widget__count strong { color: #1a1a1a; }
+
     /* ── STEP 7: GUARANTEE + SCARCITY ── */
     .guarantee-card {
       background: var(--cream); border-radius: 16px;
@@ -633,7 +661,7 @@
       <div class="testimonial-inline__stars">&#9733;&#9733;&#9733;&#9733;&#9733;</div>
       <p class="testimonial-inline__text">"I was so nervous about noise with roommates — Lem is literally silent. I can't believe how powerful something this quiet can be. Total game-changer."</p>
       <div class="testimonial-inline__author">
-        <img src="../lem/images/ugc/alyssa-g.png" alt="Verified buyer" class="testimonial-inline__avatar">
+        <img src="../images/loox-review1.jpg" alt="Verified buyer" class="testimonial-inline__avatar">
         <div>
           <div class="testimonial-inline__name">Sarah K.</div>
           <div class="testimonial-inline__verified">
@@ -680,7 +708,7 @@
       <div class="testimonial-inline__stars">&#9733;&#9733;&#9733;&#9733;&#9733;</div>
       <p class="testimonial-inline__text">"First time I used it, I was done in under two minutes. I've never experienced anything that intense, that fast. My husband was shocked."</p>
       <div class="testimonial-inline__author">
-        <img src="../lem/images/ugc/jordan-t.png" alt="Verified buyer" class="testimonial-inline__avatar">
+        <img src="../images/loox-review5.jpg" alt="Verified buyer" class="testimonial-inline__avatar">
         <div>
           <div class="testimonial-inline__name">Monica T.</div>
           <div class="testimonial-inline__verified">
@@ -845,11 +873,11 @@
     </div>
 
     <div class="ugc-grid">
-      <img src="../lem/images/ugc/alyssa-g.png" alt="Customer with Lem" loading="lazy">
-      <img src="../lem/images/ugc/daliza.png" alt="Customer with Lem" loading="lazy">
+      <img src="../images/loox-review3.jpg" alt="Customer review photo" loading="lazy">
+      <img src="../images/loox-review4.jpg" alt="Customer review photo" loading="lazy">
       <img src="../lem/images/product/ugc-poster-1.jpg" alt="Lem review" loading="lazy">
       <img src="../lem/images/product/ugc-poster-2.jpg" alt="Lem review" loading="lazy">
-      <img src="../lem/images/ugc/deliza.png" alt="Customer with Lem" loading="lazy">
+      <img src="../images/loox-review8.jpg" alt="Customer review photo" loading="lazy">
       <img src="../lem/images/product/ugc-poster-3.jpg" alt="Lem review" loading="lazy">
     </div>
 
@@ -887,23 +915,31 @@
     </div>
 
     <!-- TRUSTPILOT-STYLE WIDGET -->
-    <div style="background: #f7f7f7; border-radius: 12px; padding: 24px; margin-top: 24px; text-align: center;">
-      <div style="display: flex; align-items: center; justify-content: center; gap: 8px; margin-bottom: 12px;">
-        <svg width="20" height="20" viewBox="0 0 24 24" fill="none"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z" fill="#00B67A"/></svg>
-        <span style="font-weight: 700; font-size: 16px; color: #1a1a1a;">Trustpilot</span>
+    <div class="trustpilot-widget">
+      <div class="trustpilot-widget__header">
+        <svg class="trustpilot-widget__shield" width="24" height="24" viewBox="0 0 24 24" fill="none">
+          <path d="M12 1L3 5v6c0 5.55 3.84 10.74 9 12 5.16-1.26 9-6.45 9-12V5l-9-4z" fill="#00B67A"/>
+          <path d="M12 6.8l1.58 3.2 3.54.52-2.56 2.5.6 3.52L12 14.87l-3.16 1.67.6-3.52-2.56-2.5 3.54-.52L12 6.8z" fill="#fff"/>
+        </svg>
+        <span class="trustpilot-widget__wordmark">Trustpilot</span>
       </div>
-      <div style="display: flex; align-items: center; justify-content: center; gap: 4px; margin-bottom: 8px;">
-        <svg width="22" height="22" viewBox="0 0 24 24"><rect width="24" height="24" fill="#00B67A" rx="2"/><path d="M12 5l2.4 4.9 5.4.8-3.9 3.8.9 5.4-4.8-2.5-4.8 2.5.9-5.4L4.2 10.7l5.4-.8z" fill="#fff"/></svg>
-        <svg width="22" height="22" viewBox="0 0 24 24"><rect width="24" height="24" fill="#00B67A" rx="2"/><path d="M12 5l2.4 4.9 5.4.8-3.9 3.8.9 5.4-4.8-2.5-4.8 2.5.9-5.4L4.2 10.7l5.4-.8z" fill="#fff"/></svg>
-        <svg width="22" height="22" viewBox="0 0 24 24"><rect width="24" height="24" fill="#00B67A" rx="2"/><path d="M12 5l2.4 4.9 5.4.8-3.9 3.8.9 5.4-4.8-2.5-4.8 2.5.9-5.4L4.2 10.7l5.4-.8z" fill="#fff"/></svg>
-        <svg width="22" height="22" viewBox="0 0 24 24"><rect width="24" height="24" fill="#00B67A" rx="2"/><path d="M12 5l2.4 4.9 5.4.8-3.9 3.8.9 5.4-4.8-2.5-4.8 2.5.9-5.4L4.2 10.7l5.4-.8z" fill="#fff"/></svg>
-        <svg width="22" height="22" viewBox="0 0 24 24"><rect width="24" height="24" fill="#73CF11" rx="2"/><path d="M12 5l2.4 4.9 5.4.8-3.9 3.8.9 5.4-4.8-2.5-4.8 2.5.9-5.4L4.2 10.7l5.4-.8z" fill="#fff"/></svg>
+      <div class="trustpilot-widget__stars">
+        <svg width="24" height="24" viewBox="0 0 24 24"><rect width="24" height="24" fill="#00B67A" rx="1.5"/><path d="M12 5.3l2.12 4.3 4.74.69-3.43 3.34.81 4.72L12 16.01l-4.24 2.34.81-4.72-3.43-3.34 4.74-.69L12 5.3z" fill="#fff"/></svg>
+        <svg width="24" height="24" viewBox="0 0 24 24"><rect width="24" height="24" fill="#00B67A" rx="1.5"/><path d="M12 5.3l2.12 4.3 4.74.69-3.43 3.34.81 4.72L12 16.01l-4.24 2.34.81-4.72-3.43-3.34 4.74-.69L12 5.3z" fill="#fff"/></svg>
+        <svg width="24" height="24" viewBox="0 0 24 24"><rect width="24" height="24" fill="#00B67A" rx="1.5"/><path d="M12 5.3l2.12 4.3 4.74.69-3.43 3.34.81 4.72L12 16.01l-4.24 2.34.81-4.72-3.43-3.34 4.74-.69L12 5.3z" fill="#fff"/></svg>
+        <svg width="24" height="24" viewBox="0 0 24 24"><rect width="24" height="24" fill="#00B67A" rx="1.5"/><path d="M12 5.3l2.12 4.3 4.74.69-3.43 3.34.81 4.72L12 16.01l-4.24 2.34.81-4.72-3.43-3.34 4.74-.69L12 5.3z" fill="#fff"/></svg>
+        <svg width="24" height="24" viewBox="0 0 24 24">
+          <rect width="24" height="24" fill="#DCDCE6" rx="1.5"/>
+          <rect width="16" height="24" fill="#00B67A" rx="1.5"/>
+          <clipPath id="tp-partial"><rect width="16" height="24"/></clipPath>
+          <path d="M12 5.3l2.12 4.3 4.74.69-3.43 3.34.81 4.72L12 16.01l-4.24 2.34.81-4.72-3.43-3.34 4.74-.69L12 5.3z" fill="#fff"/>
+        </svg>
       </div>
-      <div style="font-size: 14px; color: #333; margin-bottom: 4px;">
-        <strong>Excellent</strong> — 4.7 out of 5
+      <div class="trustpilot-widget__rating">
+        <strong>Excellent</strong> &mdash; 4.7 out of 5
       </div>
-      <div style="font-size: 12px; color: #797979;">
-        Based on <strong>2,847 reviews</strong> on Trustpilot
+      <div class="trustpilot-widget__count">
+        Based on <strong>2,847 reviews</strong>
       </div>
     </div>
 
@@ -983,7 +1019,7 @@
       <div class="testimonial-inline__stars">&#9733;&#9733;&#9733;&#9733;&#9733;</div>
       <p class="testimonial-inline__text">"I waited months before finally ordering. My only regret is not buying it sooner. If you're on the fence — just do it. You won't regret it."</p>
       <div class="testimonial-inline__author">
-        <img src="../lem/images/ugc/daliza.png" alt="Verified buyer" class="testimonial-inline__avatar">
+        <img src="../images/loox-review6.jpg" alt="Verified buyer" class="testimonial-inline__avatar">
         <div>
           <div class="testimonial-inline__name">Rachel B.</div>
           <div class="testimonial-inline__verified">

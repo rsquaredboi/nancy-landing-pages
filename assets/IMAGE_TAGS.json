@@ -1,0 +1,2809 @@
+[
+  {
+    "path": "assets/winning-ads/01_2.1x_1965k_image_e0eaacf8.jpg",
+    "source": "ad-creative",
+    "product": "lem",
+    "type": "ad-static",
+    "organic_score": 1,
+    "mood": "aspirational",
+    "shows_product": true,
+    "shows_person": false,
+    "has_text_overlay": true,
+    "size_kb": 1565.6,
+    "best_use": [
+      "ad-reference",
+      "winning-creative-study"
+    ],
+    "rating": null,
+    "verified_purchase": null,
+    "ad_roas": 2.1206736630342378,
+    "ad_spend_hkd": 1964849.7700000005,
+    "ad_conversions": 6599.0,
+    "entity_name": "NAN_JULW2_377A_Jul_30_lem_Hello-Regalio-1_Nancy_Winners_ASC_30July25_1753876229510 2025-07-30-e611fbb163f84f7828b44f6e4f3308cf",
+    "issues": [],
+    "tags": [
+      "image",
+      "roas-2.1x",
+      "with_issues"
+    ]
+  },
+  {
+    "path": "assets/winning-ads/02_2.0x_940k_video_13374320.jpg",
+    "source": "ad-creative",
+    "product": "lem",
+    "type": "video-thumb",
+    "organic_score": 1,
+    "mood": "aspirational",
+    "shows_product": true,
+    "shows_person": false,
+    "has_text_overlay": true,
+    "size_kb": 115.9,
+    "best_use": [
+      "ad-reference",
+      "winning-creative-study"
+    ],
+    "rating": null,
+    "verified_purchase": null,
+    "ad_roas": 2.027075,
+    "ad_spend_hkd": 940068.18,
+    "ad_conversions": 3057.0,
+    "entity_name": "Elevate Your Me-Time to Next Level 2025-11-24-38165a03c8082f39da7c3b8c5c431d47",
+    "issues": [],
+    "tags": [
+      "video",
+      "roas-2.0x",
+      "active"
+    ]
+  },
+  {
+    "path": "assets/winning-ads/03_2.2x_734k_image_e2f1e3b0.jpg",
+    "source": "ad-creative",
+    "product": "lem",
+    "type": "ad-static",
+    "organic_score": 1,
+    "mood": "aspirational",
+    "shows_product": true,
+    "shows_person": false,
+    "has_text_overlay": true,
+    "size_kb": 1028.9,
+    "best_use": [
+      "ad-reference",
+      "winning-creative-study"
+    ],
+    "rating": null,
+    "verified_purchase": null,
+    "ad_roas": 2.1748661824299202,
+    "ad_spend_hkd": 733788.6799999999,
+    "ad_conversions": 2479.0,
+    "entity_name": "This New Year, Lem Ends the Guessing. \ud83c\udf4b 2026-01-15-5342f7f0e7efc7051908648ec3a9fef0",
+    "issues": [],
+    "tags": [
+      "image",
+      "roas-2.2x",
+      "active"
+    ]
+  },
+  {
+    "path": "assets/winning-ads/04_2.5x_605k_video_20402236.jpg",
+    "source": "ad-creative",
+    "product": "lem",
+    "type": "video-thumb",
+    "organic_score": 1,
+    "mood": "aspirational",
+    "shows_product": true,
+    "shows_person": false,
+    "has_text_overlay": true,
+    "size_kb": 165.3,
+    "best_use": [
+      "ad-reference",
+      "winning-creative-study"
+    ],
+    "rating": null,
+    "verified_purchase": null,
+    "ad_roas": 2.466011,
+    "ad_spend_hkd": 604608.83,
+    "ad_conversions": 2423.0,
+    "entity_name": "Lem_Video_ACH - DYLE - 85(1)+SS2_Jan-23_valentines 2026-01-23-b62a762e2c4df01773c20ab6a81e32f0",
+    "issues": [],
+    "tags": [
+      "video",
+      "roas-2.5x",
+      "active"
+    ]
+  },
+  {
+    "path": "assets/winning-ads/05_2.0x_579k_image_040b0c89.jpg",
+    "source": "ad-creative",
+    "product": "lem",
+    "type": "ad-static",
+    "organic_score": 1,
+    "mood": "aspirational",
+    "shows_product": true,
+    "shows_person": false,
+    "has_text_overlay": true,
+    "size_kb": 682.3,
+    "best_use": [
+      "ad-reference",
+      "winning-creative-study"
+    ],
+    "rating": null,
+    "verified_purchase": null,
+    "ad_roas": 2.0325842073426164,
+    "ad_spend_hkd": 578952.76,
+    "ad_conversions": 1904.0,
+    "entity_name": "This Valentine\u2019s, You Win. 2026-01-21-27281192f2197601f003504a78721e29",
+    "issues": [],
+    "tags": [
+      "image",
+      "roas-2.0x",
+      "active"
+    ]
+  },
+  {
+    "path": "assets/winning-ads/06_1.7x_530k_image_41892a1f.png",
+    "source": "ad-creative",
+    "product": "lem",
+    "type": "ad-static",
+    "organic_score": 1,
+    "mood": "aspirational",
+    "shows_product": true,
+    "shows_person": false,
+    "has_text_overlay": true,
+    "size_kb": 183.0,
+    "best_use": [
+      "ad-reference",
+      "winning-creative-study"
+    ],
+    "rating": null,
+    "verified_purchase": null,
+    "ad_roas": 1.7405480452679387,
+    "ad_spend_hkd": 529816.92,
+    "ad_conversions": 1364.0,
+    "entity_name": "I Retired The \"Actress\" Last Night. 2026-01-02-c4685cc1597ad3dced96883e34bd4673",
+    "issues": [],
+    "tags": [
+      "image",
+      "roas-1.7x",
+      "active"
+    ]
+  },
+  {
+    "path": "assets/winning-ads/07_1.7x_481k_video_12091178.jpg",
+    "source": "ad-creative",
+    "product": "lem",
+    "type": "video-thumb",
+    "organic_score": 1,
+    "mood": "aspirational",
+    "shows_product": true,
+    "shows_person": false,
+    "has_text_overlay": true,
+    "size_kb": 111.0,
+    "best_use": [
+      "ad-reference",
+      "winning-creative-study"
+    ],
+    "rating": null,
+    "verified_purchase": null,
+    "ad_roas": 1.7217434849565545,
+    "ad_spend_hkd": 481164.38,
+    "ad_conversions": 1291.0,
+    "entity_name": "This Toy Broke the Internet 2025-12-27-c80934945f7a3d19e4823ed5d76efadb",
+    "issues": [],
+    "tags": [
+      "video",
+      "roas-1.7x",
+      "active"
+    ]
+  },
+  {
+    "path": "assets/winning-ads/08_2.0x_478k_image_8b71abc0.jpg",
+    "source": "ad-creative",
+    "product": "lem",
+    "type": "ad-static",
+    "organic_score": 1,
+    "mood": "aspirational",
+    "shows_product": true,
+    "shows_person": false,
+    "has_text_overlay": true,
+    "size_kb": 611.0,
+    "best_use": [
+      "ad-reference",
+      "winning-creative-study"
+    ],
+    "rating": null,
+    "verified_purchase": null,
+    "ad_roas": 1.9721937713827244,
+    "ad_spend_hkd": 477605.42000000004,
+    "ad_conversions": 1498.0,
+    "entity_name": "NAN_JUNW1_370A_Jul_30_lem_Hello-Regalio-1_Nancy_Winners_ASC_30July25_1753876222969 2025-07-30-05ce952844f66f846aee91d00135fd78",
+    "issues": [],
+    "tags": [
+      "image",
+      "roas-2.0x",
+      "active"
+    ]
+  },
+  {
+    "path": "assets/winning-ads/09_1.9x_454k_video_18787024.jpg",
+    "source": "ad-creative",
+    "product": "lem",
+    "type": "video-thumb",
+    "organic_score": 1,
+    "mood": "aspirational",
+    "shows_product": true,
+    "shows_person": false,
+    "has_text_overlay": true,
+    "size_kb": 161.8,
+    "best_use": [
+      "ad-reference",
+      "winning-creative-study"
+    ],
+    "rating": null,
+    "verified_purchase": null,
+    "ad_roas": 1.921917,
+    "ad_spend_hkd": 453700.41,
+    "ad_conversions": 1516.0,
+    "entity_name": "Lem_Video_ACH Nasty 20(4) SS1_Oct-01_7-best-suction-toys-for-women_Hello-Nancy-11_Zenify_Top 15 Cou 2025-09-30-e8bcfae9134bd98e73907d5d546560f0",
+    "issues": [],
+    "tags": [
+      "video",
+      "roas-1.9x",
+      "campaign_paused"
+    ]
+  },
+  {
+    "path": "assets/winning-ads/10_2.7x_444k_video_14433932.jpg",
+    "source": "ad-creative",
+    "product": "lem",
+    "type": "video-thumb",
+    "organic_score": 1,
+    "mood": "aspirational",
+    "shows_product": true,
+    "shows_person": false,
+    "has_text_overlay": true,
+    "size_kb": 120.0,
+    "best_use": [
+      "ad-reference",
+      "winning-creative-study"
+    ],
+    "rating": null,
+    "verified_purchase": null,
+    "ad_roas": 2.6879186406314934,
+    "ad_spend_hkd": 444054.66000000003,
+    "ad_conversions": 2043.0,
+    "entity_name": "Holiday Sale: Up to 60% Off 2025-12-26-c00d424c32a63786de072291cf1475b7",
+    "issues": [],
+    "tags": [
+      "video",
+      "roas-2.7x",
+      "paused"
+    ]
+  },
+  {
+    "path": "assets/winning-ads/11_2.0x_437k_video_85459493.jpg",
+    "source": "ad-creative",
+    "product": "lem",
+    "type": "video-thumb",
+    "organic_score": 1,
+    "mood": "aspirational",
+    "shows_product": true,
+    "shows_person": false,
+    "has_text_overlay": true,
+    "size_kb": 142.2,
+    "best_use": [
+      "ad-reference",
+      "winning-creative-study"
+    ],
+    "rating": null,
+    "verified_purchase": null,
+    "ad_roas": 1.991201,
+    "ad_spend_hkd": 437023.04,
+    "ad_conversions": 1415.0,
+    "entity_name": "Elevate Your Me-Time to Next Level 2025-11-24-10070da36eb1cb14cc0380e547a6fca6",
+    "issues": [],
+    "tags": [
+      "video",
+      "roas-2.0x",
+      "active"
+    ]
+  },
+  {
+    "path": "assets/winning-ads/12_2.1x_360k_image_0f752211.jpg",
+    "source": "ad-creative",
+    "product": "lem",
+    "type": "ad-static",
+    "organic_score": 1,
+    "mood": "aspirational",
+    "shows_product": true,
+    "shows_person": false,
+    "has_text_overlay": true,
+    "size_kb": 291.1,
+    "best_use": [
+      "ad-reference",
+      "winning-creative-study"
+    ],
+    "rating": null,
+    "verified_purchase": null,
+    "ad_roas": 2.097281296548707,
+    "ad_spend_hkd": 360131.43,
+    "ad_conversions": 1168.0,
+    "entity_name": "Lem_Image_4Lem_NAN_JUNW4_145A_Jul_02_lem_Dec_3_nancypowerful.manus.space_Lem-Regalio-1_Manus NancyP 2025-12-02-c3a9eb3ca2a329b2791be3448231e60c",
+    "issues": [],
+    "tags": [
+      "image",
+      "roas-2.1x",
+      "with_issues"
+    ]
+  },
+  {
+    "path": "assets/winning-ads/13_1.9x_357k_image_8bacb184.jpg",
+    "source": "ad-creative",
+    "product": "lem",
+    "type": "ad-static",
+    "organic_score": 1,
+    "mood": "aspirational",
+    "shows_product": true,
+    "shows_person": false,
+    "has_text_overlay": true,
+    "size_kb": 124.4,
+    "best_use": [
+      "ad-reference",
+      "winning-creative-study"
+    ],
+    "rating": null,
+    "verified_purchase": null,
+    "ad_roas": 1.898128,
+    "ad_spend_hkd": 356718.775871,
+    "ad_conversions": 1051.0,
+    "entity_name": "{{product.name}} 2025-08-01-0b155544ea13cabf4b059e729084b0f5",
+    "issues": [],
+    "tags": [
+      "image",
+      "roas-1.9x",
+      "active"
+    ]
+  },
+  {
+    "path": "assets/winning-ads/14_2.2x_336k_image_206d4f99.jpg",
+    "source": "ad-creative",
+    "product": "lem",
+    "type": "ad-static",
+    "organic_score": 1,
+    "mood": "aspirational",
+    "shows_product": true,
+    "shows_person": false,
+    "has_text_overlay": true,
+    "size_kb": 1706.7,
+    "best_use": [
+      "ad-reference",
+      "winning-creative-study"
+    ],
+    "rating": null,
+    "verified_purchase": null,
+    "ad_roas": 2.150933,
+    "ad_spend_hkd": 335850.74,
+    "ad_conversions": 1275.0,
+    "entity_name": "\ud83e\udd2d Discreet Packaging + Free Shipping 2025-11-21-50051ed09816ced57791ca3f7fd089c0",
+    "issues": [],
+    "tags": [
+      "image",
+      "roas-2.2x",
+      "campaign_paused"
+    ]
+  },
+  {
+    "path": "assets/winning-ads/15_2.6x_322k_image_aefca85a.jpg",
+    "source": "ad-creative",
+    "product": "lem",
+    "type": "ad-static",
+    "organic_score": 1,
+    "mood": "aspirational",
+    "shows_product": true,
+    "shows_person": false,
+    "has_text_overlay": true,
+    "size_kb": 75.8,
+    "best_use": [
+      "ad-reference",
+      "winning-creative-study"
+    ],
+    "rating": null,
+    "verified_purchase": null,
+    "ad_roas": 2.578814538901593,
+    "ad_spend_hkd": 321926.37,
+    "ad_conversions": 1324.0,
+    "entity_name": "{{product.name}} 2026-01-21-f8cc099ac202cc4f085ae53c767f1754",
+    "issues": [],
+    "tags": [
+      "image",
+      "roas-2.6x",
+      "active"
+    ]
+  },
+  {
+    "path": "assets/winning-ads/16_1.8x_321k_image_31c897a6.jpg",
+    "source": "ad-creative",
+    "product": "lem",
+    "type": "ad-static",
+    "organic_score": 1,
+    "mood": "aspirational",
+    "shows_product": true,
+    "shows_person": false,
+    "has_text_overlay": true,
+    "size_kb": 1061.6,
+    "best_use": [
+      "ad-reference",
+      "winning-creative-study"
+    ],
+    "rating": null,
+    "verified_purchase": null,
+    "ad_roas": 1.8392978525355548,
+    "ad_spend_hkd": 321263.3400000001,
+    "ad_conversions": 947.0,
+    "entity_name": "Lem_Image_Lem_EN__NAN_OCTW1_129A_Dec_3_nancypowerful.manus.space_Lem-Regalio-1_Manus NancyPowerful_ 2025-12-03-4b450a698f1c44520727292c55c517b0",
+    "issues": [],
+    "tags": [
+      "image",
+      "roas-1.8x",
+      "paused"
+    ]
+  },
+  {
+    "path": "assets/winning-ads/17_1.7x_310k_image_b803e9d5.png",
+    "source": "ad-creative",
+    "product": "lem",
+    "type": "ad-static",
+    "organic_score": 1,
+    "mood": "aspirational",
+    "shows_product": true,
+    "shows_person": false,
+    "has_text_overlay": true,
+    "size_kb": 109.7,
+    "best_use": [
+      "ad-reference",
+      "winning-creative-study"
+    ],
+    "rating": null,
+    "verified_purchase": null,
+    "ad_roas": 1.6868314544713938,
+    "ad_spend_hkd": 310446.14,
+    "ad_conversions": 819.0,
+    "entity_name": "Image_ad_142_v1_1_Dec-14_nancypowerful.manus.space_Lem-Regalio-1_Manus NancyPowerful_Top 15 Countri 2025-12-13-5754938a179adaffd1f0310e073508a8",
+    "issues": [],
+    "tags": [
+      "image",
+      "roas-1.7x",
+      "active"
+    ]
+  },
+  {
+    "path": "assets/winning-ads/18_2.1x_279k_video_14888690.jpg",
+    "source": "ad-creative",
+    "product": "lem",
+    "type": "video-thumb",
+    "organic_score": 1,
+    "mood": "aspirational",
+    "shows_product": true,
+    "shows_person": false,
+    "has_text_overlay": true,
+    "size_kb": 121.7,
+    "best_use": [
+      "ad-reference",
+      "winning-creative-study"
+    ],
+    "rating": null,
+    "verified_purchase": null,
+    "ad_roas": 2.061029,
+    "ad_spend_hkd": 278519.15,
+    "ad_conversions": 947.0,
+    "entity_name": "Lem_Video_ACH - ROM - 86(2) SS1_Jan-23_valentines 2026-01-23-262e7d84121f45185f9963dc8b387ac4",
+    "issues": [],
+    "tags": [
+      "video",
+      "roas-2.1x",
+      "active"
+    ]
+  },
+  {
+    "path": "assets/winning-ads/19_2.1x_277k_image_8ceab33e.png",
+    "source": "ad-creative",
+    "product": "lem",
+    "type": "ad-static",
+    "organic_score": 1,
+    "mood": "aspirational",
+    "shows_product": true,
+    "shows_person": false,
+    "has_text_overlay": true,
+    "size_kb": 180.0,
+    "best_use": [
+      "ad-reference",
+      "winning-creative-study"
+    ],
+    "rating": null,
+    "verified_purchase": null,
+    "ad_roas": 2.061997,
+    "ad_spend_hkd": 277258.2,
+    "ad_conversions": 896.0,
+    "entity_name": "Image_ad_108_v1_1_Dec-13_nancypowerful.manus.space_Lem-Regalio-1_Manus NancyPowerful_Top 15 Countri 2025-12-13-380c6a51aaad607c8e0e5ef60b14fd03",
+    "issues": [],
+    "tags": [
+      "image",
+      "roas-2.1x",
+      "active"
+    ]
+  },
+  {
+    "path": "assets/winning-ads/20_2.3x_273k_image_c8ad68b4.jpg",
+    "source": "ad-creative",
+    "product": "lem",
+    "type": "ad-static",
+    "organic_score": 1,
+    "mood": "aspirational",
+    "shows_product": true,
+    "shows_person": false,
+    "has_text_overlay": true,
+    "size_kb": 668.3,
+    "best_use": [
+      "ad-reference",
+      "winning-creative-study"
+    ],
+    "rating": null,
+    "verified_purchase": null,
+    "ad_roas": 2.3269846729515824,
+    "ad_spend_hkd": 273288.22,
+    "ad_conversions": 1053.0,
+    "entity_name": "Lem_Image_NAN_NOVW2_115B_Nov-26_lem-black-friday-29_Hello-Regalio-2_Website_AU,CA,US,UK_Black Frida 2025-11-25-ec91b26d6fac5b51cf859f84a000df3b",
+    "issues": [],
+    "tags": [
+      "image",
+      "roas-2.3x",
+      "paused"
+    ]
+  },
+  {
+    "path": "assets/winning-ads/21_2.1x_264k_video_34272913.jpg",
+    "source": "ad-creative",
+    "product": "lem",
+    "type": "video-thumb",
+    "organic_score": 1,
+    "mood": "aspirational",
+    "shows_product": true,
+    "shows_person": false,
+    "has_text_overlay": true,
+    "size_kb": 305.2,
+    "best_use": [
+      "ad-reference",
+      "winning-creative-study"
+    ],
+    "rating": null,
+    "verified_purchase": null,
+    "ad_roas": 2.132928,
+    "ad_spend_hkd": 264461.38,
+    "ad_conversions": 918.0,
+    "entity_name": "Lem_Video_AdsCreativeHouse - ROM 86(4) SS3_Jan-09_lem-holiday 2026-01-08-9d69059b24e160e3386bae5fa3782e9c",
+    "issues": [],
+    "tags": [
+      "video",
+      "roas-2.1x",
+      "active"
+    ]
+  },
+  {
+    "path": "assets/winning-ads/22_2.1x_263k_image_b70fe5bd.png",
+    "source": "ad-creative",
+    "product": "lem",
+    "type": "ad-static",
+    "organic_score": 1,
+    "mood": "aspirational",
+    "shows_product": true,
+    "shows_person": false,
+    "has_text_overlay": true,
+    "size_kb": 97.9,
+    "best_use": [
+      "ad-reference",
+      "winning-creative-study"
+    ],
+    "rating": null,
+    "verified_purchase": null,
+    "ad_roas": 2.1043403422894364,
+    "ad_spend_hkd": 263189.023698,
+    "ad_conversions": 846.0,
+    "entity_name": "These Absolutely Suck! 2025-12-16-b9c264487c10c1adebc36142d95d96a2",
+    "issues": [],
+    "tags": [
+      "image",
+      "roas-2.1x",
+      "active"
+    ]
+  },
+  {
+    "path": "assets/winning-ads/23_2.6x_258k_video_88889973.jpg",
+    "source": "ad-creative",
+    "product": "lem",
+    "type": "video-thumb",
+    "organic_score": 1,
+    "mood": "aspirational",
+    "shows_product": true,
+    "shows_person": false,
+    "has_text_overlay": true,
+    "size_kb": 339.0,
+    "best_use": [
+      "ad-reference",
+      "winning-creative-study"
+    ],
+    "rating": null,
+    "verified_purchase": null,
+    "ad_roas": 2.585155,
+    "ad_spend_hkd": 257645.39,
+    "ad_conversions": 1065.0,
+    "entity_name": "Lem_Video_ACH - ROM - 86(2) SS3_Jan-23_valentines 2026-01-23-039af0a38702ecce6a0b88f02625060b",
+    "issues": [],
+    "tags": [
+      "video",
+      "roas-2.6x",
+      "active"
+    ]
+  },
+  {
+    "path": "assets/winning-ads/24_1.9x_237k_image_fa333040.jpg",
+    "source": "ad-creative",
+    "product": "lem",
+    "type": "ad-static",
+    "organic_score": 1,
+    "mood": "aspirational",
+    "shows_product": true,
+    "shows_person": false,
+    "has_text_overlay": true,
+    "size_kb": 1806.1,
+    "best_use": [
+      "ad-reference",
+      "winning-creative-study"
+    ],
+    "rating": null,
+    "verified_purchase": null,
+    "ad_roas": 1.8634993456916937,
+    "ad_spend_hkd": 236954.03,
+    "ad_conversions": 701.0,
+    "entity_name": "This New Year, Lem Ends the Guessing. \ud83c\udf4b 2026-01-08-9b6278c439d6bed57fb21557e987c6da",
+    "issues": [],
+    "tags": [
+      "image",
+      "roas-1.9x",
+      "active"
+    ]
+  },
+  {
+    "path": "assets/winning-ads/25_2.1x_225k_image_af431efe.jpg",
+    "source": "ad-creative",
+    "product": "lem",
+    "type": "ad-static",
+    "organic_score": 1,
+    "mood": "aspirational",
+    "shows_product": true,
+    "shows_person": false,
+    "has_text_overlay": true,
+    "size_kb": 1142.0,
+    "best_use": [
+      "ad-reference",
+      "winning-creative-study"
+    ],
+    "rating": null,
+    "verified_purchase": null,
+    "ad_roas": 2.0954563633513956,
+    "ad_spend_hkd": 225438.16,
+    "ad_conversions": 765.0,
+    "entity_name": "NAN_JULW2_127A_Jul_30_lem_Hello-Regalio-1_Nancy_Winners_ASC_30July25_1753876218717 2025-07-30-940f48323c93f0017a0760735372310d",
+    "issues": [],
+    "tags": [
+      "image",
+      "roas-2.1x",
+      "adset_paused"
+    ]
+  },
+  {
+    "path": "assets/winning-ads/26_2.0x_217k_video_12335034.jpg",
+    "source": "ad-creative",
+    "product": "lem",
+    "type": "video-thumb",
+    "organic_score": 1,
+    "mood": "aspirational",
+    "shows_product": true,
+    "shows_person": false,
+    "has_text_overlay": true,
+    "size_kb": 53.2,
+    "best_use": [
+      "ad-reference",
+      "winning-creative-study"
+    ],
+    "rating": null,
+    "verified_purchase": null,
+    "ad_roas": 1.9863626199797504,
+    "ad_spend_hkd": 216520.62,
+    "ad_conversions": 696.0,
+    "entity_name": "Men get pills. Women get Lem. 2026-02-20-18b94565e86d13047b3ee61060de4804",
+    "issues": [],
+    "tags": [
+      "video",
+      "roas-2.0x",
+      "with_issues"
+    ]
+  },
+  {
+    "path": "assets/winning-ads/27_2.1x_197k_video_12055576.jpg",
+    "source": "ad-creative",
+    "product": "lem",
+    "type": "video-thumb",
+    "organic_score": 1,
+    "mood": "aspirational",
+    "shows_product": true,
+    "shows_person": false,
+    "has_text_overlay": true,
+    "size_kb": 225.3,
+    "best_use": [
+      "ad-reference",
+      "winning-creative-study"
+    ],
+    "rating": null,
+    "verified_purchase": null,
+    "ad_roas": 2.0621863970992407,
+    "ad_spend_hkd": 197066.33000000002,
+    "ad_conversions": 708.0,
+    "entity_name": "Black Friday: Up to 60% Off 2025-12-16-dc6d90bab613e8d292923cc22178ba89",
+    "issues": [],
+    "tags": [
+      "video",
+      "roas-2.1x",
+      "paused"
+    ]
+  },
+  {
+    "path": "assets/winning-ads/28_1.7x_190k_video_82482971.jpg",
+    "source": "ad-creative",
+    "product": "lem",
+    "type": "video-thumb",
+    "organic_score": 1,
+    "mood": "aspirational",
+    "shows_product": true,
+    "shows_person": false,
+    "has_text_overlay": true,
+    "size_kb": 45.0,
+    "best_use": [
+      "ad-reference",
+      "winning-creative-study"
+    ],
+    "rating": null,
+    "verified_purchase": null,
+    "ad_roas": 1.73882,
+    "ad_spend_hkd": 189515.03,
+    "ad_conversions": 531.0,
+    "entity_name": "Lem_Image_Lem_Video_NANCY SORA 269-video-export-2025-10-24T17-01-15.109Z_Dec_3_nancypowerful.manus. 2025-12-03-15917f122681812e37b4ea5b5abfb8fa",
+    "issues": [],
+    "tags": [
+      "video",
+      "roas-1.7x",
+      "active"
+    ]
+  },
+  {
+    "path": "assets/winning-ads/29_1.7x_188k_image_87f6b8cb.png",
+    "source": "ad-creative",
+    "product": "lem",
+    "type": "ad-static",
+    "organic_score": 1,
+    "mood": "aspirational",
+    "shows_product": true,
+    "shows_person": false,
+    "has_text_overlay": true,
+    "size_kb": 138.4,
+    "best_use": [
+      "ad-reference",
+      "winning-creative-study"
+    ],
+    "rating": null,
+    "verified_purchase": null,
+    "ad_roas": 1.7119073946778307,
+    "ad_spend_hkd": 187877.16000000003,
+    "ad_conversions": 506.0,
+    "entity_name": "I Retired The \"Actress\" Last Night. 2026-01-02-43a876e2af42aa2bd64906667eb7db59",
+    "issues": [],
+    "tags": [
+      "image",
+      "roas-1.7x",
+      "active"
+    ]
+  },
+  {
+    "path": "assets/winning-ads/30_2.3x_181k_image_14d42dfb.jpg",
+    "source": "ad-creative",
+    "product": "lem",
+    "type": "ad-static",
+    "organic_score": 1,
+    "mood": "aspirational",
+    "shows_product": true,
+    "shows_person": false,
+    "has_text_overlay": true,
+    "size_kb": 553.7,
+    "best_use": [
+      "ad-reference",
+      "winning-creative-study"
+    ],
+    "rating": null,
+    "verified_purchase": null,
+    "ad_roas": 2.258140941251894,
+    "ad_spend_hkd": 181391.72000000003,
+    "ad_conversions": 632.0,
+    "entity_name": "This Valentine\u2019s, You Win. 2026-02-10-8d43691127731f5c0d57e73a61adf9ab",
+    "issues": [],
+    "tags": [
+      "image",
+      "roas-2.3x",
+      "paused"
+    ]
+  },
+  {
+    "path": "assets/winning-ads/31_2.1x_180k_video_17211965.jpg",
+    "source": "ad-creative",
+    "product": "lem",
+    "type": "video-thumb",
+    "organic_score": 1,
+    "mood": "aspirational",
+    "shows_product": true,
+    "shows_person": false,
+    "has_text_overlay": true,
+    "size_kb": 177.0,
+    "best_use": [
+      "ad-reference",
+      "winning-creative-study"
+    ],
+    "rating": null,
+    "verified_purchase": null,
+    "ad_roas": 2.102351,
+    "ad_spend_hkd": 180181.69,
+    "ad_conversions": 605.0,
+    "entity_name": "Lem_Video_Pov_topdown_view_202511021528_ewphb_upscaled_Dec_2_hellonancystress.manus.space_Hello-Nan 2025-12-02-cd85cb317485764ff972b1d825918170",
+    "issues": [],
+    "tags": [
+      "video",
+      "roas-2.1x",
+      "active"
+    ]
+  },
+  {
+    "path": "assets/winning-ads/32_2.2x_179k_image_e4bb8fb9.jpg",
+    "source": "ad-creative",
+    "product": "lem",
+    "type": "ad-static",
+    "organic_score": 1,
+    "mood": "aspirational",
+    "shows_product": true,
+    "shows_person": false,
+    "has_text_overlay": true,
+    "size_kb": 69.1,
+    "best_use": [
+      "ad-reference",
+      "winning-creative-study"
+    ],
+    "rating": null,
+    "verified_purchase": null,
+    "ad_roas": 2.193026117694948,
+    "ad_spend_hkd": 178908.456797,
+    "ad_conversions": 613.0,
+    "entity_name": "Lem_Image_Copy of 1d 11 - Lem vs Rose_Dec_3_nancypowerful.manus.space 2025-12-03-4af2e22cba544a0c91484cdaf00a86e8",
+    "issues": [],
+    "tags": [
+      "image",
+      "roas-2.2x",
+      "active"
+    ]
+  },
+  {
+    "path": "assets/winning-ads/33_2.2x_176k_image_ec7ca9a3.jpg",
+    "source": "ad-creative",
+    "product": "lem",
+    "type": "ad-static",
+    "organic_score": 1,
+    "mood": "aspirational",
+    "shows_product": true,
+    "shows_person": false,
+    "has_text_overlay": true,
+    "size_kb": 1250.9,
+    "best_use": [
+      "ad-reference",
+      "winning-creative-study"
+    ],
+    "rating": null,
+    "verified_purchase": null,
+    "ad_roas": 2.1929825293662293,
+    "ad_spend_hkd": 176166.13,
+    "ad_conversions": 620.0,
+    "entity_name": "Lem_Image_NAN_JANW2_17A_Jan-07_lem-holiday 2026-01-07-c44e7e388e362b6417f4ecacfdeb866e",
+    "issues": [],
+    "tags": [
+      "image",
+      "roas-2.2x",
+      "active"
+    ]
+  },
+  {
+    "path": "assets/winning-ads/34_1.9x_168k_image_bfea0dcf.png",
+    "source": "ad-creative",
+    "product": "lem",
+    "type": "ad-static",
+    "organic_score": 1,
+    "mood": "aspirational",
+    "shows_product": true,
+    "shows_person": false,
+    "has_text_overlay": true,
+    "size_kb": 169.7,
+    "best_use": [
+      "ad-reference",
+      "winning-creative-study"
+    ],
+    "rating": null,
+    "verified_purchase": null,
+    "ad_roas": 1.9258495977123773,
+    "ad_spend_hkd": 168116.87999999998,
+    "ad_conversions": 506.0,
+    "entity_name": "Men get answers. Women finally get options. 2025-12-26-cd8062dd9306d7316d74100087f1b34c",
+    "issues": [],
+    "tags": [
+      "image",
+      "roas-1.9x",
+      "active"
+    ]
+  },
+  {
+    "path": "assets/winning-ads/35_2.2x_161k_image_9d4aeae8.jpg",
+    "source": "ad-creative",
+    "product": "lem",
+    "type": "ad-static",
+    "organic_score": 1,
+    "mood": "aspirational",
+    "shows_product": true,
+    "shows_person": false,
+    "has_text_overlay": true,
+    "size_kb": 45.9,
+    "best_use": [
+      "ad-reference",
+      "winning-creative-study"
+    ],
+    "rating": null,
+    "verified_purchase": null,
+    "ad_roas": 2.195719244486016,
+    "ad_spend_hkd": 161297.61,
+    "ad_conversions": 554.0,
+    "entity_name": "I Retired The \"Actress\" Last Night. 2026-02-03-b799254345621964322bd61f819e6c34",
+    "issues": [],
+    "tags": [
+      "image",
+      "roas-2.2x",
+      "paused"
+    ]
+  },
+  {
+    "path": "assets/winning-ads/36_1.9x_155k_image_3fb7a6c7.jpg",
+    "source": "ad-creative",
+    "product": "lem",
+    "type": "ad-static",
+    "organic_score": 1,
+    "mood": "aspirational",
+    "shows_product": true,
+    "shows_person": false,
+    "has_text_overlay": true,
+    "size_kb": 1434.9,
+    "best_use": [
+      "ad-reference",
+      "winning-creative-study"
+    ],
+    "rating": null,
+    "verified_purchase": null,
+    "ad_roas": 1.8522452543109775,
+    "ad_spend_hkd": 155303.52000000002,
+    "ad_conversions": 435.0,
+    "entity_name": "This Valentine\u2019s, You Win. 2026-02-10-157215cee59f1d80415c931b59a8763c",
+    "issues": [],
+    "tags": [
+      "image",
+      "roas-1.9x",
+      "active"
+    ]
+  },
+  {
+    "path": "assets/winning-ads/37_2.2x_155k_image_297ad697.jpg",
+    "source": "ad-creative",
+    "product": "lem",
+    "type": "ad-static",
+    "organic_score": 1,
+    "mood": "aspirational",
+    "shows_product": true,
+    "shows_person": false,
+    "has_text_overlay": true,
+    "size_kb": 1598.4,
+    "best_use": [
+      "ad-reference",
+      "winning-creative-study"
+    ],
+    "rating": null,
+    "verified_purchase": null,
+    "ad_roas": 2.207318801776163,
+    "ad_spend_hkd": 154709.9,
+    "ad_conversions": 546.0,
+    "entity_name": "NAN_JANW4_15C_Feb-23_lem 2026-02-22-4dc9659d8c001ab23ff8d184718992e3",
+    "issues": [],
+    "tags": [
+      "image",
+      "roas-2.2x",
+      "active"
+    ]
+  },
+  {
+    "path": "assets/winning-ads/38_2.9x_150k_video_23333575.jpg",
+    "source": "ad-creative",
+    "product": "lem",
+    "type": "video-thumb",
+    "organic_score": 1,
+    "mood": "aspirational",
+    "shows_product": true,
+    "shows_person": false,
+    "has_text_overlay": true,
+    "size_kb": 111.0,
+    "best_use": [
+      "ad-reference",
+      "winning-creative-study"
+    ],
+    "rating": null,
+    "verified_purchase": null,
+    "ad_roas": 2.890785,
+    "ad_spend_hkd": 149735.72,
+    "ad_conversions": 735.0,
+    "entity_name": "Lem_Video_ACH - ROM 86(4) SS2_Dec-18_lem-holiday_Nancy-5_Website_Top 15 Countries_Holiday Ads_ACH P 2025-12-18-8e4619d28c8b70dc9c0433e5f3d5857a",
+    "issues": [],
+    "tags": [
+      "video",
+      "roas-2.9x",
+      "paused"
+    ]
+  },
+  {
+    "path": "assets/winning-ads/39_2.1x_146k_image_74683407.jpg",
+    "source": "ad-creative",
+    "product": "lem",
+    "type": "ad-static",
+    "organic_score": 1,
+    "mood": "aspirational",
+    "shows_product": true,
+    "shows_person": false,
+    "has_text_overlay": true,
+    "size_kb": 1977.2,
+    "best_use": [
+      "ad-reference",
+      "winning-creative-study"
+    ],
+    "rating": null,
+    "verified_purchase": null,
+    "ad_roas": 2.13519374587282,
+    "ad_spend_hkd": 145538.22999999998,
+    "ad_conversions": 514.0,
+    "entity_name": "Lem_Image_NAN_JUNW4_166C_Jul_02_lem_Dec_3_nancypowerful.manus.space_Lem-Regalio-1_Manus NancyPowerf 2025-12-02-6783953a38a56b773e143a01a55d8196",
+    "issues": [],
+    "tags": [
+      "image",
+      "roas-2.1x",
+      "with_issues"
+    ]
+  },
+  {
+    "path": "assets/winning-ads/40_2.1x_145k_image_235421b0.jpg",
+    "source": "ad-creative",
+    "product": "lem",
+    "type": "ad-static",
+    "organic_score": 1,
+    "mood": "aspirational",
+    "shows_product": true,
+    "shows_person": false,
+    "has_text_overlay": true,
+    "size_kb": 1423.2,
+    "best_use": [
+      "ad-reference",
+      "winning-creative-study"
+    ],
+    "rating": null,
+    "verified_purchase": null,
+    "ad_roas": 2.131243996012652,
+    "ad_spend_hkd": 145108.98,
+    "ad_conversions": 480.0,
+    "entity_name": "Lem_Image_1NAN_JUNW4_168A_Jul_02_lem_Dec_3_nancypowerful.manus.space_Lem-Regalio-1_Manus NancyPower 2025-12-02-0228bd1e5a4fd0eb8b3ac6243b098fd9",
+    "issues": [],
+    "tags": [
+      "image",
+      "roas-2.1x",
+      "active"
+    ]
+  },
+  {
+    "path": "assets/winning-ads/41_2.2x_145k_video_21503290.jpg",
+    "source": "ad-creative",
+    "product": "lem",
+    "type": "video-thumb",
+    "organic_score": 1,
+    "mood": "aspirational",
+    "shows_product": true,
+    "shows_person": false,
+    "has_text_overlay": true,
+    "size_kb": 123.4,
+    "best_use": [
+      "ad-reference",
+      "winning-creative-study"
+    ],
+    "rating": null,
+    "verified_purchase": null,
+    "ad_roas": 2.248439,
+    "ad_spend_hkd": 144744.28,
+    "ad_conversions": 524.0,
+    "entity_name": "\ud83e\udd2d Discreet Packaging + Free Shipping 2025-08-06-2dd9b382805c6d987eb724b3f497e4a5",
+    "issues": [],
+    "tags": [
+      "video",
+      "roas-2.2x",
+      "active"
+    ]
+  },
+  {
+    "path": "assets/winning-ads/42_1.9x_142k_video_13657769.jpg",
+    "source": "ad-creative",
+    "product": "lem",
+    "type": "video-thumb",
+    "organic_score": 1,
+    "mood": "aspirational",
+    "shows_product": true,
+    "shows_person": false,
+    "has_text_overlay": true,
+    "size_kb": 133.2,
+    "best_use": [
+      "ad-reference",
+      "winning-creative-study"
+    ],
+    "rating": null,
+    "verified_purchase": null,
+    "ad_roas": 1.9299546530267524,
+    "ad_spend_hkd": 141652.16,
+    "ad_conversions": 441.0,
+    "entity_name": "These Absolutely Suck! 2025-11-05-5c71bff0e123ba9423b4c1e968959b86",
+    "issues": [],
+    "tags": [
+      "video",
+      "roas-1.9x",
+      "active"
+    ]
+  },
+  {
+    "path": "assets/winning-ads/43_2.5x_139k_image_0e716008.png",
+    "source": "ad-creative",
+    "product": "lem",
+    "type": "ad-static",
+    "organic_score": 1,
+    "mood": "aspirational",
+    "shows_product": true,
+    "shows_person": false,
+    "has_text_overlay": true,
+    "size_kb": 67.0,
+    "best_use": [
+      "ad-reference",
+      "winning-creative-study"
+    ],
+    "rating": null,
+    "verified_purchase": null,
+    "ad_roas": 2.4868265771278,
+    "ad_spend_hkd": 138686.44,
+    "ad_conversions": 548.0,
+    "entity_name": "I Retired The \"Actress\" Last Night. 2026-02-19-5dfa4cd189ef7cf240c9c166fd075c8f",
+    "issues": [],
+    "tags": [
+      "image",
+      "roas-2.5x",
+      "active"
+    ]
+  },
+  {
+    "path": "assets/winning-ads/44_1.7x_135k_image_d2ca52d6.jpg",
+    "source": "ad-creative",
+    "product": "lem",
+    "type": "ad-static",
+    "organic_score": 1,
+    "mood": "aspirational",
+    "shows_product": true,
+    "shows_person": false,
+    "has_text_overlay": true,
+    "size_kb": 1348.6,
+    "best_use": [
+      "ad-reference",
+      "winning-creative-study"
+    ],
+    "rating": null,
+    "verified_purchase": null,
+    "ad_roas": 1.7035743919289825,
+    "ad_spend_hkd": 135435.71,
+    "ad_conversions": 363.0,
+    "entity_name": "NAN_JUNW4_135B_var_003_2_English_Dec-28_quiz-25 2025-12-27-22f759f025e0b6786c5b4ef25b482a2b",
+    "issues": [],
+    "tags": [
+      "image",
+      "roas-1.7x",
+      "active"
+    ]
+  },
+  {
+    "path": "assets/winning-ads/45_2.0x_134k_image_323be898.jpg",
+    "source": "ad-creative",
+    "product": "lem",
+    "type": "ad-static",
+    "organic_score": 1,
+    "mood": "aspirational",
+    "shows_product": true,
+    "shows_person": false,
+    "has_text_overlay": true,
+    "size_kb": 429.9,
+    "best_use": [
+      "ad-reference",
+      "winning-creative-study"
+    ],
+    "rating": null,
+    "verified_purchase": null,
+    "ad_roas": 2.0173153940672566,
+    "ad_spend_hkd": 134374.6,
+    "ad_conversions": 427.0,
+    "entity_name": "Rose_Image_NAN_SEPW3_68A 11_Oct-17_7-best-suction-toys-for-women_Hello-Momo-1_Zenify_US, UK, AU, CA 2025-10-17-bbbab1392951e360045efe795aed9df5",
+    "issues": [],
+    "tags": [
+      "image",
+      "roas-2.0x",
+      "active"
+    ]
+  },
+  {
+    "path": "assets/winning-ads/46_1.7x_133k_video_11852695.jpg",
+    "source": "ad-creative",
+    "product": "lem",
+    "type": "video-thumb",
+    "organic_score": 1,
+    "mood": "aspirational",
+    "shows_product": true,
+    "shows_person": false,
+    "has_text_overlay": true,
+    "size_kb": 109.9,
+    "best_use": [
+      "ad-reference",
+      "winning-creative-study"
+    ],
+    "rating": null,
+    "verified_purchase": null,
+    "ad_roas": 1.7416076004796992,
+    "ad_spend_hkd": 133041.7,
+    "ad_conversions": 399.0,
+    "entity_name": "Black Friday: Up to 60% Off 2025-12-16-5adc8b1b7357b73dd183d4cb02b40bae",
+    "issues": [],
+    "tags": [
+      "video",
+      "roas-1.7x",
+      "paused"
+    ]
+  },
+  {
+    "path": "assets/winning-ads/47_2.3x_132k_image_635cf537.jpg",
+    "source": "ad-creative",
+    "product": "lem",
+    "type": "ad-static",
+    "organic_score": 1,
+    "mood": "aspirational",
+    "shows_product": true,
+    "shows_person": false,
+    "has_text_overlay": true,
+    "size_kb": 756.2,
+    "best_use": [
+      "ad-reference",
+      "winning-creative-study"
+    ],
+    "rating": null,
+    "verified_purchase": null,
+    "ad_roas": 2.338848625417985,
+    "ad_spend_hkd": 132278.159974,
+    "ad_conversions": 499.0,
+    "entity_name": "{{product.name}} 2026-01-08-ca92dd015647820545c2818da9e1a9b6",
+    "issues": [],
+    "tags": [
+      "image",
+      "roas-2.3x",
+      "active"
+    ]
+  },
+  {
+    "path": "assets/winning-ads/48_2.3x_132k_image_bb0bb394.jpg",
+    "source": "ad-creative",
+    "product": "lem",
+    "type": "ad-static",
+    "organic_score": 1,
+    "mood": "aspirational",
+    "shows_product": true,
+    "shows_person": false,
+    "has_text_overlay": true,
+    "size_kb": 163.0,
+    "best_use": [
+      "ad-reference",
+      "winning-creative-study"
+    ],
+    "rating": null,
+    "verified_purchase": null,
+    "ad_roas": 2.322962430949687,
+    "ad_spend_hkd": 132078.04,
+    "ad_conversions": 483.0,
+    "entity_name": "Do this to mimic vagina with pumpkn_Dec-21_7-best-suction-toys-for-women_Hello-Momo-1_Zenify_US, UK 2025-12-20-9dca4939cf169102c05afc1cd78d2e08",
+    "issues": [],
+    "tags": [
+      "image",
+      "roas-2.3x",
+      "active"
+    ]
+  },
+  {
+    "path": "assets/winning-ads/49_2.5x_122k_image_0adc7bb4.png",
+    "source": "ad-creative",
+    "product": "lem",
+    "type": "ad-static",
+    "organic_score": 1,
+    "mood": "aspirational",
+    "shows_product": true,
+    "shows_person": false,
+    "has_text_overlay": true,
+    "size_kb": 90.9,
+    "best_use": [
+      "ad-reference",
+      "winning-creative-study"
+    ],
+    "rating": null,
+    "verified_purchase": null,
+    "ad_roas": 2.4700854474047707,
+    "ad_spend_hkd": 121797.36000000002,
+    "ad_conversions": 508.0,
+    "entity_name": "Image_ad_060_v2_1_Dec-13_nancypowerful.manus.space_Lem-Regalio-1_Manus NancyPowerful_Top 15 Countri 2025-12-13-56f0e3c5f21484ff3fb5e0e68c0b18fd",
+    "issues": [],
+    "tags": [
+      "image",
+      "roas-2.5x",
+      "with_issues"
+    ]
+  },
+  {
+    "path": "assets/winning-ads/50_2.2x_120k_image_ccb11ba8.jpg",
+    "source": "ad-creative",
+    "product": "lem",
+    "type": "ad-static",
+    "organic_score": 1,
+    "mood": "aspirational",
+    "shows_product": true,
+    "shows_person": false,
+    "has_text_overlay": true,
+    "size_kb": 1334.8,
+    "best_use": [
+      "ad-reference",
+      "winning-creative-study"
+    ],
+    "rating": null,
+    "verified_purchase": null,
+    "ad_roas": 2.1582009791792087,
+    "ad_spend_hkd": 120146.72999999998,
+    "ad_conversions": 415.0,
+    "entity_name": "Lem_NAN_DECW3_111A_Jan-16_quiz-25 2026-01-15-f78c339e6b3be71f933d0d5748c5339f",
+    "issues": [],
+    "tags": [
+      "image",
+      "roas-2.2x",
+      "adset_paused"
+    ]
+  },
+  {
+    "path": "images/pdp11.jpg",
+    "source": "product-shoot",
+    "product": "lem",
+    "type": "product-hero",
+    "organic_score": 3,
+    "mood": "clinical",
+    "shows_product": true,
+    "shows_person": false,
+    "has_text_overlay": false,
+    "size_kb": 74.6,
+    "best_use": [
+      "product-showcase",
+      "hero-image",
+      "gallery"
+    ],
+    "rating": null,
+    "verified_purchase": null,
+    "ad_roas": null,
+    "ad_spend_hkd": null,
+    "ad_conversions": null,
+    "issues": [],
+    "tags": [
+      "pdp",
+      "product-photo"
+    ]
+  },
+  {
+    "path": "images/pdp12.jpg",
+    "source": "product-shoot",
+    "product": "lem",
+    "type": "product-hero",
+    "organic_score": 3,
+    "mood": "clinical",
+    "shows_product": true,
+    "shows_person": false,
+    "has_text_overlay": false,
+    "size_kb": 149.0,
+    "best_use": [
+      "product-showcase",
+      "hero-image",
+      "gallery"
+    ],
+    "rating": null,
+    "verified_purchase": null,
+    "ad_roas": null,
+    "ad_spend_hkd": null,
+    "ad_conversions": null,
+    "issues": [],
+    "tags": [
+      "pdp",
+      "product-photo"
+    ]
+  },
+  {
+    "path": "images/pdp17.jpg",
+    "source": "product-shoot",
+    "product": "lem",
+    "type": "product-hero",
+    "organic_score": 3,
+    "mood": "clinical",
+    "shows_product": true,
+    "shows_person": false,
+    "has_text_overlay": false,
+    "size_kb": 140.4,
+    "best_use": [
+      "product-showcase",
+      "hero-image",
+      "gallery"
+    ],
+    "rating": null,
+    "verified_purchase": null,
+    "ad_roas": null,
+    "ad_spend_hkd": null,
+    "ad_conversions": null,
+    "issues": [],
+    "tags": [
+      "pdp",
+      "product-photo"
+    ]
+  },
+  {
+    "path": "images/pdp14.jpg",
+    "source": "product-shoot",
+    "product": "lem",
+    "type": "product-hero",
+    "organic_score": 3,
+    "mood": "clinical",
+    "shows_product": true,
+    "shows_person": false,
+    "has_text_overlay": false,
+    "size_kb": 205.2,
+    "best_use": [
+      "product-showcase",
+      "hero-image",
+      "gallery"
+    ],
+    "rating": null,
+    "verified_purchase": null,
+    "ad_roas": null,
+    "ad_spend_hkd": null,
+    "ad_conversions": null,
+    "issues": [],
+    "tags": [
+      "pdp",
+      "product-photo"
+    ]
+  },
+  {
+    "path": "images/pdp4.jpg",
+    "source": "product-shoot",
+    "product": "lem",
+    "type": "product-hero",
+    "organic_score": 3,
+    "mood": "clinical",
+    "shows_product": true,
+    "shows_person": false,
+    "has_text_overlay": false,
+    "size_kb": 190.1,
+    "best_use": [
+      "product-showcase",
+      "hero-image",
+      "gallery"
+    ],
+    "rating": null,
+    "verified_purchase": null,
+    "ad_roas": null,
+    "ad_spend_hkd": null,
+    "ad_conversions": null,
+    "issues": [],
+    "tags": [
+      "pdp",
+      "product-photo"
+    ]
+  },
+  {
+    "path": "images/pdp6.jpg",
+    "source": "product-shoot",
+    "product": "lem",
+    "type": "product-hero",
+    "organic_score": 3,
+    "mood": "clinical",
+    "shows_product": true,
+    "shows_person": false,
+    "has_text_overlay": false,
+    "size_kb": 139.3,
+    "best_use": [
+      "product-showcase",
+      "hero-image",
+      "gallery"
+    ],
+    "rating": null,
+    "verified_purchase": null,
+    "ad_roas": null,
+    "ad_spend_hkd": null,
+    "ad_conversions": null,
+    "issues": [],
+    "tags": [
+      "pdp",
+      "product-photo"
+    ]
+  },
+  {
+    "path": "images/pdp7.jpg",
+    "source": "product-shoot",
+    "product": "lem",
+    "type": "product-hero",
+    "organic_score": 3,
+    "mood": "clinical",
+    "shows_product": true,
+    "shows_person": false,
+    "has_text_overlay": false,
+    "size_kb": 290.2,
+    "best_use": [
+      "product-showcase",
+      "hero-image",
+      "gallery"
+    ],
+    "rating": null,
+    "verified_purchase": null,
+    "ad_roas": null,
+    "ad_spend_hkd": null,
+    "ad_conversions": null,
+    "issues": [],
+    "tags": [
+      "pdp",
+      "product-photo"
+    ]
+  },
+  {
+    "path": "images/pdp1.jpg",
+    "source": "product-shoot",
+    "product": "lem",
+    "type": "product-hero",
+    "organic_score": 3,
+    "mood": "clinical",
+    "shows_product": true,
+    "shows_person": false,
+    "has_text_overlay": false,
+    "size_kb": 91.0,
+    "best_use": [
+      "product-showcase",
+      "hero-image",
+      "gallery"
+    ],
+    "rating": null,
+    "verified_purchase": null,
+    "ad_roas": null,
+    "ad_spend_hkd": null,
+    "ad_conversions": null,
+    "issues": [],
+    "tags": [
+      "pdp",
+      "product-photo"
+    ]
+  },
+  {
+    "path": "images/pdp9.jpg",
+    "source": "product-shoot",
+    "product": "lem",
+    "type": "product-hero",
+    "organic_score": 3,
+    "mood": "clinical",
+    "shows_product": true,
+    "shows_person": false,
+    "has_text_overlay": false,
+    "size_kb": 159.1,
+    "best_use": [
+      "product-showcase",
+      "hero-image",
+      "gallery"
+    ],
+    "rating": null,
+    "verified_purchase": null,
+    "ad_roas": null,
+    "ad_spend_hkd": null,
+    "ad_conversions": null,
+    "issues": [],
+    "tags": [
+      "pdp",
+      "product-photo"
+    ]
+  },
+  {
+    "path": "images/loox-review2.jpg",
+    "source": "loox",
+    "product": "lem",
+    "type": "review-photo",
+    "organic_score": 5,
+    "mood": "authentic",
+    "shows_product": true,
+    "shows_person": false,
+    "has_text_overlay": false,
+    "size_kb": 40.5,
+    "best_use": [
+      "review-avatar",
+      "ugc-grid",
+      "social-proof"
+    ],
+    "rating": 5,
+    "verified_purchase": true,
+    "ad_roas": null,
+    "ad_spend_hkd": null,
+    "ad_conversions": null,
+    "issues": [],
+    "tags": [
+      "customer-photo",
+      "organic",
+      "5-star"
+    ]
+  },
+  {
+    "path": "images/loox-review3.jpg",
+    "source": "loox",
+    "product": "lem",
+    "type": "review-photo",
+    "organic_score": 5,
+    "mood": "authentic",
+    "shows_product": true,
+    "shows_person": false,
+    "has_text_overlay": false,
+    "size_kb": 24.0,
+    "best_use": [
+      "review-avatar",
+      "ugc-grid",
+      "social-proof"
+    ],
+    "rating": 5,
+    "verified_purchase": true,
+    "ad_roas": null,
+    "ad_spend_hkd": null,
+    "ad_conversions": null,
+    "issues": [],
+    "tags": [
+      "customer-photo",
+      "organic",
+      "5-star"
+    ]
+  },
+  {
+    "path": "images/loox-review1.jpg",
+    "source": "loox",
+    "product": "lem",
+    "type": "review-photo",
+    "organic_score": 5,
+    "mood": "authentic",
+    "shows_product": true,
+    "shows_person": false,
+    "has_text_overlay": false,
+    "size_kb": 22.9,
+    "best_use": [
+      "review-avatar",
+      "ugc-grid",
+      "social-proof"
+    ],
+    "rating": 5,
+    "verified_purchase": true,
+    "ad_roas": null,
+    "ad_spend_hkd": null,
+    "ad_conversions": null,
+    "issues": [],
+    "tags": [
+      "customer-photo",
+      "organic",
+      "5-star"
+    ]
+  },
+  {
+    "path": "images/loox-review4.jpg",
+    "source": "loox",
+    "product": "lem",
+    "type": "review-photo",
+    "organic_score": 5,
+    "mood": "authentic",
+    "shows_product": true,
+    "shows_person": false,
+    "has_text_overlay": false,
+    "size_kb": 12.6,
+    "best_use": [
+      "review-avatar",
+      "ugc-grid",
+      "social-proof"
+    ],
+    "rating": 5,
+    "verified_purchase": true,
+    "ad_roas": null,
+    "ad_spend_hkd": null,
+    "ad_conversions": null,
+    "issues": [],
+    "tags": [
+      "customer-photo",
+      "organic",
+      "5-star"
+    ]
+  },
+  {
+    "path": "images/loox-review5.jpg",
+    "source": "loox",
+    "product": "lem",
+    "type": "review-photo",
+    "organic_score": 5,
+    "mood": "authentic",
+    "shows_product": true,
+    "shows_person": false,
+    "has_text_overlay": false,
+    "size_kb": 13.9,
+    "best_use": [
+      "review-avatar",
+      "ugc-grid",
+      "social-proof"
+    ],
+    "rating": 5,
+    "verified_purchase": true,
+    "ad_roas": null,
+    "ad_spend_hkd": null,
+    "ad_conversions": null,
+    "issues": [],
+    "tags": [
+      "customer-photo",
+      "organic",
+      "5-star"
+    ]
+  },
+  {
+    "path": "images/loox-review7.jpg",
+    "source": "loox",
+    "product": "lem",
+    "type": "review-photo",
+    "organic_score": 5,
+    "mood": "authentic",
+    "shows_product": true,
+    "shows_person": false,
+    "has_text_overlay": false,
+    "size_kb": 14.0,
+    "best_use": [
+      "review-avatar",
+      "ugc-grid",
+      "social-proof"
+    ],
+    "rating": 5,
+    "verified_purchase": true,
+    "ad_roas": null,
+    "ad_spend_hkd": null,
+    "ad_conversions": null,
+    "issues": [],
+    "tags": [
+      "customer-photo",
+      "organic",
+      "5-star"
+    ]
+  },
+  {
+    "path": "images/loox-review6.jpg",
+    "source": "loox",
+    "product": "lem",
+    "type": "review-photo",
+    "organic_score": 5,
+    "mood": "authentic",
+    "shows_product": true,
+    "shows_person": false,
+    "has_text_overlay": false,
+    "size_kb": 30.5,
+    "best_use": [
+      "review-avatar",
+      "ugc-grid",
+      "social-proof"
+    ],
+    "rating": 5,
+    "verified_purchase": true,
+    "ad_roas": null,
+    "ad_spend_hkd": null,
+    "ad_conversions": null,
+    "issues": [],
+    "tags": [
+      "customer-photo",
+      "organic",
+      "5-star"
+    ]
+  },
+  {
+    "path": "images/loox-review8.jpg",
+    "source": "loox",
+    "product": "lem",
+    "type": "review-photo",
+    "organic_score": 5,
+    "mood": "authentic",
+    "shows_product": true,
+    "shows_person": false,
+    "has_text_overlay": false,
+    "size_kb": 20.1,
+    "best_use": [
+      "review-avatar",
+      "ugc-grid",
+      "social-proof"
+    ],
+    "rating": 5,
+    "verified_purchase": true,
+    "ad_roas": null,
+    "ad_spend_hkd": null,
+    "ad_conversions": null,
+    "issues": [],
+    "tags": [
+      "customer-photo",
+      "organic",
+      "5-star"
+    ]
+  },
+  {
+    "path": "images/loox-review9.jpg",
+    "source": "loox",
+    "product": "lem",
+    "type": "review-photo",
+    "organic_score": 5,
+    "mood": "authentic",
+    "shows_product": true,
+    "shows_person": false,
+    "has_text_overlay": false,
+    "size_kb": 16.3,
+    "best_use": [
+      "review-avatar",
+      "ugc-grid",
+      "social-proof"
+    ],
+    "rating": 5,
+    "verified_purchase": true,
+    "ad_roas": null,
+    "ad_spend_hkd": null,
+    "ad_conversions": null,
+    "issues": [],
+    "tags": [
+      "customer-photo",
+      "organic",
+      "5-star"
+    ]
+  },
+  {
+    "path": "images/loox-review10.jpg",
+    "source": "loox",
+    "product": "lem",
+    "type": "review-photo",
+    "organic_score": 5,
+    "mood": "authentic",
+    "shows_product": true,
+    "shows_person": false,
+    "has_text_overlay": false,
+    "size_kb": 44.6,
+    "best_use": [
+      "review-avatar",
+      "ugc-grid",
+      "social-proof"
+    ],
+    "rating": 5,
+    "verified_purchase": true,
+    "ad_roas": null,
+    "ad_spend_hkd": null,
+    "ad_conversions": null,
+    "issues": [
+      "loox-review10.jpg may be AI-generated"
+    ],
+    "tags": [
+      "customer-photo",
+      "organic",
+      "5-star"
+    ]
+  },
+  {
+    "path": "lem/images/ugc/alyssa-g.png",
+    "source": "ugc-branded",
+    "product": "lem",
+    "type": "ugc-poster",
+    "organic_score": 2,
+    "mood": "aspirational",
+    "shows_product": false,
+    "shows_person": true,
+    "has_text_overlay": true,
+    "size_kb": 1390.8,
+    "best_use": [
+      "NOT for avatars - name mismatch risk",
+      "full-width ugc feature"
+    ],
+    "rating": null,
+    "verified_purchase": null,
+    "ad_roas": null,
+    "ad_spend_hkd": null,
+    "ad_conversions": null,
+    "issues": [
+      "branded poster card with visible name text",
+      "shows 'Alyssa Grenfell' - will mismatch if used as different person's avatar"
+    ],
+    "tags": [
+      "branded",
+      "poster-card",
+      "name-visible",
+      "large-file"
+    ]
+  },
+  {
+    "path": "lem/images/ugc/jordan-t.png",
+    "source": "ugc-branded",
+    "product": "lem",
+    "type": "ugc-poster",
+    "organic_score": 2,
+    "mood": "aspirational",
+    "shows_product": false,
+    "shows_person": true,
+    "has_text_overlay": true,
+    "size_kb": 1220.0,
+    "best_use": [
+      "NOT for avatars - name mismatch risk",
+      "full-width ugc feature"
+    ],
+    "rating": null,
+    "verified_purchase": null,
+    "ad_roas": null,
+    "ad_spend_hkd": null,
+    "ad_conversions": null,
+    "issues": [
+      "branded poster card with visible name text",
+      "shows 'Jordan Theresa' - will mismatch if used as different person's avatar"
+    ],
+    "tags": [
+      "branded",
+      "poster-card",
+      "name-visible",
+      "large-file"
+    ]
+  },
+  {
+    "path": "lem/images/ugc/daliza.png",
+    "source": "ugc-branded",
+    "product": "lem",
+    "type": "ugc-poster",
+    "organic_score": 2,
+    "mood": "aspirational",
+    "shows_product": false,
+    "shows_person": true,
+    "has_text_overlay": true,
+    "size_kb": 1035.6,
+    "best_use": [
+      "NOT for avatars - name mismatch risk",
+      "full-width ugc feature"
+    ],
+    "rating": null,
+    "verified_purchase": null,
+    "ad_roas": null,
+    "ad_spend_hkd": null,
+    "ad_conversions": null,
+    "issues": [
+      "branded poster card with visible name text",
+      "shows 'Daliza' - will mismatch if used as different person's avatar"
+    ],
+    "tags": [
+      "branded",
+      "poster-card",
+      "name-visible",
+      "large-file"
+    ]
+  },
+  {
+    "path": "lem/images/ugc/deliza.png",
+    "source": "ugc-branded",
+    "product": "lem",
+    "type": "ugc-poster",
+    "organic_score": 2,
+    "mood": "aspirational",
+    "shows_product": false,
+    "shows_person": true,
+    "has_text_overlay": true,
+    "size_kb": 1036.0,
+    "best_use": [
+      "NOT for avatars - name mismatch risk",
+      "full-width ugc feature"
+    ],
+    "rating": null,
+    "verified_purchase": null,
+    "ad_roas": null,
+    "ad_spend_hkd": null,
+    "ad_conversions": null,
+    "issues": [
+      "branded poster card with visible name text",
+      "shows 'Deliza' - will mismatch if used as different person's avatar"
+    ],
+    "tags": [
+      "branded",
+      "poster-card",
+      "name-visible",
+      "large-file"
+    ]
+  },
+  {
+    "path": "lem/images/product/ugc-poster-1.jpg",
+    "source": "ugc-tiktok",
+    "product": "lem",
+    "type": "ugc-tiktok-screenshot",
+    "organic_score": 4,
+    "mood": "fun",
+    "shows_product": true,
+    "shows_person": true,
+    "has_text_overlay": true,
+    "size_kb": 27.7,
+    "best_use": [
+      "ugc-grid",
+      "social-proof-scroll"
+    ],
+    "rating": null,
+    "verified_purchase": null,
+    "ad_roas": null,
+    "ad_spend_hkd": null,
+    "ad_conversions": null,
+    "issues": [],
+    "tags": [
+      "tiktok",
+      "screenshot",
+      "ugc"
+    ]
+  },
+  {
+    "path": "lem/images/product/ugc-poster-2.jpg",
+    "source": "ugc-tiktok",
+    "product": "lem",
+    "type": "ugc-tiktok-screenshot",
+    "organic_score": 4,
+    "mood": "fun",
+    "shows_product": true,
+    "shows_person": true,
+    "has_text_overlay": true,
+    "size_kb": 28.3,
+    "best_use": [
+      "ugc-grid",
+      "social-proof-scroll"
+    ],
+    "rating": null,
+    "verified_purchase": null,
+    "ad_roas": null,
+    "ad_spend_hkd": null,
+    "ad_conversions": null,
+    "issues": [],
+    "tags": [
+      "tiktok",
+      "screenshot",
+      "ugc"
+    ]
+  },
+  {
+    "path": "lem/images/product/ugc-poster-3.jpg",
+    "source": "ugc-tiktok",
+    "product": "lem",
+    "type": "ugc-tiktok-screenshot",
+    "organic_score": 4,
+    "mood": "fun",
+    "shows_product": true,
+    "shows_person": true,
+    "has_text_overlay": true,
+    "size_kb": 103.3,
+    "best_use": [
+      "ugc-grid",
+      "social-proof-scroll"
+    ],
+    "rating": null,
+    "verified_purchase": null,
+    "ad_roas": null,
+    "ad_spend_hkd": null,
+    "ad_conversions": null,
+    "issues": [],
+    "tags": [
+      "tiktok",
+      "screenshot",
+      "ugc"
+    ]
+  },
+  {
+    "path": "lem/images/product/lem-hero.jpg",
+    "source": "product-shoot",
+    "product": "lem",
+    "type": "product-hero",
+    "organic_score": 4,
+    "mood": "clinical",
+    "shows_product": true,
+    "shows_person": false,
+    "has_text_overlay": false,
+    "size_kb": 60.6,
+    "best_use": [
+      "product-showcase",
+      "gallery"
+    ],
+    "rating": null,
+    "verified_purchase": null,
+    "ad_roas": null,
+    "ad_spend_hkd": null,
+    "ad_conversions": null,
+    "issues": [],
+    "tags": [
+      "hero",
+      "product-photo"
+    ]
+  },
+  {
+    "path": "lem/images/product/lem-product.jpg",
+    "source": "product-shoot",
+    "product": "lem",
+    "type": "product-hero",
+    "organic_score": 4,
+    "mood": "clinical",
+    "shows_product": true,
+    "shows_person": false,
+    "has_text_overlay": false,
+    "size_kb": 62.1,
+    "best_use": [
+      "product-showcase",
+      "gallery"
+    ],
+    "rating": null,
+    "verified_purchase": null,
+    "ad_roas": null,
+    "ad_spend_hkd": null,
+    "ad_conversions": null,
+    "issues": [],
+    "tags": [
+      "product-photo"
+    ]
+  },
+  {
+    "path": "lem/images/product/lem-in-hand.png",
+    "source": "product-shoot",
+    "product": "lem",
+    "type": "lifestyle",
+    "organic_score": 4,
+    "mood": "authentic",
+    "shows_product": true,
+    "shows_person": false,
+    "has_text_overlay": false,
+    "size_kb": 486.6,
+    "best_use": [
+      "section-illustration"
+    ],
+    "rating": null,
+    "verified_purchase": null,
+    "ad_roas": null,
+    "ad_spend_hkd": null,
+    "ad_conversions": null,
+    "issues": [],
+    "tags": [
+      "in-hand",
+      "scale-reference"
+    ]
+  },
+  {
+    "path": "lem/images/product/lem-lifestyle.jpg",
+    "source": "product-shoot",
+    "product": "lem",
+    "type": "lifestyle",
+    "organic_score": 4,
+    "mood": "cozy",
+    "shows_product": true,
+    "shows_person": false,
+    "has_text_overlay": false,
+    "size_kb": 67.9,
+    "best_use": [
+      "section-illustration"
+    ],
+    "rating": null,
+    "verified_purchase": null,
+    "ad_roas": null,
+    "ad_spend_hkd": null,
+    "ad_conversions": null,
+    "issues": [],
+    "tags": [
+      "lifestyle",
+      "nightstand"
+    ]
+  },
+  {
+    "path": "lem/images/product/lem-lifestyle.gif",
+    "source": "product-shoot",
+    "product": "lem",
+    "type": "lifestyle",
+    "organic_score": 4,
+    "mood": "cozy",
+    "shows_product": true,
+    "shows_person": false,
+    "has_text_overlay": false,
+    "size_kb": 295.5,
+    "best_use": [
+      "section-illustration"
+    ],
+    "rating": null,
+    "verified_purchase": null,
+    "ad_roas": null,
+    "ad_spend_hkd": null,
+    "ad_conversions": null,
+    "issues": [],
+    "tags": [
+      "animated",
+      "lifestyle"
+    ]
+  },
+  {
+    "path": "lem/images/product/lem-rotate.gif",
+    "source": "product-shoot",
+    "product": "lem",
+    "type": "product-hero",
+    "organic_score": 4,
+    "mood": "clinical",
+    "shows_product": true,
+    "shows_person": false,
+    "has_text_overlay": false,
+    "size_kb": 386.4,
+    "best_use": [
+      "product-showcase",
+      "gallery"
+    ],
+    "rating": null,
+    "verified_purchase": null,
+    "ad_roas": null,
+    "ad_spend_hkd": null,
+    "ad_conversions": null,
+    "issues": [],
+    "tags": [
+      "animated",
+      "360-view"
+    ]
+  },
+  {
+    "path": "lem/images/product/lem-cocktail.png",
+    "source": "product-shoot",
+    "product": "lem",
+    "type": "lifestyle",
+    "organic_score": 4,
+    "mood": "fun",
+    "shows_product": true,
+    "shows_person": false,
+    "has_text_overlay": false,
+    "size_kb": 1348.7,
+    "best_use": [
+      "section-illustration"
+    ],
+    "rating": null,
+    "verified_purchase": null,
+    "ad_roas": null,
+    "ad_spend_hkd": null,
+    "ad_conversions": null,
+    "issues": [],
+    "tags": [
+      "cocktail",
+      "lifestyle"
+    ]
+  },
+  {
+    "path": "lem/images/product/lem-lemon-slices.png",
+    "source": "product-shoot",
+    "product": "lem",
+    "type": "lifestyle",
+    "organic_score": 4,
+    "mood": "fun",
+    "shows_product": true,
+    "shows_person": false,
+    "has_text_overlay": false,
+    "size_kb": 1201.8,
+    "best_use": [
+      "section-illustration"
+    ],
+    "rating": null,
+    "verified_purchase": null,
+    "ad_roas": null,
+    "ad_spend_hkd": null,
+    "ad_conversions": null,
+    "issues": [],
+    "tags": [
+      "lemon",
+      "flatlay"
+    ]
+  },
+  {
+    "path": "lem/images/product/lem-with-lemons.png",
+    "source": "product-shoot",
+    "product": "lem",
+    "type": "lifestyle",
+    "organic_score": 4,
+    "mood": "fun",
+    "shows_product": true,
+    "shows_person": false,
+    "has_text_overlay": false,
+    "size_kb": 1198.7,
+    "best_use": [
+      "section-illustration"
+    ],
+    "rating": null,
+    "verified_purchase": null,
+    "ad_roas": null,
+    "ad_spend_hkd": null,
+    "ad_conversions": null,
+    "issues": [],
+    "tags": [
+      "lemon",
+      "flatlay"
+    ]
+  },
+  {
+    "path": "lem/images/product/lem-airpulse-diagram.png",
+    "source": "product-shoot",
+    "product": "lem",
+    "type": "diagram",
+    "organic_score": 4,
+    "mood": "clinical",
+    "shows_product": true,
+    "shows_person": false,
+    "has_text_overlay": false,
+    "size_kb": 872.7,
+    "best_use": [
+      "section-illustration"
+    ],
+    "rating": null,
+    "verified_purchase": null,
+    "ad_roas": null,
+    "ad_spend_hkd": null,
+    "ad_conversions": null,
+    "issues": [],
+    "tags": [
+      "technology",
+      "diagram"
+    ]
+  },
+  {
+    "path": "lem/images/product/lem-airpulse-v2.png",
+    "source": "product-shoot",
+    "product": "lem",
+    "type": "diagram",
+    "organic_score": 4,
+    "mood": "clinical",
+    "shows_product": true,
+    "shows_person": false,
+    "has_text_overlay": false,
+    "size_kb": 1073.5,
+    "best_use": [
+      "section-illustration"
+    ],
+    "rating": null,
+    "verified_purchase": null,
+    "ad_roas": null,
+    "ad_spend_hkd": null,
+    "ad_conversions": null,
+    "issues": [],
+    "tags": [
+      "technology",
+      "airpulse"
+    ]
+  },
+  {
+    "path": "lem/images/product/lem-vs-traditional.png",
+    "source": "product-shoot",
+    "product": "lem",
+    "type": "comparison",
+    "organic_score": 4,
+    "mood": "clinical",
+    "shows_product": true,
+    "shows_person": false,
+    "has_text_overlay": false,
+    "size_kb": 1499.2,
+    "best_use": [
+      "section-illustration"
+    ],
+    "rating": null,
+    "verified_purchase": null,
+    "ad_roas": null,
+    "ad_spend_hkd": null,
+    "ad_conversions": null,
+    "issues": [],
+    "tags": [
+      "comparison",
+      "vs"
+    ]
+  },
+  {
+    "path": "lem/images/product/lem-unboxing.png",
+    "source": "product-shoot",
+    "product": "lem",
+    "type": "unboxing",
+    "organic_score": 4,
+    "mood": "authentic",
+    "shows_product": true,
+    "shows_person": false,
+    "has_text_overlay": false,
+    "size_kb": 1445.1,
+    "best_use": [
+      "section-illustration"
+    ],
+    "rating": null,
+    "verified_purchase": null,
+    "ad_roas": null,
+    "ad_spend_hkd": null,
+    "ad_conversions": null,
+    "issues": [],
+    "tags": [
+      "unboxing",
+      "packaging"
+    ]
+  },
+  {
+    "path": "lem/images/product/lem-hero-alt.webp",
+    "source": "product-shoot",
+    "product": "lem",
+    "type": "product-hero",
+    "organic_score": 4,
+    "mood": "aspirational",
+    "shows_product": true,
+    "shows_person": false,
+    "has_text_overlay": false,
+    "size_kb": 166.0,
+    "best_use": [
+      "product-showcase",
+      "gallery"
+    ],
+    "rating": null,
+    "verified_purchase": null,
+    "ad_roas": null,
+    "ad_spend_hkd": null,
+    "ad_conversions": null,
+    "issues": [],
+    "tags": [
+      "hero",
+      "alt"
+    ]
+  },
+  {
+    "path": "lem/images/product/lem-lifestyle-bathroom.png",
+    "source": "ai-generated",
+    "product": "lem",
+    "type": "lifestyle",
+    "organic_score": 2,
+    "mood": "cozy",
+    "shows_product": true,
+    "shows_person": false,
+    "has_text_overlay": false,
+    "size_kb": 1458.1,
+    "best_use": [
+      "section-illustration"
+    ],
+    "rating": null,
+    "verified_purchase": null,
+    "ad_roas": null,
+    "ad_spend_hkd": null,
+    "ad_conversions": null,
+    "issues": [
+      "AI-generated - check for artifacts"
+    ],
+    "tags": [
+      "bathroom",
+      "ai-generated"
+    ]
+  },
+  {
+    "path": "lem/images/product/lem-lifestyle-nightstand.png",
+    "source": "ai-generated",
+    "product": "lem",
+    "type": "lifestyle",
+    "organic_score": 2,
+    "mood": "cozy",
+    "shows_product": true,
+    "shows_person": false,
+    "has_text_overlay": false,
+    "size_kb": 1512.9,
+    "best_use": [
+      "section-illustration"
+    ],
+    "rating": null,
+    "verified_purchase": null,
+    "ad_roas": null,
+    "ad_spend_hkd": null,
+    "ad_conversions": null,
+    "issues": [
+      "AI-generated - check for artifacts"
+    ],
+    "tags": [
+      "nightstand",
+      "ai-generated"
+    ]
+  },
+  {
+    "path": "lem/images/product/lem-lifestyle-travel.png",
+    "source": "ai-generated",
+    "product": "lem",
+    "type": "lifestyle",
+    "organic_score": 2,
+    "mood": "aspirational",
+    "shows_product": true,
+    "shows_person": false,
+    "has_text_overlay": false,
+    "size_kb": 1648.6,
+    "best_use": [
+      "section-illustration"
+    ],
+    "rating": null,
+    "verified_purchase": null,
+    "ad_roas": null,
+    "ad_spend_hkd": null,
+    "ad_conversions": null,
+    "issues": [
+      "AI-generated - check for artifacts"
+    ],
+    "tags": [
+      "travel",
+      "ai-generated"
+    ]
+  },
+  {
+    "path": "lem/images/media/06_vocal_logo.svg",
+    "source": "media-logo",
+    "product": "nancy-brand",
+    "type": "media-logo",
+    "organic_score": 5,
+    "mood": "clinical",
+    "shows_product": false,
+    "shows_person": false,
+    "has_text_overlay": true,
+    "size_kb": 7.2,
+    "best_use": [
+      "press-bar",
+      "trust-signal"
+    ],
+    "rating": null,
+    "verified_purchase": null,
+    "ad_roas": null,
+    "ad_spend_hkd": null,
+    "ad_conversions": null,
+    "issues": [],
+    "tags": [
+      "logo",
+      "press",
+      "trust"
+    ]
+  },
+  {
+    "path": "lem/images/media/02_tatler_logo.webp",
+    "source": "media-logo",
+    "product": "nancy-brand",
+    "type": "media-logo",
+    "organic_score": 5,
+    "mood": "clinical",
+    "shows_product": false,
+    "shows_person": false,
+    "has_text_overlay": true,
+    "size_kb": 3.1,
+    "best_use": [
+      "press-bar",
+      "trust-signal"
+    ],
+    "rating": null,
+    "verified_purchase": null,
+    "ad_roas": null,
+    "ad_spend_hkd": null,
+    "ad_conversions": null,
+    "issues": [],
+    "tags": [
+      "logo",
+      "press",
+      "trust"
+    ]
+  },
+  {
+    "path": "lem/images/media/05_vice_logo.svg",
+    "source": "media-logo",
+    "product": "nancy-brand",
+    "type": "media-logo",
+    "organic_score": 5,
+    "mood": "clinical",
+    "shows_product": false,
+    "shows_person": false,
+    "has_text_overlay": true,
+    "size_kb": 4.8,
+    "best_use": [
+      "press-bar",
+      "trust-signal"
+    ],
+    "rating": null,
+    "verified_purchase": null,
+    "ad_roas": null,
+    "ad_spend_hkd": null,
+    "ad_conversions": null,
+    "issues": [],
+    "tags": [
+      "logo",
+      "press",
+      "trust"
+    ]
+  },
+  {
+    "path": "lem/images/media/04_zenify_logo.svg",
+    "source": "media-logo",
+    "product": "nancy-brand",
+    "type": "media-logo",
+    "organic_score": 5,
+    "mood": "clinical",
+    "shows_product": false,
+    "shows_person": false,
+    "has_text_overlay": true,
+    "size_kb": 2.1,
+    "best_use": [
+      "press-bar",
+      "trust-signal"
+    ],
+    "rating": null,
+    "verified_purchase": null,
+    "ad_roas": null,
+    "ad_spend_hkd": null,
+    "ad_conversions": null,
+    "issues": [],
+    "tags": [
+      "logo",
+      "press",
+      "trust"
+    ]
+  },
+  {
+    "path": "lem/images/media/01_timeout_logo.png",
+    "source": "media-logo",
+    "product": "nancy-brand",
+    "type": "media-logo",
+    "organic_score": 5,
+    "mood": "clinical",
+    "shows_product": false,
+    "shows_person": false,
+    "has_text_overlay": true,
+    "size_kb": 7.4,
+    "best_use": [
+      "press-bar",
+      "trust-signal"
+    ],
+    "rating": null,
+    "verified_purchase": null,
+    "ad_roas": null,
+    "ad_spend_hkd": null,
+    "ad_conversions": null,
+    "issues": [],
+    "tags": [
+      "logo",
+      "press",
+      "trust"
+    ]
+  },
+  {
+    "path": "lem/images/winning/lem-vs-rose.png",
+    "source": "ad-creative",
+    "product": "lem",
+    "type": "comparison",
+    "organic_score": 2,
+    "mood": "clinical",
+    "shows_product": true,
+    "shows_person": false,
+    "has_text_overlay": true,
+    "size_kb": 867.9,
+    "best_use": [
+      "comparison-section",
+      "vs-competitor"
+    ],
+    "rating": null,
+    "verified_purchase": null,
+    "ad_roas": null,
+    "ad_spend_hkd": null,
+    "ad_conversions": null,
+    "issues": [],
+    "tags": [
+      "comparison",
+      "rose",
+      "competitor"
+    ]
+  },
+  {
+    "path": "lem/images/logos/Nancy_Logo_Pink.svg",
+    "source": "brand-asset",
+    "product": "nancy-brand",
+    "type": "brand-logo",
+    "organic_score": 5,
+    "mood": "clinical",
+    "shows_product": false,
+    "shows_person": false,
+    "has_text_overlay": true,
+    "size_kb": 3.5,
+    "best_use": [
+      "nav-logo",
+      "footer-logo"
+    ],
+    "rating": null,
+    "verified_purchase": null,
+    "ad_roas": null,
+    "ad_spend_hkd": null,
+    "ad_conversions": null,
+    "issues": [],
+    "tags": [
+      "logo",
+      "nancy",
+      "brand"
+    ]
+  },
+  {
+    "path": "lem/images/logos/Nancy_Full_logo_01.svg",
+    "source": "brand-asset",
+    "product": "nancy-brand",
+    "type": "brand-logo",
+    "organic_score": 5,
+    "mood": "clinical",
+    "shows_product": false,
+    "shows_person": false,
+    "has_text_overlay": true,
+    "size_kb": 3.6,
+    "best_use": [
+      "nav-logo",
+      "footer-logo"
+    ],
+    "rating": null,
+    "verified_purchase": null,
+    "ad_roas": null,
+    "ad_spend_hkd": null,
+    "ad_conversions": null,
+    "issues": [],
+    "tags": [
+      "logo",
+      "nancy",
+      "brand"
+    ]
+  },
+  {
+    "path": "lem/images/logos/Nancy_Logo_Pink.png",
+    "source": "brand-asset",
+    "product": "nancy-brand",
+    "type": "brand-logo",
+    "organic_score": 5,
+    "mood": "clinical",
+    "shows_product": false,
+    "shows_person": false,
+    "has_text_overlay": true,
+    "size_kb": 26.2,
+    "best_use": [
+      "nav-logo",
+      "footer-logo"
+    ],
+    "rating": null,
+    "verified_purchase": null,
+    "ad_roas": null,
+    "ad_spend_hkd": null,
+    "ad_conversions": null,
+    "issues": [],
+    "tags": [
+      "logo",
+      "nancy",
+      "brand"
+    ]
+  }
+]
