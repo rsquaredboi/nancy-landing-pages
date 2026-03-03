@@ -1,0 +1,690 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Nancy Asset Leaderboard</title>
+<style>
+  :root {
+    --bg: #0f1117;
+    --surface: #1a1d27;
+    --surface2: #242836;
+    --border: #2e3346;
+    --text: #e4e6ef;
+    --text2: #8b8fa3;
+    --accent: #6c5ce7;
+    --accent2: #a29bfe;
+    --green: #00cec9;
+    --green2: #55efc4;
+    --orange: #fdcb6e;
+    --red: #ff7675;
+    --blue: #74b9ff;
+  }
+
+  * { margin: 0; padding: 0; box-sizing: border-box; }
+
+  body {
+    font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', system-ui, sans-serif;
+    background: var(--bg);
+    color: var(--text);
+    min-height: 100vh;
+    line-height: 1.5;
+  }
+
+  /* Header */
+  .header {
+    background: var(--surface);
+    border-bottom: 1px solid var(--border);
+    padding: 20px 24px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    gap: 12px;
+  }
+  .header h1 {
+    font-size: 20px;
+    font-weight: 700;
+    display: flex;
+    align-items: center;
+    gap: 10px;
+  }
+  .header h1 span { font-size: 24px; }
+  .header-meta {
+    display: flex;
+    gap: 20px;
+    font-size: 13px;
+    color: var(--text2);
+  }
+  .header-meta strong { color: var(--text); }
+
+  /* Summary Cards */
+  .summary {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(180px, 1fr));
+    gap: 12px;
+    padding: 16px 24px;
+  }
+  .card {
+    background: var(--surface);
+    border: 1px solid var(--border);
+    border-radius: 10px;
+    padding: 16px;
+  }
+  .card-label { font-size: 11px; color: var(--text2); text-transform: uppercase; letter-spacing: 0.5px; margin-bottom: 4px; }
+  .card-value { font-size: 24px; font-weight: 700; }
+  .card-value.green { color: var(--green); }
+  .card-value.accent { color: var(--accent2); }
+  .card-value.orange { color: var(--orange); }
+  .card-value.blue { color: var(--blue); }
+
+  /* Filter Bar */
+  .filter-bar {
+    position: sticky;
+    top: 0;
+    z-index: 100;
+    background: var(--surface);
+    border-bottom: 1px solid var(--border);
+    padding: 12px 24px;
+    display: flex;
+    gap: 10px;
+    align-items: center;
+    flex-wrap: wrap;
+  }
+  .filter-bar select, .filter-bar input {
+    background: var(--surface2);
+    color: var(--text);
+    border: 1px solid var(--border);
+    border-radius: 6px;
+    padding: 7px 12px;
+    font-size: 13px;
+    outline: none;
+  }
+  .filter-bar select:focus, .filter-bar input:focus {
+    border-color: var(--accent);
+  }
+  .filter-bar input { flex: 1; min-width: 160px; }
+  .filter-count { font-size: 12px; color: var(--text2); margin-left: auto; white-space: nowrap; }
+
+  /* Table */
+  .table-wrap {
+    padding: 0 24px 24px;
+    overflow-x: auto;
+  }
+  table {
+    width: 100%;
+    border-collapse: collapse;
+    font-size: 13px;
+    min-width: 1000px;
+  }
+  thead th {
+    background: var(--surface2);
+    padding: 10px 12px;
+    text-align: left;
+    font-weight: 600;
+    font-size: 11px;
+    text-transform: uppercase;
+    letter-spacing: 0.5px;
+    color: var(--text2);
+    position: sticky;
+    top: 52px;
+    z-index: 50;
+    cursor: pointer;
+    user-select: none;
+    white-space: nowrap;
+  }
+  thead th:hover { color: var(--text); }
+  thead th.sorted { color: var(--accent2); }
+  thead th .arrow { font-size: 10px; margin-left: 3px; }
+  tbody tr {
+    border-bottom: 1px solid var(--border);
+    cursor: pointer;
+    transition: background 0.15s;
+  }
+  tbody tr:hover { background: var(--surface2); }
+  td { padding: 8px 12px; vertical-align: middle; }
+  td.rank { font-weight: 700; color: var(--text2); width: 40px; text-align: center; }
+  td.rank .medal { font-size: 16px; }
+
+  /* Thumbnail */
+  .thumb {
+    width: 44px;
+    height: 44px;
+    border-radius: 6px;
+    object-fit: cover;
+    background: var(--surface2);
+    border: 1px solid var(--border);
+  }
+
+  /* Score bar */
+  .score-bar {
+    width: 100px;
+    height: 8px;
+    background: var(--surface2);
+    border-radius: 4px;
+    overflow: hidden;
+    display: inline-block;
+    vertical-align: middle;
+    margin-right: 6px;
+  }
+  .score-bar-fill {
+    height: 100%;
+    border-radius: 4px;
+    transition: width 0.3s;
+  }
+  .score-text { font-weight: 600; font-size: 13px; }
+
+  /* Spark bar (5-segment breakdown) */
+  .spark {
+    display: flex;
+    gap: 1px;
+    height: 10px;
+    width: 80px;
+  }
+  .spark-seg {
+    flex: 1;
+    border-radius: 2px;
+    opacity: 0.3;
+    transition: opacity 0.3s;
+  }
+  .spark-seg.active { opacity: 1; }
+  .spark-seg.s-ad { background: var(--orange); }
+  .spark-seg.s-conv { background: var(--green); }
+  .spark-seg.s-qual { background: var(--accent2); }
+  .spark-seg.s-page { background: var(--blue); }
+  .spark-seg.s-eng { background: var(--red); }
+
+  /* Tag chips */
+  .tag {
+    display: inline-block;
+    background: var(--surface2);
+    border: 1px solid var(--border);
+    border-radius: 4px;
+    padding: 1px 6px;
+    font-size: 10px;
+    color: var(--text2);
+    margin: 1px;
+    white-space: nowrap;
+  }
+  .tag.source-loox { border-color: var(--green); color: var(--green); }
+  .tag.source-ad { border-color: var(--orange); color: var(--orange); }
+  .tag.source-product { border-color: var(--blue); color: var(--blue); }
+  .tag.issue { border-color: var(--red); color: var(--red); }
+
+  /* Metric cells */
+  .metric { font-variant-numeric: tabular-nums; white-space: nowrap; }
+  .metric.dim { color: var(--text2); }
+  .metric.highlight { color: var(--green); font-weight: 600; }
+
+  /* Modal */
+  .modal-overlay {
+    display: none;
+    position: fixed;
+    inset: 0;
+    background: rgba(0,0,0,0.7);
+    z-index: 1000;
+    justify-content: center;
+    align-items: center;
+    padding: 20px;
+  }
+  .modal-overlay.open { display: flex; }
+  .modal {
+    background: var(--surface);
+    border: 1px solid var(--border);
+    border-radius: 14px;
+    max-width: 720px;
+    width: 100%;
+    max-height: 90vh;
+    overflow-y: auto;
+    padding: 28px;
+  }
+  .modal-close {
+    float: right;
+    background: var(--surface2);
+    border: 1px solid var(--border);
+    color: var(--text);
+    border-radius: 6px;
+    padding: 4px 12px;
+    cursor: pointer;
+    font-size: 14px;
+  }
+  .modal-close:hover { background: var(--border); }
+  .modal h2 { font-size: 18px; margin-bottom: 16px; padding-right: 60px; word-break: break-all; }
+  .modal-preview {
+    width: 100%;
+    max-height: 300px;
+    object-fit: contain;
+    border-radius: 10px;
+    background: var(--bg);
+    margin-bottom: 20px;
+  }
+  .modal-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 10px;
+    margin-bottom: 20px;
+  }
+  .modal-grid .item {
+    background: var(--bg);
+    border-radius: 8px;
+    padding: 12px;
+  }
+  .modal-grid .item-label { font-size: 11px; color: var(--text2); text-transform: uppercase; margin-bottom: 2px; }
+  .modal-grid .item-value { font-size: 16px; font-weight: 600; }
+
+  /* Score breakdown bars in modal */
+  .breakdown-row {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    margin-bottom: 6px;
+  }
+  .breakdown-label { width: 100px; font-size: 12px; color: var(--text2); text-align: right; }
+  .breakdown-bar {
+    flex: 1;
+    height: 14px;
+    background: var(--bg);
+    border-radius: 4px;
+    overflow: hidden;
+  }
+  .breakdown-fill { height: 100%; border-radius: 4px; transition: width 0.5s ease; }
+  .breakdown-val { width: 45px; font-size: 12px; font-weight: 600; text-align: right; }
+
+  .modal-section { margin-top: 18px; }
+  .modal-section h3 { font-size: 13px; color: var(--text2); text-transform: uppercase; letter-spacing: 0.5px; margin-bottom: 8px; }
+  .modal-pages { font-size: 12px; color: var(--text2); }
+  .modal-pages a { color: var(--accent2); text-decoration: none; }
+  .modal-review { font-size: 13px; color: var(--text); font-style: italic; background: var(--bg); border-radius: 8px; padding: 12px; }
+
+  /* Loading */
+  .loading {
+    text-align: center;
+    padding: 60px;
+    color: var(--text2);
+    font-size: 15px;
+  }
+  .loading .spinner {
+    width: 32px;
+    height: 32px;
+    border: 3px solid var(--border);
+    border-top: 3px solid var(--accent);
+    border-radius: 50%;
+    animation: spin 0.8s linear infinite;
+    margin: 0 auto 16px;
+  }
+  @keyframes spin { to { transform: rotate(360deg); } }
+
+  /* Responsive */
+  @media (max-width: 768px) {
+    .header { padding: 14px 16px; }
+    .summary { padding: 12px 16px; grid-template-columns: repeat(2, 1fr); }
+    .filter-bar { padding: 10px 16px; }
+    .table-wrap { padding: 0 16px 16px; }
+    .modal { padding: 20px; }
+    .modal-grid { grid-template-columns: 1fr; }
+  }
+</style>
+</head>
+<body>
+
+<!-- Header -->
+<div class="header">
+  <h1><span>&#x1F3C6;</span> Nancy Asset Leaderboard</h1>
+  <div class="header-meta">
+    <div>Updated: <strong id="gen-date">—</strong></div>
+    <div>Registry: <strong id="total-registry">—</strong> assets</div>
+    <div>Ranked: <strong id="total-ranked">—</strong></div>
+  </div>
+</div>
+
+<!-- Summary Cards -->
+<div class="summary" id="summary-cards"></div>
+
+<!-- Filter Bar -->
+<div class="filter-bar">
+  <select id="filter-product"><option value="">All Products</option></select>
+  <select id="filter-type"><option value="">All Types</option></select>
+  <select id="filter-source"><option value="">All Sources</option></select>
+  <select id="sort-by">
+    <option value="composite_score">Composite Score</option>
+    <option value="ad_perf">Ad Performance</option>
+    <option value="conv_rate">Conversion Rate</option>
+    <option value="quality">Quality Score</option>
+    <option value="page_usage">Page Usage</option>
+    <option value="engagement">Engagement</option>
+    <option value="roas">ROAS</option>
+    <option value="spend">Spend</option>
+  </select>
+  <input type="text" id="search" placeholder="Search path, tags, reviewer...">
+  <span class="filter-count" id="filter-count"></span>
+</div>
+
+<!-- Table -->
+<div class="table-wrap">
+  <div class="loading" id="loading">
+    <div class="spinner"></div>
+    Loading leaderboard data...
+  </div>
+  <table id="table" style="display:none">
+    <thead>
+      <tr>
+        <th style="width:40px">#</th>
+        <th style="width:56px">Thumb</th>
+        <th>Asset Path</th>
+        <th style="width:180px">Score</th>
+        <th style="width:90px">Breakdown</th>
+        <th>ROAS</th>
+        <th>Spend (HKD)</th>
+        <th>Quality</th>
+        <th>Pages</th>
+        <th>Source</th>
+      </tr>
+    </thead>
+    <tbody id="tbody"></tbody>
+  </table>
+</div>
+
+<!-- Detail Modal -->
+<div class="modal-overlay" id="modal-overlay">
+  <div class="modal" id="modal"></div>
+</div>
+
+<script>
+let DATA = null;
+let allAssets = [];
+let filteredAssets = [];
+
+function scoreColor(score) {
+  if (score >= 0.7) return 'var(--green)';
+  if (score >= 0.4) return 'var(--orange)';
+  if (score >= 0.15) return 'var(--accent2)';
+  return 'var(--text2)';
+}
+
+function medal(rank) {
+  if (rank === 1) return '<span class="medal">&#x1F947;</span>';
+  if (rank === 2) return '<span class="medal">&#x1F948;</span>';
+  if (rank === 3) return '<span class="medal">&#x1F949;</span>';
+  return rank;
+}
+
+function fmtNum(n) {
+  if (n == null) return '—';
+  if (n >= 1000000) return (n / 1000000).toFixed(1) + 'M';
+  if (n >= 1000) return (n / 1000).toFixed(0) + 'K';
+  return n.toLocaleString();
+}
+
+function sparkBar(breakdown) {
+  const dims = [
+    { key: 'ad_perf', cls: 's-ad' },
+    { key: 'conv_rate', cls: 's-conv' },
+    { key: 'quality', cls: 's-qual' },
+    { key: 'page_usage', cls: 's-page' },
+    { key: 'engagement', cls: 's-eng' },
+  ];
+  return '<div class="spark" title="Ad | Conv | Quality | Pages | Eng">' +
+    dims.map(d => {
+      const v = breakdown[d.key] || 0;
+      const active = v > 0.05 ? 'active' : '';
+      return `<div class="spark-seg ${d.cls} ${active}" style="opacity:${Math.max(0.15, v)}"></div>`;
+    }).join('') + '</div>';
+}
+
+function sourceTag(source) {
+  if (source === 'loox') return 'source-loox';
+  if (source === 'ad-creative') return 'source-ad';
+  if (source.includes('product')) return 'source-product';
+  return '';
+}
+
+function renderSummary() {
+  const cards = document.getElementById('summary-cards');
+  const scores = allAssets.map(a => a.composite_score);
+  const avg = scores.length ? (scores.reduce((a, b) => a + b, 0) / scores.length) : 0;
+  const withAd = allAssets.filter(a => a.metrics.roas).length;
+  const withPages = allAssets.filter(a => a.metrics.page_count > 0).length;
+  const top = allAssets[0];
+
+  cards.innerHTML = `
+    <div class="card">
+      <div class="card-label">Total Ranked</div>
+      <div class="card-value accent">${allAssets.length}</div>
+    </div>
+    <div class="card">
+      <div class="card-label">Avg Score</div>
+      <div class="card-value green">${avg.toFixed(3)}</div>
+    </div>
+    <div class="card">
+      <div class="card-label">With Ad Data</div>
+      <div class="card-value orange">${withAd}</div>
+    </div>
+    <div class="card">
+      <div class="card-label">Used on Pages</div>
+      <div class="card-value blue">${withPages}</div>
+    </div>
+    <div class="card">
+      <div class="card-label">Top Performer</div>
+      <div class="card-value" style="font-size:14px; word-break:break-all;">${top ? top.path.split('/').pop() : '—'}</div>
+    </div>
+  `;
+}
+
+function populateFilters() {
+  const products = [...new Set(allAssets.map(a => a.product))].sort();
+  const types = [...new Set(allAssets.map(a => a.type))].sort();
+  const sources = [...new Set(allAssets.map(a => a.source))].sort();
+
+  const selProd = document.getElementById('filter-product');
+  products.forEach(p => { const o = document.createElement('option'); o.value = p; o.textContent = p; selProd.appendChild(o); });
+
+  const selType = document.getElementById('filter-type');
+  types.forEach(t => { const o = document.createElement('option'); o.value = t; o.textContent = t; selType.appendChild(o); });
+
+  const selSrc = document.getElementById('filter-source');
+  sources.forEach(s => { const o = document.createElement('option'); o.value = s; o.textContent = s; selSrc.appendChild(o); });
+}
+
+function applyFilters() {
+  const product = document.getElementById('filter-product').value;
+  const type = document.getElementById('filter-type').value;
+  const source = document.getElementById('filter-source').value;
+  const search = document.getElementById('search').value.toLowerCase();
+  const sortBy = document.getElementById('sort-by').value;
+
+  filteredAssets = allAssets.filter(a => {
+    if (product && a.product !== product) return false;
+    if (type && a.type !== type) return false;
+    if (source && a.source !== source) return false;
+    if (search) {
+      const haystack = [a.path, a.product, a.type, a.source, a.reviewer_name, a.entity_name, ...(a.tags || [])].join(' ').toLowerCase();
+      if (!haystack.includes(search)) return false;
+    }
+    return true;
+  });
+
+  // Sort
+  filteredAssets.sort((a, b) => {
+    if (sortBy === 'composite_score') return b.composite_score - a.composite_score;
+    if (sortBy === 'roas') return (b.metrics.roas || 0) - (a.metrics.roas || 0);
+    if (sortBy === 'spend') return (b.metrics.spend_hkd || 0) - (a.metrics.spend_hkd || 0);
+    return (b.breakdown[sortBy] || 0) - (a.breakdown[sortBy] || 0);
+  });
+
+  renderTable();
+  document.getElementById('filter-count').textContent = `${filteredAssets.length} of ${allAssets.length}`;
+}
+
+function renderTable() {
+  const tbody = document.getElementById('tbody');
+  // Virtualize: render max 200 rows for performance
+  const visible = filteredAssets.slice(0, 200);
+
+  tbody.innerHTML = visible.map((a, i) => {
+    const sc = a.composite_score;
+    const pct = (sc * 100).toFixed(0);
+    const color = scoreColor(sc);
+
+    return `<tr data-idx="${i}">
+      <td class="rank">${medal(a.rank)}</td>
+      <td><img class="thumb" src="../${a.path}" loading="lazy" onerror="this.style.display='none'" alt=""></td>
+      <td style="max-width:260px; overflow:hidden; text-overflow:ellipsis; white-space:nowrap;" title="${a.path}">${a.path.split('/').pop()}</td>
+      <td>
+        <div class="score-bar"><div class="score-bar-fill" style="width:${pct}%; background:${color}"></div></div>
+        <span class="score-text" style="color:${color}">${sc.toFixed(3)}</span>
+      </td>
+      <td>${sparkBar(a.breakdown)}</td>
+      <td class="metric ${a.metrics.roas ? 'highlight' : 'dim'}">${a.metrics.roas ? a.metrics.roas.toFixed(2) + 'x' : '—'}</td>
+      <td class="metric ${a.metrics.spend_hkd ? '' : 'dim'}">${a.metrics.spend_hkd ? fmtNum(a.metrics.spend_hkd) : '—'}</td>
+      <td class="metric">${a.metrics.organic_score}/5</td>
+      <td class="metric ${a.metrics.page_count ? 'highlight' : 'dim'}">${a.metrics.page_count || '—'}</td>
+      <td><span class="tag ${sourceTag(a.source)}">${a.source}</span></td>
+    </tr>`;
+  }).join('');
+
+  // Row click → modal
+  tbody.querySelectorAll('tr').forEach(tr => {
+    tr.addEventListener('click', () => openModal(filteredAssets[parseInt(tr.dataset.idx)]));
+  });
+}
+
+function openModal(a) {
+  const modal = document.getElementById('modal');
+  const bk = a.breakdown;
+
+  const breakdownColors = {
+    'Ad Performance': 'var(--orange)',
+    'Conversion Rate': 'var(--green)',
+    'Quality': 'var(--accent2)',
+    'Page Usage': 'var(--blue)',
+    'Engagement': 'var(--red)',
+  };
+  const breakdownMap = {
+    'Ad Performance': bk.ad_perf,
+    'Conversion Rate': bk.conv_rate,
+    'Quality': bk.quality,
+    'Page Usage': bk.page_usage,
+    'Engagement': bk.engagement,
+  };
+
+  let breakdownHTML = Object.entries(breakdownMap).map(([label, val]) => `
+    <div class="breakdown-row">
+      <span class="breakdown-label">${label}</span>
+      <div class="breakdown-bar"><div class="breakdown-fill" style="width:${(val * 100).toFixed(0)}%; background:${breakdownColors[label]}"></div></div>
+      <span class="breakdown-val" style="color:${breakdownColors[label]}">${(val * 100).toFixed(0)}%</span>
+    </div>
+  `).join('');
+
+  let pagesHTML = a.pages.length
+    ? a.pages.map(p => `<a href="../${p}" target="_blank">${p}</a>`).join(', ')
+    : '<em>Not used on any page</em>';
+
+  let reviewHTML = a.review_text
+    ? `<div class="modal-section"><h3>Review Text</h3><div class="modal-review">"${a.review_text}..."</div></div>`
+    : '';
+
+  let issuesHTML = a.issues.length
+    ? `<div class="modal-section"><h3>Issues</h3>${a.issues.map(i => `<span class="tag issue">${i}</span>`).join(' ')}</div>`
+    : '';
+
+  let entityHTML = a.entity_name
+    ? `<div class="item"><div class="item-label">Ad Entity</div><div class="item-value" style="font-size:12px; word-break:break-all;">${a.entity_name.split(' 20')[0]}</div></div>`
+    : '';
+
+  modal.innerHTML = `
+    <button class="modal-close" onclick="closeModal()">&#x2715; Close</button>
+    <h2>#${a.rank} — ${a.path.split('/').pop()}</h2>
+    <img class="modal-preview" src="../${a.path}" onerror="this.style.display='none'" alt="">
+
+    <div class="modal-grid">
+      <div class="item"><div class="item-label">Composite Score</div><div class="item-value" style="color:${scoreColor(a.composite_score)}">${a.composite_score.toFixed(4)}</div></div>
+      <div class="item"><div class="item-label">Product</div><div class="item-value">${a.product}</div></div>
+      <div class="item"><div class="item-label">Type</div><div class="item-value">${a.type}</div></div>
+      <div class="item"><div class="item-label">Source</div><div class="item-value">${a.source}</div></div>
+      <div class="item"><div class="item-label">ROAS</div><div class="item-value">${a.metrics.roas ? a.metrics.roas.toFixed(2) + 'x' : '—'}</div></div>
+      <div class="item"><div class="item-label">Spend (HKD)</div><div class="item-value">${a.metrics.spend_hkd ? fmtNum(a.metrics.spend_hkd) : '—'}</div></div>
+      <div class="item"><div class="item-label">Conversions</div><div class="item-value">${a.metrics.conversions ? fmtNum(a.metrics.conversions) : '—'}</div></div>
+      <div class="item"><div class="item-label">Impressions</div><div class="item-value">${a.metrics.impressions ? fmtNum(a.metrics.impressions) : '—'}</div></div>
+      <div class="item"><div class="item-label">Organic Score</div><div class="item-value">${a.metrics.organic_score}/5</div></div>
+      <div class="item"><div class="item-label">Rating</div><div class="item-value">${a.metrics.rating ? a.metrics.rating + '/5' : '—'}</div></div>
+      <div class="item"><div class="item-label">Pages Used</div><div class="item-value">${a.metrics.page_count}</div></div>
+      <div class="item"><div class="item-label">File Size</div><div class="item-value">${a.metrics.size_kb ? a.metrics.size_kb + ' KB' : '—'}</div></div>
+      ${entityHTML}
+    </div>
+
+    <div class="modal-section">
+      <h3>Score Breakdown</h3>
+      ${breakdownHTML}
+    </div>
+
+    <div class="modal-section">
+      <h3>Used On Pages</h3>
+      <div class="modal-pages">${pagesHTML}</div>
+    </div>
+
+    ${reviewHTML}
+
+    <div class="modal-section">
+      <h3>Tags</h3>
+      ${(a.tags || []).map(t => `<span class="tag">${t}</span>`).join(' ')}
+      ${(a.best_use || []).map(t => `<span class="tag" style="border-color:var(--accent);color:var(--accent)">${t}</span>`).join(' ')}
+    </div>
+
+    ${issuesHTML}
+  `;
+
+  document.getElementById('modal-overlay').classList.add('open');
+}
+
+function closeModal() {
+  document.getElementById('modal-overlay').classList.remove('open');
+}
+
+// Close modal on Escape or overlay click
+document.getElementById('modal-overlay').addEventListener('click', (e) => {
+  if (e.target.id === 'modal-overlay') closeModal();
+});
+document.addEventListener('keydown', (e) => { if (e.key === 'Escape') closeModal(); });
+
+// Init
+async function init() {
+  try {
+    const res = await fetch('leaderboard.json');
+    DATA = await res.json();
+  } catch (e) {
+    document.getElementById('loading').innerHTML = '<p style="color:var(--red)">Failed to load leaderboard.json. Run <code>python3 leaderboard/refresh.py</code> first.</p>';
+    return;
+  }
+
+  allAssets = DATA.assets;
+  filteredAssets = [...allAssets];
+
+  // Header meta
+  const genDate = new Date(DATA.generated_at);
+  document.getElementById('gen-date').textContent = genDate.toLocaleDateString('en-US', { month: 'short', day: 'numeric', year: 'numeric', hour: '2-digit', minute: '2-digit' });
+  document.getElementById('total-registry').textContent = DATA.total_assets_in_registry;
+  document.getElementById('total-ranked').textContent = DATA.total_assets_scored;
+
+  renderSummary();
+  populateFilters();
+  applyFilters();
+
+  document.getElementById('loading').style.display = 'none';
+  document.getElementById('table').style.display = '';
+
+  // Bind filter events
+  ['filter-product', 'filter-type', 'filter-source', 'sort-by'].forEach(id => {
+    document.getElementById(id).addEventListener('change', applyFilters);
+  });
+  document.getElementById('search').addEventListener('input', debounce(applyFilters, 200));
+}
+
+function debounce(fn, ms) {
+  let t;
+  return (...args) => { clearTimeout(t); t = setTimeout(() => fn(...args), ms); };
+}
+
+init();
+</script>
+</body>
+</html>
