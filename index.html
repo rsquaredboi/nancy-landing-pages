@@ -634,98 +634,133 @@ a { text-decoration: none; color: inherit; }
 }
 
 /* ============================================
-   SECTION 4: PRODUCT REVEAL
+   SECTION 4: PRODUCT REVEAL (single-viewport)
    ============================================ */
 .product-reveal {
-  padding: 70px 0;
+  padding: 48px 0;
   background: var(--nancy-cream);
 }
 
-.product-reveal__top {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  gap: 24px;
-  margin-bottom: 32px;
+.pr-grid {
+  display: grid;
+  grid-template-columns: 2fr 3fr;
+  gap: 40px;
+  align-items: start;
 }
 
-.product-reveal__intro {
-  text-align: center;
-  margin-bottom: 30px;
-}
+.pr-left { text-align: center; }
 
-.product-reveal__intro .section-headline {
-  margin-bottom: 12px;
-}
-
-.product-reveal__sub {
-  font-size: 17px;
-  color: var(--nancy-gray);
-  font-weight: 300;
-}
-
-/* Product image */
 .product-img {
   display: block;
-  max-width: 380px;
   width: 100%;
-  border-radius: 24px;
-  flex-shrink: 0;
+  border-radius: 20px;
 }
 
-.product-reveal__right {
-  display: flex;
-  flex-direction: column;
-  gap: 20px;
-}
-
-/* Feature grid */
-.features {
-  display: grid;
-  grid-template-columns: 1fr 1fr;
-  gap: 16px;
-}
-
-.feature-card {
-  background: var(--nancy-cream-dark);
-  border-radius: 16px;
-  padding: 20px;
-  text-align: center;
-  border: 1px solid rgba(42,36,32,0.04);
-  transition: transform 0.3s ease;
-}
-
-.feature-card:hover { transform: translateY(-2px); }
-
-.feature-card__icon {
+.pr-trust-mini {
   display: flex;
   align-items: center;
   justify-content: center;
-  width: 44px;
-  height: 44px;
-  margin: 0 auto 10px;
-  background: var(--peach-tint);
-  border-radius: 12px;
-}
-
-.feature-card__title {
-  font-family: var(--font-display);
-  font-size: 18px;
-  font-weight: 700;
-  margin-bottom: 6px;
-  color: var(--nancy-black);
-}
-
-.feature-card__desc {
-  font-size: 14px;
+  gap: 8px;
+  margin-top: 12px;
+  font-size: 12px;
   color: var(--nancy-gray);
-  line-height: 1.55;
-  font-weight: 300;
 }
 
-.product-reveal__cta {
+.pr-right {
+  display: flex;
+  flex-direction: column;
+  gap: 14px;
+}
+
+.pr-intro .section-headline { margin-bottom: 6px; }
+
+.pr-sub {
+  font-size: 15px;
+  color: var(--nancy-gray);
+  font-weight: 300;
+  margin: 0;
+}
+
+.pr-features {
+  display: flex;
+  gap: 20px;
+  padding: 14px 0;
+  border-top: 1px solid rgba(233,30,140,0.1);
+  border-bottom: 1px solid rgba(233,30,140,0.1);
+}
+
+.pr-feature {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  flex: 1;
+}
+
+.pr-feature__icon {
+  width: 30px;
+  height: 30px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: var(--peach-tint);
+  border-radius: 8px;
+  flex-shrink: 0;
+}
+
+.pr-feature__label {
+  font-family: var(--font-display);
+  font-size: 13px;
+  font-weight: 700;
+  color: var(--nancy-black);
+  line-height: 1.2;
+}
+
+.pr-cta-area { display: flex; flex-direction: column; gap: 10px; }
+
+.pr-cta-area .price-block { text-align: left; margin-bottom: 0; }
+
+.pr-cta-area .cta-btn {
+  width: 100%;
   text-align: center;
-  margin-top: 32px;
+  justify-content: center;
+}
+
+.pr-cta-area .urgency-bar {
+  max-width: none;
+  margin-left: 0;
+  margin-right: 0;
+  margin-bottom: 0;
+  padding: 8px 16px;
+}
+
+.pr-cta-area .stock-scarcity {
+  max-width: none;
+  margin: 0;
+  padding: 6px 10px;
+  font-size: 12px;
+  justify-content: flex-start;
+}
+
+.pr-bottom-strip {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  flex-wrap: wrap;
+  font-size: 12px;
+}
+
+.pr-bottom-strip .product-reveal__trust-line {
+  margin-top: 0;
+  font-size: 12px;
+}
+
+.pr-bottom-strip .payment-icons {
+  margin-top: 0;
+  gap: 4px;
+}
+
+.pr-bottom-strip .award-badge {
+  margin-top: 0;
 }
 
 /* ============================================
@@ -1784,14 +1819,7 @@ tr:last-child .comparison__cell {
   .talking-stage__grid { grid-template-columns: 1fr 1fr; gap: 64px; }
   .talking-stage__video-wrap .video-placeholder { max-width: 340px; }
 
-  .product-reveal__top {
-    flex-direction: row;
-    align-items: flex-start;
-    gap: 40px;
-  }
-  .product-reveal__intro { text-align: left; margin-bottom: 16px; }
-  .product-img { max-width: 320px; }
-  .features { max-width: none; }
+  /* pr-grid is already two-column by default */
 
   .testimonials { grid-template-columns: 1fr 1fr; }
 }
@@ -1800,8 +1828,7 @@ tr:last-child .comparison__cell {
   .hero { padding: 120px 0 100px; }
   .hero__video-wrap .video-placeholder { max-width: 360px; }
   .talking-stage__video-wrap .video-placeholder { max-width: 360px; }
-  .product-img { max-width: 380px; }
-  .product-reveal__top { gap: 48px; }
+  .pr-grid { gap: 48px; }
 }
 
 /* ============================================
@@ -1817,8 +1844,13 @@ tr:last-child .comparison__cell {
   .stats-row { grid-template-columns: repeat(3, 1fr); gap: 16px; }
   .press-logos { gap: 20px; }
   .press-logo { font-size: 12px; }
-  .features { gap: 12px; }
-  .feature-card { padding: 20px 16px; }
+  .pr-grid { grid-template-columns: 1fr; gap: 24px; }
+  .pr-features { flex-wrap: wrap; gap: 12px; }
+  .pr-feature { flex: 0 0 calc(50% - 6px); }
+  .pr-cta-area .price-block { text-align: center; }
+  .pr-cta-area .urgency-bar { justify-content: center; }
+  .pr-cta-area .stock-scarcity { justify-content: center; }
+  .pr-bottom-strip { justify-content: center; text-align: center; }
 }
 
 /* ============================================
@@ -2198,65 +2230,70 @@ tr:last-child .comparison__cell {
 <!-- ====== SECTION 4: PRODUCT REVEAL ====== -->
 <section class="product-reveal" id="cta">
   <div class="container">
-    <div class="product-reveal__top">
-      <img src="product-lem.jpg" alt="Lem — lemon-shaped vibrator" class="product-img reveal">
-      <div class="product-reveal__right">
-        <div class="product-reveal__intro reveal">
+    <div class="pr-grid">
+      <div class="pr-left">
+        <img src="product-lem.jpg" alt="Lem — lemon-shaped vibrator" class="product-img reveal">
+        <div class="pr-trust-mini">
+          <span>&#9733; 4.7 (15k+ reviews)</span>
+          <span>&middot;</span>
+          <span>&#127942; Award Winner</span>
+        </div>
+      </div>
+      <div class="pr-right">
+        <div class="pr-intro reveal">
           <div class="section-label">Meet Lem</div>
           <h2 class="section-headline">Shaped like a lemon.<br><em>Nobody suspects a thing.</em></h2>
-          <p class="product-reveal__sub">Sits on your shelf like skincare. Fits in your bag like lip balm. Works like nothing you've tried before.</p>
+          <p class="pr-sub">Sits on your shelf like skincare. Fits in your bag like lip balm. Works like nothing you've tried before.</p>
         </div>
-        <div class="features">
-      <div class="feature-card reveal">
-        <div class="feature-card__icon"><svg width="32" height="32" viewBox="0 0 32 32" fill="none" stroke="var(--nancy-pink)" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><rect x="8" y="4" width="16" height="24" rx="3"/><line x1="13" y1="10" x2="19" y2="10"/><line x1="13" y1="14" x2="19" y2="14"/><line x1="13" y1="18" x2="19" y2="18"/><line x1="13" y1="22" x2="17" y2="22"/><circle cx="16" cy="22" r="0" fill="var(--nancy-pink)"/><rect x="12" y="19" width="8" height="6" rx="1" fill="var(--peach-tint-strong)" stroke="none"/></svg></div>
-        <div class="feature-card__title">12 Intensity Levels</div>
-        <p class="feature-card__desc">Some days are gentle. Some days are not. No judgment.</p>
-      </div>
-      <div class="feature-card reveal reveal-delay-1">
-        <div class="feature-card__icon"><svg width="32" height="32" viewBox="0 0 32 32" fill="none" stroke="var(--nancy-pink)" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M6 16c0-5.523 4.477-10 10-10s10 4.477 10 10"/><path d="M10 16c0-3.314 2.686-6 6-6s6 2.686 6 6"/><line x1="16" y1="16" x2="16" y2="20"/><circle cx="16" cy="22" r="2" fill="var(--peach-tint-strong)"/><line x1="4" y1="28" x2="8" y2="24" opacity="0.4"/><line x1="28" y1="28" x2="24" y2="24" opacity="0.4"/><line x1="16" y1="28" x2="16" y2="25" opacity="0.4"/></svg></div>
-        <div class="feature-card__title">Whisper-Quiet</div>
-        <p class="feature-card__desc">One reviewer thought it was a face massager. Your secret's safe.</p>
-      </div>
-      <div class="feature-card reveal reveal-delay-2">
-        <div class="feature-card__icon"><svg width="32" height="32" viewBox="0 0 32 32" fill="none" stroke="var(--nancy-pink)" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M8 12c0 8 8 14 8 14s8-6 8-14a8 8 0 1 0-16 0z" fill="var(--peach-tint-strong)"/><path d="M12 18c1.5 2 2.5 3.5 4 5.5 1.5-2 2.5-3.5 4-5.5" opacity="0.4"/><path d="M11 8.5c.8-1.2 2.8-2.5 5-2.5" opacity="0.5"/></svg></div>
-        <div class="feature-card__title">100% Waterproof</div>
-        <p class="feature-card__desc">Bath, shower, wherever the mood takes you.</p>
-      </div>
-      <div class="feature-card reveal reveal-delay-3">
-        <div class="feature-card__icon"><svg width="32" height="32" viewBox="0 0 32 32" fill="none" stroke="var(--nancy-pink)" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><rect x="9" y="6" width="14" height="22" rx="3" fill="var(--peach-tint-strong)"/><line x1="13" y1="6" x2="19" y2="6"/><polyline points="14 15 16 18 18 13" stroke-width="2"/><path d="M9 22h14" opacity="0.3"/></svg></div>
-        <div class="feature-card__title">USB Rechargeable</div>
-        <p class="feature-card__desc">No batteries. No awkward store runs. Ever.</p>
-      </div>
+        <div class="pr-features">
+          <div class="pr-feature">
+            <div class="pr-feature__icon"><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="var(--nancy-pink)" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="6" y="3" width="12" height="18" rx="2"/><line x1="9" y1="8" x2="15" y2="8"/><line x1="9" y1="12" x2="15" y2="12"/><line x1="9" y1="16" x2="13" y2="16"/></svg></div>
+            <span class="pr-feature__label">12 Levels</span>
+          </div>
+          <div class="pr-feature">
+            <div class="pr-feature__icon"><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="var(--nancy-pink)" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12c0-3.87 3.13-7 7-7s7 3.13 7 7"/><path d="M8 12c0-2.21 1.79-4 4-4s4 1.79 4 4"/><circle cx="12" cy="16" r="1.5"/><line x1="12" y1="12" x2="12" y2="14.5"/></svg></div>
+            <span class="pr-feature__label">Whisper-Quiet</span>
+          </div>
+          <div class="pr-feature">
+            <div class="pr-feature__icon"><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="var(--nancy-pink)" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M6 9c0 6 6 10 6 10s6-4 6-10a6 6 0 1 0-12 0z"/></svg></div>
+            <span class="pr-feature__label">Waterproof</span>
+          </div>
+          <div class="pr-feature">
+            <div class="pr-feature__icon"><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="var(--nancy-pink)" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="7" y="4" width="10" height="16" rx="2"/><line x1="10" y1="4" x2="14" y2="4"/><polyline points="10 12 12 14 14 10"/></svg></div>
+            <span class="pr-feature__label">USB-C</span>
+          </div>
         </div>
-      </div>
-    </div>
-    <div class="product-reveal__cta reveal">
-      <div class="price-block">
-        <div><span class="price-block__original">$159</span><span class="price-block__current">$89</span><span class="price-block__save">Save $70</span></div>
-        <p class="price-block__daily">That's $0.24/day over a year — less than your morning coffee</p>
-        <p class="price-block__bonus">+ Free mystery gift with every order</p>
-      </div>
-      <div class="urgency-bar" id="urgencyBar">
-        <span class="urgency-bar__dot"></span>
-        <span class="urgency-bar__text">Offer ends in</span>
-        <span class="urgency-bar__timer" id="urgencyTimer">--:--</span>
-      </div>
-      <div class="stock-scarcity" id="stockScarcity">
-        <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="var(--nancy-pink-dark)" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M10.29 3.86L1.82 18a2 2 0 0 0 1.71 3h16.94a2 2 0 0 0 1.71-3L13.71 3.86a2 2 0 0 0-3.42 0z"/><line x1="12" y1="9" x2="12" y2="13"/><line x1="12" y1="17" x2="12.01" y2="17"/></svg>
-        <span>Only <strong id="stockCount">47</strong> left at this price — <strong id="soldToday">842</strong> sold this week</span>
-      </div>
-      <a href="#" class="cta-btn">
-        Get Yours — Free Shipping
-        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><line x1="5" y1="12" x2="19" y2="12"/><polyline points="12 5 19 12 12 19"/></svg>
-      </a>
-      <p class="product-reveal__trust-line">Rated 4.7★ by 15,000+ women · 30-day happiness guarantee</p>
-      <div class="award-badge"><span class="award-badge__icon">&#127942;</span> 2025 Women's Wellness Tech Award Winner</div>
-      <div class="payment-icons">
-        <svg width="38" height="24" viewBox="0 0 38 24" fill="none"><rect width="38" height="24" rx="4" fill="#1A1F71"/><text x="19" y="15" text-anchor="middle" fill="#fff" font-size="9" font-weight="700" font-family="sans-serif">VISA</text></svg>
-        <svg width="38" height="24" viewBox="0 0 38 24" fill="none"><rect width="38" height="24" rx="4" fill="#252525"/><circle cx="15" cy="12" r="7" fill="#EB001B"/><circle cx="23" cy="12" r="7" fill="#F79E1B"/><path d="M19 6.8a7 7 0 0 1 0 10.4 7 7 0 0 1 0-10.4z" fill="#FF5F00"/></svg>
-        <svg width="38" height="24" viewBox="0 0 38 24" fill="none"><rect width="38" height="24" rx="4" fill="#003087"/><text x="19" y="15" text-anchor="middle" fill="#fff" font-size="7" font-weight="600" font-family="sans-serif">PayPal</text></svg>
-        <svg width="38" height="24" viewBox="0 0 38 24" fill="none"><rect width="38" height="24" rx="4" fill="#000"/><text x="19" y="15" text-anchor="middle" fill="#fff" font-size="7.5" font-weight="500" font-family="sans-serif"> Pay</text></svg>
-        <svg width="38" height="24" viewBox="0 0 38 24" fill="none"><rect width="38" height="24" rx="4" fill="#5F259F"/><text x="19" y="15" text-anchor="middle" fill="#fff" font-size="7" font-weight="600" font-family="sans-serif">Klarna</text></svg>
+        <div class="pr-cta-area">
+          <div class="price-block">
+            <div><span class="price-block__original">$159</span><span class="price-block__current">$89</span><span class="price-block__save">Save $70</span></div>
+            <p class="price-block__daily">That's $0.24/day over a year — less than your morning coffee</p>
+            <p class="price-block__bonus">+ Free mystery gift with every order</p>
+          </div>
+          <a href="#" class="cta-btn">
+            Get Yours — Free Shipping
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><line x1="5" y1="12" x2="19" y2="12"/><polyline points="12 5 19 12 12 19"/></svg>
+          </a>
+          <div class="urgency-bar" id="urgencyBar">
+            <span class="urgency-bar__dot"></span>
+            <span class="urgency-bar__text">Offer ends in</span>
+            <span class="urgency-bar__timer" id="urgencyTimer">--:--</span>
+          </div>
+          <div class="stock-scarcity" id="stockScarcity">
+            <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="var(--nancy-pink-dark)" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M10.29 3.86L1.82 18a2 2 0 0 0 1.71 3h16.94a2 2 0 0 0 1.71-3L13.71 3.86a2 2 0 0 0-3.42 0z"/><line x1="12" y1="9" x2="12" y2="13"/><line x1="12" y1="17" x2="12.01" y2="17"/></svg>
+            <span>Only <strong id="stockCount">47</strong> left at this price — <strong id="soldToday">842</strong> sold this week</span>
+          </div>
+        </div>
+        <div class="pr-bottom-strip">
+          <p class="product-reveal__trust-line">Rated 4.7&#9733; by 15,000+ women &middot; 30-day happiness guarantee</p>
+          <div class="award-badge"><span class="award-badge__icon">&#127942;</span> 2025 Women's Wellness Tech Award Winner</div>
+          <div class="payment-icons">
+            <svg width="38" height="24" viewBox="0 0 38 24" fill="none"><rect width="38" height="24" rx="4" fill="#1A1F71"/><text x="19" y="15" text-anchor="middle" fill="#fff" font-size="9" font-weight="700" font-family="sans-serif">VISA</text></svg>
+            <svg width="38" height="24" viewBox="0 0 38 24" fill="none"><rect width="38" height="24" rx="4" fill="#252525"/><circle cx="15" cy="12" r="7" fill="#EB001B"/><circle cx="23" cy="12" r="7" fill="#F79E1B"/><path d="M19 6.8a7 7 0 0 1 0 10.4 7 7 0 0 1 0-10.4z" fill="#FF5F00"/></svg>
+            <svg width="38" height="24" viewBox="0 0 38 24" fill="none"><rect width="38" height="24" rx="4" fill="#003087"/><text x="19" y="15" text-anchor="middle" fill="#fff" font-size="7" font-weight="600" font-family="sans-serif">PayPal</text></svg>
+            <svg width="38" height="24" viewBox="0 0 38 24" fill="none"><rect width="38" height="24" rx="4" fill="#000"/><text x="19" y="15" text-anchor="middle" fill="#fff" font-size="7.5" font-weight="500" font-family="sans-serif"> Pay</text></svg>
+            <svg width="38" height="24" viewBox="0 0 38 24" fill="none"><rect width="38" height="24" rx="4" fill="#5F259F"/><text x="19" y="15" text-anchor="middle" fill="#fff" font-size="7" font-weight="600" font-family="sans-serif">Klarna</text></svg>
+          </div>
+        </div>
       </div>
     </div>
   </div>
