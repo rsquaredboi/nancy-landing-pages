@@ -671,6 +671,59 @@ a { text-decoration: none; color: inherit; }
   border-radius: 20px;
 }
 
+.product-gallery {
+  width: 100%;
+  max-width: 420px;
+}
+
+.product-gallery__main {
+  width: 100%;
+  aspect-ratio: 1 / 1;
+  border-radius: 16px;
+  overflow: hidden;
+  margin-bottom: 12px;
+  background: #fff;
+}
+
+.product-gallery__hero {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  display: block;
+  transition: opacity 0.3s ease;
+}
+
+.product-gallery__thumbs {
+  display: flex;
+  gap: 8px;
+  overflow-x: auto;
+  padding-bottom: 4px;
+}
+
+.product-gallery__thumb {
+  flex-shrink: 0;
+  width: 64px;
+  height: 64px;
+  border-radius: 10px;
+  overflow: hidden;
+  border: 2px solid transparent;
+  padding: 0;
+  cursor: pointer;
+  background: #fff;
+  transition: border-color 0.2s;
+}
+
+.product-gallery__thumb.active {
+  border-color: #E91E8C;
+}
+
+.product-gallery__thumb img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  display: block;
+}
+
 .pr-trust-mini {
   display: flex;
   align-items: center;
@@ -1980,6 +2033,9 @@ tr:last-child .comparison__cell {
   .press-logo { font-size: 12px; }
   .reviews__headline { font-size: 26px; }
   .pr-grid { grid-template-columns: 1fr; gap: 24px; }
+  .product-gallery { max-width: 100%; margin: 0 auto; }
+  .product-gallery__main { border-radius: 12px; }
+  .product-gallery__thumb { width: 56px; height: 56px; }
   .pr-features { flex-wrap: wrap; gap: 12px; }
   .pr-feature { flex: 0 0 calc(50% - 6px); }
   .pr-cta-area .price-block { text-align: center; }
@@ -2242,7 +2298,7 @@ tr:last-child .comparison__cell {
 <nav class="nav">
   <div class="container nav__inner">
     <a href="https://hellonancy.com" class="nav__logo"><img src="Nancy_Logo_Pink.avif" alt="Nancy" class="nav__logo-img"></a>
-    <a href="#cta" class="cta-btn nav__cta">
+    <a href="#product-section" class="cta-btn nav__cta">
       Meet Lem
       <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><line x1="5" y1="12" x2="19" y2="12"/><polyline points="12 5 19 12 12 19"/></svg>
     </a>
@@ -2261,7 +2317,7 @@ tr:last-child .comparison__cell {
         <p class="hero__label reveal">—— 15,000+ WOMEN ALREADY KNOW</p>
         <h1 class="hero__headline reveal reveal-delay-1">She's not fine. She's just tired of <em>explaining.</em></h1>
         <p class="hero__subhead reveal reveal-delay-2">When you stop fighting, it's not peace — it's exhaustion. You've been putting everyone else first for long enough. Meet Lem: a tiny, lemon-shaped secret with 12 intensity levels and zero interest in your emotional labor.</p>
-        <a href="#cta" class="hero__cta reveal reveal-delay-3">See What 15K Women Are Talking About →</a>
+        <a href="#product-section" class="hero__cta reveal reveal-delay-3">See What 15K+ Women Are Talking About →</a>
         <div class="hero__trust-row reveal reveal-delay-3">
           <span>✓ Free discreet shipping</span>
           <span>✓ 30-day guarantee</span>
@@ -2347,11 +2403,32 @@ tr:last-child .comparison__cell {
 </section>
 
 <!-- ====== SECTION 4: PRODUCT REVEAL ====== -->
-<section class="product-reveal" id="cta">
+<section class="product-reveal" id="product-section">
   <div class="container">
     <div class="pr-grid">
       <div class="pr-left">
-        <img src="product-lem.jpg" alt="Lem — lemon-shaped vibrator" class="product-img reveal">
+        <div class="product-gallery reveal">
+          <div class="product-gallery__main">
+            <img id="galleryMain" src="https://hellonancy.com/cdn/shop/files/WhatsAppImage2023-11-18at14.19.19_2acc31e8.webp?v=1762419856&width=600" alt="Lem Clitoral Massager" class="product-gallery__hero">
+          </div>
+          <div class="product-gallery__thumbs">
+            <button class="product-gallery__thumb active" onclick="changeGalleryImage(this, 'https://hellonancy.com/cdn/shop/files/WhatsAppImage2023-11-18at14.19.19_2acc31e8.webp?v=1762419856&width=600')">
+              <img src="https://hellonancy.com/cdn/shop/files/WhatsAppImage2023-11-18at14.19.19_2acc31e8.webp?v=1762419856&width=120" alt="Lem product shot 1">
+            </button>
+            <button class="product-gallery__thumb" onclick="changeGalleryImage(this, 'https://hellonancy.com/cdn/shop/files/Untitled_Capture0776_2_4a5f299c-2c95-4dba-9f28-ab76844a5f11.webp?v=1762420124&width=600')">
+              <img src="https://hellonancy.com/cdn/shop/files/Untitled_Capture0776_2_4a5f299c-2c95-4dba-9f28-ab76844a5f11.webp?v=1762420124&width=120" alt="Lem product shot 2">
+            </button>
+            <button class="product-gallery__thumb" onclick="changeGalleryImage(this, 'lem-lifestyle.png')">
+              <img src="lem-lifestyle.png" alt="Lem on nightstand">
+            </button>
+            <button class="product-gallery__thumb" onclick="changeGalleryImage(this, 'lem-no-bg.png')">
+              <img src="lem-no-bg.png" alt="Lem product transparent">
+            </button>
+            <button class="product-gallery__thumb" onclick="changeGalleryImage(this, 'lem-closeup-vertical.png')">
+              <img src="lem-closeup-vertical.png" alt="Lem in hand">
+            </button>
+          </div>
+        </div>
         <div class="pr-trust-mini">
           <span>&#9733; 4.7 (15k+ reviews)</span>
           <span>&middot;</span>
@@ -2388,7 +2465,7 @@ tr:last-child .comparison__cell {
             <p class="price-block__daily">That's $0.24/day over a year — less than your morning coffee</p>
             <p class="price-block__bonus">+ Free mystery gift with every order</p>
           </div>
-          <a href="#" class="cta-btn">
+          <a href="https://hellonancy.com/products/lem" target="_blank" rel="noopener" class="cta-btn">
             Get Yours — Free Shipping
             <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><line x1="5" y1="12" x2="19" y2="12"/><polyline points="12 5 19 12 12 19"/></svg>
           </a>
@@ -2562,8 +2639,8 @@ tr:last-child .comparison__cell {
     </div>
     <p class="trustpilot-line reveal"><span class="tp-star">★</span> Rated 4.7/5 on Trustpilot · 1,300+ independent reviews</p>
     <div class="social-proof__cta reveal">
-      <a href="#cta" class="cta-btn">
-        See Why 15,000 Women Switched →
+      <a href="#product-section" class="cta-btn">
+        See Why 15,000+ Women Switched →
       </a>
     </div>
     <div class="live-purchases reveal">
@@ -2672,7 +2749,7 @@ tr:last-child .comparison__cell {
             <div><strong>You finally put yourself first</strong><span>(prepare to wonder why you waited)</span></div>
           </div>
         </div>
-        <a href="#" class="cta-btn cta-btn--large reveal reveal-delay-3">
+        <a href="https://hellonancy.com/products/lem" target="_blank" rel="noopener" class="cta-btn cta-btn--large reveal reveal-delay-3">
           I Deserve This — $89
           <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><line x1="5" y1="12" x2="19" y2="12"/><polyline points="12 5 19 12 12 19"/></svg>
         </a>
@@ -2738,7 +2815,7 @@ tr:last-child .comparison__cell {
     <div class="sticky-cta__price"><s>$159</s> $89 <span class="sticky-cta__save">Save 44%</span></div>
     <div class="sticky-cta__sub">Free shipping + mystery gift · 30-day guarantee</div>
   </div>
-  <a href="#" class="cta-btn">Get Lem
+  <a href="https://hellonancy.com/products/lem" target="_blank" rel="noopener" class="cta-btn">Get Lem
     <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><line x1="5" y1="12" x2="19" y2="12"/><polyline points="12 5 19 12 12 19"/></svg>
   </a>
 </div>
@@ -2756,7 +2833,7 @@ tr:last-child .comparison__cell {
   </button>
   <p class="email-slidein__headline">Before you go further...</p>
   <p class="email-slidein__body">Save 25% on your Lem with code <strong style="color:var(--nancy-pink);">LEM25</strong> at checkout.</p>
-  <a href="#" class="email-slidein__btn" style="display:block;text-align:center;text-decoration:none;padding:14px;border-radius:10px;">Shop Lem — 25% Off</a>
+  <a href="https://hellonancy.com/products/lem" target="_blank" rel="noopener" class="email-slidein__btn" style="display:block;text-align:center;text-decoration:none;padding:14px;border-radius:10px;">Shop Lem — 25% Off</a>
   <p class="email-slidein__privacy">Free discreet shipping · 30-day guarantee</p>
 </div>
 
@@ -2777,7 +2854,7 @@ tr:last-child .comparison__cell {
       <span class="urgency-bar__dot"></span>
       Code expires in <strong id="exitTimer">15:00</strong>
     </div>
-    <a href="#" class="cta-btn" style="width:100%;justify-content:center;">
+    <a href="https://hellonancy.com/products/lem" target="_blank" rel="noopener" class="cta-btn" style="width:100%;justify-content:center;">
       Shop Lem — 25% Off
       <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><line x1="5" y1="12" x2="19" y2="12"/><polyline points="12 5 19 12 12 19"/></svg>
     </a>
@@ -2790,6 +2867,20 @@ tr:last-child .comparison__cell {
 </div>
 
 <script>
+// Product gallery
+function changeGalleryImage(thumb, src) {
+  const main = document.getElementById('galleryMain');
+  if (main) {
+    main.style.opacity = '0';
+    setTimeout(() => {
+      main.src = src;
+      main.style.opacity = '1';
+    }, 150);
+  }
+  document.querySelectorAll('.product-gallery__thumb').forEach(t => t.classList.remove('active'));
+  thumb.classList.add('active');
+}
+
 // Scroll reveal
 const reveals = document.querySelectorAll('.reveal');
 const observer = new IntersectionObserver((entries) => {
