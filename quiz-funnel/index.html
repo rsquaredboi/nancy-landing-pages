@@ -26,6 +26,41 @@
     /></noscript>
     <!-- End Meta Pixel Code -->
 
+    <!-- Google tag (gtag.js) -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=AW-11033179838"></script>
+    <script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag(){dataLayer.push(arguments);}
+    gtag('js', new Date());
+    gtag('config', 'AW-11033179838');
+
+    // Page load conversion
+    gtag('event', 'conversion', {
+      'send_to': 'AW-11033179838/wazqCJ385ZgYEL7tg40p',
+      'value': 1.0,
+      'currency': 'HKD',
+      'transaction_id': ''
+    });
+
+    // Click conversion helper — call gtag_report_conversion(url) on link/button clicks
+    function gtag_report_conversion(url) {
+      var callback = function () {
+        if (typeof(url) != 'undefined') {
+          window.location = url;
+        }
+      };
+      gtag('event', 'conversion', {
+        'send_to': 'AW-11033179838/wazqCJ385ZgYEL7tg40p',
+        'value': 1.0,
+        'currency': 'HKD',
+        'transaction_id': '',
+        'event_callback': callback
+      });
+      return false;
+    }
+    </script>
+    <!-- End Google tag -->
+
     <!-- SEO Meta Tags -->
     <meta name="description" content="Take our 60-second quiz to discover your perfect Hello Nancy pleasure product. Get personalized recommendations for Lem, Avo, Berri, and more based on your preferences." />
     <meta name="keywords" content="pleasure product quiz, intimate wellness quiz, Hello Nancy, Lem, Avo, Berri, product recommendation, sensation finder" />
