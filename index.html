@@ -3,7 +3,7 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Nancy — She's Not Fine</title>
+<title>Hello Nancy — She's Not Fine</title>
 <meta name="description" content="When you stop fighting, it's not peace — it's exhaustion. Discover the discreet, lemon-shaped companion 15,000+ women are obsessed with.">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -13,16 +13,14 @@
    CSS VARIABLES & RESET
    ============================================ */
 :root {
-  --coral: #E8836B;
-  --coral-light: #F2A999;
-  --coral-dark: #D4604A;
-  --cream: #FBF7F4;
-  --cream-dark: #F3ECE6;
-  --warm-white: #FEFCFA;
-  --charcoal: #2A2420;
-  --charcoal-light: #4A4440;
-  --warm-gray: #8A837D;
-  --warm-gray-light: #B8B2AC;
+  --nancy-pink: #E8836B;
+  --nancy-pink-light: #F2A999;
+  --nancy-pink-dark: #D4604A;
+  --nancy-cream: #FFF9F5;
+  --nancy-cream-dark: #FFF0E8;
+  --nancy-black: #1A1A1A;
+  --nancy-gray: #666666;
+  --nancy-gray-light: #999999;
   --peach-tint: rgba(232,131,107,0.08);
   --peach-tint-strong: rgba(232,131,107,0.15);
   --font-display: 'Instrument Serif', Georgia, serif;
@@ -35,8 +33,8 @@ html { scroll-behavior: smooth; -webkit-text-size-adjust: 100%; }
 
 body {
   font-family: var(--font-body);
-  color: var(--charcoal);
-  background: var(--warm-white);
+  color: var(--nancy-black);
+  background: var(--nancy-cream);
   line-height: 1.6;
   -webkit-font-smoothing: antialiased;
   overflow-x: hidden;
@@ -73,7 +71,7 @@ a { text-decoration: none; color: inherit; }
   display: inline-flex;
   align-items: center;
   gap: 10px;
-  background: var(--coral);
+  background: var(--nancy-pink);
   color: #fff;
   font-family: var(--font-body);
   font-size: 16px;
@@ -88,7 +86,7 @@ a { text-decoration: none; color: inherit; }
 }
 
 .cta-btn:hover {
-  background: var(--coral-dark);
+  background: var(--nancy-pink-dark);
   transform: translateY(-2px);
   box-shadow: 0 8px 30px rgba(232,131,107,0.35);
 }
@@ -104,13 +102,13 @@ a { text-decoration: none; color: inherit; }
 
 .cta-btn--outline {
   background: transparent;
-  color: var(--coral);
-  border: 2px solid var(--coral);
+  color: var(--nancy-pink);
+  border: 2px solid var(--nancy-pink);
   box-shadow: none;
 }
 
 .cta-btn--outline:hover {
-  background: var(--coral);
+  background: var(--nancy-pink);
   color: #fff;
   box-shadow: 0 8px 30px rgba(232,131,107,0.25);
 }
@@ -137,7 +135,7 @@ a { text-decoration: none; color: inherit; }
    TOP BAR
    ============================================ */
 .top-bar {
-  background: var(--charcoal);
+  background: var(--nancy-pink);
   color: #fff;
   text-align: center;
   padding: 10px 24px;
@@ -146,7 +144,7 @@ a { text-decoration: none; color: inherit; }
   letter-spacing: 0.04em;
 }
 
-.top-bar span { color: var(--coral-light); font-weight: 500; }
+.top-bar span { color: #fff; font-weight: 500; }
 
 /* ============================================
    NAVIGATION
@@ -155,7 +153,7 @@ a { text-decoration: none; color: inherit; }
   position: sticky;
   top: 0;
   z-index: 100;
-  background: rgba(254,252,250,0.92);
+  background: rgba(255,249,245,0.92);
   backdrop-filter: blur(16px);
   -webkit-backdrop-filter: blur(16px);
   border-bottom: 1px solid rgba(42,36,32,0.06);
@@ -169,15 +167,27 @@ a { text-decoration: none; color: inherit; }
 }
 
 .nav__logo {
-  font-family: var(--font-display);
-  font-size: 26px;
-  color: var(--charcoal);
-  letter-spacing: -0.01em;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  line-height: 1;
+  gap: 2px;
+  color: var(--nancy-pink);
 }
 
-.nav__logo em {
+.nav__logo-hello {
+  font-family: var(--font-body);
+  font-size: 10px;
+  font-weight: 500;
+  letter-spacing: 0.15em;
+  text-transform: uppercase;
+}
+
+.nav__logo-nancy {
+  font-family: var(--font-display);
   font-style: italic;
-  color: var(--coral);
+  font-size: 26px;
+  letter-spacing: -0.01em;
 }
 
 .nav__cta {
@@ -190,7 +200,7 @@ a { text-decoration: none; color: inherit; }
    ============================================ */
 .hero {
   padding: 80px 0 60px;
-  background: var(--cream);
+  background: var(--nancy-cream-dark);
   position: relative;
   overflow: hidden;
 }
@@ -222,7 +232,7 @@ a { text-decoration: none; color: inherit; }
   font-weight: 500;
   letter-spacing: 0.08em;
   text-transform: uppercase;
-  color: var(--coral);
+  color: var(--nancy-pink);
   margin-bottom: 20px;
 }
 
@@ -231,27 +241,27 @@ a { text-decoration: none; color: inherit; }
   display: block;
   width: 24px;
   height: 2px;
-  background: var(--coral);
+  background: var(--nancy-pink);
 }
 
 .hero__headline {
   font-family: var(--font-display);
   font-size: clamp(36px, 6vw, 58px);
   line-height: 1.1;
-  color: var(--charcoal);
+  color: var(--nancy-black);
   margin-bottom: 20px;
   letter-spacing: -0.02em;
 }
 
 .hero__headline em {
   font-style: italic;
-  color: var(--coral);
+  color: var(--nancy-pink);
 }
 
 .hero__sub {
   font-size: 18px;
   line-height: 1.65;
-  color: var(--charcoal-light);
+  color: var(--nancy-black);
   max-width: 480px;
   margin-bottom: 32px;
   font-weight: 300;
@@ -269,18 +279,18 @@ a { text-decoration: none; color: inherit; }
 .hero__stars {
   display: flex;
   gap: 2px;
-  color: var(--coral);
+  color: var(--nancy-pink);
   font-size: 16px;
 }
 
 .hero__proof-text {
   font-size: 14px;
-  color: var(--warm-gray);
+  color: var(--nancy-gray);
   font-weight: 400;
 }
 
 .hero__proof-text strong {
-  color: var(--charcoal);
+  color: var(--nancy-black);
   font-weight: 500;
 }
 
@@ -295,7 +305,7 @@ a { text-decoration: none; color: inherit; }
   position: relative;
   aspect-ratio: 9 / 16;
   max-height: 520px;
-  background: var(--charcoal);
+  background: var(--nancy-black);
   border-radius: 16px;
   overflow: hidden;
   display: flex;
@@ -324,7 +334,7 @@ a { text-decoration: none; color: inherit; }
   width: 64px;
   height: 64px;
   border-radius: 50%;
-  background: var(--coral);
+  background: var(--nancy-pink);
   display: flex;
   align-items: center;
   justify-content: center;
@@ -397,6 +407,38 @@ a { text-decoration: none; color: inherit; }
   width: 100%;
 }
 
+/* As Seen In strip */
+.as-seen-in {
+  border-top: 1px solid rgba(26,26,26,0.08);
+  padding: 20px 0;
+  text-align: center;
+}
+
+.as-seen-in__label {
+  font-size: 11px;
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+  color: rgba(26,26,26,0.3);
+  margin-bottom: 12px;
+  font-weight: 400;
+}
+
+.as-seen-in__logos {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: center;
+  gap: 32px;
+}
+
+.as-seen-in__logo {
+  font-size: 12px;
+  font-weight: 500;
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+  color: rgba(26,26,26,0.3);
+}
+
 /* ============================================
 /* ============================================
    SHARED SECTION STYLES
@@ -409,7 +451,7 @@ a { text-decoration: none; color: inherit; }
   font-weight: 500;
   letter-spacing: 0.1em;
   text-transform: uppercase;
-  color: var(--coral);
+  color: var(--nancy-pink);
   margin-bottom: 16px;
 }
 
@@ -417,13 +459,13 @@ a { text-decoration: none; color: inherit; }
   font-family: var(--font-display);
   font-size: clamp(28px, 4.5vw, 42px);
   line-height: 1.2;
-  color: var(--charcoal);
+  color: var(--nancy-black);
   letter-spacing: -0.01em;
 }
 
 .section-headline em {
   font-style: italic;
-  color: var(--coral);
+  color: var(--nancy-pink);
 }
 
 /* ============================================
@@ -437,7 +479,7 @@ a { text-decoration: none; color: inherit; }
     linear-gradient(to bottom, rgba(42,36,32,0.72), rgba(42,36,32,0.82)),
     url('section_image.jpg')
     center center / cover no-repeat;
-  background-color: var(--charcoal); /* fallback until image loads */
+  background-color: var(--nancy-black); /* fallback until image loads */
 }
 
 /* Subtle grain texture overlay for cinematic feel */
@@ -456,7 +498,7 @@ a { text-decoration: none; color: inherit; }
 }
 
 .empathy .section-label {
-  color: var(--coral-light);
+  color: var(--nancy-pink-light);
 }
 
 .empathy .section-headline {
@@ -464,7 +506,7 @@ a { text-decoration: none; color: inherit; }
 }
 
 .empathy .section-headline em {
-  color: var(--coral-light);
+  color: var(--nancy-pink-light);
 }
 
 .empathy__intro {
@@ -527,7 +569,7 @@ a { text-decoration: none; color: inherit; }
    ============================================ */
 .talking-stage {
   padding: 100px 0;
-  background: var(--charcoal);
+  background: var(--nancy-black);
   color: #fff;
   position: relative;
   overflow: hidden;
@@ -553,7 +595,7 @@ a { text-decoration: none; color: inherit; }
 }
 
 .talking-stage__label {
-  color: var(--coral-light);
+  color: var(--nancy-pink-light);
 }
 
 .talking-stage__headline {
@@ -566,7 +608,7 @@ a { text-decoration: none; color: inherit; }
 
 .talking-stage__headline em {
   font-style: italic;
-  color: var(--coral-light);
+  color: var(--nancy-pink-light);
 }
 
 .talking-stage__copy {
@@ -581,7 +623,7 @@ a { text-decoration: none; color: inherit; }
   font-family: var(--font-display);
   font-size: 22px;
   font-style: italic;
-  color: var(--coral-light);
+  color: var(--nancy-pink-light);
   margin-top: 24px;
 }
 
@@ -604,7 +646,7 @@ a { text-decoration: none; color: inherit; }
    ============================================ */
 .product-reveal {
   padding: 70px 0;
-  background: var(--warm-white);
+  background: var(--nancy-cream);
 }
 
 .product-reveal__top {
@@ -626,7 +668,7 @@ a { text-decoration: none; color: inherit; }
 
 .product-reveal__sub {
   font-size: 17px;
-  color: var(--warm-gray);
+  color: var(--nancy-gray);
   font-weight: 300;
 }
 
@@ -653,7 +695,7 @@ a { text-decoration: none; color: inherit; }
 }
 
 .feature-card {
-  background: var(--cream);
+  background: var(--nancy-cream-dark);
   border-radius: 16px;
   padding: 20px;
   text-align: center;
@@ -678,12 +720,12 @@ a { text-decoration: none; color: inherit; }
   font-family: var(--font-display);
   font-size: 18px;
   margin-bottom: 6px;
-  color: var(--charcoal);
+  color: var(--nancy-black);
 }
 
 .feature-card__desc {
   font-size: 14px;
-  color: var(--warm-gray);
+  color: var(--nancy-gray);
   line-height: 1.55;
   font-weight: 300;
 }
@@ -698,7 +740,7 @@ a { text-decoration: none; color: inherit; }
    ============================================ */
 .social-proof {
   padding: 100px 0;
-  background: var(--cream);
+  background: var(--nancy-cream-dark);
 }
 
 .social-proof__intro {
@@ -713,16 +755,16 @@ a { text-decoration: none; color: inherit; }
   justify-content: center;
   width: 140px;
   height: 48px;
-  background: var(--cream-dark);
+  background: var(--nancy-cream-dark);
   border-radius: 8px;
   font-family: var(--font-display);
   font-size: 22px;
-  color: var(--charcoal);
+  color: var(--nancy-black);
   margin: 0 auto 32px;
-  border: 1px dashed var(--warm-gray-light);
+  border: 1px dashed var(--nancy-gray-light);
 }
 
-.nancy-logo-placeholder em { font-style: italic; color: var(--coral); }
+.nancy-logo-placeholder em { font-style: italic; color: var(--nancy-pink); }
 
 /* Stats row */
 .stats-row {
@@ -737,13 +779,13 @@ a { text-decoration: none; color: inherit; }
 .stat__number {
   font-family: var(--font-display);
   font-size: clamp(28px, 4vw, 38px);
-  color: var(--coral);
+  color: var(--nancy-pink);
   line-height: 1.1;
 }
 
 .stat__label {
   font-size: 13px;
-  color: var(--warm-gray);
+  color: var(--nancy-gray);
   margin-top: 4px;
   font-weight: 400;
 }
@@ -762,7 +804,7 @@ a { text-decoration: none; color: inherit; }
 
 .press-logo {
   font-size: 14px;
-  color: var(--warm-gray-light);
+  color: var(--nancy-gray-light);
   font-weight: 500;
   letter-spacing: 0.06em;
   text-transform: uppercase;
@@ -782,7 +824,7 @@ a { text-decoration: none; color: inherit; }
 }
 
 .testimonial {
-  background: var(--warm-white);
+  background: var(--nancy-cream);
   border-radius: 16px;
   padding: 32px;
   border: 1px solid rgba(42,36,32,0.04);
@@ -791,7 +833,7 @@ a { text-decoration: none; color: inherit; }
 .testimonial__stars {
   display: flex;
   gap: 2px;
-  color: var(--coral);
+  color: var(--nancy-pink);
   font-size: 14px;
   margin-bottom: 12px;
 }
@@ -799,7 +841,7 @@ a { text-decoration: none; color: inherit; }
 .testimonial__text {
   font-size: 16px;
   line-height: 1.65;
-  color: var(--charcoal-light);
+  color: var(--nancy-black);
   font-style: italic;
   margin-bottom: 12px;
   font-weight: 300;
@@ -807,7 +849,7 @@ a { text-decoration: none; color: inherit; }
 
 .testimonial__attr {
   font-size: 13px;
-  color: var(--warm-gray);
+  color: var(--nancy-gray);
   font-weight: 500;
 }
 
@@ -816,7 +858,7 @@ a { text-decoration: none; color: inherit; }
    ============================================ */
 .comparison {
   padding: 100px 0;
-  background: var(--cream);
+  background: var(--nancy-cream-dark);
 }
 
 .comparison__intro {
@@ -826,7 +868,7 @@ a { text-decoration: none; color: inherit; }
 
 .comparison__sub {
   font-size: 17px;
-  color: var(--warm-gray);
+  color: var(--nancy-gray);
   font-weight: 300;
   margin-top: 12px;
 }
@@ -855,13 +897,13 @@ a { text-decoration: none; color: inherit; }
   text-align: center;
   font-size: 13px;
   font-weight: 500;
-  color: var(--warm-gray);
+  color: var(--nancy-gray);
   letter-spacing: 0.03em;
   vertical-align: bottom;
 }
 
 .comparison__brand--lem {
-  background: var(--coral);
+  background: var(--nancy-pink);
   color: #fff;
   border-radius: 16px 16px 0 0;
   padding: 20px 16px;
@@ -887,7 +929,7 @@ a { text-decoration: none; color: inherit; }
 .comparison__criteria {
   padding: 18px 16px 18px 0;
   font-weight: 500;
-  color: var(--charcoal);
+  color: var(--nancy-black);
   font-size: 14px;
   border-bottom: 1px solid rgba(42,36,32,0.06);
   white-space: nowrap;
@@ -897,14 +939,14 @@ a { text-decoration: none; color: inherit; }
   padding: 18px 12px;
   text-align: center;
   vertical-align: middle;
-  color: var(--warm-gray);
+  color: var(--nancy-gray);
   border-bottom: 1px solid rgba(42,36,32,0.06);
   font-size: 14px;
 }
 
 .comparison__cell--lem {
   background: var(--peach-tint);
-  color: var(--charcoal);
+  color: var(--nancy-black);
   font-weight: 500;
   position: relative;
 }
@@ -932,7 +974,7 @@ tr:last-child .comparison__cell {
 
 .comparison__cell strong {
   display: block;
-  color: var(--coral);
+  color: var(--nancy-pink);
   font-size: 18px;
   font-family: var(--font-display);
 }
@@ -940,14 +982,14 @@ tr:last-child .comparison__cell {
 .comparison__note {
   display: block;
   font-size: 11px;
-  color: var(--warm-gray);
+  color: var(--nancy-gray);
   font-weight: 400;
   margin-top: 2px;
   letter-spacing: 0.02em;
 }
 
 .comparison__cell--lem .comparison__note {
-  color: var(--coral-dark);
+  color: var(--nancy-pink-dark);
   opacity: 0.7;
 }
 
@@ -960,18 +1002,18 @@ tr:last-child .comparison__cell {
 }
 
 .comparison__weak {
-  color: var(--coral-dark);
+  color: var(--nancy-pink-dark);
   font-weight: 500;
   font-size: 13px;
 }
 
 .comparison__muted {
-  color: var(--warm-gray-light);
+  color: var(--nancy-gray-light);
   font-size: 13px;
 }
 
 .comparison__meh {
-  color: var(--warm-gray);
+  color: var(--nancy-gray);
   font-size: 13px;
   font-style: italic;
 }
@@ -982,7 +1024,7 @@ tr:last-child .comparison__cell {
   font-family: var(--font-display);
   font-style: italic;
   font-size: 18px;
-  color: var(--charcoal-light);
+  color: var(--nancy-black);
 }
 
 @media (max-width: 767px) {
@@ -999,7 +1041,7 @@ tr:last-child .comparison__cell {
    ============================================ */
 .faq {
   padding: 100px 0;
-  background: var(--warm-white);
+  background: var(--nancy-cream);
 }
 
 .faq__intro {
@@ -1030,14 +1072,14 @@ tr:last-child .comparison__cell {
   font-family: var(--font-body);
   font-size: 17px;
   font-weight: 500;
-  color: var(--charcoal);
+  color: var(--nancy-black);
   cursor: pointer;
   text-align: left;
   transition: color 0.3s ease;
   gap: 16px;
 }
 
-.faq__question:hover { color: var(--coral); }
+.faq__question:hover { color: var(--nancy-pink); }
 
 .faq__icon {
   width: 24px;
@@ -1050,7 +1092,7 @@ tr:last-child .comparison__cell {
 .faq__icon::before, .faq__icon::after {
   content: '';
   position: absolute;
-  background: var(--charcoal);
+  background: var(--nancy-black);
   transition: transform 0.3s ease, background 0.3s ease;
 }
 
@@ -1068,7 +1110,7 @@ tr:last-child .comparison__cell {
 
 .faq__item.active .faq__icon::after { transform: translate(-50%, -50%) rotate(90deg); }
 .faq__question:hover .faq__icon::before,
-.faq__question:hover .faq__icon::after { background: var(--coral); }
+.faq__question:hover .faq__icon::after { background: var(--nancy-pink); }
 
 .faq__answer {
   max-height: 0;
@@ -1080,7 +1122,7 @@ tr:last-child .comparison__cell {
   padding: 0 0 24px;
   font-size: 16px;
   line-height: 1.7;
-  color: var(--charcoal-light);
+  color: var(--nancy-black);
   font-weight: 300;
 }
 
@@ -1091,7 +1133,7 @@ tr:last-child .comparison__cell {
    ============================================ */
 .final-cta {
   padding: 100px 0 80px;
-  background: var(--charcoal);
+  background: var(--nancy-black);
   color: #fff;
   text-align: center;
   position: relative;
@@ -1120,7 +1162,7 @@ tr:last-child .comparison__cell {
   letter-spacing: -0.01em;
 }
 
-.final-cta__headline em { font-style: italic; color: var(--coral-light); }
+.final-cta__headline em { font-style: italic; color: var(--nancy-pink-light); }
 
 .final-cta__sub {
   font-size: 17px;
@@ -1162,7 +1204,7 @@ tr:last-child .comparison__cell {
   height: 32px;
   min-width: 32px;
   border-radius: 50%;
-  background: var(--coral);
+  background: var(--nancy-pink);
   color: #fff;
   font-size: 14px;
   font-weight: 600;
@@ -1253,7 +1295,7 @@ tr:last-child .comparison__cell {
   left: 0;
   width: 0%;
   height: 3px;
-  background: linear-gradient(90deg, var(--coral), var(--coral-light));
+  background: linear-gradient(90deg, var(--nancy-pink), var(--nancy-pink-light));
   z-index: 200;
   transition: width 0.1s linear;
 }
@@ -1267,7 +1309,7 @@ tr:last-child .comparison__cell {
   left: 0;
   right: 0;
   z-index: 150;
-  background: var(--warm-white);
+  background: var(--nancy-cream);
   border-top: 1px solid rgba(42,36,32,0.08);
   padding: 12px 20px;
   display: flex;
@@ -1289,13 +1331,13 @@ tr:last-child .comparison__cell {
 .sticky-cta__price {
   font-family: var(--font-display);
   font-size: 20px;
-  color: var(--charcoal);
+  color: var(--nancy-black);
   line-height: 1.2;
 }
 
 .sticky-cta__price s {
   font-size: 14px;
-  color: var(--warm-gray-light);
+  color: var(--nancy-gray-light);
   font-family: var(--font-body);
   text-decoration: line-through;
   margin-right: 6px;
@@ -1311,7 +1353,7 @@ tr:last-child .comparison__cell {
 
 .sticky-cta__sub {
   font-size: 11px;
-  color: var(--warm-gray);
+  color: var(--nancy-gray);
   margin-top: 1px;
 }
 
@@ -1335,7 +1377,7 @@ tr:last-child .comparison__cell {
   bottom: 80px;
   left: 20px;
   z-index: 140;
-  background: var(--warm-white);
+  background: var(--nancy-cream);
   border: 1px solid rgba(42,36,32,0.08);
   border-radius: 12px;
   padding: 14px 18px;
@@ -1344,7 +1386,7 @@ tr:last-child .comparison__cell {
   gap: 10px;
   box-shadow: 0 8px 30px rgba(42,36,32,0.12);
   font-size: 13px;
-  color: var(--charcoal-light);
+  color: var(--nancy-black);
   max-width: 300px;
   transform: translateX(-120%);
   transition: transform 0.5s cubic-bezier(0.34, 1.56, 0.64, 1);
@@ -1367,7 +1409,7 @@ tr:last-child .comparison__cell {
   50% { opacity: 0.4; }
 }
 
-.social-toast strong { font-weight: 600; color: var(--charcoal); }
+.social-toast strong { font-weight: 600; color: var(--nancy-black); }
 
 @media (max-width: 767px) {
   .social-toast {
@@ -1402,7 +1444,7 @@ tr:last-child .comparison__cell {
 .exit-overlay.visible { opacity: 1; visibility: visible; }
 
 .exit-popup {
-  background: var(--warm-white);
+  background: var(--nancy-cream);
   border-radius: 20px;
   padding: 44px 36px;
   max-width: 420px;
@@ -1423,7 +1465,7 @@ tr:last-child .comparison__cell {
   width: 32px;
   height: 32px;
   border: none;
-  background: var(--cream);
+  background: var(--nancy-cream-dark);
   border-radius: 50%;
   cursor: pointer;
   display: flex;
@@ -1432,9 +1474,9 @@ tr:last-child .comparison__cell {
   transition: background 0.2s ease;
 }
 
-.exit-popup__close:hover { background: var(--cream-dark); }
+.exit-popup__close:hover { background: var(--nancy-cream-dark); }
 
-.exit-popup__close svg { width: 14px; height: 14px; stroke: var(--charcoal-light); }
+.exit-popup__close svg { width: 14px; height: 14px; stroke: var(--nancy-black); }
 
 .exit-popup__emoji { font-size: 40px; margin-bottom: 16px; }
 
@@ -1442,30 +1484,30 @@ tr:last-child .comparison__cell {
   font-family: var(--font-display);
   font-size: 26px;
   line-height: 1.2;
-  color: var(--charcoal);
+  color: var(--nancy-black);
   margin-bottom: 8px;
 }
 
-.exit-popup__headline em { font-style: italic; color: var(--coral); }
+.exit-popup__headline em { font-style: italic; color: var(--nancy-pink); }
 
 .exit-popup__body {
   font-size: 15px;
   line-height: 1.6;
-  color: var(--charcoal-light);
+  color: var(--nancy-black);
   margin-bottom: 24px;
   font-weight: 300;
 }
 
 .exit-popup__code {
   display: inline-block;
-  background: var(--cream);
-  border: 2px dashed var(--coral-light);
+  background: var(--nancy-cream-dark);
+  border: 2px dashed var(--nancy-pink-light);
   border-radius: 8px;
   padding: 8px 20px;
   font-size: 18px;
   font-weight: 600;
   letter-spacing: 0.1em;
-  color: var(--coral);
+  color: var(--nancy-pink);
   margin-bottom: 20px;
 }
 
@@ -1475,7 +1517,7 @@ tr:last-child .comparison__cell {
   display: block;
   margin-top: 14px;
   font-size: 13px;
-  color: var(--warm-gray);
+  color: var(--nancy-gray);
   background: none;
   border: none;
   cursor: pointer;
@@ -1483,7 +1525,7 @@ tr:last-child .comparison__cell {
   transition: color 0.2s ease;
 }
 
-.exit-popup__decline:hover { color: var(--charcoal-light); }
+.exit-popup__decline:hover { color: var(--nancy-black); }
 
 /* Exit popup: code wrap with copy button */
 .exit-popup__code-wrap {
@@ -1502,10 +1544,10 @@ tr:last-child .comparison__cell {
 
 .exit-popup__copy {
   padding: 12px 18px;
-  background: var(--coral);
+  background: var(--nancy-pink);
   color: #fff;
-  border: 2px dashed var(--coral);
-  border-left: 2px solid var(--coral);
+  border: 2px dashed var(--nancy-pink);
+  border-left: 2px solid var(--nancy-pink);
   border-radius: 0 10px 10px 0;
   font-family: var(--font-body);
   font-size: 13px;
@@ -1515,7 +1557,7 @@ tr:last-child .comparison__cell {
   white-space: nowrap;
 }
 
-.exit-popup__copy:hover { background: var(--coral-dark); border-color: var(--coral-dark); }
+.exit-popup__copy:hover { background: var(--nancy-pink-dark); border-color: var(--nancy-pink-dark); }
 
 .exit-popup__copy.copied {
   background: #2e7d32;
@@ -1529,7 +1571,7 @@ tr:last-child .comparison__cell {
   justify-content: center;
   gap: 6px;
   font-size: 13px;
-  color: var(--coral-dark);
+  color: var(--nancy-pink-dark);
   margin-bottom: 20px;
   padding: 8px 16px;
   background: var(--peach-tint);
@@ -1539,7 +1581,7 @@ tr:last-child .comparison__cell {
 .exit-popup__urgency strong {
   font-family: var(--font-display);
   font-size: 15px;
-  color: var(--coral);
+  color: var(--nancy-pink);
   min-width: 42px;
 }
 
@@ -1550,7 +1592,7 @@ tr:last-child .comparison__cell {
   justify-content: center;
   gap: 5px;
   font-size: 12px;
-  color: var(--warm-gray);
+  color: var(--nancy-gray);
   margin-top: 14px;
   margin-bottom: 4px;
   font-weight: 400;
@@ -1569,12 +1611,12 @@ tr:last-child .comparison__cell {
 .price-block__current {
   font-family: var(--font-display);
   font-size: 38px;
-  color: var(--charcoal);
+  color: var(--nancy-black);
 }
 
 .price-block__original {
   font-size: 18px;
-  color: var(--warm-gray-light);
+  color: var(--nancy-gray-light);
   text-decoration: line-through;
   margin-right: 8px;
   font-weight: 300;
@@ -1593,7 +1635,7 @@ tr:last-child .comparison__cell {
 
 .price-block__daily {
   font-size: 13px;
-  color: var(--warm-gray);
+  color: var(--nancy-gray);
   margin-top: 4px;
   font-weight: 300;
 }
@@ -1619,20 +1661,20 @@ tr:last-child .comparison__cell {
   width: 6px;
   height: 6px;
   border-radius: 50%;
-  background: var(--coral);
+  background: var(--nancy-pink);
   animation: pulse-dot 1.5s ease infinite;
 }
 
 .urgency-bar__text {
   font-size: 13px;
-  color: var(--coral-dark);
+  color: var(--nancy-pink-dark);
   font-weight: 500;
 }
 
 .urgency-bar__timer {
   font-family: var(--font-display);
   font-size: 15px;
-  color: var(--coral);
+  color: var(--nancy-pink);
   font-weight: 400;
   min-width: 60px;
 }
@@ -1642,7 +1684,7 @@ tr:last-child .comparison__cell {
    ============================================ */
 .disclosure {
   padding: 32px 0;
-  background: var(--charcoal);
+  background: #1A1A1A;
   border-top: 1px solid rgba(255,255,255,0.06);
 }
 
@@ -1666,12 +1708,75 @@ tr:last-child .comparison__cell {
    FOOTER
    ============================================ */
 .footer {
-  padding: 32px 0 90px;
-  background: var(--charcoal);
-  border-top: 1px solid rgba(255,255,255,0.06);
+  padding: 48px 0 90px;
+  background: #1A1A1A;
   text-align: center;
+  color: rgba(255,255,255,0.5);
+  font-size: 14px;
+}
+
+.footer__logo {
+  display: inline-flex;
+  flex-direction: column;
+  align-items: center;
+  line-height: 1;
+  gap: 2px;
+  margin-bottom: 12px;
+}
+
+.footer__logo-hello {
+  font-family: var(--font-body);
+  font-size: 10px;
+  font-weight: 500;
+  letter-spacing: 0.15em;
+  text-transform: uppercase;
+  color: rgba(255,255,255,0.7);
+}
+
+.footer__logo-nancy {
+  font-family: var(--font-display);
+  font-style: italic;
+  font-size: 28px;
+  color: rgba(255,255,255,0.7);
+}
+
+.footer__tagline {
+  font-size: 14px;
+  color: rgba(255,255,255,0.4);
+  max-width: 480px;
+  margin: 0 auto 20px;
+  font-weight: 300;
+  line-height: 1.6;
+}
+
+.footer__links {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 8px;
+  margin-bottom: 20px;
   font-size: 13px;
+  flex-wrap: wrap;
+}
+
+.footer__links a {
+  color: rgba(255,255,255,0.5);
+  transition: color 0.2s ease;
+}
+
+.footer__links a:hover { color: var(--nancy-pink); }
+
+.footer__links span { color: rgba(255,255,255,0.2); }
+
+.footer__proof {
+  font-size: 12px;
   color: rgba(255,255,255,0.3);
+  margin-bottom: 20px;
+}
+
+.footer__copy {
+  font-size: 12px;
+  color: rgba(255,255,255,0.25);
 }
 
 /* ============================================
@@ -1732,7 +1837,7 @@ tr:last-child .comparison__cell {
   justify-content: center;
   gap: 6px;
   font-size: 13px;
-  color: var(--coral-dark);
+  color: var(--nancy-pink-dark);
   margin-bottom: 20px;
   padding: 8px 16px;
   background: rgba(232,131,107,0.06);
@@ -1760,9 +1865,24 @@ tr:last-child .comparison__cell {
 
 .payment-icons svg { border-radius: 3px; }
 
+.award-badge {
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+  font-size: 12px;
+  color: #B8860B;
+  font-weight: 500;
+  letter-spacing: 0.02em;
+  margin-top: 12px;
+}
+
+.award-badge__icon {
+  font-size: 14px;
+}
+
 .product-reveal__trust-line {
   font-size: 13px;
-  color: var(--warm-gray);
+  color: var(--nancy-gray);
   margin-top: 14px;
   font-weight: 400;
   text-align: center;
@@ -1773,7 +1893,7 @@ tr:last-child .comparison__cell {
    ============================================ */
 .price-block__bonus {
   font-size: 14px;
-  color: var(--coral);
+  color: var(--nancy-pink);
   font-weight: 500;
   margin-top: 6px;
 }
@@ -1809,7 +1929,7 @@ tr:last-child .comparison__cell {
   height: 28px;
   border-radius: 50%;
   border: none;
-  background: var(--cream);
+  background: var(--nancy-cream-dark);
   cursor: pointer;
   display: flex;
   align-items: center;
@@ -1817,20 +1937,20 @@ tr:last-child .comparison__cell {
   transition: background 0.2s ease;
 }
 
-.email-slidein__close:hover { background: var(--cream-dark); }
+.email-slidein__close:hover { background: var(--nancy-cream-dark); }
 
 .email-slidein__headline {
   font-family: var(--font-display);
   font-size: 20px;
   line-height: 1.2;
   margin-bottom: 6px;
-  color: var(--charcoal);
+  color: var(--nancy-black);
 }
 
 .email-slidein__body {
   font-size: 14px;
   line-height: 1.5;
-  color: var(--warm-gray);
+  color: var(--nancy-gray);
   margin-bottom: 16px;
   font-weight: 300;
 }
@@ -1843,23 +1963,23 @@ tr:last-child .comparison__cell {
 .email-slidein__input {
   flex: 1;
   padding: 12px 14px;
-  border: 1px solid var(--cream-dark);
+  border: 1px solid var(--nancy-cream-dark);
   border-radius: 10px;
   font-family: var(--font-body);
   font-size: 14px;
-  color: var(--charcoal);
-  background: var(--cream);
+  color: var(--nancy-black);
+  background: var(--nancy-cream-dark);
   outline: none;
   transition: border-color 0.2s ease;
 }
 
-.email-slidein__input:focus { border-color: var(--coral); }
+.email-slidein__input:focus { border-color: var(--nancy-pink); }
 
-.email-slidein__input::placeholder { color: var(--warm-gray-light); }
+.email-slidein__input::placeholder { color: var(--nancy-gray-light); }
 
 .email-slidein__btn {
   padding: 12px 18px;
-  background: var(--coral);
+  background: var(--nancy-pink);
   color: #fff;
   border: none;
   border-radius: 10px;
@@ -1871,11 +1991,11 @@ tr:last-child .comparison__cell {
   transition: background 0.2s ease;
 }
 
-.email-slidein__btn:hover { background: var(--coral-dark); }
+.email-slidein__btn:hover { background: var(--nancy-pink-dark); }
 
 .email-slidein__privacy {
   font-size: 11px;
-  color: var(--warm-gray-light);
+  color: var(--nancy-gray-light);
   margin-top: 10px;
   font-weight: 300;
 }
@@ -1893,24 +2013,24 @@ tr:last-child .comparison__cell {
 .exit-popup__email {
   width: 100%;
   padding: 14px 16px;
-  border: 1px solid var(--cream-dark);
+  border: 1px solid var(--nancy-cream-dark);
   border-radius: 12px;
   font-family: var(--font-body);
   font-size: 15px;
-  color: var(--charcoal);
-  background: var(--cream);
+  color: var(--nancy-black);
+  background: var(--nancy-cream-dark);
   outline: none;
   transition: border-color 0.2s ease;
   text-align: center;
 }
 
-.exit-popup__email:focus { border-color: var(--coral); }
+.exit-popup__email:focus { border-color: var(--nancy-pink); }
 
-.exit-popup__email::placeholder { color: var(--warm-gray-light); }
+.exit-popup__email::placeholder { color: var(--nancy-gray-light); }
 
 .exit-popup__privacy {
   font-size: 11px;
-  color: var(--warm-gray-light);
+  color: var(--nancy-gray-light);
   text-align: center;
   font-weight: 300;
   margin-bottom: 4px;
@@ -1935,11 +2055,11 @@ tr:last-child .comparison__cell {
 }
 
 .final-cta__urgency .urgency-bar__dot {
-  background: var(--coral-light);
+  background: var(--nancy-pink-light);
 }
 
 .final-cta__urgency .urgency-bar__timer {
-  color: var(--coral-light);
+  color: var(--nancy-pink-light);
   font-size: 14px;
 }
 
@@ -1968,7 +2088,7 @@ tr:last-child .comparison__cell {
 <!-- ====== NAVIGATION ====== -->
 <nav class="nav">
   <div class="container nav__inner">
-    <a href="#" class="nav__logo"><em>Nancy</em></a>
+    <a href="#" class="nav__logo"><span class="nav__logo-hello">Hello</span><span class="nav__logo-nancy">Nancy</span></a>
     <a href="#cta" class="cta-btn nav__cta">
       Meet Lem
       <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><line x1="5" y1="12" x2="19" y2="12"/><polyline points="12 5 19 12 12 19"/></svg>
@@ -1997,7 +2117,7 @@ tr:last-child .comparison__cell {
       </div>
       <div class="hero__viewers reveal reveal-delay-3">
         <span class="social-toast__dot" style="display:inline-block;width:7px;height:7px;margin-right:6px;vertical-align:middle;"></span>
-        <span id="viewerCount" style="font-size:13px;color:var(--warm-gray);font-weight:400;"><strong style="color:var(--charcoal-light)">1,243</strong> women are viewing this page right now</span>
+        <span id="viewerCount" style="font-size:13px;color:var(--nancy-gray);font-weight:400;"><strong style="color:var(--nancy-black)">1,243</strong> women are viewing this page right now</span>
       </div>
     </div>
     <div class="hero__video-wrap reveal reveal-delay-2" style="position:relative;">
@@ -2007,6 +2127,20 @@ tr:last-child .comparison__cell {
       <button class="mute-toggle" data-video="heroVideo" aria-label="Unmute video">
         <svg viewBox="0 0 24 24"><polygon points="11 5 6 9 2 9 2 15 6 15 11 19 11 5"/><line x1="23" y1="9" x2="17" y2="15"/><line x1="17" y1="9" x2="23" y2="15"/></svg>
       </button>
+    </div>
+  </div>
+  <div class="as-seen-in reveal reveal-delay-3">
+    <div class="container">
+      <div class="as-seen-in__label">As seen in</div>
+      <div class="as-seen-in__logos">
+        <span class="as-seen-in__logo">The Guardian</span>
+        <span class="as-seen-in__logo">TimeOut</span>
+        <span class="as-seen-in__logo">Tatler</span>
+        <span class="as-seen-in__logo">POPSUGAR</span>
+        <span class="as-seen-in__logo">Women's Health</span>
+        <span class="as-seen-in__logo">SheKnows</span>
+        <span class="as-seen-in__logo">Glamour</span>
+      </div>
     </div>
   </div>
 </section>
@@ -2080,22 +2214,22 @@ tr:last-child .comparison__cell {
         </div>
         <div class="features">
       <div class="feature-card reveal">
-        <div class="feature-card__icon"><svg width="32" height="32" viewBox="0 0 32 32" fill="none" stroke="var(--coral)" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><rect x="8" y="4" width="16" height="24" rx="3"/><line x1="13" y1="10" x2="19" y2="10"/><line x1="13" y1="14" x2="19" y2="14"/><line x1="13" y1="18" x2="19" y2="18"/><line x1="13" y1="22" x2="17" y2="22"/><circle cx="16" cy="22" r="0" fill="var(--coral)"/><rect x="12" y="19" width="8" height="6" rx="1" fill="var(--peach-tint-strong)" stroke="none"/></svg></div>
+        <div class="feature-card__icon"><svg width="32" height="32" viewBox="0 0 32 32" fill="none" stroke="var(--nancy-pink)" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><rect x="8" y="4" width="16" height="24" rx="3"/><line x1="13" y1="10" x2="19" y2="10"/><line x1="13" y1="14" x2="19" y2="14"/><line x1="13" y1="18" x2="19" y2="18"/><line x1="13" y1="22" x2="17" y2="22"/><circle cx="16" cy="22" r="0" fill="var(--nancy-pink)"/><rect x="12" y="19" width="8" height="6" rx="1" fill="var(--peach-tint-strong)" stroke="none"/></svg></div>
         <div class="feature-card__title">12 Intensity Levels</div>
         <p class="feature-card__desc">Some days are gentle. Some days are not. No judgment.</p>
       </div>
       <div class="feature-card reveal reveal-delay-1">
-        <div class="feature-card__icon"><svg width="32" height="32" viewBox="0 0 32 32" fill="none" stroke="var(--coral)" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M6 16c0-5.523 4.477-10 10-10s10 4.477 10 10"/><path d="M10 16c0-3.314 2.686-6 6-6s6 2.686 6 6"/><line x1="16" y1="16" x2="16" y2="20"/><circle cx="16" cy="22" r="2" fill="var(--peach-tint-strong)"/><line x1="4" y1="28" x2="8" y2="24" opacity="0.4"/><line x1="28" y1="28" x2="24" y2="24" opacity="0.4"/><line x1="16" y1="28" x2="16" y2="25" opacity="0.4"/></svg></div>
+        <div class="feature-card__icon"><svg width="32" height="32" viewBox="0 0 32 32" fill="none" stroke="var(--nancy-pink)" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M6 16c0-5.523 4.477-10 10-10s10 4.477 10 10"/><path d="M10 16c0-3.314 2.686-6 6-6s6 2.686 6 6"/><line x1="16" y1="16" x2="16" y2="20"/><circle cx="16" cy="22" r="2" fill="var(--peach-tint-strong)"/><line x1="4" y1="28" x2="8" y2="24" opacity="0.4"/><line x1="28" y1="28" x2="24" y2="24" opacity="0.4"/><line x1="16" y1="28" x2="16" y2="25" opacity="0.4"/></svg></div>
         <div class="feature-card__title">Whisper-Quiet</div>
         <p class="feature-card__desc">One reviewer thought it was a face massager. Your secret's safe.</p>
       </div>
       <div class="feature-card reveal reveal-delay-2">
-        <div class="feature-card__icon"><svg width="32" height="32" viewBox="0 0 32 32" fill="none" stroke="var(--coral)" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M8 12c0 8 8 14 8 14s8-6 8-14a8 8 0 1 0-16 0z" fill="var(--peach-tint-strong)"/><path d="M12 18c1.5 2 2.5 3.5 4 5.5 1.5-2 2.5-3.5 4-5.5" opacity="0.4"/><path d="M11 8.5c.8-1.2 2.8-2.5 5-2.5" opacity="0.5"/></svg></div>
+        <div class="feature-card__icon"><svg width="32" height="32" viewBox="0 0 32 32" fill="none" stroke="var(--nancy-pink)" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M8 12c0 8 8 14 8 14s8-6 8-14a8 8 0 1 0-16 0z" fill="var(--peach-tint-strong)"/><path d="M12 18c1.5 2 2.5 3.5 4 5.5 1.5-2 2.5-3.5 4-5.5" opacity="0.4"/><path d="M11 8.5c.8-1.2 2.8-2.5 5-2.5" opacity="0.5"/></svg></div>
         <div class="feature-card__title">100% Waterproof</div>
         <p class="feature-card__desc">Bath, shower, wherever the mood takes you.</p>
       </div>
       <div class="feature-card reveal reveal-delay-3">
-        <div class="feature-card__icon"><svg width="32" height="32" viewBox="0 0 32 32" fill="none" stroke="var(--coral)" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><rect x="9" y="6" width="14" height="22" rx="3" fill="var(--peach-tint-strong)"/><line x1="13" y1="6" x2="19" y2="6"/><polyline points="14 15 16 18 18 13" stroke-width="2"/><path d="M9 22h14" opacity="0.3"/></svg></div>
+        <div class="feature-card__icon"><svg width="32" height="32" viewBox="0 0 32 32" fill="none" stroke="var(--nancy-pink)" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><rect x="9" y="6" width="14" height="22" rx="3" fill="var(--peach-tint-strong)"/><line x1="13" y1="6" x2="19" y2="6"/><polyline points="14 15 16 18 18 13" stroke-width="2"/><path d="M9 22h14" opacity="0.3"/></svg></div>
         <div class="feature-card__title">USB Rechargeable</div>
         <p class="feature-card__desc">No batteries. No awkward store runs. Ever.</p>
       </div>
@@ -2114,7 +2248,7 @@ tr:last-child .comparison__cell {
         <span class="urgency-bar__timer" id="urgencyTimer">--:--</span>
       </div>
       <div class="stock-scarcity" id="stockScarcity">
-        <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="var(--coral-dark)" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M10.29 3.86L1.82 18a2 2 0 0 0 1.71 3h16.94a2 2 0 0 0 1.71-3L13.71 3.86a2 2 0 0 0-3.42 0z"/><line x1="12" y1="9" x2="12" y2="13"/><line x1="12" y1="17" x2="12.01" y2="17"/></svg>
+        <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="var(--nancy-pink-dark)" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M10.29 3.86L1.82 18a2 2 0 0 0 1.71 3h16.94a2 2 0 0 0 1.71-3L13.71 3.86a2 2 0 0 0-3.42 0z"/><line x1="12" y1="9" x2="12" y2="13"/><line x1="12" y1="17" x2="12.01" y2="17"/></svg>
         <span>Only <strong id="stockCount">47</strong> left at this price — <strong id="soldToday">842</strong> sold this week</span>
       </div>
       <a href="#" class="cta-btn">
@@ -2122,6 +2256,7 @@ tr:last-child .comparison__cell {
         <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><line x1="5" y1="12" x2="19" y2="12"/><polyline points="12 5 19 12 12 19"/></svg>
       </a>
       <p class="product-reveal__trust-line">Rated 4.7★ by 15,000+ women · 30-day happiness guarantee</p>
+      <div class="award-badge"><span class="award-badge__icon">&#127942;</span> 2025 Women's Wellness Tech Award Winner</div>
       <div class="payment-icons">
         <svg width="38" height="24" viewBox="0 0 38 24" fill="none"><rect width="38" height="24" rx="4" fill="#1A1F71"/><text x="19" y="15" text-anchor="middle" fill="#fff" font-size="9" font-weight="700" font-family="sans-serif">VISA</text></svg>
         <svg width="38" height="24" viewBox="0 0 38 24" fill="none"><rect width="38" height="24" rx="4" fill="#252525"/><circle cx="15" cy="12" r="7" fill="#EB001B"/><circle cx="23" cy="12" r="7" fill="#F79E1B"/><path d="M19 6.8a7 7 0 0 1 0 10.4 7 7 0 0 1 0-10.4z" fill="#FF5F00"/></svg>
@@ -2167,19 +2302,19 @@ tr:last-child .comparison__cell {
           </tr>
           <tr>
             <td class="comparison__criteria">Discreet Design</td>
-            <td class="comparison__cell comparison__cell--lem"><svg class="comparison__check" viewBox="0 0 20 20"><path d="M4 10l4 4 8-8" fill="none" stroke="var(--coral)" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"/></svg><span class="comparison__note">Looks like a lemon</span></td>
+            <td class="comparison__cell comparison__cell--lem"><svg class="comparison__check" viewBox="0 0 20 20"><path d="M4 10l4 4 8-8" fill="none" stroke="var(--nancy-pink)" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"/></svg><span class="comparison__note">Looks like a lemon</span></td>
             <td class="comparison__cell"><span class="comparison__meh">Sort of</span></td>
-            <td class="comparison__cell"><svg class="comparison__x" viewBox="0 0 20 20"><line x1="5" y1="5" x2="15" y2="15" stroke="var(--warm-gray-light)" stroke-width="2" stroke-linecap="round"/><line x1="15" y1="5" x2="5" y2="15" stroke="var(--warm-gray-light)" stroke-width="2" stroke-linecap="round"/></svg></td>
-            <td class="comparison__cell"><svg class="comparison__x" viewBox="0 0 20 20"><line x1="5" y1="5" x2="15" y2="15" stroke="var(--warm-gray-light)" stroke-width="2" stroke-linecap="round"/><line x1="15" y1="5" x2="5" y2="15" stroke="var(--warm-gray-light)" stroke-width="2" stroke-linecap="round"/></svg></td>
-            <td class="comparison__cell"><svg class="comparison__x" viewBox="0 0 20 20"><line x1="5" y1="5" x2="15" y2="15" stroke="var(--warm-gray-light)" stroke-width="2" stroke-linecap="round"/><line x1="15" y1="5" x2="5" y2="15" stroke="var(--warm-gray-light)" stroke-width="2" stroke-linecap="round"/></svg></td>
+            <td class="comparison__cell"><svg class="comparison__x" viewBox="0 0 20 20"><line x1="5" y1="5" x2="15" y2="15" stroke="var(--nancy-gray-light)" stroke-width="2" stroke-linecap="round"/><line x1="15" y1="5" x2="5" y2="15" stroke="var(--nancy-gray-light)" stroke-width="2" stroke-linecap="round"/></svg></td>
+            <td class="comparison__cell"><svg class="comparison__x" viewBox="0 0 20 20"><line x1="5" y1="5" x2="15" y2="15" stroke="var(--nancy-gray-light)" stroke-width="2" stroke-linecap="round"/><line x1="15" y1="5" x2="5" y2="15" stroke="var(--nancy-gray-light)" stroke-width="2" stroke-linecap="round"/></svg></td>
+            <td class="comparison__cell"><svg class="comparison__x" viewBox="0 0 20 20"><line x1="5" y1="5" x2="15" y2="15" stroke="var(--nancy-gray-light)" stroke-width="2" stroke-linecap="round"/><line x1="15" y1="5" x2="5" y2="15" stroke="var(--nancy-gray-light)" stroke-width="2" stroke-linecap="round"/></svg></td>
           </tr>
           <tr>
             <td class="comparison__criteria">Beginner-Friendly</td>
-            <td class="comparison__cell comparison__cell--lem"><svg class="comparison__check" viewBox="0 0 20 20"><path d="M4 10l4 4 8-8" fill="none" stroke="var(--coral)" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"/></svg><span class="comparison__note">12 levels to explore</span></td>
-            <td class="comparison__cell"><svg class="comparison__x" viewBox="0 0 20 20"><line x1="5" y1="5" x2="15" y2="15" stroke="var(--warm-gray-light)" stroke-width="2" stroke-linecap="round"/><line x1="15" y1="5" x2="5" y2="15" stroke="var(--warm-gray-light)" stroke-width="2" stroke-linecap="round"/></svg></td>
-            <td class="comparison__cell"><svg class="comparison__x" viewBox="0 0 20 20"><line x1="5" y1="5" x2="15" y2="15" stroke="var(--warm-gray-light)" stroke-width="2" stroke-linecap="round"/><line x1="15" y1="5" x2="5" y2="15" stroke="var(--warm-gray-light)" stroke-width="2" stroke-linecap="round"/></svg></td>
-            <td class="comparison__cell"><svg class="comparison__x" viewBox="0 0 20 20"><line x1="5" y1="5" x2="15" y2="15" stroke="var(--warm-gray-light)" stroke-width="2" stroke-linecap="round"/><line x1="15" y1="5" x2="5" y2="15" stroke="var(--warm-gray-light)" stroke-width="2" stroke-linecap="round"/></svg></td>
-            <td class="comparison__cell"><svg class="comparison__x" viewBox="0 0 20 20"><line x1="5" y1="5" x2="15" y2="15" stroke="var(--warm-gray-light)" stroke-width="2" stroke-linecap="round"/><line x1="15" y1="5" x2="5" y2="15" stroke="var(--warm-gray-light)" stroke-width="2" stroke-linecap="round"/></svg></td>
+            <td class="comparison__cell comparison__cell--lem"><svg class="comparison__check" viewBox="0 0 20 20"><path d="M4 10l4 4 8-8" fill="none" stroke="var(--nancy-pink)" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"/></svg><span class="comparison__note">12 levels to explore</span></td>
+            <td class="comparison__cell"><svg class="comparison__x" viewBox="0 0 20 20"><line x1="5" y1="5" x2="15" y2="15" stroke="var(--nancy-gray-light)" stroke-width="2" stroke-linecap="round"/><line x1="15" y1="5" x2="5" y2="15" stroke="var(--nancy-gray-light)" stroke-width="2" stroke-linecap="round"/></svg></td>
+            <td class="comparison__cell"><svg class="comparison__x" viewBox="0 0 20 20"><line x1="5" y1="5" x2="15" y2="15" stroke="var(--nancy-gray-light)" stroke-width="2" stroke-linecap="round"/><line x1="15" y1="5" x2="5" y2="15" stroke="var(--nancy-gray-light)" stroke-width="2" stroke-linecap="round"/></svg></td>
+            <td class="comparison__cell"><svg class="comparison__x" viewBox="0 0 20 20"><line x1="5" y1="5" x2="15" y2="15" stroke="var(--nancy-gray-light)" stroke-width="2" stroke-linecap="round"/><line x1="15" y1="5" x2="5" y2="15" stroke="var(--nancy-gray-light)" stroke-width="2" stroke-linecap="round"/></svg></td>
+            <td class="comparison__cell"><svg class="comparison__x" viewBox="0 0 20 20"><line x1="5" y1="5" x2="15" y2="15" stroke="var(--nancy-gray-light)" stroke-width="2" stroke-linecap="round"/><line x1="15" y1="5" x2="5" y2="15" stroke="var(--nancy-gray-light)" stroke-width="2" stroke-linecap="round"/></svg></td>
           </tr>
           <tr>
             <td class="comparison__criteria">Noise Level</td>
@@ -2191,19 +2326,19 @@ tr:last-child .comparison__cell {
           </tr>
           <tr>
             <td class="comparison__criteria">Discreet Packaging</td>
-            <td class="comparison__cell comparison__cell--lem"><svg class="comparison__check" viewBox="0 0 20 20"><path d="M4 10l4 4 8-8" fill="none" stroke="var(--coral)" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"/></svg><span class="comparison__note">Plain box, zero logos</span></td>
-            <td class="comparison__cell"><svg class="comparison__x" viewBox="0 0 20 20"><line x1="5" y1="5" x2="15" y2="15" stroke="var(--warm-gray-light)" stroke-width="2" stroke-linecap="round"/><line x1="15" y1="5" x2="5" y2="15" stroke="var(--warm-gray-light)" stroke-width="2" stroke-linecap="round"/></svg></td>
-            <td class="comparison__cell"><svg class="comparison__x" viewBox="0 0 20 20"><line x1="5" y1="5" x2="15" y2="15" stroke="var(--warm-gray-light)" stroke-width="2" stroke-linecap="round"/><line x1="15" y1="5" x2="5" y2="15" stroke="var(--warm-gray-light)" stroke-width="2" stroke-linecap="round"/></svg></td>
-            <td class="comparison__cell"><svg class="comparison__x" viewBox="0 0 20 20"><line x1="5" y1="5" x2="15" y2="15" stroke="var(--warm-gray-light)" stroke-width="2" stroke-linecap="round"/><line x1="15" y1="5" x2="5" y2="15" stroke="var(--warm-gray-light)" stroke-width="2" stroke-linecap="round"/></svg></td>
-            <td class="comparison__cell"><svg class="comparison__x" viewBox="0 0 20 20"><line x1="5" y1="5" x2="15" y2="15" stroke="var(--warm-gray-light)" stroke-width="2" stroke-linecap="round"/><line x1="15" y1="5" x2="5" y2="15" stroke="var(--warm-gray-light)" stroke-width="2" stroke-linecap="round"/></svg></td>
+            <td class="comparison__cell comparison__cell--lem"><svg class="comparison__check" viewBox="0 0 20 20"><path d="M4 10l4 4 8-8" fill="none" stroke="var(--nancy-pink)" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"/></svg><span class="comparison__note">Plain box, zero logos</span></td>
+            <td class="comparison__cell"><svg class="comparison__x" viewBox="0 0 20 20"><line x1="5" y1="5" x2="15" y2="15" stroke="var(--nancy-gray-light)" stroke-width="2" stroke-linecap="round"/><line x1="15" y1="5" x2="5" y2="15" stroke="var(--nancy-gray-light)" stroke-width="2" stroke-linecap="round"/></svg></td>
+            <td class="comparison__cell"><svg class="comparison__x" viewBox="0 0 20 20"><line x1="5" y1="5" x2="15" y2="15" stroke="var(--nancy-gray-light)" stroke-width="2" stroke-linecap="round"/><line x1="15" y1="5" x2="5" y2="15" stroke="var(--nancy-gray-light)" stroke-width="2" stroke-linecap="round"/></svg></td>
+            <td class="comparison__cell"><svg class="comparison__x" viewBox="0 0 20 20"><line x1="5" y1="5" x2="15" y2="15" stroke="var(--nancy-gray-light)" stroke-width="2" stroke-linecap="round"/><line x1="15" y1="5" x2="5" y2="15" stroke="var(--nancy-gray-light)" stroke-width="2" stroke-linecap="round"/></svg></td>
+            <td class="comparison__cell"><svg class="comparison__x" viewBox="0 0 20 20"><line x1="5" y1="5" x2="15" y2="15" stroke="var(--nancy-gray-light)" stroke-width="2" stroke-linecap="round"/><line x1="15" y1="5" x2="5" y2="15" stroke="var(--nancy-gray-light)" stroke-width="2" stroke-linecap="round"/></svg></td>
           </tr>
           <tr>
             <td class="comparison__criteria">Free Shipping + Gift</td>
-            <td class="comparison__cell comparison__cell--lem"><svg class="comparison__check" viewBox="0 0 20 20"><path d="M4 10l4 4 8-8" fill="none" stroke="var(--coral)" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"/></svg></td>
-            <td class="comparison__cell"><svg class="comparison__x" viewBox="0 0 20 20"><line x1="5" y1="5" x2="15" y2="15" stroke="var(--warm-gray-light)" stroke-width="2" stroke-linecap="round"/><line x1="15" y1="5" x2="5" y2="15" stroke="var(--warm-gray-light)" stroke-width="2" stroke-linecap="round"/></svg></td>
-            <td class="comparison__cell"><svg class="comparison__x" viewBox="0 0 20 20"><line x1="5" y1="5" x2="15" y2="15" stroke="var(--warm-gray-light)" stroke-width="2" stroke-linecap="round"/><line x1="15" y1="5" x2="5" y2="15" stroke="var(--warm-gray-light)" stroke-width="2" stroke-linecap="round"/></svg></td>
-            <td class="comparison__cell"><svg class="comparison__x" viewBox="0 0 20 20"><line x1="5" y1="5" x2="15" y2="15" stroke="var(--warm-gray-light)" stroke-width="2" stroke-linecap="round"/><line x1="15" y1="5" x2="5" y2="15" stroke="var(--warm-gray-light)" stroke-width="2" stroke-linecap="round"/></svg></td>
-            <td class="comparison__cell"><svg class="comparison__x" viewBox="0 0 20 20"><line x1="5" y1="5" x2="15" y2="15" stroke="var(--warm-gray-light)" stroke-width="2" stroke-linecap="round"/><line x1="15" y1="5" x2="5" y2="15" stroke="var(--warm-gray-light)" stroke-width="2" stroke-linecap="round"/></svg></td>
+            <td class="comparison__cell comparison__cell--lem"><svg class="comparison__check" viewBox="0 0 20 20"><path d="M4 10l4 4 8-8" fill="none" stroke="var(--nancy-pink)" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"/></svg></td>
+            <td class="comparison__cell"><svg class="comparison__x" viewBox="0 0 20 20"><line x1="5" y1="5" x2="15" y2="15" stroke="var(--nancy-gray-light)" stroke-width="2" stroke-linecap="round"/><line x1="15" y1="5" x2="5" y2="15" stroke="var(--nancy-gray-light)" stroke-width="2" stroke-linecap="round"/></svg></td>
+            <td class="comparison__cell"><svg class="comparison__x" viewBox="0 0 20 20"><line x1="5" y1="5" x2="15" y2="15" stroke="var(--nancy-gray-light)" stroke-width="2" stroke-linecap="round"/><line x1="15" y1="5" x2="5" y2="15" stroke="var(--nancy-gray-light)" stroke-width="2" stroke-linecap="round"/></svg></td>
+            <td class="comparison__cell"><svg class="comparison__x" viewBox="0 0 20 20"><line x1="5" y1="5" x2="15" y2="15" stroke="var(--nancy-gray-light)" stroke-width="2" stroke-linecap="round"/><line x1="15" y1="5" x2="5" y2="15" stroke="var(--nancy-gray-light)" stroke-width="2" stroke-linecap="round"/></svg></td>
+            <td class="comparison__cell"><svg class="comparison__x" viewBox="0 0 20 20"><line x1="5" y1="5" x2="15" y2="15" stroke="var(--nancy-gray-light)" stroke-width="2" stroke-linecap="round"/><line x1="15" y1="5" x2="5" y2="15" stroke="var(--nancy-gray-light)" stroke-width="2" stroke-linecap="round"/></svg></td>
           </tr>
         </tbody>
       </table>
@@ -2216,7 +2351,7 @@ tr:last-child .comparison__cell {
 <section class="social-proof">
   <div class="container">
     <div class="social-proof__intro reveal">
-      <div class="nancy-logo-placeholder"><em>Nancy</em> Logo</div>
+      <div class="nancy-logo-placeholder" style="border:none;background:none;"><span style="font-family:var(--font-body);font-size:10px;font-weight:500;letter-spacing:0.15em;text-transform:uppercase;color:var(--nancy-pink);display:block;">Hello</span><span style="font-family:var(--font-display);font-style:italic;font-size:28px;color:var(--nancy-pink);">Nancy</span></div>
     </div>
     <div class="stats-row reveal">
       <div class="stat">
@@ -2234,10 +2369,12 @@ tr:last-child .comparison__cell {
     </div>
     <div class="press-logos reveal">
       <span class="press-logo">The Guardian</span>
-      <span class="press-logo">Timeout</span>
+      <span class="press-logo">TimeOut</span>
       <span class="press-logo">Tatler</span>
-      <span class="press-logo">Popsugar</span>
+      <span class="press-logo">POPSUGAR</span>
       <span class="press-logo">Women's Health</span>
+      <span class="press-logo">SheKnows</span>
+      <span class="press-logo">Glamour</span>
     </div>
     <div class="testimonials">
       <div class="testimonial reveal">
@@ -2390,7 +2527,7 @@ tr:last-child .comparison__cell {
       <svg width="14" height="14" viewBox="0 0 24 24" fill="rgba(255,255,255,0.4)" stroke="none"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26"/></svg>
       Rated 4.7 stars by 15,000+ women — someone new discovers Lem every 25 seconds
     </p>
-    <div class="final-cta__logo reveal reveal-delay-3"><em>Nancy</em></div>
+    <div class="final-cta__logo reveal reveal-delay-3" style="display:flex;flex-direction:column;align-items:center;gap:2px;"><span style="font-family:var(--font-body);font-size:10px;font-weight:500;letter-spacing:0.15em;text-transform:uppercase;color:rgba(255,255,255,0.5);">Hello</span><em>Nancy</em></div>
   </div>
 </section>
 
@@ -2405,7 +2542,22 @@ tr:last-child .comparison__cell {
 <!-- ====== FOOTER ====== -->
 <footer class="footer">
   <div class="container">
-    &copy; 2026 Hello Nancy. All rights reserved.
+    <div class="footer__logo">
+      <span class="footer__logo-hello">Hello</span>
+      <span class="footer__logo-nancy">Nancy</span>
+    </div>
+    <p class="footer__tagline">Making self-pleasure safe, joyful, and a normal part of taking care of yourself.</p>
+    <div class="footer__links">
+      <a href="https://hellonancy.com" target="_blank" rel="noopener">Shop</a>
+      <span>&middot;</span>
+      <a href="https://hellonancy.com/pages/about-us" target="_blank" rel="noopener">About</a>
+      <span>&middot;</span>
+      <a href="https://hellonancy.com/blogs/articles" target="_blank" rel="noopener">Blog</a>
+      <span>&middot;</span>
+      <a href="mailto:care@hellonancy.com">Contact</a>
+    </div>
+    <p class="footer__proof">Trusted by 15,000+ women &middot; 4.7 stars &middot; 1M+ O's delivered</p>
+    <p class="footer__copy">&copy; 2026 Hello Nancy (Care &amp; Bloom Pte Ltd). All rights reserved.</p>
   </div>
 </footer>
 
@@ -2433,7 +2585,7 @@ tr:last-child .comparison__cell {
     <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><line x1="18" y1="6" x2="6" y2="18"/><line x1="6" y1="6" x2="18" y2="18"/></svg>
   </button>
   <p class="email-slidein__headline">Before you go further...</p>
-  <p class="email-slidein__body">Save 25% on your Lem with code <strong style="color:var(--coral);">LEM25</strong> at checkout.</p>
+  <p class="email-slidein__body">Save 25% on your Lem with code <strong style="color:var(--nancy-pink);">LEM25</strong> at checkout.</p>
   <a href="#" class="email-slidein__btn" style="display:block;text-align:center;text-decoration:none;padding:14px;border-radius:10px;">Shop Lem — 25% Off</a>
   <p class="email-slidein__privacy">Free discreet shipping · 30-day guarantee</p>
 </div>
@@ -2460,7 +2612,7 @@ tr:last-child .comparison__cell {
       <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><line x1="5" y1="12" x2="19" y2="12"/><polyline points="12 5 19 12 12 19"/></svg>
     </a>
     <p class="exit-popup__proof">
-      <svg width="12" height="12" viewBox="0 0 24 24" fill="var(--coral)" stroke="none"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26"/></svg>
+      <svg width="12" height="12" viewBox="0 0 24 24" fill="var(--nancy-pink)" stroke="none"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26"/></svg>
       4.7 stars · 15,000+ reviews · <span id="exitStock">47</span> left at this price
     </p>
     <button class="exit-popup__decline" id="exitDecline">No thanks, I'll pass on 25% off</button>
@@ -2719,7 +2871,7 @@ function updateViewers() {
   const delta = Math.floor(Math.random() * 40) - 18; // slight fluctuation
   viewerBase = Math.max(900, Math.min(1500, viewerBase + delta));
   const formatted = viewerBase.toLocaleString();
-  viewerEl.innerHTML = '<strong style="color:var(--charcoal-light)">' + formatted + '</strong> women are viewing this page right now';
+  viewerEl.innerHTML = '<strong style="color:var(--nancy-black)">' + formatted + '</strong> women are viewing this page right now';
 }
 
 setInterval(updateViewers, 6000 + Math.random() * 4000);
