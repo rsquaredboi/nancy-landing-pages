@@ -1280,95 +1280,98 @@ tr:last-child .comparison__cell {
    SECTION 7: FINAL CTA
    ============================================ */
 .final-cta {
-  padding: 100px 0 80px;
-  background: var(--nancy-black);
+  background: #1A1A1A;
+  padding: 80px 0;
   color: #fff;
-  position: relative;
-  overflow: hidden;
 }
 
-.final-cta::before {
-  content: '';
-  position: absolute;
-  top: -100px;
-  left: 50%;
-  transform: translateX(-50%);
-  width: 600px;
-  height: 600px;
-  border-radius: 50%;
-  background: radial-gradient(circle, rgba(233,30,140,0.12) 0%, transparent 70%);
-  pointer-events: none;
+.final-cta__grid {
+  display: grid;
+  grid-template-columns: 5fr 7fr;
+  gap: 56px;
+  align-items: center;
+  max-width: 1100px;
+  margin: 0 auto;
+}
+
+.final-cta__image img {
+  width: 100%;
+  max-width: 400px;
+  border-radius: 20px;
+  display: block;
+  margin: 0 auto;
+}
+
+.final-cta__content {
+  text-align: left;
 }
 
 .final-cta__headline {
   font-family: var(--font-display);
-  font-size: clamp(30px, 5vw, 48px);
+  font-size: clamp(28px, 4vw, 38px);
   font-weight: 700;
-  line-height: 1.1;
+  line-height: 1.15;
+  color: #fff;
   margin-bottom: 12px;
-  position: relative;
-  letter-spacing: -0.01em;
 }
 
-.final-cta__headline em { font-style: normal; color: var(--nancy-pink-light); }
+.final-cta__headline em {
+  color: #E91E8C;
+  font-style: normal;
+}
 
-.final-cta__sub {
-  font-size: 17px;
+.final-cta__subhead {
+  font-family: var(--font-body);
+  font-size: 16px;
   color: rgba(255,255,255,0.6);
-  margin-bottom: 40px;
-  font-weight: 300;
+  margin-bottom: 28px;
 }
 
-/* Steps grid */
+/* Steps — vertical list */
 .final-cta__steps {
-  display: grid;
-  grid-template-columns: 1fr 1fr;
+  display: flex;
+  flex-direction: column;
   gap: 16px;
-  max-width: 600px;
-  margin: 0 auto 44px;
-  text-align: left;
+  margin-bottom: 32px;
 }
 
 .final-cta__step {
   display: flex;
   align-items: flex-start;
   gap: 14px;
+  padding: 14px 18px;
   background: rgba(255,255,255,0.06);
   border: 1px solid rgba(255,255,255,0.08);
-  border-radius: 14px;
-  padding: 20px;
-  transition: background 0.3s ease;
-}
-
-.final-cta__step:hover {
-  background: rgba(255,255,255,0.09);
+  border-radius: 12px;
 }
 
 .final-cta__step-num {
+  width: 28px;
+  height: 28px;
+  min-width: 28px;
+  border-radius: 50%;
+  background: #E91E8C;
+  color: #fff;
+  font-family: var(--font-display);
+  font-size: 14px;
+  font-weight: 700;
   display: flex;
   align-items: center;
   justify-content: center;
-  width: 32px;
-  height: 32px;
-  min-width: 32px;
-  border-radius: 50%;
-  background: var(--nancy-pink);
-  color: #fff;
+}
+
+.final-cta__step strong {
+  font-family: var(--font-body);
   font-size: 14px;
   font-weight: 600;
-  line-height: 1;
+  color: #fff;
+  display: block;
 }
 
-.final-cta__step-text {
-  font-size: 15px;
-  line-height: 1.5;
-  color: rgba(255,255,255,0.85);
-  font-weight: 400;
-}
-
-.final-cta__step-note {
-  color: rgba(255,255,255,0.45);
-  font-weight: 300;
+.final-cta__step span {
+  font-family: var(--font-body);
+  font-size: 13px;
+  color: rgba(255,255,255,0.4);
 }
 
 /* Large CTA button */
@@ -1382,7 +1385,6 @@ tr:last-child .comparison__cell {
 .final-cta__trust {
   display: flex;
   flex-wrap: wrap;
-  justify-content: center;
   gap: 24px;
   margin-top: 28px;
 }
@@ -1405,7 +1407,6 @@ tr:last-child .comparison__cell {
 .final-cta__social-proof {
   display: flex;
   align-items: center;
-  justify-content: center;
   gap: 6px;
   margin-top: 32px;
   font-size: 13px;
@@ -1428,40 +1429,20 @@ tr:last-child .comparison__cell {
   opacity: 0.3;
 }
 
-/* Final CTA grid layout */
-.final-cta__grid {
-  display: grid;
-  grid-template-columns: 1fr 1fr;
-  gap: 48px;
-  align-items: center;
-  max-width: 960px;
-  margin: 0 auto;
-}
-.final-cta__image img {
-  width: 100%;
-  border-radius: 20px;
-  box-shadow: 0 16px 48px rgba(0,0,0,0.1);
-}
-.final-cta__content {
-  text-align: left;
-}
-.final-cta__content .final-cta__trust {
-  justify-content: flex-start;
-}
-.final-cta__content .final-cta__social-proof {
-  justify-content: flex-start;
-}
-.final-cta__content .final-cta__logo {
-  text-align: left;
-}
-
-@media (max-width: 560px) {
-  .final-cta__steps {
+@media (max-width: 768px) {
+  .final-cta__grid {
     grid-template-columns: 1fr;
-    gap: 12px;
+    gap: 32px;
+    text-align: center;
   }
-  .final-cta__step { padding: 16px; }
-  .final-cta__trust { gap: 16px; }
+  .final-cta__image img {
+    max-width: 260px;
+    margin: 0 auto;
+  }
+  .final-cta__content { text-align: center; }
+  .final-cta__steps { text-align: left; }
+  .final-cta__trust { justify-content: center; }
+  .final-cta__social-proof { justify-content: center; }
   .cta-btn--large { font-size: 16px; padding: 20px 40px; }
 }
 
@@ -2002,11 +1983,6 @@ tr:last-child .comparison__cell {
   .marquee-bar__content { font-size: 12px; }
   .hero__lifestyle-img { text-align: center; margin-top: 0; margin-bottom: 24px; }
   .hero__lifestyle-img img { max-width: 220px; margin: 0 auto; }
-  .final-cta__grid { grid-template-columns: 1fr; gap: 32px; }
-  .final-cta__image img { max-width: 300px; margin: 0 auto; display: block; }
-  .final-cta__content { text-align: center; }
-  .final-cta__content .final-cta__trust { justify-content: center; }
-  .final-cta__content .final-cta__social-proof { justify-content: center; }
 }
 
 /* ============================================
@@ -2693,31 +2669,31 @@ tr:last-child .comparison__cell {
   <div class="container">
     <div class="final-cta__grid">
       <div class="final-cta__image reveal">
-        <img src="lem-closeup.png" alt="Lem held in a woman's palm — small, discreet, fits anywhere" loading="lazy">
+        <img src="lem-closeup.png" alt="Lem held in a woman's palm" loading="lazy">
       </div>
       <div class="final-cta__content">
         <h2 class="final-cta__headline reveal">
           Join 15,000+ women who stopped <em>waiting.</em>
         </h2>
-        <p class="final-cta__sub reveal reveal-delay-1">
+        <p class="final-cta__subhead reveal reveal-delay-1">
           Your Lem is waiting. Here's what happens next:
         </p>
         <div class="final-cta__steps reveal reveal-delay-2">
           <div class="final-cta__step">
             <span class="final-cta__step-num">1</span>
-            <p class="final-cta__step-text">Click below and complete your order <span class="final-cta__step-note">(takes 2 minutes)</span></p>
+            <div><strong>Click below and complete your order</strong><span>(takes 2 minutes)</span></div>
           </div>
           <div class="final-cta__step">
             <span class="final-cta__step-num">2</span>
-            <p class="final-cta__step-text">Lem ships within 24 hours in a plain, unmarked box <span class="final-cta__step-note">(no one will know)</span></p>
+            <div><strong>Lem ships within 24 hours in a plain, unmarked box</strong><span>(no one will know)</span></div>
           </div>
           <div class="final-cta__step">
             <span class="final-cta__step-num">3</span>
-            <p class="final-cta__step-text">It arrives in 3–7 days with free shipping worldwide</p>
+            <div><strong>It arrives in 3–7 days with free shipping worldwide</strong></div>
           </div>
           <div class="final-cta__step">
             <span class="final-cta__step-num">4</span>
-            <p class="final-cta__step-text">You finally put yourself first <span class="final-cta__step-note">(prepare to wonder why you waited)</span></p>
+            <div><strong>You finally put yourself first</strong><span>(prepare to wonder why you waited)</span></div>
           </div>
         </div>
         <a href="#" class="cta-btn cta-btn--large reveal reveal-delay-3">
