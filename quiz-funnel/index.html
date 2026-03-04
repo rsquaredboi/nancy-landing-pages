@@ -32,35 +32,6 @@
   <link rel="canonical" href="index.html" /></head>
 
   <body>
-    <script>
-    // Patch for subdirectory deployment: strip /quiz-funnel from pathname so wouter routes match
-    (function() {
-      var base = '/quiz-funnel';
-      var origGet = Object.getOwnPropertyDescriptor(Location.prototype, 'pathname').get;
-      Object.defineProperty(Location.prototype, 'pathname', {
-        get: function() {
-          var p = origGet.call(this);
-          if (p === base || p === base + '/') return '/';
-          if (p.indexOf(base + '/') === 0) return p.slice(base.length);
-          return p;
-        }
-      });
-      var origPush = history.pushState;
-      history.pushState = function(state, title, url) {
-        if (url && typeof url === 'string' && url.charAt(0) === '/' && url.indexOf(base) !== 0) {
-          url = base + url;
-        }
-        return origPush.call(this, state, title, url);
-      };
-      var origReplace = history.replaceState;
-      history.replaceState = function(state, title, url) {
-        if (url && typeof url === 'string' && url.charAt(0) === '/' && url.indexOf(base) !== 0) {
-          url = base + url;
-        }
-        return origReplace.call(this, state, title, url);
-      };
-    })();
-    </script>
     <script id="manus-runtime">window.__MANUS_HOST_DEV__ = false;
 (function(){"use strict";var Mr={exports:{}},Kn={};/**
  * @license React
