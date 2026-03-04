@@ -1300,34 +1300,14 @@ tr:last-child .comparison__cell {
   color: #fff;
 }
 
-.final-cta__grid {
-  display: grid;
-  grid-template-columns: 5fr 7fr;
-  gap: 56px;
-  align-items: center;
-  max-width: 1100px;
-  margin: 0 auto;
-}
-
-.final-cta__image img {
-  width: 100%;
-  max-width: 400px;
-  border-radius: 20px;
-  display: block;
-  margin: 0 auto;
-}
-
-.final-cta__content {
-  text-align: left;
-}
-
 .final-cta__headline {
   font-family: var(--font-display);
-  font-size: clamp(28px, 4vw, 38px);
+  font-size: clamp(28px, 4vw, 42px);
   font-weight: 700;
   line-height: 1.15;
   color: #fff;
-  margin-bottom: 12px;
+  text-align: center;
+  margin-bottom: 8px;
 }
 
 .final-cta__headline em {
@@ -1338,37 +1318,67 @@ tr:last-child .comparison__cell {
 .final-cta__subhead {
   font-family: var(--font-body);
   font-size: 16px;
-  color: rgba(255,255,255,0.6);
-  margin-bottom: 28px;
+  color: rgba(255,255,255,0.5);
+  text-align: center;
+  margin-bottom: 40px;
 }
 
-/* Steps — vertical list */
+.final-cta__grid {
+  display: grid;
+  grid-template-columns: 5fr 7fr;
+  gap: 56px;
+  align-items: center;
+  max-width: 1100px;
+  margin: 0 auto;
+  padding: 0 24px;
+}
+
+.final-cta__image {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  position: sticky;
+  top: 120px;
+}
+
+.final-cta__image img {
+  width: 100%;
+  max-width: 340px;
+  border-radius: 20px;
+  display: block;
+}
+
+.final-cta__content {
+  text-align: left;
+}
+
+/* Steps — compact single-line rows */
 .final-cta__steps {
   display: flex;
   flex-direction: column;
-  gap: 16px;
-  margin-bottom: 32px;
+  gap: 10px;
+  margin-bottom: 28px;
 }
 
 .final-cta__step {
   display: flex;
-  align-items: flex-start;
-  gap: 14px;
-  padding: 14px 18px;
+  align-items: center;
+  gap: 12px;
+  padding: 12px 16px;
   background: rgba(255,255,255,0.06);
   border: 1px solid rgba(255,255,255,0.08);
-  border-radius: 12px;
+  border-radius: 10px;
 }
 
 .final-cta__step-num {
-  width: 28px;
-  height: 28px;
-  min-width: 28px;
+  width: 26px;
+  height: 26px;
+  min-width: 26px;
   border-radius: 50%;
   background: #E91E8C;
   color: #fff;
   font-family: var(--font-display);
-  font-size: 14px;
+  font-size: 13px;
   font-weight: 700;
   display: flex;
   align-items: center;
@@ -1376,17 +1386,21 @@ tr:last-child .comparison__cell {
 }
 
 .final-cta__step strong {
-  font-family: var(--font-body);
   font-size: 14px;
-  font-weight: 600;
   color: #fff;
-  display: block;
 }
 
 .final-cta__step span {
-  font-family: var(--font-body);
   font-size: 13px;
   color: rgba(255,255,255,0.4);
+  margin-left: 4px;
+}
+
+.final-cta__step div {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: baseline;
+  gap: 4px;
 }
 
 /* Large CTA button */
@@ -1447,11 +1461,13 @@ tr:last-child .comparison__cell {
 @media (max-width: 768px) {
   .final-cta__grid {
     grid-template-columns: 1fr;
-    gap: 32px;
-    text-align: center;
+    gap: 28px;
+  }
+  .final-cta__image {
+    position: static;
   }
   .final-cta__image img {
-    max-width: 260px;
+    max-width: 220px;
     margin: 0 auto;
   }
   .final-cta__content { text-align: center; }
@@ -2705,17 +2721,17 @@ tr:last-child .comparison__cell {
 <!-- ====== SECTION 7: FINAL CTA ====== -->
 <section class="final-cta">
   <div class="container">
+    <h2 class="final-cta__headline reveal">
+      Join 15,000+ women who stopped <em>waiting.</em>
+    </h2>
+    <p class="final-cta__subhead reveal reveal-delay-1">
+      Your Lem is waiting. Here's what happens next:
+    </p>
     <div class="final-cta__grid">
       <div class="final-cta__image reveal">
         <img src="lem-closeup.png" alt="Lem held in a woman's palm" loading="lazy">
       </div>
       <div class="final-cta__content">
-        <h2 class="final-cta__headline reveal">
-          Join 15,000+ women who stopped <em>waiting.</em>
-        </h2>
-        <p class="final-cta__subhead reveal reveal-delay-1">
-          Your Lem is waiting. Here's what happens next:
-        </p>
         <div class="final-cta__steps reveal reveal-delay-2">
           <div class="final-cta__step">
             <span class="final-cta__step-num">1</span>
