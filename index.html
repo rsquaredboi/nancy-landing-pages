@@ -186,54 +186,63 @@ a { text-decoration: none; color: inherit; }
    SECTION 1: HERO
    ============================================ */
 .hero {
-  padding: 60px 0 48px;
+  padding: 60px 0 40px;
   background: var(--nancy-cream-dark);
-  position: relative;
-  overflow: hidden;
-}
-
-.hero::before {
-  content: '';
-  position: absolute;
-  top: -200px;
-  right: -150px;
-  width: 500px;
-  height: 500px;
-  border-radius: 50%;
-  background: radial-gradient(circle, rgba(233,30,140,0.08) 0%, transparent 70%);
-  pointer-events: none;
 }
 
 .hero__grid {
   display: grid;
-  grid-template-columns: 55fr 45fr;
-  gap: 40px;
+  grid-template-columns: 1fr 1fr;
+  gap: 48px;
   align-items: center;
+}
+
+.hero__image {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.hero__image img {
+  width: 100%;
+  max-width: 480px;
+  border-radius: 20px;
+  box-shadow: 0 16px 48px rgba(0,0,0,0.1);
+  display: block;
+}
+
+.hero__content {
+  display: flex;
+  flex-direction: column;
 }
 
 .hero__proof-pill {
   display: inline-flex;
   align-items: center;
-  gap: 6px;
   background: #fff;
-  padding: 8px 16px;
-  border-radius: 24px;
-  box-shadow: 0 2px 12px rgba(0,0,0,0.06);
+  border-radius: 100px;
+  padding: 8px 18px;
   font-family: var(--font-body);
   font-size: 13px;
-  color: var(--nancy-gray);
+  color: #1A1A1A;
+  box-shadow: 0 2px 12px rgba(0,0,0,0.06);
   margin-bottom: 20px;
+  width: fit-content;
 }
 
-.hero__proof-pill .hero__stars {
+.hero__label {
+  font-family: var(--font-display);
+  font-size: 13px;
+  font-weight: 700;
   color: #E91E8C;
-  font-size: 14px;
-  margin: 0;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  margin-bottom: 12px;
 }
 
 .hero__headline {
   font-family: var(--font-display);
-  font-size: clamp(32px, 5vw, 48px);
+  font-size: clamp(32px, 4.5vw, 48px);
   font-weight: 700;
   line-height: 1.1;
   color: #1A1A1A;
@@ -241,8 +250,8 @@ a { text-decoration: none; color: inherit; }
 }
 
 .hero__headline em {
-  font-style: normal;
   color: #E91E8C;
+  font-style: normal;
 }
 
 .hero__subhead {
@@ -254,73 +263,44 @@ a { text-decoration: none; color: inherit; }
   max-width: 520px;
 }
 
+.hero__cta {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  background: #E91E8C;
+  color: #fff;
+  font-family: var(--font-display);
+  font-size: 16px;
+  font-weight: 700;
+  padding: 16px 36px;
+  border-radius: 100px;
+  text-decoration: none;
+  transition: background 0.2s;
+  box-shadow: 0 8px 30px rgba(233,30,140,0.3);
+  margin-bottom: 16px;
+}
+
+.hero__cta:hover {
+  background: #D4187E;
+}
+
 .hero__trust-row {
   display: flex;
   align-items: center;
   gap: 16px;
   flex-wrap: wrap;
-  margin-top: 14px;
   font-family: var(--font-body);
   font-size: 12px;
   color: #999;
-}
-
-.hero__trust-item {
-  display: inline-flex;
-  align-items: center;
-  gap: 4px;
-}
-
-.hero__trust-item svg {
-  width: 14px;
-  height: 14px;
-  color: #E91E8C;
-  flex-shrink: 0;
+  margin-bottom: 12px;
 }
 
 .hero__viewers {
   display: flex;
   align-items: center;
-  margin-top: 10px;
-}
-
-/* Hero proof strip — lifestyle image + quote */
-.hero-proof-strip {
-  padding: 32px 0;
-  background: #fff;
-  border-top: 1px solid rgba(0,0,0,0.05);
-  border-bottom: 1px solid rgba(0,0,0,0.05);
-}
-
-.hero-proof-strip__inner {
-  max-width: 900px;
-  margin: 0 auto;
-  display: flex;
-  align-items: center;
-  gap: 32px;
-  padding: 0 24px;
-}
-
-.hero-proof-strip__img {
-  width: 140px;
-  height: 140px;
-  object-fit: cover;
-  border-radius: 16px;
-  flex-shrink: 0;
-}
-
-.hero-proof-strip__quote {
+  gap: 6px;
   font-family: var(--font-body);
-  font-size: 18px;
-  font-style: italic;
-  color: #1A1A1A;
-  line-height: 1.5;
-  margin-bottom: 6px;
-}
-
-.hero-proof-strip__attr {
-  font-family: var(--font-body);
-  font-size: 13px;
+  font-size: 12px;
   color: #999;
 }
 
@@ -1966,9 +1946,7 @@ tr:last-child .comparison__cell {
    RESPONSIVE — TABLET+
    ============================================ */
 @media (min-width: 768px) {
-  .hero { padding: 60px 0 48px; }
-  .hero__grid { grid-template-columns: 55fr 45fr; gap: 40px; }
-  .hero__video-wrap .video-placeholder { max-width: 340px; }
+  .hero__grid { grid-template-columns: 1fr 1fr; gap: 48px; }
 
   .empathy__quotes { grid-template-columns: repeat(3, 1fr); }
 
@@ -1981,8 +1959,7 @@ tr:last-child .comparison__cell {
 }
 
 @media (min-width: 1024px) {
-  .hero { padding: 70px 0 56px; }
-  .hero__video-wrap .video-placeholder { max-width: 360px; }
+  .hero__image img { max-width: 480px; }
   .talking-stage__video-wrap .video-placeholder { max-width: 360px; }
   .pr-grid { gap: 48px; }
 }
@@ -1994,14 +1971,15 @@ tr:last-child .comparison__cell {
   .nav__logo-img { height: 28px; }
   .mute-toggle { width: 36px; height: 36px; bottom: 8px; right: 8px; }
   .mute-toggle svg { width: 18px; height: 18px; }
-  .hero__grid { grid-template-columns: 1fr; gap: 32px; text-align: center; }
-  .hero__video-wrap { order: -1; margin-top: 8px; }
-  .hero__video-wrap .video-placeholder { max-width: 260px; max-height: 440px; }
+  .hero { padding: 32px 0; }
+  .hero__grid { grid-template-columns: 1fr; gap: 28px; text-align: center; }
+  .hero__content { order: 1; align-items: center; }
+  .hero__image { order: 2; }
+  .hero__image img { max-width: 320px; margin: 0 auto; }
   .hero__subhead { max-width: 100%; }
   .hero__trust-row { justify-content: center; }
+  .hero__viewers { justify-content: center; }
   .hero__proof-pill { margin-left: auto; margin-right: auto; }
-  .hero-proof-strip__inner { flex-direction: column; text-align: center; gap: 16px; }
-  .hero-proof-strip__img { width: 100px; height: 100px; }
   .talking-stage__video-wrap .video-placeholder { max-width: 260px; max-height: 440px; }
   .social-stats { flex-direction: column; gap: 20px; }
   .social-stats__divider { width: 40px; height: 1px; }
@@ -2291,47 +2269,27 @@ tr:last-child .comparison__cell {
 
 <!-- ====== SECTION 1: HERO ====== -->
 <section class="hero" id="hero">
-  <div class="container hero__grid">
-    <div class="hero__content">
-      <div class="hero__proof-pill reveal">
-        <span class="hero__stars">★★★★★</span>
-        <span>4.7 stars | 15,000+ reviews | 1,000,000+ O's</span>
+  <div class="container">
+    <div class="hero__grid">
+      <div class="hero__image reveal">
+        <img src="lem-lifestyle.png" alt="Lem sitting on a nightstand among skincare and candles" loading="eager">
       </div>
-      <h1 class="hero__headline reveal reveal-delay-1">
-        She's not fine. She's just tired of <em>explaining.</em>
-      </h1>
-      <p class="hero__subhead reveal reveal-delay-2">
-        When you stop fighting, it's not peace — it's exhaustion. You've been putting everyone else first for long enough. Meet Lem: a tiny, lemon-shaped secret with 12 intensity levels and zero interest in your emotional labor.
-      </p>
-      <a href="#cta" class="cta-btn reveal reveal-delay-3" style="width:100%;text-align:center;justify-content:center;height:54px;">
-        See What 15K Women Are Talking About →
-      </a>
-      <div class="hero__trust-row reveal reveal-delay-3">
-        <span class="hero__trust-item">
-          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"/></svg>
-          Free discreet shipping
-        </span>
-        <span class="hero__trust-item">
-          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"/></svg>
-          30-day guarantee
-        </span>
-        <span class="hero__trust-item">
-          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"/></svg>
-          Mystery gift included
-        </span>
+      <div class="hero__content">
+        <div class="hero__proof-pill reveal">★★★★★ 4.7 stars · 15,000+ reviews · 1,000,000+ O's</div>
+        <p class="hero__label reveal">—— 15,000+ WOMEN ALREADY KNOW</p>
+        <h1 class="hero__headline reveal reveal-delay-1">She's not fine. She's just tired of <em>explaining.</em></h1>
+        <p class="hero__subhead reveal reveal-delay-2">When you stop fighting, it's not peace — it's exhaustion. You've been putting everyone else first for long enough. Meet Lem: a tiny, lemon-shaped secret with 12 intensity levels and zero interest in your emotional labor.</p>
+        <a href="#cta" class="hero__cta reveal reveal-delay-3">See What 15K Women Are Talking About →</a>
+        <div class="hero__trust-row reveal reveal-delay-3">
+          <span>✓ Free discreet shipping</span>
+          <span>✓ 30-day guarantee</span>
+          <span>✓ Mystery gift included</span>
+        </div>
+        <div class="hero__viewers reveal reveal-delay-3">
+          <span class="live-dot"></span>
+          <span id="viewerCount"><strong>1,209</strong> women are viewing this page right now</span>
+        </div>
       </div>
-      <div class="hero__viewers reveal reveal-delay-3">
-        <span class="social-toast__dot" style="display:inline-block;width:7px;height:7px;margin-right:6px;vertical-align:middle;"></span>
-        <span id="viewerCount" style="font-size:12px;color:#999;font-weight:400;"><strong style="color:#1A1A1A">1,209</strong> women are viewing this page right now</span>
-      </div>
-    </div>
-    <div class="hero__video-wrap reveal reveal-delay-2" style="position:relative;">
-      <video id="heroVideo" autoplay muted loop playsinline preload="metadata" style="width:100%;max-width:360px;border-radius:16px;box-shadow:0 24px 60px rgba(42,36,32,0.15);">
-        <source src="script1-hero.mp4" type="video/mp4">
-      </video>
-      <button class="mute-toggle" data-video="heroVideo" aria-label="Unmute video">
-        <svg viewBox="0 0 24 24"><polygon points="11 5 6 9 2 9 2 15 6 15 11 19 11 5"/><line x1="23" y1="9" x2="17" y2="15"/><line x1="17" y1="9" x2="23" y2="15"/></svg>
-      </button>
     </div>
   </div>
   <div class="as-seen-in reveal reveal-delay-3">
@@ -2349,17 +2307,6 @@ tr:last-child .comparison__cell {
     </div>
   </div>
 </section>
-
-<!-- ====== HERO PROOF STRIP ====== -->
-<div class="hero-proof-strip">
-  <div class="hero-proof-strip__inner">
-    <img src="lem-lifestyle.png" alt="Lem on a nightstand" class="hero-proof-strip__img" loading="lazy">
-    <div class="hero-proof-strip__text">
-      <p class="hero-proof-strip__quote">"I leave it on my nightstand. My roommate thinks it's a candle accessory."</p>
-      <p class="hero-proof-strip__attr">— Priya D., verified buyer</p>
-    </div>
-  </div>
-</div>
 
 <!-- ====== SECTION 2: PROBLEM / EMPATHY ====== -->
 <section class="empathy">
