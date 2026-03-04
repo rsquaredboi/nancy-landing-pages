@@ -580,13 +580,21 @@ a { text-decoration: none; color: inherit; }
    SECTION 4: PRODUCT REVEAL
    ============================================ */
 .product-reveal {
-  padding: 100px 0;
+  padding: 70px 0;
   background: var(--warm-white);
+}
+
+.product-reveal__top {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 24px;
+  margin-bottom: 32px;
 }
 
 .product-reveal__intro {
   text-align: center;
-  margin-bottom: 60px;
+  margin-bottom: 30px;
 }
 
 .product-reveal__intro .section-headline {
@@ -602,25 +610,29 @@ a { text-decoration: none; color: inherit; }
 /* Product image */
 .product-img {
   display: block;
-  max-width: 340px;
+  max-width: 380px;
   width: 100%;
   border-radius: 24px;
-  margin: 0 auto 40px;
+  flex-shrink: 0;
+}
+
+.product-reveal__right {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
 }
 
 /* Feature grid */
 .features {
   display: grid;
   grid-template-columns: 1fr 1fr;
-  gap: 20px;
-  max-width: 640px;
-  margin: 0 auto;
+  gap: 16px;
 }
 
 .feature-card {
   background: var(--cream);
   border-radius: 16px;
-  padding: 28px 24px;
+  padding: 20px;
   text-align: center;
   border: 1px solid rgba(42,36,32,0.04);
   transition: transform 0.3s ease;
@@ -632,11 +644,11 @@ a { text-decoration: none; color: inherit; }
   display: flex;
   align-items: center;
   justify-content: center;
-  width: 56px;
-  height: 56px;
-  margin: 0 auto 14px;
+  width: 44px;
+  height: 44px;
+  margin: 0 auto 10px;
   background: var(--peach-tint);
-  border-radius: 14px;
+  border-radius: 12px;
 }
 
 .feature-card__title {
@@ -655,7 +667,7 @@ a { text-decoration: none; color: inherit; }
 
 .product-reveal__cta {
   text-align: center;
-  margin-top: 48px;
+  margin-top: 32px;
 }
 
 /* ============================================
@@ -1652,7 +1664,14 @@ tr:last-child .comparison__cell {
   .talking-stage__grid { grid-template-columns: 1fr 1fr; gap: 64px; }
   .talking-stage__video-wrap .video-placeholder { max-width: 340px; }
 
-  .features { grid-template-columns: repeat(4, 1fr); max-width: 800px; }
+  .product-reveal__top {
+    flex-direction: row;
+    align-items: flex-start;
+    gap: 40px;
+  }
+  .product-reveal__intro { text-align: left; margin-bottom: 16px; }
+  .product-img { max-width: 320px; }
+  .features { max-width: none; }
 
   .testimonials { grid-template-columns: 1fr 1fr; }
 }
@@ -1661,6 +1680,8 @@ tr:last-child .comparison__cell {
   .hero { padding: 120px 0 100px; }
   .hero__video-wrap .video-placeholder { max-width: 360px; }
   .talking-stage__video-wrap .video-placeholder { max-width: 360px; }
+  .product-img { max-width: 380px; }
+  .product-reveal__top { gap: 48px; }
 }
 
 /* ============================================
@@ -2018,13 +2039,15 @@ tr:last-child .comparison__cell {
 <!-- ====== SECTION 4: PRODUCT REVEAL ====== -->
 <section class="product-reveal" id="cta">
   <div class="container">
-    <div class="product-reveal__intro reveal">
-      <div class="section-label">Meet Lem</div>
-      <h2 class="section-headline">Shaped like a lemon.<br><em>Nobody suspects a thing.</em></h2>
-      <p class="product-reveal__sub">Sits on your shelf like skincare. Fits in your bag like lip balm. Works like nothing you've tried before.</p>
-    </div>
-    <img src="product-lem.jpg" alt="Lem — lemon-shaped vibrator" class="product-img reveal">
-    <div class="features">
+    <div class="product-reveal__top">
+      <img src="product-lem.jpg" alt="Lem — lemon-shaped vibrator" class="product-img reveal">
+      <div class="product-reveal__right">
+        <div class="product-reveal__intro reveal">
+          <div class="section-label">Meet Lem</div>
+          <h2 class="section-headline">Shaped like a lemon.<br><em>Nobody suspects a thing.</em></h2>
+          <p class="product-reveal__sub">Sits on your shelf like skincare. Fits in your bag like lip balm. Works like nothing you've tried before.</p>
+        </div>
+        <div class="features">
       <div class="feature-card reveal">
         <div class="feature-card__icon"><svg width="32" height="32" viewBox="0 0 32 32" fill="none" stroke="var(--coral)" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><rect x="8" y="4" width="16" height="24" rx="3"/><line x1="13" y1="10" x2="19" y2="10"/><line x1="13" y1="14" x2="19" y2="14"/><line x1="13" y1="18" x2="19" y2="18"/><line x1="13" y1="22" x2="17" y2="22"/><circle cx="16" cy="22" r="0" fill="var(--coral)"/><rect x="12" y="19" width="8" height="6" rx="1" fill="var(--peach-tint-strong)" stroke="none"/></svg></div>
         <div class="feature-card__title">12 Intensity Levels</div>
@@ -2044,6 +2067,8 @@ tr:last-child .comparison__cell {
         <div class="feature-card__icon"><svg width="32" height="32" viewBox="0 0 32 32" fill="none" stroke="var(--coral)" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><rect x="9" y="6" width="14" height="22" rx="3" fill="var(--peach-tint-strong)"/><line x1="13" y1="6" x2="19" y2="6"/><polyline points="14 15 16 18 18 13" stroke-width="2"/><path d="M9 22h14" opacity="0.3"/></svg></div>
         <div class="feature-card__title">USB Rechargeable</div>
         <p class="feature-card__desc">No batteries. No awkward store runs. Ever.</p>
+      </div>
+        </div>
       </div>
     </div>
     <div class="product-reveal__cta reveal">
