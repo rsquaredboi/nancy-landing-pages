@@ -314,6 +314,11 @@ a { text-decoration: none; color: inherit; }
 .hero__content {
   display: flex;
   flex-direction: column;
+  order: -1;
+}
+
+.hero__video-wrap {
+  order: 2;
 }
 
 .hero__proof-pill {
@@ -741,6 +746,11 @@ a { text-decoration: none; color: inherit; }
 .talking-stage__video-wrap {
   display: flex;
   justify-content: center;
+  order: 2;
+}
+
+.talking-stage__grid > div:not(.talking-stage__video-wrap) {
+  order: -1;
 }
 
 .talking-stage__video-wrap .video-placeholder {
@@ -2102,6 +2112,8 @@ tr:last-child .comparison__cell {
   .hero__trust-row { justify-content: center; font-size: 11px; gap: 12px; }
   .hero__viewers { justify-content: center; }
   .hero__label { font-size: 12px; }
+  .talking-stage__video-wrap { order: -1; }
+  .talking-stage__grid > div:not(.talking-stage__video-wrap) { order: 2; }
   .talking-stage__video-wrap .video-placeholder { max-width: 260px; max-height: 440px; }
   .social-stats { flex-direction: column; gap: 20px; }
   .social-stats__divider { width: 40px; height: 1px; }
