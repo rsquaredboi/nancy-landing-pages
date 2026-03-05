@@ -1349,7 +1349,7 @@ tr:last-child .comparison__cell {
 }
 
 .faq__item {
-  border-bottom: 1px solid rgba(42,36,32,0.08);
+  border-bottom: 1px solid rgba(0,0,0,0.08);
 }
 
 .faq__question {
@@ -1359,65 +1359,40 @@ tr:last-child .comparison__cell {
   width: 100%;
   background: none;
   border: none;
-  padding: 24px 0;
+  padding: 20px 0;
+  cursor: pointer;
+  text-align: left;
   font-family: var(--font-display);
   font-size: 17px;
   font-weight: 700;
-  color: var(--nancy-black);
-  cursor: pointer;
-  text-align: left;
-  transition: color 0.3s ease;
+  color: #1A1A1A;
   gap: 16px;
 }
 
-.faq__question:hover { color: var(--nancy-pink); }
+.faq__question:hover { color: #E91E8C; }
 
-.faq__icon {
-  width: 24px;
-  height: 24px;
+.faq__arrow {
+  transition: transform 0.3s;
   flex-shrink: 0;
-  position: relative;
-  transition: transform 0.3s ease;
+  color: #E91E8C;
 }
-
-.faq__icon::before, .faq__icon::after {
-  content: '';
-  position: absolute;
-  background: var(--nancy-black);
-  transition: transform 0.3s ease, background 0.3s ease;
-}
-
-.faq__icon::before {
-  width: 14px; height: 2px;
-  top: 50%; left: 50%;
-  transform: translate(-50%, -50%);
-}
-
-.faq__icon::after {
-  width: 2px; height: 14px;
-  top: 50%; left: 50%;
-  transform: translate(-50%, -50%);
-}
-
-.faq__item.active .faq__icon::after { transform: translate(-50%, -50%) rotate(90deg); }
-.faq__question:hover .faq__icon::before,
-.faq__question:hover .faq__icon::after { background: var(--nancy-pink); }
 
 .faq__answer {
   max-height: 0;
   overflow: hidden;
-  transition: max-height 0.4s ease, padding 0.4s ease;
+  transition: max-height 0.4s ease;
 }
 
-.faq__answer-inner {
-  padding: 0 0 24px;
-  font-size: 16px;
-  line-height: 1.7;
-  color: var(--nancy-black);
-  font-weight: 300;
+.faq__answer p {
+  font-family: var(--font-body);
+  font-size: 15px;
+  line-height: 1.65;
+  color: #666;
+  padding: 0 0 20px;
 }
 
-.faq__item.active .faq__answer { max-height: 300px; }
+.faq--open .faq__answer { max-height: 500px; }
+.faq--open .faq__arrow { transform: rotate(180deg); }
 
 /* ============================================
    SECTION 7: FINAL CTA
@@ -2390,7 +2365,54 @@ tr:last-child .comparison__cell {
   }
   .stock-scarcity { font-size: 12px; padding: 8px 12px; }
 }
+
+/* ============================================
+   SCROLL REVEAL SECTIONS
+   ============================================ */
+.reveal-section {
+  opacity: 0;
+  transform: translateY(24px);
+  transition: opacity 0.6s ease, transform 0.6s ease;
+}
+.reveal-section.revealed {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+/* ============================================
+   PREFERS-REDUCED-MOTION
+   ============================================ */
+@media (prefers-reduced-motion: reduce) {
+  .reveal-section {
+    opacity: 1 !important;
+    transform: none !important;
+    transition: none !important;
+  }
+  .marquee-bar__track {
+    animation: none !important;
+  }
+  .live-dot, .urgency-bar__dot, .social-toast {
+    animation: none !important;
+  }
+}
 </style>
+<!-- Meta Pixel Code -->
+<script>
+!function(f,b,e,v,n,t,s)
+{if(f.fbq)return;n=f.fbq=function(){n.callMethod?
+n.callMethod.apply(n,arguments):n.queue.push(arguments)};
+if(!f._fbq)f._fbq=n;n.push=n;n.loaded=!0;n.version='2.0';
+n.queue=[];t=b.createElement(e);t.async=!0;
+t.src=v;s=b.getElementsByTagName(e)[0];
+s.parentNode.insertBefore(t,s)}(window, document,'script',
+'https://connect.facebook.net/en_US/fbevents.js');
+fbq('init', '832767357702650');
+fbq('track', 'PageView');
+</script>
+<noscript><img height="1" width="1" style="display:none"
+src="https://www.facebook.com/tr?id=832767357702650&ev=PageView&noscript=1"
+/></noscript>
+<!-- End Meta Pixel Code -->
 </head>
 <body>
 
@@ -2399,7 +2421,7 @@ tr:last-child .comparison__cell {
 
 <!-- ====== TOP BAR ====== -->
 <div class="top-bar">
-  Free discreet shipping + mystery gift · <span>Rated 4.7★ by 15,000+ women</span> · 30-day guarantee
+  🔥 <span id="evergreen-sale-name">Spring Refresh Sale</span> — Free discreet shipping + mystery gift · <span>Rated 4.7★ by 15,000+ women</span> · 30-day guarantee
 </div>
 
 <!-- ====== NAVIGATION ====== -->
@@ -2430,7 +2452,7 @@ tr:last-child .comparison__cell {
         <div class="hero__proof-pill reveal">★★★★★ 4.7 stars · 1,000,000+ O's</div>
         <p class="hero__label reveal">—— 1M+ WOMEN ALREADY KNOW</p>
         <h1 class="hero__headline reveal reveal-delay-1">She's not fine. She's just tired of <em>explaining.</em></h1>
-        <p class="hero__subhead reveal reveal-delay-2">When you stop fighting, it's not peace — it's exhaustion. You've been putting everyone else first for long enough. Meet Lem: a tiny, lemon-shaped secret with 12 intensity levels and zero interest in your emotional labor.</p>
+        <p class="hero__subhead reveal reveal-delay-2">When you stop fighting, it's not peace — it's exhaustion. You've been putting everyone else first for long enough. <a href="https://hellonancy.com/products/lem" target="_blank" style="color:#E91E8C; text-decoration:underline;">Meet Lem</a>: a tiny, lemon-shaped secret with 12 intensity levels and zero interest in your emotional labor.</p>
         <a href="#product-section" class="hero__cta reveal reveal-delay-3">See What 1M+ Women Are Talking About →</a>
         <div class="hero__trust-row reveal reveal-delay-3">
           <span>✓ Free discreet shipping</span>
@@ -2461,7 +2483,7 @@ tr:last-child .comparison__cell {
 </section>
 
 <!-- ====== SECTION 2: PROBLEM / EMPATHY ====== -->
-<section class="empathy">
+<section class="empathy reveal-section">
   <div class="container">
     <div class="empathy__intro reveal">
       <div class="section-label">Sound familiar?</div>
@@ -2482,13 +2504,13 @@ tr:last-child .comparison__cell {
       </div>
     </div>
     <p class="empathy__body reveal">
-      You held the relationship together. You remembered the birthdays, managed the feelings, carried the conversations. And somewhere in the middle of taking care of everyone — you forgot to take care of you. That part's over now.
+      You held the relationship together. You remembered the birthdays, managed the feelings, carried the conversations. And somewhere in the middle of taking care of everyone — you forgot to take care of you. That part's over now. <a href="https://hellonancy.com/products/lem" target="_blank" style="color:#E91E8C; text-decoration:underline;">Meet the Lem →</a>
     </p>
   </div>
 </section>
 
 <!-- ====== SECTION 3: TALKING STAGE ====== -->
-<section class="talking-stage">
+<section class="talking-stage reveal-section">
   <div class="container talking-stage__grid">
     <div class="talking-stage__video-wrap reveal" style="position:relative;">
       <video id="talkingVideo" autoplay muted loop playsinline preload="metadata" style="width:100%;max-width:360px;border-radius:16px;box-shadow:0 24px 60px rgba(0,0,0,0.3);">
@@ -2507,7 +2529,7 @@ tr:last-child .comparison__cell {
         Morning texts from someone who can't commit to a dinner reservation. And you're supposed to stay cute and unbothered? Please.
       </p>
       <p class="talking-stage__copy reveal reveal-delay-2">
-        Turns out you can take care of your own needs. Literally. It's shaped like a lemon, it never leaves you on read, and it doesn't need two hours to text back.
+        Turns out you can take care of your own needs. Literally. It's <a href="https://hellonancy.com/products/lem" target="_blank" style="color:#E91E8C; text-decoration:underline;">shaped like a lemon</a>, it never leaves you on read, and it doesn't need two hours to text back.
       </p>
       <p class="talking-stage__punchline reveal reveal-delay-3">
         12 settings. All of them show up on time.
@@ -2517,7 +2539,7 @@ tr:last-child .comparison__cell {
 </section>
 
 <!-- ====== SECTION 4: PRODUCT REVEAL ====== -->
-<section class="product-reveal" id="product-section">
+<section class="product-reveal reveal-section" id="product-section">
   <div class="container">
     <div class="pr-grid">
       <div class="pr-left">
@@ -2545,15 +2567,13 @@ tr:last-child .comparison__cell {
         </div>
         <div class="pr-trust-mini">
           <span>&#9733; 4.7 (15k+ reviews)</span>
-          <span>&middot;</span>
-          <span>&#127942; Award Winner</span>
         </div>
       </div>
       <div class="pr-right">
         <div class="pr-intro reveal">
           <div class="section-label">Meet Lem</div>
           <h2 class="section-headline">Shaped like a lemon.<br><em>Nobody suspects a thing.</em></h2>
-          <p class="pr-sub">Sits on your shelf like skincare. Fits in your bag like lip balm. Works like nothing you've tried before.</p>
+          <p class="pr-sub"><a href="https://hellonancy.com/products/lem" target="_blank" style="color:#E91E8C; text-decoration:underline;">Sits on your shelf like skincare</a>. Fits in your bag like lip balm. Works like nothing you've tried before.</p>
         </div>
         <div class="pr-features">
           <div class="pr-feature">
@@ -2577,9 +2597,9 @@ tr:last-child .comparison__cell {
           <div class="price-block">
             <div><span class="price-block__original">$159</span><span class="price-block__current">$89</span><span class="price-block__save">Save $70</span></div>
             <p class="price-block__daily">That's $0.24/day over a year — less than your morning coffee</p>
-            <p class="price-block__bonus">+ Free mystery gift with every order</p>
+            <p class="price-block__bonus">+ Free mystery gift with every order (past gifts have included: pleasure pouch, collectible art cards, surprise accessories)</p>
           </div>
-          <a href="https://hellonancy.com/products/lem" target="_blank" rel="noopener" class="cta-btn">
+          <a href="https://hellonancy.com/products/lem" target="_blank" rel="noopener" class="cta-btn" onclick="fbq('track', 'ViewContent', {content_name: 'Lem', content_type: 'product', value: 89.00, currency: 'USD'});">
             Get Yours — Free Shipping
             <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><line x1="5" y1="12" x2="19" y2="12"/><polyline points="12 5 19 12 12 19"/></svg>
           </a>
@@ -2595,7 +2615,6 @@ tr:last-child .comparison__cell {
         </div>
         <div class="pr-bottom-strip">
           <p class="product-reveal__trust-line">Rated 4.7&#9733; by 15,000+ women &middot; 30-day happiness guarantee</p>
-          <div class="award-badge"><span class="award-badge__icon">&#127942;</span> 2025 Women's Wellness Tech Award Winner</div>
         </div>
       </div>
     </div>
@@ -2603,7 +2622,7 @@ tr:last-child .comparison__cell {
 </section>
 
 <!-- ====== SECTION: COMPARISON ====== -->
-<section class="comparison">
+<section class="comparison reveal-section">
   <div class="container">
     <div class="comparison__intro reveal">
       <div class="section-label">Honest question</div>
@@ -2677,7 +2696,7 @@ tr:last-child .comparison__cell {
         </tbody>
       </table>
     </div>
-    <p class="comparison__footer reveal">"Better than the Rose" isn't our tagline. It's what our customers keep telling us.</p>
+    <p class="comparison__footer reveal">"Better than the Rose" isn't our tagline. It's what our customers keep telling us. <a href="https://hellonancy.com/products/lem" target="_blank" style="color:#E91E8C; text-decoration:underline;">See for yourself →</a></p>
   </div>
 </section>
 
@@ -2694,7 +2713,7 @@ tr:last-child .comparison__cell {
 </div>
 
 <!-- ====== SECTION 5: SOCIAL PROOF ====== -->
-<section class="social-proof">
+<section class="social-proof reveal-section">
   <div class="container">
     <div class="social-stats reveal">
       <div class="social-stats__item">
@@ -2724,36 +2743,36 @@ tr:last-child .comparison__cell {
     <h2 class="reviews__headline reveal">Don't take our word for it.</h2>
     <div class="reviews-grid">
       <div class="review-card reveal">
-        <div class="review-card__persona">First-time explorer</div>
+        <div class="review-card__persona">The skeptic turned convert</div>
         <div class="review-card__stars">★★★★★</div>
-        <p class="review-card__quote">"Better than any ex I've ever had. 12 settings and every single one of them shows up on time."</p>
+        <p class="review-card__quote">"I was skeptical because I've tried so many toys that just vibrate and buzz — but Lem is completely different. The air pulses feel like a soft kiss that builds and builds."</p>
         <div class="review-card__footer">
-          <span class="review-card__name">— Sarah K., 29</span>
+          <span class="review-card__name">— Verified Buyer</span>
           <span class="review-card__badge">Verified buyer</span>
         </div>
       </div>
       <div class="review-card reveal reveal-delay-1">
         <div class="review-card__persona">The reawakened woman</div>
         <div class="review-card__stars">★★★★★</div>
-        <p class="review-card__quote">"I'm 47, divorced, and honestly thought that part of me was over. It's not. It's so not."</p>
+        <p class="review-card__quote">"Woman in her late 50s here. I bought my Lem with some skepticism — my sex drive had all but curled up and died. Well, it's been a few years since I've had that strong of a climax, that quickly. I'm a convert."</p>
         <div class="review-card__footer">
-          <span class="review-card__name">— Linda M., 47</span>
+          <span class="review-card__name">— Verified Buyer</span>
           <span class="review-card__badge">Verified buyer</span>
         </div>
       </div>
       <div class="review-card reveal reveal-delay-2">
         <div class="review-card__persona">The discreet diva</div>
         <div class="review-card__stars">★★★★★</div>
-        <p class="review-card__quote">"My roommate complimented it as a 'cute decoration.' If only she knew."</p>
+        <p class="review-card__quote">"I love that I can leave Lem out without feeling embarrassed. My roommate even complimented it as a 'cute decoration!'"</p>
         <div class="review-card__footer">
-          <span class="review-card__name">— Priya D., 24</span>
+          <span class="review-card__name">— Sarah M., Verified Buyer</span>
           <span class="review-card__badge">Verified buyer</span>
         </div>
       </div>
     </div>
     <p class="trustpilot-line reveal"><span class="tp-star">★</span> Rated 4.7/5 on Trustpilot · 1,300+ independent reviews</p>
     <div class="social-proof__cta reveal">
-      <a href="https://hellonancy.com/products/lem" target="_blank" rel="noopener" class="cta-btn">
+      <a href="https://hellonancy.com/products/lem" target="_blank" rel="noopener" class="cta-btn" onclick="fbq('track', 'ViewContent', {content_name: 'Lem', content_type: 'product', value: 89.00, currency: 'USD'});">
         See Why 15,000+ Women Switched →
       </a>
     </div>
@@ -2765,66 +2784,56 @@ tr:last-child .comparison__cell {
 </section>
 
 <!-- ====== SECTION 6: FAQ ====== -->
-<section class="faq">
+<section class="faq reveal-section">
   <div class="container">
     <div class="faq__intro reveal">
       <div class="section-label">Real talk</div>
       <h2 class="section-headline">The stuff you actually <em>want to know.</em></h2>
     </div>
     <div class="faq__list">
-      <div class="faq__item reveal">
-        <button class="faq__question" aria-expanded="false">
-          Okay but what does it actually look like?
-          <span class="faq__icon" aria-hidden="true"></span>
+      <div class="faq__item">
+        <button class="faq__question" onclick="this.parentElement.classList.toggle('faq--open')">
+          <span>Okay but what does it actually look like?</span>
+          <svg class="faq__arrow" width="16" height="16" viewBox="0 0 16 16" fill="none"><path d="M4 6l4 4 4-4" stroke="currentColor" stroke-width="2" stroke-linecap="round"/></svg>
         </button>
         <div class="faq__answer">
-          <div class="faq__answer-inner">
-            A lemon. A cute, bright little lemon. Leave it on your nightstand, your bathroom shelf, or toss it in your travel bag. One customer said it "looks like skincare on my shelf." That's the point.
-          </div>
+          <p><a href="https://hellonancy.com/products/lem" target="_blank" style="color:#E91E8C; text-decoration:underline;">A lemon</a>. A cute, bright little lemon. Leave it on your nightstand, your bathroom shelf, or toss it in your travel bag. One customer said it "looks like skincare on my shelf." That's the point.</p>
         </div>
       </div>
-      <div class="faq__item reveal reveal-delay-1">
-        <button class="faq__question" aria-expanded="false">
-          Will my roommates / partner / walls hear it?
-          <span class="faq__icon" aria-hidden="true"></span>
+      <div class="faq__item">
+        <button class="faq__question" onclick="this.parentElement.classList.toggle('faq--open')">
+          <span>Will my roommates / partner / walls hear it?</span>
+          <svg class="faq__arrow" width="16" height="16" viewBox="0 0 16 16" fill="none"><path d="M4 6l4 4 4-4" stroke="currentColor" stroke-width="2" stroke-linecap="round"/></svg>
         </button>
         <div class="faq__answer">
-          <div class="faq__answer-inner">
-            Nope. Whisper-quiet — a reviewer genuinely thought it was a face massager. Thin walls, shared apartments, sleeping partners. Not a problem.
-          </div>
+          <p>Nope. Whisper-quiet — a reviewer genuinely thought it was a face massager. Thin walls, shared apartments, sleeping partners. Not a problem.</p>
         </div>
       </div>
-      <div class="faq__item reveal reveal-delay-2">
-        <button class="faq__question" aria-expanded="false">
-          What if my package gets opened by someone else?
-          <span class="faq__icon" aria-hidden="true"></span>
+      <div class="faq__item">
+        <button class="faq__question" onclick="this.parentElement.classList.toggle('faq--open')">
+          <span>What if my package gets opened by someone else?</span>
+          <svg class="faq__arrow" width="16" height="16" viewBox="0 0 16 16" fill="none"><path d="M4 6l4 4 4-4" stroke="currentColor" stroke-width="2" stroke-linecap="round"/></svg>
         </button>
         <div class="faq__answer">
-          <div class="faq__answer-inner">
-            Plain box. No logos, no branding, nothing on the outside. Your delivery driver, your doorman, your nosy neighbor — none of them will know. (But the inside? Beautiful. You'll want to keep it.)
-          </div>
+          <p>Plain box. No logos, no branding, nothing on the outside. Your delivery driver, your doorman, your nosy neighbor — none of them will know. (But the inside? Beautiful. You'll want to keep it.)</p>
         </div>
       </div>
-      <div class="faq__item reveal reveal-delay-3">
-        <button class="faq__question" aria-expanded="false">
-          Do I really need 12 intensity levels?
-          <span class="faq__icon" aria-hidden="true"></span>
+      <div class="faq__item">
+        <button class="faq__question" onclick="this.parentElement.classList.toggle('faq--open')">
+          <span>Do I really need 12 intensity levels?</span>
+          <svg class="faq__arrow" width="16" height="16" viewBox="0 0 16 16" fill="none"><path d="M4 6l4 4 4-4" stroke="currentColor" stroke-width="2" stroke-linecap="round"/></svg>
         </button>
         <div class="faq__answer">
-          <div class="faq__answer-inner">
-            Some days are gentle. Some days are... not. Start wherever you're comfortable and go as far as you want. Most women find their favorite by the third time. And it might not be the one you expect.
-          </div>
+          <p>Some days are gentle. Some days are... not. Start wherever you're comfortable and go as far as you want. Most women find their favorite by the third time. And it might not be the one you expect. Lem has <a href="https://hellonancy.com/products/lem" target="_blank" style="color:#E91E8C; text-decoration:underline;">12 intensity levels</a> so there's always one that fits.</p>
         </div>
       </div>
-      <div class="faq__item reveal">
-        <button class="faq__question" aria-expanded="false">
-          What if I don't love it?
-          <span class="faq__icon" aria-hidden="true"></span>
+      <div class="faq__item">
+        <button class="faq__question" onclick="this.parentElement.classList.toggle('faq--open')">
+          <span>What if I don't love it?</span>
+          <svg class="faq__arrow" width="16" height="16" viewBox="0 0 16 16" fill="none"><path d="M4 6l4 4 4-4" stroke="currentColor" stroke-width="2" stroke-linecap="round"/></svg>
         </button>
         <div class="faq__answer">
-          <div class="faq__answer-inner">
-            30-day happiness guarantee. If Lem isn't for you, we'll make it right — no awkward conversations, no hoops. But with 15,000+ five-star reviews, we like our odds.
-          </div>
+          <p>30-day happiness guarantee. If Lem isn't for you, we'll make it right — no awkward conversations, no hoops. But with <a href="https://hellonancy.com/products/lem" target="_blank" style="color:#E91E8C; text-decoration:underline;">15,000+ five-star reviews</a>, we like our odds.</p>
         </div>
       </div>
     </div>
@@ -2832,7 +2841,7 @@ tr:last-child .comparison__cell {
 </section>
 
 <!-- ====== SECTION 7: FINAL CTA ====== -->
-<section class="final-cta">
+<section class="final-cta reveal-section">
   <div class="container">
     <h2 class="final-cta__headline reveal">
       Join 15,000+ women who stopped <em>waiting.</em>
@@ -2863,7 +2872,7 @@ tr:last-child .comparison__cell {
             <div><strong>You finally put yourself first</strong><span>(prepare to wonder why you waited)</span></div>
           </div>
         </div>
-        <a href="https://hellonancy.com/products/lem" target="_blank" rel="noopener" class="cta-btn cta-btn--large reveal reveal-delay-3">
+        <a href="https://hellonancy.com/products/lem" target="_blank" rel="noopener" class="cta-btn cta-btn--large reveal reveal-delay-3" onclick="fbq('track', 'ViewContent', {content_name: 'Lem', content_type: 'product', value: 89.00, currency: 'USD'});">
           I Deserve This — $89
           <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><line x1="5" y1="12" x2="19" y2="12"/><polyline points="12 5 19 12 12 19"/></svg>
         </a>
@@ -2929,7 +2938,7 @@ tr:last-child .comparison__cell {
     <div class="sticky-cta__price"><s>$159</s> $89 <span class="sticky-cta__save">Save 44%</span></div>
     <div class="sticky-cta__sub">Free shipping + mystery gift · 30-day guarantee</div>
   </div>
-  <a href="https://hellonancy.com/products/lem" target="_blank" rel="noopener" class="cta-btn">Get Lem
+  <a href="https://hellonancy.com/products/lem" target="_blank" rel="noopener" class="cta-btn" onclick="fbq('track', 'ViewContent', {content_name: 'Lem', content_type: 'product', value: 89.00, currency: 'USD'});">Get Lem
     <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><line x1="5" y1="12" x2="19" y2="12"/><polyline points="12 5 19 12 12 19"/></svg>
   </a>
 </div>
@@ -2946,8 +2955,8 @@ tr:last-child .comparison__cell {
     <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><line x1="18" y1="6" x2="6" y2="18"/><line x1="6" y1="6" x2="18" y2="18"/></svg>
   </button>
   <p class="email-slidein__headline">Before you go further...</p>
-  <p class="email-slidein__body">Save 25% on your Lem with code <strong style="color:var(--nancy-pink);">LEM25</strong> at checkout.</p>
-  <a href="https://hellonancy.com/products/lem" target="_blank" rel="noopener" class="email-slidein__btn" style="display:block;text-align:center;text-decoration:none;padding:14px;border-radius:10px;">Shop Lem — 25% Off</a>
+  <p class="email-slidein__body">Use code <strong style="color:var(--nancy-pink);">LEM25</strong> for an extra 25% off — just $66.75 instead of $89.</p>
+  <a href="https://hellonancy.com/products/lem" target="_blank" rel="noopener" class="email-slidein__btn" style="display:block;text-align:center;text-decoration:none;padding:14px;border-radius:10px;" onclick="fbq('track', 'ViewContent', {content_name: 'Lem', content_type: 'product', value: 89.00, currency: 'USD'});">Get Lem — $66.75</a>
   <p class="email-slidein__privacy">Free discreet shipping · 30-day guarantee</p>
 </div>
 
@@ -2959,7 +2968,7 @@ tr:last-child .comparison__cell {
     </button>
     <img src="lem-no-bg.png" alt="Lem" class="exit-popup__product-img">
     <h3 class="exit-popup__headline">Leaving without your <em>Lem?</em></h3>
-    <p class="exit-popup__body">Use code <strong>LEM25</strong> at checkout and save 25%. Go on — you've earned this.</p>
+    <p class="exit-popup__body">Use code <strong>LEM25</strong> at checkout for an extra 25% off. That's just $66.75 instead of $89. Go on — you've earned this.</p>
     <div class="exit-popup__code-wrap">
       <div class="exit-popup__code">LEM25</div>
       <button class="exit-popup__copy" id="exitCopyBtn" aria-label="Copy code">Copy</button>
@@ -2968,8 +2977,8 @@ tr:last-child .comparison__cell {
       <span class="urgency-bar__dot"></span>
       Code expires in <strong id="exitTimer">15:00</strong>
     </div>
-    <a href="https://hellonancy.com/products/lem" target="_blank" rel="noopener" class="cta-btn" style="width:100%;justify-content:center;">
-      Shop Lem — 25% Off
+    <a href="https://hellonancy.com/products/lem" target="_blank" rel="noopener" class="cta-btn" style="width:100%;justify-content:center;" onclick="fbq('track', 'ViewContent', {content_name: 'Lem', content_type: 'product', value: 89.00, currency: 'USD'});">
+      Get Lem — $66.75
       <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><line x1="5" y1="12" x2="19" y2="12"/><polyline points="12 5 19 12 12 19"/></svg>
     </a>
     <p class="exit-popup__proof">
@@ -3016,22 +3025,6 @@ const observer = new IntersectionObserver((entries) => {
 }, { threshold: 0.15, rootMargin: '0px 0px -40px 0px' });
 
 reveals.forEach(el => observer.observe(el));
-
-// FAQ accordion
-document.querySelectorAll('.faq__question').forEach(btn => {
-  btn.addEventListener('click', () => {
-    const item = btn.parentElement;
-    const isActive = item.classList.contains('active');
-    // Close all
-    document.querySelectorAll('.faq__item').forEach(i => i.classList.remove('active'));
-    document.querySelectorAll('.faq__question').forEach(b => b.setAttribute('aria-expanded', 'false'));
-    // Open clicked (if wasn't already open)
-    if (!isActive) {
-      item.classList.add('active');
-      btn.setAttribute('aria-expanded', 'true');
-    }
-  });
-});
 
 // Smooth scroll for anchor links
 document.querySelectorAll('a[href^="#"]').forEach(anchor => {
@@ -3363,6 +3356,46 @@ updateTimer2();
       }
     });
   });
+})();
+</script>
+<script>
+// Scroll reveal animations
+(function() {
+  const sections = document.querySelectorAll('.reveal-section');
+  if (window.matchMedia('(prefers-reduced-motion: reduce)').matches) return;
+
+  const observer = new IntersectionObserver((entries) => {
+    entries.forEach(entry => {
+      if (entry.isIntersecting) {
+        entry.target.classList.add('revealed');
+        observer.unobserve(entry.target);
+      }
+    });
+  }, { threshold: 0.1, rootMargin: '0px 0px -50px 0px' });
+
+  sections.forEach(section => observer.observe(section));
+})();
+
+// Evergreen sale naming
+(function() {
+  const saleNames = {
+    0: 'New Year New You Sale',
+    1: 'Valentine\'s Day Sale',
+    2: 'Spring Refresh Sale',
+    3: 'Spring Refresh Sale',
+    4: 'Self-Care Summer Sale',
+    5: 'Summer Glow Sale',
+    6: 'Summer Glow Sale',
+    7: 'End of Summer Sale',
+    8: 'Fall Feels Sale',
+    9: 'Fall Feels Sale',
+    10: 'Black Friday Sale',
+    11: 'Holiday Gift Sale'
+  };
+  const month = new Date().getMonth();
+  const saleName = saleNames[month];
+  const saleEl = document.getElementById('evergreen-sale-name');
+  if (saleEl) saleEl.textContent = saleName;
 })();
 </script>
 </body>
