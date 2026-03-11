@@ -126,6 +126,27 @@ h3{font-family:var(--font-d);font-weight:700}
 .sticker-card-name{font-size:0.72rem;font-weight:700;margin-bottom:0.15rem}
 .sticker-card-tagline{font-size:0.62rem;opacity:0.55;font-style:italic;color:var(--pink)}
 
+/* Decoy / Deceptive box cards */
+.bg-amber-glow{background:radial-gradient(ellipse at 50% 40%,rgba(255,165,0,0.05) 0%,var(--dark) 70%)}
+.bg-amber-chaos{background:linear-gradient(160deg,#0a0a1e 0%,#1a1008 40%,var(--dark) 80%)}
+.glow-amber{background:#ff8c00;width:400px;height:400px;top:-50px;right:-50px;opacity:0.05}
+.tag-amber{background:rgba(255,165,0,0.12);color:#ffaa33}
+h2 .amber{color:#ffaa33}
+.decoy-card{
+  background:rgba(255,255,255,0.04);border-radius:14px;overflow:hidden;
+  border:1px solid rgba(255,165,0,0.08);transition:all 0.3s;
+}
+.decoy-card:hover{border-color:rgba(255,165,0,0.25);transform:translateY(-4px);box-shadow:0 12px 40px rgba(255,165,0,0.06)}
+.decoy-card img{width:100%;aspect-ratio:1/1;object-fit:cover;display:block}
+.decoy-card-body{padding:0.8rem 1rem 1rem}
+.decoy-card-name{font-size:0.9rem;font-weight:700;margin-bottom:0.15rem}
+.decoy-card-tagline{font-size:0.72rem;opacity:0.5;font-style:italic;color:#ffaa33;margin-bottom:0.3rem}
+.decoy-card-desc{font-size:0.68rem;opacity:0.35;line-height:1.5}
+.decoy-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:1.5rem;margin-top:1.5rem}
+.decoy-grid-4{display:grid;grid-template-columns:repeat(4,1fr);gap:1.2rem;margin-top:1.5rem}
+@media(max-width:900px){.decoy-grid,.decoy-grid-4{grid-template-columns:1fr 1fr}}
+@media(max-width:600px){.decoy-grid,.decoy-grid-4{grid-template-columns:1fr}}
+
 /* Wild concept cards */
 .wild-grid{
   display:grid;grid-template-columns:repeat(3,1fr);gap:1.5rem;margin-top:1.5rem;
@@ -180,7 +201,7 @@ h3{font-family:var(--font-d);font-weight:700}
 <body>
 
 <div class="progress" id="progress"></div>
-<div class="slide-counter" id="counter">01 / 12</div>
+<div class="slide-counter" id="counter">01 / 15</div>
 <div class="deck-nav">
   <button onclick="go(-1)" title="Previous">‹</button>
   <button onclick="go(1)" title="Next">›</button>
@@ -487,15 +508,140 @@ h3{font-family:var(--font-d);font-weight:700}
   </div>
 </section>
 
-<!-- ═══ SLIDE 12 — CLOSING ═══ -->
+<!-- ═══ SLIDE 12 — DECEPTIVE MYSTERY BOXES (1/3) ═══ -->
+<section class="slide bg-amber-chaos">
+  <div class="glow glow-amber"></div>
+  <div class="slide-num">12 — Deceptive Mystery Boxes</div>
+  <div class="slide-inner">
+    <div class="center-text" style="margin-bottom:1.5rem">
+      <div class="tag tag-amber">The Trojan Horse Strategy</div>
+      <h2 style="font-size:clamp(1.4rem,3vw,2.2rem)">It looks like a <span class="amber">normal package.</span><br>It's definitely not.</h2>
+      <p class="subtitle" style="margin:0.5rem auto 0">Packaging disguised as everyday items. The unboxing IS the punchline. Maximum TikTok chaos.</p>
+    </div>
+    <div class="decoy-grid">
+      <div class="decoy-card">
+        <img src="assets/decoy-iphone.png" alt="Fake iPhone Box">
+        <div class="decoy-card-body">
+          <div class="decoy-card-name">📱 Nancy Pro Max</div>
+          <div class="decoy-card-tagline">"Now with 100% more feelings"</div>
+          <div class="decoy-card-desc">Sleek tech packaging — Apple-white minimalism. Recipient thinks it's a phone. It's a plushie. The betrayal is the product.</div>
+        </div>
+      </div>
+      <div class="decoy-card">
+        <img src="assets/decoy-pizza.png" alt="Fake Pizza Box">
+        <div class="decoy-card-body">
+          <div class="decoy-card-name">🍕 Nancy's Pizza</div>
+          <div class="decoy-card-tagline">"Free delivery. Zero calories."</div>
+          <div class="decoy-card-desc">Classic pizza box with grease stains. Open it expecting pepperoni. Get a plushie. Perfect prank gift packaging.</div>
+        </div>
+      </div>
+      <div class="decoy-card">
+        <img src="assets/decoy-ring.png" alt="Fake Ring Box">
+        <div class="decoy-card-body">
+          <div class="decoy-card-name">💍 The Proposal Box</div>
+          <div class="decoy-card-tagline">"Will you squeeze me forever?"</div>
+          <div class="decoy-card-desc">Velvet jewelry box. The moment of truth — it's not a diamond. It's better. Guaranteed to go viral on couples TikTok.</div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ═══ SLIDE 13 — DECEPTIVE MYSTERY BOXES (2/3) ═══ -->
+<section class="slide bg-amber-glow">
+  <div class="glow glow-amber" style="left:-50px;right:auto"></div>
+  <div class="slide-num">13 — Everyday Disguises</div>
+  <div class="slide-inner">
+    <div class="center-text" style="margin-bottom:1.5rem">
+      <div class="tag tag-amber">Hiding in Plain Sight</div>
+      <h2 style="font-size:clamp(1.4rem,3vw,2rem)">Sneakers. Paint cans. <span class="amber">First aid kits.</span></h2>
+    </div>
+    <div class="decoy-grid-4">
+      <div class="decoy-card">
+        <img src="assets/decoy-sneaker.png" alt="Fake Sneaker Box">
+        <div class="decoy-card-body">
+          <div class="decoy-card-name">👟 Hype Drop</div>
+          <div class="decoy-card-tagline">"Limited edition. Not a shoe."</div>
+          <div class="decoy-card-desc">Branded sneaker box. Hypebeast energy. They'll think it's Travis Scott Jordans. It's a squish.</div>
+        </div>
+      </div>
+      <div class="decoy-card">
+        <img src="assets/decoy-paint-can.png" alt="Paint Can Box">
+        <div class="decoy-card-body">
+          <div class="decoy-card-name">🎨 Soft Touch™ Finish</div>
+          <div class="decoy-card-tagline">"Coverage: 1 broken heart"</div>
+          <div class="decoy-card-desc">Hardware store paint can. "Emotional Support Soft Touch." Pop the lid, pull out a plushie. The design crowd will riot.</div>
+        </div>
+      </div>
+      <div class="decoy-card">
+        <img src="assets/decoy-firstaid.png" alt="First Aid Kit">
+        <div class="decoy-card-body">
+          <div class="decoy-card-name">🏥 Emotional First Aid</div>
+          <div class="decoy-card-tagline">"For emergencies only (all vibes count)"</div>
+          <div class="decoy-card-desc">Red cross first aid kit. Compartments inside. "Apply directly to feelings." Wellness-coded unboxing.</div>
+        </div>
+      </div>
+      <div class="decoy-card">
+        <img src="assets/decoy-milk.png" alt="Milk Carton Box">
+        <div class="decoy-card-body">
+          <div class="decoy-card-name">🥛 Farm Fresh Cuteness</div>
+          <div class="decoy-card-tagline">"MISSING: your ability to resist"</div>
+          <div class="decoy-card-desc">Milk carton with MISSING poster of the plushie inside. "Last seen: being adorable." Pour out and squeeze.</div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ═══ SLIDE 14 — DECEPTIVE MYSTERY BOXES (3/3) ═══ -->
+<section class="slide bg-amber-chaos">
+  <div class="glow glow-amber" style="top:auto;bottom:-50px"></div>
+  <div class="slide-num">14 — Maximum Deception</div>
+  <div class="slide-inner">
+    <div class="center-text" style="margin-bottom:1.5rem">
+      <div class="tag tag-amber">The Long Con</div>
+      <h2 style="font-size:clamp(1.4rem,3vw,2rem)">A safe. A textbook. <span class="amber">A boring brown box.</span></h2>
+      <p class="subtitle" style="margin:0.5rem auto 0">The most deceptive packaging plays: maximum anticlimax → maximum surprise.</p>
+    </div>
+    <div class="decoy-grid">
+      <div class="decoy-card">
+        <img src="assets/decoy-safe.png" alt="Mini Safe/Vault">
+        <div class="decoy-card-body">
+          <div class="decoy-card-name">🔐 The Vault</div>
+          <div class="decoy-card-tagline">"Contents: Priceless"</div>
+          <div class="decoy-card-desc">Mini combination lock safe. Spin to unlock. Inside: the world's most protected plushie. "High security cuteness clearance required."</div>
+        </div>
+      </div>
+      <div class="decoy-card">
+        <img src="assets/decoy-textbook.png" alt="Hollow Textbook">
+        <div class="decoy-card-body">
+          <div class="decoy-card-name">📚 Emotional Regulation 101</div>
+          <div class="decoy-card-tagline">"Required reading. Final exam: one squeeze."</div>
+          <div class="decoy-card-desc">Hollow textbook. "The Complete Guide to Not Losing It." Open the pages — plushie compartment inside. Bookworm core.</div>
+        </div>
+      </div>
+      <div class="decoy-card">
+        <img src="assets/decoy-amazon.png" alt="Boring Brown Box">
+        <div class="decoy-card-body">
+          <div class="decoy-card-name">📦 The Nothing Box</div>
+          <div class="decoy-card-tagline">"FRAGILE: Contains feelings"</div>
+          <div class="decoy-card-desc">The most boring brown shipping box ever. No branding. No hints. Open it and BAM — pink interior, plushie reveal. The ultimate anticlimax-to-joy pipeline.</div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ═══ SLIDE 15 — CLOSING ═══ -->
 <section class="slide bg-gradient">
   <div class="glow glow-pink" style="right:auto;left:50%;transform:translateX(-50%)"></div>
-  <div class="slide-num">12 — Let's Go</div>
+  <div class="slide-num">15 — Let's Go</div>
   <div class="slide-inner center-text">
     <div class="tag">Next Steps</div>
     <h1 style="font-size:clamp(2rem,5vw,3.5rem)">One box to <span>rule them all.</span></h1>
     <p class="subtitle" style="margin:1rem auto 1.5rem">120 characters today. Celeb collabs tomorrow. Limited drops next week. The box never changes — only the sticker does.</p>
-    <p class="subtitle" style="margin:0 auto 2.5rem;opacity:0.3;font-size:0.9rem">And when you want to break the internet — drop a WANTED box, a prescription bottle, or an egg carton full of plushies.</p>
+    <p class="subtitle" style="margin:0 auto 1.5rem;opacity:0.3;font-size:0.9rem">Want to break the internet? Drop a WANTED box, a prescription bottle, or an egg carton full of plushies.</p>
+    <p class="subtitle" style="margin:0 auto 2.5rem;opacity:0.3;font-size:0.9rem">Want to prank your customers? Ship it in a pizza box, an iPhone box, or a boring brown package with a pink explosion inside.</p>
     <div style="display:flex;gap:1rem;justify-content:center;flex-wrap:wrap">
       <a href="https://nancyuniverse.com/pages/collections/plushies.html" class="cta-btn" target="_blank">View All 120 Characters →</a>
     </div>
