@@ -11,6 +11,8 @@
 :root {
   --pink: #FF6B9D;
   --pink-dim: rgba(255,107,157,0.15);
+  --neon: #39FF14;
+  --neon-dim: rgba(57,255,20,0.12);
   --dark: #0c0c12;
   --dark2: #14141e;
   --font-d: 'Fraunces', Georgia, serif;
@@ -20,34 +22,25 @@
 html{scroll-behavior:smooth;scroll-snap-type:y mandatory}
 body{font-family:var(--font-b);background:var(--dark);color:#fff;overflow-x:hidden}
 
-/* ─── Slide system ─── */
 .slide{
-  min-height:100vh;width:100%;
-  scroll-snap-align:start;
+  min-height:100vh;width:100%;scroll-snap-align:start;
   display:flex;align-items:center;justify-content:center;
-  padding:3rem 4rem;
-  position:relative;
-  overflow:hidden;
+  padding:3rem 4rem;position:relative;overflow:hidden;
 }
-.slide-inner{
-  max-width:1100px;width:100%;
-  position:relative;z-index:2;
-}
+.slide-inner{max-width:1100px;width:100%;position:relative;z-index:2}
 
-/* Backgrounds */
 .bg-gradient{background:linear-gradient(160deg,#1a0a2e 0%,var(--dark) 60%)}
 .bg-dark{background:var(--dark)}
 .bg-dark2{background:var(--dark2)}
 .bg-pink-glow{background:radial-gradient(ellipse at 50% 40%,rgba(255,107,157,0.07) 0%,var(--dark) 70%)}
+.bg-neon-glow{background:radial-gradient(ellipse at 50% 40%,rgba(57,255,20,0.04) 0%,var(--dark) 70%)}
+.bg-chaos{background:linear-gradient(160deg,#0a0a1e 0%,#1a0520 40%,var(--dark) 80%)}
 
-/* Glow orb */
-.glow{
-  position:absolute;border-radius:50%;filter:blur(100px);opacity:0.12;pointer-events:none;
-}
+.glow{position:absolute;border-radius:50%;filter:blur(100px);opacity:0.12;pointer-events:none}
 .glow-pink{background:var(--pink);width:500px;height:500px;top:-100px;right:-100px}
 .glow-purple{background:#9333ea;width:400px;height:400px;bottom:-80px;left:-80px}
+.glow-neon{background:var(--neon);width:400px;height:400px;top:-50px;left:-50px;opacity:0.06}
 
-/* ─── Typography ─── */
 .slide-num{
   position:absolute;top:2rem;left:3rem;
   font-size:0.7rem;font-weight:700;text-transform:uppercase;letter-spacing:0.12em;
@@ -57,6 +50,7 @@ h1{font-family:var(--font-d);font-weight:800;line-height:1.1}
 h1 span{color:var(--pink)}
 h2{font-family:var(--font-d);font-weight:700;line-height:1.15}
 h2 span{color:var(--pink)}
+h2 .neon{color:var(--neon)}
 h3{font-family:var(--font-d);font-weight:700}
 .subtitle{font-size:1.1rem;opacity:0.45;line-height:1.7;max-width:600px}
 .tag{
@@ -64,27 +58,17 @@ h3{font-family:var(--font-d);font-weight:700}
   letter-spacing:0.08em;padding:0.3rem 0.8rem;border-radius:100px;
   background:var(--pink-dim);color:var(--pink);margin-bottom:1rem;
 }
+.tag-neon{background:var(--neon-dim);color:var(--neon)}
 
-/* ─── Layouts ─── */
 .split{display:grid;grid-template-columns:1fr 1fr;gap:3rem;align-items:center}
 .split-60{display:grid;grid-template-columns:1.4fr 1fr;gap:3rem;align-items:center}
 .split-40{display:grid;grid-template-columns:1fr 1.4fr;gap:3rem;align-items:center}
 .center-text{text-align:center;max-width:800px;margin:0 auto}
 
-/* Images */
-.deck-img{
-  width:100%;border-radius:16px;display:block;
-  box-shadow:0 20px 60px rgba(0,0,0,0.4);
-}
-.deck-img-sm{
-  width:100%;border-radius:12px;display:block;
-  box-shadow:0 12px 40px rgba(0,0,0,0.3);
-}
+.deck-img{width:100%;border-radius:16px;display:block;box-shadow:0 20px 60px rgba(0,0,0,0.4)}
 
-/* Grid */
 .grid-3{display:grid;grid-template-columns:repeat(3,1fr);gap:1.2rem}
 .grid-5{display:grid;grid-template-columns:repeat(5,1fr);gap:1rem}
-.grid-2x3{display:grid;grid-template-columns:repeat(3,1fr);gap:1.2rem}
 
 .grid-card{
   background:rgba(255,255,255,0.04);border-radius:12px;overflow:hidden;
@@ -92,23 +76,21 @@ h3{font-family:var(--font-d);font-weight:700}
 }
 .grid-card:hover{border-color:rgba(255,107,157,0.2);transform:translateY(-3px)}
 .grid-card img{width:100%;aspect-ratio:1/1;object-fit:cover;display:block}
-.grid-card-label{
-  padding:0.6rem 0.8rem;font-size:0.75rem;font-weight:700;text-align:center;
-}
+.grid-card-label{padding:0.6rem 0.8rem;font-size:0.75rem;font-weight:700;text-align:center}
 .grid-card-label small{display:block;font-size:0.6rem;opacity:0.4;font-weight:500;margin-top:0.1rem}
+.grid-card-label .tagline{
+  display:block;font-size:0.62rem;opacity:0.5;font-weight:500;font-style:italic;
+  margin-top:0.2rem;color:var(--pink);
+}
 
-/* Stat blocks */
 .stat-row{display:flex;gap:1.5rem;margin-top:1.5rem;flex-wrap:wrap}
 .stat-block{
   background:rgba(255,255,255,0.04);border-radius:12px;padding:1.2rem 1.5rem;
   border:1px solid rgba(255,255,255,0.06);flex:1;min-width:140px;
 }
-.stat-block .num{
-  font-family:var(--font-d);font-size:2rem;font-weight:800;color:var(--pink);
-}
+.stat-block .num{font-family:var(--font-d);font-size:2rem;font-weight:800;color:var(--pink)}
 .stat-block .label{font-size:0.72rem;opacity:0.4;font-weight:600;text-transform:uppercase;letter-spacing:0.06em}
 
-/* Bullet list */
 .deck-list{list-style:none;margin-top:1rem}
 .deck-list li{
   padding:0.5rem 0;font-size:0.9rem;opacity:0.7;line-height:1.6;
@@ -117,12 +99,10 @@ h3{font-family:var(--font-d);font-weight:700}
 .deck-list li:last-child{border:none}
 .deck-list li strong{color:var(--pink);opacity:1}
 
-/* Check list */
 .check-list{list-style:none;margin-top:1rem}
 .check-list li{padding:0.4rem 0;font-size:0.85rem;opacity:0.65}
 .check-list li::before{content:'✓';color:var(--pink);font-weight:700;margin-right:0.6rem}
 
-/* Econ grid */
 .econ-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:1rem;margin-top:1.5rem}
 .econ-card{
   background:rgba(255,255,255,0.04);border-radius:12px;padding:1.5rem;text-align:center;
@@ -132,10 +112,37 @@ h3{font-family:var(--font-d);font-weight:700}
 .econ-card h4{font-size:0.9rem;margin-bottom:0.25rem}
 .econ-card p{font-size:0.72rem;opacity:0.4;line-height:1.5}
 
-/* Nav */
+/* Sticker tagline cards */
+.sticker-grid{
+  display:grid;grid-template-columns:repeat(5,1fr);gap:1rem;margin-top:1.5rem;
+}
+.sticker-card{
+  background:rgba(255,255,255,0.04);border-radius:14px;overflow:hidden;
+  border:1px solid rgba(255,255,255,0.06);text-align:center;transition:all 0.3s;
+}
+.sticker-card:hover{border-color:rgba(255,107,157,0.25);transform:translateY(-4px)}
+.sticker-card img{width:100%;aspect-ratio:1/1;object-fit:cover;display:block}
+.sticker-card-body{padding:0.7rem 0.5rem 0.8rem}
+.sticker-card-name{font-size:0.72rem;font-weight:700;margin-bottom:0.15rem}
+.sticker-card-tagline{font-size:0.62rem;opacity:0.55;font-style:italic;color:var(--pink)}
+
+/* Wild concept cards */
+.wild-grid{
+  display:grid;grid-template-columns:repeat(3,1fr);gap:1.5rem;margin-top:1.5rem;
+}
+.wild-card{
+  background:rgba(255,255,255,0.04);border-radius:14px;overflow:hidden;
+  border:1px solid rgba(57,255,20,0.08);transition:all 0.3s;
+}
+.wild-card:hover{border-color:rgba(57,255,20,0.25);transform:translateY(-4px);box-shadow:0 12px 40px rgba(57,255,20,0.06)}
+.wild-card img{width:100%;aspect-ratio:1/1;object-fit:cover;display:block}
+.wild-card-body{padding:0.8rem 1rem 1rem}
+.wild-card-name{font-size:0.9rem;font-weight:700;margin-bottom:0.15rem}
+.wild-card-tagline{font-size:0.72rem;opacity:0.5;font-style:italic;color:var(--neon);margin-bottom:0.3rem}
+.wild-card-desc{font-size:0.68rem;opacity:0.35;line-height:1.5}
+
 .deck-nav{
-  position:fixed;bottom:1.5rem;right:1.5rem;z-index:100;
-  display:flex;gap:0.5rem;
+  position:fixed;bottom:1.5rem;right:1.5rem;z-index:100;display:flex;gap:0.5rem;
 }
 .deck-nav button{
   background:rgba(255,255,255,0.08);border:1px solid rgba(255,255,255,0.1);
@@ -145,52 +152,42 @@ h3{font-family:var(--font-d);font-weight:700}
 }
 .deck-nav button:hover{background:rgba(255,107,157,0.2);border-color:var(--pink)}
 
-/* Progress bar */
-.progress{
-  position:fixed;top:0;left:0;height:3px;background:var(--pink);
-  z-index:200;transition:width 0.3s ease;
-}
+.progress{position:fixed;top:0;left:0;height:3px;background:var(--pink);z-index:200;transition:width 0.3s ease}
+.slide-counter{position:fixed;bottom:1.8rem;left:1.5rem;z-index:100;font-size:0.7rem;font-weight:700;opacity:0.25;letter-spacing:0.06em}
 
-/* Slide counter */
-.slide-counter{
-  position:fixed;bottom:1.8rem;left:1.5rem;z-index:100;
-  font-size:0.7rem;font-weight:700;opacity:0.25;letter-spacing:0.06em;
-}
-
-/* Footer CTA */
 .cta-btn{
   display:inline-flex;align-items:center;gap:0.5rem;
   background:var(--pink);color:white;padding:0.8rem 2rem;border-radius:100px;
-  font-weight:700;font-size:0.9rem;text-decoration:none;
-  transition:all 0.2s;border:none;cursor:pointer;
+  font-weight:700;font-size:0.9rem;text-decoration:none;transition:all 0.2s;border:none;cursor:pointer;
 }
 .cta-btn:hover{transform:translateY(-2px);box-shadow:0 8px 30px rgba(255,107,157,0.3)}
 
 @media(max-width:900px){
   .slide{padding:2rem 1.5rem}
   .split,.split-60,.split-40{grid-template-columns:1fr;gap:1.5rem}
-  .grid-3{grid-template-columns:repeat(2,1fr)}
-  .grid-5{grid-template-columns:repeat(3,1fr)}
+  .grid-3,.wild-grid{grid-template-columns:1fr 1fr}
+  .grid-5,.sticker-grid{grid-template-columns:repeat(3,1fr)}
   .econ-grid{grid-template-columns:1fr}
   h1{font-size:2.2rem!important}
   .slide-num{top:1rem;left:1.5rem}
+}
+@media(max-width:600px){
+  .sticker-grid{grid-template-columns:repeat(2,1fr)}
+  .wild-grid{grid-template-columns:1fr}
 }
 </style>
 </head>
 <body>
 
 <div class="progress" id="progress"></div>
-<div class="slide-counter" id="counter">01 / 09</div>
-
+<div class="slide-counter" id="counter">01 / 12</div>
 <div class="deck-nav">
   <button onclick="go(-1)" title="Previous">‹</button>
   <button onclick="go(1)" title="Next">›</button>
 </div>
 
-<!-- ═══════════════════════════════════════
-     SLIDE 1 — TITLE
-     ═══════════════════════════════════════ -->
-<section class="slide bg-gradient" id="s1">
+<!-- ═══ SLIDE 1 — TITLE ═══ -->
+<section class="slide bg-gradient">
   <div class="glow glow-pink"></div>
   <div class="glow glow-purple"></div>
   <div class="slide-num">Nancy Universe</div>
@@ -207,64 +204,30 @@ h3{font-family:var(--font-d);font-weight:700}
   </div>
 </section>
 
-<!-- ═══════════════════════════════════════
-     SLIDE 2 — THE PROBLEM
-     ═══════════════════════════════════════ -->
-<section class="slide bg-dark2" id="s2">
+<!-- ═══ SLIDE 2 — THE PROBLEM ═══ -->
+<section class="slide bg-dark2">
   <div class="slide-num">02 — The Challenge</div>
   <div class="slide-inner center-text">
     <div class="tag">Scale Problem</div>
     <h2 style="font-size:clamp(1.8rem,4vw,2.8rem)">120 characters.<br><span>120 different boxes?</span></h2>
-    <p class="subtitle" style="margin:1rem auto 2rem">10 waves × 5-15 characters each. Plus celeb collabs. Plus limited drops. Plus future waves. Custom box per character = nightmare for production, warehousing, and cost.</p>
+    <p class="subtitle" style="margin:1rem auto 2rem">10 waves × 5–15 characters each. Plus celeb collabs. Plus limited drops. Plus future waves. Custom box per character = nightmare for production, warehousing, and cost.</p>
     <div class="grid-5" style="max-width:700px;margin:0 auto">
-      <div style="background:rgba(255,255,255,0.04);border-radius:10px;padding:0.8rem;text-align:center">
-        <div style="font-size:1.4rem">🍋</div>
-        <div style="font-size:0.65rem;opacity:0.4;margin-top:0.3rem">OG Five<br><strong style="color:var(--pink)">5</strong></div>
-      </div>
-      <div style="background:rgba(255,255,255,0.04);border-radius:10px;padding:0.8rem;text-align:center">
-        <div style="font-size:1.4rem">🍣</div>
-        <div style="font-size:0.65rem;opacity:0.4;margin-top:0.3rem">Food<br><strong style="color:var(--pink)">15</strong></div>
-      </div>
-      <div style="background:rgba(255,255,255,0.04);border-radius:10px;padding:0.8rem;text-align:center">
-        <div style="font-size:1.4rem">🚀</div>
-        <div style="font-size:0.65rem;opacity:0.4;margin-top:0.3rem">Space<br><strong style="color:var(--pink)">15</strong></div>
-      </div>
-      <div style="background:rgba(255,255,255,0.04);border-radius:10px;padding:0.8rem;text-align:center">
-        <div style="font-size:1.4rem">💛</div>
-        <div style="font-size:0.65rem;opacity:0.4;margin-top:0.3rem">Feelings<br><strong style="color:var(--pink)">15</strong></div>
-      </div>
-      <div style="background:rgba(255,255,255,0.04);border-radius:10px;padding:0.8rem;text-align:center">
-        <div style="font-size:1.4rem">🐉</div>
-        <div style="font-size:0.65rem;opacity:0.4;margin-top:0.3rem">Creatures<br><strong style="color:var(--pink)">15</strong></div>
-      </div>
-      <div style="background:rgba(255,255,255,0.04);border-radius:10px;padding:0.8rem;text-align:center">
-        <div style="font-size:1.4rem">💡</div>
-        <div style="font-size:0.65rem;opacity:0.4;margin-top:0.3rem">Objects<br><strong style="color:var(--pink)">15</strong></div>
-      </div>
-      <div style="background:rgba(255,255,255,0.04);border-radius:10px;padding:0.8rem;text-align:center">
-        <div style="font-size:1.4rem">⛈️</div>
-        <div style="font-size:0.65rem;opacity:0.4;margin-top:0.3rem">Weather<br><strong style="color:var(--pink)">10</strong></div>
-      </div>
-      <div style="background:rgba(255,255,255,0.04);border-radius:10px;padding:0.8rem;text-align:center">
-        <div style="font-size:1.4rem">👾</div>
-        <div style="font-size:0.65rem;opacity:0.4;margin-top:0.3rem">Chaos<br><strong style="color:var(--pink)">15</strong></div>
-      </div>
-      <div style="background:rgba(255,255,255,0.04);border-radius:10px;padding:0.8rem;text-align:center">
-        <div style="font-size:1.4rem">☕</div>
-        <div style="font-size:0.65rem;opacity:0.4;margin-top:0.3rem">Drinks<br><strong style="color:var(--pink)">10</strong></div>
-      </div>
-      <div style="background:rgba(255,255,255,0.04);border-radius:10px;padding:0.8rem;text-align:center">
-        <div style="font-size:1.4rem">🍩</div>
-        <div style="font-size:0.65rem;opacity:0.4;margin-top:0.3rem">Sweet Tooth<br><strong style="color:var(--pink)">5</strong></div>
-      </div>
+      <div style="background:rgba(255,255,255,0.04);border-radius:10px;padding:0.8rem;text-align:center"><div style="font-size:1.4rem">🍋</div><div style="font-size:0.65rem;opacity:0.4;margin-top:0.3rem">OG Five<br><strong style="color:var(--pink)">5</strong></div></div>
+      <div style="background:rgba(255,255,255,0.04);border-radius:10px;padding:0.8rem;text-align:center"><div style="font-size:1.4rem">🍣</div><div style="font-size:0.65rem;opacity:0.4;margin-top:0.3rem">Food<br><strong style="color:var(--pink)">15</strong></div></div>
+      <div style="background:rgba(255,255,255,0.04);border-radius:10px;padding:0.8rem;text-align:center"><div style="font-size:1.4rem">🚀</div><div style="font-size:0.65rem;opacity:0.4;margin-top:0.3rem">Space<br><strong style="color:var(--pink)">15</strong></div></div>
+      <div style="background:rgba(255,255,255,0.04);border-radius:10px;padding:0.8rem;text-align:center"><div style="font-size:1.4rem">💛</div><div style="font-size:0.65rem;opacity:0.4;margin-top:0.3rem">Feelings<br><strong style="color:var(--pink)">15</strong></div></div>
+      <div style="background:rgba(255,255,255,0.04);border-radius:10px;padding:0.8rem;text-align:center"><div style="font-size:1.4rem">🐉</div><div style="font-size:0.65rem;opacity:0.4;margin-top:0.3rem">Creatures<br><strong style="color:var(--pink)">15</strong></div></div>
+      <div style="background:rgba(255,255,255,0.04);border-radius:10px;padding:0.8rem;text-align:center"><div style="font-size:1.4rem">💡</div><div style="font-size:0.65rem;opacity:0.4;margin-top:0.3rem">Objects<br><strong style="color:var(--pink)">15</strong></div></div>
+      <div style="background:rgba(255,255,255,0.04);border-radius:10px;padding:0.8rem;text-align:center"><div style="font-size:1.4rem">⛈️</div><div style="font-size:0.65rem;opacity:0.4;margin-top:0.3rem">Weather<br><strong style="color:var(--pink)">10</strong></div></div>
+      <div style="background:rgba(255,255,255,0.04);border-radius:10px;padding:0.8rem;text-align:center"><div style="font-size:1.4rem">👾</div><div style="font-size:0.65rem;opacity:0.4;margin-top:0.3rem">Chaos<br><strong style="color:var(--pink)">15</strong></div></div>
+      <div style="background:rgba(255,255,255,0.04);border-radius:10px;padding:0.8rem;text-align:center"><div style="font-size:1.4rem">☕</div><div style="font-size:0.65rem;opacity:0.4;margin-top:0.3rem">Drinks<br><strong style="color:var(--pink)">10</strong></div></div>
+      <div style="background:rgba(255,255,255,0.04);border-radius:10px;padding:0.8rem;text-align:center"><div style="font-size:1.4rem">🍩</div><div style="font-size:0.65rem;opacity:0.4;margin-top:0.3rem">Sweet Tooth<br><strong style="color:var(--pink)">5</strong></div></div>
     </div>
   </div>
 </section>
 
-<!-- ═══════════════════════════════════════
-     SLIDE 3 — THE SOLUTION
-     ═══════════════════════════════════════ -->
-<section class="slide bg-pink-glow" id="s3">
+<!-- ═══ SLIDE 3 — THE SOLUTION ═══ -->
+<section class="slide bg-pink-glow">
   <div class="slide-num">03 — The Solution</div>
   <div class="slide-inner split">
     <div>
@@ -274,178 +237,265 @@ h3{font-family:var(--font-d);font-weight:700}
       <ul class="deck-list" style="margin-top:1.5rem">
         <li><strong>Box:</strong> Universal pink with holographic "?" — always the same</li>
         <li><strong>Badge:</strong> "SQUEEZE ME!" hot pink circle — Nancy brand marker</li>
-        <li><strong>Sticker:</strong> Collection name + "1 of X" + silhouette icons</li>
+        <li><strong>Sticker:</strong> Collection name + tagline + "1 of X" + silhouette icons</li>
         <li><strong>Reveal:</strong> Character pops out the top on open</li>
       </ul>
     </div>
     <div>
-      <img class="deck-img" src="assets/universal-template.webp" alt="Universal Box">
+      <img class="deck-img" src="assets/universal-template.png" alt="Universal Box">
     </div>
   </div>
 </section>
 
-<!-- ═══════════════════════════════════════
-     SLIDE 4 — OG + FOOD + SPACE
-     ═══════════════════════════════════════ -->
-<section class="slide bg-dark" id="s4">
+<!-- ═══ SLIDE 4 — COLLECTIONS 1–3 ═══ -->
+<section class="slide bg-dark">
   <div class="slide-num">04 — Collections 1–3</div>
   <div class="slide-inner">
-    <div style="text-align:center;margin-bottom:1.5rem">
-      <div class="tag">Same Box, Different Sticker</div>
-    </div>
+    <div style="text-align:center;margin-bottom:1.5rem"><div class="tag">Same Box, Different Sticker</div></div>
     <div class="grid-3">
       <div class="grid-card">
-        <img src="assets/og-five.webp" alt="Forbidden Fruit">
-        <div class="grid-card-label">Forbidden Fruit<small>The OG Five • 5 characters</small></div>
+        <img src="assets/og-five.png" alt="Forbidden Fruit">
+        <div class="grid-card-label">Forbidden Fruit<small>The OG Five • 5 characters</small><span class="tagline">"taste at your own risk 🍋"</span></div>
       </div>
       <div class="grid-card">
-        <img src="assets/food-attitude.webp" alt="Food with Attitude">
-        <div class="grid-card-label">Food with Attitude<small>Wave 2 • 15 characters</small></div>
+        <img src="assets/food-attitude.png" alt="Food with Attitude">
+        <div class="grid-card-label">Food with Attitude<small>Wave 2 • 15 characters</small><span class="tagline">"your snack has opinions"</span></div>
       </div>
       <div class="grid-card">
-        <img src="assets/space-cosmic.webp" alt="Space & Cosmic">
-        <div class="grid-card-label">Space & Cosmic<small>Wave 3 • 15 characters</small></div>
+        <img src="assets/space-cosmic.png" alt="Space & Cosmic">
+        <div class="grid-card-label">Space & Cosmic<small>Wave 3 • 15 characters</small><span class="tagline">"houston, we have a cuteness problem"</span></div>
       </div>
     </div>
   </div>
 </section>
 
-<!-- ═══════════════════════════════════════
-     SLIDE 5 — FEELINGS + CREATURES + OBJECTS
-     ═══════════════════════════════════════ -->
-<section class="slide bg-dark2" id="s5">
+<!-- ═══ SLIDE 5 — COLLECTIONS 4–6 ═══ -->
+<section class="slide bg-dark2">
   <div class="slide-num">05 — Collections 4–6</div>
   <div class="slide-inner">
-    <div style="text-align:center;margin-bottom:1.5rem">
-      <div class="tag">Same Box, Different Sticker</div>
-    </div>
+    <div style="text-align:center;margin-bottom:1.5rem"><div class="tag">Same Box, Different Sticker</div></div>
     <div class="grid-3">
       <div class="grid-card">
-        <img src="assets/feelings-moods.webp" alt="Feelings & Moods">
-        <div class="grid-card-label">Feelings & Moods<small>Wave 4 • 15 characters</small></div>
+        <img src="assets/feelings-moods.png" alt="Feelings & Moods">
+        <div class="grid-card-label">Feelings & Moods<small>Wave 4 • 15 characters</small><span class="tagline">"catch feelings, not flights"</span></div>
       </div>
       <div class="grid-card">
-        <img src="assets/creatures-cryptids.webp" alt="Creatures & Cryptids">
-        <div class="grid-card-label">Creatures & Cryptids<small>Wave 5 • 15 characters</small></div>
+        <img src="assets/creatures-cryptids.png" alt="Creatures & Cryptids">
+        <div class="grid-card-label">Creatures & Cryptids<small>Wave 5 • 15 characters</small><span class="tagline">"legally, we can't confirm they exist"</span></div>
       </div>
       <div class="grid-card">
-        <img src="assets/everyday-objects.webp" alt="Everyday Objects">
-        <div class="grid-card-label">Everyday Objects<small>Wave 6 • 15 characters</small></div>
+        <img src="assets/everyday-objects.png" alt="Everyday Objects">
+        <div class="grid-card-label">Everyday Objects<small>Wave 6 • 15 characters</small><span class="tagline">"the mundane, unhinged"</span></div>
       </div>
     </div>
   </div>
 </section>
 
-<!-- ═══════════════════════════════════════
-     SLIDE 6 — WEATHER + CHAOS + DRINKS + SWEET
-     ═══════════════════════════════════════ -->
-<section class="slide bg-dark" id="s6">
+<!-- ═══ SLIDE 6 — COLLECTIONS 7–10 ═══ -->
+<section class="slide bg-dark">
   <div class="slide-num">06 — Collections 7–10</div>
   <div class="slide-inner">
-    <div style="text-align:center;margin-bottom:1.5rem">
-      <div class="tag">Same Box, Different Sticker</div>
-    </div>
+    <div style="text-align:center;margin-bottom:1.5rem"><div class="tag">Same Box, Different Sticker</div></div>
     <div class="grid-3" style="grid-template-columns:repeat(4,1fr)">
       <div class="grid-card">
-        <img src="assets/weather-nature.webp" alt="Weather & Nature">
-        <div class="grid-card-label">Weather & Nature<small>Wave 7 • 10</small></div>
+        <img src="assets/weather-nature.png" alt="Weather & Nature">
+        <div class="grid-card-label">Weather & Nature<small>Wave 7 • 10</small><span class="tagline">"forces of cute"</span></div>
       </div>
       <div class="grid-card">
-        <img src="assets/chaos-collection.webp" alt="Chaos Collection">
-        <div class="grid-card-label">Chaos Collection<small>Wave 8 • 15</small></div>
+        <img src="assets/chaos-collection.png" alt="Chaos Collection">
+        <div class="grid-card-label">Chaos Collection<small>Wave 8 • 15</small><span class="tagline">"error 404: chill not found"</span></div>
       </div>
       <div class="grid-card">
-        <img src="assets/drink-squad.webp" alt="Drink Squad">
-        <div class="grid-card-label">Drink Squad<small>Wave 9 • 10</small></div>
+        <img src="assets/drink-squad.png" alt="Drink Squad">
+        <div class="grid-card-label">Drink Squad<small>Wave 9 • 10</small><span class="tagline">"sip sip hooray"</span></div>
       </div>
       <div class="grid-card">
-        <img src="assets/sweet-tooth.webp" alt="Sweet Tooth">
-        <div class="grid-card-label">Sweet Tooth<small>Wave 10 • 5</small></div>
+        <img src="assets/sweet-tooth.png" alt="Sweet Tooth">
+        <div class="grid-card-label">Sweet Tooth<small>Wave 10 • 5</small><span class="tagline">"dessert first, always"</span></div>
       </div>
     </div>
   </div>
 </section>
 
-<!-- ═══════════════════════════════════════
-     SLIDE 7 — STICKER SYSTEM
-     ═══════════════════════════════════════ -->
-<section class="slide bg-pink-glow" id="s7">
-  <div class="slide-num">07 — The Sticker System</div>
+<!-- ═══ SLIDE 7 — STICKER DESIGNS WITH TAGLINES ═══ -->
+<section class="slide bg-pink-glow">
+  <div class="slide-num">07 — Sticker Taglines</div>
+  <div class="slide-inner">
+    <div class="center-text" style="margin-bottom:1.5rem">
+      <div class="tag">Each Sticker Has Personality</div>
+      <h2 style="font-size:clamp(1.4rem,3vw,2rem)">Not just labels. <span>Conversation starters.</span></h2>
+      <p class="subtitle" style="margin:0.5rem auto 0">Every collection sticker gets its own tagline. Printed on the front. Makes the box feel unique even though it's the same pink cube.</p>
+    </div>
+    <div class="sticker-grid">
+      <div class="sticker-card">
+        <img src="assets/sticker-forbidden-fruit.png" alt="Forbidden Fruit sticker">
+        <div class="sticker-card-body">
+          <div class="sticker-card-name">Forbidden Fruit</div>
+          <div class="sticker-card-tagline">"taste at your own risk 🍋"</div>
+        </div>
+      </div>
+      <div class="sticker-card">
+        <img src="assets/sticker-food-attitude.png" alt="Food with Attitude sticker">
+        <div class="sticker-card-body">
+          <div class="sticker-card-name">Food with Attitude</div>
+          <div class="sticker-card-tagline">"your snack has opinions"</div>
+        </div>
+      </div>
+      <div class="sticker-card">
+        <img src="assets/sticker-chaos.png" alt="Chaos Collection sticker">
+        <div class="sticker-card-body">
+          <div class="sticker-card-name">Chaos Collection</div>
+          <div class="sticker-card-tagline">"error 404: chill not found"</div>
+        </div>
+      </div>
+      <div class="sticker-card">
+        <img src="assets/sticker-creatures.png" alt="Creatures sticker">
+        <div class="sticker-card-body">
+          <div class="sticker-card-name">Creatures & Cryptids</div>
+          <div class="sticker-card-tagline">"legally, we can't confirm they exist"</div>
+        </div>
+      </div>
+      <div class="sticker-card">
+        <img src="assets/sticker-feelings.png" alt="Feelings sticker">
+        <div class="sticker-card-body">
+          <div class="sticker-card-name">Feelings & Moods</div>
+          <div class="sticker-card-tagline">"catch feelings, not flights"</div>
+        </div>
+      </div>
+    </div>
+    <div style="text-align:center;margin-top:1.2rem;font-size:0.72rem;opacity:0.3">+ 5 more sticker designs for Space, Objects, Weather, Drinks, and Sweet Tooth</div>
+  </div>
+</section>
+
+<!-- ═══ SLIDE 8 — STICKER SYSTEM MECHANICS ═══ -->
+<section class="slide bg-dark2">
+  <div class="slide-num">08 — The Sticker System</div>
   <div class="slide-inner split-40">
     <div>
       <div class="tag">Customisation Layer</div>
       <h2 style="font-size:clamp(1.5rem,3vw,2.2rem)">10 stickers.<br><span>Infinite flexibility.</span></h2>
       <p class="subtitle" style="margin-top:0.8rem">Each collection gets its own sticker. Printed in bulk sheets, applied during packing. New drop = new sticker, not new box.</p>
       <ul class="check-list">
-        <li>Collection name front &amp; center</li>
+        <li>Collection name + unique tagline front &amp; center</li>
         <li>"1 of X" creates set-completion FOMO</li>
         <li>Tiny silhouette icons hint at characters</li>
-        <li>Foil/holographic variant = instant premium tier</li>
+        <li>Foil / holographic variant = instant premium tier</li>
         <li>Celeb collabs = just another sticker design</li>
         <li>Character name on SIDE for known purchases</li>
+        <li>Taglines make each box feel unique &amp; shareable</li>
       </ul>
     </div>
     <div>
-      <img class="deck-img" src="assets/sticker-sheet.webp" alt="Sticker Sheet">
+      <img class="deck-img" src="assets/sticker-sheet.png" alt="Sticker Sheet">
     </div>
   </div>
 </section>
 
-<!-- ═══════════════════════════════════════
-     SLIDE 8 — ECONOMICS
-     ═══════════════════════════════════════ -->
-<section class="slide bg-dark2" id="s8">
-  <div class="slide-num">08 — Why This Scales</div>
+<!-- ═══ SLIDE 9 — ECONOMICS ═══ -->
+<section class="slide bg-dark">
+  <div class="slide-num">09 — Why This Scales</div>
   <div class="slide-inner">
     <div class="center-text" style="margin-bottom:1.5rem">
       <div class="tag">Unit Economics</div>
       <h2 style="font-size:clamp(1.5rem,3vw,2.2rem)">Production <span>simplified.</span></h2>
     </div>
     <div class="econ-grid">
-      <div class="econ-card">
-        <div class="icon">💰</div>
-        <h4>Lower Unit Cost</h4>
-        <p>One box mold = bulk production. Not 10 different designs with separate minimums.</p>
+      <div class="econ-card"><div class="icon">💰</div><h4>Lower Unit Cost</h4><p>One box mold = bulk production. Not 10 different designs with separate minimums.</p></div>
+      <div class="econ-card"><div class="icon">⚡</div><h4>Instant New Drops</h4><p>New collection = print sticker sheet. Ship same week. Zero box lead time.</p></div>
+      <div class="econ-card"><div class="icon">🏷️</div><h4>Limited Editions</h4><p>Foil sticker variant = premium tier. Same box, different finish. Instant hype.</p></div>
+      <div class="econ-card"><div class="icon">📦</div><h4>Warehouse Simple</h4><p>One box SKU in stock. Stickers applied during pack. No 120 box variants.</p></div>
+      <div class="econ-card"><div class="icon">🌍</div><h4>Celeb Collabs</h4><p>NK, future celebs — just another sticker. "CELEB COLLECTION", same pink box.</p></div>
+      <div class="econ-card"><div class="icon">🎲</div><h4>Blind Box Ready</h4><p>The "?" is built in. Mystery energy works for both blind box and known purchases.</p></div>
+    </div>
+  </div>
+</section>
+
+<!-- ═══ SLIDE 10 — UNHINGED CONCEPTS (1/2) ═══ -->
+<section class="slide bg-chaos">
+  <div class="glow glow-neon"></div>
+  <div class="slide-num">10 — Unhinged Ideas</div>
+  <div class="slide-inner">
+    <div class="center-text" style="margin-bottom:1.5rem">
+      <div class="tag tag-neon">Beyond the Box</div>
+      <h2 style="font-size:clamp(1.4rem,3vw,2.2rem)">The <span class="neon">unhinged</span> packaging drops.</h2>
+      <p class="subtitle" style="margin:0.5rem auto 0">Same plushies. Wildly different packaging. Limited edition runs that break the internet.</p>
+    </div>
+    <div class="wild-grid">
+      <div class="wild-card">
+        <img src="assets/wild-mugshot.png" alt="WANTED Mugshot Box">
+        <div class="wild-card-body">
+          <div class="wild-card-name">🚨 WANTED Box</div>
+          <div class="wild-card-tagline">"Crime: Being illegally cute"</div>
+          <div class="wild-card-desc">Mugshot-style box. Height lines on the sides. Reward: Unlimited squeezes. Perfect for Meanies collection.</div>
+        </div>
       </div>
-      <div class="econ-card">
-        <div class="icon">⚡</div>
-        <h4>Instant New Drops</h4>
-        <p>New collection = print sticker sheet. Ship same week. Zero box lead time.</p>
+      <div class="wild-card">
+        <img src="assets/wild-prescription.png" alt="Prescription Bottle">
+        <div class="wild-card-body">
+          <div class="wild-card-name">💊 Rx: Emotional Support</div>
+          <div class="wild-card-tagline">"Take 1 squeeze as needed for bad vibes"</div>
+          <div class="wild-card-desc">Pill bottle packaging. "Refills: Unlimited." "Dr. Nancy, PhD in Vibes." Viral TikTok unboxing energy.</div>
+        </div>
       </div>
-      <div class="econ-card">
-        <div class="icon">🏷️</div>
-        <h4>Limited Editions</h4>
-        <p>Foil sticker variant = premium tier. Same box, different finish. Instant hype.</p>
-      </div>
-      <div class="econ-card">
-        <div class="icon">📦</div>
-        <h4>Warehouse Simple</h4>
-        <p>One box SKU in stock. Stickers applied during pack. No 120 box variants.</p>
-      </div>
-      <div class="econ-card">
-        <div class="icon">🌍</div>
-        <h4>Celeb Collabs</h4>
-        <p>NK, future celebs — just another sticker. "CELEB COLLECTION", same pink box.</p>
-      </div>
-      <div class="econ-card">
-        <div class="icon">🎲</div>
-        <h4>Blind Box Ready</h4>
-        <p>The "?" is built in. Mystery energy works for both blind box and known purchases.</p>
+      <div class="wild-card">
+        <img src="assets/wild-evidence-bag.png" alt="Evidence Bag">
+        <div class="wild-card-body">
+          <div class="wild-card-name">🔍 Evidence Bag</div>
+          <div class="wild-card-tagline">"Status: Too cute to prosecute"</div>
+          <div class="wild-card-desc">Clear evidence bag with case number. "Contents: 1x Suspiciously Adorable Plushie." The true crime girlies will lose it.</div>
+        </div>
       </div>
     </div>
   </div>
 </section>
 
-<!-- ═══════════════════════════════════════
-     SLIDE 9 — CLOSING
-     ═══════════════════════════════════════ -->
-<section class="slide bg-gradient" id="s9">
+<!-- ═══ SLIDE 11 — UNHINGED CONCEPTS (2/2) ═══ -->
+<section class="slide bg-neon-glow">
+  <div class="glow glow-neon" style="right:-50px;top:auto;bottom:-50px;left:auto"></div>
+  <div class="slide-num">11 — More Unhinged</div>
+  <div class="slide-inner">
+    <div class="center-text" style="margin-bottom:1.5rem">
+      <div class="tag tag-neon">Keep Going</div>
+      <h2 style="font-size:clamp(1.4rem,3vw,2rem)">Fast food. Cereal. <span class="neon">Egg cartons.</span></h2>
+    </div>
+    <div class="wild-grid">
+      <div class="wild-card">
+        <img src="assets/wild-takeout.png" alt="Fast Food Takeout">
+        <div class="wild-card-body">
+          <div class="wild-card-name">🍔 Nancy's Takeout</div>
+          <div class="wild-card-tagline">"Order #42069 — 1x Emotional Support Meal"</div>
+          <div class="wild-card-desc">Fast food bag packaging. Receipt stapled: "Thank you for dining with your feelings." Pairs perfectly with Food with Attitude wave.</div>
+        </div>
+      </div>
+      <div class="wild-card">
+        <img src="assets/wild-cereal.png" alt="Cereal Box">
+        <div class="wild-card-body">
+          <div class="wild-card-name">🥣 Nancy-O's Cereal</div>
+          <div class="wild-card-tagline">"Part of an unbalanced breakfast"</div>
+          <div class="wild-card-desc">Cereal box with "FREE TOY INSIDE!" burst. Nutrition panel: "Serving size: 1 aggressive squeeze." Nostalgia + chaos.</div>
+        </div>
+      </div>
+      <div class="wild-card">
+        <img src="assets/wild-egg-carton.png" alt="Egg Carton Pack">
+        <div class="wild-card-body">
+          <div class="wild-card-name">🥚 Half Dozen Squad Pack</div>
+          <div class="wild-card-tagline">"Cage free • Organic cuteness • Farm to couch"</div>
+          <div class="wild-card-desc">Egg carton holds 6 mini plushies in compartments. Premium bundle packaging. "Collect the whole carton" energy.</div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ═══ SLIDE 12 — CLOSING ═══ -->
+<section class="slide bg-gradient">
   <div class="glow glow-pink" style="right:auto;left:50%;transform:translateX(-50%)"></div>
-  <div class="slide-num">09 — Let's Go</div>
+  <div class="slide-num">12 — Let's Go</div>
   <div class="slide-inner center-text">
     <div class="tag">Next Steps</div>
     <h1 style="font-size:clamp(2rem,5vw,3.5rem)">One box to <span>rule them all.</span></h1>
-    <p class="subtitle" style="margin:1rem auto 2.5rem">120 characters today. Celeb collabs tomorrow. Limited drops next week. The box never changes — only the sticker does.</p>
+    <p class="subtitle" style="margin:1rem auto 1.5rem">120 characters today. Celeb collabs tomorrow. Limited drops next week. The box never changes — only the sticker does.</p>
+    <p class="subtitle" style="margin:0 auto 2.5rem;opacity:0.3;font-size:0.9rem">And when you want to break the internet — drop a WANTED box, a prescription bottle, or an egg carton full of plushies.</p>
     <div style="display:flex;gap:1rem;justify-content:center;flex-wrap:wrap">
       <a href="https://nancyuniverse.com/pages/collections/plushies.html" class="cta-btn" target="_blank">View All 120 Characters →</a>
     </div>
@@ -460,33 +510,21 @@ const counter = document.getElementById('counter');
 let current = 0;
 
 function updateUI() {
-  const pct = ((current + 1) / total) * 100;
-  progress.style.width = pct + '%';
-  counter.textContent = String(current + 1).padStart(2, '0') + ' / ' + String(total).padStart(2, '0');
+  progress.style.width = ((current+1)/total*100)+'%';
+  counter.textContent = String(current+1).padStart(2,'0')+' / '+String(total).padStart(2,'0');
 }
-
 function go(dir) {
-  current = Math.max(0, Math.min(total - 1, current + dir));
-  slides[current].scrollIntoView({ behavior: 'smooth' });
+  current = Math.max(0, Math.min(total-1, current+dir));
+  slides[current].scrollIntoView({behavior:'smooth'});
 }
-
-// Track scroll position
-const observer = new IntersectionObserver(entries => {
-  entries.forEach(e => {
-    if (e.isIntersecting) {
-      current = [...slides].indexOf(e.target);
-      updateUI();
-    }
-  });
-}, { threshold: 0.5 });
-slides.forEach(s => observer.observe(s));
-
-// Keyboard nav
+const obs = new IntersectionObserver(es => {
+  es.forEach(e => { if(e.isIntersecting){current=[...slides].indexOf(e.target);updateUI()} });
+},{threshold:0.5});
+slides.forEach(s => obs.observe(s));
 document.addEventListener('keydown', e => {
-  if (e.key === 'ArrowDown' || e.key === 'ArrowRight' || e.key === ' ') { e.preventDefault(); go(1); }
-  if (e.key === 'ArrowUp' || e.key === 'ArrowLeft') { e.preventDefault(); go(-1); }
+  if(e.key==='ArrowDown'||e.key==='ArrowRight'||e.key===' '){e.preventDefault();go(1)}
+  if(e.key==='ArrowUp'||e.key==='ArrowLeft'){e.preventDefault();go(-1)}
 });
-
 updateUI();
 </script>
 </body>
