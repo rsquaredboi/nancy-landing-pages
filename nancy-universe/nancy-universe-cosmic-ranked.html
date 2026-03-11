@@ -1,0 +1,1037 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Nancy Universe — Cosmic Ranked</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Space+Mono:wght@400;700&family=Outfit:wght@100;200;300;400;500;600;700;800;900&family=Comfortaa:wght@300;400;500;600;700&family=Quicksand:wght@300;400;500;600;700&family=Fredoka:wght@300;400;500;600;700&family=Nunito:wght@200;300;400;600;700;800;900&family=Inter:wght@100;200;300;400;500;600;700;800;900&family=Monoton&family=Tourney:wght@100;200;300;400;500;600;700;800;900&family=Orbitron:wght@400;500;600;700;800;900&family=Exo+2:wght@100;200;300;400;500;600;700;800;900&family=Rajdhani:wght@300;400;500;600;700&family=Michroma&family=Audiowide&family=Electrolize&family=Oxanium:wght@200;300;400;500;600;700;800&family=Share+Tech+Mono&family=Major+Mono+Display&family=Climate+Crisis&family=Nabla&family=Honk&family=Rubik+Moonrocks&family=Rubik+Storm&family=Space+Grotesk:wght@300;400;500;600;700&family=Syne:wght@400;500;600;700;800&family=DM+Sans:wght@100;200;300;400;500;600;700;800;900&display=swap" rel="stylesheet">
+<style>
+:root {
+    --bg: #06020f;
+    --pink: #ff00d1;
+    --lime: #ccfd28;
+    --purple: #8B5CF6;
+    --blue: #4D96FF;
+    --cyan: #00f0ff;
+    --gold: #ffd700;
+    --warm: #ff6b6b;
+}
+
+* { margin: 0; padding: 0; box-sizing: border-box; }
+
+body {
+    background: var(--bg);
+    color: #fff;
+    font-family: 'DM Sans', sans-serif;
+    min-height: 100vh;
+    overflow-x: hidden;
+}
+
+/* ===== STARFIELD BG ===== */
+body::before {
+    content: '';
+    position: fixed;
+    top: 0; left: 0; right: 0; bottom: 0;
+    background:
+        radial-gradient(1px 1px at 10% 20%, rgba(255,255,255,0.4), transparent),
+        radial-gradient(1px 1px at 30% 60%, rgba(255,255,255,0.3), transparent),
+        radial-gradient(1px 1px at 50% 10%, rgba(255,255,255,0.5), transparent),
+        radial-gradient(1px 1px at 70% 40%, rgba(255,255,255,0.2), transparent),
+        radial-gradient(1px 1px at 90% 80%, rgba(255,255,255,0.4), transparent),
+        radial-gradient(1px 1px at 15% 75%, rgba(255,255,255,0.3), transparent),
+        radial-gradient(1px 1px at 45% 85%, rgba(255,255,255,0.2), transparent),
+        radial-gradient(1px 1px at 65% 25%, rgba(255,255,255,0.5), transparent),
+        radial-gradient(1px 1px at 85% 55%, rgba(255,255,255,0.3), transparent),
+        radial-gradient(1px 1px at 25% 45%, rgba(255,255,255,0.2), transparent),
+        radial-gradient(1.5px 1.5px at 5% 50%, rgba(200,150,255,0.5), transparent),
+        radial-gradient(1.5px 1.5px at 55% 35%, rgba(255,0,209,0.4), transparent),
+        radial-gradient(1.5px 1.5px at 75% 70%, rgba(0,240,255,0.4), transparent),
+        radial-gradient(1.5px 1.5px at 35% 90%, rgba(204,253,40,0.3), transparent),
+        radial-gradient(1.5px 1.5px at 95% 15%, rgba(255,215,0,0.4), transparent);
+    pointer-events: none;
+    z-index: 0;
+}
+
+/* ===== HEADER ===== */
+.hero {
+    position: relative;
+    z-index: 1;
+    text-align: center;
+    padding: 80px 20px 40px;
+}
+
+.hero-badge {
+    display: inline-block;
+    font-family: 'Space Mono', monospace;
+    font-size: 9px;
+    letter-spacing: 5px;
+    text-transform: uppercase;
+    color: rgba(255,255,255,0.2);
+    border: 1px solid rgba(255,255,255,0.08);
+    padding: 6px 16px;
+    border-radius: 20px;
+    margin-bottom: 20px;
+}
+
+.hero h1 {
+    font-family: 'Syne', sans-serif;
+    font-weight: 800;
+    font-size: 48px;
+    background: linear-gradient(135deg, var(--cyan), var(--purple), var(--pink));
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    line-height: 1.1;
+    margin-bottom: 12px;
+}
+
+.hero p {
+    font-family: 'Space Mono', monospace;
+    font-size: 11px;
+    letter-spacing: 3px;
+    color: rgba(255,255,255,0.2);
+}
+
+/* Cosmic plushie row */
+.cosmic-row {
+    display: flex;
+    gap: 12px;
+    justify-content: center;
+    margin-top: 30px;
+    flex-wrap: wrap;
+}
+.cosmic-row img {
+    width: 52px;
+    height: 52px;
+    object-fit: contain;
+    filter: drop-shadow(0 0 8px rgba(139,92,246,0.3));
+    transition: transform 0.3s;
+}
+.cosmic-row img:hover { transform: scale(1.2) rotate(-5deg); }
+
+/* ===== RANKED CARDS ===== */
+.ranked-list {
+    position: relative;
+    z-index: 1;
+    max-width: 900px;
+    margin: 60px auto 0;
+    padding: 0 20px;
+    display: flex;
+    flex-direction: column;
+    gap: 40px;
+}
+
+.rank-card {
+    border: 1px solid rgba(255,255,255,0.06);
+    border-radius: 16px;
+    overflow: hidden;
+    background: rgba(255,255,255,0.02);
+    backdrop-filter: blur(10px);
+}
+
+.rank-header {
+    display: flex;
+    align-items: center;
+    gap: 16px;
+    padding: 20px 24px;
+    border-bottom: 1px solid rgba(255,255,255,0.04);
+}
+
+.rank-badge {
+    font-family: 'Space Mono', monospace;
+    font-size: 11px;
+    font-weight: 700;
+    letter-spacing: 2px;
+    padding: 4px 10px;
+    border-radius: 6px;
+    flex-shrink: 0;
+}
+
+.rank-1 .rank-badge { background: linear-gradient(135deg, #ffd700, #ffaa00); color: #000; }
+.rank-2 .rank-badge { background: linear-gradient(135deg, #c0c0c0, #e0e0e0); color: #000; }
+.rank-3 .rank-badge { background: linear-gradient(135deg, #cd7f32, #e6a050); color: #000; }
+.rank-other .rank-badge { background: rgba(255,255,255,0.08); color: rgba(255,255,255,0.5); }
+
+.rank-title {
+    font-family: 'Syne', sans-serif;
+    font-weight: 700;
+    font-size: 18px;
+    color: #fff;
+}
+
+.rank-subtitle {
+    font-family: 'Space Mono', monospace;
+    font-size: 10px;
+    color: rgba(255,255,255,0.25);
+    letter-spacing: 1px;
+}
+
+/* Visual area */
+.rank-visual {
+    padding: 50px 30px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    min-height: 300px;
+    position: relative;
+}
+
+/* Analysis */
+.rank-analysis {
+    padding: 20px 24px;
+    border-top: 1px solid rgba(255,255,255,0.04);
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 16px;
+}
+
+.analysis-block h4 {
+    font-family: 'Space Mono', monospace;
+    font-size: 9px;
+    letter-spacing: 3px;
+    text-transform: uppercase;
+    color: rgba(255,255,255,0.2);
+    margin-bottom: 6px;
+}
+
+.analysis-block p {
+    font-size: 13px;
+    color: rgba(255,255,255,0.45);
+    line-height: 1.6;
+}
+
+.rank-verdict {
+    grid-column: 1 / -1;
+    padding-top: 12px;
+    border-top: 1px solid rgba(255,255,255,0.04);
+}
+
+.rank-verdict p {
+    font-size: 13px;
+    color: rgba(255,255,255,0.5);
+    line-height: 1.7;
+}
+
+.rank-verdict strong { color: var(--pink); }
+
+/* ===== LOGO ===== */
+.nancy-logo {
+    height: 50px;
+    width: auto;
+    object-fit: contain;
+}
+
+/* ===== INDIVIDUAL TREATMENTS ===== */
+
+/* #1 — CONSTELLATION MAP */
+.constellation-wrap {
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+.constellation-text {
+    font-family: 'Outfit', sans-serif;
+    font-weight: 200;
+    font-size: 38px;
+    letter-spacing: 16px;
+    text-transform: uppercase;
+    color: rgba(255,255,255,0.5);
+    position: relative;
+}
+.constellation-text::before {
+    content: '';
+    position: absolute;
+    top: 50%;
+    left: -20px;
+    right: -20px;
+    height: 1px;
+    background: linear-gradient(90deg, transparent, rgba(255,255,255,0.08), transparent);
+}
+.star-dots {
+    position: absolute;
+    top: 0; left: 0; right: 0; bottom: 0;
+    pointer-events: none;
+}
+.star-dot {
+    position: absolute;
+    width: 4px;
+    height: 4px;
+    border-radius: 50%;
+    background: #fff;
+    box-shadow: 0 0 6px rgba(255,255,255,0.5);
+    animation: starTwinkle 3s ease-in-out infinite;
+}
+.star-dot:nth-child(1) { top: 10%; left: 15%; animation-delay: 0s; }
+.star-dot:nth-child(2) { top: 30%; left: 40%; animation-delay: 0.5s; }
+.star-dot:nth-child(3) { top: 15%; right: 25%; animation-delay: 1s; }
+.star-dot:nth-child(4) { top: 60%; left: 20%; animation-delay: 1.5s; }
+.star-dot:nth-child(5) { top: 50%; right: 15%; animation-delay: 0.8s; }
+.star-dot:nth-child(6) { bottom: 20%; left: 35%; animation-delay: 2s; }
+.star-dot:nth-child(7) { bottom: 15%; right: 30%; animation-delay: 0.3s; }
+.star-line {
+    position: absolute;
+    height: 1px;
+    background: rgba(255,255,255,0.08);
+    transform-origin: left center;
+}
+@keyframes starTwinkle {
+    0%, 100% { opacity: 0.4; transform: scale(1); }
+    50% { opacity: 1; transform: scale(1.5); }
+}
+
+/* #2 — NEBULA GRADIENT */
+.nebula-text {
+    font-family: 'Syne', sans-serif;
+    font-weight: 700;
+    font-size: 48px;
+    letter-spacing: 4px;
+    text-transform: uppercase;
+    background: linear-gradient(135deg, #1a0040, #4D0080, #ff00d1, #8B5CF6, #00f0ff, #1a0040);
+    background-size: 400% 400%;
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    animation: nebulaShift 8s ease-in-out infinite;
+    filter: drop-shadow(0 0 20px rgba(139,92,246,0.3));
+}
+@keyframes nebulaShift {
+    0% { background-position: 0% 50%; }
+    50% { background-position: 100% 50%; }
+    100% { background-position: 0% 50%; }
+}
+
+/* #3 — SOLAR SYSTEM ORBIT */
+.solar-system {
+    position: relative;
+    width: 280px;
+    height: 280px;
+}
+.solar-center {
+    position: absolute;
+    top: 50%; left: 50%;
+    transform: translate(-50%, -50%);
+    z-index: 5;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 4px;
+}
+.orbit-ring-cosmic {
+    position: absolute;
+    top: 50%; left: 50%;
+    border: 1px solid rgba(255,255,255,0.06);
+    border-radius: 50%;
+}
+.orbit-ring-cosmic:nth-child(1) { width: 140px; height: 140px; margin: -70px 0 0 -70px; }
+.orbit-ring-cosmic:nth-child(2) { width: 200px; height: 200px; margin: -100px 0 0 -100px; }
+.orbit-ring-cosmic:nth-child(3) { width: 260px; height: 260px; margin: -130px 0 0 -130px; }
+.orbiter {
+    position: absolute;
+    width: 34px;
+    height: 34px;
+    object-fit: contain;
+    filter: drop-shadow(0 0 6px rgba(139,92,246,0.4));
+}
+.orbit-group {
+    position: absolute;
+    top: 50%; left: 50%;
+    width: 0; height: 0;
+}
+.orbit-group:nth-child(4) { animation: orbitAnim 12s linear infinite; }
+.orbit-group:nth-child(5) { animation: orbitAnim 18s linear infinite; }
+.orbit-group:nth-child(6) { animation: orbitAnim 25s linear infinite; }
+.orbit-group:nth-child(4) .orbiter { top: -70px; left: -17px; }
+.orbit-group:nth-child(5) .orbiter { top: -100px; left: -17px; }
+.orbit-group:nth-child(6) .orbiter { top: -130px; left: -17px; }
+@keyframes orbitAnim { to { transform: rotate(360deg); } }
+
+/* #4 — BIG BANG EXPANSION */
+.bigbang-text {
+    font-family: 'Tourney', system-ui;
+    font-weight: 900;
+    font-size: 48px;
+    letter-spacing: 4px;
+    text-transform: uppercase;
+    color: transparent;
+    -webkit-text-stroke: 1px rgba(255,255,255,0.3);
+    animation: bigBangExpand 6s ease-in-out infinite;
+    position: relative;
+}
+.bigbang-text::after {
+    content: 'UNIVERSE';
+    position: absolute;
+    top: 0; left: 0;
+    color: transparent;
+    -webkit-text-stroke: 1px var(--pink);
+    animation: bigBangExpandInner 6s ease-in-out infinite;
+    opacity: 0.5;
+}
+@keyframes bigBangExpand {
+    0% { letter-spacing: 0px; opacity: 0; transform: scale(0.5); }
+    20% { letter-spacing: 4px; opacity: 1; transform: scale(1); }
+    80% { letter-spacing: 20px; opacity: 0.6; transform: scale(1.1); }
+    100% { letter-spacing: 0px; opacity: 0; transform: scale(0.5); }
+}
+@keyframes bigBangExpandInner {
+    0% { letter-spacing: 0px; opacity: 0; }
+    20% { letter-spacing: 4px; opacity: 0.5; }
+    80% { letter-spacing: 16px; opacity: 0.2; }
+    100% { letter-spacing: 0px; opacity: 0; }
+}
+
+/* #5 — WORMHOLE TUNNEL */
+.wormhole-wrap {
+    position: relative;
+    width: 240px;
+    height: 240px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.wormhole-ring {
+    position: absolute;
+    border-radius: 50%;
+    border: 1px solid;
+    animation: wormholePulse 4s ease-in-out infinite;
+}
+.wormhole-ring:nth-child(1) { width: 240px; height: 240px; border-color: rgba(0,240,255,0.05); animation-delay: 0s; }
+.wormhole-ring:nth-child(2) { width: 200px; height: 200px; border-color: rgba(139,92,246,0.08); animation-delay: 0.3s; }
+.wormhole-ring:nth-child(3) { width: 160px; height: 160px; border-color: rgba(255,0,209,0.1); animation-delay: 0.6s; }
+.wormhole-ring:nth-child(4) { width: 120px; height: 120px; border-color: rgba(0,240,255,0.12); animation-delay: 0.9s; }
+.wormhole-ring:nth-child(5) { width: 80px; height: 80px; border-color: rgba(255,0,209,0.15); animation-delay: 1.2s; }
+.wormhole-ring:nth-child(6) { width: 40px; height: 40px; border-color: rgba(255,255,255,0.2); animation-delay: 1.5s; }
+@keyframes wormholePulse {
+    0%, 100% { transform: scale(1) rotate(0deg); opacity: 0.5; }
+    50% { transform: scale(1.1) rotate(15deg); opacity: 1; }
+}
+.wormhole-text {
+    position: relative;
+    z-index: 2;
+    font-family: 'Outfit', sans-serif;
+    font-weight: 100;
+    font-size: 14px;
+    letter-spacing: 10px;
+    text-transform: uppercase;
+    color: rgba(255,255,255,0.6);
+}
+
+/* #6 — AURORA BOREALIS */
+.aurora-text {
+    font-family: 'Quicksand', sans-serif;
+    font-weight: 600;
+    font-size: 42px;
+    letter-spacing: 6px;
+    text-transform: uppercase;
+    background: linear-gradient(180deg,
+        rgba(0,240,255,0.8) 0%,
+        rgba(139,92,246,0.8) 25%,
+        rgba(0,255,100,0.6) 50%,
+        rgba(255,0,209,0.7) 75%,
+        rgba(0,240,255,0.8) 100%
+    );
+    background-size: 100% 400%;
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    animation: auroraWave 6s ease-in-out infinite;
+    filter: drop-shadow(0 0 15px rgba(0,240,255,0.2));
+}
+@keyframes auroraWave {
+    0% { background-position: 0% 0%; }
+    50% { background-position: 0% 100%; }
+    100% { background-position: 0% 0%; }
+}
+
+/* #7 — STARDUST PARTICLES */
+.stardust-wrap {
+    position: relative;
+    padding: 20px;
+}
+.stardust-text {
+    font-family: 'Space Grotesk', sans-serif;
+    font-weight: 600;
+    font-size: 40px;
+    letter-spacing: 8px;
+    text-transform: uppercase;
+    color: rgba(255,255,255,0.7);
+    position: relative;
+    z-index: 2;
+}
+.particle {
+    position: absolute;
+    width: 2px;
+    height: 2px;
+    border-radius: 50%;
+    animation: particleDrift 5s ease-in-out infinite;
+}
+@keyframes particleDrift {
+    0%, 100% { transform: translateY(0) translateX(0); opacity: 0; }
+    20% { opacity: 1; }
+    80% { opacity: 1; }
+    100% { transform: translateY(-40px) translateX(10px); opacity: 0; }
+}
+
+/* #8 — DARK MATTER */
+.darkmatter-text {
+    font-family: 'Tourney', system-ui;
+    font-weight: 200;
+    font-size: 36px;
+    letter-spacing: 14px;
+    text-transform: uppercase;
+    color: rgba(255,255,255,0.08);
+    text-shadow: 0 0 40px rgba(139,92,246,0.15);
+    animation: darkMatterReveal 6s ease-in-out infinite;
+}
+@keyframes darkMatterReveal {
+    0%, 100% { color: rgba(255,255,255,0.06); text-shadow: 0 0 40px rgba(139,92,246,0.1); }
+    50% { color: rgba(255,255,255,0.2); text-shadow: 0 0 60px rgba(139,92,246,0.3), 0 0 100px rgba(255,0,209,0.1); }
+}
+
+/* #9 — GRAVITY LENS / DISTORTION */
+.gravity-text {
+    font-family: 'Syne', sans-serif;
+    font-weight: 800;
+    font-size: 48px;
+    letter-spacing: 4px;
+    text-transform: uppercase;
+    color: rgba(255,255,255,0.6);
+    animation: gravityLens 5s ease-in-out infinite;
+}
+@keyframes gravityLens {
+    0%, 100% { transform: scaleX(1) scaleY(1); filter: blur(0px); }
+    25% { transform: scaleX(1.05) scaleY(0.95); }
+    50% { transform: scaleX(0.95) scaleY(1.05); filter: blur(1px); }
+    75% { transform: scaleX(1.02) scaleY(0.98); }
+}
+
+/* #10 — SUPERNOVA FLASH */
+.supernova-text {
+    font-family: 'Fredoka', sans-serif;
+    font-weight: 700;
+    font-size: 44px;
+    color: rgba(255,255,255,0.15);
+    animation: supernovaFlash 8s ease-in-out infinite;
+    text-shadow: 0 0 10px rgba(255,255,255,0);
+}
+@keyframes supernovaFlash {
+    0%, 85%, 100% { color: rgba(255,255,255,0.15); text-shadow: 0 0 10px transparent; }
+    88% { color: #fff; text-shadow: 0 0 30px #fff, 0 0 60px var(--pink), 0 0 100px var(--cyan); }
+    92% { color: rgba(255,255,255,0.5); text-shadow: 0 0 20px rgba(255,0,209,0.3); }
+}
+
+/* #11 — PLANETARY RINGS */
+.planetary-wrap {
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+.planet-ring {
+    width: 280px;
+    height: 30px;
+    border: 1.5px solid rgba(255,0,209,0.15);
+    border-radius: 50%;
+    margin-top: -15px;
+    position: relative;
+    z-index: 1;
+}
+
+/* #12 — MULTIVERSE SPLIT */
+.multiverse-wrap {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 2px;
+}
+.multiverse-line {
+    font-family: 'Outfit', sans-serif;
+    font-weight: 300;
+    font-size: 24px;
+    letter-spacing: 10px;
+    text-transform: uppercase;
+    transition: all 0.3s;
+}
+.multiverse-line:nth-child(1) { color: rgba(0,240,255,0.5); transform: translateX(-8px); }
+.multiverse-line:nth-child(2) { color: rgba(139,92,246,0.6); transform: translateX(0); }
+.multiverse-line:nth-child(3) { color: rgba(255,0,209,0.5); transform: translateX(8px); }
+.multiverse-wrap:hover .multiverse-line:nth-child(1) { transform: translateX(-20px); }
+.multiverse-wrap:hover .multiverse-line:nth-child(3) { transform: translateX(20px); }
+
+/* #13 — COSMIC MICROWAVE */
+.microwave-text {
+    font-family: 'Share Tech Mono', monospace;
+    font-size: 28px;
+    letter-spacing: 6px;
+    text-transform: uppercase;
+    background: repeating-linear-gradient(
+        90deg,
+        rgba(0,240,255,0.4) 0px,
+        rgba(139,92,246,0.4) 3px,
+        rgba(255,0,209,0.4) 6px,
+        rgba(204,253,40,0.3) 9px,
+        rgba(0,240,255,0.4) 12px
+    );
+    background-size: 200% 100%;
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    animation: microwaveStatic 0.5s linear infinite;
+}
+@keyframes microwaveStatic {
+    to { background-position: 12px 0; }
+}
+
+/* #14 — LIGHT SPEED STREAK */
+.lightspeed-text {
+    font-family: 'Exo 2', sans-serif;
+    font-weight: 800;
+    font-size: 44px;
+    letter-spacing: 6px;
+    text-transform: uppercase;
+    color: rgba(255,255,255,0.7);
+    position: relative;
+}
+.lightspeed-text::before {
+    content: 'UNIVERSE';
+    position: absolute;
+    top: 0; left: -30px;
+    color: transparent;
+    -webkit-text-stroke: 1px rgba(0,240,255,0.15);
+    filter: blur(2px);
+}
+.lightspeed-text::after {
+    content: 'UNIVERSE';
+    position: absolute;
+    top: 0; left: -60px;
+    color: transparent;
+    -webkit-text-stroke: 1px rgba(139,92,246,0.08);
+    filter: blur(4px);
+}
+
+/* #15 — EVENT HORIZON */
+.eventhorizon-wrap {
+    position: relative;
+    width: 200px;
+    height: 200px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.eventhorizon-bg {
+    position: absolute;
+    width: 200px;
+    height: 200px;
+    border-radius: 50%;
+    background: radial-gradient(circle, #000 30%, transparent 70%);
+    box-shadow: 0 0 40px rgba(255,0,209,0.2), 0 0 80px rgba(139,92,246,0.1), inset 0 0 30px rgba(0,0,0,0.8);
+}
+.eventhorizon-glow {
+    position: absolute;
+    width: 210px;
+    height: 210px;
+    border-radius: 50%;
+    border: 2px solid transparent;
+    background: linear-gradient(var(--bg), var(--bg)) padding-box,
+                linear-gradient(135deg, var(--cyan), var(--purple), var(--pink), var(--cyan)) border-box;
+    animation: horizonSpin 6s linear infinite;
+}
+@keyframes horizonSpin { to { transform: rotate(360deg); } }
+.eventhorizon-text {
+    position: relative;
+    z-index: 2;
+    font-family: 'Outfit', sans-serif;
+    font-weight: 100;
+    font-size: 12px;
+    letter-spacing: 8px;
+    text-transform: uppercase;
+    color: rgba(255,255,255,0.5);
+}
+
+/* Also-ran grid */
+.also-grid {
+    position: relative;
+    z-index: 1;
+    max-width: 900px;
+    margin: 60px auto;
+    padding: 0 20px;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 2px;
+}
+.also-card {
+    border: 1px solid rgba(255,255,255,0.04);
+    padding: 40px 20px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    min-height: 280px;
+    background: rgba(255,255,255,0.01);
+    position: relative;
+}
+.also-num {
+    position: absolute;
+    top: 12px;
+    left: 12px;
+    font-family: 'Space Mono', monospace;
+    font-size: 9px;
+    color: rgba(255,255,255,0.1);
+    letter-spacing: 2px;
+}
+.also-name {
+    margin-top: 16px;
+    font-family: 'Space Mono', monospace;
+    font-size: 9px;
+    letter-spacing: 2px;
+    text-transform: uppercase;
+    color: rgba(255,255,255,0.15);
+    text-align: center;
+}
+
+/* Section label */
+.section-break {
+    position: relative;
+    z-index: 1;
+    text-align: center;
+    padding: 60px 20px 20px;
+}
+.section-break span {
+    font-family: 'Space Mono', monospace;
+    font-size: 9px;
+    letter-spacing: 5px;
+    text-transform: uppercase;
+    color: rgba(255,255,255,0.1);
+}
+
+</style>
+</head>
+<body>
+
+<div class="hero">
+    <div class="hero-badge">Ranked &middot; Universe Vibe &middot; 25 Ideas</div>
+    <h1>Cosmic Universe</h1>
+    <p>Treatments that feel like actual space</p>
+    <div class="cosmic-row">
+        <img src="https://nancyuniverse.com/assets/plushies/galaxy/galaxy-hero.png" alt="Galaxy">
+        <img src="https://nancyuniverse.com/assets/plushies/nebula/nebula-hero.png" alt="Nebula">
+        <img src="https://nancyuniverse.com/assets/plushies/cosmo/cosmo-hero.png" alt="Cosmo">
+        <img src="https://nancyuniverse.com/assets/plushies/comet/comet-hero.png" alt="Comet">
+        <img src="https://nancyuniverse.com/assets/plushies/eclipse/eclipse-hero.png" alt="Eclipse">
+        <img src="https://nancyuniverse.com/assets/plushies/starla/starla-hero.png" alt="Starla">
+        <img src="https://nancyuniverse.com/assets/plushies/luna/luna-hero.png" alt="Luna">
+        <img src="https://nancyuniverse.com/assets/plushies/solaris/solaris-hero.png" alt="Solaris">
+        <img src="https://nancyuniverse.com/assets/plushies/meteor/meteor-hero.png" alt="Meteor">
+        <img src="https://nancyuniverse.com/assets/plushies/pluto/pluto-hero.png" alt="Pluto">
+        <img src="https://nancyuniverse.com/assets/plushies/rocket/rocket-hero.png" alt="Rocket">
+        <img src="https://nancyuniverse.com/assets/plushies/void/void-hero.png" alt="Void">
+    </div>
+</div>
+
+<!-- ===== #1 GOLD — CONSTELLATION MAP ===== -->
+<div class="ranked-list">
+
+<div class="rank-card rank-1">
+    <div class="rank-header">
+        <span class="rank-badge">#1 GOLD</span>
+        <div>
+            <div class="rank-title">Constellation Map</div>
+            <div class="rank-subtitle">Outfit 200 &middot; 16px tracking &middot; star dot overlay</div>
+        </div>
+    </div>
+    <div class="rank-visual" style="background:radial-gradient(ellipse at 50% 50%, rgba(139,92,246,0.05), transparent 70%);">
+        <div class="star-dots">
+            <div class="star-dot"></div><div class="star-dot"></div><div class="star-dot"></div>
+            <div class="star-dot"></div><div class="star-dot"></div><div class="star-dot"></div><div class="star-dot"></div>
+        </div>
+        <img src="https://nancyuniverse.com/assets/logos/nancy-pink.png" class="nancy-logo" alt="Nancy" style="filter:drop-shadow(0 0 12px rgba(255,0,209,0.3));margin-bottom:10px;">
+        <div class="constellation-text">UNIVERSE</div>
+        <div style="display:flex;gap:8px;margin-top:14px;">
+            <img src="https://nancyuniverse.com/assets/plushies/starla/starla-hero.png" style="width:28px;height:28px;object-fit:contain;opacity:0.5;filter:drop-shadow(0 0 4px rgba(255,215,0,0.4));" alt="">
+            <img src="https://nancyuniverse.com/assets/plushies/luna/luna-hero.png" style="width:28px;height:28px;object-fit:contain;opacity:0.5;filter:drop-shadow(0 0 4px rgba(255,200,50,0.4));" alt="">
+            <img src="https://nancyuniverse.com/assets/plushies/comet/comet-hero.png" style="width:28px;height:28px;object-fit:contain;opacity:0.5;filter:drop-shadow(0 0 4px rgba(100,200,255,0.4));" alt="">
+        </div>
+    </div>
+    <div class="rank-analysis">
+        <div class="analysis-block"><h4>Why #1</h4><p>Stars twinkling around thin elegant text creates a literal universe map. The plushie characters become celestial bodies. Refined enough for a homepage hero, cosmic enough to feel magical.</p></div>
+        <div class="analysis-block"><h4>Web Use</h4><p>Homepage hero, loading screens, about page. Stars can be JS-driven for interactivity. Scales beautifully from mobile to desktop. Light enough to not distract from content.</p></div>
+        <div class="rank-verdict"><p><strong>The winner</strong> because it's the only treatment where "universe" literally LOOKS like a universe. Not a metaphor — an actual star field. Clean enough for everyday use, cosmic enough to feel special.</p></div>
+    </div>
+</div>
+
+<!-- ===== #2 SILVER — NEBULA GRADIENT ===== -->
+<div class="rank-card rank-2">
+    <div class="rank-header">
+        <span class="rank-badge">#2 SILVER</span>
+        <div>
+            <div class="rank-title">Nebula Gradient</div>
+            <div class="rank-subtitle">Syne 700 &middot; shifting deep space colors</div>
+        </div>
+    </div>
+    <div class="rank-visual" style="background:radial-gradient(ellipse at 30% 50%, rgba(77,0,128,0.1), transparent 60%),radial-gradient(ellipse at 70% 50%, rgba(255,0,209,0.05), transparent 60%);">
+        <img src="https://nancyuniverse.com/assets/logos/nancy-pink.png" class="nancy-logo" alt="Nancy" style="filter:drop-shadow(0 0 15px rgba(255,0,209,0.4));margin-bottom:10px;">
+        <div class="nebula-text">UNIVERSE</div>
+        <div style="display:flex;gap:8px;margin-top:14px;">
+            <img src="https://nancyuniverse.com/assets/plushies/nebula/nebula-hero.png" style="width:32px;height:32px;object-fit:contain;filter:drop-shadow(0 0 6px rgba(255,0,209,0.4));" alt="">
+            <img src="https://nancyuniverse.com/assets/plushies/galaxy/galaxy-hero.png" style="width:32px;height:32px;object-fit:contain;filter:drop-shadow(0 0 6px rgba(100,150,255,0.4));" alt="">
+        </div>
+    </div>
+    <div class="rank-analysis">
+        <div class="analysis-block"><h4>Why #2</h4><p>Deep space gas cloud colors shifting through the text. Nebula + Galaxy plushies are literally this palette. The brand's own characters validate the color choices.</p></div>
+        <div class="analysis-block"><h4>Web Use</h4><p>Hero sections, splash pages, collection launches. Bold enough for marketing. The slow animation feels premium, not gimmicky. Works on merch and packaging too.</p></div>
+        <div class="rank-verdict"><p><strong>Silver</strong> because it's the most visually striking, but slightly less versatile than #1 for everyday nav use. Perfect for moments where you want to make an impression.</p></div>
+    </div>
+</div>
+
+<!-- ===== #3 BRONZE — SOLAR SYSTEM ORBIT ===== -->
+<div class="rank-card rank-3">
+    <div class="rank-header">
+        <span class="rank-badge">#3 BRONZE</span>
+        <div>
+            <div class="rank-title">Solar System Orbit</div>
+            <div class="rank-subtitle">Plushie characters orbiting Nancy logo as planets</div>
+        </div>
+    </div>
+    <div class="rank-visual">
+        <div class="solar-system">
+            <div class="orbit-ring-cosmic"></div>
+            <div class="orbit-ring-cosmic"></div>
+            <div class="orbit-ring-cosmic"></div>
+            <div class="orbit-group">
+                <img src="https://nancyuniverse.com/assets/plushies/luna/luna-hero.png" class="orbiter" alt="Luna">
+            </div>
+            <div class="orbit-group">
+                <img src="https://nancyuniverse.com/assets/plushies/solaris/solaris-hero.png" class="orbiter" alt="Solaris">
+            </div>
+            <div class="orbit-group">
+                <img src="https://nancyuniverse.com/assets/plushies/pluto/pluto-hero.png" class="orbiter" alt="Pluto">
+            </div>
+            <div class="solar-center">
+                <img src="https://nancyuniverse.com/assets/logos/nancy-pink.png" class="nancy-logo" alt="Nancy" style="height:40px;filter:drop-shadow(0 0 10px rgba(255,0,209,0.4));">
+                <div style="font-family:'Comfortaa',sans-serif;font-weight:300;font-size:11px;letter-spacing:6px;text-transform:uppercase;color:rgba(255,255,255,0.3);">universe</div>
+            </div>
+        </div>
+    </div>
+    <div class="rank-analysis">
+        <div class="analysis-block"><h4>Why #3</h4><p>Nancy is the sun. Plushies are planets. The universe IS the solar system of characters. It tells the whole brand story in one animation. Luna, Solaris, Pluto — they were born for this.</p></div>
+        <div class="analysis-block"><h4>Web Use</h4><p>Loading animation, about page, 404 page, collection overview. Swap different plushie trios for seasonal collections. Interactive version: click a plushie to visit its PDP.</p></div>
+        <div class="rank-verdict"><p><strong>Bronze</strong> because it's the most MEANINGFUL — Nancy at the center, characters orbiting. But it's complex and works better as a feature moment than a logo treatment.</p></div>
+    </div>
+</div>
+
+<!-- ===== #4 — BIG BANG EXPANSION ===== -->
+<div class="rank-card rank-other">
+    <div class="rank-header">
+        <span class="rank-badge">#4</span>
+        <div>
+            <div class="rank-title">Big Bang Expansion</div>
+            <div class="rank-subtitle">Tourney 900 &middot; exploding outward from nothing &middot; looping</div>
+        </div>
+    </div>
+    <div class="rank-visual">
+        <img src="https://nancyuniverse.com/assets/logos/nancy-pink.png" class="nancy-logo" alt="Nancy" style="filter:drop-shadow(0 0 10px rgba(255,0,209,0.3));margin-bottom:10px;">
+        <div class="bigbang-text">UNIVERSE</div>
+        <div style="display:flex;gap:6px;margin-top:14px;">
+            <img src="https://nancyuniverse.com/assets/plushies/meteor/meteor-hero.png" style="width:28px;height:28px;object-fit:contain;opacity:0.5;" alt="">
+            <img src="https://nancyuniverse.com/assets/plushies/comet/comet-hero.png" style="width:28px;height:28px;object-fit:contain;opacity:0.5;" alt="">
+        </div>
+    </div>
+    <div class="rank-analysis">
+        <div class="analysis-block"><h4>Why Here</h4><p>Text explodes from a singularity, expands outward, then collapses back. The birth of the universe on loop. Dramatic, cinematic, pure physics poetry.</p></div>
+        <div class="analysis-block"><h4>Trade-off</h4><p>Not readable at all times due to animation. Best for splash/loading screens. The text disappearing periodically makes it impractical for navigation.</p></div>
+    </div>
+</div>
+
+<!-- ===== #5 — WORMHOLE TUNNEL ===== -->
+<div class="rank-card rank-other">
+    <div class="rank-header">
+        <span class="rank-badge">#5</span>
+        <div>
+            <div class="rank-title">Wormhole Tunnel</div>
+            <div class="rank-subtitle">Concentric pulsing rings &middot; text at the center</div>
+        </div>
+    </div>
+    <div class="rank-visual">
+        <img src="https://nancyuniverse.com/assets/logos/nancy-pink.png" class="nancy-logo" alt="Nancy" style="filter:drop-shadow(0 0 10px rgba(255,0,209,0.3));margin-bottom:-100px;z-index:10;position:relative;">
+        <div class="wormhole-wrap">
+            <div class="wormhole-ring"></div>
+            <div class="wormhole-ring"></div>
+            <div class="wormhole-ring"></div>
+            <div class="wormhole-ring"></div>
+            <div class="wormhole-ring"></div>
+            <div class="wormhole-ring"></div>
+            <div class="wormhole-text">universe</div>
+        </div>
+    </div>
+    <div class="rank-analysis">
+        <div class="analysis-block"><h4>Why Here</h4><p>You're traveling through a portal. Concentric rings pulse from pink to purple to cyan. The text is the destination. Journey to the center of the Nancy Universe.</p></div>
+        <div class="analysis-block"><h4>Trade-off</h4><p>Visually mesmerizing but heavy. Works as a page transition or loading state. The rings rotating at different speeds create a hypnotic depth effect.</p></div>
+    </div>
+</div>
+
+<!-- ===== #6 — AURORA BOREALIS ===== -->
+<div class="rank-card rank-other">
+    <div class="rank-header">
+        <span class="rank-badge">#6</span>
+        <div>
+            <div class="rank-title">Aurora Borealis</div>
+            <div class="rank-subtitle">Quicksand 600 &middot; Northern lights color wave</div>
+        </div>
+    </div>
+    <div class="rank-visual" style="background:radial-gradient(ellipse at 50% 100%, rgba(0,240,255,0.05), transparent 60%);">
+        <img src="https://nancyuniverse.com/assets/logos/nancy-pink.png" class="nancy-logo" alt="Nancy" style="filter:drop-shadow(0 0 10px rgba(0,240,255,0.3));margin-bottom:10px;">
+        <div class="aurora-text">UNIVERSE</div>
+    </div>
+    <div class="rank-analysis">
+        <div class="analysis-block"><h4>Why Here</h4><p>Colors flow vertically through the text like the Northern Lights — cyan, purple, green, pink. Natural cosmic phenomenon. The universe's own light show.</p></div>
+        <div class="analysis-block"><h4>Trade-off</h4><p>Beautiful and readable, but the vertical gradient shift is subtle at small sizes. Best at hero scale. The color palette spans beyond Nancy's core pink/lime.</p></div>
+    </div>
+</div>
+
+<!-- ===== #7 — DARK MATTER ===== -->
+<div class="rank-card rank-other">
+    <div class="rank-header">
+        <span class="rank-badge">#7</span>
+        <div>
+            <div class="rank-title">Dark Matter</div>
+            <div class="rank-subtitle">Tourney 200 &middot; barely visible &middot; revealing itself slowly</div>
+        </div>
+    </div>
+    <div class="rank-visual">
+        <img src="https://nancyuniverse.com/assets/logos/nancy-pink.png" class="nancy-logo" alt="Nancy" style="opacity:0.3;filter:drop-shadow(0 0 20px rgba(139,92,246,0.2));margin-bottom:10px;">
+        <div class="darkmatter-text">UNIVERSE</div>
+        <div style="display:flex;gap:6px;margin-top:14px;">
+            <img src="https://nancyuniverse.com/assets/plushies/void/void-hero.png" style="width:28px;height:28px;object-fit:contain;opacity:0.3;filter:drop-shadow(0 0 8px rgba(139,92,246,0.3));" alt="">
+            <img src="https://nancyuniverse.com/assets/plushies/eclipse/eclipse-hero.png" style="width:28px;height:28px;object-fit:contain;opacity:0.3;filter:drop-shadow(0 0 8px rgba(255,215,0,0.2));" alt="">
+        </div>
+    </div>
+    <div class="rank-analysis">
+        <div class="analysis-block"><h4>Why Here</h4><p>95% of the universe is invisible. This treatment embodies that — text almost invisible, revealing itself in slow pulses. Void plushie energy. You FEEL it more than see it.</p></div>
+        <div class="analysis-block"><h4>Trade-off</h4><p>Borderline unreadable by design. That IS the concept. Works for loading screens, Easter eggs, or the "dark mode" version of the brand. Not for navigation.</p></div>
+    </div>
+</div>
+
+</div>
+
+<!-- ===== ALSO CONSIDERED ===== -->
+<div class="section-break">
+    <span>Also Strong &mdash; Unranked</span>
+</div>
+
+<div class="also-grid">
+
+    <!-- Event Horizon -->
+    <div class="also-card">
+        <span class="also-num">#8</span>
+        <img src="https://nancyuniverse.com/assets/logos/nancy-pink.png" class="nancy-logo" alt="Nancy" style="filter:drop-shadow(0 0 8px rgba(255,0,209,0.3));margin-bottom:-80px;z-index:5;position:relative;">
+        <div class="eventhorizon-wrap">
+            <div class="eventhorizon-bg"></div>
+            <div class="eventhorizon-glow"></div>
+            <div class="eventhorizon-text">universe</div>
+        </div>
+        <div class="also-name">Event Horizon &middot; Black hole with gradient ring</div>
+    </div>
+
+    <!-- Stardust Particles -->
+    <div class="also-card">
+        <span class="also-num">#9</span>
+        <img src="https://nancyuniverse.com/assets/logos/nancy-pink.png" class="nancy-logo" alt="Nancy" style="filter:drop-shadow(0 0 8px rgba(255,0,209,0.3));margin-bottom:8px;">
+        <div class="stardust-wrap">
+            <div class="particle" style="top:10%;left:20%;background:var(--pink);animation-delay:0s;"></div>
+            <div class="particle" style="top:30%;left:60%;background:var(--cyan);animation-delay:0.5s;"></div>
+            <div class="particle" style="top:50%;left:80%;background:var(--purple);animation-delay:1s;"></div>
+            <div class="particle" style="top:70%;left:30%;background:var(--gold);animation-delay:1.5s;"></div>
+            <div class="particle" style="top:20%;left:90%;background:var(--lime);animation-delay:2s;"></div>
+            <div class="stardust-text">UNIVERSE</div>
+        </div>
+        <div class="also-name">Stardust &middot; Particles floating around text</div>
+    </div>
+
+    <!-- Gravity Lens -->
+    <div class="also-card">
+        <span class="also-num">#10</span>
+        <img src="https://nancyuniverse.com/assets/logos/nancy-pink.png" class="nancy-logo" alt="Nancy" style="filter:drop-shadow(0 0 8px rgba(255,0,209,0.3));margin-bottom:8px;">
+        <div class="gravity-text">UNIVERSE</div>
+        <div class="also-name">Gravity Lens &middot; Warping/bending spacetime</div>
+    </div>
+
+    <!-- Supernova Flash -->
+    <div class="also-card">
+        <span class="also-num">#11</span>
+        <img src="https://nancyuniverse.com/assets/logos/nancy-pink.png" class="nancy-logo" alt="Nancy" style="opacity:0.4;margin-bottom:8px;">
+        <div class="supernova-text">universe</div>
+        <div style="display:flex;gap:4px;margin-top:8px;">
+            <img src="https://nancyuniverse.com/assets/plushies/solaris/solaris-hero.png" style="width:24px;height:24px;object-fit:contain;opacity:0.4;" alt="">
+        </div>
+        <div class="also-name">Supernova &middot; Sudden brilliant flash</div>
+    </div>
+
+    <!-- Planetary Rings -->
+    <div class="also-card">
+        <span class="also-num">#12</span>
+        <div class="planetary-wrap">
+            <img src="https://nancyuniverse.com/assets/logos/nancy-pink.png" class="nancy-logo" alt="Nancy" style="filter:drop-shadow(0 0 8px rgba(255,0,209,0.3));">
+            <div style="font-family:'Outfit',sans-serif;font-weight:200;font-size:28px;letter-spacing:10px;text-transform:uppercase;color:rgba(255,255,255,0.4);margin-top:4px;">UNIVERSE</div>
+            <div class="planet-ring"></div>
+        </div>
+        <div class="also-name">Planetary Rings &middot; Saturn ring around text</div>
+    </div>
+
+    <!-- Multiverse Split -->
+    <div class="also-card">
+        <span class="also-num">#13</span>
+        <img src="https://nancyuniverse.com/assets/logos/nancy-pink.png" class="nancy-logo" alt="Nancy" style="filter:drop-shadow(0 0 8px rgba(255,0,209,0.3));margin-bottom:8px;">
+        <div class="multiverse-wrap">
+            <div class="multiverse-line">UNIVERSE</div>
+            <div class="multiverse-line">UNIVERSE</div>
+            <div class="multiverse-line">UNIVERSE</div>
+        </div>
+        <div class="also-name">Multiverse &middot; Three realities splitting apart (hover)</div>
+    </div>
+
+    <!-- Cosmic Microwave -->
+    <div class="also-card">
+        <span class="also-num">#14</span>
+        <img src="https://nancyuniverse.com/assets/logos/nancy-pink.png" class="nancy-logo" alt="Nancy" style="filter:drop-shadow(0 0 8px rgba(255,0,209,0.3));margin-bottom:8px;">
+        <div class="microwave-text">UNIVERSE</div>
+        <div class="also-name">Cosmic Microwave &middot; Background radiation static</div>
+    </div>
+
+    <!-- Light Speed -->
+    <div class="also-card">
+        <span class="also-num">#15</span>
+        <img src="https://nancyuniverse.com/assets/logos/nancy-pink.png" class="nancy-logo" alt="Nancy" style="filter:drop-shadow(0 0 8px rgba(255,0,209,0.3));margin-bottom:8px;">
+        <div class="lightspeed-text">UNIVERSE</div>
+        <div class="also-name">Light Speed &middot; Motion blur streaking behind</div>
+    </div>
+
+</div>
+
+<!-- ===== FINAL RECOMMENDATION ===== -->
+<div style="position:relative;z-index:1;max-width:700px;margin:40px auto 100px;padding:30px;border:1px solid rgba(255,255,255,0.06);border-radius:12px;background:rgba(255,255,255,0.02);">
+    <div style="font-family:'Space Mono',monospace;font-size:9px;letter-spacing:4px;text-transform:uppercase;color:rgba(255,255,255,0.15);margin-bottom:16px;">Final Recommendation</div>
+    <p style="font-size:14px;color:rgba(255,255,255,0.5);line-height:1.8;margin-bottom:12px;">Use a <strong style="color:var(--pink);">3-layer system</strong> for nancyuniverse.com:</p>
+    <div style="display:flex;flex-direction:column;gap:10px;">
+        <div style="display:flex;gap:12px;align-items:flex-start;">
+            <span style="font-family:'Space Mono';font-size:10px;color:var(--gold);flex-shrink:0;">NAV</span>
+            <span style="font-size:13px;color:rgba(255,255,255,0.4);line-height:1.5;"><strong style="color:rgba(255,255,255,0.6);">#1 Constellation</strong> — thin, elegant, stars optional. Always readable. Everyday use.</span>
+        </div>
+        <div style="display:flex;gap:12px;align-items:flex-start;">
+            <span style="font-family:'Space Mono';font-size:10px;color:var(--cyan);flex-shrink:0;">HERO</span>
+            <span style="font-size:13px;color:rgba(255,255,255,0.4);line-height:1.5;"><strong style="color:rgba(255,255,255,0.6);">#2 Nebula Gradient</strong> — bold, colorful, statement. Homepage hero, campaign launches.</span>
+        </div>
+        <div style="display:flex;gap:12px;align-items:flex-start;">
+            <span style="font-family:'Space Mono';font-size:10px;color:var(--purple);flex-shrink:0;">FEATURE</span>
+            <span style="font-size:13px;color:rgba(255,255,255,0.4);line-height:1.5;"><strong style="color:rgba(255,255,255,0.6);">#3 Solar System</strong> — interactive, story-driven. About page, 404, collection pages. Swap plushie trios per wave.</span>
+        </div>
+        <div style="display:flex;gap:12px;align-items:flex-start;">
+            <span style="font-family:'Space Mono';font-size:10px;color:rgba(255,255,255,0.2);flex-shrink:0;">LOADING</span>
+            <span style="font-size:13px;color:rgba(255,255,255,0.4);line-height:1.5;"><strong style="color:rgba(255,255,255,0.6);">#4 Big Bang</strong> — page transition / loading animation. Text explodes from nothing.</span>
+        </div>
+        <div style="display:flex;gap:12px;align-items:flex-start;">
+            <span style="font-family:'Space Mono';font-size:10px;color:rgba(255,255,255,0.2);flex-shrink:0;">EASTER EGG</span>
+            <span style="font-size:13px;color:rgba(255,255,255,0.4);line-height:1.5;"><strong style="color:rgba(255,255,255,0.6);">#7 Dark Matter</strong> — hidden, barely visible. Konami code reveals it. For the collectors who look closely.</span>
+        </div>
+    </div>
+</div>
+
+</body>
+</html>
