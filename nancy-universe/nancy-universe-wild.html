@@ -1,0 +1,1528 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Nancy Universe — UNHINGED Edition</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Space+Mono:wght@400;700&family=Press+Start+2P&family=Silkscreen&family=VT323&family=Rubik+Glitch&family=Bungee+Shade&family=Monoton&family=Nabla&family=Fascinate&family=Ruge+Boogie&family=Henny+Penny&family=Creepster&family=Nosifer&family=Ewert&family=Butcherman&family=Lacquer&family=Tourney:wght@100;900&family=Climate+Crisis&family=Foldit:wght@100;900&family=Rubik+Moonrocks&family=Rubik+Wet+Paint&family=Rubik+Vinyl&family=Rubik+Burned&family=Rubik+Distressed&family=Rubik+Marker+Hatch&family=Rubik+Storm&family=Rubik+Iso&family=Pixelify+Sans:wght@400;700&family=Honk&family=Bagel+Fat+One&family=Bungee+Spice&family=Kablammo&family=Moo+Lah+Lah&family=Blaka+Ink&family=Blaka+Hollow&family=Warnes&family=Vast+Shadow&family=Plaster&family=Emblema+One&family=Smokum&family=Megrim&family=Kumar+One+Outline&family=Sancreek&family=Flavors&family=Freckle+Face&family=Mystery+Quest&family=Metal+Mania&family=Eater&family=Rubik+Spray+Paint&display=swap" rel="stylesheet">
+<style>
+* { margin: 0; padding: 0; box-sizing: border-box; }
+
+body {
+    background: #0a0015;
+    color: #fff;
+    font-family: 'Space Mono', monospace;
+    min-height: 100vh;
+    overflow-x: hidden;
+}
+
+.header {
+    text-align: center;
+    padding: 60px 20px 20px;
+}
+
+.header h1 {
+    font-family: 'Space Mono', monospace;
+    font-size: 14px;
+    letter-spacing: 8px;
+    text-transform: uppercase;
+    color: rgba(255,255,255,0.3);
+    margin-bottom: 10px;
+}
+
+.header .subtitle {
+    font-family: 'Rubik Glitch', system-ui;
+    font-size: 48px;
+    color: #ff00d1;
+    line-height: 1;
+    animation: glitchHeader 3s infinite;
+}
+
+@keyframes glitchHeader {
+    0%, 92%, 100% { text-shadow: none; }
+    93% { text-shadow: -5px 0 #ccfd28, 5px 0 #00f0ff; transform: skewX(-2deg); }
+    94% { text-shadow: 5px 0 #ff00d1, -5px 0 #ccfd28; transform: skewX(1deg); }
+    95% { text-shadow: none; transform: none; }
+}
+
+.header p {
+    margin-top: 15px;
+    font-size: 12px;
+    letter-spacing: 4px;
+    text-transform: uppercase;
+    color: rgba(255,255,255,0.2);
+}
+
+.grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(380px, 1fr));
+    gap: 0;
+    padding: 40px 20px 100px;
+    max-width: 1600px;
+    margin: 0 auto;
+}
+
+.card {
+    border: 1px solid rgba(255,255,255,0.06);
+    padding: 50px 30px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    min-height: 400px;
+    position: relative;
+    overflow: hidden;
+    transition: all 0.3s;
+}
+
+.card:hover {
+    border-color: rgba(255,0,209,0.3);
+    background: rgba(255,0,209,0.02);
+}
+
+.card-number {
+    position: absolute;
+    top: 15px;
+    left: 15px;
+    font-size: 10px;
+    letter-spacing: 3px;
+    color: rgba(255,255,255,0.15);
+    text-transform: uppercase;
+}
+
+.card-tag {
+    position: absolute;
+    top: 15px;
+    right: 15px;
+    font-size: 9px;
+    letter-spacing: 2px;
+    text-transform: uppercase;
+    padding: 3px 8px;
+    border-radius: 2px;
+}
+
+.tag-chaotic { background: #ff003c; color: #fff; }
+.tag-cosmic { background: #8B5CF6; color: #fff; }
+.tag-cursed { background: #000; color: #ff00d1; border: 1px solid #ff00d1; }
+.tag-experimental { background: #ccfd28; color: #000; }
+.tag-unhinged { background: transparent; border: 1px solid #ff003c; color: #ff003c; animation: pulseBorder 1s infinite; }
+
+@keyframes pulseBorder {
+    0%, 100% { border-color: #ff003c; color: #ff003c; }
+    50% { border-color: #ff00d1; color: #ff00d1; }
+}
+
+.logo-wrap {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 5px;
+}
+
+.nancy-logo {
+    height: 50px;
+    width: auto;
+    object-fit: contain;
+}
+
+.nancy-logo.white { filter: brightness(0) invert(1); }
+.nancy-logo.gold { filter: brightness(0) saturate(100%) invert(76%) sepia(40%) saturate(500%) hue-rotate(10deg) brightness(95%); }
+.nancy-logo.lime { filter: brightness(0) saturate(100%) invert(88%) sepia(50%) saturate(500%) hue-rotate(30deg) brightness(105%); }
+.nancy-logo.black { filter: brightness(0); }
+.nancy-logo.glitch { animation: logoGlitch 0.3s infinite; }
+.nancy-logo.spin { animation: logoSpin 4s linear infinite; }
+.nancy-logo.breathe { animation: logoBreathe 3s ease-in-out infinite; }
+.nancy-logo.shake { animation: logoShake 0.1s infinite; }
+.nancy-logo.melt { filter: blur(0.5px); animation: logoMelt 4s ease-in-out infinite; }
+.nancy-logo.huge { height: 120px; }
+.nancy-logo.tiny { height: 20px; }
+.nancy-logo.inverted { filter: invert(1) hue-rotate(180deg); }
+.nancy-logo.neon-glow { filter: drop-shadow(0 0 10px #ff00d1) drop-shadow(0 0 20px #ff00d1) drop-shadow(0 0 40px #ff00d1); }
+
+@keyframes logoGlitch {
+    0% { transform: translate(0); filter: none; }
+    20% { transform: translate(-3px, 2px); filter: hue-rotate(90deg); }
+    40% { transform: translate(3px, -2px); filter: hue-rotate(180deg); }
+    60% { transform: translate(-2px, -1px); filter: hue-rotate(270deg); }
+    80% { transform: translate(2px, 1px); filter: hue-rotate(360deg); }
+    100% { transform: translate(0); filter: none; }
+}
+
+@keyframes logoSpin {
+    from { transform: rotateY(0deg); }
+    to { transform: rotateY(360deg); }
+}
+
+@keyframes logoBreathe {
+    0%, 100% { transform: scale(1); opacity: 1; }
+    50% { transform: scale(1.15); opacity: 0.7; }
+}
+
+@keyframes logoMelt {
+    0%, 100% { transform: scaleY(1) scaleX(1); filter: blur(0.5px); }
+    50% { transform: scaleY(1.3) scaleX(0.85); filter: blur(2px); }
+}
+
+@keyframes logoShake {
+    0% { transform: translate(1px, 1px) rotate(0deg); }
+    10% { transform: translate(-1px, -2px) rotate(-1deg); }
+    20% { transform: translate(-3px, 0px) rotate(1deg); }
+    30% { transform: translate(3px, 2px) rotate(0deg); }
+    40% { transform: translate(1px, -1px) rotate(1deg); }
+    50% { transform: translate(-1px, 2px) rotate(-1deg); }
+    60% { transform: translate(-3px, 1px) rotate(0deg); }
+    70% { transform: translate(3px, 1px) rotate(-1deg); }
+    80% { transform: translate(-1px, -1px) rotate(1deg); }
+    90% { transform: translate(1px, 2px) rotate(0deg); }
+    100% { transform: translate(1px, -2px) rotate(-1deg); }
+}
+
+.card-desc {
+    margin-top: 20px;
+    font-size: 10px;
+    letter-spacing: 2px;
+    text-transform: uppercase;
+    color: rgba(255,255,255,0.25);
+    text-align: center;
+    max-width: 300px;
+    line-height: 1.6;
+}
+
+/* ===== INDIVIDUAL CARD STYLES ===== */
+
+/* 1. GLITCH HORROR */
+.universe-glitch {
+    font-family: 'Rubik Glitch', system-ui;
+    font-size: 42px;
+    color: #fff;
+    animation: textGlitch 0.15s infinite;
+    text-shadow: 3px 0 #ff003c, -3px 0 #00f0ff;
+}
+
+@keyframes textGlitch {
+    0% { text-shadow: 3px 0 #ff003c, -3px 0 #00f0ff; transform: skewX(0deg); }
+    25% { text-shadow: -3px 0 #ff003c, 3px 0 #ccfd28; transform: skewX(-5deg); clip-path: inset(30% 0 40% 0); }
+    50% { text-shadow: 2px 2px #ff00d1, -2px -2px #00f0ff; transform: skewX(3deg); clip-path: none; }
+    75% { text-shadow: -2px 0 #ccfd28, 2px 0 #ff003c; transform: skewX(-2deg); clip-path: inset(60% 0 10% 0); }
+    100% { text-shadow: 3px 0 #ff003c, -3px 0 #00f0ff; transform: skewX(0deg); clip-path: none; }
+}
+
+/* 2. DRIPPING/MELTING */
+.universe-melt {
+    font-family: 'Rubik Wet Paint', system-ui;
+    font-size: 48px;
+    color: #ff00d1;
+    text-shadow: 0 5px 15px rgba(255,0,209,0.5);
+}
+
+/* 3. NEON TUBE SIGN */
+.universe-neon {
+    font-family: 'Monoton', system-ui;
+    font-size: 36px;
+    color: #ff00d1;
+    text-shadow:
+        0 0 7px #ff00d1,
+        0 0 10px #ff00d1,
+        0 0 21px #ff00d1,
+        0 0 42px #ff00d1,
+        0 0 82px #ff00d1,
+        0 0 92px #ff00d1;
+    animation: neonFlicker 1.5s infinite alternate;
+}
+
+@keyframes neonFlicker {
+    0%, 19%, 21%, 23%, 25%, 54%, 56%, 100% {
+        text-shadow:
+            0 0 7px #ff00d1,
+            0 0 10px #ff00d1,
+            0 0 21px #ff00d1,
+            0 0 42px #ff00d1,
+            0 0 82px #ff00d1;
+    }
+    20%, 24%, 55% {
+        text-shadow: none;
+    }
+}
+
+/* 4. BURNING */
+.universe-burn {
+    font-family: 'Rubik Burned', system-ui;
+    font-size: 48px;
+    color: #ff6600;
+    text-shadow: 0 0 20px rgba(255,102,0,0.6), 0 -5px 30px rgba(255,0,0,0.3);
+}
+
+/* 5. MATRIX / HACKER */
+.universe-matrix {
+    font-family: 'VT323', monospace;
+    font-size: 52px;
+    color: #00ff41;
+    text-shadow: 0 0 10px #00ff41, 0 0 20px #00ff41;
+    letter-spacing: 8px;
+    animation: matrixPulse 2s infinite;
+}
+
+@keyframes matrixPulse {
+    0%, 100% { opacity: 1; }
+    50% { opacity: 0.7; text-shadow: 0 0 20px #00ff41, 0 0 40px #00ff41; }
+}
+
+/* 6. BROKEN GLASS / SHATTERED */
+.universe-shatter {
+    font-family: 'Tourney', system-ui;
+    font-weight: 900;
+    font-size: 44px;
+    color: #fff;
+    letter-spacing: 6px;
+    text-transform: uppercase;
+}
+.universe-shatter span {
+    display: inline-block;
+    animation: shatterFloat 3s ease-in-out infinite;
+}
+.universe-shatter span:nth-child(1) { transform: rotate(-8deg) translate(-2px, 5px); animation-delay: 0s; }
+.universe-shatter span:nth-child(2) { transform: rotate(3deg) translate(1px, -3px); animation-delay: 0.1s; }
+.universe-shatter span:nth-child(3) { transform: rotate(-5deg) translate(3px, 8px); animation-delay: 0.2s; }
+.universe-shatter span:nth-child(4) { transform: rotate(12deg) translate(-4px, -2px); animation-delay: 0.3s; }
+.universe-shatter span:nth-child(5) { transform: rotate(-3deg) translate(2px, 6px); animation-delay: 0.4s; }
+.universe-shatter span:nth-child(6) { transform: rotate(7deg) translate(-1px, -5px); animation-delay: 0.5s; }
+.universe-shatter span:nth-child(7) { transform: rotate(-10deg) translate(5px, 3px); animation-delay: 0.6s; }
+.universe-shatter span:nth-child(8) { transform: rotate(4deg) translate(-3px, -1px); animation-delay: 0.7s; }
+
+@keyframes shatterFloat {
+    0%, 100% { transform: translate(0) rotate(var(--r, 0deg)); }
+    50% { transform: translate(var(--tx, 2px), var(--ty, -3px)) rotate(calc(var(--r, 0deg) + 5deg)); }
+}
+
+/* 7. SPRAY PAINT */
+.universe-spray {
+    font-family: 'Rubik Spray Paint', system-ui;
+    font-size: 52px;
+    color: #ccfd28;
+    text-shadow: 2px 2px 0 rgba(0,0,0,0.5);
+    transform: rotate(-3deg);
+}
+
+/* 8. STORM / LIGHTNING */
+.universe-storm {
+    font-family: 'Rubik Storm', system-ui;
+    font-size: 48px;
+    color: #8B5CF6;
+    text-shadow: 0 0 20px rgba(139,92,246,0.5);
+    animation: stormFlash 4s infinite;
+}
+
+@keyframes stormFlash {
+    0%, 90%, 100% { text-shadow: 0 0 20px rgba(139,92,246,0.5); }
+    91% { text-shadow: 0 0 60px #fff, 0 0 100px #8B5CF6; color: #fff; }
+    92% { text-shadow: 0 0 20px rgba(139,92,246,0.5); color: #8B5CF6; }
+    95% { text-shadow: 0 0 80px #fff, 0 0 120px #ccfd28; color: #fff; }
+    96% { text-shadow: 0 0 20px rgba(139,92,246,0.5); color: #8B5CF6; }
+}
+
+/* 9. MOONROCKS / ASTEROID */
+.universe-moonrock {
+    font-family: 'Rubik Moonrocks', system-ui;
+    font-size: 44px;
+    color: #f0e6d6;
+    text-shadow: 0 2px 10px rgba(240,230,214,0.3);
+}
+
+/* 10. VINYL RECORD */
+.universe-vinyl {
+    font-family: 'Rubik Vinyl', system-ui;
+    font-size: 48px;
+    color: #ff00d1;
+}
+
+/* 11. ISO / 3D BLOCK */
+.universe-iso {
+    font-family: 'Rubik Iso', system-ui;
+    font-size: 44px;
+    color: #ccfd28;
+    letter-spacing: 4px;
+}
+
+/* 12. HONK / CLOWN CHAOS */
+.universe-honk {
+    font-family: 'Honk', system-ui;
+    font-size: 52px;
+}
+
+/* 13. BAGEL FAT */
+.universe-bagel {
+    font-family: 'Bagel Fat One', system-ui;
+    font-size: 44px;
+    color: #ff00d1;
+    text-shadow: 3px 3px 0 #ccfd28;
+}
+
+/* 14. BUNGEE SPICE (chromatic) */
+.universe-spice {
+    font-family: 'Bungee Spice', system-ui;
+    font-size: 44px;
+}
+
+/* 15. KABLAMMO / COMIC EXPLOSION */
+.universe-kablammo {
+    font-family: 'Kablammo', system-ui;
+    font-size: 48px;
+    color: #ff003c;
+    text-shadow: 2px 2px 0 #ccfd28;
+}
+
+/* 16. INVERTED / NEGATIVE */
+.card-inverted {
+    background: #fff !important;
+    border-color: rgba(0,0,0,0.1) !important;
+}
+.card-inverted .card-number,
+.card-inverted .card-desc { color: rgba(0,0,0,0.3); }
+.universe-inverted {
+    font-family: 'Tourney', system-ui;
+    font-weight: 100;
+    font-size: 36px;
+    color: #0a0015;
+    letter-spacing: 16px;
+    text-transform: uppercase;
+}
+
+/* 17. REDACTED / CLASSIFIED */
+.universe-redacted {
+    font-family: 'Space Mono', monospace;
+    font-size: 32px;
+    letter-spacing: 6px;
+    text-transform: uppercase;
+    position: relative;
+    color: #fff;
+}
+.universe-redacted::after {
+    content: '';
+    position: absolute;
+    top: 0; left: -5px; right: -5px; bottom: 0;
+    background: #ff003c;
+    animation: redactReveal 4s infinite;
+}
+
+@keyframes redactReveal {
+    0%, 70% { transform: scaleX(1); }
+    75% { transform: scaleX(0); }
+    85% { transform: scaleX(0); }
+    90% { transform: scaleX(1); }
+}
+
+/* 18. TYPEWRITER */
+.universe-typewriter {
+    font-family: 'Space Mono', monospace;
+    font-size: 28px;
+    letter-spacing: 4px;
+    color: rgba(255,255,255,0.8);
+    border-right: 2px solid #ff00d1;
+    overflow: hidden;
+    white-space: nowrap;
+    width: 0;
+    animation: typewrite 2s steps(8) forwards, blink 0.7s step-end infinite;
+}
+
+@keyframes typewrite {
+    to { width: 240px; }
+}
+@keyframes blink {
+    50% { border-color: transparent; }
+}
+
+/* 19. RANSOM NOTE */
+.universe-ransom span {
+    display: inline-block;
+    padding: 2px 5px;
+    margin: 1px;
+    font-size: 28px;
+}
+.universe-ransom span:nth-child(1) { font-family: serif; background: #ff003c; color: #fff; transform: rotate(-3deg); font-weight: bold; }
+.universe-ransom span:nth-child(2) { font-family: 'Press Start 2P'; background: #ccfd28; color: #000; transform: rotate(2deg); font-size: 14px; padding: 8px 5px; }
+.universe-ransom span:nth-child(3) { font-family: 'Creepster'; background: #fff; color: #000; transform: rotate(-1deg); font-size: 32px; }
+.universe-ransom span:nth-child(4) { font-family: cursive; background: #8B5CF6; color: #fff; transform: rotate(4deg); font-style: italic; }
+.universe-ransom span:nth-child(5) { font-family: 'VT323'; background: #ff00d1; color: #fff; transform: rotate(-2deg); font-size: 34px; }
+.universe-ransom span:nth-child(6) { font-family: impact; background: #000; color: #ccfd28; transform: rotate(1deg); text-transform: uppercase; }
+.universe-ransom span:nth-child(7) { font-family: 'Rubik Burned'; background: #ff6600; color: #fff; transform: rotate(-5deg); }
+.universe-ransom span:nth-child(8) { font-family: Georgia; background: #0a0015; color: #fff; transform: rotate(3deg); border: 2px solid #fff; }
+
+/* 20. RAVE FLYER */
+.card-rave {
+    background: repeating-linear-gradient(
+        45deg,
+        #ff00d1 0px, #ff00d1 10px,
+        #ccfd28 10px, #ccfd28 20px,
+        #00f0ff 20px, #00f0ff 30px,
+        #8B5CF6 30px, #8B5CF6 40px
+    ) !important;
+    animation: raveShift 0.5s linear infinite;
+}
+
+@keyframes raveShift {
+    to { background-position: 40px 0; }
+}
+
+.universe-rave {
+    font-family: 'Tourney', system-ui;
+    font-weight: 900;
+    font-size: 52px;
+    color: #000;
+    text-shadow: 2px 2px 0 #fff;
+    letter-spacing: 8px;
+    text-transform: uppercase;
+    -webkit-text-stroke: 2px #fff;
+}
+
+/* 21. VERTICAL STACK */
+.universe-vertical {
+    font-family: 'Tourney', system-ui;
+    font-weight: 900;
+    font-size: 42px;
+    letter-spacing: 0;
+    color: #ff00d1;
+    writing-mode: vertical-lr;
+    text-orientation: upright;
+    line-height: 1;
+    text-transform: uppercase;
+}
+
+/* 22. ORBIT / CIRCULAR */
+.universe-orbit {
+    position: relative;
+    width: 200px;
+    height: 200px;
+}
+
+.universe-orbit span {
+    position: absolute;
+    font-family: 'Space Mono', monospace;
+    font-size: 14px;
+    letter-spacing: 2px;
+    color: rgba(255,255,255,0.6);
+    transform-origin: center;
+}
+
+.orbit-ring {
+    position: absolute;
+    top: 50%; left: 50%;
+    width: 180px; height: 180px;
+    margin: -90px 0 0 -90px;
+    border: 1px solid rgba(255,0,209,0.2);
+    border-radius: 50%;
+    animation: orbitSpin 15s linear infinite;
+}
+
+.orbit-dot {
+    position: absolute;
+    top: -4px; left: 50%;
+    width: 8px; height: 8px;
+    margin-left: -4px;
+    background: #ff00d1;
+    border-radius: 50%;
+    box-shadow: 0 0 10px #ff00d1;
+}
+
+@keyframes orbitSpin {
+    to { transform: rotate(360deg); }
+}
+
+/* 23. ASCII ART */
+.universe-ascii {
+    font-family: 'VT323', monospace;
+    font-size: 14px;
+    color: #00ff41;
+    white-space: pre;
+    line-height: 1.1;
+    text-shadow: 0 0 5px #00ff41;
+}
+
+/* 24. VAPORWAVE */
+.card-vapor {
+    background: linear-gradient(180deg, #ff71ce 0%, #01cdfe 30%, #05ffa1 50%, #b967ff 70%, #fffb96 100%) !important;
+}
+.universe-vapor {
+    font-family: 'Tourney', system-ui;
+    font-weight: 100;
+    font-size: 36px;
+    letter-spacing: 20px;
+    text-transform: uppercase;
+    color: rgba(255,255,255,0.9);
+    text-shadow: 4px 4px 0 rgba(0,0,0,0.2);
+}
+
+/* 25. DISTRESSED / PUNK */
+.universe-distressed {
+    font-family: 'Rubik Distressed', system-ui;
+    font-size: 52px;
+    color: #fff;
+    text-shadow: 2px 2px 0 #ff003c;
+}
+
+/* 26. STACKED OUTLINE */
+.universe-stack {
+    position: relative;
+    font-family: 'Tourney', system-ui;
+    font-weight: 900;
+    font-size: 48px;
+    letter-spacing: 6px;
+    text-transform: uppercase;
+    color: transparent;
+    -webkit-text-stroke: 1px #ff00d1;
+}
+.universe-stack::before,
+.universe-stack::after {
+    content: 'UNIVERSE';
+    position: absolute;
+    left: 0; top: 0;
+}
+.universe-stack::before {
+    -webkit-text-stroke: 1px #ccfd28;
+    transform: translate(4px, 4px);
+}
+.universe-stack::after {
+    -webkit-text-stroke: 1px #00f0ff;
+    transform: translate(8px, 8px);
+}
+
+/* 27. BACKWARDS / MIRROR */
+.universe-mirror {
+    font-family: 'Space Mono', monospace;
+    font-size: 32px;
+    letter-spacing: 8px;
+    text-transform: uppercase;
+    color: rgba(255,255,255,0.5);
+    transform: scaleX(-1);
+}
+.mirror-note {
+    font-size: 10px;
+    color: rgba(255,255,255,0.2);
+    letter-spacing: 3px;
+    margin-top: 8px;
+    text-transform: uppercase;
+}
+
+/* 28. BINARY */
+.universe-binary {
+    font-family: 'VT323', monospace;
+    font-size: 16px;
+    color: #ccfd28;
+    letter-spacing: 2px;
+    line-height: 1.4;
+    text-align: center;
+    text-shadow: 0 0 5px rgba(204,253,40,0.3);
+}
+.binary-label {
+    font-family: 'Space Mono', monospace;
+    font-size: 10px;
+    color: rgba(255,255,255,0.15);
+    letter-spacing: 3px;
+    text-transform: uppercase;
+    margin-top: 12px;
+}
+
+/* 29. KLIMT / GOLD LEAF */
+.card-klimt {
+    background: linear-gradient(135deg, #1a0a00 0%, #2d1a00 50%, #1a0a00 100%) !important;
+}
+.universe-klimt {
+    font-family: 'Megrim', system-ui;
+    font-size: 42px;
+    letter-spacing: 8px;
+    background: linear-gradient(135deg, #d4a574, #ffd700, #b8860b, #ffd700, #d4a574, #ffd700);
+    background-size: 200% 200%;
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    animation: goldShimmer 3s ease-in-out infinite;
+    text-transform: uppercase;
+}
+
+@keyframes goldShimmer {
+    0% { background-position: 0% 50%; }
+    50% { background-position: 100% 50%; }
+    100% { background-position: 0% 50%; }
+}
+
+/* 30. INTERFERENCE PATTERN */
+.universe-interference {
+    font-family: 'Tourney', system-ui;
+    font-weight: 900;
+    font-size: 52px;
+    letter-spacing: 4px;
+    text-transform: uppercase;
+    background: repeating-linear-gradient(
+        0deg,
+        #ff00d1 0px,
+        #ff00d1 2px,
+        transparent 2px,
+        transparent 4px
+    );
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    animation: scanLines 2s linear infinite;
+}
+
+@keyframes scanLines {
+    to { background-position: 0 20px; }
+}
+
+/* 31. INFINITY LOOP */
+.universe-infinity {
+    font-family: 'Tourney', system-ui;
+    font-weight: 100;
+    font-size: 28px;
+    letter-spacing: 30px;
+    text-transform: uppercase;
+    color: rgba(255,255,255,0.4);
+    position: relative;
+}
+
+.infinity-symbol {
+    font-size: 120px;
+    color: transparent;
+    -webkit-text-stroke: 1px rgba(255,0,209,0.3);
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    font-family: serif;
+    animation: infinitySpin 6s ease-in-out infinite;
+}
+
+@keyframes infinitySpin {
+    0%, 100% { transform: translate(-50%, -50%) rotate(0deg); opacity: 0.3; }
+    50% { transform: translate(-50%, -50%) rotate(180deg); opacity: 0.8; }
+}
+
+/* 32. SMOKE / FOG */
+.universe-smoke {
+    font-family: 'Tourney', system-ui;
+    font-weight: 900;
+    font-size: 48px;
+    letter-spacing: 6px;
+    text-transform: uppercase;
+    color: rgba(255,255,255,0.15);
+    text-shadow: 0 0 30px rgba(255,255,255,0.3), 0 0 60px rgba(255,0,209,0.2);
+    animation: smokeFloat 5s ease-in-out infinite;
+}
+
+@keyframes smokeFloat {
+    0%, 100% { filter: blur(0px); opacity: 0.6; }
+    30% { filter: blur(2px); opacity: 0.3; }
+    60% { filter: blur(1px); opacity: 0.8; }
+}
+
+/* 33. STRUCK THROUGH / CANCELLED */
+.universe-struck {
+    font-family: 'Tourney', system-ui;
+    font-weight: 900;
+    font-size: 44px;
+    letter-spacing: 6px;
+    text-transform: uppercase;
+    color: rgba(255,255,255,0.3);
+    text-decoration: line-through;
+    text-decoration-color: #ff003c;
+    text-decoration-thickness: 4px;
+    position: relative;
+}
+.struck-replace {
+    font-family: 'Rubik Spray Paint', system-ui;
+    font-size: 48px;
+    color: #ccfd28;
+    transform: rotate(-5deg);
+    margin-top: -15px;
+}
+
+/* 34. EARTHQUAKE / VIBRATION */
+.universe-quake {
+    font-family: 'Tourney', system-ui;
+    font-weight: 900;
+    font-size: 48px;
+    letter-spacing: 4px;
+    text-transform: uppercase;
+    color: #ff00d1;
+    animation: earthquake 0.05s infinite;
+}
+
+@keyframes earthquake {
+    0% { transform: translate(1px, 0px) skewX(0deg); }
+    25% { transform: translate(-1px, 1px) skewX(-0.5deg); }
+    50% { transform: translate(0px, -1px) skewX(0.5deg); }
+    75% { transform: translate(1px, 1px) skewX(-0.5deg); }
+    100% { transform: translate(-1px, 0px) skewX(0deg); }
+}
+
+/* 35. BLACK HOLE */
+.universe-blackhole {
+    font-family: 'Tourney', system-ui;
+    font-weight: 100;
+    font-size: 36px;
+    letter-spacing: 12px;
+    text-transform: uppercase;
+    color: rgba(255,255,255,0.4);
+    animation: blackhole 6s ease-in-out infinite;
+}
+
+@keyframes blackhole {
+    0%, 100% { transform: scale(1); letter-spacing: 12px; opacity: 0.6; }
+    50% { transform: scale(0.3); letter-spacing: 0px; opacity: 0; }
+}
+
+/* 36. HOLOGRAPHIC */
+.universe-holo {
+    font-family: 'Tourney', system-ui;
+    font-weight: 900;
+    font-size: 44px;
+    letter-spacing: 6px;
+    text-transform: uppercase;
+    background: linear-gradient(
+        90deg,
+        #ff00d1 0%,
+        #00f0ff 15%,
+        #ccfd28 30%,
+        #ff00d1 45%,
+        #8B5CF6 60%,
+        #00f0ff 75%,
+        #ff00d1 90%,
+        #ccfd28 100%
+    );
+    background-size: 300% 100%;
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    animation: holoShift 3s linear infinite;
+}
+
+@keyframes holoShift {
+    to { background-position: -300% 0; }
+}
+
+/* 37. MARQUEE / SCROLLING */
+.universe-marquee-wrap {
+    overflow: hidden;
+    width: 280px;
+}
+.universe-marquee {
+    font-family: 'Silkscreen', monospace;
+    font-size: 24px;
+    color: #ccfd28;
+    white-space: nowrap;
+    animation: marqueeScroll 6s linear infinite;
+    text-shadow: 0 0 10px rgba(204,253,40,0.3);
+}
+
+@keyframes marqueeScroll {
+    from { transform: translateX(280px); }
+    to { transform: translateX(-400px); }
+}
+
+/* 38. STENCIL / MILITARY */
+.card-military {
+    background: #2d3a2d !important;
+}
+.universe-stencil {
+    font-family: 'Tourney', system-ui;
+    font-weight: 900;
+    font-size: 38px;
+    letter-spacing: 10px;
+    text-transform: uppercase;
+    color: #4a5e4a;
+    text-shadow: 1px 1px 0 rgba(0,0,0,0.3);
+    -webkit-text-stroke: 1px #5a7a5a;
+    -webkit-text-fill-color: transparent;
+}
+
+/* 39. PRICE TAG / SALE */
+.universe-price {
+    font-family: 'Tourney', system-ui;
+    font-weight: 900;
+    font-size: 42px;
+    letter-spacing: 4px;
+    text-transform: uppercase;
+    color: #ff003c;
+    position: relative;
+}
+.price-tag {
+    position: absolute;
+    top: -15px;
+    right: -25px;
+    background: #ccfd28;
+    color: #000;
+    font-size: 10px;
+    padding: 3px 8px;
+    transform: rotate(15deg);
+    font-family: 'Space Mono';
+    letter-spacing: 1px;
+}
+
+/* 40. UNDERWATER / WAVY */
+.universe-wave {
+    font-family: 'Climate Crisis', system-ui;
+    font-size: 36px;
+    color: #00f0ff;
+    text-shadow: 0 5px 15px rgba(0,240,255,0.3);
+    animation: waveDistort 4s ease-in-out infinite;
+}
+
+@keyframes waveDistort {
+    0%, 100% { transform: skewY(0deg) scaleX(1); }
+    25% { transform: skewY(2deg) scaleX(1.02); }
+    75% { transform: skewY(-2deg) scaleX(0.98); }
+}
+
+/* 41. FOLDING / ORIGAMI */
+.universe-fold {
+    font-family: 'Foldit', system-ui;
+    font-weight: 900;
+    font-size: 44px;
+    color: #ff00d1;
+    text-shadow: 2px 2px 0 rgba(255,0,209,0.3);
+}
+
+/* 42. MARKER HATCH */
+.universe-hatch {
+    font-family: 'Rubik Marker Hatch', system-ui;
+    font-size: 48px;
+    color: #ccfd28;
+}
+
+/* 43. EATER / HORROR */
+.universe-eater {
+    font-family: 'Eater', system-ui;
+    font-size: 42px;
+    color: #ff003c;
+    text-shadow: 0 0 20px rgba(255,0,60,0.5);
+    animation: horrorPulse 3s ease-in-out infinite;
+}
+
+@keyframes horrorPulse {
+    0%, 100% { transform: scale(1); opacity: 1; }
+    50% { transform: scale(1.05); opacity: 0.7; text-shadow: 0 0 40px rgba(255,0,60,0.8); }
+}
+
+/* 44. FLAVORS / CANDY */
+.universe-flavors {
+    font-family: 'Flavors', system-ui;
+    font-size: 44px;
+    color: #ff00d1;
+    text-shadow: 3px 3px 0 #ccfd28, 6px 6px 0 #00f0ff;
+}
+
+/* 45. MYSTERY */
+.universe-mystery {
+    font-family: 'Mystery Quest', system-ui;
+    font-size: 44px;
+    color: rgba(255,255,255,0.6);
+    text-shadow: 0 0 30px rgba(139,92,246,0.5);
+}
+
+/* 46. METAL */
+.universe-metal {
+    font-family: 'Metal Mania', system-ui;
+    font-size: 42px;
+    color: #fff;
+    text-shadow: 0 0 10px rgba(255,0,60,0.5);
+    letter-spacing: 6px;
+}
+
+/* 47. LACQUER / WET */
+.universe-lacquer {
+    font-family: 'Lacquer', system-ui;
+    font-size: 44px;
+    color: #ff00d1;
+    text-shadow: 0 2px 10px rgba(255,0,209,0.4);
+}
+
+/* 48. SMOKE RING / HOLLOW */
+.universe-hollow {
+    font-family: 'Kumar One Outline', system-ui;
+    font-size: 38px;
+    color: rgba(255,255,255,0.4);
+    text-shadow: 0 0 20px rgba(255,0,209,0.2);
+}
+
+</style>
+</head>
+<body>
+
+<div class="header">
+    <h1>Nancy Universe</h1>
+    <div class="subtitle">UNHINGED</div>
+    <p>40+ wild treatments &middot; nothing is sacred except the logo</p>
+</div>
+
+<div class="grid">
+
+    <!-- 1. GLITCH HORROR -->
+    <div class="card">
+        <span class="card-number">01</span>
+        <span class="card-tag tag-chaotic">Chaotic</span>
+        <div class="logo-wrap">
+            <img src="assets/logos/nancy-pink.png" class="nancy-logo glitch" alt="Nancy">
+            <div class="universe-glitch">universe</div>
+        </div>
+        <div class="card-desc">Cyberpunk glitch. The brand is corrupted data. Gen Z coded.</div>
+    </div>
+
+    <!-- 2. MELTING -->
+    <div class="card">
+        <span class="card-number">02</span>
+        <span class="card-tag tag-cursed">Cursed</span>
+        <div class="logo-wrap">
+            <img src="assets/logos/nancy-pink.png" class="nancy-logo melt" alt="Nancy">
+            <div class="universe-melt">universe</div>
+        </div>
+        <div class="card-desc">Dripping, melting, dissolving. Hot wax energy. NSFW adjacent.</div>
+    </div>
+
+    <!-- 3. NEON TUBE -->
+    <div class="card" style="background: #0a0015;">
+        <span class="card-number">03</span>
+        <span class="card-tag tag-cosmic">Cosmic</span>
+        <div class="logo-wrap">
+            <img src="assets/logos/nancy-pink.png" class="nancy-logo neon-glow" alt="Nancy">
+            <div class="universe-neon">universe</div>
+        </div>
+        <div class="card-desc">Neon sign on a dark wall. Late night. Bar bathroom mirror selfie vibes.</div>
+    </div>
+
+    <!-- 4. BURNING -->
+    <div class="card">
+        <span class="card-number">04</span>
+        <span class="card-tag tag-chaotic">Chaotic</span>
+        <div class="logo-wrap">
+            <img src="assets/logos/nancy-pink.png" class="nancy-logo" alt="Nancy">
+            <div class="universe-burn">universe</div>
+        </div>
+        <div class="card-desc">Charred. Scorched earth rebrand. Phoenix energy.</div>
+    </div>
+
+    <!-- 5. MATRIX -->
+    <div class="card" style="background: #000a00;">
+        <span class="card-number">05</span>
+        <span class="card-tag tag-experimental">Experimental</span>
+        <div class="logo-wrap">
+            <img src="assets/logos/nancy-pink.png" class="nancy-logo" style="filter: brightness(0) saturate(100%) invert(63%) sepia(80%) saturate(500%) hue-rotate(80deg) brightness(110%);" alt="Nancy">
+            <div class="universe-matrix">UNIVERSE</div>
+        </div>
+        <div class="card-desc">Red pill. You're already inside the Nancy simulation.</div>
+    </div>
+
+    <!-- 6. SHATTERED -->
+    <div class="card">
+        <span class="card-number">06</span>
+        <span class="card-tag tag-chaotic">Chaotic</span>
+        <div class="logo-wrap">
+            <img src="assets/logos/nancy-pink.png" class="nancy-logo" alt="Nancy">
+            <div class="universe-shatter"><span>U</span><span>N</span><span>I</span><span>V</span><span>E</span><span>R</span><span>S</span><span>E</span></div>
+        </div>
+        <div class="card-desc">Broken glass. Each letter a shard. Uncontrollable expansion.</div>
+    </div>
+
+    <!-- 7. SPRAY PAINT -->
+    <div class="card" style="background: #1a1a1a;">
+        <span class="card-number">07</span>
+        <span class="card-tag tag-chaotic">Chaotic</span>
+        <div class="logo-wrap">
+            <img src="assets/logos/nancy-pink.png" class="nancy-logo" alt="Nancy" style="transform: rotate(-3deg);">
+            <div class="universe-spray">universe</div>
+        </div>
+        <div class="card-desc">Tagged on a wall. Guerrilla brand. Street cred.</div>
+    </div>
+
+    <!-- 8. STORM -->
+    <div class="card" style="background: #0a0020;">
+        <span class="card-number">08</span>
+        <span class="card-tag tag-cosmic">Cosmic</span>
+        <div class="logo-wrap">
+            <img src="assets/logos/nancy-pink.png" class="nancy-logo" alt="Nancy" style="filter: drop-shadow(0 0 15px rgba(139,92,246,0.5));">
+            <div class="universe-storm">universe</div>
+        </div>
+        <div class="card-desc">Lightning strike reveal. Blink and you miss it. Electrifying.</div>
+    </div>
+
+    <!-- 9. MOONROCKS -->
+    <div class="card" style="background: #0d0d0d;">
+        <span class="card-number">09</span>
+        <span class="card-tag tag-cosmic">Cosmic</span>
+        <div class="logo-wrap">
+            <img src="assets/logos/nancy-pink.png" class="nancy-logo" alt="Nancy" style="opacity: 0.7;">
+            <div class="universe-moonrock">universe</div>
+        </div>
+        <div class="card-desc">Cratered. Textured. Alien artifact found on the moon.</div>
+    </div>
+
+    <!-- 10. VINYL -->
+    <div class="card">
+        <span class="card-number">10</span>
+        <span class="card-tag tag-experimental">Experimental</span>
+        <div class="logo-wrap">
+            <img src="assets/logos/nancy-pink.png" class="nancy-logo" alt="Nancy">
+            <div class="universe-vinyl">universe</div>
+        </div>
+        <div class="card-desc">Vinyl record grooves. Musical. Retro cool meets body movement.</div>
+    </div>
+
+    <!-- 11. ISO 3D -->
+    <div class="card" style="background: #050510;">
+        <span class="card-number">11</span>
+        <span class="card-tag tag-experimental">Experimental</span>
+        <div class="logo-wrap">
+            <img src="assets/logos/nancy-pink.png" class="nancy-logo lime" alt="Nancy">
+            <div class="universe-iso">universe</div>
+        </div>
+        <div class="card-desc">Isometric 3D blocks. Video game architecture. Build your world.</div>
+    </div>
+
+    <!-- 12. HONK / CLOWN -->
+    <div class="card">
+        <span class="card-number">12</span>
+        <span class="card-tag tag-unhinged">Unhinged</span>
+        <div class="logo-wrap">
+            <img src="assets/logos/nancy-pink.png" class="nancy-logo" alt="Nancy">
+            <div class="universe-honk">universe</div>
+        </div>
+        <div class="card-desc">Clown car energy. Maximalist chaos. The universe is a circus and Nancy is the ringmaster.</div>
+    </div>
+
+    <!-- 13. BAGEL FAT -->
+    <div class="card">
+        <span class="card-number">13</span>
+        <span class="card-tag tag-chaotic">Chaotic</span>
+        <div class="logo-wrap">
+            <img src="assets/logos/nancy-pink.png" class="nancy-logo" alt="Nancy">
+            <div class="universe-bagel">universe</div>
+        </div>
+        <div class="card-desc">Thick. Chunky. Takes up space unapologetically. Body positive energy.</div>
+    </div>
+
+    <!-- 14. BUNGEE SPICE -->
+    <div class="card" style="background: #111;">
+        <span class="card-number">14</span>
+        <span class="card-tag tag-experimental">Experimental</span>
+        <div class="logo-wrap">
+            <img src="assets/logos/nancy-pink.png" class="nancy-logo" alt="Nancy">
+            <div class="universe-spice">universe</div>
+        </div>
+        <div class="card-desc">Chromatic color font. Every letter its own palette. Sensory overload.</div>
+    </div>
+
+    <!-- 15. KABLAMMO -->
+    <div class="card">
+        <span class="card-number">15</span>
+        <span class="card-tag tag-chaotic">Chaotic</span>
+        <div class="logo-wrap">
+            <img src="assets/logos/nancy-pink.png" class="nancy-logo" alt="Nancy">
+            <div class="universe-kablammo">universe</div>
+        </div>
+        <div class="card-desc">Comic book explosion. POW! The big bang that started it all.</div>
+    </div>
+
+    <!-- 16. INVERTED -->
+    <div class="card card-inverted">
+        <span class="card-number">16</span>
+        <span class="card-tag" style="background:#0a0015;color:#fff;">Negative</span>
+        <div class="logo-wrap">
+            <img src="assets/logos/nancy-pink.png" class="nancy-logo black" alt="Nancy">
+            <div class="universe-inverted">universe</div>
+        </div>
+        <div class="card-desc">Inverted reality. White space. The anti-brand brand.</div>
+    </div>
+
+    <!-- 17. REDACTED -->
+    <div class="card" style="background: #111;">
+        <span class="card-number">17</span>
+        <span class="card-tag tag-cursed">Cursed</span>
+        <div class="logo-wrap">
+            <img src="assets/logos/nancy-pink.png" class="nancy-logo" alt="Nancy">
+            <div class="universe-redacted">UNIVERSE</div>
+        </div>
+        <div class="card-desc">Classified. Censored. What are they hiding? Curiosity engine.</div>
+    </div>
+
+    <!-- 18. TYPEWRITER -->
+    <div class="card">
+        <span class="card-number">18</span>
+        <span class="card-tag tag-experimental">Experimental</span>
+        <div class="logo-wrap">
+            <img src="assets/logos/nancy-pink.png" class="nancy-logo" alt="Nancy">
+            <div class="universe-typewriter">UNIVERSE</div>
+        </div>
+        <div class="card-desc">Being written in real-time. The universe is still loading. Under construction.</div>
+    </div>
+
+    <!-- 19. RANSOM NOTE -->
+    <div class="card">
+        <span class="card-number">19</span>
+        <span class="card-tag tag-unhinged">Unhinged</span>
+        <div class="logo-wrap">
+            <img src="assets/logos/nancy-pink.png" class="nancy-logo shake" alt="Nancy">
+            <div class="universe-ransom">
+                <span>U</span><span>N</span><span>I</span><span>V</span><span>E</span><span>R</span><span>S</span><span>E</span>
+            </div>
+        </div>
+        <div class="card-desc">Cut-and-paste psycho energy. Every letter kidnapped from a different font. Chaotic neutral.</div>
+    </div>
+
+    <!-- 20. RAVE FLYER -->
+    <div class="card card-rave">
+        <span class="card-number" style="color:rgba(0,0,0,0.5);">20</span>
+        <span class="card-tag" style="background:#000;color:#fff;">Rave</span>
+        <div class="logo-wrap">
+            <img src="assets/logos/nancy-pink.png" class="nancy-logo black" alt="Nancy" style="height:60px;">
+            <div class="universe-rave">UNIVERSE</div>
+        </div>
+        <div class="card-desc" style="color:rgba(0,0,0,0.6);">2AM warehouse party. Strobe lights. The brand IS the rave.</div>
+    </div>
+
+    <!-- 21. VERTICAL -->
+    <div class="card" style="min-height: 500px;">
+        <span class="card-number">21</span>
+        <span class="card-tag tag-experimental">Experimental</span>
+        <div class="logo-wrap" style="flex-direction: row; gap: 20px; align-items: center;">
+            <img src="assets/logos/nancy-pink.png" class="nancy-logo" alt="Nancy" style="transform: rotate(-90deg); height: 40px;">
+            <div class="universe-vertical">UNIVERSE</div>
+        </div>
+        <div class="card-desc">Rotated axis. The universe doesn't follow your rules.</div>
+    </div>
+
+    <!-- 22. ORBIT -->
+    <div class="card" style="min-height: 450px;">
+        <span class="card-number">22</span>
+        <span class="card-tag tag-cosmic">Cosmic</span>
+        <div style="position: relative; display: flex; align-items: center; justify-content: center;">
+            <img src="assets/logos/nancy-pink.png" class="nancy-logo" alt="Nancy" style="position: relative; z-index: 2; height: 35px;">
+            <div class="orbit-ring">
+                <div class="orbit-dot"></div>
+            </div>
+            <svg viewBox="0 0 200 200" width="200" height="200" style="position: absolute; top: 50%; left: 50%; transform: translate(-50%, -50%);">
+                <defs>
+                    <path id="circlePath" d="M 100, 100 m -70, 0 a 70,70 0 1,1 140,0 a 70,70 0 1,1 -140,0"/>
+                </defs>
+                <text font-family="Space Mono, monospace" font-size="12" letter-spacing="6" fill="rgba(255,255,255,0.3)">
+                    <textPath href="#circlePath">U N I V E R S E &bull; U N I V E R S E &bull;</textPath>
+                </text>
+            </svg>
+        </div>
+        <div class="card-desc">Text orbits the logo like planets. Nancy is the sun. Everything revolves around her.</div>
+    </div>
+
+    <!-- 23. ASCII ART -->
+    <div class="card" style="background: #000;">
+        <span class="card-number">23</span>
+        <span class="card-tag tag-cursed">Cursed</span>
+        <div class="logo-wrap">
+            <img src="assets/logos/nancy-pink.png" class="nancy-logo" alt="Nancy" style="height: 35px; margin-bottom: 10px;">
+            <div class="universe-ascii">
+ _   _ _   _ _____
+| | | | \ | |_   _|
+| | | |  \| | | |
+| |_| | |\  | | |
+ \___/|_| \_| |_|
+ _   _ _____ ____  ____  _____
+| | | | ____|  _ \/ ___|| ____|
+| | | |  _| | |_) \___ \|  _|
+| |_| | |___|  _ < ___) | |___
+ \___/|_____|_| \_\____/|_____|</div>
+        </div>
+        <div class="card-desc">Terminal hacker art. The brand lives in the command line.</div>
+    </div>
+
+    <!-- 24. VAPORWAVE -->
+    <div class="card card-vapor">
+        <span class="card-number" style="color: rgba(0,0,0,0.3);">24</span>
+        <span class="card-tag" style="background:rgba(255,255,255,0.3);color:#000;">Vapor</span>
+        <div class="logo-wrap">
+            <img src="assets/logos/nancy-pink.png" class="nancy-logo white" alt="Nancy" style="height:60px;">
+            <div class="universe-vapor">UNIVERSE</div>
+        </div>
+        <div class="card-desc" style="color:rgba(255,255,255,0.7);">A E S T H E T I C. Roman busts and palm trees. Internet nostalgia as brand identity.</div>
+    </div>
+
+    <!-- 25. DISTRESSED PUNK -->
+    <div class="card" style="background: #111;">
+        <span class="card-number">25</span>
+        <span class="card-tag tag-chaotic">Chaotic</span>
+        <div class="logo-wrap">
+            <img src="assets/logos/nancy-pink.png" class="nancy-logo" alt="Nancy">
+            <div class="universe-distressed">universe</div>
+        </div>
+        <div class="card-desc">Worn out. Beat up. Punk zine aesthetic. The brand has been through it.</div>
+    </div>
+
+    <!-- 26. STACKED OUTLINE -->
+    <div class="card">
+        <span class="card-number">26</span>
+        <span class="card-tag tag-experimental">Experimental</span>
+        <div class="logo-wrap">
+            <img src="assets/logos/nancy-pink.png" class="nancy-logo" alt="Nancy">
+            <div class="universe-stack">UNIVERSE</div>
+        </div>
+        <div class="card-desc">Triple outline offset. Printing error. Dimensional bleed. The universe is layered.</div>
+    </div>
+
+    <!-- 27. MIRROR -->
+    <div class="card">
+        <span class="card-number">27</span>
+        <span class="card-tag tag-cursed">Cursed</span>
+        <div class="logo-wrap">
+            <img src="assets/logos/nancy-pink.png" class="nancy-logo" alt="Nancy">
+            <div class="universe-mirror">UNIVERSE</div>
+            <div class="mirror-note">&larr; read in a mirror</div>
+        </div>
+        <div class="card-desc">Backwards. Hidden message energy. DaVinci code for pleasure.</div>
+    </div>
+
+    <!-- 28. BINARY -->
+    <div class="card" style="background: #000;">
+        <span class="card-number">28</span>
+        <span class="card-tag tag-experimental">Experimental</span>
+        <div class="logo-wrap">
+            <img src="assets/logos/nancy-pink.png" class="nancy-logo" style="filter: brightness(0) saturate(100%) invert(88%) sepia(50%) saturate(500%) hue-rotate(30deg) brightness(105%);" alt="Nancy">
+            <div class="universe-binary">
+01010101 01001110 01001001<br>
+01010110 01000101 01010010<br>
+01010011 01000101
+            </div>
+            <div class="binary-label">// decoded: UNIVERSE</div>
+        </div>
+        <div class="card-desc">The universe reduced to ones and zeros. Digital consciousness.</div>
+    </div>
+
+    <!-- 29. GOLD LEAF -->
+    <div class="card card-klimt">
+        <span class="card-number" style="color: rgba(212,165,116,0.3);">29</span>
+        <span class="card-tag" style="background:#ffd700;color:#000;">Opulent</span>
+        <div class="logo-wrap">
+            <img src="assets/logos/nancy-pink.png" class="nancy-logo gold" alt="Nancy" style="height:60px;">
+            <div class="universe-klimt">UNIVERSE</div>
+        </div>
+        <div class="card-desc" style="color: rgba(212,165,116,0.4);">Klimt. Gold leaf shimmer. Fine art sex energy. Museum-grade luxury.</div>
+    </div>
+
+    <!-- 30. INTERFERENCE -->
+    <div class="card" style="background: #000;">
+        <span class="card-number">30</span>
+        <span class="card-tag tag-experimental">Experimental</span>
+        <div class="logo-wrap">
+            <img src="assets/logos/nancy-pink.png" class="nancy-logo" alt="Nancy">
+            <div class="universe-interference">UNIVERSE</div>
+        </div>
+        <div class="card-desc">CRT scan lines through text. Old TV. Signal interference. Between channels.</div>
+    </div>
+
+    <!-- 31. INFINITY LOOP -->
+    <div class="card" style="min-height: 400px;">
+        <span class="card-number">31</span>
+        <span class="card-tag tag-cosmic">Cosmic</span>
+        <div style="position: relative; display: flex; flex-direction: column; align-items: center; justify-content: center;">
+            <img src="assets/logos/nancy-pink.png" class="nancy-logo" alt="Nancy" style="position:relative;z-index:2;">
+            <div style="position: relative; height: 100px; display: flex; align-items: center; justify-content: center; width: 300px;">
+                <div class="infinity-symbol">&infin;</div>
+                <div class="universe-infinity">UNIVERSE</div>
+            </div>
+        </div>
+        <div class="card-desc">Infinite loop. Never-ending. The universe collapses and expands forever.</div>
+    </div>
+
+    <!-- 32. SMOKE -->
+    <div class="card" style="background: #050505;">
+        <span class="card-number">32</span>
+        <span class="card-tag tag-cosmic">Cosmic</span>
+        <div class="logo-wrap">
+            <img src="assets/logos/nancy-pink.png" class="nancy-logo breathe" alt="Nancy" style="opacity:0.5;">
+            <div class="universe-smoke">UNIVERSE</div>
+        </div>
+        <div class="card-desc">Barely visible. Appearing and disappearing. Smoke after an explosion. Ghost brand.</div>
+    </div>
+
+    <!-- 33. STRUCK THROUGH / REPLACED -->
+    <div class="card">
+        <span class="card-number">33</span>
+        <span class="card-tag tag-unhinged">Unhinged</span>
+        <div class="logo-wrap">
+            <img src="assets/logos/nancy-pink.png" class="nancy-logo" alt="Nancy">
+            <div class="universe-struck">UNIVERSE</div>
+            <div class="struck-replace">everything</div>
+        </div>
+        <div class="card-desc">Universe? Crossed out. Replaced with "everything." The brand keeps changing its mind.</div>
+    </div>
+
+    <!-- 34. EARTHQUAKE -->
+    <div class="card">
+        <span class="card-number">34</span>
+        <span class="card-tag tag-unhinged">Unhinged</span>
+        <div class="logo-wrap">
+            <img src="assets/logos/nancy-pink.png" class="nancy-logo shake" alt="Nancy">
+            <div class="universe-quake">UNIVERSE</div>
+        </div>
+        <div class="card-desc">Constant vibration. Can't sit still. The universe is buzzing.</div>
+    </div>
+
+    <!-- 35. BLACK HOLE -->
+    <div class="card" style="background: #000;">
+        <span class="card-number">35</span>
+        <span class="card-tag tag-cosmic">Cosmic</span>
+        <div class="logo-wrap">
+            <img src="assets/logos/nancy-pink.png" class="nancy-logo breathe" alt="Nancy" style="height:40px;">
+            <div class="universe-blackhole">UNIVERSE</div>
+        </div>
+        <div class="card-desc">Collapsing into a point. The universe devours itself. Gravity well.</div>
+    </div>
+
+    <!-- 36. HOLOGRAPHIC -->
+    <div class="card" style="background: #0a0a0a;">
+        <span class="card-number">36</span>
+        <span class="card-tag tag-experimental">Experimental</span>
+        <div class="logo-wrap">
+            <img src="assets/logos/nancy-pink.png" class="nancy-logo" alt="Nancy">
+            <div class="universe-holo">UNIVERSE</div>
+        </div>
+        <div class="card-desc">Holographic rainbow shift. Every angle a new color. Trading card energy.</div>
+    </div>
+
+    <!-- 37. LED MARQUEE -->
+    <div class="card" style="background: #000;">
+        <span class="card-number">37</span>
+        <span class="card-tag tag-chaotic">Chaotic</span>
+        <div class="logo-wrap">
+            <img src="assets/logos/nancy-pink.png" class="nancy-logo" alt="Nancy">
+            <div class="universe-marquee-wrap">
+                <div class="universe-marquee">&star; NANCY UNIVERSE &star; NANCY UNIVERSE &star; NANCY UNIVERSE &star;</div>
+            </div>
+        </div>
+        <div class="card-desc">Times Square LED ticker. Always scrolling. The news never stops.</div>
+    </div>
+
+    <!-- 38. MILITARY STENCIL -->
+    <div class="card card-military">
+        <span class="card-number" style="color:rgba(255,255,255,0.15);">38</span>
+        <span class="card-tag" style="background:#5a7a5a;color:#000;">Tactical</span>
+        <div class="logo-wrap">
+            <img src="assets/logos/nancy-pink.png" class="nancy-logo" alt="Nancy" style="filter: brightness(0) saturate(100%) invert(40%) sepia(20%) hue-rotate(80deg); opacity: 0.4;">
+            <div class="universe-stencil">UNIVERSE</div>
+        </div>
+        <div class="card-desc" style="color:rgba(255,255,255,0.15);">Ammo crate stencil. Military surplus aesthetic. Tactical pleasure.</div>
+    </div>
+
+    <!-- 39. PRICE TAG -->
+    <div class="card">
+        <span class="card-number">39</span>
+        <span class="card-tag tag-unhinged">Unhinged</span>
+        <div class="logo-wrap">
+            <img src="assets/logos/nancy-pink.png" class="nancy-logo" alt="Nancy">
+            <div class="universe-price" style="position:relative;">
+                UNIVERSE
+                <span class="price-tag">NEW!</span>
+            </div>
+        </div>
+        <div class="card-desc">Clearance rack energy. Everything must go. The universe is on sale.</div>
+    </div>
+
+    <!-- 40. UNDERWATER -->
+    <div class="card" style="background: linear-gradient(180deg, #001a2c, #002a4a);">
+        <span class="card-number">40</span>
+        <span class="card-tag tag-cosmic">Cosmic</span>
+        <div class="logo-wrap">
+            <img src="assets/logos/nancy-pink.png" class="nancy-logo" alt="Nancy" style="filter: drop-shadow(0 0 10px rgba(0,240,255,0.3));">
+            <div class="universe-wave">universe</div>
+        </div>
+        <div class="card-desc" style="color:rgba(0,240,255,0.3);">Deep sea. Pressure waves. The universe is mostly water.</div>
+    </div>
+
+    <!-- 41. ORIGAMI FOLD -->
+    <div class="card">
+        <span class="card-number">41</span>
+        <span class="card-tag tag-experimental">Experimental</span>
+        <div class="logo-wrap">
+            <img src="assets/logos/nancy-pink.png" class="nancy-logo" alt="Nancy">
+            <div class="universe-fold">universe</div>
+        </div>
+        <div class="card-desc">Paper folded into shape. Geometric origami. Made by hand.</div>
+    </div>
+
+    <!-- 42. MARKER HATCH -->
+    <div class="card" style="background: #111;">
+        <span class="card-number">42</span>
+        <span class="card-tag tag-chaotic">Chaotic</span>
+        <div class="logo-wrap">
+            <img src="assets/logos/nancy-pink.png" class="nancy-logo" alt="Nancy">
+            <div class="universe-hatch">universe</div>
+        </div>
+        <div class="card-desc">Cross-hatched marker. Notebook doodle that became a brand. Art school dropout.</div>
+    </div>
+
+    <!-- 43. HORROR -->
+    <div class="card" style="background: #0a0000;">
+        <span class="card-number">43</span>
+        <span class="card-tag tag-cursed">Cursed</span>
+        <div class="logo-wrap">
+            <img src="assets/logos/nancy-pink.png" class="nancy-logo" alt="Nancy" style="filter: hue-rotate(340deg) saturate(2);">
+            <div class="universe-eater">universe</div>
+        </div>
+        <div class="card-desc">Horror movie title card. The universe EATS. Eldritch pleasure brand.</div>
+    </div>
+
+    <!-- 44. CANDY -->
+    <div class="card">
+        <span class="card-number">44</span>
+        <span class="card-tag tag-chaotic">Chaotic</span>
+        <div class="logo-wrap">
+            <img src="assets/logos/nancy-pink.png" class="nancy-logo" alt="Nancy">
+            <div class="universe-flavors">universe</div>
+        </div>
+        <div class="card-desc">Candy store. Every letter is a different flavor. Sugar rush branding.</div>
+    </div>
+
+    <!-- 45. MYSTERY -->
+    <div class="card" style="background: #0a0020;">
+        <span class="card-number">45</span>
+        <span class="card-tag tag-cosmic">Cosmic</span>
+        <div class="logo-wrap">
+            <img src="assets/logos/nancy-pink.png" class="nancy-logo" alt="Nancy" style="opacity:0.6;">
+            <div class="universe-mystery">universe</div>
+        </div>
+        <div class="card-desc">Occult mystery. Séance branding. What lies beyond?</div>
+    </div>
+
+    <!-- 46. METAL -->
+    <div class="card" style="background: #0a0000;">
+        <span class="card-number">46</span>
+        <span class="card-tag tag-chaotic">Chaotic</span>
+        <div class="logo-wrap">
+            <img src="assets/logos/nancy-pink.png" class="nancy-logo" alt="Nancy">
+            <div class="universe-metal">universe</div>
+        </div>
+        <div class="card-desc">Heavy metal band logo. Headbanging energy. The mosh pit of pleasure.</div>
+    </div>
+
+    <!-- 47. LACQUER -->
+    <div class="card">
+        <span class="card-number">47</span>
+        <span class="card-tag tag-cursed">Cursed</span>
+        <div class="logo-wrap">
+            <img src="assets/logos/nancy-pink.png" class="nancy-logo" alt="Nancy">
+            <div class="universe-lacquer">universe</div>
+        </div>
+        <div class="card-desc">Wet paint. Just applied. Don't touch (but you want to).</div>
+    </div>
+
+    <!-- 48. HOLLOW / SMOKE RING -->
+    <div class="card" style="background: #050510;">
+        <span class="card-number">48</span>
+        <span class="card-tag tag-cosmic">Cosmic</span>
+        <div class="logo-wrap">
+            <img src="assets/logos/nancy-pink.png" class="nancy-logo" alt="Nancy" style="opacity:0.4;">
+            <div class="universe-hollow">universe</div>
+        </div>
+        <div class="card-desc">Hollow outlines. Empty inside. The universe is mostly nothing.</div>
+    </div>
+
+</div>
+
+<div style="text-align:center; padding: 40px 20px 80px; font-size: 10px; letter-spacing: 4px; text-transform: uppercase; color: rgba(255,255,255,0.1);">
+    48 treatments &middot; Nothing is off limits &middot; The logo stays. Everything else burns.
+</div>
+
+</body>
+</html>

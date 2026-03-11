@@ -1,0 +1,499 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Nancy Universe — Ranked Concepts</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@0,9..144,100;0,9..144,300;0,9..144,400;0,9..144,700;0,9..144,900;1,9..144,100;1,9..144,300;1,9..144,400;1,9..144,700&family=Space+Mono:wght@400;700&family=DM+Sans:ital,wght@0,200;0,300;0,400;0,500;0,700;0,800;1,300;1,400&family=Syne:wght@400;500;700;800&family=Playfair+Display:ital,wght@0,400;0,500;0,700;0,900;1,400;1,700&family=Unbounded:wght@200;300;400;700;900&family=Caveat:wght@400;700&family=Instrument+Serif:ital@0;1&family=Space+Grotesk:wght@300;400;500;700&family=Outfit:wght@100;200;300;400;700;800&family=Archivo+Black&family=Rubik:wght@300;400;500;700;900&family=Newsreader:ital,opsz,wght@0,6..72,400;0,6..72,700;1,6..72,400&family=Crimson+Pro:ital,wght@0,200;0,400;0,700;1,400&family=Cormorant+Garamond:ital,wght@0,300;0,400;0,700;1,300;1,400&family=Bebas+Neue&family=Inter:wght@100;300;400;700;900&family=Montserrat:ital,wght@0,100;0,300;0,400;0,700;0,900;1,400&family=Josefin+Sans:ital,wght@0,100;0,300;0,400;0,700;1,300&family=Abril+Fatface&family=Cinzel:wght@400;700;900&family=Poiret+One&family=Orbitron:wght@400;700;900&family=Quicksand:wght@300;400;700&family=Comfortaa:wght@300;400;700&family=Anton&family=Oswald:wght@200;400;700&family=Satisfy&family=Silkscreen&family=Press+Start+2P&family=Permanent+Marker&family=Sacramento&family=Dancing+Script:wght@400;700&family=Lobster&family=Pacifico&family=Dela+Gothic+One&family=Righteous&family=Raleway:ital,wght@0,100;0,300;0,400;0,700;1,400&family=Bodoni+Moda:ital,wght@0,400;0,700;0,900;1,400&display=swap" rel="stylesheet">
+<style>
+  * { margin: 0; padding: 0; box-sizing: border-box; }
+  :root {
+    --pink: #ff00d1; --lime: #ccfd28; --cream: #faf8f5;
+    --black: #111; --dark: #0a0015;
+  }
+  body { font-family: 'DM Sans', sans-serif; background: #0a0015; color: #fff; }
+
+  .nancy-logo { display: block; margin: 0 auto; height: auto; }
+  .nancy-logo.white { filter: brightness(0) invert(1); }
+  .nancy-logo.black { filter: brightness(0); }
+
+  /* HERO */
+  .hero {
+    padding: 80px 40px 60px; text-align: center;
+    background: radial-gradient(ellipse at 50% 30%, rgba(255,0,209,0.08) 0%, transparent 60%);
+  }
+  .hero .badge {
+    display: inline-block; background: var(--lime); color: var(--black);
+    font-family: 'Space Mono', monospace; font-size: 0.55rem; letter-spacing: 3px;
+    padding: 4px 14px; border-radius: 20px; margin-bottom: 20px; text-transform: uppercase;
+  }
+  .hero h1 {
+    font-family: 'Fraunces', serif; font-size: 2.4rem; font-weight: 300;
+    letter-spacing: -1px; margin-bottom: 10px; color: #fff;
+  }
+  .hero h1 em { color: var(--pink); font-style: italic; }
+  .hero p { font-size: 0.9rem; opacity: 0.4; max-width: 600px; margin: 0 auto; line-height: 1.6; }
+
+  /* RANK SECTION */
+  .rank-section {
+    max-width: 1100px; margin: 0 auto; padding: 0 40px 80px;
+  }
+  .rank-entry {
+    margin-bottom: 60px; border-radius: 20px; overflow: hidden;
+    background: rgba(255,255,255,0.03); border: 1px solid rgba(255,255,255,0.06);
+  }
+
+  /* RANK HEADER */
+  .rank-header {
+    display: flex; align-items: center; gap: 16px; padding: 20px 28px;
+    border-bottom: 1px solid rgba(255,255,255,0.05);
+  }
+  .rank-medal {
+    font-family: 'Space Mono', monospace; font-size: 0.65rem; font-weight: 700;
+    letter-spacing: 2px; padding: 4px 12px; border-radius: 20px; white-space: nowrap;
+  }
+  .rank-medal.gold { background: #d4af37; color: #1a1a00; }
+  .rank-medal.silver { background: #C0C0C0; color: #333; }
+  .rank-medal.bronze { background: #cd7f32; color: #1a0a00; }
+  .rank-medal.honorable { background: rgba(204,253,40,0.15); color: #ccfd28; }
+  .rank-title {
+    font-family: 'Fraunces', serif; font-size: 1.2rem; font-weight: 400;
+  }
+  .rank-vibe {
+    font-size: 0.7rem; opacity: 0.35; margin-left: auto;
+    font-family: 'Space Mono', monospace; letter-spacing: 1px;
+  }
+
+  /* MAIN LOGO DISPLAY */
+  .rank-display {
+    padding: 60px 40px; text-align: center;
+    display: flex; flex-direction: column; align-items: center; gap: 6px;
+  }
+
+  /* WHY IT WORKS */
+  .rank-rationale {
+    padding: 24px 28px; border-top: 1px solid rgba(255,255,255,0.05);
+    display: grid; grid-template-columns: 1fr 1fr 1fr; gap: 20px;
+  }
+  @media (max-width: 700px) { .rank-rationale { grid-template-columns: 1fr; } }
+  .rationale-col h4 {
+    font-family: 'Space Mono', monospace; font-size: 0.55rem;
+    letter-spacing: 2px; text-transform: uppercase; color: var(--pink);
+    margin-bottom: 8px;
+  }
+  .rationale-col p { font-size: 0.78rem; opacity: 0.5; line-height: 1.5; }
+  .rationale-col ul { list-style: none; font-size: 0.75rem; opacity: 0.45; line-height: 1.8; }
+  .rationale-col ul li::before { content: '→ '; color: var(--lime); }
+
+  /* USE CASES ROW */
+  .use-cases {
+    padding: 20px 28px; border-top: 1px solid rgba(255,255,255,0.04);
+    display: flex; gap: 12px; flex-wrap: wrap;
+  }
+  .use-case {
+    background: rgba(255,255,255,0.04); border-radius: 10px; padding: 16px 20px;
+    flex: 1; min-width: 180px; text-align: center;
+  }
+  .use-case .uc-label {
+    font-family: 'Space Mono', monospace; font-size: 0.5rem;
+    letter-spacing: 2px; text-transform: uppercase; opacity: 0.3; margin-bottom: 10px;
+  }
+
+  /* ALSO CONSIDERED */
+  .also-section {
+    max-width: 1100px; margin: 0 auto; padding: 0 40px 40px;
+  }
+  .also-section h2 {
+    font-family: 'Fraunces', serif; font-size: 1.6rem; font-weight: 300;
+    margin-bottom: 6px;
+  }
+  .also-section > p { font-size: 0.82rem; opacity: 0.35; margin-bottom: 30px; }
+  .also-grid {
+    display: grid; grid-template-columns: repeat(4, 1fr); gap: 14px;
+  }
+  @media (max-width: 800px) { .also-grid { grid-template-columns: repeat(2, 1fr); } }
+  @media (max-width: 500px) { .also-grid { grid-template-columns: 1fr; } }
+  .also-card {
+    border-radius: 14px; padding: 36px 20px; text-align: center;
+    display: flex; flex-direction: column; align-items: center; gap: 4px;
+    transition: transform 0.2s;
+  }
+  .also-card:hover { transform: scale(1.03); }
+  .also-card .also-why { font-size: 0.65rem; opacity: 0.35; margin-top: 8px; max-width: 200px; }
+  .also-card .also-verdict {
+    font-family: 'Space Mono', monospace; font-size: 0.5rem; letter-spacing: 1px;
+    padding: 2px 8px; border-radius: 10px; margin-top: 6px;
+  }
+
+  footer { text-align: center; padding: 60px 40px; font-size: 0.7rem; opacity: 0.25; }
+</style>
+</head>
+<body>
+
+<div class="hero">
+  <div class="badge">Ranked · Deep Dive</div>
+  <h1>The Best "Universe" for <em>nancyuniverse.com</em></h1>
+  <p>Evaluated on: brand fit (does it feel like Nancy?), web readability, mobile scaling, versatility (nav, footer, email, social), and vibe match with the groovy retro wordmark.</p>
+</div>
+
+<!-- ========================================== -->
+<!-- #1 GOLD — Spaced Mono Caps -->
+<!-- ========================================== -->
+<div class="rank-section">
+<div class="rank-entry">
+  <div class="rank-header">
+    <span class="rank-medal gold">#1 GOLD</span>
+    <span class="rank-title">Spaced Mono Caps</span>
+    <span class="rank-vibe">CONFIDENT · ARCHITECTURAL · ICONIC</span>
+  </div>
+  <div class="rank-display" style="background: var(--dark);">
+    <img src="assets/logos/nancy-pink.png" alt="Nancy" class="nancy-logo" style="max-height: 90px;">
+    <div style="font-family: 'Space Mono', monospace; font-weight: 400; font-size: 0.75rem; letter-spacing: 14px; text-transform: uppercase; color: rgba(255,255,255,0.55); margin-top: 4px;">Universe</div>
+  </div>
+  <div class="rank-rationale">
+    <div class="rationale-col">
+      <h4>Why #1</h4>
+      <p>Maximum tension between the warm, groovy Nancy wordmark and the cold, precise monospace "UNIVERSE." That contrast IS the brand — playful meets intentional. It's what makes it feel premium without losing personality.</p>
+    </div>
+    <div class="rationale-col">
+      <h4>Web-ready</h4>
+      <ul>
+        <li>Scales perfectly from mobile nav to hero</li>
+        <li>Space Mono is a Google Font (free, fast)</li>
+        <li>Letter-spacing adjustable per breakpoint</li>
+        <li>Works on dark AND light backgrounds</li>
+        <li>Readable at any size</li>
+      </ul>
+    </div>
+    <div class="rationale-col">
+      <h4>Brand Fit</h4>
+      <p>Nancy's DNA is playful-meets-premium. The groovy wordmark does "playful." Spaced mono caps does "premium." Together they say: "we're fun but we're not a joke." Perfect for a pleasure brand going mainstream.</p>
+    </div>
+  </div>
+  <div class="use-cases">
+    <div class="use-case">
+      <div class="uc-label">Nav Bar</div>
+      <div style="display: flex; align-items: center; justify-content: center; gap: 6px;">
+        <img src="assets/logos/nancy-pink.png" alt="Nancy" style="height: 22px; width: auto;">
+        <span style="font-family: 'Space Mono', monospace; font-size: 0.4rem; letter-spacing: 6px; text-transform: uppercase; color: rgba(255,255,255,0.45);">Universe</span>
+      </div>
+    </div>
+    <div class="use-case">
+      <div class="uc-label">Favicon</div>
+      <div style="width: 32px; height: 32px; background: var(--pink); border-radius: 6px; display: flex; align-items: center; justify-content: center; margin: 0 auto;">
+        <span style="font-family: 'Space Mono', monospace; font-size: 0.55rem; font-weight: 700; color: white;">Nu</span>
+      </div>
+    </div>
+    <div class="use-case">
+      <div class="uc-label">Email Header</div>
+      <div style="background: rgba(255,255,255,0.03); border-radius: 6px; padding: 10px 16px; display: flex; align-items: center; gap: 6px; justify-content: center;">
+        <img src="assets/logos/nancy-pink.png" alt="Nancy" style="height: 18px; width: auto;">
+        <span style="font-family: 'Space Mono', monospace; font-size: 0.35rem; letter-spacing: 5px; text-transform: uppercase; color: rgba(255,255,255,0.4);">Universe</span>
+      </div>
+    </div>
+    <div class="use-case">
+      <div class="uc-label">Light Mode</div>
+      <div style="background: #fff; border-radius: 6px; padding: 12px 16px; text-align: center;">
+        <img src="assets/logos/nancy-pink.png" alt="Nancy" style="height: 20px; width: auto;">
+        <div style="font-family: 'Space Mono', monospace; font-size: 0.3rem; letter-spacing: 6px; text-transform: uppercase; color: #999;">Universe</div>
+      </div>
+    </div>
+  </div>
+</div>
+
+<!-- ========================================== -->
+<!-- #2 SILVER — Thin Sans Whisper -->
+<!-- ========================================== -->
+<div class="rank-entry">
+  <div class="rank-header">
+    <span class="rank-medal silver">#2 SILVER</span>
+    <span class="rank-title">Thin Sans Whisper</span>
+    <span class="rank-vibe">MINIMAL · LUXURY · RESTRAINED</span>
+  </div>
+  <div class="rank-display" style="background: var(--dark);">
+    <img src="assets/logos/nancy-pink.png" alt="Nancy" class="nancy-logo" style="max-height: 90px;">
+    <div style="font-family: 'Outfit', sans-serif; font-weight: 200; font-size: 1.1rem; letter-spacing: 10px; text-transform: uppercase; color: rgba(255,255,255,0.45); margin-top: 2px;">Universe</div>
+  </div>
+  <div class="rank-rationale">
+    <div class="rationale-col">
+      <h4>Why #2</h4>
+      <p>Even softer contrast. The thin weight of Outfit makes "Universe" almost disappear — it's a whisper under the shout of the Nancy wordmark. Feels like the brand is so confident it barely needs to say its full name.</p>
+    </div>
+    <div class="rationale-col">
+      <h4>Web-ready</h4>
+      <ul>
+        <li>Outfit 200 is gorgeous on retina screens</li>
+        <li>Lighter feel — less "techy" than monospace</li>
+        <li>Google Font, variable weight</li>
+        <li>Pairs well with DM Sans body copy</li>
+        <li>Great for hero sections, less suited for small nav</li>
+      </ul>
+    </div>
+    <div class="rationale-col">
+      <h4>Trade-off</h4>
+      <p>Thin weight can get hard to read at small sizes or on non-retina screens. Works beautifully for hero/splash but needs to beef up to 300-400 weight for nav bars. More "editorial" than "destination."</p>
+    </div>
+  </div>
+  <div class="use-cases">
+    <div class="use-case">
+      <div class="uc-label">Hero Banner</div>
+      <div style="text-align: center;">
+        <img src="assets/logos/nancy-pink.png" alt="Nancy" style="height: 46px; width: auto;">
+        <div style="font-family: 'Outfit', sans-serif; font-weight: 200; font-size: 0.6rem; letter-spacing: 8px; text-transform: uppercase; color: rgba(255,255,255,0.4);">Universe</div>
+      </div>
+    </div>
+    <div class="use-case">
+      <div class="uc-label">Stacked (alt)</div>
+      <div style="text-align: center;">
+        <img src="assets/logos/nancy-pink.png" alt="Nancy" style="height: 32px; width: auto;">
+        <div style="font-family: 'Outfit', sans-serif; font-weight: 200; font-size: 0.5rem; letter-spacing: 6px; text-transform: uppercase; color: rgba(255,255,255,0.35);">Universe</div>
+      </div>
+    </div>
+    <div class="use-case">
+      <div class="uc-label">Light Mode</div>
+      <div style="background: #fff; border-radius: 6px; padding: 12px 16px; text-align: center;">
+        <img src="assets/logos/nancy-pink.png" alt="Nancy" style="height: 28px; width: auto;">
+        <div style="font-family: 'Outfit', sans-serif; font-weight: 200; font-size: 0.4rem; letter-spacing: 7px; text-transform: uppercase; color: #bbb;">Universe</div>
+      </div>
+    </div>
+    <div class="use-case">
+      <div class="uc-label">On Gradient</div>
+      <div style="background: linear-gradient(135deg, #1a0030, #0a0015); border-radius: 6px; padding: 12px 16px; text-align: center;">
+        <img src="assets/logos/nancy-pink.png" alt="Nancy" style="height: 28px; width: auto;">
+        <div style="font-family: 'Outfit', sans-serif; font-weight: 200; font-size: 0.4rem; letter-spacing: 7px; text-transform: uppercase; color: rgba(255,255,255,0.35);">Universe</div>
+      </div>
+    </div>
+  </div>
+</div>
+
+<!-- ========================================== -->
+<!-- #3 BRONZE — Cosmic Gradient Universe -->
+<!-- ========================================== -->
+<div class="rank-entry">
+  <div class="rank-header">
+    <span class="rank-medal bronze">#3 BRONZE</span>
+    <span class="rank-title">Gradient Universe</span>
+    <span class="rank-vibe">BOLD · COSMIC · GEN-Z NATIVE</span>
+  </div>
+  <div class="rank-display" style="background: linear-gradient(135deg, #0f0c29, #302b63, #24243e);">
+    <img src="assets/logos/nancy-pink.png" alt="Nancy" class="nancy-logo" style="max-height: 90px;">
+    <div style="font-family: 'Outfit', sans-serif; font-weight: 300; font-size: 1.6rem; letter-spacing: 6px; background: linear-gradient(135deg, #f5af19, #ff00d1, #8B5CF6, #ccfd28); -webkit-background-clip: text; -webkit-text-fill-color: transparent; margin-top: 2px;">Universe</div>
+  </div>
+  <div class="rank-rationale">
+    <div class="rationale-col">
+      <h4>Why #3</h4>
+      <p>"Universe" literally looks cosmic — the gradient captures the brand's color palette (gold, pink, purple, lime) in a single word. It's the most visually exciting option and screams "this is a WORLD to explore."</p>
+    </div>
+    <div class="rationale-col">
+      <h4>Web-ready</h4>
+      <ul>
+        <li>CSS gradient text is well-supported</li>
+        <li>Can animate subtly on hover</li>
+        <li>Colors pull from existing Nancy palette</li>
+        <li>Incredibly shareable / screenshot-worthy</li>
+        <li>Best for dark backgrounds only</li>
+      </ul>
+    </div>
+    <div class="rationale-col">
+      <h4>Trade-off</h4>
+      <p>Harder to make work in light mode. Gradient text doesn't print well. More "splash page" than "everyday nav." Could feel trendy/dated if gradients fall out of fashion. Best used for hero + special moments, not everywhere.</p>
+    </div>
+  </div>
+  <div class="use-cases">
+    <div class="use-case" style="flex: 2;">
+      <div class="uc-label">Splash / Loading</div>
+      <div style="background: linear-gradient(135deg, #0f0c29, #302b63); border-radius: 8px; padding: 20px; text-align: center;">
+        <img src="assets/logos/nancy-pink.png" alt="Nancy" style="height: 40px; width: auto;">
+        <div style="font-family: 'Outfit', sans-serif; font-weight: 300; font-size: 0.8rem; letter-spacing: 4px; background: linear-gradient(135deg, #f5af19, #ff00d1, #8B5CF6, #ccfd28); -webkit-background-clip: text; -webkit-text-fill-color: transparent;">Universe</div>
+      </div>
+    </div>
+    <div class="use-case">
+      <div class="uc-label">Nav (simplified)</div>
+      <div style="display: flex; align-items: center; gap: 6px; justify-content: center;">
+        <img src="assets/logos/nancy-pink.png" alt="Nancy" style="height: 20px; width: auto;">
+        <span style="font-family: 'Outfit', sans-serif; font-weight: 300; font-size: 0.45rem; letter-spacing: 5px; text-transform: uppercase; color: rgba(255,255,255,0.4);">Universe</span>
+      </div>
+      <div style="font-size: 0.55rem; opacity: 0.25; margin-top: 6px;">↑ Drops gradient in nav (too busy)</div>
+    </div>
+    <div class="use-case">
+      <div class="uc-label">OG Image</div>
+      <div style="background: linear-gradient(135deg, #0f0c29, #1a0030); border-radius: 6px; padding: 16px; text-align: center; aspect-ratio: 1.91/1; display: flex; flex-direction: column; align-items: center; justify-content: center;">
+        <img src="assets/logos/nancy-pink.png" alt="Nancy" style="height: 24px; width: auto;">
+        <div style="font-family: 'Outfit', sans-serif; font-weight: 300; font-size: 0.5rem; letter-spacing: 3px; background: linear-gradient(135deg, #f5af19, #ff00d1, #8B5CF6, #ccfd28); -webkit-background-clip: text; -webkit-text-fill-color: transparent;">Universe</div>
+      </div>
+    </div>
+  </div>
+</div>
+
+<!-- ========================================== -->
+<!-- #4 HONORABLE — Presents System -->
+<!-- ========================================== -->
+<div class="rank-entry">
+  <div class="rank-header">
+    <span class="rank-medal honorable">#4</span>
+    <span class="rank-title">"Nancy Universe presents..."</span>
+    <span class="rank-vibe">EXTENSIBLE · PARENT BRAND · SYSTEM</span>
+  </div>
+  <div class="rank-display" style="background: var(--dark);">
+    <img src="assets/logos/nancy-pink.png" alt="Nancy" class="nancy-logo" style="max-height: 80px;">
+    <div style="font-family: 'Space Mono', monospace; font-weight: 400; font-size: 0.55rem; letter-spacing: 8px; text-transform: uppercase; color: rgba(255,255,255,0.4); margin-top: 2px;">Universe</div>
+    <div style="height: 1px; width: 60px; background: rgba(255,255,255,0.08); margin: 14px auto;"></div>
+    <div style="font-family: 'DM Sans', sans-serif; font-weight: 300; font-size: 0.65rem; letter-spacing: 3px; text-transform: uppercase; color: rgba(255,255,255,0.25);">presents</div>
+    <div style="font-family: 'Fraunces', serif; font-style: italic; font-size: 1.4rem; color: var(--pink); margin-top: 4px;">The Fruit Stand</div>
+  </div>
+  <div class="rank-rationale">
+    <div class="rationale-col">
+      <h4>Why it matters</h4>
+      <p>Not a lockup — it's a SYSTEM. "Nancy Universe" becomes the parent that introduces collections, sub-brands, and drops. "Nancy Universe presents: The Fruit Stand." "Nancy Universe presents: The Picnic." Infinitely extensible.</p>
+    </div>
+    <div class="rationale-col">
+      <h4>When to use</h4>
+      <ul>
+        <li>Collection launch pages</li>
+        <li>Product drop announcements</li>
+        <li>Sub-brand introductions</li>
+        <li>Email subject lines</li>
+        <li>Collab pages (Nancy Universe × [brand])</li>
+      </ul>
+    </div>
+    <div class="rationale-col">
+      <h4>Why not higher</h4>
+      <p>It's a system, not a standalone identity. You still need #1 or #2 for the main nav/hero. This works ALONGSIDE a primary lockup, not instead of one. Best for interior pages and marketing moments.</p>
+    </div>
+  </div>
+</div>
+
+<!-- ========================================== -->
+<!-- #5 HONORABLE — Magazine Masthead -->
+<!-- ========================================== -->
+<div class="rank-entry">
+  <div class="rank-header">
+    <span class="rank-medal honorable">#5</span>
+    <span class="rank-title">Magazine Masthead</span>
+    <span class="rank-vibe">EDITORIAL · AUTHORITY · CONTENT-LED</span>
+  </div>
+  <div class="rank-display" style="background: #fff;">
+    <img src="assets/logos/nancy-pink.png" alt="Nancy" class="nancy-logo" style="max-height: 80px;">
+    <div style="font-family: 'Playfair Display', serif; font-weight: 900; font-size: 1.4rem; letter-spacing: -1px; color: #111;">Universe</div>
+    <div style="font-family: 'DM Sans', sans-serif; font-size: 0.55rem; letter-spacing: 4px; text-transform: uppercase; color: #bbb; border-top: 1px solid #eee; padding-top: 6px; margin-top: 4px;">Est. 2024 · Culture · Pleasure · Play</div>
+  </div>
+  <div class="rank-rationale">
+    <div class="rationale-col">
+      <h4>Why it works</h4>
+      <p>If nancyuniverse.com is content-led (articles, guides, reviews, editorial), this is the one. Playfair 900 screams "publication" — like Vogue's masthead. Makes Nancy feel like a cultural authority, not just a store.</p>
+    </div>
+    <div class="rationale-col">
+      <h4>Best for</h4>
+      <ul>
+        <li>Blog / editorial homepage</li>
+        <li>Advertorial landing pages</li>
+        <li>Newsletter headers</li>
+        <li>"The Nancy Edit" content sections</li>
+        <li>Light-mode primary sites</li>
+      </ul>
+    </div>
+    <div class="rationale-col">
+      <h4>Why not higher</h4>
+      <p>Playfair is HEAVY — fights for attention with the Nancy wordmark. Two "loud" elements. Works if "Universe" is the star and Nancy is the masthead, but the brief says Nancy stays sacred. Tension, not harmony.</p>
+    </div>
+  </div>
+</div>
+</div>
+
+<!-- ========================================== -->
+<!-- ALSO CONSIDERED -->
+<!-- ========================================== -->
+<div class="also-section">
+  <h2 style="color: #fff;">Also Considered</h2>
+  <p>Strong concepts that didn't make top 5 — and why.</p>
+
+  <div class="also-grid">
+    <!-- Art Deco -->
+    <div class="also-card" style="background: linear-gradient(180deg, #1a1a2e, #16213e); color: #d4af37;">
+      <img src="assets/logos/nancy-pink.png" alt="Nancy" style="height: 30px; width: auto; filter: brightness(0) saturate(100%) invert(76%) sepia(40%) saturate(500%) hue-rotate(10deg) brightness(95%);">
+      <div style="width: 40%; height: 1px; background: linear-gradient(90deg, transparent, #d4af37, transparent); margin: 4px auto;"></div>
+      <div style="font-family: 'Cinzel', serif; font-size: 0.6rem; letter-spacing: 10px; text-transform: uppercase;">Universe</div>
+      <p class="also-why">Gorgeous but gold Nancy logo feels off-brand. The real Nancy is pink, not gold.</p>
+      <span class="also-verdict" style="background: rgba(255,0,0,0.1); color: #ff6666;">LOGO COLOR CONFLICT</span>
+    </div>
+
+    <!-- Neon Street -->
+    <div class="also-card" style="background: #111; color: #fff;">
+      <img src="assets/logos/nancy-pink.png" alt="Nancy" style="height: 30px; width: auto;">
+      <div style="font-family: 'Bebas Neue', sans-serif; font-size: 1.2rem; letter-spacing: 6px; text-transform: uppercase; color: #ccfd28; text-shadow: 0 0 15px rgba(204,253,40,0.3);">Universe</div>
+      <p class="also-why">Neon lime glow is exciting but too "nightclub." Nancy's vibe is playful, not gritty.</p>
+      <span class="also-verdict" style="background: rgba(255,165,0,0.1); color: #ffaa44;">TOO NIGHTLIFE</span>
+    </div>
+
+    <!-- Pixel Arcade -->
+    <div class="also-card" style="background: #0a0020; color: #ccfd28;">
+      <img src="assets/logos/nancy-pink.png" alt="Nancy" style="height: 30px; width: auto;">
+      <div style="font-family: 'Press Start 2P', monospace; font-size: 0.45rem; letter-spacing: 1px;">UNIVERSE</div>
+      <p class="also-why" style="color: rgba(204,253,40,0.35);">Fun for a microsite or game feature, not for the main brand. Too niche.</p>
+      <span class="also-verdict" style="background: rgba(204,253,40,0.1); color: #ccfd28;">MICROSITE ONLY</span>
+    </div>
+
+    <!-- Kawaii -->
+    <div class="also-card" style="background: linear-gradient(135deg, #FFD6E8, #C5B4E3, #B5E8D5); color: #333;">
+      <img src="assets/logos/nancy-pink.png" alt="Nancy" style="height: 30px; width: auto;">
+      <div style="font-family: 'Comfortaa', sans-serif; font-weight: 700; font-size: 0.9rem; color: #fff; text-shadow: 1px 1px 0 rgba(255,0,209,0.2);">universe ✨</div>
+      <p class="also-why" style="color: rgba(0,0,0,0.35);">TikTok-native energy. Great for social, too young for the website identity.</p>
+      <span class="also-verdict" style="background: rgba(0,0,0,0.06); color: #666;">SOCIAL MEDIA ONLY</span>
+    </div>
+
+    <!-- Retro Future -->
+    <div class="also-card" style="background: linear-gradient(180deg, #ff00d1, #8B5CF6); color: white;">
+      <img src="assets/logos/nancy-pink.png" alt="Nancy" style="height: 30px; width: auto; filter: brightness(0) invert(1);">
+      <div style="font-family: 'Orbitron', sans-serif; font-weight: 700; font-size: 0.6rem; letter-spacing: 6px; text-transform: uppercase;">Universe</div>
+      <p class="also-why" style="color: rgba(255,255,255,0.4);">Orbitron + gradient bg is visually stunning but Orbitron reads "tech/gaming," not "pleasure."</p>
+      <span class="also-verdict" style="background: rgba(255,255,255,0.1); color: rgba(255,255,255,0.6);">WRONG CATEGORY</span>
+    </div>
+
+    <!-- Handwritten -->
+    <div class="also-card" style="background: #fffbf0; color: #333;">
+      <img src="assets/logos/nancy-pink.png" alt="Nancy" style="height: 30px; width: auto;">
+      <div style="font-family: 'Dancing Script', cursive; font-size: 1.1rem; font-weight: 700; color: #ff00d1;">Universe</div>
+      <p class="also-why">Two decorative fonts together (groovy + script) fight for attention. Visual mud.</p>
+      <span class="also-verdict" style="background: rgba(255,0,0,0.06); color: #cc4444;">DOUBLE DECORATIVE</span>
+    </div>
+
+    <!-- Brutalist -->
+    <div class="also-card" style="background: #f5f5f0; border: 2px solid #111; color: #111;">
+      <img src="assets/logos/nancy-pink.png" alt="Nancy" style="height: 28px; width: auto; filter: brightness(0);">
+      <div style="font-family: 'Archivo Black', sans-serif; font-size: 1rem; text-transform: uppercase; letter-spacing: -1px;">UNIVERSE</div>
+      <p class="also-why" style="color: rgba(0,0,0,0.35);">Black Nancy kills the pink DNA. Bold "UNIVERSE" competes. Too aggressive.</p>
+      <span class="also-verdict" style="background: rgba(0,0,0,0.06); color: #666;">TOO AGGRESSIVE</span>
+    </div>
+
+    <!-- Stencil -->
+    <div class="also-card" style="background: #2d2d1f; color: #c5c088;">
+      <img src="assets/logos/nancy-pink.png" alt="Nancy" style="height: 28px; width: auto;">
+      <div style="font-family: 'Oswald', sans-serif; font-weight: 700; font-size: 0.9rem; letter-spacing: 6px; text-transform: uppercase;">Universe</div>
+      <p class="also-why" style="color: rgba(197,192,136,0.35);">Interesting subversion but military-green palette is too far from Nancy's world.</p>
+      <span class="also-verdict" style="background: rgba(197,192,136,0.1); color: #c5c088;">OFF-PALETTE</span>
+    </div>
+  </div>
+</div>
+
+<!-- ========================================== -->
+<!-- RECOMMENDATION -->
+<!-- ========================================== -->
+<div style="max-width: 800px; margin: 60px auto; padding: 40px; text-align: center;">
+  <div style="font-family: 'Space Mono', monospace; font-size: 0.55rem; letter-spacing: 3px; color: var(--lime); margin-bottom: 12px;">RECOMMENDATION</div>
+  <div style="font-family: 'Fraunces', serif; font-size: 1.6rem; font-weight: 300; color: #fff; line-height: 1.4; margin-bottom: 16px;">
+    Use <span style="color: var(--pink); font-style: italic;">#1 Spaced Mono</span> as the primary identity.<br>
+    Use <span style="color: var(--pink); font-style: italic;">#3 Gradient</span> for hero/splash moments.<br>
+    Use <span style="color: var(--pink); font-style: italic;">#4 Presents</span> for collection launches.
+  </div>
+  <p style="font-size: 0.8rem; opacity: 0.35; max-width: 550px; margin: 0 auto; line-height: 1.6;">Three layers, one identity. The mono caps handles everyday navigation. The gradient handles wow moments. The "presents" system handles extensibility. All anchored on the same untouched Nancy wordmark.</p>
+</div>
+
+<footer>
+  <img src="assets/logos/nancy-pink.png" alt="Nancy" style="height: 24px; width: auto; display: block; margin: 0 auto 6px;">
+  <span style="font-family: 'Space Mono', monospace; font-size: 0.45rem; letter-spacing: 4px; text-transform: uppercase; color: rgba(255,255,255,0.25);">Universe</span>
+  <div style="margin-top: 12px; opacity: 0.3;">Brand Identity Deep Dive · March 2026</div>
+</footer>
+
+</body>
+</html>

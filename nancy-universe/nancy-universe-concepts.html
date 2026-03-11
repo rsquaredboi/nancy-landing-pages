@@ -1,0 +1,513 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Nancy Universe — Brand Identity Exploration</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@0,9..144,100;0,9..144,300;0,9..144,400;0,9..144,700;0,9..144,900;1,9..144,100;1,9..144,300;1,9..144,400;1,9..144,700&family=Space+Mono:wght@400;700&family=DM+Sans:ital,wght@0,200;0,300;0,400;0,500;0,700;0,800;1,300;1,400&family=Syne:wght@400;500;700;800&family=Playfair+Display:ital,wght@0,400;0,500;0,700;0,900;1,400;1,700&family=Unbounded:wght@200;300;400;700;900&family=Caveat:wght@400;700&family=Instrument+Serif:ital@0;1&family=Space+Grotesk:wght@300;400;500;700&family=Outfit:wght@100;200;300;400;700;800&family=Archivo+Black&family=Rubik:wght@300;400;500;700;900&family=Newsreader:ital,opsz,wght@0,6..72,400;0,6..72,700;1,6..72,400&family=Crimson+Pro:ital,wght@0,200;0,400;0,700;1,400&family=Cormorant+Garamond:ital,wght@0,300;0,400;0,700;1,300;1,400&family=Pacifico&family=Satisfy&family=Permanent+Marker&family=Oswald:wght@200;400;700&family=Bebas+Neue&family=Inter:wght@100;300;400;700;900&family=Montserrat:ital,wght@0,100;0,300;0,400;0,700;0,900;1,400&family=Raleway:ital,wght@0,100;0,300;0,400;0,700;1,400&family=Bodoni+Moda:ital,wght@0,400;0,700;0,900;1,400&family=Dela+Gothic+One&family=Righteous&family=Comfortaa:wght@300;400;700&family=Quicksand:wght@300;400;700&family=Josefin+Sans:ital,wght@0,100;0,300;0,400;0,700;1,300&family=Major+Mono+Display&family=Lobster&family=Abril+Fatface&family=Silkscreen&family=Press+Start+2P&family=Sacramento&family=Dancing+Script:wght@400;700&family=Cinzel:wght@400;700;900&family=Poiret+One&family=Orbitron:wght@400;700;900&family=Bungee+Shade&family=Anton&display=swap" rel="stylesheet">
+<style>
+  * { margin: 0; padding: 0; box-sizing: border-box; }
+  :root {
+    --pink: #ff00d1; --lime: #ccfd28; --cream: #faf8f5;
+    --black: #111; --dark: #0a0015;
+  }
+  body { font-family: 'DM Sans', sans-serif; background: var(--cream); color: var(--black); }
+
+  /* NANCY LOGO — always the same */
+  .nancy-logo {
+    display: block; margin: 0 auto;
+    height: auto; max-height: 80px;
+    filter: none; /* default: pink on light bg */
+  }
+  .nancy-logo.sm { max-height: 56px; }
+  .nancy-logo.lg { max-height: 100px; }
+  .nancy-logo.xl { max-height: 130px; }
+  .nancy-logo.white { filter: brightness(0) invert(1); }
+  .nancy-logo.gold { filter: brightness(0) saturate(100%) invert(76%) sepia(40%) saturate(500%) hue-rotate(10deg) brightness(95%); }
+  .nancy-logo.lime { filter: brightness(0) saturate(100%) invert(88%) sepia(50%) saturate(500%) hue-rotate(30deg) brightness(105%); }
+  .nancy-logo.black { filter: brightness(0); }
+
+  /* HERO */
+  .hero {
+    background: var(--dark); color: white;
+    padding: 100px 40px 80px; text-align: center;
+    position: relative; overflow: hidden;
+  }
+  .hero::before {
+    content: ''; position: absolute; inset: 0;
+    background: radial-gradient(ellipse at 30% 20%, rgba(255,0,209,0.12) 0%, transparent 50%),
+                radial-gradient(ellipse at 70% 80%, rgba(204,253,40,0.06) 0%, transparent 50%);
+  }
+  .hero * { position: relative; }
+  .hero .badge {
+    display: inline-block; background: var(--lime); color: var(--black);
+    font-family: 'Space Mono', monospace; font-size: 0.6rem; letter-spacing: 3px;
+    padding: 5px 16px; border-radius: 20px; margin-bottom: 24px; text-transform: uppercase;
+  }
+  .hero p { font-size: 0.95rem; opacity: 0.45; max-width: 600px; margin: 20px auto 0; line-height: 1.6; }
+
+  /* SECTION HEADERS */
+  .section-header {
+    padding: 60px 40px 20px; max-width: 1200px; margin: 0 auto;
+  }
+  .section-header h2 {
+    font-family: 'Fraunces', serif; font-size: 1.8rem; font-weight: 300; margin-bottom: 6px;
+  }
+  .section-header p { font-size: 0.85rem; color: #888; max-width: 700px; line-height: 1.5; }
+  .section-header .cat-tag {
+    display: inline-block; font-family: 'Space Mono', monospace;
+    font-size: 0.55rem; letter-spacing: 2px; text-transform: uppercase;
+    padding: 3px 10px; border-radius: 20px; margin-bottom: 10px;
+  }
+
+  /* GRID */
+  .concepts-grid {
+    display: grid; grid-template-columns: repeat(3, 1fr); gap: 20px;
+    padding: 20px 40px 60px; max-width: 1200px; margin: 0 auto;
+  }
+  @media (max-width: 900px) { .concepts-grid { grid-template-columns: repeat(2, 1fr); } }
+  @media (max-width: 560px) { .concepts-grid { grid-template-columns: 1fr; } }
+
+  /* CARD */
+  .card {
+    border-radius: 16px; padding: 48px 28px;
+    display: flex; flex-direction: column; align-items: center; justify-content: center;
+    min-height: 280px; position: relative; transition: transform 0.2s, box-shadow 0.2s;
+    overflow: hidden; gap: 4px;
+  }
+  .card:hover { transform: scale(1.02); box-shadow: 0 12px 40px rgba(0,0,0,0.12); }
+  .card .label {
+    position: absolute; top: 12px; left: 14px;
+    font-family: 'Space Mono', monospace; font-size: 0.5rem;
+    letter-spacing: 1.5px; text-transform: uppercase; opacity: 0.3;
+  }
+  .card .num {
+    position: absolute; top: 12px; right: 14px;
+    font-family: 'Space Mono', monospace; font-size: 0.5rem;
+    letter-spacing: 1px; opacity: 0.2;
+  }
+  .card .desc {
+    margin-top: 14px; font-size: 0.68rem; opacity: 0.45; text-align: center;
+    max-width: 240px; line-height: 1.4;
+  }
+
+  /* Universe text common */
+  .universe-text { text-align: center; display: block; }
+
+  /* WIDE */
+  .concepts-grid .wide { grid-column: span 2; }
+  @media (max-width: 560px) { .concepts-grid .wide { grid-column: span 1; } }
+
+  /* FULL-WIDTH */
+  .hero-card {
+    padding: 80px 40px; text-align: center; position: relative; overflow: hidden;
+    display: flex; flex-direction: column; align-items: center; justify-content: center; gap: 4px;
+  }
+  .hero-card .label {
+    position: absolute; top: 20px; left: 24px;
+    font-family: 'Space Mono', monospace; font-size: 0.55rem;
+    letter-spacing: 2px; text-transform: uppercase; opacity: 0.25;
+  }
+  .hero-card .desc {
+    margin-top: 14px; font-size: 0.8rem; opacity: 0.4; max-width: 480px; line-height: 1.5;
+  }
+
+  .sep { height: 1px; background: rgba(0,0,0,0.06); margin: 0 40px; max-width: 1120px; }
+
+  footer {
+    text-align: center; padding: 60px 40px; font-size: 0.75rem; color: #aaa;
+  }
+  footer img { height: 30px; margin-bottom: 8px; }
+</style>
+</head>
+<body>
+
+<!-- ===== HERO ===== -->
+<div class="hero">
+  <div class="badge">Brand Identity Exploration</div>
+  <img src="assets/logos/nancy-pink.png" alt="Nancy" class="nancy-logo xl white" style="margin-bottom: 8px;">
+  <div style="font-family: 'Space Mono', monospace; font-size: 0.7rem; letter-spacing: 10px; text-transform: uppercase; color: rgba(255,255,255,0.5);">Universe</div>
+  <p>Same iconic Nancy wordmark. 30+ ways to say "Universe" underneath. Which one feels right?</p>
+</div>
+
+<!-- ===== 1. FLAGSHIP HERO TREATMENTS ===== -->
+<div class="section-header">
+  <span class="cat-tag" style="background: rgba(255,0,209,0.1); color: var(--pink);">HERO TREATMENTS</span>
+  <h2>The Flagship Directions</h2>
+  <p>Full-width statements. Any of these could be the one.</p>
+</div>
+
+<!-- 01 — Cosmic Luxury -->
+<div class="hero-card" style="background: linear-gradient(135deg, #0a0015 0%, #1a0030 40%, #0d0020 100%); color: white;">
+  <span class="label" style="color: rgba(255,255,255,0.25);">01 — Cosmic Luxury</span>
+  <img src="assets/logos/nancy-pink.png" alt="Nancy" class="nancy-logo xl">
+  <div class="universe-text" style="font-family: 'Space Mono', monospace; font-weight: 400; font-size: 0.8rem; letter-spacing: 14px; text-transform: uppercase; color: rgba(255,255,255,0.6); margin-top: 2px;">Universe</div>
+  <p class="desc" style="color: rgba(255,255,255,0.3);">Architectural spacing. Cold monospace against the warm groovy Nancy. Like Celine meets cosmos.</p>
+</div>
+
+<!-- 02 — Playful Pop -->
+<div class="hero-card" style="background: linear-gradient(135deg, #FFF0FA, #FFF5E0, #F0FFF0); color: var(--black);">
+  <span class="label">02 — Playful Pop</span>
+  <div style="font-family: 'Caveat', cursive; font-size: 1rem; color: #ff00d1; margin-bottom: -4px;">welcome to the</div>
+  <img src="assets/logos/nancy-pink.png" alt="Nancy" class="nancy-logo xl">
+  <div class="universe-text" style="font-family: 'Unbounded', sans-serif; font-weight: 900; font-size: 2.4rem; letter-spacing: -1px; background: linear-gradient(135deg, #ff00d1, #8B5CF6, #FF9F43); -webkit-background-clip: text; -webkit-text-fill-color: transparent;">Universe</div>
+  <p class="desc">Candy-coated maximalism. Gradient "Universe" in rounded type. Gen Z theme park energy.</p>
+</div>
+
+<!-- 03 — Editorial Minimal -->
+<div class="hero-card" style="background: #fff; border-top: 1px solid rgba(0,0,0,0.06); border-bottom: 1px solid rgba(0,0,0,0.06);">
+  <span class="label">03 — Editorial Minimal</span>
+  <img src="assets/logos/nancy-pink.png" alt="Nancy" class="nancy-logo lg">
+  <div class="universe-text" style="font-family: 'Inter', sans-serif; font-weight: 100; font-size: 0.9rem; letter-spacing: 20px; text-transform: uppercase; color: #bbb; margin-top: 4px;">Universe</div>
+  <p class="desc">Whisper-light sans-serif. The logo does all the talking. Aesop / The Row restraint.</p>
+</div>
+
+<div class="sep"></div>
+
+<!-- ===== 2. TYPOGRAPHIC RANGE ===== -->
+<div class="section-header">
+  <span class="cat-tag" style="background: rgba(204,253,40,0.2); color: #7a9900;">TYPOGRAPHIC RANGE</span>
+  <h2>Same Logo, Different "Universe"</h2>
+  <p>The Nancy wordmark stays sacred. Only "Universe" changes personality.</p>
+</div>
+
+<div class="concepts-grid">
+
+  <!-- 04 Neon Street -->
+  <div class="card" style="background: #111; color: #fff;">
+    <span class="label" style="color: rgba(255,255,255,0.25);">Neon Street</span>
+    <span class="num" style="color: rgba(255,255,255,0.15);">04</span>
+    <img src="assets/logos/nancy-pink.png" alt="Nancy" class="nancy-logo sm">
+    <div class="universe-text" style="font-family: 'Bebas Neue', sans-serif; font-size: 1.8rem; letter-spacing: 6px; text-transform: uppercase; color: #ccfd28; text-shadow: 0 0 20px rgba(204,253,40,0.4);">Universe</div>
+    <p class="desc" style="color: rgba(255,255,255,0.3);">Neon lime glow. Late-night Tokyo alley.</p>
+  </div>
+
+  <!-- 05 Serif Elegant -->
+  <div class="card" style="background: linear-gradient(135deg, #FFF5F9, #fff);">
+    <span class="label">Serif Elegant</span>
+    <span class="num">05</span>
+    <img src="assets/logos/nancy-pink.png" alt="Nancy" class="nancy-logo sm">
+    <div class="universe-text" style="font-family: 'Cormorant Garamond', serif; font-weight: 300; font-style: italic; font-size: 1.4rem; letter-spacing: 6px; color: #999;">Universe</div>
+    <p class="desc">Thin italic serif. Old-world elegance. Chanel No. 5 vibes.</p>
+  </div>
+
+  <!-- 06 Brutalist -->
+  <div class="card" style="background: #f5f5f0; border: 2px solid #111;">
+    <span class="label">Brutalist</span>
+    <span class="num">06</span>
+    <img src="assets/logos/nancy-pink.png" alt="Nancy" class="nancy-logo sm black">
+    <div class="universe-text" style="font-family: 'Archivo Black', sans-serif; font-size: 1.6rem; text-transform: uppercase; letter-spacing: -1px;">UNIVERSE</div>
+    <p class="desc">Heavy, confrontational. Anti-pretty pretty brand.</p>
+  </div>
+
+  <!-- 07 Gold Luxury -->
+  <div class="card" style="background: #1a1a1a; color: #d4c5a9;">
+    <span class="label" style="color: rgba(212,197,169,0.3);">Gold Luxury</span>
+    <span class="num" style="color: rgba(212,197,169,0.2);">07</span>
+    <img src="assets/logos/nancy-pink.png" alt="Nancy" class="nancy-logo sm gold">
+    <div class="universe-text" style="font-family: 'Cinzel', serif; font-weight: 400; font-size: 0.9rem; letter-spacing: 14px; text-transform: uppercase; color: #d4af37;">Universe</div>
+    <p class="desc" style="color: rgba(212,197,169,0.35);">Gold Nancy + gold Cinzel. Tom Ford energy.</p>
+  </div>
+
+  <!-- 08 Pixel Arcade -->
+  <div class="card" style="background: #0a0020; color: #ccfd28;">
+    <span class="label" style="color: rgba(204,253,40,0.3);">Pixel Arcade</span>
+    <span class="num" style="color: rgba(204,253,40,0.2);">08</span>
+    <img src="assets/logos/nancy-pink.png" alt="Nancy" class="nancy-logo sm">
+    <div class="universe-text" style="font-family: 'Press Start 2P', monospace; font-size: 0.65rem; letter-spacing: 2px; color: #ccfd28;">UNIVERSE</div>
+    <p class="desc" style="color: rgba(204,253,40,0.3);">8-bit retro. Gamified shopping. Insert coin.</p>
+  </div>
+
+  <!-- 09 Organic Flow -->
+  <div class="card" style="background: linear-gradient(135deg, #E8F5E9, #FFF8E1);">
+    <span class="label">Organic</span>
+    <span class="num">09</span>
+    <img src="assets/logos/nancy-pink.png" alt="Nancy" class="nancy-logo sm">
+    <div class="universe-text" style="font-family: 'Sacramento', cursive; font-size: 2rem; color: #6BA368;">Universe</div>
+    <p class="desc">Flowing script. Sunday farmers market. Wellness brand.</p>
+  </div>
+
+  <!-- 10 Magazine Masthead (WIDE) -->
+  <div class="card wide" style="background: #fff; border: 1px solid rgba(0,0,0,0.08);">
+    <span class="label">Magazine</span>
+    <span class="num">10</span>
+    <img src="assets/logos/nancy-pink.png" alt="Nancy" class="nancy-logo lg">
+    <div class="universe-text" style="font-family: 'Playfair Display', serif; font-weight: 900; font-size: 1.6rem; letter-spacing: -1px; margin-top: 0;">Universe</div>
+    <div style="font-family: 'DM Sans', sans-serif; font-size: 0.6rem; letter-spacing: 4px; text-transform: uppercase; color: #999; border-top: 1px solid #eee; padding-top: 6px; margin-top: 6px;">Est. 2024 · Culture · Pleasure · Play</div>
+    <p class="desc">Vogue masthead energy. Editorial authority.</p>
+  </div>
+
+  <!-- 11 Terminal / Developer -->
+  <div class="card" style="background: #0d1117; color: #c9d1d9;">
+    <span class="label" style="color: rgba(201,209,217,0.3);">Terminal</span>
+    <span class="num" style="color: rgba(201,209,217,0.2);">11</span>
+    <img src="assets/logos/nancy-pink.png" alt="Nancy" class="nancy-logo sm">
+    <div class="universe-text" style="font-family: 'Space Mono', monospace; font-size: 0.75rem; color: #7ee787; margin-top: 4px;">.universe</div>
+    <p class="desc" style="color: rgba(201,209,217,0.3);">Developer aesthetic. nancy.universe — like a domain.</p>
+  </div>
+
+  <!-- 12 Art Deco -->
+  <div class="card" style="background: linear-gradient(180deg, #1a1a2e, #16213e); color: #d4af37;">
+    <span class="label" style="color: rgba(212,175,55,0.3);">Art Deco</span>
+    <span class="num" style="color: rgba(212,175,55,0.2);">12</span>
+    <img src="assets/logos/nancy-pink.png" alt="Nancy" class="nancy-logo sm gold">
+    <div style="width: 50%; height: 1px; background: linear-gradient(90deg, transparent, #d4af37, transparent); margin: 6px auto;"></div>
+    <div class="universe-text" style="font-family: 'Cinzel', serif; font-weight: 400; font-size: 0.75rem; letter-spacing: 14px; text-transform: uppercase;">Universe</div>
+    <p class="desc" style="color: rgba(212,175,55,0.3);">1920s glamour. Gatsby's pleasure palace.</p>
+  </div>
+
+  <!-- 13 Kawaii -->
+  <div class="card" style="background: linear-gradient(135deg, #FFD6E8, #C5B4E3, #B5E8D5);">
+    <span class="label" style="color: rgba(0,0,0,0.2);">Kawaii</span>
+    <span class="num" style="color: rgba(0,0,0,0.15);">13</span>
+    <img src="assets/logos/nancy-pink.png" alt="Nancy" class="nancy-logo sm">
+    <div class="universe-text" style="font-family: 'Comfortaa', sans-serif; font-weight: 700; font-size: 1.4rem; color: #fff; text-shadow: 2px 2px 0 rgba(255,0,209,0.2);">universe ✨</div>
+    <p class="desc" style="color: rgba(0,0,0,0.3);">Sanrio energy. Cute, round, soft. TikTok-native.</p>
+  </div>
+
+  <!-- 14 Graffiti -->
+  <div class="card" style="background: #222; color: #fff;">
+    <span class="label" style="color: rgba(255,255,255,0.2);">Graffiti</span>
+    <span class="num" style="color: rgba(255,255,255,0.15);">14</span>
+    <img src="assets/logos/nancy-pink.png" alt="Nancy" class="nancy-logo sm">
+    <div class="universe-text" style="font-family: 'Permanent Marker', cursive; font-size: 1.6rem; color: #ccfd28; transform: rotate(-2deg);">Universe</div>
+    <p class="desc" style="color: rgba(255,255,255,0.25);">Tagged on a wall. Underground, rebellious.</p>
+  </div>
+
+  <!-- 15 Geometric Minimal -->
+  <div class="card" style="background: #fafafa;">
+    <span class="label">Geo Minimal</span>
+    <span class="num">15</span>
+    <img src="assets/logos/nancy-pink.png" alt="Nancy" class="nancy-logo sm">
+    <div class="universe-text" style="font-family: 'Josefin Sans', sans-serif; font-weight: 100; font-size: 0.9rem; letter-spacing: 18px; text-transform: uppercase; color: #ccc;">Universe</div>
+    <p class="desc">COS / Muji. Paper-thin and intentional.</p>
+  </div>
+
+  <!-- 16 Cosmic Gradient (WIDE) -->
+  <div class="card wide" style="background: linear-gradient(135deg, #0f0c29, #302b63, #24243e); color: white; min-height: 280px;">
+    <span class="label" style="color: rgba(255,255,255,0.2);">Cosmic Gradient</span>
+    <span class="num" style="color: rgba(255,255,255,0.15);">16</span>
+    <img src="assets/logos/nancy-pink.png" alt="Nancy" class="nancy-logo lg">
+    <div class="universe-text" style="font-family: 'Outfit', sans-serif; font-weight: 200; font-size: 2.2rem; background: linear-gradient(135deg, #f5af19, #ff00d1, #8B5CF6, #ccfd28); -webkit-background-clip: text; -webkit-text-fill-color: transparent; letter-spacing: 4px;">Universe</div>
+    <div style="font-family: 'Space Mono', monospace; font-size: 0.5rem; letter-spacing: 4px; opacity: 0.25; margin-top: 4px;">∞ EXPLORE EVERYTHING ∞</div>
+    <p class="desc" style="color: rgba(255,255,255,0.25);">Aurora borealis gradient. Spotify Wrapped energy.</p>
+  </div>
+
+  <!-- 17 Book Jacket -->
+  <div class="card" style="background: #f0ece3;">
+    <span class="label">Book Jacket</span>
+    <span class="num">17</span>
+    <img src="assets/logos/nancy-pink.png" alt="Nancy" class="nancy-logo sm">
+    <div class="universe-text" style="font-family: 'Newsreader', serif; font-weight: 700; font-size: 1.1rem; letter-spacing: 4px; text-transform: uppercase;">Universe</div>
+    <p class="desc">Literary warmth. Like a bestseller spine.</p>
+  </div>
+
+  <!-- 18 Hypebeast -->
+  <div class="card" style="background: #fff; border: 3px solid #111;">
+    <span class="label">Hypebeast</span>
+    <span class="num">18</span>
+    <img src="assets/logos/nancy-pink.png" alt="Nancy" class="nancy-logo sm black">
+    <div class="universe-text" style="font-family: 'Syne', sans-serif; font-weight: 800; font-size: 1.4rem; text-transform: uppercase; letter-spacing: -1px;">Universe</div>
+    <div style="font-family: 'Space Mono', monospace; font-size: 0.4rem; letter-spacing: 2px; margin-top: 4px; padding: 2px 8px; border: 1px solid #ddd; display: inline-block; color: #999;">™ EST. 2024</div>
+    <p class="desc">Supreme box logo energy. Drop culture.</p>
+  </div>
+
+  <!-- 19 Handwritten -->
+  <div class="card" style="background: #fffbf0;">
+    <span class="label">Handwritten</span>
+    <span class="num">19</span>
+    <img src="assets/logos/nancy-pink.png" alt="Nancy" class="nancy-logo sm">
+    <div class="universe-text" style="font-family: 'Dancing Script', cursive; font-size: 1.6rem; font-weight: 700; color: #ff00d1;">Universe</div>
+    <p class="desc">Personal, intimate. A love letter from Nancy.</p>
+  </div>
+
+  <!-- 20 Monogram -->
+  <div class="card" style="background: #1a0020; color: #ff00d1;">
+    <span class="label" style="color: rgba(255,0,209,0.25);">Monogram</span>
+    <span class="num" style="color: rgba(255,0,209,0.15);">20</span>
+    <div style="width: 90px; height: 90px; border: 2px solid rgba(255,0,209,0.3); border-radius: 50%; display: flex; flex-direction: column; align-items: center; justify-content: center; margin: 0 auto;">
+      <img src="assets/logos/nancy-pink.png" alt="Nancy" style="height: 28px; width: auto;">
+      <span style="font-family: 'Space Mono', monospace; font-size: 0.4rem; letter-spacing: 3px; opacity: 0.5; margin-top: 2px;">UNIVERSE</span>
+    </div>
+    <p class="desc" style="color: rgba(255,0,209,0.3);">Circular monogram. Embossable. Wax seal energy.</p>
+  </div>
+
+  <!-- 21 Rounded -->
+  <div class="card" style="background: linear-gradient(135deg, #E8F8FF, #F0F0FF);">
+    <span class="label">Rounded</span>
+    <span class="num">21</span>
+    <img src="assets/logos/nancy-pink.png" alt="Nancy" class="nancy-logo sm">
+    <div class="universe-text" style="font-family: 'Quicksand', sans-serif; font-weight: 300; font-size: 1.2rem; letter-spacing: 6px; color: #8B5CF6;">universe</div>
+    <p class="desc">Headspace / Glossier. Soft, lowercase, approachable.</p>
+  </div>
+
+  <!-- 22 Stencil -->
+  <div class="card" style="background: #2d2d1f; color: #c5c088;">
+    <span class="label" style="color: rgba(197,192,136,0.3);">Stencil</span>
+    <span class="num" style="color: rgba(197,192,136,0.2);">22</span>
+    <img src="assets/logos/nancy-pink.png" alt="Nancy" class="nancy-logo sm">
+    <div class="universe-text" style="font-family: 'Oswald', sans-serif; font-weight: 700; font-size: 1.4rem; letter-spacing: 8px; text-transform: uppercase;">Universe</div>
+    <p class="desc" style="color: rgba(197,192,136,0.3);">Military surplus. Industrial. Unexpected for pleasure.</p>
+  </div>
+
+  <!-- 23 Elegant Italic (WIDE) -->
+  <div class="card wide" style="background: linear-gradient(135deg, #FFF5F9, #fff);">
+    <span class="label">Elegant Italic</span>
+    <span class="num">23</span>
+    <img src="assets/logos/nancy-pink.png" alt="Nancy" class="nancy-logo lg">
+    <div class="universe-text" style="font-family: 'Crimson Pro', serif; font-style: italic; font-weight: 200; font-size: 2rem; color: #cc99bb; letter-spacing: 8px;">Universe</div>
+    <p class="desc">Whisper-light serif italic. Charlotte Tilbury / La Mer.</p>
+  </div>
+
+  <!-- 24 Retro Futurism -->
+  <div class="card" style="background: linear-gradient(180deg, #ff00d1, #8B5CF6); color: white;">
+    <span class="label" style="color: rgba(255,255,255,0.3);">Retro Future</span>
+    <span class="num" style="color: rgba(255,255,255,0.2);">24</span>
+    <img src="assets/logos/nancy-pink.png" alt="Nancy" class="nancy-logo sm white">
+    <div class="universe-text" style="font-family: 'Orbitron', sans-serif; font-weight: 700; font-size: 1rem; letter-spacing: 8px; text-transform: uppercase;">Universe</div>
+    <p class="desc" style="color: rgba(255,255,255,0.35);">Synthwave. Retro-futuristic. Blade Runner vibes.</p>
+  </div>
+
+  <!-- 25 Blackletter -->
+  <div class="card" style="background: #0a0a0a; color: #e8e8e8;">
+    <span class="label" style="color: rgba(255,255,255,0.2);">Gothic</span>
+    <span class="num" style="color: rgba(255,255,255,0.15);">25</span>
+    <img src="assets/logos/nancy-pink.png" alt="Nancy" class="nancy-logo sm">
+    <div class="universe-text" style="font-family: 'Dela Gothic One', sans-serif; font-size: 1.3rem;">Universe</div>
+    <p class="desc" style="color: rgba(255,255,255,0.2);">Chrome Hearts meets pleasure. Heavy, unapologetic.</p>
+  </div>
+
+  <!-- 26 Tropical -->
+  <div class="card" style="background: #FF9F43; color: white;">
+    <span class="label" style="color: rgba(255,255,255,0.3);">Tropical</span>
+    <span class="num" style="color: rgba(255,255,255,0.25);">26</span>
+    <img src="assets/logos/nancy-pink.png" alt="Nancy" class="nancy-logo sm white">
+    <div class="universe-text" style="font-family: 'Lobster', cursive; font-size: 1.8rem; text-shadow: 2px 2px 0 rgba(0,0,0,0.08);">Universe</div>
+    <p class="desc" style="color: rgba(255,255,255,0.4);">Tropical cocktail menu. Sol de Janeiro energy.</p>
+  </div>
+
+  <!-- 27 Ultra Thin -->
+  <div class="card" style="background: #fff;">
+    <span class="label">Ultra Thin</span>
+    <span class="num">27</span>
+    <img src="assets/logos/nancy-pink.png" alt="Nancy" class="nancy-logo sm">
+    <div class="universe-text" style="font-family: 'Montserrat', sans-serif; font-weight: 100; font-size: 0.85rem; letter-spacing: 16px; text-transform: uppercase; color: #ccc;">Universe</div>
+    <p class="desc">Apple keynote. Precision and negative space.</p>
+  </div>
+
+  <!-- 28 Stamp -->
+  <div class="card" style="background: #faf8f5;">
+    <span class="label">Stamp / Badge</span>
+    <span class="num">28</span>
+    <div style="border: 3px solid #ff00d1; border-radius: 50%; width: 140px; height: 140px; display: flex; flex-direction: column; align-items: center; justify-content: center; transform: rotate(-5deg);">
+      <img src="assets/logos/nancy-pink.png" alt="Nancy" style="height: 36px; width: auto;">
+      <div style="font-family: 'Bebas Neue', sans-serif; font-size: 0.7rem; letter-spacing: 5px; color: #ff00d1; margin-top: 2px;">Universe</div>
+      <div style="font-family: 'Space Mono', monospace; font-size: 0.35rem; letter-spacing: 2px; color: #ccc;">EST 2024</div>
+    </div>
+    <p class="desc">Postal stamp / wax seal. Merch-ready.</p>
+  </div>
+
+  <!-- 29 Split Color -->
+  <div class="card" style="background: linear-gradient(90deg, #0a0015 50%, #fff 50%);">
+    <span class="label" style="color: rgba(255,255,255,0.2);">Duality</span>
+    <span class="num" style="color: rgba(0,0,0,0.15);">29</span>
+    <img src="assets/logos/nancy-pink.png" alt="Nancy" class="nancy-logo sm">
+    <div class="universe-text" style="font-family: 'Raleway', sans-serif; font-weight: 100; font-size: 0.85rem; letter-spacing: 12px; text-transform: uppercase;">
+      <span style="color: rgba(255,255,255,0.5);">Uni</span><span style="color: rgba(0,0,0,0.4);">verse</span>
+    </div>
+    <p class="desc" style="color: #888;">Light/dark. Public/private. The brand's tension.</p>
+  </div>
+
+  <!-- 30 Regal Purple -->
+  <div class="card" style="background: linear-gradient(135deg, #2D1B69, #1a0030); color: #e8d5ff;">
+    <span class="label" style="color: rgba(232,213,255,0.25);">Regal</span>
+    <span class="num" style="color: rgba(232,213,255,0.2);">30</span>
+    <img src="assets/logos/nancy-pink.png" alt="Nancy" class="nancy-logo sm">
+    <div class="universe-text" style="font-family: 'Abril Fatface', serif; font-size: 1.6rem; letter-spacing: 2px; color: #e8d5ff;">Universe</div>
+    <p class="desc" style="color: rgba(232,213,255,0.3);">Royal purple. Regal, decadent. Versace energy.</p>
+  </div>
+
+  <!-- 31 Lime Loud -->
+  <div class="card" style="background: #ccfd28; color: #111;">
+    <span class="label" style="color: rgba(0,0,0,0.2);">Loud</span>
+    <span class="num" style="color: rgba(0,0,0,0.15);">31</span>
+    <img src="assets/logos/nancy-pink.png" alt="Nancy" class="nancy-logo sm black">
+    <div class="universe-text" style="font-family: 'Anton', sans-serif; font-size: 1.8rem; text-transform: uppercase; letter-spacing: 2px;">Universe</div>
+    <p class="desc" style="color: rgba(0,0,0,0.3);">Impossible to ignore. Festival poster energy.</p>
+  </div>
+
+  <!-- 32 Matrix -->
+  <div class="card" style="background: #000; color: #0f0;">
+    <span class="label" style="color: rgba(0,255,0,0.2);">Matrix</span>
+    <span class="num" style="color: rgba(0,255,0,0.15);">32</span>
+    <img src="assets/logos/nancy-pink.png" alt="Nancy" class="nancy-logo sm lime">
+    <div class="universe-text" style="font-family: 'Silkscreen', monospace; font-size: 0.8rem; letter-spacing: 3px;">UNIVERSE</div>
+    <p class="desc" style="color: rgba(0,255,0,0.2);">Hacker aesthetic. Deep web pleasure.</p>
+  </div>
+
+  <!-- 33 Perfume Signature -->
+  <div class="card" style="background: linear-gradient(135deg, #fff, #FFF0FA);">
+    <span class="label">Signature</span>
+    <span class="num">33</span>
+    <img src="assets/logos/nancy-pink.png" alt="Nancy" class="nancy-logo sm">
+    <div class="universe-text" style="font-family: 'Satisfy', cursive; font-size: 1.8rem; color: #ff00d1;">Universe</div>
+    <p class="desc">Perfume bottle label. Signature scent energy.</p>
+  </div>
+
+</div>
+
+<div class="sep"></div>
+
+<!-- ===== 3. SYSTEM CONCEPTS ===== -->
+<div class="section-header">
+  <span class="cat-tag" style="background: rgba(139,92,246,0.1); color: #8B5CF6;">SYSTEM CONCEPTS</span>
+  <h2>Beyond the Lockup</h2>
+  <p>Not just how it looks — how it works. Taglines, sub-brands, shorthand.</p>
+</div>
+
+<div class="concepts-grid">
+
+  <!-- 34 The Observatory (WIDE) -->
+  <div class="card wide" style="background: radial-gradient(ellipse at center, #1a1040, #0a0015); color: white; min-height: 240px;">
+    <span class="label" style="color: rgba(255,255,255,0.2);">Observatory</span>
+    <span class="num" style="color: rgba(255,255,255,0.15);">34</span>
+    <div style="font-family: 'Caveat', cursive; font-size: 0.8rem; color: rgba(204,253,40,0.5); margin-bottom: -2px;">explore the</div>
+    <img src="assets/logos/nancy-pink.png" alt="Nancy" class="nancy-logo lg">
+    <div class="universe-text" style="font-family: 'Outfit', sans-serif; font-weight: 200; font-size: 1.4rem; letter-spacing: 6px; color: rgba(255,255,255,0.6);">Universe</div>
+    <div style="font-family: 'Space Mono', monospace; font-size: 0.45rem; letter-spacing: 6px; opacity: 0.2; margin-top: 6px;">PLEASURE · PLAY · DISCOVERY</div>
+    <p class="desc" style="color: rgba(255,255,255,0.2);">Each product is a constellation. You're looking through a telescope.</p>
+  </div>
+
+  <!-- 35 Presents... -->
+  <div class="card" style="background: #faf8f5; border-bottom: 3px solid #ff00d1;">
+    <span class="label">Presents</span>
+    <span class="num">35</span>
+    <img src="assets/logos/nancy-pink.png" alt="Nancy" class="nancy-logo sm">
+    <div class="universe-text" style="font-family: 'DM Sans', sans-serif; font-weight: 300; font-size: 0.65rem; letter-spacing: 4px; text-transform: uppercase; color: #999; margin: 4px 0;">Universe presents</div>
+    <div style="font-family: 'Fraunces', serif; font-style: italic; font-size: 1.4rem; color: #ff00d1;">The Fruit Stand</div>
+    <p class="desc">Parent → sub-brand system. Infinitely extensible.</p>
+  </div>
+
+  <!-- 36 N★U Shorthand -->
+  <div class="card" style="background: #111; color: #ccfd28;">
+    <span class="label" style="color: rgba(204,253,40,0.25);">Shorthand</span>
+    <span class="num" style="color: rgba(204,253,40,0.2);">36</span>
+    <img src="assets/logos/nancy-pink.png" alt="Nancy" class="nancy-logo sm">
+    <div class="universe-text" style="font-family: 'Bebas Neue', sans-serif; font-size: 2.2rem; letter-spacing: 3px; margin-top: 4px;">
+      <span style="color: #ccfd28;">U</span><span style="color: #ff00d1; font-size: 0.5em;">★</span><span style="color: #ccfd28;">N</span><span style="color: #ccfd28;">I</span><span style="color: #ccfd28;">V</span><span style="color: #ccfd28;">E</span><span style="color: #ccfd28;">R</span><span style="color: #ccfd28;">S</span><span style="color: #ccfd28;">E</span>
+    </div>
+    <p class="desc" style="color: rgba(204,253,40,0.3);">The abbreviation. N★U — a place, not just a brand.</p>
+  </div>
+
+</div>
+
+<!-- FOOTER -->
+<footer>
+  <img src="assets/logos/nancy-pink.png" alt="Nancy">
+  <div style="font-family: 'Space Mono', monospace; font-size: 0.55rem; letter-spacing: 3px; color: #ccc; margin-top: 4px;">UNIVERSE — BRAND IDENTITY EXPLORATION · MARCH 2026</div>
+  <div style="font-family: 'DM Sans', sans-serif; font-size: 0.7rem; color: #bbb; margin-top: 12px;">30+ concepts · Same iconic wordmark · Infinite directions</div>
+</footer>
+
+</body>
+</html>
