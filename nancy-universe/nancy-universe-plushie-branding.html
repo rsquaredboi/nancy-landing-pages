@@ -1,0 +1,1388 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Nancy Universe — Plushie-Inspired Branding</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Space+Mono:wght@400;700&family=Outfit:wght@200;300;400;500;600;700;800;900&family=Comfortaa:wght@300;400;500;600;700&family=Quicksand:wght@300;400;500;600;700&family=Nunito:wght@200;300;400;600;700;800;900&family=Baloo+2:wght@400;500;600;700;800&family=Fredoka:wght@300;400;500;600;700&family=Bubblegum+Sans&family=Lilita+One&family=Chewy&family=Patrick+Hand&family=Sniglet:wght@400;800&family=Cabin+Sketch:wght@400;700&family=Boogaloo&family=Luckiest+Guy&family=Bowlby+One+SC&family=Rubik+Bubbles&family=Rubik+Puddles&family=Shrikhand&family=Press+Start+2P&family=Pixelify+Sans:wght@400;700&family=Silkscreen&family=VT323&family=Monoton&family=Tourney:wght@100;900&family=Climate+Crisis&family=Foldit:wght@100;900&family=Rubik+Glitch&family=Rubik+Vinyl&family=Rubik+Wet+Paint&family=Rubik+Spray+Paint&family=Nabla&family=Honk&family=Bungee+Spice&family=Kablammo&display=swap" rel="stylesheet">
+<style>
+* { margin: 0; padding: 0; box-sizing: border-box; }
+
+body {
+    background: #faf5f0;
+    color: #1a1a2e;
+    font-family: 'Outfit', sans-serif;
+    min-height: 100vh;
+    overflow-x: hidden;
+}
+
+/* ===== HEADER ===== */
+.hero {
+    text-align: center;
+    padding: 60px 20px 40px;
+    position: relative;
+    overflow: hidden;
+}
+
+.hero::before {
+    content: '';
+    position: absolute;
+    top: 0; left: 0; right: 0; bottom: 0;
+    background:
+        radial-gradient(circle at 20% 30%, rgba(255,0,209,0.06) 0%, transparent 50%),
+        radial-gradient(circle at 80% 70%, rgba(204,253,40,0.06) 0%, transparent 50%),
+        radial-gradient(circle at 50% 50%, rgba(139,92,246,0.04) 0%, transparent 50%);
+    pointer-events: none;
+}
+
+.hero h1 {
+    font-family: 'Space Mono', monospace;
+    font-size: 11px;
+    letter-spacing: 6px;
+    text-transform: uppercase;
+    color: rgba(26,26,46,0.3);
+    margin-bottom: 12px;
+}
+
+.hero .title {
+    font-family: 'Fredoka', sans-serif;
+    font-weight: 700;
+    font-size: 42px;
+    color: #ff00d1;
+    line-height: 1.1;
+}
+
+.hero .title span {
+    color: #8B5CF6;
+}
+
+.hero p {
+    margin-top: 12px;
+    font-size: 13px;
+    letter-spacing: 2px;
+    color: rgba(26,26,46,0.35);
+    font-family: 'Space Mono', monospace;
+}
+
+/* Floating plushies in header */
+.float-plushie {
+    position: absolute;
+    opacity: 0.15;
+    animation: floatBob 6s ease-in-out infinite;
+    pointer-events: none;
+}
+.float-plushie:nth-child(1) { top: 10%; left: 5%; animation-delay: 0s; width: 80px; }
+.float-plushie:nth-child(2) { top: 15%; right: 8%; animation-delay: 1s; width: 60px; }
+.float-plushie:nth-child(3) { bottom: 10%; left: 15%; animation-delay: 2s; width: 70px; }
+.float-plushie:nth-child(4) { bottom: 5%; right: 12%; animation-delay: 0.5s; width: 65px; }
+
+@keyframes floatBob {
+    0%, 100% { transform: translateY(0) rotate(0deg); }
+    50% { transform: translateY(-15px) rotate(3deg); }
+}
+
+/* ===== SECTIONS ===== */
+.section {
+    padding: 60px 20px;
+    max-width: 1400px;
+    margin: 0 auto;
+}
+
+.section-label {
+    font-family: 'Space Mono', monospace;
+    font-size: 10px;
+    letter-spacing: 5px;
+    text-transform: uppercase;
+    color: rgba(26,26,46,0.25);
+    margin-bottom: 30px;
+    text-align: center;
+}
+
+/* ===== GRID ===== */
+.grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(400px, 1fr));
+    gap: 0;
+}
+
+.card {
+    border: 1px solid rgba(26,26,46,0.06);
+    padding: 50px 30px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    min-height: 420px;
+    position: relative;
+    overflow: hidden;
+    transition: all 0.3s;
+}
+
+.card:hover {
+    background: rgba(255,0,209,0.02);
+    border-color: rgba(255,0,209,0.1);
+}
+
+.card-number {
+    position: absolute;
+    top: 15px;
+    left: 15px;
+    font-family: 'Space Mono', monospace;
+    font-size: 10px;
+    letter-spacing: 3px;
+    color: rgba(26,26,46,0.12);
+}
+
+.card-tag {
+    position: absolute;
+    top: 15px;
+    right: 15px;
+    font-family: 'Space Mono', monospace;
+    font-size: 8px;
+    letter-spacing: 2px;
+    text-transform: uppercase;
+    padding: 3px 8px;
+    border-radius: 20px;
+}
+
+.tag-kawaii { background: #fce4ec; color: #e91e63; }
+.tag-cosmic { background: #ede7f6; color: #7c4dff; }
+.tag-chaotic { background: #fff3e0; color: #ff6d00; }
+.tag-bold { background: #e8f5e9; color: #2e7d32; }
+.tag-premium { background: #1a1a2e; color: #ffd700; }
+.tag-fav { background: #ff00d1; color: #fff; }
+
+.card-desc {
+    margin-top: 20px;
+    font-family: 'Space Mono', monospace;
+    font-size: 10px;
+    letter-spacing: 1.5px;
+    color: rgba(26,26,46,0.3);
+    text-align: center;
+    max-width: 320px;
+    line-height: 1.7;
+}
+
+/* ===== LOGO ===== */
+.logo-wrap {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 2px;
+}
+
+.nancy-logo {
+    height: 50px;
+    width: auto;
+    object-fit: contain;
+}
+
+.nancy-logo.white { filter: brightness(0) invert(1); }
+.nancy-logo.black { filter: brightness(0); }
+
+/* ===== PLUSHIE STRIP ===== */
+.plushie-strip {
+    display: flex;
+    gap: 6px;
+    align-items: center;
+    justify-content: center;
+    margin-top: 8px;
+}
+.plushie-strip img {
+    width: 32px;
+    height: 32px;
+    object-fit: contain;
+    border-radius: 50%;
+}
+
+/* ===== INDIVIDUAL TREATMENTS ===== */
+
+/* 1. PLUSHIE LETTERS — Each letter in "universe" IS a plushie */
+.universe-plushie-letters {
+    display: flex;
+    gap: 4px;
+    align-items: flex-end;
+}
+.universe-plushie-letters .letter-plush {
+    width: 44px;
+    height: 54px;
+    border-radius: 50% 50% 45% 45%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-family: 'Fredoka', sans-serif;
+    font-weight: 700;
+    font-size: 22px;
+    color: #fff;
+    position: relative;
+    box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+}
+.letter-plush::before,
+.letter-plush::after {
+    content: '';
+    position: absolute;
+    width: 10px;
+    height: 10px;
+    border-radius: 50%;
+    background: inherit;
+    top: 50%;
+    filter: brightness(0.9);
+}
+.letter-plush::before { left: -6px; }
+.letter-plush::after { right: -6px; }
+
+.letter-plush:nth-child(1) { background: #FFD93D; transform: rotate(-5deg); }
+.letter-plush:nth-child(2) { background: #6BCB77; transform: rotate(3deg); }
+.letter-plush:nth-child(3) { background: #ff00d1; transform: rotate(-2deg); }
+.letter-plush:nth-child(4) { background: #4D96FF; transform: rotate(4deg); }
+.letter-plush:nth-child(5) { background: #FF6B6B; transform: rotate(-3deg); }
+.letter-plush:nth-child(6) { background: #8B5CF6; transform: rotate(2deg); }
+.letter-plush:nth-child(7) { background: #FF922B; transform: rotate(-4deg); }
+.letter-plush:nth-child(8) { background: #20C997; transform: rotate(1deg); }
+
+/* 2. KAWAII BUBBLE */
+.universe-kawaii {
+    font-family: 'Fredoka', sans-serif;
+    font-weight: 600;
+    font-size: 36px;
+    letter-spacing: 6px;
+    text-transform: lowercase;
+    color: #ff00d1;
+    position: relative;
+}
+.kawaii-face {
+    position: absolute;
+    top: -30px;
+    left: 50%;
+    transform: translateX(-50%);
+    font-size: 24px;
+    animation: kawaiiBlink 4s infinite;
+}
+@keyframes kawaiiBlink {
+    0%, 95%, 100% { content: '◕‿◕'; }
+    96%, 98% { opacity: 0.5; transform: translateX(-50%) scaleY(0.1); }
+}
+.kawaii-blush {
+    display: flex;
+    gap: 80px;
+    margin-top: -8px;
+}
+.kawaii-blush span {
+    width: 14px;
+    height: 8px;
+    background: rgba(255,107,107,0.4);
+    border-radius: 50%;
+}
+
+/* 3. PLUSHIE ORBIT */
+.orbit-container {
+    position: relative;
+    width: 260px;
+    height: 260px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.orbit-track {
+    position: absolute;
+    width: 220px;
+    height: 220px;
+    border: 1.5px dashed rgba(255,0,209,0.15);
+    border-radius: 50%;
+    animation: orbitSpin 20s linear infinite;
+}
+.orbit-plushie {
+    position: absolute;
+    width: 36px;
+    height: 36px;
+    object-fit: contain;
+    filter: drop-shadow(0 2px 4px rgba(0,0,0,0.15));
+}
+.orbit-plushie:nth-child(1) { top: -18px; left: 50%; transform: translateX(-50%); }
+.orbit-plushie:nth-child(2) { bottom: -18px; left: 50%; transform: translateX(-50%); }
+.orbit-plushie:nth-child(3) { left: -18px; top: 50%; transform: translateY(-50%); }
+.orbit-plushie:nth-child(4) { right: -18px; top: 50%; transform: translateY(-50%); }
+
+@keyframes orbitSpin { to { transform: rotate(360deg); } }
+
+.orbit-text {
+    font-family: 'Comfortaa', sans-serif;
+    font-weight: 300;
+    font-size: 14px;
+    letter-spacing: 8px;
+    text-transform: uppercase;
+    color: rgba(26,26,46,0.35);
+}
+
+/* 4. SQUISH FONT */
+.universe-squish {
+    font-family: 'Fredoka', sans-serif;
+    font-weight: 700;
+    font-size: 52px;
+    color: #ff00d1;
+    animation: squishBounce 2s ease-in-out infinite;
+    text-shadow: 0 6px 20px rgba(255,0,209,0.2);
+}
+@keyframes squishBounce {
+    0%, 100% { transform: scaleX(1) scaleY(1); }
+    25% { transform: scaleX(1.1) scaleY(0.9); }
+    50% { transform: scaleX(0.95) scaleY(1.05); }
+    75% { transform: scaleX(1.02) scaleY(0.98); }
+}
+
+/* 5. PASTEL GRADIENT */
+.universe-pastel-gradient {
+    font-family: 'Quicksand', sans-serif;
+    font-weight: 700;
+    font-size: 42px;
+    letter-spacing: 8px;
+    text-transform: uppercase;
+    background: linear-gradient(135deg, #FFD93D, #FF6B6B, #ff00d1, #8B5CF6, #4D96FF, #6BCB77, #FFD93D);
+    background-size: 300% 300%;
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    animation: pastelShift 6s ease-in-out infinite;
+}
+@keyframes pastelShift {
+    0% { background-position: 0% 50%; }
+    50% { background-position: 100% 50%; }
+    100% { background-position: 0% 50%; }
+}
+
+/* 6. ROUND PILL BADGES */
+.universe-pills {
+    display: flex;
+    gap: 6px;
+    flex-wrap: wrap;
+    justify-content: center;
+}
+.universe-pills .pill {
+    font-family: 'Fredoka', sans-serif;
+    font-weight: 600;
+    font-size: 20px;
+    padding: 8px 14px;
+    border-radius: 30px;
+    color: #fff;
+    box-shadow: 0 3px 10px rgba(0,0,0,0.1);
+    transition: transform 0.2s;
+}
+.universe-pills .pill:hover { transform: scale(1.1) rotate(-3deg); }
+.pill:nth-child(1) { background: #FFD93D; color: #1a1a2e; }
+.pill:nth-child(2) { background: #6BCB77; }
+.pill:nth-child(3) { background: #ff00d1; }
+.pill:nth-child(4) { background: #4D96FF; }
+.pill:nth-child(5) { background: #FF6B6B; }
+.pill:nth-child(6) { background: #8B5CF6; }
+.pill:nth-child(7) { background: #FF922B; }
+.pill:nth-child(8) { background: #20C997; }
+
+/* 7. PLUSHIE FACE LOGO */
+.universe-face {
+    position: relative;
+    width: 180px;
+    height: 180px;
+    border-radius: 50% 50% 45% 45%;
+    background: linear-gradient(180deg, #ffe0f0, #ffd0e8);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    box-shadow: 0 8px 30px rgba(255,0,209,0.15);
+}
+.universe-face::before,
+.universe-face::after {
+    content: '';
+    position: absolute;
+    width: 30px;
+    height: 30px;
+    border-radius: 50%;
+    background: linear-gradient(180deg, #ffd0e8, #ffc0e0);
+    top: 50%;
+    transform: translateY(-50%);
+}
+.universe-face::before { left: -12px; }
+.universe-face::after { right: -12px; }
+.face-eyes {
+    display: flex;
+    gap: 24px;
+    margin-bottom: 4px;
+}
+.face-eyes span {
+    width: 8px;
+    height: 10px;
+    background: #1a1a2e;
+    border-radius: 50%;
+    animation: faceEyeBlink 4s infinite;
+}
+@keyframes faceEyeBlink {
+    0%, 90%, 100% { transform: scaleY(1); }
+    92%, 98% { transform: scaleY(0.1); }
+}
+.face-mouth {
+    width: 16px;
+    height: 8px;
+    border-bottom: 2.5px solid #1a1a2e;
+    border-radius: 0 0 50% 50%;
+}
+.face-blush {
+    display: flex;
+    gap: 40px;
+    margin-top: 2px;
+}
+.face-blush span {
+    width: 18px;
+    height: 10px;
+    background: rgba(255,107,107,0.35);
+    border-radius: 50%;
+}
+.face-text {
+    font-family: 'Fredoka', sans-serif;
+    font-weight: 600;
+    font-size: 14px;
+    letter-spacing: 4px;
+    text-transform: uppercase;
+    color: #ff00d1;
+    margin-top: 8px;
+}
+
+/* 8. STACKED RAINBOW */
+.universe-rainbow-stack {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 0;
+}
+.rainbow-line {
+    font-family: 'Nunito', sans-serif;
+    font-weight: 900;
+    font-size: 18px;
+    letter-spacing: 20px;
+    text-transform: uppercase;
+    padding: 2px 0;
+    line-height: 1.2;
+}
+.rainbow-line:nth-child(1) { color: #FFD93D; }
+.rainbow-line:nth-child(2) { color: #FF922B; }
+.rainbow-line:nth-child(3) { color: #FF6B6B; }
+.rainbow-line:nth-child(4) { color: #ff00d1; }
+.rainbow-line:nth-child(5) { color: #8B5CF6; }
+.rainbow-line:nth-child(6) { color: #4D96FF; }
+.rainbow-line:nth-child(7) { color: #6BCB77; }
+.rainbow-line:nth-child(8) { color: #20C997; }
+
+/* 9. BUBBLEGUM */
+.universe-bubblegum {
+    font-family: 'Bubblegum Sans', cursive;
+    font-size: 48px;
+    color: #ff00d1;
+    text-shadow: 3px 3px 0 rgba(255,0,209,0.15);
+    position: relative;
+}
+.bubble-pop {
+    position: absolute;
+    width: 20px;
+    height: 20px;
+    border-radius: 50%;
+    background: rgba(255,0,209,0.1);
+    animation: bubblePop 3s ease-in-out infinite;
+}
+.bubble-pop:nth-child(1) { top: -10px; right: -10px; animation-delay: 0s; }
+.bubble-pop:nth-child(2) { top: 0; left: -15px; width: 12px; height: 12px; animation-delay: 1s; }
+.bubble-pop:nth-child(3) { bottom: -5px; right: 20px; width: 8px; height: 8px; animation-delay: 0.5s; }
+@keyframes bubblePop {
+    0%, 100% { transform: scale(1); opacity: 0.5; }
+    50% { transform: scale(1.5); opacity: 0; }
+}
+
+/* 10. PLUSHIE COLLECTION STRIP */
+.collection-lockup {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 12px;
+}
+.plushie-row {
+    display: flex;
+    gap: 8px;
+    align-items: center;
+}
+.plushie-row img {
+    width: 48px;
+    height: 48px;
+    object-fit: contain;
+    transition: transform 0.2s;
+    filter: drop-shadow(0 2px 6px rgba(0,0,0,0.1));
+}
+.plushie-row img:hover { transform: scale(1.2) rotate(-5deg); }
+.collection-text {
+    font-family: 'Comfortaa', sans-serif;
+    font-weight: 300;
+    font-size: 13px;
+    letter-spacing: 8px;
+    text-transform: uppercase;
+    color: rgba(26,26,46,0.3);
+}
+
+/* 11. CHEWY/SQUISHY */
+.universe-chewy {
+    font-family: 'Chewy', system-ui;
+    font-size: 52px;
+    color: #8B5CF6;
+    text-shadow: 3px 3px 0 rgba(139,92,246,0.2);
+}
+
+/* 12. SKETCH/DOODLE */
+.universe-sketch {
+    font-family: 'Patrick Hand', cursive;
+    font-size: 42px;
+    color: #1a1a2e;
+    position: relative;
+}
+.universe-sketch::after {
+    content: '';
+    position: absolute;
+    bottom: -4px;
+    left: 0;
+    right: 0;
+    height: 3px;
+    background: #ff00d1;
+    border-radius: 2px;
+    transform: rotate(-1deg);
+}
+
+/* 13. SNIGLET ROUNDED */
+.universe-sniglet {
+    font-family: 'Sniglet', system-ui;
+    font-weight: 800;
+    font-size: 44px;
+    color: #FF6B6B;
+    letter-spacing: 4px;
+    text-shadow: 2px 2px 0 rgba(255,107,107,0.15);
+}
+
+/* 14. LUCKIEST GUY */
+.universe-lucky {
+    font-family: 'Luckiest Guy', system-ui;
+    font-size: 48px;
+    color: #FFD93D;
+    -webkit-text-stroke: 2px #1a1a2e;
+    text-shadow: 3px 3px 0 rgba(26,26,46,0.2);
+}
+
+/* 15. SOFT GLOW */
+.card-softglow {
+    background: #1a1a2e !important;
+}
+.universe-softglow {
+    font-family: 'Quicksand', sans-serif;
+    font-weight: 300;
+    font-size: 36px;
+    letter-spacing: 10px;
+    text-transform: lowercase;
+    color: rgba(255,0,209,0.6);
+    text-shadow: 0 0 20px rgba(255,0,209,0.4), 0 0 40px rgba(255,0,209,0.2), 0 0 80px rgba(255,0,209,0.1);
+}
+
+/* 16. PIXEL PLUSHIE */
+.universe-pixel {
+    font-family: 'Pixelify Sans', monospace;
+    font-weight: 700;
+    font-size: 42px;
+    color: #6BCB77;
+    text-shadow: 3px 3px 0 rgba(107,203,119,0.2);
+    image-rendering: pixelated;
+}
+
+/* 17. NABLA 3D */
+.universe-nabla {
+    font-family: 'Nabla', system-ui;
+    font-size: 44px;
+}
+
+/* 18. RUBIK BUBBLES */
+.universe-rubik-bubbles {
+    font-family: 'Rubik Bubbles', system-ui;
+    font-size: 44px;
+    color: #4D96FF;
+}
+
+/* 19. RUBIK PUDDLES */
+.universe-rubik-puddles {
+    font-family: 'Rubik Puddles', system-ui;
+    font-size: 44px;
+    color: #ff00d1;
+}
+
+/* 20. SHRIKHAND */
+.universe-shrikhand {
+    font-family: 'Shrikhand', serif;
+    font-size: 42px;
+    color: #FF922B;
+    letter-spacing: 2px;
+}
+
+/* 21. PLUSHIE TEXTURE */
+.universe-plush-texture {
+    font-family: 'Fredoka', sans-serif;
+    font-weight: 700;
+    font-size: 54px;
+    color: transparent;
+    background: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='6' height='6'%3E%3Ccircle cx='3' cy='3' r='1.5' fill='%23ff00d1' opacity='0.3'/%3E%3C/svg%3E") repeat,
+                linear-gradient(135deg, #ff00d1, #8B5CF6);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    filter: url(#fuzzy);
+}
+
+/* 22. BOOGALOO FUN */
+.universe-boogaloo {
+    font-family: 'Boogaloo', system-ui;
+    font-size: 48px;
+    color: #20C997;
+    letter-spacing: 3px;
+}
+
+/* 23. WAVY MARQUEE */
+.marquee-container {
+    overflow: hidden;
+    width: 350px;
+    mask-image: linear-gradient(90deg, transparent, black 15%, black 85%, transparent);
+}
+.universe-plush-marquee {
+    display: flex;
+    gap: 16px;
+    animation: marqueeSlide 12s linear infinite;
+    white-space: nowrap;
+}
+.universe-plush-marquee img {
+    width: 40px;
+    height: 40px;
+    object-fit: contain;
+    flex-shrink: 0;
+}
+@keyframes marqueeSlide {
+    from { transform: translateX(0); }
+    to { transform: translateX(-50%); }
+}
+
+/* 24. KAWAII UNIVERSE MASCOT */
+.mascot-wrap {
+    position: relative;
+}
+.mascot-body {
+    width: 120px;
+    height: 120px;
+    border-radius: 50%;
+    background: linear-gradient(180deg, #2a1a4e, #1a0a3e);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    position: relative;
+    box-shadow: 0 0 30px rgba(139,92,246,0.3), inset 0 0 20px rgba(255,255,255,0.05);
+    overflow: hidden;
+}
+.mascot-body::before {
+    content: '';
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    background: radial-gradient(circle at 30% 30%, rgba(255,255,255,0.15) 0%, transparent 50%),
+                radial-gradient(circle at 70% 60%, rgba(255,0,209,0.1) 0%, transparent 40%);
+}
+.mascot-body::after {
+    content: '✦';
+    position: absolute;
+    top: 15px;
+    right: 25px;
+    font-size: 8px;
+    color: rgba(255,255,255,0.5);
+    animation: twinkle 2s infinite;
+}
+@keyframes twinkle {
+    0%, 100% { opacity: 0.3; transform: scale(1); }
+    50% { opacity: 1; transform: scale(1.3); }
+}
+.mascot-eyes {
+    display: flex;
+    gap: 20px;
+    position: relative;
+    z-index: 1;
+}
+.mascot-eyes span {
+    width: 10px;
+    height: 12px;
+    background: #fff;
+    border-radius: 50%;
+    position: relative;
+}
+.mascot-eyes span::after {
+    content: '';
+    position: absolute;
+    width: 4px;
+    height: 4px;
+    background: #fff;
+    border-radius: 50%;
+    top: -6px;
+    right: -2px;
+    opacity: 0.6;
+}
+.mascot-mouth {
+    width: 14px;
+    height: 7px;
+    border-bottom: 2px solid rgba(255,255,255,0.7);
+    border-radius: 0 0 50% 50%;
+    margin-top: 4px;
+    position: relative;
+    z-index: 1;
+}
+.mascot-blush {
+    display: flex;
+    gap: 34px;
+    position: relative;
+    z-index: 1;
+    margin-top: 2px;
+}
+.mascot-blush span {
+    width: 14px;
+    height: 8px;
+    background: rgba(255,107,107,0.3);
+    border-radius: 50%;
+}
+.mascot-arms {
+    position: absolute;
+    width: 100%;
+    top: 50%;
+}
+.mascot-arms::before,
+.mascot-arms::after {
+    content: '';
+    position: absolute;
+    width: 20px;
+    height: 20px;
+    background: linear-gradient(180deg, #2a1a4e, #1a0a3e);
+    border-radius: 50%;
+    top: -10px;
+}
+.mascot-arms::before { left: -8px; }
+.mascot-arms::after { right: -8px; }
+.mascot-label {
+    font-family: 'Comfortaa', sans-serif;
+    font-weight: 700;
+    font-size: 11px;
+    letter-spacing: 5px;
+    text-transform: uppercase;
+    color: rgba(26,26,46,0.3);
+    margin-top: 12px;
+}
+
+/* 25. DARK PLUSHIE PARADE */
+.card-dark {
+    background: #1a1a2e !important;
+}
+.card-dark .card-number,
+.card-dark .card-desc { color: rgba(255,255,255,0.2); }
+
+/* 26. FREDOKA BOUNCE */
+.universe-fredoka-bounce {
+    font-family: 'Fredoka', sans-serif;
+    font-weight: 700;
+    font-size: 44px;
+    color: #ff00d1;
+    display: flex;
+    gap: 2px;
+}
+.universe-fredoka-bounce span {
+    display: inline-block;
+    animation: letterBounce 1.5s ease-in-out infinite;
+}
+.universe-fredoka-bounce span:nth-child(1) { animation-delay: 0s; }
+.universe-fredoka-bounce span:nth-child(2) { animation-delay: 0.1s; }
+.universe-fredoka-bounce span:nth-child(3) { animation-delay: 0.2s; }
+.universe-fredoka-bounce span:nth-child(4) { animation-delay: 0.3s; }
+.universe-fredoka-bounce span:nth-child(5) { animation-delay: 0.4s; }
+.universe-fredoka-bounce span:nth-child(6) { animation-delay: 0.5s; }
+.universe-fredoka-bounce span:nth-child(7) { animation-delay: 0.6s; }
+.universe-fredoka-bounce span:nth-child(8) { animation-delay: 0.7s; }
+@keyframes letterBounce {
+    0%, 100% { transform: translateY(0); }
+    30% { transform: translateY(-12px); }
+    50% { transform: translateY(0); }
+}
+
+/* 27. WAVE COLLECTION NAME */
+.wave-lockup {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 6px;
+}
+.wave-name {
+    font-family: 'Fredoka', sans-serif;
+    font-weight: 600;
+    font-size: 14px;
+    letter-spacing: 3px;
+    text-transform: uppercase;
+    padding: 6px 16px;
+    border-radius: 20px;
+    background: rgba(255,0,209,0.08);
+    color: #ff00d1;
+}
+.wave-presents {
+    font-family: 'Comfortaa', sans-serif;
+    font-weight: 300;
+    font-size: 10px;
+    letter-spacing: 4px;
+    text-transform: uppercase;
+    color: rgba(26,26,46,0.2);
+}
+
+/* 28. LILITA ONE */
+.universe-lilita {
+    font-family: 'Lilita One', sans-serif;
+    font-size: 48px;
+    color: #FF6B6B;
+    text-shadow: 3px 3px 0 rgba(255,107,107,0.15);
+}
+
+/* 29. CLIMATIC */
+.universe-climatic {
+    font-family: 'Climate Crisis', system-ui;
+    font-size: 32px;
+    color: #8B5CF6;
+    text-shadow: 0 4px 15px rgba(139,92,246,0.2);
+}
+
+/* 30. HONK COLOR */
+.universe-honk-color {
+    font-family: 'Honk', system-ui;
+    font-size: 52px;
+}
+
+/* full-width divider */
+.divider {
+    grid-column: 1 / -1;
+    padding: 30px;
+    text-align: center;
+    border-top: 1px solid rgba(26,26,46,0.06);
+    border-bottom: 1px solid rgba(26,26,46,0.06);
+}
+.divider-text {
+    font-family: 'Space Mono', monospace;
+    font-size: 9px;
+    letter-spacing: 5px;
+    text-transform: uppercase;
+    color: rgba(26,26,46,0.15);
+}
+
+</style>
+</head>
+<body>
+
+<div class="hero">
+    <img src="assets/plushies/lem/lem-hero.png" class="float-plushie" alt="" style="top:8%;left:4%;">
+    <img src="assets/plushies/berri/berri-hero.png" class="float-plushie" alt="" style="top:12%;right:6%;">
+    <img src="assets/plushies/galaxy/galaxy-hero.png" class="float-plushie" alt="" style="bottom:15%;left:12%;">
+    <img src="assets/plushies/nebula/nebula-hero.png" class="float-plushie" alt="" style="bottom:8%;right:10%;">
+    <h1>Nancy Universe &middot; Plushie DNA Edition</h1>
+    <div class="title">What if the brand <span>felt</span> like the plushies?</div>
+    <p>Soft, round, colorful, kawaii, squishy, alive</p>
+</div>
+
+<div class="grid" style="max-width:1400px;margin:0 auto;padding:0 20px;">
+
+    <!-- ===== SECTION: PLUSHIE-NATIVE ===== -->
+    <div class="divider">
+        <div class="divider-text">Section 1 &mdash; Plushie-Native Treatments</div>
+    </div>
+
+    <!-- 1. PLUSHIE LETTERS -->
+    <div class="card">
+        <span class="card-number">01</span>
+        <span class="card-tag tag-fav">&starf; Favorite</span>
+        <div class="logo-wrap">
+            <img src="assets/logos/nancy-pink.png" class="nancy-logo" alt="Nancy">
+            <div class="universe-plushie-letters">
+                <div class="letter-plush">u</div>
+                <div class="letter-plush">n</div>
+                <div class="letter-plush">i</div>
+                <div class="letter-plush">v</div>
+                <div class="letter-plush">e</div>
+                <div class="letter-plush">r</div>
+                <div class="letter-plush">s</div>
+                <div class="letter-plush">e</div>
+            </div>
+        </div>
+        <div class="card-desc">Each letter IS a plushie. Round bodies, tiny arms, different colors. The alphabet joined the Nancy family.</div>
+    </div>
+
+    <!-- 2. KAWAII BUBBLE TEXT -->
+    <div class="card">
+        <span class="card-number">02</span>
+        <span class="card-tag tag-kawaii">Kawaii</span>
+        <div class="logo-wrap">
+            <img src="assets/logos/nancy-pink.png" class="nancy-logo" alt="Nancy">
+            <div style="position:relative;">
+                <div class="kawaii-face">◕‿◕</div>
+                <div class="universe-kawaii">universe</div>
+                <div class="kawaii-blush"><span></span><span></span></div>
+            </div>
+        </div>
+        <div class="card-desc">The word itself has a face. Blushing cheeks. It's alive and looking at you with plushie eyes.</div>
+    </div>
+
+    <!-- 3. PLUSHIE ORBIT -->
+    <div class="card">
+        <span class="card-number">03</span>
+        <span class="card-tag tag-fav">&starf; Favorite</span>
+        <div class="logo-wrap" style="gap:0;">
+            <img src="assets/logos/nancy-pink.png" class="nancy-logo" alt="Nancy" style="margin-bottom:-20px;z-index:3;position:relative;">
+            <div class="orbit-container">
+                <div class="orbit-track">
+                    <img src="assets/plushies/lem/lem-hero.png" class="orbit-plushie" alt="Lem">
+                    <img src="assets/plushies/berri/berri-hero.png" class="orbit-plushie" alt="Berri">
+                    <img src="assets/plushies/avo/avo-hero.png" class="orbit-plushie" alt="Avo">
+                    <img src="assets/plushies/cosmo/cosmo-hero.png" class="orbit-plushie" alt="Cosmo">
+                </div>
+                <div class="orbit-text">universe</div>
+            </div>
+        </div>
+        <div class="card-desc">Plushies orbit the Nancy logo like planets. The universe is literally made of plushie characters.</div>
+    </div>
+
+    <!-- 4. SQUISH BOUNCE -->
+    <div class="card">
+        <span class="card-number">04</span>
+        <span class="card-tag tag-kawaii">Kawaii</span>
+        <div class="logo-wrap">
+            <img src="assets/logos/nancy-pink.png" class="nancy-logo" alt="Nancy">
+            <div class="universe-squish">universe</div>
+        </div>
+        <div class="card-desc">Squishy elastic text that bounces like you're squeezing a plushie. Fredoka = the plushie font.</div>
+    </div>
+
+    <!-- 5. PASTEL RAINBOW GRADIENT -->
+    <div class="card">
+        <span class="card-number">05</span>
+        <span class="card-tag tag-fav">&starf; Favorite</span>
+        <div class="logo-wrap">
+            <img src="assets/logos/nancy-pink.png" class="nancy-logo" alt="Nancy">
+            <div class="universe-pastel-gradient">UNIVERSE</div>
+        </div>
+        <div class="card-desc">Shifting through every plushie color. Lem yellow → Berri pink → Nebula purple → Galaxy blue → Matcha green. The full spectrum.</div>
+    </div>
+
+    <!-- 6. PILL BADGES -->
+    <div class="card">
+        <span class="card-number">06</span>
+        <span class="card-tag tag-bold">Bold</span>
+        <div class="logo-wrap">
+            <img src="assets/logos/nancy-pink.png" class="nancy-logo" alt="Nancy">
+            <div class="universe-pills">
+                <span class="pill">U</span>
+                <span class="pill">N</span>
+                <span class="pill">I</span>
+                <span class="pill">V</span>
+                <span class="pill">E</span>
+                <span class="pill">R</span>
+                <span class="pill">S</span>
+                <span class="pill">E</span>
+            </div>
+        </div>
+        <div class="card-desc">Each letter a colored pill/badge. Like product tags. Hover to squish. Plushie palette as identity system.</div>
+    </div>
+
+    <!-- 7. PLUSHIE FACE LOGO -->
+    <div class="card">
+        <span class="card-number">07</span>
+        <span class="card-tag tag-fav">&starf; Favorite</span>
+        <div class="logo-wrap">
+            <img src="assets/logos/nancy-pink.png" class="nancy-logo" alt="Nancy" style="margin-bottom:10px;">
+            <div class="universe-face">
+                <div class="face-eyes"><span></span><span></span></div>
+                <div class="face-mouth"></div>
+                <div class="face-blush"><span></span><span></span></div>
+            </div>
+            <div class="face-text">universe</div>
+        </div>
+        <div class="card-desc">The "U" in Universe becomes a plushie face. Blinks at you. Arms. Blush cheeks. The brand mascot IS the word.</div>
+    </div>
+
+    <!-- 8. RAINBOW STACK -->
+    <div class="card">
+        <span class="card-number">08</span>
+        <span class="card-tag tag-bold">Bold</span>
+        <div class="logo-wrap">
+            <img src="assets/logos/nancy-pink.png" class="nancy-logo" alt="Nancy">
+            <div class="universe-rainbow-stack">
+                <span class="rainbow-line">UNIVERSE</span>
+                <span class="rainbow-line">UNIVERSE</span>
+                <span class="rainbow-line">UNIVERSE</span>
+                <span class="rainbow-line">UNIVERSE</span>
+                <span class="rainbow-line">UNIVERSE</span>
+                <span class="rainbow-line">UNIVERSE</span>
+                <span class="rainbow-line">UNIVERSE</span>
+                <span class="rainbow-line">UNIVERSE</span>
+            </div>
+        </div>
+        <div class="card-desc">Stacked 8x in plushie rainbow order. Yellow→Orange→Pink→Magenta→Purple→Blue→Green→Teal. Overwhelming in the best way.</div>
+    </div>
+
+    <div class="divider">
+        <div class="divider-text">Section 2 &mdash; Soft & Round Typography</div>
+    </div>
+
+    <!-- 9. BUBBLEGUM -->
+    <div class="card">
+        <span class="card-number">09</span>
+        <span class="card-tag tag-kawaii">Kawaii</span>
+        <div class="logo-wrap">
+            <img src="assets/logos/nancy-pink.png" class="nancy-logo" alt="Nancy">
+            <div class="universe-bubblegum" style="position:relative;">
+                universe
+                <div class="bubble-pop"></div>
+                <div class="bubble-pop"></div>
+                <div class="bubble-pop"></div>
+            </div>
+        </div>
+        <div class="card-desc">Bubblegum Sans. Literally made of gum. Pop, stretch, chew. Playful like unwrapping a new plushie.</div>
+    </div>
+
+    <!-- 10. PLUSHIE COLLECTION STRIP -->
+    <div class="card">
+        <span class="card-number">10</span>
+        <span class="card-tag tag-fav">&starf; Favorite</span>
+        <div class="collection-lockup">
+            <img src="assets/logos/nancy-pink.png" class="nancy-logo" alt="Nancy">
+            <div class="plushie-row">
+                <img src="assets/plushies/lem/lem-hero.png" alt="Lem">
+                <img src="assets/plushies/berri/berri-hero.png" alt="Berri">
+                <img src="assets/plushies/avo/avo-hero.png" alt="Avo">
+                <img src="assets/plushies/matcha/matcha-hero.png" alt="Matcha">
+                <img src="assets/plushies/galaxy/galaxy-hero.png" alt="Galaxy">
+                <img src="assets/plushies/nebula/nebula-hero.png" alt="Nebula">
+                <img src="assets/plushies/boba/boba-hero.png" alt="Boba">
+            </div>
+            <div class="collection-text">universe</div>
+        </div>
+        <div class="card-desc">The plushie lineup IS the logo. Nancy on top, plushie cast in the middle, "universe" underneath. The characters define the brand.</div>
+    </div>
+
+    <!-- 11. CHEWY SQUISHY -->
+    <div class="card">
+        <span class="card-number">11</span>
+        <span class="card-tag tag-kawaii">Kawaii</span>
+        <div class="logo-wrap">
+            <img src="assets/logos/nancy-pink.png" class="nancy-logo" alt="Nancy">
+            <div class="universe-chewy">universe</div>
+        </div>
+        <div class="card-desc">Chewy font = chewing on your plushie's ear. Soft, round, organic curves. Zero sharp edges.</div>
+    </div>
+
+    <!-- 12. HANDWRITTEN DOODLE -->
+    <div class="card">
+        <span class="card-number">12</span>
+        <span class="card-tag tag-chaotic">Chaotic</span>
+        <div class="logo-wrap">
+            <img src="assets/logos/nancy-pink.png" class="nancy-logo" alt="Nancy">
+            <div class="universe-sketch">universe ★</div>
+        </div>
+        <div class="card-desc">Hand-drawn in a notebook. Like a kid naming their plushie collection. Underlined in pink.</div>
+    </div>
+
+    <!-- 13. SNIGLET ROUND -->
+    <div class="card">
+        <span class="card-number">13</span>
+        <span class="card-tag tag-bold">Bold</span>
+        <div class="logo-wrap">
+            <img src="assets/logos/nancy-pink.png" class="nancy-logo" alt="Nancy">
+            <div class="universe-sniglet">universe</div>
+            <div class="plushie-strip">
+                <img src="assets/plushies/unicorn/unicorn-hero.png" alt="">
+                <img src="assets/plushies/glitch/glitch-hero.png" alt="">
+                <img src="assets/plushies/void/void-hero.png" alt="">
+            </div>
+        </div>
+        <div class="card-desc">Sniglet — round corners everywhere. Like the plushies, no sharp edges allowed. Soft world.</div>
+    </div>
+
+    <!-- 14. CARTOON OUTLINE -->
+    <div class="card">
+        <span class="card-number">14</span>
+        <span class="card-tag tag-bold">Bold</span>
+        <div class="logo-wrap">
+            <img src="assets/logos/nancy-pink.png" class="nancy-logo" alt="Nancy">
+            <div class="universe-lucky">UNIVERSE</div>
+        </div>
+        <div class="card-desc">Luckiest Guy with thick outline. Saturday morning cartoon energy. Toy packaging typography.</div>
+    </div>
+
+    <!-- 15. SOFT GLOW ON DARK -->
+    <div class="card card-softglow">
+        <span class="card-number" style="color:rgba(255,255,255,0.15);">15</span>
+        <span class="card-tag tag-cosmic">Cosmic</span>
+        <div class="logo-wrap">
+            <img src="assets/logos/nancy-pink.png" class="nancy-logo" alt="Nancy" style="filter: drop-shadow(0 0 15px rgba(255,0,209,0.4));">
+            <div class="universe-softglow">universe</div>
+            <div class="plushie-strip">
+                <img src="assets/plushies/galaxy/galaxy-hero.png" alt="" style="filter:drop-shadow(0 0 8px rgba(139,92,246,0.5));">
+                <img src="assets/plushies/nebula/nebula-hero.png" alt="" style="filter:drop-shadow(0 0 8px rgba(255,0,209,0.5));">
+                <img src="assets/plushies/cosmo/cosmo-hero.png" alt="" style="filter:drop-shadow(0 0 8px rgba(100,200,255,0.5));">
+            </div>
+        </div>
+        <div class="card-desc" style="color:rgba(255,255,255,0.2);">Nighttime mode. Plushies glow softly in the dark. Cosmic collection energy. Dreamy.</div>
+    </div>
+
+    <!-- 16. PIXEL PLUSHIE -->
+    <div class="card">
+        <span class="card-number">16</span>
+        <span class="card-tag tag-chaotic">Chaotic</span>
+        <div class="logo-wrap">
+            <img src="assets/logos/nancy-pink.png" class="nancy-logo" alt="Nancy">
+            <div class="universe-pixel">universe</div>
+            <div class="plushie-strip">
+                <img src="assets/plushies/glitch/glitch-hero.png" alt="">
+                <img src="assets/plushies/error/error-hero.png" alt="" onerror="this.src='assets/plushies/static/static-hero.png'">
+            </div>
+        </div>
+        <div class="card-desc">8-bit plushie world. If Nancy Universe was a video game. Pixel art collection crossover.</div>
+    </div>
+
+    <div class="divider">
+        <div class="divider-text">Section 3 &mdash; Wild & Experimental (with plushie DNA)</div>
+    </div>
+
+    <!-- 17. NABLA 3D -->
+    <div class="card">
+        <span class="card-number">17</span>
+        <span class="card-tag tag-chaotic">Chaotic</span>
+        <div class="logo-wrap">
+            <img src="assets/logos/nancy-pink.png" class="nancy-logo" alt="Nancy">
+            <div class="universe-nabla">universe</div>
+        </div>
+        <div class="card-desc">3D color font. Like plushies popping off the screen. Depth, dimension, touchable.</div>
+    </div>
+
+    <!-- 18. RUBIK BUBBLES -->
+    <div class="card">
+        <span class="card-number">18</span>
+        <span class="card-tag tag-kawaii">Kawaii</span>
+        <div class="logo-wrap">
+            <img src="assets/logos/nancy-pink.png" class="nancy-logo" alt="Nancy">
+            <div class="universe-rubik-bubbles">universe</div>
+        </div>
+        <div class="card-desc">Bubble letters. Each one inflated like a plushie body. Round, soft, squeezable typography.</div>
+    </div>
+
+    <!-- 19. RUBIK PUDDLES -->
+    <div class="card">
+        <span class="card-number">19</span>
+        <span class="card-tag tag-kawaii">Kawaii</span>
+        <div class="logo-wrap">
+            <img src="assets/logos/nancy-pink.png" class="nancy-logo" alt="Nancy">
+            <div class="universe-rubik-puddles">universe</div>
+        </div>
+        <div class="card-desc">Melting puddle letters. Like a plushie left in the sun. Gooey, organic, alive.</div>
+    </div>
+
+    <!-- 20. SHRIKHAND RETRO -->
+    <div class="card">
+        <span class="card-number">20</span>
+        <span class="card-tag tag-bold">Bold</span>
+        <div class="logo-wrap">
+            <img src="assets/logos/nancy-pink.png" class="nancy-logo" alt="Nancy">
+            <div class="universe-shrikhand">universe</div>
+            <div class="plushie-strip">
+                <img src="assets/plushies/unhinged/unhinged-hero.png" alt="">
+                <img src="assets/plushies/mango/mango-hero.png" alt="" onerror="this.style.display='none'">
+                <img src="assets/plushies/peachy/peachy-hero.png" alt="" onerror="this.style.display='none'">
+            </div>
+        </div>
+        <div class="card-desc">Shrikhand — thick, warm, retro Indian display. Like vintage toy packaging. Chunky & confident.</div>
+    </div>
+
+    <!-- 21. FREDOKA BOUNCE LETTERS -->
+    <div class="card">
+        <span class="card-number">21</span>
+        <span class="card-tag tag-fav">&starf; Favorite</span>
+        <div class="logo-wrap">
+            <img src="assets/logos/nancy-pink.png" class="nancy-logo" alt="Nancy">
+            <div class="universe-fredoka-bounce">
+                <span>u</span><span>n</span><span>i</span><span>v</span><span>e</span><span>r</span><span>s</span><span>e</span>
+            </div>
+        </div>
+        <div class="card-desc">Each letter bounces in sequence. Like plushies hopping off a shelf one by one. Pure joy.</div>
+    </div>
+
+    <!-- 22. BOOGALOO -->
+    <div class="card">
+        <span class="card-number">22</span>
+        <span class="card-tag tag-bold">Bold</span>
+        <div class="logo-wrap">
+            <img src="assets/logos/nancy-pink.png" class="nancy-logo" alt="Nancy">
+            <div class="universe-boogaloo">universe</div>
+        </div>
+        <div class="card-desc">Boogaloo — groovy, bouncy, retro. Matches Nancy's own vibe. Dance party energy.</div>
+    </div>
+
+    <!-- 23. PLUSHIE MARQUEE -->
+    <div class="card">
+        <span class="card-number">23</span>
+        <span class="card-tag tag-cosmic">Cosmic</span>
+        <div class="logo-wrap">
+            <img src="assets/logos/nancy-pink.png" class="nancy-logo" alt="Nancy">
+            <div class="marquee-container">
+                <div class="universe-plush-marquee">
+                    <img src="assets/plushies/lem/lem-hero.png" alt="">
+                    <img src="assets/plushies/berri/berri-hero.png" alt="">
+                    <img src="assets/plushies/avo/avo-hero.png" alt="">
+                    <img src="assets/plushies/matcha/matcha-hero.png" alt="">
+                    <img src="assets/plushies/galaxy/galaxy-hero.png" alt="">
+                    <img src="assets/plushies/nebula/nebula-hero.png" alt="">
+                    <img src="assets/plushies/boba/boba-hero.png" alt="">
+                    <img src="assets/plushies/cosmo/cosmo-hero.png" alt="">
+                    <img src="assets/plushies/unicorn/unicorn-hero.png" alt="">
+                    <img src="assets/plushies/void/void-hero.png" alt="">
+                    <img src="assets/plushies/glitch/glitch-hero.png" alt="">
+                    <img src="assets/plushies/unhinged/unhinged-hero.png" alt="">
+                    <!-- duplicate for seamless loop -->
+                    <img src="assets/plushies/lem/lem-hero.png" alt="">
+                    <img src="assets/plushies/berri/berri-hero.png" alt="">
+                    <img src="assets/plushies/avo/avo-hero.png" alt="">
+                    <img src="assets/plushies/matcha/matcha-hero.png" alt="">
+                    <img src="assets/plushies/galaxy/galaxy-hero.png" alt="">
+                    <img src="assets/plushies/nebula/nebula-hero.png" alt="">
+                    <img src="assets/plushies/boba/boba-hero.png" alt="">
+                    <img src="assets/plushies/cosmo/cosmo-hero.png" alt="">
+                    <img src="assets/plushies/unicorn/unicorn-hero.png" alt="">
+                    <img src="assets/plushies/void/void-hero.png" alt="">
+                    <img src="assets/plushies/glitch/glitch-hero.png" alt="">
+                    <img src="assets/plushies/unhinged/unhinged-hero.png" alt="">
+                </div>
+            </div>
+            <div style="font-family:'Comfortaa',sans-serif;font-weight:300;font-size:12px;letter-spacing:6px;text-transform:uppercase;color:rgba(26,26,46,0.25);margin-top:8px;">universe</div>
+        </div>
+        <div class="card-desc">Infinite plushie parade scrolls between the logo and text. The characters ARE the brand. They never stop coming.</div>
+    </div>
+
+    <!-- 24. UNIVERSE MASCOT -->
+    <div class="card">
+        <span class="card-number">24</span>
+        <span class="card-tag tag-fav">&starf; Favorite</span>
+        <div class="logo-wrap">
+            <img src="assets/logos/nancy-pink.png" class="nancy-logo" alt="Nancy" style="margin-bottom:10px;">
+            <div class="mascot-wrap">
+                <div class="mascot-body">
+                    <div class="mascot-eyes"><span></span><span></span></div>
+                    <div class="mascot-mouth"></div>
+                    <div class="mascot-blush"><span></span><span></span></div>
+                    <div class="mascot-arms"></div>
+                </div>
+                <div class="mascot-label">universe</div>
+            </div>
+        </div>
+        <div class="card-desc">The universe itself is a plushie. Galaxy-colored, star-speckled, dark and cosmic with kawaii face. The meta-plushie. The one that contains all others.</div>
+    </div>
+
+    <!-- 25. DARK PLUSHIE PARADE -->
+    <div class="card card-dark">
+        <span class="card-number">25</span>
+        <span class="card-tag tag-premium">Premium</span>
+        <div class="collection-lockup">
+            <img src="assets/logos/nancy-pink.png" class="nancy-logo" alt="Nancy" style="filter:drop-shadow(0 0 10px rgba(255,0,209,0.3));">
+            <div class="plushie-row">
+                <img src="assets/plushies/void/void-hero.png" alt="" style="filter:drop-shadow(0 0 6px rgba(139,92,246,0.4));">
+                <img src="assets/plushies/galaxy/galaxy-hero.png" alt="" style="filter:drop-shadow(0 0 6px rgba(100,150,255,0.4));">
+                <img src="assets/plushies/nebula/nebula-hero.png" alt="" style="filter:drop-shadow(0 0 6px rgba(255,0,209,0.4));">
+                <img src="assets/plushies/cosmo/cosmo-hero.png" alt="" style="filter:drop-shadow(0 0 6px rgba(200,200,255,0.4));">
+                <img src="assets/plushies/glitch/glitch-hero.png" alt="" style="filter:drop-shadow(0 0 6px rgba(0,255,65,0.4));">
+            </div>
+            <div style="font-family:'Quicksand',sans-serif;font-weight:300;font-size:14px;letter-spacing:10px;text-transform:uppercase;color:rgba(255,255,255,0.25);">universe</div>
+        </div>
+        <div class="card-desc">Dark mode cosmic collection. Only the cosmic plushies. Premium, mysterious, collectible energy.</div>
+    </div>
+
+    <!-- 26. WAVE SYSTEM -->
+    <div class="card">
+        <span class="card-number">26</span>
+        <span class="card-tag tag-bold">Bold</span>
+        <div class="wave-lockup">
+            <img src="assets/logos/nancy-pink.png" class="nancy-logo" alt="Nancy">
+            <div class="wave-name">universe</div>
+            <div class="wave-presents">presents</div>
+            <div class="plushie-row" style="gap:4px;">
+                <img src="assets/plushies/lem/lem-hero.png" alt="" style="width:36px;height:36px;">
+                <img src="assets/plushies/berri/berri-hero.png" alt="" style="width:36px;height:36px;">
+                <img src="assets/plushies/avo/avo-hero.png" alt="" style="width:36px;height:36px;">
+            </div>
+            <div style="font-family:'Fredoka',sans-serif;font-weight:600;font-size:12px;letter-spacing:3px;text-transform:uppercase;color:rgba(26,26,46,0.2);">Wave 1 &middot; The OGs</div>
+        </div>
+        <div class="card-desc">Sub-brand system. Nancy Universe presents → Wave collection → Characters. Scalable for 100+ plushies.</div>
+    </div>
+
+    <!-- 27. LILITA ONE -->
+    <div class="card">
+        <span class="card-number">27</span>
+        <span class="card-tag tag-bold">Bold</span>
+        <div class="logo-wrap">
+            <img src="assets/logos/nancy-pink.png" class="nancy-logo" alt="Nancy">
+            <div class="universe-lilita">universe</div>
+        </div>
+        <div class="card-desc">Lilita One — big, friendly, bold. Toy box label energy. You know exactly what's inside.</div>
+    </div>
+
+    <!-- 28. CLIMATIC -->
+    <div class="card">
+        <span class="card-number">28</span>
+        <span class="card-tag tag-cosmic">Cosmic</span>
+        <div class="logo-wrap">
+            <img src="assets/logos/nancy-pink.png" class="nancy-logo" alt="Nancy">
+            <div class="universe-climatic">universe</div>
+            <div class="plushie-strip">
+                <img src="assets/plushies/tsunami/tsunami-hero.png" alt="">
+                <img src="assets/plushies/tornado/tornado-hero.png" alt="" onerror="this.style.display='none'">
+                <img src="assets/plushies/ember/ember-hero.png" alt="" onerror="this.style.display='none'">
+            </div>
+        </div>
+        <div class="card-desc">Climate Crisis font — melting, morphing, alive. The universe is always changing. Elemental plushie energy.</div>
+    </div>
+
+    <!-- 29. HONK COLOR -->
+    <div class="card">
+        <span class="card-number">29</span>
+        <span class="card-tag tag-chaotic">Chaotic</span>
+        <div class="logo-wrap">
+            <img src="assets/logos/nancy-pink.png" class="nancy-logo" alt="Nancy">
+            <div class="universe-honk-color">universe</div>
+        </div>
+        <div class="card-desc">Maximum color. Maximum chaos. The clown car of fonts, but make it kawaii. Every letter screaming its own color.</div>
+    </div>
+
+    <!-- 30. PLUSHIE TEXTURE TEXT -->
+    <div class="card">
+        <span class="card-number">30</span>
+        <span class="card-tag tag-fav">&starf; Favorite</span>
+        <div class="logo-wrap">
+            <img src="assets/logos/nancy-pink.png" class="nancy-logo" alt="Nancy">
+            <svg width="0" height="0">
+                <filter id="fuzzy">
+                    <feTurbulence type="turbulence" baseFrequency="0.05" numOctaves="2" result="turbulence"/>
+                    <feDisplacementMap in="SourceGraphic" in2="turbulence" scale="2" xChannelSelector="R" yChannelSelector="G"/>
+                </filter>
+            </svg>
+            <div class="universe-plush-texture">universe</div>
+        </div>
+        <div class="card-desc">Fuzzy plush texture applied to the text itself. You can almost FEEL the fabric. Soft to the touch typography.</div>
+    </div>
+
+</div>
+
+<div style="text-align:center;padding:60px 20px 100px;">
+    <div style="font-family:'Space Mono',monospace;font-size:9px;letter-spacing:5px;text-transform:uppercase;color:rgba(26,26,46,0.12);">
+        30 plushie-inspired treatments &middot; 131 characters &middot; one universe
+    </div>
+</div>
+
+</body>
+</html>
