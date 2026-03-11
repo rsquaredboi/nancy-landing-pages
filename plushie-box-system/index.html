@@ -1,0 +1,493 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Nancy Universe — Box System Deck</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,400;9..144,500;9..144,700;9..144,800&family=DM+Sans:wght@400;500;600;700&display=swap" rel="stylesheet">
+<style>
+:root {
+  --pink: #FF6B9D;
+  --pink-dim: rgba(255,107,157,0.15);
+  --dark: #0c0c12;
+  --dark2: #14141e;
+  --font-d: 'Fraunces', Georgia, serif;
+  --font-b: 'DM Sans', -apple-system, sans-serif;
+}
+*{margin:0;padding:0;box-sizing:border-box}
+html{scroll-behavior:smooth;scroll-snap-type:y mandatory}
+body{font-family:var(--font-b);background:var(--dark);color:#fff;overflow-x:hidden}
+
+/* ─── Slide system ─── */
+.slide{
+  min-height:100vh;width:100%;
+  scroll-snap-align:start;
+  display:flex;align-items:center;justify-content:center;
+  padding:3rem 4rem;
+  position:relative;
+  overflow:hidden;
+}
+.slide-inner{
+  max-width:1100px;width:100%;
+  position:relative;z-index:2;
+}
+
+/* Backgrounds */
+.bg-gradient{background:linear-gradient(160deg,#1a0a2e 0%,var(--dark) 60%)}
+.bg-dark{background:var(--dark)}
+.bg-dark2{background:var(--dark2)}
+.bg-pink-glow{background:radial-gradient(ellipse at 50% 40%,rgba(255,107,157,0.07) 0%,var(--dark) 70%)}
+
+/* Glow orb */
+.glow{
+  position:absolute;border-radius:50%;filter:blur(100px);opacity:0.12;pointer-events:none;
+}
+.glow-pink{background:var(--pink);width:500px;height:500px;top:-100px;right:-100px}
+.glow-purple{background:#9333ea;width:400px;height:400px;bottom:-80px;left:-80px}
+
+/* ─── Typography ─── */
+.slide-num{
+  position:absolute;top:2rem;left:3rem;
+  font-size:0.7rem;font-weight:700;text-transform:uppercase;letter-spacing:0.12em;
+  color:rgba(255,255,255,0.2);
+}
+h1{font-family:var(--font-d);font-weight:800;line-height:1.1}
+h1 span{color:var(--pink)}
+h2{font-family:var(--font-d);font-weight:700;line-height:1.15}
+h2 span{color:var(--pink)}
+h3{font-family:var(--font-d);font-weight:700}
+.subtitle{font-size:1.1rem;opacity:0.45;line-height:1.7;max-width:600px}
+.tag{
+  display:inline-block;font-size:0.65rem;font-weight:700;text-transform:uppercase;
+  letter-spacing:0.08em;padding:0.3rem 0.8rem;border-radius:100px;
+  background:var(--pink-dim);color:var(--pink);margin-bottom:1rem;
+}
+
+/* ─── Layouts ─── */
+.split{display:grid;grid-template-columns:1fr 1fr;gap:3rem;align-items:center}
+.split-60{display:grid;grid-template-columns:1.4fr 1fr;gap:3rem;align-items:center}
+.split-40{display:grid;grid-template-columns:1fr 1.4fr;gap:3rem;align-items:center}
+.center-text{text-align:center;max-width:800px;margin:0 auto}
+
+/* Images */
+.deck-img{
+  width:100%;border-radius:16px;display:block;
+  box-shadow:0 20px 60px rgba(0,0,0,0.4);
+}
+.deck-img-sm{
+  width:100%;border-radius:12px;display:block;
+  box-shadow:0 12px 40px rgba(0,0,0,0.3);
+}
+
+/* Grid */
+.grid-3{display:grid;grid-template-columns:repeat(3,1fr);gap:1.2rem}
+.grid-5{display:grid;grid-template-columns:repeat(5,1fr);gap:1rem}
+.grid-2x3{display:grid;grid-template-columns:repeat(3,1fr);gap:1.2rem}
+
+.grid-card{
+  background:rgba(255,255,255,0.04);border-radius:12px;overflow:hidden;
+  border:1px solid rgba(255,255,255,0.06);transition:all 0.3s;
+}
+.grid-card:hover{border-color:rgba(255,107,157,0.2);transform:translateY(-3px)}
+.grid-card img{width:100%;aspect-ratio:1/1;object-fit:cover;display:block}
+.grid-card-label{
+  padding:0.6rem 0.8rem;font-size:0.75rem;font-weight:700;text-align:center;
+}
+.grid-card-label small{display:block;font-size:0.6rem;opacity:0.4;font-weight:500;margin-top:0.1rem}
+
+/* Stat blocks */
+.stat-row{display:flex;gap:1.5rem;margin-top:1.5rem;flex-wrap:wrap}
+.stat-block{
+  background:rgba(255,255,255,0.04);border-radius:12px;padding:1.2rem 1.5rem;
+  border:1px solid rgba(255,255,255,0.06);flex:1;min-width:140px;
+}
+.stat-block .num{
+  font-family:var(--font-d);font-size:2rem;font-weight:800;color:var(--pink);
+}
+.stat-block .label{font-size:0.72rem;opacity:0.4;font-weight:600;text-transform:uppercase;letter-spacing:0.06em}
+
+/* Bullet list */
+.deck-list{list-style:none;margin-top:1rem}
+.deck-list li{
+  padding:0.5rem 0;font-size:0.9rem;opacity:0.7;line-height:1.6;
+  border-bottom:1px solid rgba(255,255,255,0.04);
+}
+.deck-list li:last-child{border:none}
+.deck-list li strong{color:var(--pink);opacity:1}
+
+/* Check list */
+.check-list{list-style:none;margin-top:1rem}
+.check-list li{padding:0.4rem 0;font-size:0.85rem;opacity:0.65}
+.check-list li::before{content:'✓';color:var(--pink);font-weight:700;margin-right:0.6rem}
+
+/* Econ grid */
+.econ-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:1rem;margin-top:1.5rem}
+.econ-card{
+  background:rgba(255,255,255,0.04);border-radius:12px;padding:1.5rem;text-align:center;
+  border:1px solid rgba(255,255,255,0.06);
+}
+.econ-card .icon{font-size:1.8rem;margin-bottom:0.5rem}
+.econ-card h4{font-size:0.9rem;margin-bottom:0.25rem}
+.econ-card p{font-size:0.72rem;opacity:0.4;line-height:1.5}
+
+/* Nav */
+.deck-nav{
+  position:fixed;bottom:1.5rem;right:1.5rem;z-index:100;
+  display:flex;gap:0.5rem;
+}
+.deck-nav button{
+  background:rgba(255,255,255,0.08);border:1px solid rgba(255,255,255,0.1);
+  color:white;width:44px;height:44px;border-radius:50%;font-size:1.2rem;
+  cursor:pointer;backdrop-filter:blur(12px);display:flex;align-items:center;
+  justify-content:center;transition:all 0.2s;
+}
+.deck-nav button:hover{background:rgba(255,107,157,0.2);border-color:var(--pink)}
+
+/* Progress bar */
+.progress{
+  position:fixed;top:0;left:0;height:3px;background:var(--pink);
+  z-index:200;transition:width 0.3s ease;
+}
+
+/* Slide counter */
+.slide-counter{
+  position:fixed;bottom:1.8rem;left:1.5rem;z-index:100;
+  font-size:0.7rem;font-weight:700;opacity:0.25;letter-spacing:0.06em;
+}
+
+/* Footer CTA */
+.cta-btn{
+  display:inline-flex;align-items:center;gap:0.5rem;
+  background:var(--pink);color:white;padding:0.8rem 2rem;border-radius:100px;
+  font-weight:700;font-size:0.9rem;text-decoration:none;
+  transition:all 0.2s;border:none;cursor:pointer;
+}
+.cta-btn:hover{transform:translateY(-2px);box-shadow:0 8px 30px rgba(255,107,157,0.3)}
+
+@media(max-width:900px){
+  .slide{padding:2rem 1.5rem}
+  .split,.split-60,.split-40{grid-template-columns:1fr;gap:1.5rem}
+  .grid-3{grid-template-columns:repeat(2,1fr)}
+  .grid-5{grid-template-columns:repeat(3,1fr)}
+  .econ-grid{grid-template-columns:1fr}
+  h1{font-size:2.2rem!important}
+  .slide-num{top:1rem;left:1.5rem}
+}
+</style>
+</head>
+<body>
+
+<div class="progress" id="progress"></div>
+<div class="slide-counter" id="counter">01 / 09</div>
+
+<div class="deck-nav">
+  <button onclick="go(-1)" title="Previous">‹</button>
+  <button onclick="go(1)" title="Next">›</button>
+</div>
+
+<!-- ═══════════════════════════════════════
+     SLIDE 1 — TITLE
+     ═══════════════════════════════════════ -->
+<section class="slide bg-gradient" id="s1">
+  <div class="glow glow-pink"></div>
+  <div class="glow glow-purple"></div>
+  <div class="slide-num">Nancy Universe</div>
+  <div class="slide-inner center-text">
+    <div class="tag">Packaging Strategy</div>
+    <h1 style="font-size:clamp(2.5rem,6vw,4.2rem)">One Box.<br><span>Every Collection.</span></h1>
+    <p class="subtitle" style="margin:1.2rem auto 2rem">Universal pink mystery box + customisable collection stickers.<br>Same box, 120+ characters, infinite drops.</p>
+    <div class="stat-row" style="justify-content:center">
+      <div class="stat-block"><div class="num">1</div><div class="label">Universal Box</div></div>
+      <div class="stat-block"><div class="num">10</div><div class="label">Collections</div></div>
+      <div class="stat-block"><div class="num">120+</div><div class="label">Characters</div></div>
+      <div class="stat-block"><div class="num">∞</div><div class="label">Future Drops</div></div>
+    </div>
+  </div>
+</section>
+
+<!-- ═══════════════════════════════════════
+     SLIDE 2 — THE PROBLEM
+     ═══════════════════════════════════════ -->
+<section class="slide bg-dark2" id="s2">
+  <div class="slide-num">02 — The Challenge</div>
+  <div class="slide-inner center-text">
+    <div class="tag">Scale Problem</div>
+    <h2 style="font-size:clamp(1.8rem,4vw,2.8rem)">120 characters.<br><span>120 different boxes?</span></h2>
+    <p class="subtitle" style="margin:1rem auto 2rem">10 waves × 5-15 characters each. Plus celeb collabs. Plus limited drops. Plus future waves. Custom box per character = nightmare for production, warehousing, and cost.</p>
+    <div class="grid-5" style="max-width:700px;margin:0 auto">
+      <div style="background:rgba(255,255,255,0.04);border-radius:10px;padding:0.8rem;text-align:center">
+        <div style="font-size:1.4rem">🍋</div>
+        <div style="font-size:0.65rem;opacity:0.4;margin-top:0.3rem">OG Five<br><strong style="color:var(--pink)">5</strong></div>
+      </div>
+      <div style="background:rgba(255,255,255,0.04);border-radius:10px;padding:0.8rem;text-align:center">
+        <div style="font-size:1.4rem">🍣</div>
+        <div style="font-size:0.65rem;opacity:0.4;margin-top:0.3rem">Food<br><strong style="color:var(--pink)">15</strong></div>
+      </div>
+      <div style="background:rgba(255,255,255,0.04);border-radius:10px;padding:0.8rem;text-align:center">
+        <div style="font-size:1.4rem">🚀</div>
+        <div style="font-size:0.65rem;opacity:0.4;margin-top:0.3rem">Space<br><strong style="color:var(--pink)">15</strong></div>
+      </div>
+      <div style="background:rgba(255,255,255,0.04);border-radius:10px;padding:0.8rem;text-align:center">
+        <div style="font-size:1.4rem">💛</div>
+        <div style="font-size:0.65rem;opacity:0.4;margin-top:0.3rem">Feelings<br><strong style="color:var(--pink)">15</strong></div>
+      </div>
+      <div style="background:rgba(255,255,255,0.04);border-radius:10px;padding:0.8rem;text-align:center">
+        <div style="font-size:1.4rem">🐉</div>
+        <div style="font-size:0.65rem;opacity:0.4;margin-top:0.3rem">Creatures<br><strong style="color:var(--pink)">15</strong></div>
+      </div>
+      <div style="background:rgba(255,255,255,0.04);border-radius:10px;padding:0.8rem;text-align:center">
+        <div style="font-size:1.4rem">💡</div>
+        <div style="font-size:0.65rem;opacity:0.4;margin-top:0.3rem">Objects<br><strong style="color:var(--pink)">15</strong></div>
+      </div>
+      <div style="background:rgba(255,255,255,0.04);border-radius:10px;padding:0.8rem;text-align:center">
+        <div style="font-size:1.4rem">⛈️</div>
+        <div style="font-size:0.65rem;opacity:0.4;margin-top:0.3rem">Weather<br><strong style="color:var(--pink)">10</strong></div>
+      </div>
+      <div style="background:rgba(255,255,255,0.04);border-radius:10px;padding:0.8rem;text-align:center">
+        <div style="font-size:1.4rem">👾</div>
+        <div style="font-size:0.65rem;opacity:0.4;margin-top:0.3rem">Chaos<br><strong style="color:var(--pink)">15</strong></div>
+      </div>
+      <div style="background:rgba(255,255,255,0.04);border-radius:10px;padding:0.8rem;text-align:center">
+        <div style="font-size:1.4rem">☕</div>
+        <div style="font-size:0.65rem;opacity:0.4;margin-top:0.3rem">Drinks<br><strong style="color:var(--pink)">10</strong></div>
+      </div>
+      <div style="background:rgba(255,255,255,0.04);border-radius:10px;padding:0.8rem;text-align:center">
+        <div style="font-size:1.4rem">🍩</div>
+        <div style="font-size:0.65rem;opacity:0.4;margin-top:0.3rem">Sweet Tooth<br><strong style="color:var(--pink)">5</strong></div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ═══════════════════════════════════════
+     SLIDE 3 — THE SOLUTION
+     ═══════════════════════════════════════ -->
+<section class="slide bg-pink-glow" id="s3">
+  <div class="slide-num">03 — The Solution</div>
+  <div class="slide-inner split">
+    <div>
+      <div class="tag">The System</div>
+      <h2 style="font-size:clamp(1.6rem,3.5vw,2.4rem)">One box.<br><span>Sticker does the work.</span></h2>
+      <p class="subtitle" style="margin-top:1rem">Same matte dusty pink box for every character. The collection sticker is the only thing that changes — applied during packing.</p>
+      <ul class="deck-list" style="margin-top:1.5rem">
+        <li><strong>Box:</strong> Universal pink with holographic "?" — always the same</li>
+        <li><strong>Badge:</strong> "SQUEEZE ME!" hot pink circle — Nancy brand marker</li>
+        <li><strong>Sticker:</strong> Collection name + "1 of X" + silhouette icons</li>
+        <li><strong>Reveal:</strong> Character pops out the top on open</li>
+      </ul>
+    </div>
+    <div>
+      <img class="deck-img" src="assets/universal-template.png" alt="Universal Box">
+    </div>
+  </div>
+</section>
+
+<!-- ═══════════════════════════════════════
+     SLIDE 4 — OG + FOOD + SPACE
+     ═══════════════════════════════════════ -->
+<section class="slide bg-dark" id="s4">
+  <div class="slide-num">04 — Collections 1–3</div>
+  <div class="slide-inner">
+    <div style="text-align:center;margin-bottom:1.5rem">
+      <div class="tag">Same Box, Different Sticker</div>
+    </div>
+    <div class="grid-3">
+      <div class="grid-card">
+        <img src="assets/og-five.png" alt="Forbidden Fruit">
+        <div class="grid-card-label">Forbidden Fruit<small>The OG Five • 5 characters</small></div>
+      </div>
+      <div class="grid-card">
+        <img src="assets/food-attitude.png" alt="Food with Attitude">
+        <div class="grid-card-label">Food with Attitude<small>Wave 2 • 15 characters</small></div>
+      </div>
+      <div class="grid-card">
+        <img src="assets/space-cosmic.png" alt="Space & Cosmic">
+        <div class="grid-card-label">Space & Cosmic<small>Wave 3 • 15 characters</small></div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ═══════════════════════════════════════
+     SLIDE 5 — FEELINGS + CREATURES + OBJECTS
+     ═══════════════════════════════════════ -->
+<section class="slide bg-dark2" id="s5">
+  <div class="slide-num">05 — Collections 4–6</div>
+  <div class="slide-inner">
+    <div style="text-align:center;margin-bottom:1.5rem">
+      <div class="tag">Same Box, Different Sticker</div>
+    </div>
+    <div class="grid-3">
+      <div class="grid-card">
+        <img src="assets/feelings-moods.png" alt="Feelings & Moods">
+        <div class="grid-card-label">Feelings & Moods<small>Wave 4 • 15 characters</small></div>
+      </div>
+      <div class="grid-card">
+        <img src="assets/creatures-cryptids.png" alt="Creatures & Cryptids">
+        <div class="grid-card-label">Creatures & Cryptids<small>Wave 5 • 15 characters</small></div>
+      </div>
+      <div class="grid-card">
+        <img src="assets/everyday-objects.png" alt="Everyday Objects">
+        <div class="grid-card-label">Everyday Objects<small>Wave 6 • 15 characters</small></div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ═══════════════════════════════════════
+     SLIDE 6 — WEATHER + CHAOS + DRINKS + SWEET
+     ═══════════════════════════════════════ -->
+<section class="slide bg-dark" id="s6">
+  <div class="slide-num">06 — Collections 7–10</div>
+  <div class="slide-inner">
+    <div style="text-align:center;margin-bottom:1.5rem">
+      <div class="tag">Same Box, Different Sticker</div>
+    </div>
+    <div class="grid-3" style="grid-template-columns:repeat(4,1fr)">
+      <div class="grid-card">
+        <img src="assets/weather-nature.png" alt="Weather & Nature">
+        <div class="grid-card-label">Weather & Nature<small>Wave 7 • 10</small></div>
+      </div>
+      <div class="grid-card">
+        <img src="assets/chaos-collection.png" alt="Chaos Collection">
+        <div class="grid-card-label">Chaos Collection<small>Wave 8 • 15</small></div>
+      </div>
+      <div class="grid-card">
+        <img src="assets/drink-squad.png" alt="Drink Squad">
+        <div class="grid-card-label">Drink Squad<small>Wave 9 • 10</small></div>
+      </div>
+      <div class="grid-card">
+        <img src="assets/sweet-tooth.png" alt="Sweet Tooth">
+        <div class="grid-card-label">Sweet Tooth<small>Wave 10 • 5</small></div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ═══════════════════════════════════════
+     SLIDE 7 — STICKER SYSTEM
+     ═══════════════════════════════════════ -->
+<section class="slide bg-pink-glow" id="s7">
+  <div class="slide-num">07 — The Sticker System</div>
+  <div class="slide-inner split-40">
+    <div>
+      <div class="tag">Customisation Layer</div>
+      <h2 style="font-size:clamp(1.5rem,3vw,2.2rem)">10 stickers.<br><span>Infinite flexibility.</span></h2>
+      <p class="subtitle" style="margin-top:0.8rem">Each collection gets its own sticker. Printed in bulk sheets, applied during packing. New drop = new sticker, not new box.</p>
+      <ul class="check-list">
+        <li>Collection name front &amp; center</li>
+        <li>"1 of X" creates set-completion FOMO</li>
+        <li>Tiny silhouette icons hint at characters</li>
+        <li>Foil/holographic variant = instant premium tier</li>
+        <li>Celeb collabs = just another sticker design</li>
+        <li>Character name on SIDE for known purchases</li>
+      </ul>
+    </div>
+    <div>
+      <img class="deck-img" src="assets/sticker-sheet.png" alt="Sticker Sheet">
+    </div>
+  </div>
+</section>
+
+<!-- ═══════════════════════════════════════
+     SLIDE 8 — ECONOMICS
+     ═══════════════════════════════════════ -->
+<section class="slide bg-dark2" id="s8">
+  <div class="slide-num">08 — Why This Scales</div>
+  <div class="slide-inner">
+    <div class="center-text" style="margin-bottom:1.5rem">
+      <div class="tag">Unit Economics</div>
+      <h2 style="font-size:clamp(1.5rem,3vw,2.2rem)">Production <span>simplified.</span></h2>
+    </div>
+    <div class="econ-grid">
+      <div class="econ-card">
+        <div class="icon">💰</div>
+        <h4>Lower Unit Cost</h4>
+        <p>One box mold = bulk production. Not 10 different designs with separate minimums.</p>
+      </div>
+      <div class="econ-card">
+        <div class="icon">⚡</div>
+        <h4>Instant New Drops</h4>
+        <p>New collection = print sticker sheet. Ship same week. Zero box lead time.</p>
+      </div>
+      <div class="econ-card">
+        <div class="icon">🏷️</div>
+        <h4>Limited Editions</h4>
+        <p>Foil sticker variant = premium tier. Same box, different finish. Instant hype.</p>
+      </div>
+      <div class="econ-card">
+        <div class="icon">📦</div>
+        <h4>Warehouse Simple</h4>
+        <p>One box SKU in stock. Stickers applied during pack. No 120 box variants.</p>
+      </div>
+      <div class="econ-card">
+        <div class="icon">🌍</div>
+        <h4>Celeb Collabs</h4>
+        <p>NK, future celebs — just another sticker. "CELEB COLLECTION", same pink box.</p>
+      </div>
+      <div class="econ-card">
+        <div class="icon">🎲</div>
+        <h4>Blind Box Ready</h4>
+        <p>The "?" is built in. Mystery energy works for both blind box and known purchases.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ═══════════════════════════════════════
+     SLIDE 9 — CLOSING
+     ═══════════════════════════════════════ -->
+<section class="slide bg-gradient" id="s9">
+  <div class="glow glow-pink" style="right:auto;left:50%;transform:translateX(-50%)"></div>
+  <div class="slide-num">09 — Let's Go</div>
+  <div class="slide-inner center-text">
+    <div class="tag">Next Steps</div>
+    <h1 style="font-size:clamp(2rem,5vw,3.5rem)">One box to <span>rule them all.</span></h1>
+    <p class="subtitle" style="margin:1rem auto 2.5rem">120 characters today. Celeb collabs tomorrow. Limited drops next week. The box never changes — only the sticker does.</p>
+    <div style="display:flex;gap:1rem;justify-content:center;flex-wrap:wrap">
+      <a href="https://nancyuniverse.com/pages/collections/plushies.html" class="cta-btn" target="_blank">View All 120 Characters →</a>
+    </div>
+  </div>
+</section>
+
+<script>
+const slides = document.querySelectorAll('.slide');
+const total = slides.length;
+const progress = document.getElementById('progress');
+const counter = document.getElementById('counter');
+let current = 0;
+
+function updateUI() {
+  const pct = ((current + 1) / total) * 100;
+  progress.style.width = pct + '%';
+  counter.textContent = String(current + 1).padStart(2, '0') + ' / ' + String(total).padStart(2, '0');
+}
+
+function go(dir) {
+  current = Math.max(0, Math.min(total - 1, current + dir));
+  slides[current].scrollIntoView({ behavior: 'smooth' });
+}
+
+// Track scroll position
+const observer = new IntersectionObserver(entries => {
+  entries.forEach(e => {
+    if (e.isIntersecting) {
+      current = [...slides].indexOf(e.target);
+      updateUI();
+    }
+  });
+}, { threshold: 0.5 });
+slides.forEach(s => observer.observe(s));
+
+// Keyboard nav
+document.addEventListener('keydown', e => {
+  if (e.key === 'ArrowDown' || e.key === 'ArrowRight' || e.key === ' ') { e.preventDefault(); go(1); }
+  if (e.key === 'ArrowUp' || e.key === 'ArrowLeft') { e.preventDefault(); go(-1); }
+});
+
+updateUI();
+</script>
+</body>
+</html>
