@@ -1,0 +1,919 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Nancy Universe — Daily Logo Rotation Demo</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@0,9..144,300;0,9..144,400;0,9..144,700;0,9..144,800;0,9..144,900;1,9..144,400&family=Outfit:wght@200;300;400;500;600&family=Caveat:wght@400;600;700&family=Space+Mono:wght@400;700&family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+<style>
+*,*::before,*::after{margin:0;padding:0;box-sizing:border-box}
+:root{
+  --pink:#ff00d1;--lime:#ccfd28;--dark:#0a0015;--void:#06020f;
+  --purple:#8B5CF6;--cyan:#00f0ff;--gold:#ffd700;--blue:#4D96FF;
+  --day-color:#ff00d1;
+  --transition-speed:0.6s;
+}
+html{scroll-behavior:smooth}
+body{background:var(--void);color:#fff;font-family:'Inter',sans-serif;min-height:100vh;overflow-x:hidden}
+
+/* ══════════ GRAIN OVERLAY ══════════ */
+body::after{
+  content:'';position:fixed;inset:0;pointer-events:none;z-index:9999;
+  background-image:url("data:image/svg+xml,%3Csvg viewBox='0 0 256 256' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.9' numOctaves='4' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23n)' opacity='0.03'/%3E%3C/svg%3E");
+  background-size:128px 128px;opacity:0.4;
+}
+
+/* ══════════ HERO HEADER ══════════ */
+.demo-header{
+  text-align:center;padding:48px 24px 20px;position:relative;
+  background:linear-gradient(180deg,rgba(255,0,209,0.06) 0%,transparent 100%);
+}
+.demo-header h1{
+  font-family:'Fraunces',serif;font-weight:300;font-size:clamp(28px,5vw,42px);
+  letter-spacing:-0.5px;margin-bottom:8px;
+}
+.demo-header h1 span{color:var(--pink);font-weight:700;font-style:italic}
+.demo-header p{
+  font-family:'Space Mono',monospace;font-size:11px;letter-spacing:2px;
+  text-transform:uppercase;color:#666;
+}
+
+/* ══════════ DAY CONTROLLER ══════════ */
+.controller{
+  position:sticky;top:0;z-index:100;
+  background:rgba(6,2,15,0.92);backdrop-filter:blur(20px);
+  border-bottom:1px solid rgba(255,0,209,0.15);
+  padding:16px 24px;
+  display:flex;align-items:center;justify-content:center;gap:20px;flex-wrap:wrap;
+}
+.day-nav{display:flex;align-items:center;gap:12px}
+.day-btn{
+  background:rgba(255,255,255,0.06);border:1px solid rgba(255,255,255,0.1);
+  color:#fff;padding:8px 16px;border-radius:8px;cursor:pointer;
+  font-family:'Space Mono',monospace;font-size:12px;letter-spacing:1px;
+  transition:all 0.2s;user-select:none;
+}
+.day-btn:hover{background:rgba(255,0,209,0.15);border-color:var(--pink)}
+.day-btn:active{transform:scale(0.96)}
+
+.day-display{
+  display:flex;align-items:center;gap:14px;
+  min-width:260px;justify-content:center;
+}
+.day-plushie{
+  width:48px;height:48px;border-radius:50%;overflow:hidden;
+  border:2px solid var(--day-color);
+  box-shadow:0 0 20px rgba(255,0,209,0.2);
+  transition:border-color 0.6s,box-shadow 0.6s;
+  animation:plushieBob 3s ease-in-out infinite;
+}
+.day-plushie img{width:100%;height:100%;object-fit:cover}
+@keyframes plushieBob{0%,100%{transform:translateY(0)}50%{transform:translateY(-4px)}}
+
+.day-info{text-align:left}
+.day-name{
+  font-family:'Fraunces',serif;font-weight:700;font-size:20px;
+  color:var(--day-color);transition:color 0.6s;
+}
+.day-plushie-name{
+  font-family:'Space Mono',monospace;font-size:10px;letter-spacing:1.5px;
+  text-transform:uppercase;color:#888;
+}
+
+.autoplay-toggle{
+  display:flex;align-items:center;gap:8px;
+  font-family:'Space Mono',monospace;font-size:10px;letter-spacing:1px;
+  text-transform:uppercase;color:#666;cursor:pointer;user-select:none;
+}
+.autoplay-toggle .toggle-track{
+  width:36px;height:20px;border-radius:10px;
+  background:rgba(255,255,255,0.1);border:1px solid rgba(255,255,255,0.15);
+  position:relative;transition:all 0.3s;
+}
+.autoplay-toggle.active .toggle-track{background:var(--pink);border-color:var(--pink)}
+.autoplay-toggle .toggle-thumb{
+  width:16px;height:16px;border-radius:50%;background:#fff;
+  position:absolute;top:1px;left:1px;transition:all 0.3s;
+}
+.autoplay-toggle.active .toggle-thumb{left:17px}
+
+/* ══════════ MAIN STAGE ══════════ */
+.stage{
+  display:grid;grid-template-columns:1fr 1fr;gap:32px;
+  max-width:1200px;margin:0 auto;padding:40px 24px;
+}
+@media(max-width:800px){.stage{grid-template-columns:1fr;gap:24px}}
+
+.stage-panel{position:relative}
+.panel-label{
+  font-family:'Space Mono',monospace;font-size:10px;letter-spacing:3px;
+  text-transform:uppercase;color:#555;margin-bottom:12px;
+  display:flex;align-items:center;gap:8px;
+}
+.panel-label::before{
+  content:'';width:8px;height:8px;border-radius:50%;
+  background:var(--day-color);transition:background 0.6s;
+  box-shadow:0 0 8px var(--day-color);
+}
+
+/* ══════════ NAV MOCKUP (LEFT PANEL) ══════════ */
+.nav-frame{
+  background:#fff;border-radius:16px;overflow:hidden;
+  box-shadow:0 4px 40px rgba(0,0,0,0.3),0 0 0 1px rgba(255,255,255,0.05);
+  aspect-ratio:16/9;position:relative;
+}
+.nav-mockup{
+  display:flex;align-items:center;padding:16px 24px;
+  border-bottom:1px solid #f0f0f0;background:#fff;
+  position:relative;z-index:2;
+}
+.nav-logo-area{display:flex;align-items:center;gap:4px}
+.nav-logo-area img{height:26px}
+.nav-logo-area .universe-text{
+  font-size:14px;margin-left:2px;position:relative;
+  transition:all var(--transition-speed);
+}
+.nav-links-mock{
+  display:flex;gap:20px;margin-left:auto;
+  font-size:12px;color:#999;font-weight:500;
+}
+.nav-links-mock span{cursor:default}
+
+/* Nav treatment area below */
+.nav-hero-area{
+  flex:1;display:flex;flex-direction:column;align-items:center;justify-content:center;
+  background:linear-gradient(180deg,#fff5f5 0%,#ffe8f0 50%,#fff 100%);
+  padding:40px 20px;position:relative;min-height:240px;
+}
+.nav-hero-area .headline-mock{text-align:center;line-height:1.1}
+.nav-hero-area .h-line1{
+  font-family:'Fraunces',serif;font-weight:800;font-size:clamp(28px,4vw,40px);color:var(--dark);display:block;
+}
+.nav-hero-area .h-line2{
+  font-family:'Caveat',cursive;font-weight:600;font-size:clamp(26px,3.5vw,36px);color:var(--pink);display:block;
+}
+.nav-hero-area .h-line3{
+  font-family:'Fraunces',serif;font-weight:900;font-size:clamp(32px,4.5vw,46px);
+  display:block;position:relative;
+}
+
+/* ── Nav Universe Treatments ── */
+.nav-treatment{
+  position:absolute;inset:0;display:flex;align-items:center;justify-content:center;
+  opacity:0;transition:opacity var(--transition-speed);pointer-events:none;
+}
+.nav-treatment.active{opacity:1;pointer-events:auto}
+
+/* Treatment: Nebula */
+.treat-nebula .h-line3{
+  background:linear-gradient(135deg,#4D0080,#8B5CF6,#ff00d1,#ff69b4,#00f0ff,#8B5CF6,#4D0080);
+  background-size:300% 300%;
+  -webkit-background-clip:text;-webkit-text-fill-color:transparent;background-clip:text;
+  animation:nebulaShift 5s ease-in-out infinite;
+}
+@keyframes nebulaShift{0%{background-position:0% 50%}50%{background-position:100% 50%}100%{background-position:0% 50%}}
+
+/* Treatment: Constellation */
+.treat-constellation .h-line3{
+  font-family:'Outfit',sans-serif;font-weight:200;
+  font-size:clamp(28px,4vw,38px);letter-spacing:10px;text-transform:uppercase;
+  color:var(--dark);
+}
+.constellation-stars{position:absolute;inset:0;pointer-events:none}
+.constellation-stars .cstar{
+  position:absolute;width:4px;height:4px;background:var(--pink);border-radius:50%;
+  box-shadow:0 0 6px var(--pink);animation:csTwinkle 2.5s ease-in-out infinite;
+}
+.cstar:nth-child(1){top:20%;left:15%;animation-delay:0s}
+.cstar:nth-child(2){top:60%;left:25%;animation-delay:0.4s}
+.cstar:nth-child(3){top:30%;left:45%;animation-delay:0.9s}
+.cstar:nth-child(4){top:70%;left:60%;animation-delay:1.3s}
+.cstar:nth-child(5){top:25%;left:75%;animation-delay:0.6s}
+.cstar:nth-child(6){top:55%;left:85%;animation-delay:1.7s}
+.cstar:nth-child(7){top:45%;left:35%;animation-delay:2.0s}
+.cstar:nth-child(8){top:15%;left:90%;animation-delay:0.2s}
+@keyframes csTwinkle{0%,100%{opacity:0.2;transform:scale(0.5)}50%{opacity:1;transform:scale(1.5)}}
+
+/* Constellation SVG lines */
+.constellation-lines{position:absolute;inset:0;pointer-events:none;opacity:0.15}
+
+/* Treatment: Aurora */
+.treat-aurora .h-line3{
+  background:linear-gradient(180deg,#00f0ff,#8B5CF6,#ff00d1,#00ff88,#00f0ff);
+  background-size:100% 400%;
+  -webkit-background-clip:text;-webkit-text-fill-color:transparent;background-clip:text;
+  animation:auroraFlow 4s ease-in-out infinite;
+  filter:drop-shadow(0 0 12px rgba(139,92,246,0.2));
+}
+@keyframes auroraFlow{0%{background-position:50% 0%}50%{background-position:50% 100%}100%{background-position:50% 0%}}
+
+/* Treatment: Holographic */
+.treat-holo .h-line3{
+  background:linear-gradient(45deg,#ff00d1,#00f0ff,#ccfd28,#8B5CF6,#ffd700,#ff00d1,#00f0ff);
+  background-size:400% 400%;
+  -webkit-background-clip:text;-webkit-text-fill-color:transparent;background-clip:text;
+  animation:holoShift 3s linear infinite;
+  filter:drop-shadow(0 0 8px rgba(255,0,209,0.15));
+}
+@keyframes holoShift{0%{background-position:0% 50%}100%{background-position:400% 50%}}
+
+/* Treatment: Gold */
+.treat-gold .h-line3{
+  background:linear-gradient(135deg,#b8860b,#ffd700,#fff8dc,#ffd700,#b8860b,#ffd700);
+  background-size:200% 200%;
+  -webkit-background-clip:text;-webkit-text-fill-color:transparent;background-clip:text;
+  animation:goldShimmer 4s ease-in-out infinite;
+  filter:drop-shadow(0 0 6px rgba(255,215,0,0.3));
+}
+@keyframes goldShimmer{0%{background-position:0% 50%}50%{background-position:100% 50%}100%{background-position:0% 50%}}
+
+/* Treatment: Stardust */
+.treat-stardust .h-line3{color:var(--dark)}
+.stardust-particles{position:absolute;inset:0;pointer-events:none}
+.stardust-particles .sp{
+  position:absolute;width:3px;height:3px;background:var(--pink);border-radius:50%;
+  animation:spFloat 3s ease-in-out infinite;
+}
+.sp:nth-child(1){top:35%;left:20%;animation-delay:0s}
+.sp:nth-child(2){top:55%;left:40%;animation-delay:0.6s;width:2px;height:2px}
+.sp:nth-child(3){top:25%;left:55%;animation-delay:1.2s}
+.sp:nth-child(4){top:65%;left:70%;animation-delay:0.3s;width:2px;height:2px}
+.sp:nth-child(5){top:40%;left:80%;animation-delay:1.8s}
+.sp:nth-child(6){top:50%;left:30%;animation-delay:2.4s;width:2px;height:2px}
+@keyframes spFloat{
+  0%{opacity:0;transform:translateY(0) scale(0.5)}
+  30%{opacity:0.9}
+  70%{opacity:0.5}
+  100%{opacity:0;transform:translateY(-30px) scale(0)}
+}
+
+/* Treatment: Plushie Color */
+.treat-plushie-color .h-line3{
+  color:var(--day-color);transition:color 0.6s;
+  filter:drop-shadow(0 0 8px color-mix(in srgb, var(--day-color) 30%, transparent));
+}
+
+/* ══════════ LOADING SCREEN (RIGHT PANEL) ══════════ */
+.loading-frame{
+  background:#0a0015;border-radius:16px;overflow:hidden;
+  box-shadow:0 4px 40px rgba(0,0,0,0.4),0 0 0 1px rgba(255,255,255,0.05);
+  aspect-ratio:9/16;max-height:500px;position:relative;
+}
+@media(max-width:800px){.loading-frame{aspect-ratio:9/14;max-height:420px}}
+
+.loading-scene{
+  position:absolute;inset:0;display:flex;align-items:center;justify-content:center;
+  opacity:0;transition:opacity var(--transition-speed);
+}
+.loading-scene.active{opacity:1}
+
+/* Shared loading text */
+.load-text{
+  font-family:'Fraunces',serif;font-weight:800;font-size:28px;
+  color:#fff;text-align:center;position:relative;z-index:2;
+}
+.load-logo{
+  width:60px;margin-bottom:12px;display:block;margin-left:auto;margin-right:auto;
+}
+.load-sub{
+  font-family:'Space Mono',monospace;font-size:9px;letter-spacing:3px;
+  text-transform:uppercase;color:#555;margin-top:8px;text-align:center;
+}
+
+/* Loading: Big Bang */
+.scene-bigbang .load-text{animation:bigBang 3s ease-out infinite}
+.scene-bigbang .bang-ring{
+  position:absolute;border-radius:50%;border:1px solid rgba(255,0,209,0.2);
+  animation:bangExpand 3s ease-out infinite;
+}
+.bang-ring:nth-child(1){width:20px;height:20px;animation-delay:0s}
+.bang-ring:nth-child(2){width:20px;height:20px;animation-delay:0.15s;border-color:rgba(139,92,246,0.2)}
+.bang-ring:nth-child(3){width:20px;height:20px;animation-delay:0.3s;border-color:rgba(0,240,255,0.2)}
+@keyframes bigBang{
+  0%{transform:scale(0);opacity:0}
+  20%{transform:scale(1.3);opacity:1}
+  40%{transform:scale(1);opacity:1}
+  100%{transform:scale(1);opacity:1}
+}
+@keyframes bangExpand{
+  0%{transform:scale(0);opacity:0.8}
+  100%{transform:scale(15);opacity:0}
+}
+
+/* Loading: Wormhole */
+.scene-wormhole .wh-ring{
+  position:absolute;border-radius:50%;
+  border:1px solid;
+  animation:whPulse 3s ease-in-out infinite;
+}
+.wh-ring:nth-child(1){width:200px;height:200px;border-color:rgba(0,240,255,0.3);animation-delay:0s}
+.wh-ring:nth-child(2){width:160px;height:160px;border-color:rgba(139,92,246,0.3);animation-delay:0.3s}
+.wh-ring:nth-child(3){width:120px;height:120px;border-color:rgba(255,0,209,0.3);animation-delay:0.6s}
+.wh-ring:nth-child(4){width:80px;height:80px;border-color:rgba(0,240,255,0.3);animation-delay:0.9s}
+.wh-ring:nth-child(5){width:50px;height:50px;border-color:rgba(139,92,246,0.4);animation-delay:1.2s}
+.scene-wormhole .load-text{font-size:22px;z-index:5}
+@keyframes whPulse{
+  0%,100%{transform:scale(0.8) rotate(0deg);opacity:0.3}
+  50%{transform:scale(1.2) rotate(180deg);opacity:0.8}
+}
+
+/* Loading: Solar System */
+.scene-solar{overflow:hidden}
+.solar-ring{
+  position:absolute;border-radius:50%;border:1px solid rgba(255,255,255,0.08);
+}
+.solar-ring.r1{width:180px;height:180px}
+.solar-ring.r2{width:280px;height:280px}
+.solar-ring.r3{width:380px;height:380px}
+.solar-orbiter{
+  position:absolute;width:36px;height:36px;
+  animation:solarOrbit linear infinite;
+  transform-origin:center center;
+}
+.solar-orbiter img{width:100%;height:100%;border-radius:50%;object-fit:cover}
+.solar-orbiter.o1{animation-duration:6s;top:calc(50% - 90px - 18px);left:calc(50% - 18px);animation-name:orbit1}
+.solar-orbiter.o2{animation-duration:10s;top:calc(50% - 140px - 18px);left:calc(50% - 18px);animation-name:orbit2;width:28px;height:28px}
+.solar-orbiter.o3{animation-duration:16s;top:calc(50% - 190px - 18px);left:calc(50% - 18px);animation-name:orbit3;width:24px;height:24px}
+@keyframes orbit1{0%{transform:rotate(0deg) translateX(90px) rotate(0deg)}100%{transform:rotate(360deg) translateX(90px) rotate(-360deg)}}
+@keyframes orbit2{0%{transform:rotate(0deg) translateX(140px) rotate(0deg)}100%{transform:rotate(360deg) translateX(140px) rotate(-360deg)}}
+@keyframes orbit3{0%{transform:rotate(0deg) translateX(190px) rotate(0deg)}100%{transform:rotate(360deg) translateX(190px) rotate(-360deg)}}
+.scene-solar .load-text{z-index:10;font-size:20px}
+.scene-solar .center-logo{
+  width:50px;height:50px;border-radius:50%;overflow:hidden;
+  position:absolute;z-index:5;
+  box-shadow:0 0 30px rgba(255,0,209,0.4);
+}
+.scene-solar .center-logo img{width:100%;height:100%;object-fit:contain;padding:8px}
+
+/* Loading: Dark Matter */
+.scene-darkmatter .load-text{
+  animation:darkReveal 6s ease-in-out infinite;
+}
+.scene-darkmatter .dm-glow{
+  position:absolute;width:200px;height:200px;border-radius:50%;
+  background:radial-gradient(circle,rgba(139,92,246,0.08) 0%,transparent 70%);
+  animation:dmGlow 6s ease-in-out infinite;
+}
+@keyframes darkReveal{
+  0%,10%{opacity:0.03;filter:blur(8px);transform:scale(0.98)}
+  50%,60%{opacity:0.25;filter:blur(0px);transform:scale(1)}
+  90%,100%{opacity:0.03;filter:blur(8px);transform:scale(0.98)}
+}
+@keyframes dmGlow{
+  0%,100%{opacity:0;transform:scale(0.5)}
+  50%{opacity:1;transform:scale(1.2)}
+}
+
+/* Loading: Supernova */
+.scene-supernova .sn-flash{
+  position:absolute;width:10px;height:10px;border-radius:50%;
+  background:#fff;
+  animation:snFlash 3s ease-out infinite;
+}
+.scene-supernova .sn-rays{
+  position:absolute;width:300px;height:300px;
+  background:radial-gradient(circle,rgba(255,140,0,0.3) 0%,rgba(255,0,209,0.1) 30%,transparent 70%);
+  animation:snRays 3s ease-out infinite;
+  border-radius:50%;
+}
+.scene-supernova .load-text{animation:snText 3s ease-out infinite}
+@keyframes snFlash{
+  0%{transform:scale(0);opacity:1}
+  15%{transform:scale(30);opacity:0.8}
+  30%{transform:scale(0);opacity:0}
+  100%{opacity:0}
+}
+@keyframes snRays{
+  0%,20%{transform:scale(0);opacity:0}
+  40%{transform:scale(1);opacity:1}
+  100%{transform:scale(1.5);opacity:0.3}
+}
+@keyframes snText{
+  0%,25%{opacity:0;transform:scale(0.5)}
+  40%{opacity:1;transform:scale(1.05)}
+  50%{transform:scale(1)}
+  100%{opacity:1;transform:scale(1)}
+}
+
+/* Loading: Constellation Draw */
+.scene-constdraw svg{position:absolute;inset:0;width:100%;height:100%}
+.scene-constdraw .cd-dot{
+  fill:var(--pink);opacity:0;
+  animation:cdDotIn 0.4s ease-out forwards;
+}
+.cd-dot:nth-child(1){animation-delay:0.2s}
+.cd-dot:nth-child(2){animation-delay:0.5s}
+.cd-dot:nth-child(3){animation-delay:0.8s}
+.cd-dot:nth-child(4){animation-delay:1.1s}
+.cd-dot:nth-child(5){animation-delay:1.4s}
+.cd-dot:nth-child(6){animation-delay:1.7s}
+.cd-dot:nth-child(7){animation-delay:2.0s}
+.scene-constdraw .cd-line{
+  stroke:rgba(255,0,209,0.3);stroke-width:1;fill:none;
+  stroke-dasharray:200;stroke-dashoffset:200;
+  animation:cdLineIn 1s ease-out forwards;
+}
+.cd-line:nth-child(8){animation-delay:0.6s}
+.cd-line:nth-child(9){animation-delay:0.9s}
+.cd-line:nth-child(10){animation-delay:1.2s}
+.cd-line:nth-child(11){animation-delay:1.5s}
+.cd-line:nth-child(12){animation-delay:1.8s}
+.cd-line:nth-child(13){animation-delay:2.1s}
+.scene-constdraw .load-text{
+  opacity:0;animation:cdTextIn 0.8s ease-out 2.5s forwards;
+  font-size:24px;
+}
+@keyframes cdDotIn{to{opacity:1}}
+@keyframes cdLineIn{to{stroke-dashoffset:0}}
+@keyframes cdTextIn{to{opacity:1}}
+
+/* Loading: Plushie Parade */
+.scene-parade .parade-track{
+  position:absolute;bottom:45%;left:0;width:100%;height:50px;
+  display:flex;gap:12px;
+  animation:paradeScroll 6s linear infinite;
+}
+.parade-track img{
+  width:40px;height:40px;border-radius:50%;object-fit:cover;
+  animation:paradeBounce 0.6s ease-in-out infinite alternate;
+  flex-shrink:0;
+}
+.parade-track img:nth-child(2){animation-delay:0.1s}
+.parade-track img:nth-child(3){animation-delay:0.2s}
+.parade-track img:nth-child(4){animation-delay:0.3s}
+.parade-track img:nth-child(5){animation-delay:0.4s}
+.parade-track img:nth-child(6){animation-delay:0.5s}
+.parade-track img:nth-child(7){animation-delay:0.6s}
+.parade-track img:nth-child(8){animation-delay:0.15s}
+.parade-track img:nth-child(9){animation-delay:0.25s}
+.parade-track img:nth-child(10){animation-delay:0.35s}
+.parade-track img:nth-child(11){animation-delay:0.45s}
+.parade-track img:nth-child(12){animation-delay:0.55s}
+.parade-track img:nth-child(13){animation-delay:0.65s}
+.parade-track img:nth-child(14){animation-delay:0.05s}
+@keyframes paradeScroll{0%{transform:translateX(100%)}100%{transform:translateX(-200%)}}
+@keyframes paradeBounce{0%{transform:translateY(0)}100%{transform:translateY(-8px)}}
+.scene-parade .load-text{position:absolute;top:30%}
+
+/* ══════════ WEEKLY STRIP ══════════ */
+.weekly-strip{
+  max-width:700px;margin:0 auto;padding:40px 24px 60px;
+  display:flex;gap:8px;justify-content:center;
+}
+.week-day{
+  flex:1;max-width:90px;
+  display:flex;flex-direction:column;align-items:center;gap:6px;
+  padding:12px 8px;border-radius:12px;
+  background:rgba(255,255,255,0.03);border:1px solid rgba(255,255,255,0.06);
+  cursor:pointer;transition:all 0.3s;position:relative;
+}
+.week-day:hover{background:rgba(255,255,255,0.06)}
+.week-day.active{
+  background:rgba(255,0,209,0.1);border-color:var(--pink);
+  box-shadow:0 0 20px rgba(255,0,209,0.15);
+}
+.week-day.active::after{
+  content:'';position:absolute;top:-6px;left:50%;transform:translateX(-50%);
+  width:6px;height:6px;border-radius:50%;background:var(--pink);
+  box-shadow:0 0 8px var(--pink);
+}
+.week-day .wd-img{
+  width:36px;height:36px;border-radius:50%;overflow:hidden;
+  background:rgba(255,255,255,0.05);
+}
+.week-day .wd-img img{width:100%;height:100%;object-fit:cover}
+.week-day .wd-label{
+  font-family:'Space Mono',monospace;font-size:9px;letter-spacing:1px;
+  text-transform:uppercase;color:#666;
+}
+.week-day.active .wd-label{color:var(--pink)}
+.week-day .wd-name{
+  font-family:'Inter',sans-serif;font-size:10px;color:#444;
+  white-space:nowrap;overflow:hidden;text-overflow:ellipsis;max-width:70px;text-align:center;
+}
+.week-day.active .wd-name{color:#ccc}
+
+/* ══════════ TREATMENT NAME BADGE ══════════ */
+.treatment-badge{
+  position:absolute;bottom:12px;left:50%;transform:translateX(-50%);
+  background:rgba(0,0,0,0.7);backdrop-filter:blur(8px);
+  border:1px solid rgba(255,255,255,0.1);
+  padding:6px 14px;border-radius:20px;
+  font-family:'Space Mono',monospace;font-size:9px;letter-spacing:1.5px;
+  text-transform:uppercase;color:#aaa;white-space:nowrap;
+  transition:all var(--transition-speed);
+}
+.loading-frame .treatment-badge{
+  background:rgba(255,255,255,0.08);color:#888;
+}
+</style>
+</head>
+<body>
+
+<!-- ═══════ HEADER ═══════ -->
+<header class="demo-header">
+  <h1>Daily Logo <span>Rotation</span></h1>
+  <p>Interactive concept &mdash; Nancy Universe</p>
+</header>
+
+<!-- ═══════ CONTROLLER ═══════ -->
+<div class="controller">
+  <div class="day-nav">
+    <button class="day-btn" onclick="prevDay()">← Prev</button>
+    <div class="day-display">
+      <div class="day-plushie" id="dayPlushie"><img id="dayPlushieImg" src="" alt=""></div>
+      <div class="day-info">
+        <div class="day-name" id="dayName"></div>
+        <div class="day-plushie-name" id="dayPlushieName"></div>
+      </div>
+    </div>
+    <button class="day-btn" onclick="nextDay()">Next →</button>
+  </div>
+  <div class="autoplay-toggle" id="autoplayBtn" onclick="toggleAutoplay()">
+    <span>Auto</span>
+    <div class="toggle-track"><div class="toggle-thumb"></div></div>
+  </div>
+</div>
+
+<!-- ═══════ MAIN STAGE ═══════ -->
+<div class="stage">
+
+  <!-- LEFT: Nav Logo Treatment -->
+  <div class="stage-panel">
+    <div class="panel-label">Nav Logo Treatment</div>
+    <div class="nav-frame">
+      <div class="nav-mockup">
+        <div class="nav-logo-area">
+          <img src="https://nancyuniverse.com/assets/logos/nancy-pink.png" alt="Nancy">
+          <span class="universe-text" id="navUniverseText" style="font-family:'Fraunces',serif;font-size:14px;font-weight:700;color:#0a0015;">Universe</span>
+        </div>
+        <div class="nav-links-mock">
+          <span>Shop All</span><span>Plushies</span><span>Fashion</span><span>Toys</span>
+        </div>
+      </div>
+
+      <!-- Nebula -->
+      <div class="nav-treatment active" data-nav="0">
+        <div style="text-align:center">
+          <div class="headline-mock">
+            <span class="h-line1">Pleasure deserved</span>
+            <span class="h-line2">its own</span>
+            <span class="h-line3 treat-nebula-text" style="background:linear-gradient(135deg,#4D0080,#8B5CF6,#ff00d1,#ff69b4,#00f0ff,#8B5CF6,#4D0080);background-size:300% 300%;-webkit-background-clip:text;-webkit-text-fill-color:transparent;background-clip:text;animation:nebulaShift 5s ease-in-out infinite;font-family:'Fraunces',serif;font-weight:900;font-size:clamp(32px,4.5vw,46px);">universe.</span>
+          </div>
+        </div>
+        <div class="treatment-badge">Nebula Gradient</div>
+      </div>
+
+      <!-- Constellation -->
+      <div class="nav-treatment" data-nav="1">
+        <div style="text-align:center;position:relative">
+          <div class="constellation-stars">
+            <div class="cstar"></div><div class="cstar"></div><div class="cstar"></div><div class="cstar"></div>
+            <div class="cstar"></div><div class="cstar"></div><div class="cstar"></div><div class="cstar"></div>
+          </div>
+          <div class="headline-mock">
+            <span class="h-line1">Pleasure deserved</span>
+            <span class="h-line2">its own</span>
+            <span class="h-line3" style="font-family:'Outfit',sans-serif;font-weight:200;font-size:clamp(24px,3.5vw,34px);letter-spacing:10px;text-transform:uppercase;color:#0a0015;">universe.</span>
+          </div>
+        </div>
+        <div class="treatment-badge">Constellation Map</div>
+      </div>
+
+      <!-- Aurora -->
+      <div class="nav-treatment" data-nav="2">
+        <div style="text-align:center">
+          <div class="headline-mock">
+            <span class="h-line1">Pleasure deserved</span>
+            <span class="h-line2">its own</span>
+            <span class="h-line3" style="background:linear-gradient(180deg,#00f0ff,#8B5CF6,#ff00d1,#00ff88,#00f0ff);background-size:100% 400%;-webkit-background-clip:text;-webkit-text-fill-color:transparent;background-clip:text;animation:auroraFlow 4s ease-in-out infinite;filter:drop-shadow(0 0 12px rgba(139,92,246,0.15));font-family:'Fraunces',serif;font-weight:900;font-size:clamp(32px,4.5vw,46px);">universe.</span>
+          </div>
+        </div>
+        <div class="treatment-badge">Aurora Borealis</div>
+      </div>
+
+      <!-- Holographic -->
+      <div class="nav-treatment" data-nav="3">
+        <div style="text-align:center">
+          <div class="headline-mock">
+            <span class="h-line1">Pleasure deserved</span>
+            <span class="h-line2">its own</span>
+            <span class="h-line3" style="background:linear-gradient(45deg,#ff00d1,#00f0ff,#ccfd28,#8B5CF6,#ffd700,#ff00d1,#00f0ff);background-size:400% 400%;-webkit-background-clip:text;-webkit-text-fill-color:transparent;background-clip:text;animation:holoShift 3s linear infinite;filter:drop-shadow(0 0 8px rgba(255,0,209,0.12));font-family:'Fraunces',serif;font-weight:900;font-size:clamp(32px,4.5vw,46px);">universe.</span>
+          </div>
+        </div>
+        <div class="treatment-badge">Holographic</div>
+      </div>
+
+      <!-- Gold -->
+      <div class="nav-treatment" data-nav="4">
+        <div style="text-align:center">
+          <div class="headline-mock">
+            <span class="h-line1">Pleasure deserved</span>
+            <span class="h-line2">its own</span>
+            <span class="h-line3" style="background:linear-gradient(135deg,#b8860b,#ffd700,#fff8dc,#ffd700,#b8860b,#ffd700);background-size:200% 200%;-webkit-background-clip:text;-webkit-text-fill-color:transparent;background-clip:text;animation:goldShimmer 4s ease-in-out infinite;filter:drop-shadow(0 0 6px rgba(255,215,0,0.25));font-family:'Fraunces',serif;font-weight:900;font-size:clamp(32px,4.5vw,46px);">universe.</span>
+          </div>
+        </div>
+        <div class="treatment-badge">Gold Leaf</div>
+      </div>
+
+      <!-- Stardust -->
+      <div class="nav-treatment" data-nav="5">
+        <div style="text-align:center;position:relative">
+          <div class="stardust-particles">
+            <div class="sp"></div><div class="sp"></div><div class="sp"></div>
+            <div class="sp"></div><div class="sp"></div><div class="sp"></div>
+          </div>
+          <div class="headline-mock">
+            <span class="h-line1">Pleasure deserved</span>
+            <span class="h-line2">its own</span>
+            <span class="h-line3" style="color:#0a0015;font-family:'Fraunces',serif;font-weight:900;font-size:clamp(32px,4.5vw,46px);">universe.</span>
+          </div>
+        </div>
+        <div class="treatment-badge">Stardust</div>
+      </div>
+
+      <!-- Plushie Color -->
+      <div class="nav-treatment" data-nav="6">
+        <div style="text-align:center">
+          <div class="headline-mock">
+            <span class="h-line1">Pleasure deserved</span>
+            <span class="h-line2">its own</span>
+            <span class="h-line3" id="plushieColorText" style="font-family:'Fraunces',serif;font-weight:900;font-size:clamp(32px,4.5vw,46px);transition:color 0.6s;">universe.</span>
+          </div>
+        </div>
+        <div class="treatment-badge">Plushie Color</div>
+      </div>
+
+      <!-- Hero bg (shared) -->
+      <div style="position:absolute;inset:0;top:50px;background:linear-gradient(180deg,#fff5f5 0%,#ffe8f0 50%,#fff 100%);z-index:0;"></div>
+    </div>
+  </div>
+
+  <!-- RIGHT: Loading Screen Treatment -->
+  <div class="stage-panel">
+    <div class="panel-label">Loading Screen</div>
+    <div class="loading-frame">
+
+      <!-- Big Bang -->
+      <div class="loading-scene scene-bigbang active" data-load="0">
+        <div class="bang-ring"></div>
+        <div class="bang-ring"></div>
+        <div class="bang-ring"></div>
+        <div style="text-align:center;z-index:5">
+          <img class="load-logo" src="https://nancyuniverse.com/assets/logos/nancy-pink.png" alt="" style="filter:brightness(0) invert(1)">
+          <div class="load-text">universe</div>
+          <div class="load-sub">Loading your world</div>
+        </div>
+        <div class="treatment-badge">Big Bang</div>
+      </div>
+
+      <!-- Wormhole -->
+      <div class="loading-scene scene-wormhole" data-load="1">
+        <div class="wh-ring"></div>
+        <div class="wh-ring"></div>
+        <div class="wh-ring"></div>
+        <div class="wh-ring"></div>
+        <div class="wh-ring"></div>
+        <div style="text-align:center;z-index:5">
+          <img class="load-logo" src="https://nancyuniverse.com/assets/logos/nancy-pink.png" alt="" style="filter:brightness(0) invert(1);width:40px">
+          <div class="load-text" style="font-size:22px">universe</div>
+        </div>
+        <div class="treatment-badge">Wormhole</div>
+      </div>
+
+      <!-- Solar System -->
+      <div class="loading-scene scene-solar" data-load="2">
+        <div class="solar-ring r1"></div>
+        <div class="solar-ring r2"></div>
+        <div class="solar-ring r3"></div>
+        <div class="center-logo"><img src="https://nancyuniverse.com/assets/logos/nancy-pink.png" alt=""></div>
+        <div class="solar-orbiter o1"><img src="https://nancyuniverse.com/assets/plushies/luna/luna-hero.png" alt="Luna"></div>
+        <div class="solar-orbiter o2"><img src="https://nancyuniverse.com/assets/plushies/solaris/solaris-hero.png" alt="Solaris"></div>
+        <div class="solar-orbiter o3"><img src="https://nancyuniverse.com/assets/plushies/pluto/pluto-hero.png" alt="Pluto"></div>
+        <div class="load-text" style="position:absolute;bottom:60px;font-size:18px;width:100%;z-index:10">universe</div>
+        <div class="treatment-badge">Solar System</div>
+      </div>
+
+      <!-- Dark Matter -->
+      <div class="loading-scene scene-darkmatter" data-load="3">
+        <div class="dm-glow"></div>
+        <div style="text-align:center;z-index:5">
+          <img class="load-logo" src="https://nancyuniverse.com/assets/logos/nancy-pink.png" alt="" style="filter:brightness(0) invert(1);opacity:0.15">
+          <div class="load-text">universe</div>
+          <div class="load-sub" style="opacity:0.3">Can you see it?</div>
+        </div>
+        <div class="treatment-badge">Dark Matter</div>
+      </div>
+
+      <!-- Supernova -->
+      <div class="loading-scene scene-supernova" data-load="4">
+        <div class="sn-flash"></div>
+        <div class="sn-rays"></div>
+        <div style="text-align:center;z-index:5">
+          <img class="load-logo" src="https://nancyuniverse.com/assets/logos/nancy-pink.png" alt="" style="filter:brightness(0) invert(1)">
+          <div class="load-text">universe</div>
+        </div>
+        <div class="treatment-badge">Supernova</div>
+      </div>
+
+      <!-- Constellation Draw -->
+      <div class="loading-scene scene-constdraw" data-load="5">
+        <svg viewBox="0 0 300 500" xmlns="http://www.w3.org/2000/svg">
+          <circle class="cd-dot" cx="60" cy="180" r="4"/>
+          <circle class="cd-dot" cx="130" cy="150" r="3"/>
+          <circle class="cd-dot" cx="200" cy="170" r="4"/>
+          <circle class="cd-dot" cx="240" cy="220" r="3"/>
+          <circle class="cd-dot" cx="170" cy="260" r="4"/>
+          <circle class="cd-dot" cx="100" cy="240" r="3"/>
+          <circle class="cd-dot" cx="150" cy="300" r="4"/>
+          <line class="cd-line" x1="60" y1="180" x2="130" y2="150"/>
+          <line class="cd-line" x1="130" y1="150" x2="200" y2="170"/>
+          <line class="cd-line" x1="200" y1="170" x2="240" y2="220"/>
+          <line class="cd-line" x1="240" y1="220" x2="170" y2="260"/>
+          <line class="cd-line" x1="170" y1="260" x2="100" y2="240"/>
+          <line class="cd-line" x1="100" y1="240" x2="150" y2="300"/>
+        </svg>
+        <div class="load-text" style="position:absolute;bottom:120px;">universe</div>
+        <div class="treatment-badge">Constellation Draw</div>
+      </div>
+
+      <!-- Plushie Parade -->
+      <div class="loading-scene scene-parade" data-load="6">
+        <div style="text-align:center;z-index:5;position:absolute;top:28%">
+          <img class="load-logo" src="https://nancyuniverse.com/assets/logos/nancy-pink.png" alt="" style="filter:brightness(0) invert(1)">
+          <div class="load-text">universe</div>
+        </div>
+        <div class="parade-track">
+          <img src="https://nancyuniverse.com/assets/plushies/lem/lem-hero.png" alt="">
+          <img src="https://nancyuniverse.com/assets/plushies/berri/berri-hero.png" alt="">
+          <img src="https://nancyuniverse.com/assets/plushies/avo/avo-hero.png" alt="">
+          <img src="https://nancyuniverse.com/assets/plushies/galaxy/galaxy-hero.png" alt="">
+          <img src="https://nancyuniverse.com/assets/plushies/nebula/nebula-hero.png" alt="">
+          <img src="https://nancyuniverse.com/assets/plushies/unicorn/unicorn-hero.png" alt="">
+          <img src="https://nancyuniverse.com/assets/plushies/cosmo/cosmo-hero.png" alt="">
+          <img src="https://nancyuniverse.com/assets/plushies/solaris/solaris-hero.png" alt="">
+          <img src="https://nancyuniverse.com/assets/plushies/luna/luna-hero.png" alt="">
+          <img src="https://nancyuniverse.com/assets/plushies/matcha/matcha-hero.png" alt="">
+          <img src="https://nancyuniverse.com/assets/plushies/boba/boba-hero.png" alt="">
+          <img src="https://nancyuniverse.com/assets/plushies/lollipop/lollipop-hero.png" alt="">
+          <img src="https://nancyuniverse.com/assets/plushies/glitch/glitch-hero.png" alt="">
+          <img src="https://nancyuniverse.com/assets/plushies/rocket/rocket-hero.png" alt="">
+        </div>
+        <div class="treatment-badge">Plushie Parade</div>
+      </div>
+
+    </div>
+  </div>
+</div>
+
+<!-- ═══════ WEEKLY STRIP ═══════ -->
+<div class="weekly-strip" id="weeklyStrip"></div>
+
+<script>
+const DAYS = [
+  { day:'Monday',    plushie:'Lem',     img:'lem',     color:'#FFD93D', navTreat:'Nebula Gradient',   loadTreat:'Big Bang' },
+  { day:'Tuesday',   plushie:'Galaxy',  img:'galaxy',  color:'#4D96FF', navTreat:'Constellation Map', loadTreat:'Wormhole' },
+  { day:'Wednesday', plushie:'Berri',   img:'berri',   color:'#ff69b4', navTreat:'Aurora Borealis',   loadTreat:'Solar System' },
+  { day:'Thursday',  plushie:'Nebula',  img:'nebula',  color:'#8B5CF6', navTreat:'Holographic',       loadTreat:'Dark Matter' },
+  { day:'Friday',    plushie:'Solaris', img:'solaris', color:'#FF8C00', navTreat:'Gold Leaf',         loadTreat:'Supernova' },
+  { day:'Saturday',  plushie:'Cosmo',   img:'cosmo',   color:'#A0AEC0', navTreat:'Stardust',          loadTreat:'Constellation Draw' },
+  { day:'Sunday',    plushie:'Unicorn', img:'unicorn', color:'#ff00d1', navTreat:'Plushie Color',     loadTreat:'Plushie Parade' },
+];
+
+const BASE = 'https://nancyuniverse.com/assets/plushies/';
+let current = 0;
+let autoplayInterval = null;
+let isAutoplaying = false;
+
+function buildWeekStrip(){
+  const strip = document.getElementById('weeklyStrip');
+  DAYS.forEach((d,i) => {
+    strip.innerHTML += `
+      <div class="week-day ${i===0?'active':''}" data-idx="${i}" onclick="goToDay(${i})">
+        <div class="wd-img"><img src="${BASE}${d.img}/${d.img}-hero.png" alt="${d.plushie}"></div>
+        <div class="wd-label">${d.day.slice(0,3)}</div>
+        <div class="wd-name">${d.plushie}</div>
+      </div>`;
+  });
+}
+
+function goToDay(idx){
+  current = idx;
+  const d = DAYS[current];
+
+  // Update CSS variable
+  document.documentElement.style.setProperty('--day-color', d.color);
+
+  // Controller
+  document.getElementById('dayPlushieImg').src = `${BASE}${d.img}/${d.img}-hero.png`;
+  document.getElementById('dayName').textContent = d.day;
+  document.getElementById('dayPlushieName').textContent = `${d.plushie} — ${d.navTreat}`;
+  document.getElementById('dayPlushie').style.borderColor = d.color;
+
+  // Plushie color text
+  document.getElementById('plushieColorText').style.color = d.color;
+
+  // Nav "Universe" text treatment
+  const navText = document.getElementById('navUniverseText');
+  navText.style = '';
+  navText.className = 'universe-text';
+  switch(idx){
+    case 0: // Nebula
+      Object.assign(navText.style, {fontFamily:"'Fraunces',serif",fontSize:'14px',fontWeight:'700',
+        background:'linear-gradient(135deg,#4D0080,#8B5CF6,#ff00d1,#00f0ff,#8B5CF6)',
+        backgroundSize:'300% 300%',WebkitBackgroundClip:'text',WebkitTextFillColor:'transparent',
+        backgroundClip:'text',animation:'nebulaShift 5s ease-in-out infinite'});break;
+    case 1: // Constellation
+      Object.assign(navText.style, {fontFamily:"'Outfit',sans-serif",fontSize:'12px',fontWeight:'200',
+        letterSpacing:'4px',textTransform:'uppercase',color:'#0a0015'});break;
+    case 2: // Aurora
+      Object.assign(navText.style, {fontFamily:"'Fraunces',serif",fontSize:'14px',fontWeight:'700',
+        background:'linear-gradient(180deg,#00f0ff,#8B5CF6,#ff00d1,#00ff88)',
+        backgroundSize:'100% 400%',WebkitBackgroundClip:'text',WebkitTextFillColor:'transparent',
+        backgroundClip:'text',animation:'auroraFlow 4s ease-in-out infinite'});break;
+    case 3: // Holo
+      Object.assign(navText.style, {fontFamily:"'Fraunces',serif",fontSize:'14px',fontWeight:'700',
+        background:'linear-gradient(45deg,#ff00d1,#00f0ff,#ccfd28,#8B5CF6,#ffd700,#ff00d1)',
+        backgroundSize:'400% 400%',WebkitBackgroundClip:'text',WebkitTextFillColor:'transparent',
+        backgroundClip:'text',animation:'holoShift 3s linear infinite'});break;
+    case 4: // Gold
+      Object.assign(navText.style, {fontFamily:"'Fraunces',serif",fontSize:'14px',fontWeight:'700',
+        background:'linear-gradient(135deg,#b8860b,#ffd700,#fff8dc,#ffd700,#b8860b)',
+        backgroundSize:'200% 200%',WebkitBackgroundClip:'text',WebkitTextFillColor:'transparent',
+        backgroundClip:'text',animation:'goldShimmer 4s ease-in-out infinite'});break;
+    case 5: // Stardust
+      Object.assign(navText.style, {fontFamily:"'Fraunces',serif",fontSize:'14px',fontWeight:'700',color:'#0a0015'});break;
+    case 6: // Plushie color
+      Object.assign(navText.style, {fontFamily:"'Fraunces',serif",fontSize:'14px',fontWeight:'700',color:d.color});break;
+  }
+
+  // Nav treatments
+  document.querySelectorAll('.nav-treatment').forEach(el => el.classList.remove('active'));
+  document.querySelector(`[data-nav="${idx}"]`).classList.add('active');
+
+  // Loading scenes — restart animations
+  document.querySelectorAll('.loading-scene').forEach(el => {
+    el.classList.remove('active');
+    // Force animation restart by re-inserting
+    el.style.animation = 'none';
+    el.offsetHeight; // trigger reflow
+    el.style.animation = '';
+  });
+  const activeScene = document.querySelector(`[data-load="${idx}"]`);
+  activeScene.classList.add('active');
+  // Restart child animations
+  activeScene.querySelectorAll('*').forEach(child => {
+    const anim = child.style.animation || getComputedStyle(child).animation;
+    if(anim && anim !== 'none'){
+      child.style.animation = 'none';
+      child.offsetHeight;
+      child.style.animation = '';
+    }
+  });
+  // For constellation draw, reset SVG animations
+  if(idx === 5){
+    activeScene.querySelectorAll('.cd-dot, .cd-line').forEach(el => {
+      const clone = el.cloneNode(true);
+      el.parentNode.replaceChild(clone, el);
+    });
+    const loadText = activeScene.querySelector('.load-text');
+    if(loadText){
+      const cl = loadText.cloneNode(true);
+      loadText.parentNode.replaceChild(cl, loadText);
+    }
+  }
+
+  // Weekly strip
+  document.querySelectorAll('.week-day').forEach((el,i) => {
+    el.classList.toggle('active', i===idx);
+  });
+}
+
+function nextDay(){ goToDay((current + 1) % 7); }
+function prevDay(){ goToDay((current - 1 + 7) % 7); }
+
+function toggleAutoplay(){
+  const btn = document.getElementById('autoplayBtn');
+  isAutoplaying = !isAutoplaying;
+  btn.classList.toggle('active', isAutoplaying);
+  if(isAutoplaying){
+    autoplayInterval = setInterval(nextDay, 4000);
+  } else {
+    clearInterval(autoplayInterval);
+  }
+}
+
+// Keyboard nav
+document.addEventListener('keydown', e => {
+  if(e.key === 'ArrowRight') nextDay();
+  if(e.key === 'ArrowLeft') prevDay();
+  if(e.key === ' '){ e.preventDefault(); toggleAutoplay(); }
+});
+
+// Init
+buildWeekStrip();
+goToDay(0);
+</script>
+</body>
+</html>
