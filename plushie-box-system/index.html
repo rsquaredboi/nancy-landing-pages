@@ -126,6 +126,27 @@ h3{font-family:var(--font-d);font-weight:700}
 .sticker-card-name{font-size:0.72rem;font-weight:700;margin-bottom:0.15rem}
 .sticker-card-tagline{font-size:0.62rem;opacity:0.55;font-style:italic;color:var(--pink)}
 
+/* Reveal / Interior Experience cards */
+.bg-magenta-glow{background:radial-gradient(ellipse at 50% 40%,rgba(255,0,128,0.06) 0%,var(--dark) 70%)}
+.bg-magenta-chaos{background:linear-gradient(160deg,#1a0020 0%,#200a18 40%,var(--dark) 80%)}
+.glow-magenta{background:#ff0080;width:500px;height:500px;top:-80px;right:-80px;opacity:0.06}
+.tag-magenta{background:rgba(255,0,128,0.12);color:#ff4da6}
+h2 .magenta{color:#ff4da6}
+.reveal-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:1.5rem;margin-top:1.5rem}
+.reveal-grid-4{display:grid;grid-template-columns:repeat(4,1fr);gap:1.2rem;margin-top:1.5rem}
+.reveal-card{
+  background:rgba(255,255,255,0.04);border-radius:14px;overflow:hidden;
+  border:1px solid rgba(255,0,128,0.08);transition:all 0.3s;
+}
+.reveal-card:hover{border-color:rgba(255,0,128,0.25);transform:translateY(-4px);box-shadow:0 12px 40px rgba(255,0,128,0.08)}
+.reveal-card img{width:100%;aspect-ratio:1/1;object-fit:cover;display:block}
+.reveal-card-body{padding:0.8rem 1rem 1rem}
+.reveal-card-name{font-size:0.9rem;font-weight:700;margin-bottom:0.15rem}
+.reveal-card-tagline{font-size:0.72rem;opacity:0.5;font-style:italic;color:#ff4da6;margin-bottom:0.3rem}
+.reveal-card-desc{font-size:0.68rem;opacity:0.35;line-height:1.5}
+@media(max-width:900px){.reveal-grid,.reveal-grid-4{grid-template-columns:1fr 1fr}}
+@media(max-width:600px){.reveal-grid,.reveal-grid-4{grid-template-columns:1fr}}
+
 /* Decoy / Deceptive box cards */
 .bg-amber-glow{background:radial-gradient(ellipse at 50% 40%,rgba(255,165,0,0.05) 0%,var(--dark) 70%)}
 .bg-amber-chaos{background:linear-gradient(160deg,#0a0a1e 0%,#1a1008 40%,var(--dark) 80%)}
@@ -201,7 +222,7 @@ h2 .amber{color:#ffaa33}
 <body>
 
 <div class="progress" id="progress"></div>
-<div class="slide-counter" id="counter">01 / 15</div>
+<div class="slide-counter" id="counter">01 / 18</div>
 <div class="deck-nav">
   <button onclick="go(-1)" title="Previous">‹</button>
   <button onclick="go(1)" title="Next">›</button>
@@ -632,16 +653,144 @@ h2 .amber{color:#ffaa33}
   </div>
 </section>
 
-<!-- ═══ SLIDE 15 — CLOSING ═══ -->
+<!-- ═══ SLIDE 15 — THE INTERIOR REVEAL (1/3) ═══ -->
+<section class="slide bg-magenta-chaos">
+  <div class="glow glow-magenta"></div>
+  <div class="slide-num">15 — The Interior Reveal</div>
+  <div class="slide-inner">
+    <div class="center-text" style="margin-bottom:1.5rem">
+      <div class="tag tag-magenta">Brown Outside. Magic Inside.</div>
+      <h2 style="font-size:clamp(1.4rem,3vw,2.2rem)">The boring box is the <span class="magenta">setup.</span><br>The interior is the <span class="magenta">punchline.</span></h2>
+      <p class="subtitle" style="margin:0.5rem auto 0">Plain brown exterior → open → explosion of pink, sparkle, confetti, magic. The unboxing IS the content. Every interior theme works with any plushie.</p>
+    </div>
+    <div class="reveal-grid">
+      <div class="reveal-card">
+        <img src="assets/reveal-confetti-explosion.png" alt="Confetti Explosion Interior">
+        <div class="reveal-card-body">
+          <div class="reveal-card-name">🎉 Confetti Explosion</div>
+          <div class="reveal-card-tagline">"Open box. Lose mind."</div>
+          <div class="reveal-card-desc">Hot pink interior walls, holographic confetti, sparkle tissue paper bursting out. Pink shredded paper bed. Maximum unboxing energy.</div>
+        </div>
+      </div>
+      <div class="reveal-card">
+        <img src="assets/reveal-neon-glow.png" alt="Neon Glow Interior">
+        <div class="reveal-card-body">
+          <div class="reveal-card-name">💡 Neon Glow</div>
+          <div class="reveal-card-tagline">"It literally glows when you open it"</div>
+          <div class="reveal-card-desc">LED strip lining inner walls. Pink velvet lining. Satin pillow bed. Pink fog/mist effect. The box GLOWS. Premium tier unboxing.</div>
+        </div>
+      </div>
+      <div class="reveal-card">
+        <img src="assets/reveal-flower-garden.png" alt="Flower Garden Interior">
+        <div class="reveal-card-body">
+          <div class="reveal-card-name">🌸 Secret Garden</div>
+          <div class="reveal-card-tagline">"Brown outside. Botanical inside."</div>
+          <div class="reveal-card-desc">Floral print interior walls. Dried pink flowers and petals. Tissue paper like flower petals. From industrial box to garden. Gift-ready.</div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ═══ SLIDE 16 — THE INTERIOR REVEAL (2/3) ═══ -->
+<section class="slide bg-magenta-glow">
+  <div class="glow glow-magenta" style="left:-80px;right:auto"></div>
+  <div class="slide-num">16 — More Interiors</div>
+  <div class="slide-inner">
+    <div class="center-text" style="margin-bottom:1.5rem">
+      <div class="tag tag-magenta">Flexible Per Collection</div>
+      <h2 style="font-size:clamp(1.4rem,3vw,2rem)">Clouds. Treasure. <span class="magenta">Disco balls.</span></h2>
+      <p class="subtitle" style="margin:0.5rem auto 0">Each interior theme can flex per collection wave. Space wave = galaxy interior. Food wave = candy shop interior. Same brown box.</p>
+    </div>
+    <div class="reveal-grid-4">
+      <div class="reveal-card">
+        <img src="assets/reveal-pink-cloud.png" alt="Pink Cloud Interior">
+        <div class="reveal-card-body">
+          <div class="reveal-card-name">☁️ Pink Cloudscape</div>
+          <div class="reveal-card-tagline">"Plushie on a cloud"</div>
+          <div class="reveal-card-desc">Cotton candy fluffy stuffing. Stars + moons on inside lid. Dreamy, soft, cozy. Perfect for Feelings & Moods wave.</div>
+        </div>
+      </div>
+      <div class="reveal-card">
+        <img src="assets/reveal-treasure-chest.png" alt="Treasure Chest Interior">
+        <div class="reveal-card-body">
+          <div class="reveal-card-name">👑 Treasure Vault</div>
+          <div class="reveal-card-tagline">"You found the loot"</div>
+          <div class="reveal-card-desc">Gold foil inner walls. Pink satin base. Holographic stickers. Glitter accents. Your plushie = precious cargo. Premium gifting energy.</div>
+        </div>
+      </div>
+      <div class="reveal-card">
+        <img src="assets/reveal-disco-mirror.png" alt="Disco Mirror Interior">
+        <div class="reveal-card-body">
+          <div class="reveal-card-name">🪩 Disco Box</div>
+          <div class="reveal-card-tagline">"Open the box, start the party"</div>
+          <div class="reveal-card-desc">Tiny mirror/holographic tiles on inner walls. Rainbow light refracts everywhere. Pink tissue paper. Party in a box. Chaos Collection approved.</div>
+        </div>
+      </div>
+      <div class="reveal-card">
+        <img src="assets/reveal-candy-shop.png" alt="Candy Shop Interior">
+        <div class="reveal-card-body">
+          <div class="reveal-card-name">🍬 Candy Shop</div>
+          <div class="reveal-card-tagline">"Sweeter than expected"</div>
+          <div class="reveal-card-desc">Candy stripe inner walls. Wrapped candy tissue paper. Lollipop sticker: "SURPRISE!" Pink, purple, mint. Natural fit for Sweet Tooth + Food waves.</div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ═══ SLIDE 17 — THE INTERIOR REVEAL (3/3) ═══ -->
+<section class="slide bg-magenta-chaos">
+  <div class="glow glow-magenta" style="top:auto;bottom:-80px;left:50%;transform:translateX(-50%)"></div>
+  <div class="slide-num">17 — Themed Interiors</div>
+  <div class="slide-inner">
+    <div class="center-text" style="margin-bottom:1.5rem">
+      <div class="tag tag-magenta">Collection-Specific Interiors</div>
+      <h2 style="font-size:clamp(1.4rem,3vw,2rem)">Galaxy portals. Pop art. <span class="magenta">Living gardens.</span></h2>
+    </div>
+    <div class="reveal-grid">
+      <div class="reveal-card">
+        <img src="assets/reveal-galaxy-portal.png" alt="Galaxy Portal Interior">
+        <div class="reveal-card-body">
+          <div class="reveal-card-name">🌌 Galaxy Portal</div>
+          <div class="reveal-card-tagline">"Open the box, enter the void"</div>
+          <div class="reveal-card-desc">Deep purple + pink nebula inner walls. Holographic star confetti. "You found me" on inside lid. Made for Space & Cosmic wave.</div>
+        </div>
+      </div>
+      <div class="reveal-card">
+        <img src="assets/reveal-pop-art.png" alt="Pop Art Interior">
+        <div class="reveal-card-body">
+          <div class="reveal-card-name">💥 Pop Art Blast</div>
+          <div class="reveal-card-tagline">"POW! BAM! OMG!"</div>
+          <div class="reveal-card-desc">Comic book graphics inside. Halftone dots. Explosive color vs brown exterior. Maximum visual contrast. Chaos Collection energy.</div>
+        </div>
+      </div>
+      <div class="reveal-card">
+        <img src="assets/reveal-greenhouse.png" alt="Greenhouse Interior">
+        <div class="reveal-card-body">
+          <div class="reveal-card-name">🌿 Living Greenhouse</div>
+          <div class="reveal-card-tagline">"Handle with care — living cuteness"</div>
+          <div class="reveal-card-desc">Moss-lined walls. Tiny pink flowers. Garden bed shredded paper. Plant stickers. Made for Weather & Nature and Creatures waves.</div>
+        </div>
+      </div>
+    </div>
+    <div style="text-align:center;margin-top:1.8rem">
+      <p style="font-size:0.8rem;opacity:0.4;max-width:600px;margin:0 auto;line-height:1.6">💡 <strong style="opacity:1;color:var(--pink)">Key insight:</strong> The brown box stays the same. The interior theme can match the collection wave, the season, or the drop. One exterior, infinite interiors. Sticker on the outside. Magic on the inside.</p>
+    </div>
+  </div>
+</section>
+
+<!-- ═══ SLIDE 18 — CLOSING ═══ -->
 <section class="slide bg-gradient">
   <div class="glow glow-pink" style="right:auto;left:50%;transform:translateX(-50%)"></div>
-  <div class="slide-num">15 — Let's Go</div>
+  <div class="slide-num">18 — Let's Go</div>
   <div class="slide-inner center-text">
     <div class="tag">Next Steps</div>
     <h1 style="font-size:clamp(2rem,5vw,3.5rem)">One box to <span>rule them all.</span></h1>
     <p class="subtitle" style="margin:1rem auto 1.5rem">120 characters today. Celeb collabs tomorrow. Limited drops next week. The box never changes — only the sticker does.</p>
     <p class="subtitle" style="margin:0 auto 1.5rem;opacity:0.3;font-size:0.9rem">Want to break the internet? Drop a WANTED box, a prescription bottle, or an egg carton full of plushies.</p>
-    <p class="subtitle" style="margin:0 auto 2.5rem;opacity:0.3;font-size:0.9rem">Want to prank your customers? Ship it in a pizza box, an iPhone box, or a boring brown package with a pink explosion inside.</p>
+    <p class="subtitle" style="margin:0 auto 1.5rem;opacity:0.3;font-size:0.9rem">Want to prank your customers? Ship it in a pizza box, an iPhone box, or a boring brown package with a pink explosion inside.</p>
+    <p class="subtitle" style="margin:0 auto 2.5rem;opacity:0.3;font-size:0.9rem">The boring box is just the wrapper. The INTERIOR is the experience — confetti, glow, galaxies, disco, gardens. Every wave gets its own world inside.</p>
     <div style="display:flex;gap:1rem;justify-content:center;flex-wrap:wrap">
       <a href="https://nancyuniverse.com/pages/collections/plushies.html" class="cta-btn" target="_blank">View All 120 Characters →</a>
     </div>
