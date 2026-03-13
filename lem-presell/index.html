@@ -614,6 +614,41 @@
       }
     }
   </style>
+<!-- Google tag (gtag.js) -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=AW-11033179838"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+  gtag('config', 'AW-11033179838');
+</script>
+<!-- Event snippet for Shopify Purchase conversion page -->
+<script>
+  gtag('event', 'conversion', {
+      'send_to': 'AW-11033179838/wazqCJ385ZgYEL7tg40p',
+      'value': 1.0,
+      'currency': 'HKD',
+      'transaction_id': ''
+  });
+</script>
+<!-- Click conversion helper -->
+<script>
+function gtag_report_conversion(url) {
+  var callback = function () {
+    if (typeof(url) != 'undefined') {
+      window.location = url;
+    }
+  };
+  gtag('event', 'conversion', {
+      'send_to': 'AW-11033179838/wazqCJ385ZgYEL7tg40p',
+      'value': 1.0,
+      'currency': 'HKD',
+      'transaction_id': '',
+      'event_callback': callback
+  });
+  return false;
+}
+</script>
 </head>
 <body>
 
@@ -1052,7 +1087,7 @@
         <span class="offer-card__price-save">Save $61</span>
       </div>
 
-      <a href="https://hellonancy.com/products/lem?utm_source=presell&utm_medium=funnel&utm_campaign=lem-presell" class="offer-card__btn" id="mainCTA">
+      <a href="https://hellonancy.com/products/lem?utm_source=presell&utm_medium=funnel&utm_campaign=lem-presell" class="offer-card__btn" id="mainCTA" onclick="gtag_report_conversion('https://hellonancy.com/products/lem?utm_source=presell&utm_medium=funnel&utm_campaign=lem-presell'); return true;">
         Claim Your Lem — $89
       </a>
 
