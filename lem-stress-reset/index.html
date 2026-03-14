@@ -245,6 +245,36 @@
       margin-bottom: 24px;
       max-width: var(--max-article);
     }
+    .article-header__hero {
+      width: 100%;
+      border-radius: 12px;
+      margin-bottom: 24px;
+      aspect-ratio: 16/9;
+      object-fit: cover;
+    }
+    @media (max-width: 600px) {
+      .article-header__title {
+        font-size: 22px;
+        line-height: 1.15;
+        margin-bottom: 12px;
+      }
+      .article-header__subtitle {
+        font-size: 15px;
+        line-height: 1.5;
+        margin-bottom: 16px;
+      }
+      .article-header__category {
+        margin-bottom: 10px;
+        font-size: 11px;
+      }
+      .article-header__meta {
+        padding: 12px 0;
+        margin-bottom: 12px;
+      }
+      .article-header {
+        padding-top: 16px;
+      }
+    }
     .article-header__meta {
       display: flex;
       align-items: center;
@@ -806,6 +836,7 @@
       <div class="article-header__date">Updated March 14, 2026 · 9 min read</div>
     </div>
   </div>
+  <img class="article-header__hero" src="../images/pdp12.jpg" alt="Calm wellness — Lem in serene water setting" loading="eager">
 </div>
 
 <!-- ── ARTICLE BODY ── -->
