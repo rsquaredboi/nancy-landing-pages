@@ -1,0 +1,849 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>I Replaced My Nightly Doomscroll With a 2-Minute Ritual. Here's What Happened. | The Wellness Edit</title>
+  <meta name="description" content="A freelance writer's confessional account of swapping doomscrolling for a bedtime ritual that fixed her sleep, her anxiety, and her marriage.">
+  <!-- Meta Pixel -->
+  <script>
+  !function(f,b,e,v,n,t,s)
+  {if(f.fbq)return;n=f.fbq=function(){n.callMethod?
+  n.callMethod.apply(n,arguments):n.queue.push(arguments)};
+  if(!f._fbq)f._fbq=n;n.push=n;n.loaded=!0;n.version='2.0';
+  n.queue=[];t=b.createElement(e);t.async=!0;
+  t.src=v;s=b.getElementsByTagName(e)[0];
+  s.parentNode.insertBefore(t,s)}(window, document,'script',
+  'https://connect.facebook.net/en_US/fbevents.js');
+  fbq('init', '832767357702650');
+  fbq('track', 'PageView');
+  fbq('track', 'ViewContent', {
+    content_name: 'Lem Advertorial - Phone Down',
+    content_type: 'product',
+    content_ids: ['lem'],
+    value: 89.00,
+    currency: 'USD'
+  });
+  </script>
+  <noscript><img height="1" width="1" style="display:none" src="https://www.facebook.com/tr?id=832767357702650&ev=PageView&noscript=1"/></noscript>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link href="https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@0,9..144,300..900;1,9..144,300..900&family=Inter:wght@400;500;600;700&family=Playfair+Display:ital,wght@0,400..900;1,400..900&display=swap" rel="stylesheet">
+  <style>
+    *, *::before, *::after { margin: 0; padding: 0; box-sizing: border-box; }
+    :root {
+      --pub-bg: #ffffff;
+      --pub-text: #1a1a1a;
+      --pub-accent: #1a7a6a;
+      --pub-accent-light: rgba(26, 122, 106, 0.08);
+      --pub-muted: #6b7280;
+      --pub-light-muted: #9ca3af;
+      --pub-border: #e5e7eb;
+      --pub-bg-warm: #fafaf8;
+      --pub-font-heading: 'Playfair Display', Georgia, 'Times New Roman', serif;
+      --pub-font-body: 'Inter', -apple-system, BlinkMacSystemFont, sans-serif;
+      --nancy-pink: #ff30cc;
+      --nancy-pink-light: rgba(255, 48, 204, 0.06);
+      --nancy-pink-hover: #e62bb8;
+      --nancy-cream: #fcf7ed;
+      --nancy-neon: #ccfd28;
+      --nancy-black: #1a1a1a;
+      --star: #f59e0b;
+      --green: #10b981;
+      --max-article: 720px;
+    }
+    html { scroll-behavior: smooth; }
+    body { font-family: var(--pub-font-body); color: var(--pub-text); background: var(--pub-bg); line-height: 1.8; -webkit-font-smoothing: antialiased; font-size: 17px; }
+    img { max-width: 100%; height: auto; display: block; }
+    a { color: var(--pub-accent); text-decoration: underline; text-underline-offset: 2px; }
+    a:hover { color: #145f54; }
+
+    /* ── Reading progress ── */
+    .reading-progress { position: fixed; top: 0; left: 0; width: 0%; height: 3px; background: var(--pub-accent); z-index: 200; transition: width 0.1s linear; }
+
+    /* ── Publication header ── */
+    .pub-header { border-bottom: 1px solid var(--pub-border); background: var(--pub-bg); position: sticky; top: 0; z-index: 100; }
+    .pub-header__inner { max-width: 1200px; margin: 0 auto; display: flex; align-items: center; justify-content: space-between; padding: 16px 24px; }
+    .pub-header__brand { font-family: var(--pub-font-heading); font-size: 22px; font-weight: 700; color: var(--pub-text); letter-spacing: -0.5px; text-decoration: none; }
+    .pub-header__brand span { color: var(--pub-accent); }
+    .pub-header__nav { display: flex; gap: 24px; list-style: none; }
+    .pub-header__nav a { font-size: 13px; font-weight: 500; color: var(--pub-muted); text-decoration: none; text-transform: uppercase; letter-spacing: 0.8px; cursor: default; }
+
+    /* ── Layout wrapper — article + sidebar ── */
+    .layout-wrapper { max-width: 1200px; margin: 0 auto; display: grid; grid-template-columns: 1fr; }
+    @media (min-width: 1024px) {
+      .layout-wrapper { grid-template-columns: 1fr 300px; gap: 48px; padding-right: 24px; }
+    }
+
+    /* ── Sidebar ── */
+    .sidebar { display: none; }
+    @media (min-width: 1024px) {
+      .sidebar { display: block; padding-top: 48px; }
+      .sidebar__sticky { position: sticky; top: 80px; }
+      .sidebar__card { background: var(--nancy-cream); border-radius: 16px; padding: 28px 24px; border: 1px solid rgba(255, 48, 204, 0.1); }
+      .sidebar__card-img { width: 100%; aspect-ratio: 1; object-fit: cover; border-radius: 12px; margin-bottom: 16px; }
+      .sidebar__card-name { font-family: 'Fraunces', Georgia, serif; font-size: 20px; font-weight: 600; color: var(--nancy-black); margin-bottom: 4px; }
+      .sidebar__card-rating { display: flex; align-items: center; gap: 6px; margin-bottom: 16px; }
+      .sidebar__card-stars { color: var(--star); font-size: 14px; letter-spacing: 1px; }
+      .sidebar__card-count { font-size: 13px; color: var(--pub-muted); }
+      .sidebar__card-price { margin-bottom: 16px; }
+      .sidebar__card-original { font-size: 16px; color: var(--pub-light-muted); text-decoration: line-through; margin-right: 6px; }
+      .sidebar__card-current { font-family: 'Fraunces', Georgia, serif; font-size: 28px; font-weight: 700; color: var(--nancy-black); }
+      .sidebar__card-save { font-size: 12px; color: var(--green); font-weight: 600; margin-bottom: 16px; }
+      .sidebar__card-link { display: block; text-align: center; background: var(--nancy-pink); color: #fff; padding: 14px 24px; border-radius: 50px; font-size: 15px; font-weight: 600; text-decoration: none; transition: background 0.2s; }
+      .sidebar__card-link:hover { background: var(--nancy-pink-hover); color: #fff; }
+      .sidebar__card-trust { margin-top: 16px; display: flex; flex-direction: column; gap: 6px; }
+      .sidebar__card-trust-item { font-size: 12px; color: var(--pub-muted); display: flex; align-items: center; gap: 6px; }
+      .sidebar__card-trust-item svg { width: 14px; height: 14px; color: var(--green); flex-shrink: 0; }
+    }
+
+    /* ── Article header ── */
+    .article-header { max-width: var(--max-article); padding: 48px 24px 0; }
+    .article-header__category { display: inline-block; font-size: 12px; font-weight: 700; text-transform: uppercase; letter-spacing: 1.5px; color: var(--pub-accent); margin-bottom: 16px; }
+    .article-header__title { font-family: var(--pub-font-heading); font-size: clamp(28px, 5vw, 44px); font-weight: 700; line-height: 1.2; color: var(--pub-text); margin-bottom: 20px; }
+    .article-header__subtitle { font-size: 19px; color: var(--pub-muted); line-height: 1.6; margin-bottom: 24px; }
+    .article-header__meta { display: flex; align-items: center; gap: 16px; padding: 16px 0; border-top: 1px solid var(--pub-border); border-bottom: 1px solid var(--pub-border); }
+    .article-header__avatar { width: 40px; height: 40px; border-radius: 50%; background: var(--pub-accent-light); display: flex; align-items: center; justify-content: center; font-weight: 700; font-size: 16px; color: var(--pub-accent); flex-shrink: 0; }
+    .article-header__author { font-size: 14px; font-weight: 600; color: var(--pub-text); }
+    .article-header__date { font-size: 13px; color: var(--pub-muted); }
+    .article-header__share { margin-left: auto; display: flex; gap: 12px; }
+    .article-header__share-btn { width: 32px; height: 32px; border-radius: 50%; border: 1px solid var(--pub-border); background: none; display: flex; align-items: center; justify-content: center; cursor: default; color: var(--pub-muted); }
+
+    /* ── Article body ── */
+    .article-body { max-width: var(--max-article); padding: 40px 24px; }
+    .article-body p { margin-bottom: 24px; font-size: 17px; line-height: 1.8; color: #374151; }
+    .article-body h2 { font-family: var(--pub-font-heading); font-size: clamp(22px, 3.5vw, 30px); font-weight: 700; color: var(--pub-text); margin: 48px 0 20px; line-height: 1.3; }
+    .article-body h3 { font-family: var(--pub-font-heading); font-size: 22px; font-weight: 600; color: var(--pub-text); margin: 36px 0 16px; }
+    .article-body blockquote { border-left: 3px solid var(--pub-accent); padding: 16px 24px; margin: 32px 0; background: var(--pub-bg-warm); border-radius: 0 8px 8px 0; font-style: italic; color: #4b5563; }
+
+    /* ── Inline article images ── */
+    .article-img { margin: 32px 0; border-radius: 12px; overflow: hidden; }
+    .article-img img { width: 100%; display: block; }
+    .article-img__caption { font-size: 13px; color: var(--pub-light-muted); text-align: center; padding: 10px 16px 0; font-style: italic; }
+    .article-img--pair { display: grid; grid-template-columns: 1fr 1fr; gap: 12px; margin: 32px 0; }
+    .article-img--pair img { border-radius: 10px; width: 100%; aspect-ratio: 4/5; object-fit: cover; }
+
+    /* ── Pull quote ── */
+    .pull-quote { text-align: center; padding: 40px 20px; margin: 40px 0; border-top: 1px solid var(--pub-border); border-bottom: 1px solid var(--pub-border); }
+    .pull-quote__text { font-family: var(--pub-font-heading); font-size: clamp(24px, 4vw, 32px); font-weight: 400; font-style: italic; color: var(--pub-text); line-height: 1.4; }
+    .pull-quote__author { font-size: 14px; color: var(--pub-muted); margin-top: 12px; font-style: normal; }
+
+    /* ── Product reveal (Nancy brand zone) ── */
+    .product-reveal { background: var(--nancy-cream); border-radius: 16px; padding: 40px 32px; margin: 40px 0; text-align: center; }
+    .product-reveal__overline { font-size: 12px; font-weight: 700; text-transform: uppercase; letter-spacing: 1.5px; color: var(--nancy-pink); margin-bottom: 12px; }
+    .product-reveal__name { font-family: 'Fraunces', Georgia, serif; font-size: clamp(26px, 4vw, 36px); font-weight: 600; color: var(--nancy-black); margin-bottom: 8px; }
+    .product-reveal__rating { display: flex; align-items: center; justify-content: center; gap: 6px; margin-bottom: 20px; }
+    .product-reveal__stars { color: var(--star); font-size: 18px; }
+    .product-reveal__count { font-size: 14px; color: var(--pub-muted); }
+    .product-reveal__image { max-width: 320px; margin: 24px auto; border-radius: 16px; overflow: hidden; }
+    .product-reveal__image img { width: 100%; aspect-ratio: 1; object-fit: cover; }
+    .product-reveal__features { display: grid; grid-template-columns: repeat(auto-fit, minmax(140px, 1fr)); gap: 16px; margin-top: 24px; text-align: center; }
+    .product-reveal__feature { padding: 12px; }
+    .product-reveal__feature-icon { font-size: 28px; margin-bottom: 6px; }
+    .product-reveal__feature-text { font-size: 13px; font-weight: 600; color: var(--nancy-black); }
+    .product-reveal__feature-sub { font-size: 12px; color: var(--pub-muted); }
+
+    /* ── Inline link style (editorial CTA) ── */
+    .inline-link { color: var(--pub-accent); font-weight: 500; text-decoration: underline; text-underline-offset: 3px; text-decoration-color: rgba(26, 122, 106, 0.4); }
+    .inline-link:hover { color: #145f54; text-decoration-color: var(--pub-accent); }
+
+    /* ── Review cards ── */
+    .review-wall { margin: 40px 0; }
+    .review-wall__title { font-family: var(--pub-font-heading); font-size: 24px; font-weight: 700; text-align: center; margin-bottom: 8px; }
+    .review-wall__subtitle { font-size: 14px; color: var(--pub-muted); text-align: center; margin-bottom: 28px; }
+    .review-card { border: 1px solid var(--pub-border); border-radius: 12px; padding: 24px; margin-bottom: 16px; background: var(--pub-bg); }
+    .review-card__header { display: flex; align-items: center; gap: 12px; margin-bottom: 12px; }
+    .review-card__avatar { width: 40px; height: 40px; border-radius: 50%; background: var(--nancy-pink-light); display: flex; align-items: center; justify-content: center; font-weight: 700; font-size: 15px; color: var(--nancy-pink); flex-shrink: 0; }
+    .review-card__name { font-weight: 600; font-size: 15px; }
+    .review-card__verified { font-size: 12px; color: var(--green); display: flex; align-items: center; gap: 3px; }
+    .review-card__stars { color: var(--star); font-size: 14px; margin-bottom: 10px; }
+    .review-card__text { font-size: 15px; line-height: 1.7; color: #4b5563; }
+    .review-card__text em { font-style: normal; color: var(--nancy-pink); font-weight: 600; }
+    .review-card__date { font-size: 12px; color: var(--pub-light-muted); margin-top: 12px; }
+    .review-card__img { margin-top: 14px; border-radius: 10px; overflow: hidden; }
+    .review-card__img img { width: 100%; max-height: 260px; object-fit: cover; }
+
+    /* ── Journey timeline ── */
+    .journey { margin: 40px 0; }
+    .journey__step { display: flex; gap: 20px; margin-bottom: 24px; }
+    .journey__marker { width: 40px; flex-shrink: 0; display: flex; flex-direction: column; align-items: center; }
+    .journey__dot { width: 12px; height: 12px; border-radius: 50%; background: var(--pub-accent); margin-top: 6px; }
+    .journey__line { width: 2px; flex: 1; background: var(--pub-border); margin-top: 8px; }
+    .journey__step:last-child .journey__line { display: none; }
+    .journey__content { flex: 1; }
+    .journey__label { font-weight: 700; font-size: 15px; margin-bottom: 4px; color: var(--pub-text); }
+    .journey__desc { font-size: 15px; color: #4b5563; line-height: 1.7; }
+    .journey__step--highlight .journey__dot { background: var(--nancy-pink); width: 16px; height: 16px; }
+    .journey__step--highlight .journey__label { color: var(--nancy-pink); }
+
+    /* ── Soft offer section ── */
+    .soft-offer { background: var(--nancy-cream); border-radius: 16px; padding: 36px 28px; margin: 48px 0; border: 1px solid rgba(255, 48, 204, 0.08); }
+    .soft-offer__row { display: flex; align-items: center; gap: 20px; margin-bottom: 20px; flex-wrap: wrap; }
+    .soft-offer__img { width: 80px; height: 80px; border-radius: 12px; object-fit: cover; flex-shrink: 0; }
+    .soft-offer__info { flex: 1; min-width: 200px; }
+    .soft-offer__name { font-family: 'Fraunces', Georgia, serif; font-size: 20px; font-weight: 600; color: var(--nancy-black); margin-bottom: 2px; }
+    .soft-offer__rating { font-size: 14px; color: var(--pub-muted); margin-bottom: 6px; }
+    .soft-offer__rating-stars { color: var(--star); }
+    .soft-offer__price { display: flex; align-items: baseline; gap: 8px; }
+    .soft-offer__price-current { font-family: 'Fraunces', Georgia, serif; font-size: 26px; font-weight: 700; color: var(--nancy-black); }
+    .soft-offer__link { display: inline-block; margin-top: 4px; color: var(--pub-accent); font-weight: 600; font-size: 15px; text-decoration: underline; text-underline-offset: 3px; }
+    .soft-offer__link:hover { color: #145f54; }
+    .soft-offer__btn { display: inline-block; background: var(--nancy-pink); color: #fff; padding: 14px 36px; border-radius: 50px; font-size: 15px; font-weight: 600; text-decoration: none; transition: background 0.2s; margin-top: 16px; }
+    .soft-offer__btn:hover { background: var(--nancy-pink-hover); color: #fff; }
+    .soft-offer__trust { display: flex; gap: 20px; margin-top: 18px; flex-wrap: wrap; }
+    .soft-offer__trust-item { font-size: 12px; color: var(--pub-muted); display: flex; align-items: center; gap: 5px; }
+    .soft-offer__trust-item svg { width: 14px; height: 14px; color: var(--green); }
+    .soft-offer__ps { margin-top: 18px; padding-top: 14px; border-top: 1px solid rgba(0,0,0,0.06); font-size: 13px; color: var(--pub-muted); font-style: italic; }
+
+    /* ── FAQ ── */
+    .faq-section { margin: 48px 0; }
+    .faq-section__title { font-family: var(--pub-font-heading); font-size: 24px; font-weight: 700; margin-bottom: 24px; }
+    .faq-item { border-bottom: 1px solid var(--pub-border); }
+    .faq-item__q { display: flex; align-items: center; justify-content: space-between; padding: 18px 0; cursor: pointer; font-weight: 600; font-size: 16px; color: var(--pub-text); background: none; border: none; width: 100%; text-align: left; font-family: var(--pub-font-body); }
+    .faq-item__q::after { content: '+'; font-size: 22px; font-weight: 300; color: var(--pub-muted); transition: transform 0.2s; flex-shrink: 0; margin-left: 16px; }
+    .faq-item.open .faq-item__q::after { content: '\2212'; }
+    .faq-item__a { max-height: 0; overflow: hidden; transition: max-height 0.3s ease; }
+    .faq-item.open .faq-item__a { max-height: 500px; }
+    .faq-item__a-inner { padding: 0 0 18px; font-size: 15px; line-height: 1.7; color: #4b5563; }
+
+    /* ── Author bio ── */
+    .author-bio { display: flex; gap: 20px; align-items: flex-start; padding: 32px 0; margin: 40px 0 0; border-top: 1px solid var(--pub-border); border-bottom: 1px solid var(--pub-border); }
+    .author-bio__avatar { width: 56px; height: 56px; border-radius: 50%; background: var(--pub-accent-light); display: flex; align-items: center; justify-content: center; font-weight: 700; font-size: 20px; color: var(--pub-accent); flex-shrink: 0; }
+    .author-bio__name { font-weight: 700; font-size: 15px; color: var(--pub-text); margin-bottom: 4px; }
+    .author-bio__text { font-size: 14px; color: var(--pub-muted); line-height: 1.6; }
+
+    /* ── Comments section ── */
+    .comments-section { margin: 40px 0 0; }
+    .comments-section__title { font-family: var(--pub-font-heading); font-size: 20px; font-weight: 700; margin-bottom: 24px; color: var(--pub-text); }
+    .comments-section__count { font-weight: 400; color: var(--pub-muted); font-size: 16px; }
+    .comment { padding: 20px 0; border-bottom: 1px solid var(--pub-border); }
+    .comment:last-child { border-bottom: none; }
+    .comment__header { display: flex; align-items: center; gap: 10px; margin-bottom: 8px; }
+    .comment__avatar { width: 32px; height: 32px; border-radius: 50%; background: #f3f4f6; display: flex; align-items: center; justify-content: center; font-weight: 700; font-size: 13px; color: var(--pub-muted); flex-shrink: 0; }
+    .comment__name { font-weight: 600; font-size: 14px; color: var(--pub-text); }
+    .comment__date { font-size: 12px; color: var(--pub-light-muted); margin-left: auto; }
+    .comment__text { font-size: 15px; color: #4b5563; line-height: 1.7; }
+    .comment__reply { margin-left: 42px; padding-top: 16px; }
+    .comment__reply .comment__text { font-size: 14px; }
+
+    /* ── Sticky bottom CTA bar ── */
+    .sticky-bar { position: fixed; bottom: 0; left: 0; right: 0; background: #fff; border-top: 1px solid var(--pub-border); padding: 10px 16px; z-index: 150; display: none; box-shadow: 0 -2px 16px rgba(0,0,0,0.06); }
+    .sticky-bar.visible { display: block; }
+    .sticky-bar__inner { max-width: 720px; margin: 0 auto; display: flex; align-items: center; gap: 12px; }
+    .sticky-bar__img { width: 40px; height: 40px; border-radius: 8px; object-fit: cover; flex-shrink: 0; }
+    .sticky-bar__info { flex: 1; min-width: 0; }
+    .sticky-bar__name { font-weight: 600; font-size: 14px; color: var(--pub-text); white-space: nowrap; overflow: hidden; text-overflow: ellipsis; }
+    .sticky-bar__meta { font-size: 12px; color: var(--pub-muted); white-space: nowrap; }
+    .sticky-bar__meta-stars { color: var(--star); }
+    .sticky-bar__price { display: flex; align-items: baseline; gap: 4px; flex-shrink: 0; }
+    .sticky-bar__price-current { font-family: 'Fraunces', Georgia, serif; font-size: 18px; font-weight: 700; color: var(--nancy-black); }
+    .sticky-bar__price-original { font-size: 13px; color: var(--pub-light-muted); text-decoration: line-through; }
+    .sticky-bar__link { flex-shrink: 0; color: var(--pub-accent); font-weight: 600; font-size: 14px; text-decoration: none; white-space: nowrap; }
+    .sticky-bar__link:hover { text-decoration: underline; }
+    .sticky-bar__close { background: none; border: none; padding: 6px; cursor: pointer; color: var(--pub-light-muted); flex-shrink: 0; line-height: 1; font-size: 18px; }
+    .sticky-bar__close:hover { color: var(--pub-text); }
+
+    /* ── Footer ── */
+    .pub-footer { border-top: 1px solid var(--pub-border); padding: 32px 24px; text-align: center; }
+    .pub-footer__brand { font-family: var(--pub-font-heading); font-size: 18px; font-weight: 700; color: var(--pub-text); margin-bottom: 8px; }
+    .pub-footer__brand span { color: var(--pub-accent); }
+    .pub-footer__disclaimer { font-size: 12px; color: var(--pub-light-muted); line-height: 1.6; max-width: 560px; margin: 0 auto; }
+
+    /* ── Phone screen CSS infographic ── */
+    .phone-screen { background: #0f0f0f; border-radius: 24px; padding: 20px 16px; margin: 32px auto; max-width: 320px; box-shadow: 0 8px 32px rgba(0,0,0,0.3); position: relative; overflow: hidden; }
+    .phone-screen::before { content: ''; position: absolute; top: 8px; left: 50%; transform: translateX(-50%); width: 80px; height: 6px; border-radius: 3px; background: #2a2a2a; }
+    .phone-screen__time { color: #888; font-size: 13px; text-align: center; margin: 16px 0 20px; font-variant-numeric: tabular-nums; }
+    .phone-screen__headline { background: #1a1a1a; border-radius: 10px; padding: 12px 14px; margin-bottom: 10px; border-left: 3px solid; }
+    .phone-screen__headline-text { font-size: 13px; color: #ccc; line-height: 1.4; }
+    .phone-screen__headline--red { border-color: #ef4444; }
+    .phone-screen__headline--orange { border-color: #f97316; }
+    .phone-screen__headline--yellow { border-color: #eab308; }
+    .phone-screen__headline--blue { border-color: #3b82f6; }
+    .phone-screen__scroll-hint { text-align: center; color: #555; font-size: 11px; margin-top: 16px; letter-spacing: 0.5px; }
+
+    /* ── 2-Minute Reset CSS infographic ── */
+    .reset-infographic { background: linear-gradient(135deg, #f0fdf4 0%, #ecfdf5 50%, #f0fdf9 100%); border-radius: 16px; padding: 36px 28px; margin: 40px 0; border: 1px solid rgba(26, 122, 106, 0.15); }
+    .reset-infographic__title { font-family: var(--pub-font-heading); font-size: 22px; font-weight: 700; color: var(--pub-text); text-align: center; margin-bottom: 8px; }
+    .reset-infographic__subtitle { font-size: 14px; color: var(--pub-muted); text-align: center; margin-bottom: 28px; }
+    .reset-timeline { display: flex; flex-direction: column; gap: 0; position: relative; }
+    .reset-timeline::before { content: ''; position: absolute; left: 20px; top: 20px; bottom: 20px; width: 3px; background: linear-gradient(180deg, #ef4444 0%, #f97316 20%, var(--pub-accent) 50%, var(--pub-accent) 80%, #6366f1 100%); border-radius: 2px; }
+    .reset-step { display: flex; align-items: flex-start; gap: 16px; padding: 14px 0; position: relative; }
+    .reset-step__dot { width: 40px; height: 40px; border-radius: 50%; display: flex; align-items: center; justify-content: center; font-size: 16px; flex-shrink: 0; z-index: 1; font-weight: 700; }
+    .reset-step__dot--red { background: #fef2f2; border: 2px solid #ef4444; color: #ef4444; }
+    .reset-step__dot--orange { background: #fff7ed; border: 2px solid #f97316; color: #f97316; }
+    .reset-step__dot--green { background: #f0fdf4; border: 2px solid var(--pub-accent); color: var(--pub-accent); }
+    .reset-step__dot--teal { background: #f0fdfa; border: 2px solid var(--pub-accent); color: var(--pub-accent); }
+    .reset-step__dot--indigo { background: #eef2ff; border: 2px solid #6366f1; color: #6366f1; }
+    .reset-step__content { flex: 1; padding-top: 8px; }
+    .reset-step__time { font-weight: 700; font-size: 13px; margin-bottom: 2px; }
+    .reset-step__time--red { color: #ef4444; }
+    .reset-step__time--orange { color: #f97316; }
+    .reset-step__time--green { color: var(--pub-accent); }
+    .reset-step__time--teal { color: var(--pub-accent); }
+    .reset-step__time--indigo { color: #6366f1; }
+    .reset-step__label { font-size: 14px; color: #4b5563; line-height: 1.5; }
+
+    /* ── Product specs grid ── */
+    .specs-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(140px, 1fr)); gap: 16px; margin: 24px 0; }
+    .specs-grid__item { background: var(--pub-bg-warm); border-radius: 12px; padding: 18px 16px; text-align: center; border: 1px solid var(--pub-border); }
+    .specs-grid__value { font-family: 'Fraunces', Georgia, serif; font-size: 22px; font-weight: 700; color: var(--pub-text); margin-bottom: 4px; }
+    .specs-grid__label { font-size: 12px; color: var(--pub-muted); text-transform: uppercase; letter-spacing: 0.5px; }
+
+    /* ── Mobile adjustments ── */
+    @media (max-width: 768px) {
+      .pub-header__nav { display: none; }
+      .article-header { padding: 32px 20px 0; }
+      .article-body { padding: 32px 20px; }
+      .article-header__share { display: none; }
+      .product-reveal { padding: 32px 20px; margin: 32px -20px; border-radius: 0; }
+      .product-reveal__features { grid-template-columns: 1fr 1fr; }
+      .soft-offer { margin: 32px -20px; border-radius: 0; padding: 28px 20px; border-left: none; border-right: none; }
+      .review-card { padding: 20px; }
+      .pull-quote { padding: 32px 16px; }
+      .article-img--pair { grid-template-columns: 1fr; gap: 16px; }
+      .author-bio { flex-direction: column; align-items: flex-start; gap: 12px; }
+      .reset-infographic { margin: 32px -20px; border-radius: 0; padding: 28px 20px; }
+      .phone-screen { max-width: 280px; }
+    }
+  </style>
+</head>
+<body>
+
+<div class="reading-progress" id="readingProgress"></div>
+
+<header class="pub-header">
+  <div class="pub-header__inner">
+    <a class="pub-header__brand" href="#">The Wellness <span>Edit</span></a>
+    <nav><ul class="pub-header__nav">
+      <li><a>Wellness</a></li>
+      <li><a>Sleep</a></li>
+      <li><a>Anxiety</a></li>
+      <li><a>Body</a></li>
+    </ul></nav>
+  </div>
+</header>
+
+<div class="layout-wrapper">
+
+<!-- ════════════════════ MAIN CONTENT COLUMN ════════════════════ -->
+<div class="main-content">
+
+<div class="article-header">
+  <div class="article-header__category">Personal Essay</div>
+  <h1 class="article-header__title">I Replaced My Nightly Doomscroll With a 2-Minute Ritual. Here's What Happened to My Sleep, My Anxiety, and My Marriage.</h1>
+  <p class="article-header__subtitle">A confessional essay about the thing that finally broke the scroll-spiral cycle &mdash; and it wasn't melatonin, meditation, or willpower.</p>
+  <div class="article-header__meta">
+    <div class="article-header__avatar">JT</div>
+    <div>
+      <div class="article-header__author">Jamie Torres</div>
+      <div class="article-header__date">Updated March 12, 2026 &middot; 9 min read</div>
+    </div>
+    <div class="article-header__share">
+      <button class="article-header__share-btn" aria-label="Share"><svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M4 12v8a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2v-8"/><polyline points="16 6 12 2 8 6"/><line x1="12" y1="2" x2="12" y2="15"/></svg></button>
+      <button class="article-header__share-btn" aria-label="Bookmark"><svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M19 21l-7-5-7 5V5a2 2 0 0 1 2-2h10a2 2 0 0 1 2 2z"/></svg></button>
+    </div>
+  </div>
+</div>
+
+<article class="article-body">
+
+  <!-- ═══ HOOK — The Confession ═══ -->
+  <p>It's 11:47 PM and I'm watching a TikTok about nuclear bunker supplies. Again.</p>
+
+  <p>My partner is asleep next to me. Our two cats are curled at the foot of the bed. The only light in the room is my phone screen, casting that bluish glow that makes everything feel vaguely dystopian. I know I should put it down. I know this the way I know sugar is bad for me &mdash; with complete certainty and zero willingness to stop.</p>
+
+  <p>My name is Jamie Torres. I'm 34, a freelance tech writer in Austin, and for the past several months, my nightly ritual has been this: climb into bed with the best of intentions, open my phone to set an alarm, and then fall into a scroll-spiral that doesn't end until 1 or 2 AM. War updates. Layoff threads. Recession predictions. AI replacing my job. The algorithm knows exactly what keeps me awake.</p>
+
+  <p>This is the story of how I accidentally replaced that habit with something that takes two minutes and gave me back my sleep, my nervous system, and &mdash; I'm not exaggerating &mdash; my marriage.</p>
+
+  <!-- CSS phone screen infographic -->
+  <div class="phone-screen">
+    <div class="phone-screen__time">11:47 PM</div>
+    <div class="phone-screen__headline phone-screen__headline--red">
+      <div class="phone-screen__headline-text">BREAKING: Mass layoffs hit tech sector for third consecutive quarter</div>
+    </div>
+    <div class="phone-screen__headline phone-screen__headline--orange">
+      <div class="phone-screen__headline-text">Housing market shows signs of major correction &mdash; economists warn</div>
+    </div>
+    <div class="phone-screen__headline phone-screen__headline--yellow">
+      <div class="phone-screen__headline-text">Why your cortisol levels are probably too high (and what it means)</div>
+    </div>
+    <div class="phone-screen__headline phone-screen__headline--blue">
+      <div class="phone-screen__headline-text">AI will replace 40% of jobs by 2030, new study finds</div>
+    </div>
+    <div class="phone-screen__scroll-hint">&#8595; scroll for more anxiety &#8595;</div>
+  </div>
+
+  <!-- ═══ WEEK 1 — The Breaking Point ═══ -->
+  <h2>Week 1: The Breaking Point</h2>
+
+  <p>Three nights in a row, I woke at 3 AM with my heart racing. Not from a nightmare &mdash; from nothing. Just my nervous system doing its thing, firing cortisol into my bloodstream while I lay in the dark wondering if the world was ending. (It wasn't. It never is. But try telling my amygdala that at 3 AM.)</p>
+
+  <p>I checked my screen time report on a Sunday morning and physically flinched. <strong>4 hours and 23 minutes</strong> &mdash; average daily usage after 9 PM. That's not winding down. That's a second shift of anxiety consumption.</p>
+
+  <p>My partner said it one morning over coffee, in that careful tone people use when they're trying not to start a fight: "You're different lately." Which is code for: "You're irritable, distant, and we both know why."</p>
+
+  <p>I tried the obvious things. Melatonin made mornings groggy. The Calm app required focus I didn't have. A glass of wine made the anxiety worse two hours later. I even tried the "put your phone in another room" advice, which lasted exactly one night before I convinced myself I needed it for the alarm. (I didn't. I have two cats who scream at 6 AM regardless.)</p>
+
+  <div class="article-img">
+    <img src="../images/loox-review3.jpg" alt="Verified review about stress relief" loading="lazy">
+    <div class="article-img__caption">A review that caught my eye later &mdash; someone describing the exact same 3 AM pattern</div>
+  </div>
+
+  <!-- ═══ WEEK 2 — The Therapist's Suggestion ═══ -->
+  <h2>Week 2: The Therapist's Suggestion</h2>
+
+  <p>I'd been seeing a therapist biweekly for about a year. Mostly for work stress and some low-level anxiety that had become decidedly not-low-level. During a session about my sleep, she said something that changed the trajectory of this whole story.</p>
+
+  <blockquote>
+    "Your body is holding this stress. You're processing everything cognitively, but your nervous system is still in fight-or-flight. Have you tried any somatic release?"
+  </blockquote>
+
+  <p>I asked if she meant yoga. She smiled in that therapist way that means "not exactly."</p>
+
+  <p>"That's one option. But research shows that targeted physical stimulation &mdash; specifically pelvic nerve activation &mdash; can trigger a parasympathetic reset in under two minutes. It's one of the fastest ways to shift your nervous system state."</p>
+
+  <p>I stared at her. She stared back. We had a very adult moment of mutual understanding.</p>
+
+  <p>That night, I did what any anxious millennial would do: I opened my phone and fell down a different rabbit hole. I googled "somatic stress relief" and "parasympathetic nervous system activation" and eventually landed on a Reddit thread where a woman described using something before bed instead of scrolling. The thread had 2,400 upvotes. The top comment said: "This is the only thing that's helped my insomnia and I've tried literally everything."</p>
+
+  <p>The product they kept mentioning: <a href="https://hellonancy.com/products/lem" class="inline-link">Lem by Hello Nancy</a>. 16,378 reviews. $89. Looks like a lemon. Ships in a plain box.</p>
+
+  <div class="article-img">
+    <img src="../images/pdp9.jpg" alt="Lem by Hello Nancy - product detail" loading="lazy">
+    <div class="article-img__caption">The thing that finally beat my doomscroll addiction. It looks like a lemon. I am not joking.</div>
+  </div>
+
+  <p>I had a brief internal negotiation about discretion. Would anyone know? Would the delivery person somehow sense what was in the box? (No. And also: they don't care.) I ordered it at midnight on a Tuesday. The plain brown box arrived three days later. My partner didn't notice. The cats were unimpressed.</p>
+
+  <!-- ═══ WEEK 3 — The Routine Forms ═══ -->
+  <h2>Week 3: The Routine Forms</h2>
+
+  <div class="journey">
+    <div class="journey__step">
+      <div class="journey__marker"><div class="journey__dot"></div><div class="journey__line"></div></div>
+      <div class="journey__content">
+        <div class="journey__label">Night 1: Awkward</div>
+        <div class="journey__desc">Opened the box. Stared at the device. Tried to figure out the settings. There are 12 intensity levels. I accidentally started at level 7. Quickly retreated to level 1. Fell asleep before figuring out the full range, which in retrospect was probably fine because I was clearly exhausted.</div>
+      </div>
+    </div>
+    <div class="journey__step journey__step--highlight">
+      <div class="journey__marker"><div class="journey__dot"></div><div class="journey__line"></div></div>
+      <div class="journey__content">
+        <div class="journey__label">Night 2: "Oh."</div>
+        <div class="journey__desc">Started at intensity 1. Worked my way up. Two minutes later: full-body relaxation. Not just physically &mdash; mentally. The spiral of anxiety headlines quieted. My shoulders dropped from their permanent position near my ears. My jaw unclenched for what felt like the first time in weeks. I lay there afterward, completely still, thinking: that's what calm feels like. I'd forgotten.</div>
+      </div>
+    </div>
+    <div class="journey__step">
+      <div class="journey__marker"><div class="journey__dot"></div><div class="journey__line"></div></div>
+      <div class="journey__content">
+        <div class="journey__label">Night 3: The Phone Moves</div>
+        <div class="journey__desc">This was the night I put my phone charger in the kitchen. Not out of discipline &mdash; out of simple replacement logic. The <a href="https://hellonancy.com/products/lem" class="inline-link">Lem</a> went on the nightstand next to a book and a candle. My phone went next to the coffee maker. I didn't miss it.</div>
+      </div>
+    </div>
+    <div class="journey__step">
+      <div class="journey__marker"><div class="journey__dot"></div><div class="journey__line"></div></div>
+      <div class="journey__content">
+        <div class="journey__label">Night 7: First Full Night's Sleep</div>
+        <div class="journey__desc">Seven hours and fourteen minutes. Uninterrupted. No 3 AM cortisol spike. No racing heart. I woke up and cried, which is an insane reaction to sleeping, but there you go. My body had been running on four to five hours for months. This felt like drinking water after a very long thirst.</div>
+      </div>
+    </div>
+  </div>
+
+  <div class="pull-quote">
+    <div class="pull-quote__text">"The routine isn't about the orgasm, although that's obviously part of it. It's about the 20 minutes after. My shoulders drop. My jaw unclenches. My thoughts stop spiraling."</div>
+    <div class="pull-quote__author">&mdash; From my journal, Week 3</div>
+  </div>
+
+  <div class="article-img">
+    <img src="../images/lem-lifestyle1.jpg" alt="Calm bedside atmosphere" loading="lazy">
+  </div>
+
+  <!-- ═══ WEEK 4 — The Results ═══ -->
+  <h2>Week 4: The Results</h2>
+
+  <p>I opened my screen time report on a Sunday morning &mdash; the same thing that had made me flinch a month earlier. <strong>Screen time after 9 PM: 45 minutes.</strong> Down from 4 hours 23 minutes. I hadn't white-knuckled it. I hadn't used an app blocker. I'd simply replaced the habit with something that made my body <em>want</em> to put the phone down.</p>
+
+  <p>Sleep: 7 to 8 hours consistently. The 3 AM wake-ups stopped entirely by day ten.</p>
+
+  <p>My partner noticed. Not because I told him about the <a href="https://hellonancy.com/products/lem" class="inline-link">Lem</a> (not at first, anyway) &mdash; but because the irritability was gone. We hadn't fought in two weeks. He said something one morning that stopped me mid-coffee: "You're back."</p>
+
+  <p>He was right. I <em>was</em> back. The doomscrolling hadn't just been stealing my sleep. It had been stealing my personality.</p>
+
+  <div class="article-img">
+    <img src="../images/lem-lifestyle3.jpg" alt="Lifestyle mood" loading="lazy">
+    <div class="article-img__caption">The screen time report that made me realize the habit had actually shifted.</div>
+  </div>
+
+  <p>I've since told four friends about it. Three of them were also stuck in the doomscroll spiral. Two ordered the same week. One texted me at midnight: "Why didn't you tell me about this sooner." The cycle continues.</p>
+
+  <!-- ═══ THE SCIENCE ═══ -->
+  <div class="pull-quote">
+    <div class="pull-quote__text">"What I didn't realize is that there's actual neuroscience behind why this works."</div>
+  </div>
+
+  <h2>The Science Behind the 2-Minute Reset</h2>
+
+  <p>After my own experience, I did what any writer would do: I researched obsessively. Here's what I found.</p>
+
+  <p>The pelvic nerve is a direct pathway to the vagus nerve &mdash; the main highway of your parasympathetic nervous system (the "rest and digest" system that's the opposite of fight-or-flight). Targeted stimulation of this nerve triggers a cascade: oxytocin floods the system, cortisol drops, heart rate slows, and your body shifts from sympathetic activation to parasympathetic calm.</p>
+
+  <p>The research is clear: this shift can happen in under two minutes. That's faster than any meditation app, any supplement, any breathing exercise. Not because those things don't work &mdash; but because this is a <em>direct</em> neurological pathway, not an indirect one.</p>
+
+  <div class="reset-infographic">
+    <div class="reset-infographic__title">The 2-Minute Reset</div>
+    <div class="reset-infographic__subtitle">How targeted stimulation shifts your nervous system state</div>
+    <div class="reset-timeline">
+      <div class="reset-step">
+        <div class="reset-step__dot reset-step__dot--red">0</div>
+        <div class="reset-step__content">
+          <div class="reset-step__time reset-step__time--red">0:00 &mdash; Baseline</div>
+          <div class="reset-step__label">Cortisol elevated. Heart rate up. Sympathetic nervous system dominant. This is where your body lives after 2 hours of doomscrolling.</div>
+        </div>
+      </div>
+      <div class="reset-step">
+        <div class="reset-step__dot reset-step__dot--orange">&#9656;</div>
+        <div class="reset-step__content">
+          <div class="reset-step__time reset-step__time--orange">0:15 &mdash; Stimulation Begins</div>
+          <div class="reset-step__label">Pelvic nerve activation sends signal to vagus nerve. Body begins transitioning out of fight-or-flight.</div>
+        </div>
+      </div>
+      <div class="reset-step">
+        <div class="reset-step__dot reset-step__dot--green">&#8593;</div>
+        <div class="reset-step__content">
+          <div class="reset-step__time reset-step__time--green">1:00 &mdash; Oxytocin Surge</div>
+          <div class="reset-step__label">Oxytocin release begins. Cortisol suppression kicks in. Muscle tension starts to dissolve. The "jaw-unclench" moment.</div>
+        </div>
+      </div>
+      <div class="reset-step">
+        <div class="reset-step__dot reset-step__dot--teal">&#10003;</div>
+        <div class="reset-step__content">
+          <div class="reset-step__time reset-step__time--teal">2:00 &mdash; Parasympathetic State</div>
+          <div class="reset-step__label">Full nervous system shift. Heart rate drops. Breathing deepens. Thought spirals stop. The body is now in "rest and digest" mode.</div>
+        </div>
+      </div>
+      <div class="reset-step">
+        <div class="reset-step__dot reset-step__dot--indigo">&#9790;</div>
+        <div class="reset-step__content">
+          <div class="reset-step__time reset-step__time--indigo">+20 min &mdash; Deep Calm &rarr; Sleep</div>
+          <div class="reset-step__label">Extended oxytocin glow. Natural drowsiness. The window for deep, uninterrupted sleep opens. No grogginess. No medication hangover.</div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <p>This is why my therapist called it a "somatic reset." Your body literally cannot maintain anxiety and parasympathetic activation at the same time. It's a neurological impossibility. The <a href="https://hellonancy.com/products/lem" class="inline-link">Lem</a> doesn't treat anxiety &mdash; it interrupts the physiological loop that feeds it.</p>
+
+  <!-- ═══ REVIEW WALL ═══ -->
+  <div class="review-wall">
+    <h2 class="review-wall__title">Other Women Who Put the Phone Down</h2>
+    <p class="review-wall__subtitle">Reviews from buyers who discovered the stress-relief angle</p>
+
+    <div class="review-card">
+      <div class="review-card__header">
+        <div class="review-card__avatar">M</div>
+        <div>
+          <div class="review-card__name">Morgan K.</div>
+          <div class="review-card__verified"><svg width="12" height="12" viewBox="0 0 24 24" fill="currentColor"><path d="M9 16.17L4.83 12l-1.42 1.41L9 19 21 7l-1.41-1.41L9 16.17z"/></svg> Verified Purchase</div>
+        </div>
+      </div>
+      <div class="review-card__stars">&#9733;&#9733;&#9733;&#9733;&#9733;</div>
+      <div class="review-card__text">"Bought this for the stress relief claims. <em>Stayed for EVERYTHING else.</em> I use it every night before bed and my sleep has improved more than any supplement I've ever tried. I didn't expect this to be the thing that worked but here we are."</div>
+      <div class="review-card__date">February 2026</div>
+      <div class="review-card__img"><img src="../images/loox-review5.jpg" alt="Morgan's review photo" loading="lazy"></div>
+    </div>
+
+    <div class="review-card">
+      <div class="review-card__header">
+        <div class="review-card__avatar">A</div>
+        <div>
+          <div class="review-card__name">Aisha J.</div>
+          <div class="review-card__verified"><svg width="12" height="12" viewBox="0 0 24 24" fill="currentColor"><path d="M9 16.17L4.83 12l-1.42 1.41L9 19 21 7l-1.41-1.41L9 16.17z"/></svg> Verified Purchase</div>
+        </div>
+      </div>
+      <div class="review-card__stars">&#9733;&#9733;&#9733;&#9733;&#9733;</div>
+      <div class="review-card__text">"<em>My anxiety meds + this before bed = I actually feel normal again.</em> I'm not saying it replaces therapy or medication. But as part of my nightly routine it has made a genuine, measurable difference. I track my sleep with a Whoop and my HRV has improved by 15% since I started using it."</div>
+      <div class="review-card__date">January 2026</div>
+    </div>
+
+    <div class="review-card">
+      <div class="review-card__header">
+        <div class="review-card__avatar">L</div>
+        <div>
+          <div class="review-card__name">Lisa W.</div>
+          <div class="review-card__verified"><svg width="12" height="12" viewBox="0 0 24 24" fill="currentColor"><path d="M9 16.17L4.83 12l-1.42 1.41L9 19 21 7l-1.41-1.41L9 16.17z"/></svg> Verified Purchase</div>
+        </div>
+      </div>
+      <div class="review-card__stars">&#9733;&#9733;&#9733;&#9733;&#9733;</div>
+      <div class="review-card__text">"<em>It's like a reset button for my nervous system. Not exaggerating.</em> I use it after stressful days and the tension just melts. My jaw was clenched 24/7 for months and I didn't even realize until it stopped."</div>
+      <div class="review-card__date">December 2025</div>
+      <div class="review-card__img"><img src="../images/loox-review8.jpg" alt="Lisa's review photo" loading="lazy"></div>
+    </div>
+
+    <div class="review-card">
+      <div class="review-card__header">
+        <div class="review-card__avatar">P</div>
+        <div>
+          <div class="review-card__name">Priya D.</div>
+          <div class="review-card__verified"><svg width="12" height="12" viewBox="0 0 24 24" fill="currentColor"><path d="M9 16.17L4.83 12l-1.42 1.41L9 19 21 7l-1.41-1.41L9 16.17z"/></svg> Verified Purchase</div>
+        </div>
+      </div>
+      <div class="review-card__stars">&#9733;&#9733;&#9733;&#9733;&#9733;</div>
+      <div class="review-card__text">"I was spending $45/month on magnesium, ashwagandha, L-theanine, and melatonin. None of it was working for my sleep. <em>This was $89 once.</em> It's been three months. I've saved over $100 on supplements I no longer need."</div>
+      <div class="review-card__date">November 2025</div>
+    </div>
+
+    <div class="review-card">
+      <div class="review-card__header">
+        <div class="review-card__avatar">C</div>
+        <div>
+          <div class="review-card__name">Chloe M.</div>
+          <div class="review-card__verified"><svg width="12" height="12" viewBox="0 0 24 24" fill="currentColor"><path d="M9 16.17L4.83 12l-1.42 1.41L9 19 21 7l-1.41-1.41L9 16.17z"/></svg> Verified Purchase</div>
+        </div>
+      </div>
+      <div class="review-card__stars">&#9733;&#9733;&#9733;&#9733;&#9733;</div>
+      <div class="review-card__text">"<em>The waterproof feature means I use it in the shower.</em> Game changer for moms with zero privacy. My toddler can't open the bathroom door yet. Those 5 minutes are the only time I'm truly alone and this makes them count."</div>
+      <div class="review-card__date">January 2026</div>
+      <div class="review-card__img"><img src="../images/loox-review2.jpg" alt="Chloe's review photo" loading="lazy"></div>
+    </div>
+  </div>
+
+  <!-- ═══ PRODUCT SPECS ═══ -->
+  <h2>The Practical Details</h2>
+
+  <div class="article-img--pair">
+    <img src="../images/pdp1.jpg" alt="Lem product" loading="lazy">
+    <img src="../images/pdp6.jpg" alt="Lem product detail" loading="lazy">
+  </div>
+
+  <div class="specs-grid">
+    <div class="specs-grid__item">
+      <div class="specs-grid__value">$89</div>
+      <div class="specs-grid__label">One-time cost</div>
+    </div>
+    <div class="specs-grid__item">
+      <div class="specs-grid__value">12</div>
+      <div class="specs-grid__label">Intensity levels</div>
+    </div>
+    <div class="specs-grid__item">
+      <div class="specs-grid__value">120 min</div>
+      <div class="specs-grid__label">Battery life</div>
+    </div>
+    <div class="specs-grid__item">
+      <div class="specs-grid__value">IPX7</div>
+      <div class="specs-grid__label">Waterproof</div>
+    </div>
+  </div>
+
+  <p>Medical-grade silicone. 12-month warranty. 30-day return guarantee, no questions asked. If you're worried about build quality &mdash; this isn't a cheap Amazon impulse buy. It's the thing that <a href="https://hellonancy.com/products/lem" class="inline-link">16,378 women reviewed</a> with an average of 4.8 stars. That kind of consistency doesn't happen with fragile products.</p>
+
+  <p>It charges via USB-C (finally, a device that doesn't need its own proprietary cable), lasts about 120 minutes on a full charge, and is genuinely whisper-quiet. My partner has slept through every use. The cats have not reacted once.</p>
+
+  <!-- ═══ FAQ ═══ -->
+  <div class="faq-section">
+    <h2 class="faq-section__title">Questions I Kept Googling Before I Bought</h2>
+
+    <div class="faq-item">
+      <button class="faq-item__q">How is this different from a vibrator?</button>
+      <div class="faq-item__a"><div class="faq-item__a-inner">Completely different technology. Lem uses air-pulse stimulation, not vibration. It targets deeper nerve pathways &mdash; specifically the pelvic nerve, which connects to the vagus nerve and your parasympathetic nervous system. Vibrators stimulate the surface. This works on the <em>nervous system</em>. That's why it has stress-relief and sleep effects that vibrators don't.</div></div>
+    </div>
+    <div class="faq-item">
+      <button class="faq-item__q">Will this actually help with sleep?</button>
+      <div class="faq-item__a"><div class="faq-item__a-inner">Oxytocin is a natural sleep promoter. The 2-minute window before bed is the most effective timing because you're leveraging the parasympathetic shift during the exact window your body needs to transition into sleep. I went from 4-5 hours to 7-8 within the first two weeks. My experience isn't unique &mdash; search the reviews for "sleep" and you'll find hundreds of similar stories.</div></div>
+    </div>
+    <div class="faq-item">
+      <button class="faq-item__q">What if my partner feels weird about it?</button>
+      <div class="faq-item__a"><div class="faq-item__a-inner">73% of couples report improved intimacy after introducing a device like this. In my case, my partner went from not knowing about it to being relieved I was sleeping again to being actively curious about it. Most partners aren't threatened &mdash; they're supportive. Especially when they see the anxiety lift.</div></div>
+    </div>
+    <div class="faq-item">
+      <button class="faq-item__q">Is $89 worth it?</button>
+      <div class="faq-item__a"><div class="faq-item__a-inner">$0.24/day over a year. Compare that to: therapy ($200/hour, which I still do but now get more from), sleep supplements ($45/month), meditation apps ($13/month), or the cost of being chronically sleep-deprived and anxious. I've saved more than $89 in supplements I stopped buying. <a href="https://hellonancy.com/products/lem" class="inline-link">Check current pricing here</a>.</div></div>
+    </div>
+    <div class="faq-item">
+      <button class="faq-item__q">What if I don't like it?</button>
+      <div class="faq-item__a"><div class="faq-item__a-inner">30-day return guarantee. No questions asked. With a 4.8-star average across 16,000+ reviews, returns are rare. But the safety net is there. I ordered fully expecting to return it. I did not return it.</div></div>
+    </div>
+    <div class="faq-item">
+      <button class="faq-item__q">Is the packaging discreet?</button>
+      <div class="faq-item__a"><div class="faq-item__a-inner">Plain brown box. No branding on the outside. Generic return address. My partner was standing next to me when it arrived and didn't ask a single question. Inside, it looks like a lemon &mdash; you could leave it on your nightstand and nobody would know what it is.</div></div>
+    </div>
+  </div>
+
+  <!-- ═══ SOFT OFFER ═══ -->
+  <div class="soft-offer">
+    <div class="soft-offer__row">
+      <img class="soft-offer__img" src="../images/pdp4.jpg" alt="Lem by Hello Nancy" loading="lazy">
+      <div class="soft-offer__info">
+        <div class="soft-offer__name">Lem by Hello Nancy</div>
+        <div class="soft-offer__rating"><span class="soft-offer__rating-stars">&#9733;&#9733;&#9733;&#9733;&#9733;</span> 4.8 &middot; 16,378 reviews</div>
+        <div class="soft-offer__price">
+          <span class="soft-offer__price-current">$89</span>
+        </div>
+      </div>
+    </div>
+    <a class="soft-offer__btn" href="https://hellonancy.com/products/lem" onclick="fbq('track', 'AddToCart', {content_name: 'Lem', content_type: 'product', value: 89.00, currency: 'USD'});">View on Hello Nancy &rarr;</a>
+    <div class="soft-offer__trust">
+      <span class="soft-offer__trust-item"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M5 12h14"/><path d="M12 5l7 7-7 7"/></svg> Free worldwide shipping</span>
+      <span class="soft-offer__trust-item"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="20 6 9 17 4 12"/></svg> 30-day satisfaction guarantee</span>
+      <span class="soft-offer__trust-item"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="3" y="3" width="18" height="18" rx="2"/><path d="M3 9h18"/></svg> Discreet delivery</span>
+    </div>
+    <div class="soft-offer__ps">P.S. &mdash; Lem is $89 with free worldwide shipping and a 30-day satisfaction guarantee. If it's in stock when you read this, don't overthink it. I overthought it for months and wish I hadn't.</div>
+  </div>
+
+  <!-- ═══ AUTHOR BIO ═══ -->
+  <div class="author-bio">
+    <div class="author-bio__avatar">JT</div>
+    <div>
+      <div class="author-bio__name">Jamie Torres</div>
+      <div class="author-bio__text">Jamie is a freelance tech writer and recovering doomscroller based in Austin. She covers wellness, digital habits, and the things we don't talk about at brunch. She lives with her partner, two cats, and a phone that now sleeps in the kitchen.</div>
+    </div>
+  </div>
+
+  <!-- ═══ COMMENTS SECTION ═══ -->
+  <div class="comments-section">
+    <h3 class="comments-section__title">Comments <span class="comments-section__count">(38)</span></h3>
+
+    <div class="comment">
+      <div class="comment__header">
+        <div class="comment__avatar">AA</div>
+        <div class="comment__name">anxious_anne</div>
+        <div class="comment__date">3 days ago</div>
+      </div>
+      <div class="comment__text">Thank you for writing this. I thought I was the only one doomscrolling until 2 AM reading about geopolitics. My partner has started sleeping in the guest room because my phone light keeps him up. I ordered mine last night. Genuinely hoping this works.</div>
+    </div>
+
+    <div class="comment">
+      <div class="comment__header">
+        <div class="comment__avatar">DD</div>
+        <div class="comment__name">digital_detox_dan</div>
+        <div class="comment__date">5 days ago</div>
+      </div>
+      <div class="comment__text">The phone-in-the-kitchen thing is KEY. I tried using this without moving my phone first and kept picking it up instead. You need to physically remove the option. The Lem is basically a phone replacement for bedtime. Way better dopamine.</div>
+      <div class="comment__reply">
+        <div class="comment__header">
+          <div class="comment__avatar">JT</div>
+          <div class="comment__name">jamie_t (author)</div>
+          <div class="comment__date">5 days ago</div>
+        </div>
+        <div class="comment__text">100%. The physical removal of the phone was non-negotiable for me too. You can't scroll if it's in another room. And replacing the habit with something your body actually rewards you for makes it stick. Two months in and I haven't moved the charger back once.</div>
+      </div>
+    </div>
+
+    <div class="comment">
+      <div class="comment__header">
+        <div class="comment__avatar">TG</div>
+        <div class="comment__name">therapy_girlie</div>
+        <div class="comment__date">1 week ago</div>
+      </div>
+      <div class="comment__text">Showed this to my therapist and she said "finally, someone wrote about somatic relief without making it weird." Ha. She actually recommended it to another client (anonymously, obviously). The vagus nerve / parasympathetic stuff is legit &mdash; it's just that nobody talks about this particular method of activating it.</div>
+    </div>
+
+    <div class="comment">
+      <div class="comment__header">
+        <div class="comment__avatar">GW</div>
+        <div class="comment__name">grateful_wife</div>
+        <div class="comment__date">1 week ago</div>
+      </div>
+      <div class="comment__text">My husband bought me one after reading this article. Best gift he's ever given me and YES that includes the engagement ring. My sleep score on my Apple Watch has gone from "fair" to "good" for the first time since I started tracking. He's taking full credit.</div>
+    </div>
+  </div>
+
+</article>
+
+</div><!-- /.main-content -->
+
+<!-- ════════════════════ DESKTOP SIDEBAR ════════════════════ -->
+<aside class="sidebar">
+  <div class="sidebar__sticky">
+    <div class="sidebar__card">
+      <img class="sidebar__card-img" src="../images/pdp7.jpg" alt="Lem by Hello Nancy" loading="lazy">
+      <div class="sidebar__card-name">Lem by Hello Nancy</div>
+      <div class="sidebar__card-rating">
+        <span class="sidebar__card-stars">&#9733;&#9733;&#9733;&#9733;&#9733;</span>
+        <span class="sidebar__card-count">4.8 (16,378)</span>
+      </div>
+      <div class="sidebar__card-price">
+        <span class="sidebar__card-current">$89</span>
+      </div>
+      <a class="sidebar__card-link" href="https://hellonancy.com/products/lem" onclick="fbq('track', 'AddToCart', {content_name: 'Lem', content_type: 'product', value: 89.00, currency: 'USD'});">View on Hello Nancy</a>
+      <div class="sidebar__card-trust">
+        <span class="sidebar__card-trust-item"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="20 6 9 17 4 12"/></svg> Free shipping</span>
+        <span class="sidebar__card-trust-item"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="20 6 9 17 4 12"/></svg> 30-day guarantee</span>
+        <span class="sidebar__card-trust-item"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="20 6 9 17 4 12"/></svg> Discreet delivery</span>
+      </div>
+    </div>
+  </div>
+</aside>
+
+</div><!-- /.layout-wrapper -->
+
+<!-- ═══ STICKY BOTTOM CTA BAR ═══ -->
+<div class="sticky-bar" id="stickyBar">
+  <div class="sticky-bar__inner">
+    <img class="sticky-bar__img" src="../images/pdp4.jpg" alt="Lem" loading="lazy">
+    <div class="sticky-bar__info">
+      <div class="sticky-bar__name">Lem by Hello Nancy</div>
+      <div class="sticky-bar__meta"><span class="sticky-bar__meta-stars">&#9733;</span> 4.8 &middot; 16,378 reviews</div>
+    </div>
+    <div class="sticky-bar__price">
+      <span class="sticky-bar__price-current">$89</span>
+    </div>
+    <a class="sticky-bar__link" href="https://hellonancy.com/products/lem" onclick="fbq('track', 'AddToCart', {content_name: 'Lem', content_type: 'product', value: 89.00, currency: 'USD'});">View details &rarr;</a>
+    <button class="sticky-bar__close" id="stickyBarClose" aria-label="Close">&times;</button>
+  </div>
+</div>
+
+<footer class="pub-footer">
+  <div class="pub-footer__brand">The Wellness <span>Edit</span></div>
+  <p class="pub-footer__disclaimer">This article reflects the personal experience of the author and contains product recommendations. Individual results may vary. The Wellness Edit may receive compensation for purchases made through links in this article. Product pricing and availability are subject to change.</p>
+</footer>
+
+<script>
+/* Reading progress bar */
+window.addEventListener('scroll', function() {
+  var scrollTop = document.documentElement.scrollTop || document.body.scrollTop;
+  var scrollHeight = document.documentElement.scrollHeight - document.documentElement.clientHeight;
+  var progress = (scrollTop / scrollHeight) * 100;
+  document.getElementById('readingProgress').style.width = progress + '%';
+});
+
+/* FAQ accordion */
+document.querySelectorAll('.faq-item__q').forEach(function(btn) {
+  btn.addEventListener('click', function() {
+    var item = this.parentElement;
+    var wasOpen = item.classList.contains('open');
+    document.querySelectorAll('.faq-item').forEach(function(el) { el.classList.remove('open'); });
+    if (!wasOpen) item.classList.add('open');
+  });
+});
+
+/* Sticky bottom bar — appears after 20 seconds + scroll past 25% */
+(function() {
+  var bar = document.getElementById('stickyBar');
+  var closeBtn = document.getElementById('stickyBarClose');
+  var dismissed = false;
+  var timerReady = false;
+  var scrollReady = false;
+
+  setTimeout(function() {
+    timerReady = true;
+    if (scrollReady && !dismissed) bar.classList.add('visible');
+  }, 20000);
+
+  window.addEventListener('scroll', function() {
+    if (dismissed) return;
+    var scrollPct = (document.documentElement.scrollTop || document.body.scrollTop) /
+      (document.documentElement.scrollHeight - document.documentElement.clientHeight);
+    if (scrollPct > 0.25) {
+      scrollReady = true;
+      if (timerReady) bar.classList.add('visible');
+    }
+  });
+
+  closeBtn.addEventListener('click', function() {
+    dismissed = true;
+    bar.classList.remove('visible');
+  });
+})();
+</script>
+</body>
+</html>
