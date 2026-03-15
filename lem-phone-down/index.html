@@ -61,7 +61,8 @@
     .reading-progress { position: fixed; top: 0; left: 0; width: 0%; height: 3px; background: var(--pub-accent); z-index: 200; transition: width 0.1s linear; }
 
     /* ── Publication header ── */
-    .pub-header { border-bottom: 1px solid var(--pub-border); background: var(--pub-bg); position: sticky; top: 0; z-index: 100; }
+    .pub-header { border-bottom: 1px solid var(--pub-border); background: var(--pub-bg); position: sticky; top: 0; z-index: 100; transition: transform 0.3s ease; }
+    .pub-header--hidden { transform: translateY(-100%); }
     .pub-header__inner { max-width: 1200px; margin: 0 auto; display: flex; align-items: center; justify-content: space-between; padding: 16px 24px; }
     .pub-header__brand { font-family: var(--pub-font-heading); font-size: 22px; font-weight: 700; color: var(--pub-text); letter-spacing: -0.5px; text-decoration: none; }
     .pub-header__brand span { color: var(--pub-accent); }
@@ -97,7 +98,7 @@
     }
 
     /* ── Article header ── */
-    .article-header { max-width: var(--max-article); padding: 48px 24px 0; }
+    .article-header { max-width: var(--max-article); padding: 16px 24px 0; }
     .article-header__category { display: inline-block; font-size: 12px; font-weight: 700; text-transform: uppercase; letter-spacing: 1.5px; color: var(--pub-accent); margin-bottom: 16px; }
     .article-header__title { font-family: var(--pub-font-heading); font-size: clamp(28px, 5vw, 44px); font-weight: 700; line-height: 1.2; color: var(--pub-text); margin-bottom: 20px; }
     .article-header__subtitle { font-size: 19px; color: var(--pub-muted); line-height: 1.6; margin-bottom: 24px; }
@@ -350,7 +351,7 @@
       <button class="article-header__share-btn" aria-label="Bookmark"><svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M19 21l-7-5-7 5V5a2 2 0 0 1 2-2h10a2 2 0 0 1 2 2z"/></svg></button>
     </div>
   </div>
-  <img class="article-header__hero" src="../images/stress-bedside-ritual.jpg" alt="Lem on nightstand beside book and lamp — the phone-down ritual" loading="eager">
+  <img class="article-header__hero" src="../../shared/images/stress-bedside-ritual.jpg" alt="Lem on nightstand beside book and lamp — the phone-down ritual" loading="eager">
 </div>
 
 <article class="article-body">
@@ -394,7 +395,7 @@
   <p>I tried the obvious things. Melatonin made mornings groggy. The Calm app required focus I didn't have. A glass of wine made the anxiety worse two hours later. I even tried the "put your phone in another room" advice, which lasted exactly one night before I convinced myself I needed it for the alarm. (I didn't. I have two cats who scream at 6 AM regardless.)</p>
 
   <div class="article-img">
-    <img src="../images/loox-review3.jpg" alt="Verified review about stress relief" loading="lazy">
+    <img src="../../shared/images/loox-review3.jpg" alt="Verified review about stress relief" loading="lazy">
     <div class="article-img__caption">A review that caught my eye later &mdash; someone describing the exact same 3 AM pattern</div>
   </div>
 
@@ -418,7 +419,7 @@
   <p>The product they kept mentioning: <a href="https://hellonancy.com/products/lem" class="inline-link">Lem by Hello Nancy</a>. 16,378 reviews. $89. Looks like a lemon. Ships in a plain box.</p>
 
   <div class="article-img">
-    <img src="../images/pdp9.jpg" alt="Lem by Hello Nancy - product detail" loading="lazy">
+    <img src="../../shared/images/pdp9.jpg" alt="Lem by Hello Nancy - product detail" loading="lazy">
     <div class="article-img__caption">The thing that finally beat my doomscroll addiction. It looks like a lemon. I am not joking.</div>
   </div>
 
@@ -464,7 +465,7 @@
   </div>
 
   <div class="article-img">
-    <img src="../images/lem-lifestyle1.jpg" alt="Calm bedside atmosphere" loading="lazy">
+    <img src="../../shared/images/lem-lifestyle1.jpg" alt="Calm bedside atmosphere" loading="lazy">
   </div>
 
   <!-- ═══ WEEK 4 — The Results ═══ -->
@@ -479,7 +480,7 @@
   <p>He was right. I <em>was</em> back. The doomscrolling hadn't just been stealing my sleep. It had been stealing my personality.</p>
 
   <div class="article-img">
-    <img src="../images/lem-lifestyle3.jpg" alt="Lifestyle mood" loading="lazy">
+    <img src="../../shared/images/lem-lifestyle3.jpg" alt="Lifestyle mood" loading="lazy">
     <div class="article-img__caption">The screen time report that made me realize the habit had actually shifted.</div>
   </div>
 
@@ -558,7 +559,7 @@
       <div class="review-card__stars">&#9733;&#9733;&#9733;&#9733;&#9733;</div>
       <div class="review-card__text">"Bought this for the stress relief claims. <em>Stayed for EVERYTHING else.</em> I use it every night before bed and my sleep has improved more than any supplement I've ever tried. I didn't expect this to be the thing that worked but here we are."</div>
       <div class="review-card__date">February 2026</div>
-      <div class="review-card__img"><img src="../images/loox-review5.jpg" alt="Morgan's review photo" loading="lazy"></div>
+      <div class="review-card__img"><img src="../../shared/images/loox-review5.jpg" alt="Morgan's review photo" loading="lazy"></div>
     </div>
 
     <div class="review-card">
@@ -585,7 +586,7 @@
       <div class="review-card__stars">&#9733;&#9733;&#9733;&#9733;&#9733;</div>
       <div class="review-card__text">"<em>It's like a reset button for my nervous system. Not exaggerating.</em> I use it after stressful days and the tension just melts. My jaw was clenched 24/7 for months and I didn't even realize until it stopped."</div>
       <div class="review-card__date">December 2025</div>
-      <div class="review-card__img"><img src="../images/loox-review8.jpg" alt="Lisa's review photo" loading="lazy"></div>
+      <div class="review-card__img"><img src="../../shared/images/loox-review8.jpg" alt="Lisa's review photo" loading="lazy"></div>
     </div>
 
     <div class="review-card">
@@ -612,7 +613,7 @@
       <div class="review-card__stars">&#9733;&#9733;&#9733;&#9733;&#9733;</div>
       <div class="review-card__text">"<em>The waterproof feature means I use it in the shower.</em> Game changer for moms with zero privacy. My toddler can't open the bathroom door yet. Those 5 minutes are the only time I'm truly alone and this makes them count."</div>
       <div class="review-card__date">January 2026</div>
-      <div class="review-card__img"><img src="../images/loox-review2.jpg" alt="Chloe's review photo" loading="lazy"></div>
+      <div class="review-card__img"><img src="../../shared/images/loox-review2.jpg" alt="Chloe's review photo" loading="lazy"></div>
     </div>
   </div>
 
@@ -620,8 +621,8 @@
   <h2>The Practical Details</h2>
 
   <div class="article-img--pair">
-    <img src="../images/pdp1.jpg" alt="Lem product" loading="lazy">
-    <img src="../images/pdp6.jpg" alt="Lem product detail" loading="lazy">
+    <img src="../../shared/images/pdp17.jpg" alt="Lem — 12 patterns, waterproof, discreet shipping, easy to use" loading="lazy">
+    <img src="../../shared/images/pdp6.jpg" alt="Lem — This Lemon will change your life" loading="lazy">
   </div>
 
   <div class="specs-grid">
@@ -680,7 +681,7 @@
   <!-- ═══ SOFT OFFER ═══ -->
   <div class="soft-offer">
     <div class="soft-offer__row">
-      <img class="soft-offer__img" src="../images/pdp4.jpg" alt="Lem by Hello Nancy" loading="lazy">
+      <img class="soft-offer__img" src="../../shared/images/pdp4.jpg" alt="Lem by Hello Nancy" loading="lazy">
       <div class="soft-offer__info">
         <div class="soft-offer__name">Lem by Hello Nancy</div>
         <div class="soft-offer__rating"><span class="soft-offer__rating-stars">&#9733;&#9733;&#9733;&#9733;&#9733;</span> 4.8 &middot; 16,378 reviews</div>
@@ -713,8 +714,8 @@
 
     <div class="comment">
       <div class="comment__header">
-        <div class="comment__avatar">AA</div>
-        <div class="comment__name">anxious_anne</div>
+        <div class="comment__avatar">SR</div>
+        <div class="comment__name">samantha.r3</div>
         <div class="comment__date">3 days ago</div>
       </div>
       <div class="comment__text">Thank you for writing this. I thought I was the only one doomscrolling until 2 AM reading about geopolitics. My partner has started sleeping in the guest room because my phone light keeps him up. I ordered mine last night. Genuinely hoping this works.</div>
@@ -722,8 +723,8 @@
 
     <div class="comment">
       <div class="comment__header">
-        <div class="comment__avatar">DD</div>
-        <div class="comment__name">digital_detox_dan</div>
+        <div class="comment__avatar">KP</div>
+        <div class="comment__name">kp_tx</div>
         <div class="comment__date">5 days ago</div>
       </div>
       <div class="comment__text">The phone-in-the-kitchen thing is KEY. I tried using this without moving my phone first and kept picking it up instead. You need to physically remove the option. The Lem is basically a phone replacement for bedtime. Way better dopamine.</div>
@@ -739,8 +740,8 @@
 
     <div class="comment">
       <div class="comment__header">
-        <div class="comment__avatar">TG</div>
-        <div class="comment__name">therapy_girlie</div>
+        <div class="comment__avatar">NH</div>
+        <div class="comment__name">noor.h</div>
         <div class="comment__date">1 week ago</div>
       </div>
       <div class="comment__text">Showed this to my therapist and she said "finally, someone wrote about somatic relief without making it weird." Ha. She actually recommended it to another client (anonymously, obviously). The vagus nerve / parasympathetic stuff is legit &mdash; it's just that nobody talks about this particular method of activating it.</div>
@@ -748,8 +749,8 @@
 
     <div class="comment">
       <div class="comment__header">
-        <div class="comment__avatar">GW</div>
-        <div class="comment__name">grateful_wife</div>
+        <div class="comment__avatar">EM</div>
+        <div class="comment__name">em_nyc</div>
         <div class="comment__date">1 week ago</div>
       </div>
       <div class="comment__text">My husband bought me one after reading this article. Best gift he's ever given me and YES that includes the engagement ring. My sleep score on my Apple Watch has gone from "fair" to "good" for the first time since I started tracking. He's taking full credit.</div>
@@ -764,7 +765,7 @@
 <aside class="sidebar">
   <div class="sidebar__sticky">
     <div class="sidebar__card">
-      <img class="sidebar__card-img" src="../images/pdp7.jpg" alt="Lem by Hello Nancy" loading="lazy">
+      <img class="sidebar__card-img" src="../../shared/images/pdp7.jpg" alt="Lem by Hello Nancy" loading="lazy">
       <div class="sidebar__card-name">Lem by Hello Nancy</div>
       <div class="sidebar__card-rating">
         <span class="sidebar__card-stars">&#9733;&#9733;&#9733;&#9733;&#9733;</span>
@@ -788,15 +789,12 @@
 <!-- ═══ STICKY BOTTOM CTA BAR ═══ -->
 <div class="sticky-bar" id="stickyBar">
   <div class="sticky-bar__inner">
-    <img class="sticky-bar__img" src="../images/pdp4.jpg" alt="Lem" loading="lazy">
+    <img class="sticky-bar__img" src="../../shared/images/pdp4.jpg" alt="Lem" loading="lazy">
     <div class="sticky-bar__info">
       <div class="sticky-bar__name">Lem by Hello Nancy</div>
-      <div class="sticky-bar__meta"><span class="sticky-bar__meta-stars">&#9733;</span> 4.8 &middot; 16,378 reviews</div>
+      <div class="sticky-bar__meta"><span class="sticky-bar__meta-stars">&#9733;</span> 4.7 &middot; 16,378 reviews &middot; Frequently sells out</div>
     </div>
-    <div class="sticky-bar__price">
-      <span class="sticky-bar__price-current">$89</span>
-    </div>
-    <a class="sticky-bar__link" href="https://hellonancy.com/products/lem" onclick="fbq('track', 'AddToCart', {content_name: 'Lem', content_type: 'product', value: 89.00, currency: 'USD'});">View details &rarr;</a>
+    <a class="sticky-bar__link" href="https://hellonancy.com/products/lem" onclick="fbq('track', 'AddToCart', {content_name: 'Lem', content_type: 'product', value: 89.00, currency: 'USD'});">Check availability &rarr;</a>
     <button class="sticky-bar__close" id="stickyBarClose" aria-label="Close">&times;</button>
   </div>
 </div>
@@ -814,6 +812,21 @@ window.addEventListener('scroll', function() {
   var progress = (scrollTop / scrollHeight) * 100;
   document.getElementById('readingProgress').style.width = progress + '%';
 });
+
+/* Header hide on scroll down, show on scroll up */
+(function() {
+  var header = document.querySelector('.pub-header');
+  var lastY = 0;
+  window.addEventListener('scroll', function() {
+    var y = window.scrollY;
+    if (y > 60 && y > lastY) {
+      header.classList.add('pub-header--hidden');
+    } else {
+      header.classList.remove('pub-header--hidden');
+    }
+    lastY = y;
+  });
+})();
 
 /* FAQ accordion */
 document.querySelectorAll('.faq-item__q').forEach(function(btn) {

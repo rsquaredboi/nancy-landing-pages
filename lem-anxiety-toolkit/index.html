@@ -46,7 +46,8 @@
     a:hover { color: var(--nancy-pink); }
 
     /* ── HEADER ── */
-    .pub-header { border-bottom: 1px solid var(--pub-border); background: var(--pub-bg); position: sticky; top: 0; z-index: 100; }
+    .pub-header { border-bottom: 1px solid var(--pub-border); background: var(--pub-bg); position: sticky; top: 0; z-index: 100; transition: transform 0.3s ease; }
+    .pub-header--hidden { transform: translateY(-100%); }
     .pub-header__inner { max-width: 1200px; margin: 0 auto; display: flex; align-items: center; justify-content: space-between; padding: 16px 24px; }
     .pub-header__brand { font-family: var(--pub-font-heading); font-size: 22px; font-weight: 700; color: var(--pub-text); letter-spacing: -0.5px; text-decoration: none; }
     .pub-header__brand span { color: var(--pub-accent); }
@@ -84,7 +85,7 @@
     .sidebar-card__trust-item svg { width: 14px; height: 14px; flex-shrink: 0; color: var(--green); }
 
     /* ── ARTICLE HEADER ── */
-    .article-header { max-width: var(--max-article); padding: 48px 24px 0; }
+    .article-header { max-width: var(--max-article); padding: 16px 24px 0; }
     .article-header__category { display: inline-block; font-size: 12px; font-weight: 700; text-transform: uppercase; letter-spacing: 1.5px; color: var(--pub-accent); margin-bottom: 16px; }
     .article-header__title { font-family: var(--pub-font-heading); font-size: clamp(28px, 5vw, 44px); font-weight: 700; line-height: 1.2; color: var(--pub-text); margin-bottom: 20px; }
     .article-header__subtitle { font-size: 19px; color: var(--pub-muted); line-height: 1.6; margin-bottom: 24px; }
@@ -359,14 +360,14 @@
       <button class="article-header__share-btn" aria-label="Bookmark"><svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M19 21l-7-5-7 5V5a2 2 0 0 1 2-2h10a2 2 0 0 1 2 2z"/></svg></button>
     </div>
   </div>
-  <img class="article-header__hero" src="../images/stress-yoga-mat.jpg" alt="Wellness toolkit flatlay — Lem with journal, candle, and succulent" loading="eager">
+  <img class="article-header__hero" src="../../shared/images/stress-yoga-mat.jpg" alt="Wellness toolkit flatlay — Lem with journal, candle, and succulent" loading="eager">
 </div>
 
 <article class="article-body">
 
   <!-- ═══ HERO IMAGE ═══ -->
   <div class="hero-image">
-    <img src="../images/lem-lifestyle2.jpg" alt="Stress relief products tested and reviewed" loading="eager">
+    <img src="../../shared/images/lem-lifestyle2.jpg" alt="Stress relief products tested and reviewed" loading="eager">
   </div>
 
   <!-- ═══ OPENING — The Stress Shopping Boom ═══ -->
@@ -418,7 +419,7 @@
   <p>We&rsquo;re not sponsored by any of these brands. We bought every product ourselves.</p>
 
   <div class="article-img">
-    <img src="../images/pdp17.jpg" alt="Product testing spread for stress relief roundup" loading="lazy">
+    <img src="../../shared/images/pdp17.jpg" alt="Product testing spread for stress relief roundup" loading="lazy">
     <div class="article-img__caption">Our testing protocol included daily journaling, sleep tracking, and standardized anxiety scoring.</div>
   </div>
 
@@ -517,7 +518,7 @@
   </div>
 
   <div class="article-img">
-    <img src="../images/lem-lifestyle3.jpg" alt="Testing various stress relief products" loading="lazy">
+    <img src="../../shared/images/lem-lifestyle3.jpg" alt="Testing various stress relief products" loading="lazy">
   </div>
 
   <!-- #5 — JOURNALING -->
@@ -631,8 +632,8 @@
 
   <!-- ═══ LIFESTYLE STRIP ═══ -->
   <div class="lifestyle-strip">
-    <img src="../images/lem-lifestyle4.jpg" alt="Lem product lifestyle shot" loading="lazy">
-    <img src="../images/lem-lifestyle5.jpg" alt="Lem in relaxing setting" loading="lazy">
+    <img src="../../shared/images/lem-lifestyle4.jpg" alt="Lem product lifestyle shot" loading="lazy">
+    <img src="../../shared/images/lem-lifestyle5.jpg" alt="Lem in relaxing setting" loading="lazy">
   </div>
 
   <!-- #1 — LEM (WINNER) -->
@@ -649,7 +650,7 @@
         </div>
       </div>
       <div class="rank-card__image">
-        <img src="../images/pdp1.jpg" alt="Lem by Hello Nancy" loading="lazy">
+        <img src="../../shared/images/pdp6.jpg" alt="Lem by Hello Nancy — real user review" loading="lazy">
       </div>
     </div>
     <div class="rank-card__prose">
@@ -681,7 +682,7 @@
     <div class="review-card">
       <div class="review-card__header">
         <div class="review-card__avatar">
-          <img src="../images/loox-review2.jpg" alt="Reviewer photo">
+          <img src="../../shared/images/loox-review2.jpg" alt="Reviewer photo">
         </div>
         <div>
           <div class="review-card__name">Brianna M.</div>
@@ -696,7 +697,7 @@
     <div class="review-card">
       <div class="review-card__header">
         <div class="review-card__avatar">
-          <img src="../images/loox-review5.jpg" alt="Reviewer photo">
+          <img src="../../shared/images/loox-review5.jpg" alt="Reviewer photo">
         </div>
         <div>
           <div class="review-card__name">Kayla R.</div>
@@ -712,7 +713,7 @@
   <div class="review-card" style="margin: 0 0 32px;">
     <div class="review-card__header">
       <div class="review-card__avatar">
-        <img src="../images/loox-review7.jpg" alt="Reviewer photo">
+        <img src="../../shared/images/loox-review7.jpg" alt="Reviewer photo">
       </div>
       <div>
         <div class="review-card__name">Dani L.</div>
@@ -726,7 +727,7 @@
 
   <!-- ═══ PRODUCT IMAGE ═══ -->
   <div class="article-img">
-    <img src="../images/pdp4.jpg" alt="Lem product detail and design" loading="lazy">
+    <img src="../../shared/images/pdp4.jpg" alt="Lem product detail and design" loading="lazy">
     <div class="article-img__caption">12 intensity levels, medical-grade silicone, waterproof &mdash; designed for both beginners and experienced users.</div>
   </div>
 
@@ -833,7 +834,7 @@
   <p>But the speed and consistency of Lem&rsquo;s physiological impact &mdash; 2 minutes to a measurably calmer state &mdash; put it in a different category entirely. Every other product on this list either takes too long, requires too much discipline, costs too much per month, or simply doesn&rsquo;t create a strong enough effect.</p>
 
   <div class="article-img">
-    <img src="../images/pdp9.jpg" alt="Lem product close-up" loading="lazy">
+    <img src="../../shared/images/pdp9.jpg" alt="Lem product close-up" loading="lazy">
   </div>
 
   <p>If you&rsquo;re buying stress relief products right now (and search data says millions of you are), start with the one that <a class="inline-link" href="https://hellonancy.com/products/lem" onclick="fbq('track', 'AddToCart', {content_name: 'Lem', content_type: 'product', value: 89.00, currency: 'USD'});">actually works in 2 minutes</a>.</p>
@@ -842,7 +843,7 @@
   <div class="soft-offer">
     <div class="soft-offer__top">
       <div class="soft-offer__img">
-        <img src="../images/pdp1.jpg" alt="Lem by Hello Nancy">
+        <img src="../../shared/images/pdp7.jpg" alt="Lem by Hello Nancy — 5-star review" loading="lazy">
       </div>
       <div>
         <div class="soft-offer__name">Lem by Hello Nancy</div>
@@ -905,9 +906,9 @@
 
     <div class="comment">
       <div class="comment__header">
-        <div class="comment__avatar">HR</div>
+        <div class="comment__avatar">TB</div>
         <div>
-          <div class="comment__name">honest_reviewer</div>
+          <div class="comment__name">tay_b</div>
           <div class="comment__date">Mar 11, 2026</div>
         </div>
       </div>
@@ -917,9 +918,9 @@
 
     <div class="comment">
       <div class="comment__header">
-        <div class="comment__avatar">SQ</div>
+        <div class="comment__avatar">PK</div>
         <div>
-          <div class="comment__name">sleep_stack_queen</div>
+          <div class="comment__name">priya.k7</div>
           <div class="comment__date">Mar 9, 2026</div>
         </div>
       </div>
@@ -929,9 +930,9 @@
 
     <div class="comment">
       <div class="comment__header">
-        <div class="comment__avatar">TT</div>
+        <div class="comment__avatar">CL</div>
         <div>
-          <div class="comment__name">trial_and_error_tina</div>
+          <div class="comment__name">cml_23</div>
           <div class="comment__date">Mar 7, 2026</div>
         </div>
       </div>
@@ -941,9 +942,9 @@
 
     <div class="comment">
       <div class="comment__header">
-        <div class="comment__avatar">DD</div>
+        <div class="comment__avatar">LM</div>
         <div>
-          <div class="comment__name">data_nerd_diana</div>
+          <div class="comment__name">lex.m</div>
           <div class="comment__date">Mar 5, 2026</div>
         </div>
       </div>
@@ -960,7 +961,7 @@
 <!-- ═══════════════════════════════════════════════ -->
 <aside class="sidebar">
   <div class="sidebar-card">
-    <img class="sidebar-card__img" src="../images/pdp1.jpg" alt="Lem by Hello Nancy">
+    <img class="sidebar-card__img" src="../../shared/images/pdp17.jpg" alt="Lem — 12 patterns, waterproof, discreet" loading="lazy">
     <div class="sidebar-card__body">
       <div class="sidebar-card__tag">Our #1 Pick</div>
       <div class="sidebar-card__name">Lem by Hello Nancy</div>
@@ -987,16 +988,15 @@
 <div class="sticky-bar" id="stickyBar">
   <div class="sticky-bar__inner">
     <div class="sticky-bar__thumb">
-      <img src="../images/pdp1.jpg" alt="Lem">
+      <img src="../../shared/images/pdp17.jpg" alt="Lem features">
     </div>
     <div class="sticky-bar__info">
       <div class="sticky-bar__name">Lem by Hello Nancy</div>
       <div class="sticky-bar__meta">
-        <span class="sticky-bar__meta-stars">&#9733;</span> 4.8 &nbsp;|&nbsp;
-        <span class="sticky-bar__meta-price">$89</span>
+        <span class="sticky-bar__meta-stars">&#9733;</span> 4.7 &middot; 16,378 reviews &middot; Frequently sells out
       </div>
     </div>
-    <a class="sticky-bar__link" href="https://hellonancy.com/products/lem" onclick="fbq('track', 'AddToCart', {content_name: 'Lem', content_type: 'product', value: 89.00, currency: 'USD'});">View details &rarr;</a>
+    <a class="sticky-bar__link" href="https://hellonancy.com/products/lem" onclick="fbq('track', 'AddToCart', {content_name: 'Lem', content_type: 'product', value: 89.00, currency: 'USD'});">Check availability &rarr;</a>
     <button class="sticky-bar__close" id="stickyBarClose" aria-label="Close">&times;</button>
   </div>
 </div>
@@ -1013,6 +1013,21 @@ window.addEventListener('scroll', function() {
   var scrollHeight = document.documentElement.scrollHeight - document.documentElement.clientHeight;
   document.getElementById('readingProgress').style.width = ((scrollTop / scrollHeight) * 100) + '%';
 });
+
+/* Header hide on scroll down, show on scroll up */
+(function() {
+  var header = document.querySelector('.pub-header');
+  var lastY = 0;
+  window.addEventListener('scroll', function() {
+    var y = window.scrollY;
+    if (y > 60 && y > lastY) {
+      header.classList.add('pub-header--hidden');
+    } else {
+      header.classList.remove('pub-header--hidden');
+    }
+    lastY = y;
+  });
+})();
 
 /* FAQ accordion */
 document.querySelectorAll('.faq-item__q').forEach(function(btn) {
