@@ -634,6 +634,7 @@
   function gtag(){dataLayer.push(arguments);}
   gtag('js', new Date());
   gtag('config', 'AW-11033179838');
+  gtag('config', 'G-7JGVKRX9LZ');
 </script>
 <!-- Event snippet for Shopify Purchase conversion page -->
 <script>
@@ -1210,6 +1211,7 @@ function gtag_report_conversion(url) {
     // Auto-start on Q1 (skip welcome screen)
     updateProgress(1);
     fbq('trackCustom', 'QuizStart');
+    gtag('event', 'quiz_start', { event_category: 'quiz' });
 
     function selectOption(el, questionNum, value) {
       // Deselect others
@@ -1218,6 +1220,7 @@ function gtag_report_conversion(url) {
       answers['q' + questionNum] = value;
 
       fbq('trackCustom', 'QuizStep', { step: questionNum, answer: value });
+      gtag('event', 'quiz_step', { event_category: 'quiz', step: questionNum, answer: value });
 
       // Auto-advance after short delay
       setTimeout(() => {
@@ -1247,6 +1250,7 @@ function gtag_report_conversion(url) {
 
       // Fire Lead pixel event
       fbq('track', 'Lead', { content_name: 'Quiz Email Capture' });
+      gtag('event', 'generate_lead', { event_category: 'quiz', method: 'quiz_email_capture', email: email });
 
       goToLoading();
     }
@@ -1287,6 +1291,14 @@ function gtag_report_conversion(url) {
         content_type: 'product',
         value: p.price,
         currency: 'USD'
+      });
+      gtag('event', 'quiz_result', {
+        event_category: 'quiz',
+        recommended_product: p.fullName,
+        product_id: primary,
+        value: p.price,
+        currency: 'USD',
+        answers: JSON.stringify(answers)
       });
 
       const starsHtml = '★'.repeat(5);
