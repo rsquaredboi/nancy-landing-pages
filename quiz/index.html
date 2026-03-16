@@ -679,7 +679,7 @@ function gtag_report_conversion(url) {
   <main class="quiz-container">
 
     <!-- SCREEN 0: WELCOME -->
-    <section class="screen active" id="screen-welcome">
+    <section class="screen" id="screen-welcome">
       <div class="welcome">
         <div class="welcome__badge">
           <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M12 2L15.09 8.26L22 9.27L17 14.14L18.18 21.02L12 17.77L5.82 21.02L7 14.14L2 9.27L8.91 8.26L12 2Z"/></svg>
@@ -721,7 +721,7 @@ function gtag_report_conversion(url) {
     </section>
 
     <!-- SCREEN 1: Q1 — What brings you here? -->
-    <section class="screen" id="screen-q1">
+    <section class="screen active" id="screen-q1">
       <div class="question">
         <div class="question__step">Question 1 of 4</div>
         <h2 class="question__title">What brings you here today?</h2>
@@ -948,8 +948,8 @@ function gtag_report_conversion(url) {
     // QUIZ STATE
     // ═══════════════════════════════════════
     const answers = {};
-    let currentScreen = 0;
-    const totalSteps = 6; // welcome + 4 questions + email
+    let currentScreen = 1;
+    const totalSteps = 5; // 4 questions + email (skip welcome)
 
     // ═══════════════════════════════════════
     // PRODUCT DATABASE
@@ -1206,6 +1206,10 @@ function gtag_report_conversion(url) {
       currentScreen = 1;
       fbq('trackCustom', 'QuizStart');
     }
+
+    // Auto-start on Q1 (skip welcome screen)
+    updateProgress(1);
+    fbq('trackCustom', 'QuizStart');
 
     function selectOption(el, questionNum, value) {
       // Deselect others
